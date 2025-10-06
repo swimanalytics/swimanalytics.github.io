@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Efficiency (SWOLF) - SwimAnalytics</title>
+    <meta name="description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta name="author" content="Albert Arno">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimanalytics.github.io/en/efficiency/">
+    <meta property="og:title" content="SwimAnalytics">
+    <meta property="og:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta property="og:image" content="https://swimanalytics.github.io/assets/images/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.github.io/en/efficiency/">
+    <meta name="twitter:title" content="SwimAnalytics">
+    <meta name="twitter:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta name="twitter:image" content="https://swimanalytics.github.io/assets/images/og-image.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/efficiency/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/efficiency/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.github.io/en/efficiency/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.github.io",
+      "description": "Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis",
+      "inLanguage": "en"
+    }
+    </script>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/en/" class="site-logo">
+                SwimAnalytics
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        <a href="/en/"
+                           
+                           aria-current="">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/css/"
+                           
+                           aria-current="">
+                            Critical Swim Speed
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           
+                           aria-current="">
+                            Training Load
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           class="active"
+                           aria-current="page">
+                            Efficiency (SWOLF)
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stroke-mechanics/"
+                           
+                           aria-current="">
+                            Stroke Mechanics
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/research/"
+                           
+                           aria-current="">
+                            Scientific Research
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/bibliography/"
+                           
+                           aria-current="">
+                            Bibliography
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/formulas/"
+                           
+                           aria-current="">
+                            Formulas
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="language-selector">
+                    <label for="language-select" class="visually-hidden">Select language</label>
+                    <select id="language-select" aria-label="Select language">
+                        
+                        <option value="ca" >
+                            Català
+                        </option>
+                        
+                        <option value="en" selected>
+                            English
+                        </option>
+                        
+                    </select>
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Swimming Efficiency: SWOLF</h1>
+        <p class="lead">Your Stroke Economy Score - Lower is Better</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>What is SWOLF?</h2>
+        <p class="lead">SWOLF (Swim + Golf) is a composite efficiency metric that combines stroke count and time into a single number. Like golf, the goal is to minimize your score.</p>
+
+        <div class="formula-box">
+            <h3>Formula</h3>
+            <div class="formula">
+                SWOLF = Lap Time (seconds) + Stroke Count
+            </div>
+            <div class="formula-explanation">
+                <p><strong>Example:</strong> If you swim 25m in 20 seconds with 15 strokes:</p>
+                <div class="calculation">
+                    SWOLF = 20 + 15 = <strong>35</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <h3>Normalized SWOLF for Pool Comparison</h3>
+            <p>To compare scores across different pool lengths:</p>
+            <div class="formula">
+                SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center" style="margin-bottom: var(--space-xl);">SWOLF Benchmarks</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Freestyle - 25m Pool</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Elite Swimmers</strong>
+                        <div class="value">30-35</div>
+                        <p>National/international level, exceptional efficiency</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Competitive</strong>
+                        <div class="value">35-45</div>
+                        <p>High school varsity, college, masters competitive</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Fitness Swimmers</strong>
+                        <div class="value">45-60</div>
+                        <p>Regular training, solid technique</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Beginners</strong>
+                        <div class="value">60+</div>
+                        <p>Developing technique and conditioning</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Other Strokes - 25m Pool</h3>
+                <div class="stroke-benchmarks">
+                    <div class="benchmark-item">
+                        <h4>Backstroke</h4>
+                        <p>Typically <strong>5-10 points higher</strong> than freestyle</p>
+                        <div class="value-small">Good: 40-50</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Breaststroke</h4>
+                        <p>Wide variation due to glide technique</p>
+                        <div class="value-small">Range: 40-60</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Butterfly</h4>
+                        <p>Similar to freestyle for skilled swimmers</p>
+                        <div class="value-small">Good: 38-55</div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <h4>⚠️ Individual Variation</h4>
+                    <p>SWOLF is influenced by height and arm span. Taller swimmers naturally take fewer strokes. Use SWOLF to track <em>your own progress</em> rather than comparing to others.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Interpreting SWOLF Patterns</h2>
+
+        <div class="pattern-analysis">
+            <div class="pattern-item">
+                <h3>📉 Decreasing SWOLF = Improving Efficiency</h3>
+                <p>Your technique is getting better, or you're becoming more economical at a given pace. This is the goal over weeks and months of training.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> SWOLF drops from 48 → 45 → 42 over 8 weeks of focused technique work.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📈 Increasing SWOLF = Declining Efficiency</h3>
+                <p>Fatigue is setting in, technique is breaking down, or you're swimming faster than your efficiency allows.</p>
+                <div class="example-box">
+                    <strong>Example:</strong> SWOLF rises from 42 → 48 during final 200m of a 1000m set, indicating fatigue.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📊 Different Combinations at Same SWOLF</h3>
+                <p>A SWOLF of 45 could result from multiple stroke/time combinations:</p>
+                <ul>
+                    <li><strong>20 seconds + 25 strokes</strong> = High frequency, shorter strokes</li>
+                    <li><strong>25 seconds + 20 strokes</strong> = Lower frequency, longer strokes</li>
+                </ul>
+                <p><strong>Always analyze the components</strong> (stroke count AND time) to understand your swimming strategy.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip">
+            <h3>🎯 SWOLF Training Applications</h3>
+            <ul>
+                <li><strong>Technique Sessions:</strong> Aim to reduce SWOLF through better catch, streamline, and body position</li>
+                <li><strong>Fatigue Monitoring:</strong> Rising SWOLF indicates technique breakdown—time for a break</li>
+                <li><strong>Pace-Efficiency Balance:</strong> Find the fastest pace you can hold without SWOLF spiking</li>
+                <li><strong>Drill Effectiveness:</strong> Track SWOLF before/after drill sets to measure technique transfer</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Measurement Best Practices</h2>
+
+        <div class="measurement-guidelines">
+            <div class="guideline-box">
+                <h3>📏 Stroke Counting</h3>
+                <ul>
+                    <li>Count each hand entry (both arms combined)</li>
+                    <li>Start counting from first stroke after push-off</li>
+                    <li>Count up to wall touch</li>
+                    <li>Maintain consistent push-off distance (~5m from flags)</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>⏱️ Timing</h3>
+                <ul>
+                    <li>Measure from first stroke to wall touch</li>
+                    <li>Use consistent push-off intensity across laps</li>
+                    <li>Technology (Garmin, Apple Watch, FORM) auto-calculates</li>
+                    <li>Manual timing: Use pace clock or stopwatch</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>🔄 Consistency</h3>
+                <ul>
+                    <li>Measure SWOLF at similar paces for comparison</li>
+                    <li>Track during main sets, not warm-up/cool-down</li>
+                    <li>Note which stroke type (freestyle, back, etc.)</li>
+                    <li>Compare same pool length (25m vs 25m, not 25m vs 50m)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>SWOLF Limitations</h2>
+
+        <div class="limitations-list">
+            <div class="limitation-item">
+                <h3>🚫 Cannot Compare Between Athletes</h3>
+                <p>Height, arm length, and flexibility create natural stroke count differences. A 6'2" swimmer will have a lower SWOLF than a 5'6" swimmer at the same fitness level.</p>
+                <p><strong>Solution:</strong> Use SWOLF for personal progress tracking only.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 Composite Score Hides Details</h3>
+                <p>SWOLF combines two variables. You can improve one while worsening the other and still have the same score.</p>
+                <p><strong>Solution:</strong> Always examine stroke count AND time separately.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 Not Pace-Normalized</h3>
+                <p>SWOLF naturally increases as you swim faster (more strokes, less time, but higher total). This isn't inefficiency—it's physics.</p>
+                <p><strong>Solution:</strong> Track SWOLF at specific target paces (e.g., "SWOLF at CSS pace" vs "SWOLF at easy pace").</p>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 The Science Behind Swimming Economy</h3>
+            <p>Research by Costill et al. (1985) established that <strong>swimming economy</strong> (energy cost per unit distance) is more important than VO₂max for middle-distance performance.</p>
+            <p>SWOLF serves as a proxy for economy—lower SWOLF typically correlates with lower energy expenditure at a given pace, allowing you to swim faster or longer with the same effort.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>SWOLF Training Drills</h2>
+
+        <div class="drill-set">
+            <h3>🎯 SWOLF Reduction Set</h3>
+            <div class="workout-box">
+                <h4>8 × 50m (30 seconds rest)</h4>
+                <ol>
+                    <li><strong>50 #1-2:</strong> Swim at comfortable pace, record baseline SWOLF</li>
+                    <li><strong>50 #3-4:</strong> Reduce stroke count by 2, maintain same time → Focus on length per stroke</li>
+                    <li><strong>50 #5-6:</strong> Increase stroke rate slightly, keep stroke count same → Focus on turnover</li>
+                    <li><strong>50 #7-8:</strong> Find optimal balance—aim for lowest SWOLF</li>
+                </ol>
+                <p><strong>Goal:</strong> Discover your most efficient stroke count/rate combination.</p>
+            </div>
+        </div>
+
+        <div class="drill-set">
+            <h3>⚡ SWOLF Stability Test</h3>
+            <div class="workout-box">
+                <h4>10 × 100m @ CSS Pace (20 seconds rest)</h4>
+                <p>Record SWOLF for each 100m. Analyze:</p>
+                <ul>
+                    <li>Which 100m had lowest SWOLF? (You were most efficient)</li>
+                    <li>Where did SWOLF spike? (Technique breakdown or fatigue)</li>
+                    <li>How much did SWOLF drift from first to last 100m?</li>
+                </ul>
+                <p><strong>Goal:</strong> Maintain SWOLF ±2 points across all reps. Consistency indicates strong technique under fatigue.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Efficiency is Earned Through Repetition</h2>
+        <p class="lead">SWOLF doesn't improve overnight. It's the cumulative result of thousands of technically sound strokes, deliberate practice, and mindful attention to efficiency over speed.</p>
+
+        <p>Track it consistently. Improve it gradually. Watch your swimming transform.</p>
+
+        <div style="margin-top: var(--space-xl);">
+            <a href="/en/stroke-mechanics/" class="btn btn-primary">Stroke Mechanics →</a>
+            <a href="/en/formulas/" class="btn btn-secondary">All Formulas</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics</h3>
+                <p>Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/en/">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/css/">
+                            Critical Swim Speed
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/">
+                            Training Load
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/">
+                            Efficiency (SWOLF)
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>All rights reserved</h3>
+                <ul>
+                    <li><a href="/en/privacy/">Privacy</a></li>
+                    <li><a href="/en/terms/">Terms</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Select language</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/efficiency/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           aria-current="page">
+                            English
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="This website uses cookies to improve your experience." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>This website uses cookies to improve your experience. <a href="/en/privacy/">Learn more</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Decline</button>
+            <button class="btn btn-primary" id="cookie-accept">Accept</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-SWIMANALYTICS"></script>
+    
+</body>
+</html>

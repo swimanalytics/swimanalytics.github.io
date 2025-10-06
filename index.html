@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Swim Analytics</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=/en/">
+    <script>
+        // Detect browser language
+        const browserLang = navigator.language.split('-')[0];
+        const supportedLangs = ["ca", "en"];
+        const targetLang = supportedLangs.includes(browserLang) ? browserLang : 'en';
+        window.location.href = '/' + targetLang + '/';
+    </script>
+    <title>Redirecting...</title>
 </head>
 <body>
-  <h1>Hola, món!</h1>
+    <p>Redirecting to <a href="/en/">default language</a>...</p>
 </body>
 </html>

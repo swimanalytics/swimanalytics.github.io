@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://swimanalytics.github.io/ca/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/ca/menu1/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/menu1/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/ca/menu2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/menu2/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/ca/menu3/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/menu3/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/ca/contact/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/en/menu1/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/menu1/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/en/menu2/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/menu2/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/en/menu3/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/menu3/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.github.io/en/contact/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/contact/"/>
+  </url>
+</urlset>

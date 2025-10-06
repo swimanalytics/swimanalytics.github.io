@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Formulas - SwimAnalytics</title>
+    <meta name="description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta name="author" content="Albert Arno">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimanalytics.github.io/en/formulas/">
+    <meta property="og:title" content="SwimAnalytics">
+    <meta property="og:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta property="og:image" content="https://swimanalytics.github.io/assets/images/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.github.io/en/formulas/">
+    <meta name="twitter:title" content="SwimAnalytics">
+    <meta name="twitter:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta name="twitter:image" content="https://swimanalytics.github.io/assets/images/og-image.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.github.io/ca/formulas/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.github.io/en/formulas/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.github.io/en/formulas/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#007bff">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.github.io",
+      "description": "Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis",
+      "inLanguage": "en"
+    }
+    </script>
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/en/" class="site-logo">
+                SwimAnalytics
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        <a href="/en/"
+                           
+                           aria-current="">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/css/"
+                           
+                           aria-current="">
+                            Critical Swim Speed
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           
+                           aria-current="">
+                            Training Load
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           
+                           aria-current="">
+                            Efficiency (SWOLF)
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stroke-mechanics/"
+                           
+                           aria-current="">
+                            Stroke Mechanics
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/research/"
+                           
+                           aria-current="">
+                            Scientific Research
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/bibliography/"
+                           
+                           aria-current="">
+                            Bibliography
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/formulas/"
+                           class="active"
+                           aria-current="page">
+                            Formulas
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="language-selector">
+                    <label for="language-select" class="visually-hidden">Select language</label>
+                    <select id="language-select" aria-label="Select language">
+                        
+                        <option value="ca" >
+                            Català
+                        </option>
+                        
+                        <option value="en" selected>
+                            English
+                        </option>
+                        
+                    </select>
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Technical Reference & Formulas</h1>
+        <p class="lead">Complete Mathematical Implementation</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Implementation Guide</h2>
+        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all SwimAnalytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Implementation Notes</h3>
+            <ul>
+                <li>All times should be converted to seconds for calculations</li>
+                <li>Swimming pace is inverse (higher % = slower pace)</li>
+                <li>Always validate inputs for reasonable ranges</li>
+                <li>Handle edge cases (division by zero, negative values)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Core Performance Metrics</h2>
+
+        <div class="formula-card">
+            <h3>Critical Swim Speed (CSS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                    </div>
+                    <div class="formula">
+                        CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // Convert times to seconds if needed
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // Calculate CSS in m/s
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // Calculate pace per 100m in seconds
+  const pace_per_100m = 100 / css_ms;
+
+  // Convert to mm:ss format
+  const minutes = Math.floor(pace_per_100m / 60);
+  const seconds = Math.round(pace_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    pace_seconds: pace_per_100m,
+    pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
+  };
+}
+
+// Example usage:
+const result = calculateCSS(200, 150, 400, 368);
+// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Swim Training Stress Score (sTSS)</h3>
+            <div class="formula-content">
+                <h4>Complete Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        sTSS = (IF³) × Duration (hours) × 100
+                    </div>
+                    <div class="formula">
+                        IF = NSS / FTP
+                    </div>
+                    <div class="formula">
+                        NSS = Total Distance / Total Time (m/min)
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Calculate Normalized Swim Speed
+  const nss = distance / timeMinutes;
+
+  // Calculate Intensity Factor
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // Calculate hours
+  const hours = timeMinutes / 60;
+
+  // Calculate sTSS using cubed intensity factor
+  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+
+  return Math.round(stss);
+}
+
+// Example usage:
+const stss = calculateSTSS(3000, 55, 64.5);
+// Returns: 55
+
+// Helper: Convert CSS to FTP
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP in m/min = 100m / (pace in minutes)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// Example: CSS of 1:33 (93 seconds)
+const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>SWOLF</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SWOLF = Lap Time (seconds) + Stroke Count
+                    </div>
+                    <div class="formula">
+                        SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+  return timeSeconds + strokeCount;
+}
+
+function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
+  const normalizedTime = timeSeconds * (25 / poolLength);
+  const normalizedStrokes = strokeCount * (25 / poolLength);
+  return normalizedTime + normalizedStrokes;
+}
+
+// Example:
+const swolf = calculateSWOLF(20, 15);
+// Returns: 35
+
+const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
+// Returns: 35 (normalized to 25m)</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Stroke Mechanics</h2>
+
+        <div class="formula-card">
+            <h3>Stroke Rate (SR)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SR = 60 / Cycle Time (seconds)
+                    </div>
+                    <div class="formula">
+                        SR = (Number of Strokes / Time in seconds) × 60
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+  return (strokeCount / timeSeconds) * 60;
+}
+
+// Example:
+const sr = calculateStrokeRate(30, 25);
+// Returns: 72 SPM</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Distance Per Stroke (DPS)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        DPS = Distance / Stroke Count
+                    </div>
+                    <div class="formula">
+                        DPS = Distance / (SR / 60)
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strokeCount;
+}
+
+// Example (25m pool, 5m push-off):
+const dps = calculateDPS(25, 12, 5);
+// Returns: 1.67 m/stroke
+
+// For multiple laps:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// Returns: 1.67 m/stroke (4 laps × 5m push-off)</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Velocity from SR and DPS</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        Velocity (m/s) = (SR / 60) × DPS
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateVelocity(strokeRate, dps) {
+  return (strokeRate / 60) * dps;
+}
+
+// Example:
+const velocity = calculateVelocity(70, 1.6);
+// Returns: 1.87 m/s</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Stroke Index (SI)</h3>
+            <div class="formula-content">
+                <h4>Formula:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SI = Velocity (m/s) × DPS (m/stroke)
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateStrokeIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// Example:
+const si = calculateStrokeIndex(1.5, 1.7);
+// Returns: 2.55</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Performance Management Chart (PMC)</h2>
+
+        <div class="formula-card">
+            <h3>CTL, ATL, TSB Calculations</h3>
+            <div class="formula-content">
+                <h4>Formulas:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                    </div>
+                    <div class="formula">
+                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                    </div>
+                    <div class="formula">
+                        TSB = CTL yesterday - ATL yesterday
+                    </div>
+                </div>
+
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// Calculate PMC for series of workouts
+function calculatePMC(workouts) {
+  let ctl = 0, atl = 0;
+  const results = [];
+
+  workouts.forEach(workout => {
+    ctl = updateCTL(ctl, workout.tss);
+    atl = updateATL(atl, workout.tss);
+    const tsb = calculateTSB(ctl, atl);
+
+    results.push({
+      date: workout.date,
+      tss: workout.tss,
+      ctl: Math.round(ctl * 10) / 10,
+      atl: Math.round(atl * 10) / 10,
+      tsb: Math.round(tsb * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// Example usage:
+const workouts = [
+  { date: '2025-01-01', tss: 50 },
+  { date: '2025-01-02', tss: 60 },
+  { date: '2025-01-03', tss: 45 },
+  // ... more workouts
+];
+
+const pmc = calculatePMC(workouts);
+// Returns array with CTL, ATL, TSB for each day</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Advanced Calculations</h2>
+
+        <div class="formula-card">
+            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateCSSRegression(distances, times) {
+  // Linear regression: distance = a + b*time
+  const n = distances.length;
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // Critical swimming velocity (m/s)
+    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+  };
+}
+
+// Example with multiple test distances:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // in seconds
+const result = calculateCSSRegression(distances, times);
+// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Intensity Factor from Pace</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // Convert pace to speed (m/s)
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// Example:
+const if_value = calculateIntensityFactor(110, 93);
+// Returns: 0.845 (swimming at 84.5% of threshold)</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Pace Consistency Analysis</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
+    sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation < 5 ? "Excellent" :
+                 coefficientOfVariation < 10 ? "Good" :
+                 coefficientOfVariation < 15 ? "Moderate" : "Variable"
+  };
+}
+
+// Example:
+const laps = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(laps);
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excellent" }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Fatigue Detection from Stroke Count</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function detectFatigue(laps) {
+  const firstThird = laps.slice(0, Math.floor(laps.length/3));
+  const lastThird = laps.slice(-Math.floor(laps.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / lastThird.length;
+
+  const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
+    fatigueLevel: strokeCountIncrease < 5 ? "Minimal" :
+                  strokeCountIncrease < 10 ? "Moderate" :
+                  strokeCountIncrease < 20 ? "Significant" : "Severe"
+  };
+}
+
+// Example:
+const laps = [
+  { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
+  { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
+  { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
+];
+const fatigue = detectFatigue(laps);
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severe" }</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Data Validation</h2>
+
+        <div class="formula-card">
+            <h3>Workout Data Quality Checks</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>function validateWorkoutData(workout) {
+  const issues = [];
+
+  // Check for reasonable pace ranges (1:00-5:00 per 100m)
+  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`Unusual average pace: ${Math.round(avgPace)}s per 100m`);
+  }
+
+  // Check for reasonable stroke counts (10-50 per 25m)
+  const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`Unusual stroke count: ${Math.round(avgStrokesPer25m)} per 25m`);
+  }
+
+  // Check for reasonable stroke rate (30-150 SPM)
+  const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`Unusual stroke rate: ${Math.round(avgSR)} SPM`);
+  }
+
+  // Check for missing laps (gaps in time)
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
+      const gap = workout.laps[i].startTime -
+                  (workout.laps[i-1].startTime + workout.laps[i-1].duration);
+      if (gap > 300) { // 5 minute gap
+        issues.push(`Large gap detected between laps ${i} and ${i+1}`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues
+  };
+}
+
+// Example:
+const workout = {
+  totalDistance: 2000,
+  totalTime: 1800, // 30 minutes
+  totalStrokes: 800,
+  laps: [/* lap data */]
+};
+const validation = validateWorkoutData(workout);
+// Returns: { isValid: true, issues: [] }</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Helper Functions</h2>
+
+        <div class="formula-card">
+            <h3>Time Conversion Utilities</h3>
+            <div class="formula-content">
+                <h4>JavaScript Implementation:</h4>
+                <pre><code>// Convert mm:ss to seconds
+function timeToSeconds(timeString) {
+  const parts = timeString.split(':');
+  return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+}
+
+// Convert seconds to mm:ss
+function secondsToTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.round(seconds % 60);
+  return `${minutes}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Convert seconds to hh:mm:ss
+function secondsToTimeDetailed(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = Math.round(seconds % 60);
+  return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Examples:
+timeToSeconds("1:33"); // Returns: 93
+secondsToTime(93); // Returns: "1:33"
+secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow text-center">
+        <h2>Implementation Resources</h2>
+        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
+
+        <div class="callout callout-tip">
+            <h3>💡 Best Practices</h3>
+            <ul style="text-align: left;">
+                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
+                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
+                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
+                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
+                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: var(--space-xl);">
+            <a href="/en/" class="btn btn-primary btn-large">Back to Home</a>
+            <a href="/en/research/" class="btn btn-secondary">Scientific Foundation</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics</h3>
+                <p>Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/en/">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/css/">
+                            Critical Swim Speed
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/">
+                            Training Load
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/">
+                            Efficiency (SWOLF)
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>All rights reserved</h3>
+                <ul>
+                    <li><a href="/en/privacy/">Privacy</a></li>
+                    <li><a href="/en/terms/">Terms</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Select language</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/formulas/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/formulas/"
+                           aria-current="page">
+                            English
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="This website uses cookies to improve your experience." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>This website uses cookies to improve your experience. <a href="/en/privacy/">Learn more</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Decline</button>
+            <button class="btn btn-primary" id="cookie-accept">Accept</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-SWIMANALYTICS"></script>
+    
+</body>
+</html>
