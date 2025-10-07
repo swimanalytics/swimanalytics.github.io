@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swimanalytics.github.io/sitemap.xml
+Sitemap: https://swimanalytics.app/sitemap.xml
