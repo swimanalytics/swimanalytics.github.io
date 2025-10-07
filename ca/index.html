@@ -176,50 +176,328 @@
 
     
     <main id="main-content" class="main-content">
-        <section class="hero">
+        <!-- Hero Section -->
+<section class="app-hero">
     <div class="container">
-        <h1 class="hero-title">Benvingut al nostre lloc web</h1>
-        <p class="hero-subtitle">Un boilerplate modern i professional per a projectes web multiidioma</p>
-        <div class="hero-cta">
-            <a href="/ca/contact/" class="btn btn-primary btn-large">Contacta'ns</a>
-            <a href="/ca/menu1/" class="btn btn-secondary btn-large">Saber-ne més</a>
+        <div class="app-hero-content">
+            <div class="app-hero-text">
+                <span class="app-hero-badge">
+                    🏊‍♂️ Analítica Científica per a Nedadors
+                </span>
+                <h1>Millora el teu entrenament amb dades científiques</h1>
+                <p class="app-hero-subtitle">
+                    SwimAnalytics transforma les teves sessions de natació de l'Apple Watch en mètriques científiques avançades: CSS, TSS, CTL, ATL i TSB. Tot local, privat i instantani.
+                </p>
+                <div class="app-hero-cta">
+                    <a href="https://apps.apple.com/app/swimanalytics" class="app-store-badge">
+                        <span class="icon"></span>
+                        <span class="app-store-badge-text">
+                            <span class="app-store-badge-label">Descarrega a l'</span>
+                            <span class="app-store-badge-title">App Store</span>
+                        </span>
+                    </a>
+                    <a href="#features" class="btn btn-accent-outline">Descobreix les funcionalitats</a>
+                </div>
+            </div>
+            <div class="app-hero-mockup">
+                <div class="mockup-phone">
+                    <!-- Aquí aniria la imatge del iPhone amb l'app -->
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics App Mockup" loading="eager">
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="section">
+<!-- Features Section -->
+<section id="features" class="app-features">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Les nostres característiques</h2>
-        <div class="grid grid-3">
-            <div class="card">
-                <h3 class="card-title">🚀 Modern i ràpid</h3>
-                <div class="card-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="section-header">
+            <span class="section-badge">Funcionalitats</span>
+            <h2 class="section-title">Tot el que necessites per analitzar el teu entrenament</h2>
+            <p class="section-subtitle">
+                Des de mètriques científiques fins a gràfics detallats, SwimAnalytics ofereix les eines que necessiten els nedadors seriosos.
+            </p>
+        </div>
+
+        <div class="app-features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⌚</div>
+                <h3>Sincronització amb Apple Watch</h3>
+                <p>Connecta automàticament amb el teu Apple Watch via HealthKit. Importa totes les teves sessions de natació amb un sol toc.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Mètriques Científiques</h3>
+                <p>Calcula CSS (Critical Swim Speed), TSS (Training Stress Score), CTL, ATL i TSB basant-se en la investigació científica més actual.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Gràfics Avançats</h3>
+                <p>Visualitza la teva progressió amb gràfics setmanals, mensuals i anuals. Compara sessions i identifica tendències.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacitat Total</h3>
+                <p>Totes les dades es processen localment al teu dispositiu. Cap servidor extern. Les teves dades són 100% teves.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Càrrega Instantània</h3>
+                <p>Menys de 0.35 segons per carregar l'app. Arquitectura optimitzada per a màxima velocitat i eficiència.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📤</div>
+                <h3>Exportació Flexible</h3>
+                <p>Exporta les teves dades en JSON, CSV, HTML o PDF. Comparteix amb el teu entrenador o analitza externament.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Captures de Pantalla</span>
+            <h2 class="section-title">Veu l'app en acció</h2>
+            <p class="section-subtitle">
+                Interfície nativa iOS amb disseny net i intuïtiu
+            </p>
+        </div>
+
+        <div class="screenshots-carousel">
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/dashboard.png" alt="Dashboard principal" loading="lazy">
+                <p class="screenshot-caption">Dashboard principal amb mètriques clau</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/session-detail.png" alt="Detall de sessió" loading="lazy">
+                <p class="screenshot-caption">Anàlisi detallat de cada sessió</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/weekly-chart.png" alt="Gràfic setmanal" loading="lazy">
+                <p class="screenshot-caption">Vista setmanal amb comparacions</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/monthly-view.png" alt="Vista mensual" loading="lazy">
+                <p class="screenshot-caption">Anàlisi mensual i tendències</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/metrics.png" alt="Mètriques científiques" loading="lazy">
+                <p class="screenshot-caption">Mètriques CTL, ATL i TSB</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="/assets/images/screenshots/export.png" alt="Opcions d'exportació" loading="lazy">
+                <p class="screenshot-caption">Exporta en múltiples formats</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Ciència</span>
+            <h2 class="section-title">Mètriques basades en investigació científica</h2>
+            <p class="section-subtitle">
+                Utilitza els mateixos protocols que els nedadors d'elit i els centres de recerca esportiva
+            </p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon">🎯</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">CSS</h3>
+                <p class="metric-description">Critical Swim Speed - La teva velocitat màxima sostenible</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">💪</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">TSS</h3>
+                <p class="metric-description">Training Stress Score - Quantifica l'esforç de cada sessió</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">📈</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">CTL</h3>
+                <p class="metric-description">Chronic Training Load - La teva forma física a llarg termini</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">⚡</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">ATL</h3>
+                <p class="metric-description">Acute Training Load - La fatiga recent acumulada</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">🔋</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">TSB</h3>
+                <p class="metric-description">Training Stress Balance - El teu nivell de recuperació</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">🏊</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">SWOLF</h3>
+                <p class="metric-description">Swim Golf - Eficiència de la teva braçada</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">🔄</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">Stroke Rate</h3>
+                <p class="metric-description">Freqüència de braçada en temps real</p>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-icon">📏</div>
+                <p class="metric-label">Mètrica</p>
+                <h3 class="metric-name">Distance/Stroke</h3>
+                <p class="metric-description">Distància per braçada i eficiència propulsiva</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="app-pricing">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Preus</span>
+            <h2 class="section-title">Tria el pla que millor s'adapti a tu</h2>
+            <p class="section-subtitle">
+                Prova gratuïtament durant 7 dies. Cancel·la quan vulguis.
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3 class="pricing-name">Mensual</h3>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">€</span>
+                        <span class="pricing-amount">3.99</span>
+                        <span class="pricing-period">/mes</span>
+                    </div>
+                    <p class="pricing-trial">7 dies de prova gratuïta</p>
+                </div>
+                <ul class="pricing-features">
+                    <li>Totes les mètriques científiques</li>
+                    <li>Sincronització amb Apple Watch</li>
+                    <li>Gràfics setmanals i mensuals</li>
+                    <li>Exportació en tots els formats</li>
+                    <li>Privacitat total garantida</li>
+                    <li>Actualitzacions gratuïtes</li>
+                </ul>
+                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" style="width: 100%;">Començar prova gratuïta</a>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="pricing-header">
+                    <h3 class="pricing-name">Anual</h3>
+                    <div class="pricing-price">
+                        <span class="pricing-currency">€</span>
+                        <span class="pricing-amount">39</span>
+                        <span class="pricing-period">/any</span>
+                    </div>
+                    <p class="pricing-trial">Estalvia €8.88 (18% descompte)</p>
+                </div>
+                <ul class="pricing-features">
+                    <li>Totes les mètriques científiques</li>
+                    <li>Sincronització amb Apple Watch</li>
+                    <li>Gràfics setmanals, mensuals i anuals</li>
+                    <li>Exportació en tots els formats</li>
+                    <li>Privacitat total garantida</li>
+                    <li>Actualitzacions gratuïtes</li>
+                    <li>Suport prioritari</li>
+                    <li>Accés anticipat a noves funcions</li>
+                </ul>
+                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-accent btn-large" style="width: 100%;">Obtenir pla anual</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Avantatges</span>
+            <h2 class="section-title">Per què triar SwimAnalytics?</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">🔒</div>
+                <div class="benefit-content">
+                    <h3>100% Privat i Local</h3>
+                    <p>Totes les dades es processen i s'emmagatzemen únicament al teu iPhone. No enviem res a servidors externs. La teva privacitat és la nostra prioritat.</p>
                 </div>
             </div>
-            <div class="card">
-                <h3 class="card-title">🌍 Multiidioma</h3>
-                <div class="card-content">
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-content">
+                    <h3>Càrrega en 0.35 segons</h3>
+                    <p>Arquitectura optimitzada amb Swift modern i SwiftUI. L'app més ràpida de la categoria. Zero retard, zero espera.</p>
                 </div>
             </div>
-            <div class="card">
-                <h3 class="card-title">📱 Responsive</h3>
-                <div class="card-content">
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🎓</div>
+                <div class="benefit-content">
+                    <h3>Basat en Ciència</h3>
+                    <p>Totes les mètriques es calculen seguint protocols científics validats i publicats en revistes acadèmiques d'esport d'alt rendiment.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🎨</div>
+                <div class="benefit-content">
+                    <h3>Disseny Natiu iOS</h3>
+                    <p>Interfície nativa construïda amb SwiftUI. S'integra perfectament amb iOS, segueix les Human Interface Guidelines d'Apple i suporta mode fosc.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">📤</div>
+                <div class="benefit-content">
+                    <h3>Exportació Completa</h3>
+                    <p>Exporta les teves dades en JSON, CSV, HTML o PDF. Comparteix amb el teu entrenador, analitza en Excel o guarda un registre permanent.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🆓</div>
+                <div class="benefit-content">
+                    <h3>Prova Sense Compromís</h3>
+                    <p>7 dies de prova gratuïta amb accés complet. No es requereix targeta de crèdit fins que decideixis continuar. Cancel·la quan vulguis.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container container-narrow">
-        <h2 style="margin-bottom: var(--space-lg);">Per què triar-nos?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <div style="margin-top: var(--space-xl);">
-            <a href="/ca/contact/" class="btn btn-primary">Comença ara</a>
+<!-- Final CTA -->
+<section class="app-cta-final">
+    <div class="container">
+        <h2>Comença a analitzar el teu entrenament avui</h2>
+        <p>Uneix-te als nedadors que ja utilitzen dades científiques per millorar el seu rendiment. Descarrega SwimAnalytics i prova gratuïtament durant 7 dies.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-accent btn-large">Descarregar ara</a>
+            <a href="/ca/contact/" class="btn btn-accent-outline btn-large">Contactar suport</a>
         </div>
     </div>
 </section>
