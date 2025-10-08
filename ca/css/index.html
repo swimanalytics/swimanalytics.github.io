@@ -356,6 +356,70 @@
                 Pace = 109 seconds = <strong>1:49 per 100m</strong>
             </div>
         </div>
+
+        <h2 class="mt-3xl">Calculadora CSS Gratuïta</h2>
+        <p class="lead">Calcula el teu Critical Swim Speed i zones d'entrenament personalitzades a l'instant</p>
+
+        <div class="css-calculator">
+            <form id="cssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="time400" class="form-label">Temps 400m (mm:ss)</label>
+                        <input
+                            type="text"
+                            id="time400"
+                            class="form-input"
+                            placeholder="6:08"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time400-help"
+                        />
+                        <small id="time400-help" class="form-help">Format: minuts:segons (p.ex., 6:08)</small>
+                        <div class="form-error" id="time400-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time200" class="form-label">Temps 200m (mm:ss)</label>
+                        <input
+                            type="text"
+                            id="time200"
+                            class="form-input"
+                            placeholder="2:30"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time200-help"
+                        />
+                        <small id="time200-help" class="form-help">Format: minuts:segons (p.ex., 2:30)</small>
+                        <div class="form-error" id="time200-error"></div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateBtn">Calcular CSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetBtn">Esborrar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results" id="cssResults" style="display:none;" aria-live="polite">
+                <h3>Els Teus Resultats</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">Critical Swim Speed</div>
+                        <div class="css-result-value" id="cssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Ritme CSS per 100m</div>
+                        <div class="css-result-value" id="cssPace">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Les Teves Zones d'Entrenament Personalitzades</h4>
+                    <p class="mb-md text-secondary">
+                        Basant-nos en el teu CSS, aquí tens les teves zones d'entrenament en ritme per 100m:
+                    </p>
+                    <div id="zonesTable"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
