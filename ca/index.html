@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/ca/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -459,7 +463,7 @@
                     <li>Privacitat total garantida</li>
                     <li>Actualitzacions gratuïtes</li>
                 </ul>
-                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" style="width: 100%;">Començar prova gratuïta</a>
+                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large cta-spacing">Començar prova gratuïta</a>
             </div>
 
             <div class="pricing-card featured">
@@ -482,7 +486,7 @@
                     <li>Suport prioritari</li>
                     <li>Accés anticipat a noves funcions</li>
                 </ul>
-                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-accent btn-large" style="width: 100%;">Obtenir pla anual</a>
+                <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-accent btn-large cta-spacing">Obtenir pla anual</a>
             </div>
         </div>
     </div>
@@ -553,7 +557,7 @@
     <div class="container">
         <h2>Comença a analitzar el teu entrenament avui</h2>
         <p>Uneix-te als nedadors que ja utilitzen dades científiques per millorar el seu rendiment. Descarrega SwimAnalytics i prova gratuïtament durant 7 dies.</p>
-        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <div class="section-footer">
             <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-accent btn-large">Descarregar ara</a>
             <a href="/ca/contact/" class="btn btn-accent-outline btn-large">Contactar suport</a>
         </div>

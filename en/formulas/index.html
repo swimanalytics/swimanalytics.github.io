@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -749,7 +753,7 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
         <div class="callout callout-tip">
             <h3>💡 Best Practices</h3>
-            <ul style="text-align: left;">
+            <ul class="text-left">
                 <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
                 <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
                 <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
@@ -758,7 +762,7 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
             </ul>
         </div>
 
-        <div style="margin-top: var(--space-xl);">
+        <div class="mt-xl">
             <a href="/en/" class="btn btn-primary btn-large">Back to Home</a>
             <a href="/en/research/" class="btn btn-secondary">Scientific Foundation</a>
         </div>

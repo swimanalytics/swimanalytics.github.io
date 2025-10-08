@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/ca/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -234,7 +238,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">SWOLF Benchmarks</h2>
+        <h2 class="text-center mb-xl">SWOLF Benchmarks</h2>
 
         <div class="grid grid-2">
             <div>
@@ -449,7 +453,7 @@
 
         <p>Track it consistently. Improve it gradually. Watch your swimming transform.</p>
 
-        <div style="margin-top: var(--space-xl);">
+        <div class="mt-xl">
             <a href="/en/stroke-mechanics/" class="btn btn-primary">Stroke Mechanics →</a>
             <a href="/en/formulas/" class="btn btn-secondary">All Formulas</a>
         </div>

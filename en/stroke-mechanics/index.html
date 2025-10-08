@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -232,7 +236,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Stroke Rate (SR)</h2>
+        <h2 class="text-center mb-xl">Stroke Rate (SR)</h2>
 
         <div class="grid grid-2">
             <div>
@@ -249,7 +253,7 @@
                         SR = (Number of Strokes / Time in seconds) × 60
                     </div>
 
-                    <div class="example-box" style="margin-top: var(--space-md);">
+                    <div class="example-box mt-md">
                         <h4>Example:</h4>
                         <p>If your stroke cycle takes 1 second:</p>
                         <div class="calculation">
@@ -373,7 +377,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Distance Per Stroke (DPS)</h2>
+        <h2 class="text-center mb-xl">Distance Per Stroke (DPS)</h2>
 
         <div class="grid grid-2">
             <div>
@@ -390,14 +394,14 @@
                         DPS = Velocity / (SR / 60)
                     </div>
 
-                    <div class="example-box" style="margin-top: var(--space-md);">
+                    <div class="example-box mt-md">
                         <h4>Example (25m pool, 5m push-off):</h4>
                         <p>Swim 20m in 12 strokes:</p>
                         <div class="calculation">
                             DPS = 20 / 12 = <strong>1.67 m/stroke</strong>
                         </div>
 
-                        <h4 style="margin-top: var(--space-sm);">For 100m with 48 strokes (4 × 5m push-offs):</h4>
+                        <h4 class="mt-sm">For 100m with 48 strokes (4 × 5m push-offs):</h4>
                         <div class="calculation">
                             Effective distance = 100 - (4 × 5) = 80m<br>
                             DPS = 80 / 48 = <strong>1.67 m/stroke</strong>
@@ -637,7 +641,7 @@
 
         <p>Track both variables. Experiment with the balance. Find your optimal combination. Speed will follow.</p>
 
-        <div style="margin-top: var(--space-xl);">
+        <div class="mt-xl">
             <a href="/en/efficiency/" class="btn btn-secondary">← SWOLF Efficiency</a>
             <a href="/en/research/" class="btn btn-primary">Scientific Research →</a>
         </div>

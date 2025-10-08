@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -734,7 +738,7 @@
         <h2>Science-Based Swimming Analytics</h2>
         <p class="lead">These 55+ scientific references form the evidence base for SwimAnalytics. Every formula, metric, and recommendation is grounded in peer-reviewed research, not speculation or anecdote.</p>
 
-        <div style="margin-top: var(--space-xl);">
+        <div class="mt-xl">
             <a href="/en/formulas/" class="btn btn-primary btn-large">View Technical Formulas →</a>
         </div>
     </div>

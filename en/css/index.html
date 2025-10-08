@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -206,7 +210,7 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <div class="callout callout-info" style="margin-bottom: var(--space-xl);">
+        <div class="callout callout-info mb-xl">
             <h2>What is Critical Swim Speed (CSS)?</h2>
             <p><strong>Critical Swim Speed (CSS)</strong> is the theoretical maximum swimming velocity you can maintain without exhaustion. It represents your aerobic threshold pace, typically corresponding to 4 mmol/L blood lactate and sustainable for approximately 30 minutes. CSS is calculated using a 400m and 200m time trial to determine personalized training zones.</p>
         </div>
@@ -241,7 +245,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">CSS Testing Protocol</h2>
+        <h2 class="text-center mb-xl">CSS Testing Protocol</h2>
         <div class="grid grid-2">
             <div class="protocol-card">
                 <h3>📋 Standard Protocol</h3>
@@ -291,7 +295,7 @@
             </div>
         </div>
 
-        <div class="callout callout-tip" style="margin-top: var(--space-xl);">
+        <div class="callout callout-tip mt-xl">
             <h3>🔄 Retesting Frequency</h3>
             <p>Retest CSS every <strong>6-8 weeks</strong> to update training zones as fitness improves. Your zones should progressively become faster as you adapt to training.</p>
         </div>
@@ -317,7 +321,7 @@
                 </ul>
             </div>
 
-            <h3 style="margin-top: var(--space-lg);">Simplified for Pace per 100m</h3>
+            <h3 class="mt-lg">Simplified for Pace per 100m</h3>
             <div class="formula">
                 CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
             </div>
@@ -346,7 +350,7 @@
             </div>
         </div>
 
-        <h2 style="margin-top: var(--space-3xl);">Free CSS Calculator</h2>
+        <h2 class="mt-3xl">Free CSS Calculator</h2>
         <p class="lead">Calculate your Critical Swim Speed and personalized training zones instantly</p>
 
         <div class="css-calculator">
@@ -402,7 +406,7 @@
 
                 <div class="zones-result">
                     <h4>Your Personalized Training Zones</h4>
-                    <p style="margin-bottom: var(--space-md); color: var(--color-text-secondary);">
+                    <p class="mb-md text-secondary">
                         Based on your CSS, here are your training zones in pace per 100m:
                     </p>
                     <div id="zonesTable"></div>
@@ -410,7 +414,7 @@
             </div>
         </div>
 
-        <h3 style="margin-top: var(--space-xl);">Alternative (Simplified Method):</h3>
+        <h3 class="mt-xl">Alternative (Simplified Method):</h3>
         <div class="example-box">
             <div class="calculation">
                 Pace = (368 - 150) / 2<br>
@@ -423,7 +427,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 style="margin-bottom: var(--space-xl);">Training Zones Based on CSS</h2>
+        <h2 class="mb-xl">Training Zones Based on CSS</h2>
 
         <div class="callout callout-info">
             <p><strong>Note:</strong> In swimming, pace is measured as <em>time per distance</em>. Therefore, a <strong>higher percentage = slower pace</strong>, and a <strong>lower percentage = faster pace</strong>. This is inverse to cycling/running where higher % = harder effort.</p>
@@ -486,7 +490,7 @@
             </table>
         </div>
 
-        <div class="callout callout-tip" style="margin-top: var(--space-lg);">
+        <div class="callout callout-tip mt-lg">
             <h3>🎯 Zone-Based Training Benefits</h3>
             <p>Using CSS-based zones transforms subjective "feel" training into objective, repeatable workouts. Each zone targets specific physiological adaptations:</p>
             <ul>
@@ -611,7 +615,7 @@
             </div>
         </div>
 
-        <div class="callout" style="margin-top: var(--space-2xl);">
+        <div class="callout mt-2xl">
             <h3>Apply Your CSS Knowledge</h3>
             <p>Now that you understand Critical Swim Speed, take the next steps to optimize your training:</p>
             <ul>
@@ -622,7 +626,7 @@
             </ul>
         </div>
 
-        <div style="margin-top: var(--space-xl); text-align: center;">
+        <div class="mt-xl text-center">
             <a href="/en/training-load/" class="btn btn-primary">Learn About sTSS Calculation →</a>
             <a href="/en/formulas/" class="btn btn-secondary">View All Formulas →</a>
         </div>

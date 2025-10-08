@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -221,7 +225,7 @@
             Explore Features
           </a>
         </div>
-        <p style="margin-top: var(--space-6); font-size: var(--font-size-sm); opacity: 0.9;">
+        <p class="mt-6 text-sm-muted">
           ✓ 7-day free trial &nbsp;&nbsp; ✓ No account required &nbsp;&nbsp; ✓ 100% local data
         </p>
       </div>
@@ -356,8 +360,8 @@
   <div class="container">
     <div class="section-header">
       <div class="section-badge">Science-Based</div>
-      <h2 class="section-title" style="color: white;">Professional Metrics That Matter</h2>
-      <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">
+      <h2 class="section-title text-white">Professional Metrics That Matter</h2>
+      <p class="section-subtitle text-white-90">
         SwimAnalytics transforms raw swimming data into actionable intelligence
         using metrics validated by sports science research
       </p>
@@ -541,45 +545,45 @@
     <div class="grid grid-2">
       <div class="card">
         <div class="card-content">
-          <p style="font-style: italic; margin-bottom: var(--space-lg);">
+          <p class="testimonial-quote">
             "After 3 months with SwimAnalytics, I've improved my CSS by 6 seconds per 100m. The training zones helped me structure sets properly and understand when I'm pushing too hard. The CTL/ATL chart is incredibly insightful!"
           </p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+          <div class="testimonial-author">
             <strong>Michael Torres</strong><br>
-            <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Masters Swimmer, Age 35</span>
+            <span class="text-secondary-sm">Masters Swimmer, Age 35</span>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <p style="font-style: italic; margin-bottom: var(--space-lg);">
+          <p class="testimonial-quote">
             "As a coach, I recommended SwimAnalytics to our entire junior team. The CSV export lets me analyze weekly loads for each swimmer and spot who needs recovery. Parents love the privacy-first approach."
           </p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+          <div class="testimonial-author">
             <strong>Sarah Williams</strong><br>
-            <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Head Coach, Aquatic Club</span>
+            <span class="text-secondary-sm">Head Coach, Aquatic Club</span>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <p style="font-style: italic; margin-bottom: var(--space-lg);">
+          <p class="testimonial-quote">
             "I thought advanced metrics like TSS and FTP were only for cyclists. SwimAnalytics brings that level of analysis to swimming. Now I plan microcycles scientifically, not by guesswork."
           </p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+          <div class="testimonial-author">
             <strong>James Patterson</strong><br>
-            <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Olympic Distance Triathlete</span>
+            <span class="text-secondary-sm">Olympic Distance Triathlete</span>
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-content">
-          <p style="font-style: italic; margin-bottom: var(--space-lg);">
+          <p class="testimonial-quote">
             "The integrated CSS test is brilliant. In 15 minutes you get your threshold and the app recalculates all zones automatically. Best investment in a sports app I've made."
           </p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-md);">
+          <div class="testimonial-author">
             <strong>Emma Clarke</strong><br>
-            <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">Open Water Swimmer, Age 42</span>
+            <span class="text-secondary-sm">Open Water Swimmer, Age 42</span>
           </div>
         </div>
       </div>
@@ -642,7 +646,7 @@
         Learn More
       </a>
     </div>
-    <p style="margin-top: var(--space-8); font-size: var(--font-size-sm); opacity: 0.9;">
+    <p class="section-footer">
       No account required • Cancel anytime • Your data stays on your device
     </p>
   </div>
@@ -660,21 +664,21 @@
         <h3 class="card-title">Critical Swim Speed</h3>
         <div class="card-content">
           <p>Understand how CSS determines your aerobic threshold and why it's crucial for structured training.</p>
-          <a href="/en/css/" class="btn btn-secondary btn-small" style="margin-top: var(--space-md);">Learn about CSS →</a>
+          <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn about CSS →</a>
         </div>
       </div>
       <div class="card">
         <h3 class="card-title">Training Load Management</h3>
         <div class="card-content">
           <p>Discover how TSS, CTL, ATL, and TSB help you balance training stress and recovery.</p>
-          <a href="/en/training-load/" class="btn btn-secondary btn-small" style="margin-top: var(--space-md);">Explore Training Load →</a>
+          <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">Explore Training Load →</a>
         </div>
       </div>
       <div class="card">
         <h3 class="card-title">Training Zones</h3>
         <div class="card-content">
           <p>Learn about the 7 training zones and how to use them for targeted workout planning.</p>
-          <a href="/en/training-zones/" class="btn btn-secondary btn-small" style="margin-top: var(--space-md);">View Training Zones →</a>
+          <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">View Training Zones →</a>
         </div>
       </div>
     </div>

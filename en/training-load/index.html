@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -221,7 +225,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Swim Training Stress Score (sTSS)</h2>
+        <h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2>
 
         <div class="grid grid-2">
             <div>
@@ -242,7 +246,7 @@
                     </div>
                 </div>
 
-                <div class="callout callout-warning" style="margin-top: var(--space-md);">
+                <div class="callout callout-warning mt-md">
                     <h4>⚡ The Cubic Factor (IF³)</h4>
                     <p><strong>Key Innovation:</strong> Swimming uses IF³ while cycling/running use IF². This reflects water's physics—resistance increases <em>exponentially</em> with speed.</p>
                     <p>Going 10% faster in water requires ~33% more power. The cubic factor accurately weights this increased physiological cost.</p>
@@ -287,7 +291,7 @@
             </div>
         </div>
 
-        <div class="intensity-guide" style="margin-top: var(--space-xl);">
+        <div class="intensity-guide mt-xl">
             <h3>sTSS Intensity Guidelines</h3>
             <table class="intensity-table">
                 <thead>
@@ -333,7 +337,7 @@
             </table>
         </div>
 
-        <div class="callout callout-tip" style="margin-top: var(--space-lg);">
+        <div class="callout callout-tip mt-lg">
             <h3>📊 Weekly TSS Targets by Level</h3>
             <ul>
                 <li><strong>Beginners:</strong> 200-400 TSS/week</li>
@@ -347,7 +351,7 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center" style="margin-bottom: var(--space-xl);">Performance Management Chart (PMC)</h2>
+        <h2 class="text-center mb-xl">Performance Management Chart (PMC)</h2>
         <p class="text-center lead">The PMC visualizes three interconnected metrics that tell the complete story of your training: fitness, fatigue, and form.</p>
 
         <div class="pmc-overview">
@@ -436,7 +440,7 @@
                     </div>
                 </div>
 
-                <div class="warning-box" style="margin-top: var(--space-md);">
+                <div class="warning-box mt-md">
                     <strong>⚠️ CTL Ramp Rate Limits</strong>
                     <ul>
                         <li><strong>Beginners:</strong> +3-5 CTL per week</li>
@@ -571,7 +575,7 @@
             </table>
         </div>
 
-        <div class="callout callout-tip" style="margin-top: var(--space-xl);">
+        <div class="callout callout-tip mt-xl">
             <h3>🎯 Target TSB by Race Distance</h3>
             <ul>
                 <li><strong>Sprint/Olympic Triathlon:</strong> TSB +15 to +25 (7-10 day taper)</li>
@@ -679,7 +683,7 @@
         <h2>Master Your Training Load</h2>
         <p class="lead">The PMC transforms subjective training into objective data. By monitoring sTSS, CTL, ATL, and TSB, you gain precise control over fitness progression, fatigue management, and peak performance timing.</p>
 
-        <div style="margin-top: var(--space-xl);">
+        <div class="mt-xl">
             <a href="/en/css/" class="btn btn-secondary">← CSS Foundation</a>
             <a href="/en/efficiency/" class="btn btn-primary">Efficiency Metrics →</a>
         </div>

@@ -39,7 +39,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#007bff">
+    <meta name="theme-color" content="#0066CC">
 
     
     <link rel="stylesheet" href="/assets/css/main.min.css">
@@ -87,7 +87,11 @@
         <div class="header-inner">
             
             <a href="/ca/" class="site-logo">
-                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
             </a>
 
             
@@ -199,8 +203,8 @@
     <main id="main-content" class="main-content">
         <section class="section">
     <div class="container container-narrow">
-        <h1 style="margin-bottom: var(--space-md);">Contacte</h1>
-        <p style="margin-bottom: var(--space-3xl);">Ens agradaria saber de tu. Omple el formulari i ens posarem en contacte amb tu el més aviat possible.</p>
+        <h1 class="mb-md">Contacte</h1>
+        <p class="mb-3xl">Ens agradaria saber de tu. Omple el formulari i ens posarem en contacte amb tu el més aviat possible.</p>
 
         <form class="contact-form" id="contact-form" action="#" method="post">
             <div class="form-group">
@@ -231,15 +235,15 @@
             </div>
         </form>
 
-        <div style="margin-top: var(--space-3xl); padding-top: var(--space-3xl); border-top: 1px solid var(--color-border);">
-            <h2 style="margin-bottom: var(--space-md);">Altres formes de contactar</h2>
+        <div class="mt-3xl pt-3xl divider-top">
+            <h2 class="mb-md">Altres formes de contactar</h2>
             <div class="grid grid-2">
                 <div>
-                    <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-sm);">Correu electrònic</h3>
+                    <h3 class="text-lg-tight mb-sm">Correu electrònic</h3>
                     <p><a href="mailto:info@example.com">info@example.com</a></p>
                 </div>
                 <div>
-                    <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--space-sm);">Telèfon</h3>
+                    <h3 class="text-lg-tight mb-sm">Telèfon</h3>
                     <p><a href="tel:+34123456789">+34 123 456 789</a></p>
                 </div>
             </div>
