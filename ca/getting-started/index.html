@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ca" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Començar amb SwimAnalytics - Guia Configuració Completa | Tutorial Test CSS</title>
+    <meta name="description" content="Guia configuració completa SwimAnalytics. Aprèn a realitzar test CSS, introduir resultats, fer seguiment entrenaments i comprendre mètriques sTSS, CTL/ATL/TSB. Tutorial pas a pas amb resolució problemes per principiants. Prova gratuïta 7 dies.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="guia SwimAnalytics, tutorial test CSS, tutorial app natació, com usar SwimAnalytics, guia analítica natació">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ca/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ca/getting-started/">
+    <meta property="og:title" content="Començar amb SwimAnalytics - Guia Configuració Completa | Tutorial Test CSS">
+    <meta property="og:description" content="Guia configuració completa SwimAnalytics. Aprèn a realitzar test CSS, introduir resultats, fer seguiment entrenaments i comprendre mètriques sTSS, CTL/ATL/TSB. Tutorial pas a pas amb resolució problemes per principiants. Prova gratuïta 7 dies.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    <meta property="og:locale" content="ca_ES">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ca/getting-started/">
+    <meta name="twitter:title" content="Començar amb SwimAnalytics - Guia Configuració Completa | Tutorial Test CSS">
+    <meta name="twitter:description" content="Guia configuració completa SwimAnalytics. Aprèn a realitzar test CSS, introduir resultats, fer seguiment entrenaments i comprendre mètriques sTSS, CTL/ATL/TSB. Tutorial pas a pas amb resolució problemes per principiants. Prova gratuïta 7 dies.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ca"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Començar amb SwimAnalytics - Guia Configuració Completa | Tutorial Test CSS",
+      "description": "Guia configuració completa SwimAnalytics. Aprèn a realitzar test CSS, introduir resultats, fer seguiment entrenaments i comprendre mètriques sTSS, CTL/ATL/TSB. Tutorial pas a pas amb resolució problemes per principiants. Prova gratuïta 7 dies.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ca/getting-started/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Getting-Started",
+          "item": "https://swimanalytics.app/ca/getting-started/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Saltar al contingut</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ca/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/"
+                           
+                           aria-current="">
+                            Inici
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/css/"
+                           
+                           aria-current="">
+                            CSS
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/training-zones/"
+                           
+                           aria-current="">
+                            Zones
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/training-load/"
+                           
+                           aria-current="">
+                            Càrrega
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/efficiency/"
+                           
+                           aria-current="">
+                            Eficiència
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/stroke-mechanics/"
+                           
+                           aria-current="">
+                            Braçada
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/research/"
+                           
+                           aria-current="">
+                            Recerca
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/bibliography/"
+                           
+                           aria-current="">
+                            Bibliografia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/formulas/"
+                           
+                           aria-current="">
+                            Fórmules
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/about/"
+                           
+                           aria-current="">
+                            Sobre Nosaltres
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/contact/"
+                           
+                           aria-current="">
+                            Contacte
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="language-selector">
+                    <label for="language-select" class="visually-hidden">Seleccionar idioma</label>
+                    <select id="language-select" aria-label="Seleccionar idioma">
+                        
+                        <option value="ca" selected>
+                            Català
+                        </option>
+                        
+                        <option value="en" >
+                            English
+                        </option>
+                        
+                    </select>
+                </div>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menú" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Començar amb SwimAnalytics</h1>
+        <p class="lead">La teva guia completa per fer seguiment del rendiment en natació, proves CSS i analítica de càrrega d'entrenament</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Benvingut a la Natació Basada en Dades</h2>
+            <p>SwimAnalytics transforma els teus entrenaments de natació en coneixements accionables utilitzant <strong>Critical Swim Speed (CSS)</strong>, <strong>Training Stress Score (sTSS)</strong> i mètriques del <strong>Performance Management Chart (PMC)</strong>. Aquesta guia et portarà des de la configuració inicial fins a l'analítica avançada de càrrega d'entrenament en 4 passos simples.</p>
+        </div>
+
+        <h2>Inici Ràpid (5 Minuts)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Descarregar i Instal·lar</h3>
+                    <p>Descarrega SwimAnalytics des de l'App Store i concedeix permís per accedir a Apple Health. L'app sincronitza entrenaments de natació automàticament—no cal registre manual.</p>
+                    <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Descarregar App →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Realitzar Test CSS</h3>
+                    <p>Completa un cronometrat de 400m i 200m per establir el teu Critical Swim Speed. Aquesta és la base de totes les mètriques—sense CSS, sTSS i zones d'entrenament no es poden calcular.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">Protocol Test CSS ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Introduir Resultats CSS</h3>
+                    <p>Introdueix els teus temps de 400m i 200m a l'app. SwimAnalytics calcula CSS, zones de ritme i personalitza totes les mètriques a la teva fisiologia. Actualitza cada 6-8 setmanes a mesura que millora la forma física.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Començar a Fer Seguiment d'Entrenaments</h3>
+                    <p>Neda amb Apple Watch i l'app Health. SwimAnalytics importa entrenaments automàticament, calcula sTSS, actualitza CTL/ATL/TSB i fa seguiment del progrés. No cal introduir dades manualment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">Protocol Complet de Test CSS</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 Què Necessites</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Accés a piscina:</strong> 25m o 50m (25yd acceptable)</li>
+                        <li><strong>Cronometratge:</strong> Cronòmetre, rellotge pace o Apple Watch</li>
+                        <li><strong>Temps d'escalfament:</strong> 15-20 minuts abans del test</li>
+                        <li><strong>Recuperació:</strong> 5-10 minuts entre proves</li>
+                        <li><strong>Esforç:</strong> Ritme màxim sostenible (no esprint total)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ Condicions Dia del Test</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Descansat:</strong> Sense entrenament dur 24-48 hores abans</li>
+                        <li><strong>Hidratat:</strong> Ben hidratat, alimentació normal</li>
+                        <li><strong>Temp. piscina:</strong> 26-28°C ideal (evitar molt fred/calent)</li>
+                        <li><strong>Hora del dia:</strong> Quan normalment entrenes millor</li>
+                        <li><strong>Equipament:</strong> Igual que entrenament (ulleres, gorro, banyador)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">Test CSS Pas a Pas</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">Escalfament</div>
+                <div class="timeline-content">
+                    <h4>15-20 minuts</h4>
+                    <p>400-800m natació suau, exercicis tècnics i progressions. Inclou 2-3×50 a ritme creixent (60%, 75%, 85% esforç). Descansa 2-3 minuts abans del test.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Prova 1</div>
+                <div class="timeline-content">
+                    <h4>400m Esforç Màxim</h4>
+                    <p><strong>Sortida de paret</strong> (sense salt). Neda 400m al ritme més ràpid que puguis sostenir per tota la distància. Això NO és un esprint—dosifica't. Registra temps en format <strong>mm:ss</strong> (p.ex., 6:08).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Consell ritme:</strong> Apunta a parcials de 100m iguals. El segon 200m hauria de ser ≤ primer 200m (split negatiu ideal).
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Recuperació</div>
+                <div class="timeline-content">
+                    <h4>5-10 minuts</h4>
+                    <p><strong>FASE CRÍTICA:</strong> Natació suau o descans complet. Espera fins que la freqüència cardíaca baixi de 120 ppm i respiració totalment recuperada. Recuperació insuficient = CSS inexacte.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Prova 2</div>
+                <div class="timeline-content">
+                    <h4>200m Esforç Màxim</h4>
+                    <p><strong>Sortida de paret</strong> (sense salt). Esforç màxim sostenible per 200m. Això hauria de sentir-se més dur per 100m que els 400m. Registra temps en format <strong>mm:ss</strong> (p.ex., 2:30).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Comprovació validació:</strong> Ritme 200m/100m hauria de ser 3-6 segons més ràpid que ritme 400m/100m. Si no, la recuperació va ser insuficient o el ritme incorrecte.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Refredament</div>
+                <div class="timeline-content">
+                    <h4>10-15 minuts</h4>
+                    <p>300-500m natació suau, estiraments. Registra els teus temps immediatament—no confiïs en la memòria.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ Errors Comuns en Test CSS</h3>
+            <ul>
+                <li><strong>Sortir massa ràpid en 400m:</strong> Resulta en explosió, CSS inexacte. Utilitza ritme constant.</li>
+                <li><strong>Recuperació insuficient entre proves:</strong> La fatiga alenteix 200m, fent CSS artificialment ràpid → zones sobreentrenades.</li>
+                <li><strong>Utilitzar sortides de salt:</strong> Afegeix avantatge 0.5-1.5s, esbiaixant càlculs. Sempre sortida de paret.</li>
+                <li><strong>Testar quan fatigat:</strong> Càrrega d'entrenament pesada 24-48h abans = resultats deprimits. Testa quan descansa</li>
+                <li><strong>No registrar immediatament:</strong> La memòria no és fiable. Escriu temps abans del refredament.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Introduir Resultats CSS a SwimAnalytics</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>Pas 1: Obrir Configuració CSS</h3>
+                <p>A l'app SwimAnalytics, ves a <strong>Configuració → Critical Swim Speed</strong>. Toca "Realitzar Test CSS" o "Actualitzar CSS".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Pas 2: Introduir Temps</h3>
+                <p>Introdueix el teu temps de 400m (p.ex., <code>6:08</code>) i temps de 200m (p.ex., <code>2:30</code>). Utilitza el format exacte mostrat. Toca "Calcular".</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Pas 3: Revisar Resultats</h3>
+                <p>L'app mostra:</p>
+                <ul>
+                    <li><strong>Velocitat CSS:</strong> 0.917 m/s</li>
+                    <li><strong>Ritme CSS:</strong> 1:49/100m</li>
+                    <li><strong>Zones d'entrenament:</strong> 7 zones personalitzades (Zona 1-7)</li>
+                    <li><strong>Línia base sTSS:</strong> Ara habilitat per tots els entrenaments</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>Pas 4: Desar i Sincronitzar</h3>
+                <p>Toca "Desar CSS". L'app immediatament:</p>
+                <ul>
+                    <li>Recalcula zones d'entrenament</li>
+                    <li>Actualitza retroactivament sTSS dels últims 90 dies</li>
+                    <li>Ajusta càlculs CTL/ATL/TSB</li>
+                    <li>Habilita analítica d'entrenament basada en zones</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Consell Pro: Test CSS Històric</h3>
+            <p>Si ja coneixes el teu CSS de tests anteriors, pots introduir aquests temps directament. No obstant, per resultats més precisos, realitza un test nou cada 6-8 setmanes. El teu CSS hauria de millorar (ser més ràpid) a mesura que avança l'entrenament.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">Comprendre les Teves Mètriques</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Critical Swim Speed (CSS)</h3>
+                <div class="card-content">
+                    <p><strong>Què és:</strong> El teu ritme de llindar aeròbic—la velocitat més ràpida que pots sostenir durant ~30 minuts sense esgotament.</p>
+                    <p><strong>Què significa:</strong> CSS = 1:49/100m significa que pots mantenir ritme 1:49 per esforços de llindar sostinguts.</p>
+                    <p><strong>Com utilitzar:</strong> Base per totes les zones d'entrenament i càlcul sTSS. Actualitza cada 6-8 setmanes.</p>
+                    <a href="/ca/css/" class="btn btn-secondary btn-small mt-md">Aprendre CSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Zones d'Entrenament</h3>
+                <div class="card-content">
+                    <p><strong>Què són:</strong> 7 rangs d'intensitat basats en el teu CSS, des de recuperació (Zona 1) fins a esprint (Zona 7).</p>
+                    <p><strong>Què signifiquen:</strong> Cada zona apunta adaptacions fisiològiques específiques (base aeròbica, llindar, VO₂max).</p>
+                    <p><strong>Com utilitzar:</strong> Segueix prescripcions de zona per entrenament estructurat. L'app mostra temps-en-zona per cada entrenament.</p>
+                    <a href="/ca/training-zones/" class="btn btn-secondary btn-small mt-md">Zones Entrenament →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Swimming Training Stress Score (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>Què és:</strong> Estrès d'entrenament quantificat combinant intensitat i durada. 1 hora a ritme CSS = 100 sTSS.</p>
+                    <p><strong>Què significa:</strong> sTSS 50 = recuperació fàcil, sTSS 100 = moderat, sTSS 200+ = sessió molt dura.</p>
+                    <p><strong>Com utilitzar:</strong> Fes seguiment d'sTSS diari/setmanal per gestionar càrrega d'entrenament. Apunta augment 5-10 sTSS per setmana màxim.</p>
+                    <a href="/ca/training-load/" class="btn btn-secondary btn-small mt-md">Guia sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>Què són:</strong></p>
+                    <ul>
+                        <li><strong>CTL:</strong> Chronic Training Load (forma física) - mitjana 42 dies sTSS</li>
+                        <li><strong>ATL:</strong> Acute Training Load (fatiga) - mitjana 7 dies sTSS</li>
+                        <li><strong>TSB:</strong> Training Stress Balance (forma) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>Com utilitzar:</strong> TSB positiu = fresc/taper, TSB negatiu = fatigat. Competeix quan TSB = +5 a +25.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 Objectius Primera Setmana</h3>
+            <p>Després d'introduir CSS i completar 3-5 entrenaments:</p>
+            <ul>
+                <li><strong>Comprova valors sTSS:</strong> Confirma que coincideixin amb percepció d'esforç (fàcil ~50, moderat ~100, dur ~150+)</li>
+                <li><strong>Revisa distribució zones:</strong> Estàs passant 60-70% en Zona 2 (base aeròbica)?</li>
+                <li><strong>Estableix CTL base:</strong> La mitjana sTSS de la primera setmana es converteix en línia base de forma física inicial</li>
+                <li><strong>Identifica patrons:</strong> Quins entrenaments generen sTSS més alt? T'estàs recuperant adequadament?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Trajectòria Típica d'Usuari (Primeres 8 Setmanes)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>Setmana 1-2: Establir Línia Base</h3>
+                <ul>
+                    <li>Realitzar test CSS i introduir resultats</li>
+                    <li>Completar 3-5 entrenaments normals</li>
+                    <li>Observar valors sTSS i distribució zones</li>
+                    <li>Establir CTL inicial (nivell forma física)</li>
+                    <li><strong>Objectiu:</strong> Comprendre mètriques, sense canvis encara</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Setmana 3-4: Aplicar Zones</h3>
+                <ul>
+                    <li>Utilitzar zones CSS en planificació entrenaments</li>
+                    <li>Nedar intencionalment Zona 2 per sèries aeròbiques</li>
+                    <li>Fer seguiment totals sTSS setmanals (apuntar consistència)</li>
+                    <li>Monitoritzar TSB (hauria de ser lleugerament negatiu = entrenament)</li>
+                    <li><strong>Objectiu:</strong> Entrenar per zones, no per sensació</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Setmana 5-6: Sobrecàrrega Progressiva</h3>
+                <ul>
+                    <li>Augmentar sTSS setmanal 5-10% des de línia base</li>
+                    <li>Afegir 1 sessió llindar (Zona 4) per setmana</li>
+                    <li>CTL hauria de pujar gradualment (forma física millorant)</li>
+                    <li>ATL pot augmentar en setmanes dures (normal)</li>
+                    <li><strong>Objectiu:</strong> Progressió controlada forma física</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Setmana 7-8: Re-testar i Ajustar</h3>
+                <ul>
+                    <li>Realitzar segon test CSS (hauria de ser més ràpid)</li>
+                    <li>Actualitzar zones a l'app (ritme millora)</li>
+                    <li>Comparar CTL Setmana 1 vs Setmana 8 (hauria de ser +10-20)</li>
+                    <li>Revisar progrés: Estan baixant temps? Se sent més fàcil?</li>
+                    <li><strong>Objectiu:</strong> Validar efectivitat entrenament</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ Indicadors d'Èxit</h3>
+            <p>Després de 8 setmanes d'entrenament estructurat amb SwimAnalytics, hauries de veure:</p>
+            <ul>
+                <li><strong>Millora CSS:</strong> 1-3% ritme CSS més ràpid (p.ex., 1:49 → 1:47)</li>
+                <li><strong>Augment CTL:</strong> +15-25 punts (p.ex., 30 → 50 CTL)</li>
+                <li><strong>sTSS consistent:</strong> Totals setmanals dins 10-15% variància</li>
+                <li><strong>Millor ritme:</strong> Parcials més iguals, millor calibratge esforç</li>
+                <li><strong>Recuperació millorada:</strong> TSB cicla predictiblement (-10 a +5)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Resolució de Problemes i Preguntes Freqüents</h2>
+
+        <div class="faq-item">
+            <h3>El meu sTSS sembla massa alt/baix per l'esforç d'entrenament</h3>
+            <p><strong>Causa:</strong> CSS està desactualitzat o inexacte.</p>
+            <p><strong>Solució:</strong> Re-testa CSS. Si vas testar quan fatigat o amb ritme pobre, CSS estarà malament. Un test CSS adequat és crític per totes les mètriques posteriors.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>L'app mostra "CSS no configurat"</h3>
+            <p><strong>Causa:</strong> Test CSS no completat o no desat.</p>
+            <p><strong>Solució:</strong> Ves a Configuració → Critical Swim Speed → Realitzar Test. Introdueix temps 400m i 200m, després toca Desar.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Entrenaments no sincronitzen des d'Apple Watch</h3>
+            <p><strong>Causa:</strong> Permisos app Health no concedits o entrenament no categoritzat com "Natació".</p>
+            <p><strong>Solució:</strong> Comprova Configuració → Privacitat → Salut → SwimAnalytics → Permetre Lectura per Entrenaments. Assegura't tipus entrenament Apple Watch és "Pool Swim" o "Open Water Swim".</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CTL no augmenta malgrat entrenament consistent</h3>
+            <p><strong>Causa:</strong> Totals sTSS massa baixos o freqüència inconsistent.</p>
+            <p><strong>Solució:</strong> CTL és mitjana ponderada exponencialment 42 dies. Puja lentament. Augmenta sTSS setmanal 5-10%, i mantingues 4+ entrenaments/setmana per creixement CTL consistent.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Amb quina freqüència hauria de re-testar CSS?</h3>
+            <p><strong>Recomanació:</strong> Cada 6-8 setmanes durant fases base/construcció. Re-testa després malaltia, lesió, pausa llarga, o quan zones se sentin consistentment massa fàcils/difícils.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Puc utilitzar SwimAnalytics per altres estils?</h3>
+            <p><strong>Sí, amb limitacions:</strong> CSS típicament es testa en crol. Per entrenaments estils/esquena/braça, sTSS es calcula basat en CSS crol. Considera realitzar tests CSS específics d'estil per més precisió.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Següents Passos</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Aprendre Zones d'Entrenament</h3>
+                <div class="card-content">
+                    <p>Comprèn com entrenar en Zona 2 (base aeròbica), Zona 4 (llindar) i Zona 5 (VO₂max) per adaptacions específiques.</p>
+                    <a href="/ca/training-zones/" class="btn btn-secondary btn-small mt-md">Zones Entrenament →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Calcular sTSS</h3>
+                <div class="card-content">
+                    <p>Utilitza la nostra calculadora sTSS gratuïta per comprendre càrrega d'entrenament abans de comprometre't amb entrenaments.</p>
+                    <a href="/ca/stss-calculator/" class="btn btn-secondary btn-small mt-md">Calculadora sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Aprofundir en Mètriques</h3>
+                <div class="card-content">
+                    <p>Explora la ciència darrere CSS, sTSS, CTL/ATL/TSB amb referències de recerca revisada per experts.</p>
+                    <a href="/ca/research/" class="btn btn-secondary btn-small mt-md">Recerca →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Preparat per començar a fer seguiment?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarregar SwimAnalytics Gratuït</a>
+            <p class="mt-sm text-secondary">Prova gratuïta 7 dies • Sense targeta crèdit • iOS 16+</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/">
+                            Inici
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/css/">
+                            CSS
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/training-zones/">
+                            Zones
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ca/training-load/">
+                            Càrrega
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Tots els drets reservats</h3>
+                <ul>
+                    <li><a href="/ca/privacy/">Privacitat</a></li>
+                    <li><a href="/ca/terms/">Termes</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Seleccionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/getting-started/"
+                           aria-current="page">
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/getting-started/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Tots els drets reservats.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Aquest lloc web utilitza cookies per millorar la vostra experiència." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Aquest lloc web utilitza cookies per millorar la vostra experiència. <a href="/ca/privacy/">Saber-ne més</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Rebutjar</button>
+            <button class="btn btn-primary" id="cookie-accept">Acceptar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-SWIMANALYTICS"></script>
+    
+</body>
+</html>
