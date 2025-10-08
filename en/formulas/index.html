@@ -404,7 +404,42 @@
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="css-d1">Distance 1 (meters):</label>
+                            <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t1">Time 1 (mm:ss):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-d2">Distance 2 (meters):</label>
+                            <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t2">Time 2 (mm:ss):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-value" id="css-result">1:49</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Calculation steps:</strong><br>
+                            <span id="css-steps">
+                                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                                Pace/100m = 100 / 0.917 = 109 seconds = 1:49
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">JavaScript Implementation:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -430,6 +465,52 @@
 // Example usage:
 const result = calculateCSS(200, 150, 400, 368);
 // Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+                <script>
+                function timeToSecondsCSS(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                function secondsToTimeCSS(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const secs = Math.round(seconds % 60);
+                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                }
+
+                function updateCSSCalculator() {
+                    try {
+                        const d1 = parseFloat(document.getElementById('css-d1').value);
+                        const t1Input = document.getElementById('css-t1').value;
+                        const d2 = parseFloat(document.getElementById('css-d2').value);
+                        const t2Input = document.getElementById('css-t2').value;
+
+                        if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                        const t1 = timeToSecondsCSS(t1Input);
+                        const t2 = timeToSecondsCSS(t2Input);
+
+                        const css_ms = (d2 - d1) / (t2 - t1);
+                        const pace_per_100m = 100 / css_ms;
+                        const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+                        document.getElementById('css-result').textContent = pace_formatted;
+                        document.getElementById('css-steps').innerHTML =
+                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                            `Pace/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} seconds = ${pace_formatted}`;
+                    } catch (e) {
+                        console.error('CSS calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+                    updateCSSCalculator();
+                });
+                </script>
             </div>
         </div>
 
@@ -449,7 +530,44 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="stss-distance">Distance (meters):</label>
+                            <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-duration">Duration (minutes):</label>
+                            <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
+                            <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label>FTP (calculated):</label>
+                            <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-value" id="stss-result">55</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Calculation steps:</strong><br>
+                            <span id="stss-steps">
+                                NSS = 3000m / 55min = 54.5 m/min<br>
+                                FTP = 100 / (93/60) = 64.5 m/min<br>
+                                IF = 54.5 / 64.5 = 0.845<br>
+                                sTSS = 0.845³ × (55/60) × 100 = 55
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">JavaScript Implementation:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -478,6 +596,79 @@ function cssToFTP(cssPacePer100mSeconds) {
 
 // Example: CSS of 1:33 (93 seconds)
 const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+
+                <script>
+                // Time conversion helper
+                function timeToSeconds(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                // CSS to FTP conversion
+                function cssToFTP(cssPacePer100mSeconds) {
+                    return 100 / (cssPacePer100mSeconds / 60);
+                }
+
+                // sTSS calculation
+                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                    const nss = distance / timeMinutes;
+                    const intensityFactor = nss / ftpMetersPerMin;
+                    const hours = timeMinutes / 60;
+                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
+                    return Math.round(stss);
+                }
+
+                // Update calculator
+                function updateSTSSCalculator() {
+                    try {
+                        const distance = parseFloat(document.getElementById('stss-distance').value);
+                        const duration = parseFloat(document.getElementById('stss-duration').value);
+                        const cssInput = document.getElementById('stss-css').value;
+
+                        // Validate inputs
+                        if (!distance || !duration || !cssInput) return;
+
+                        // Convert CSS to seconds
+                        const cssPaceSeconds = timeToSeconds(cssInput);
+
+                        // Calculate FTP
+                        const ftp = cssToFTP(cssPaceSeconds);
+
+                        // Calculate NSS
+                        const nss = distance / duration;
+
+                        // Calculate Intensity Factor
+                        const intensityFactor = nss / ftp;
+
+                        // Calculate sTSS
+                        const stss = calculateSTSS(distance, duration, ftp);
+
+                        // Update display
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                        document.getElementById('stss-result').textContent = stss;
+
+                        // Update calculation steps
+                        const hours = duration / 60;
+                        document.getElementById('stss-steps').innerHTML =
+                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                    } catch (e) {
+                        console.error('Calculation error:', e);
+                    }
+                }
+
+                // Add event listeners when page loads
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+                    // Initial calculation
+                    updateSTSSCalculator();
+                });
+                </script>
             </div>
         </div>
 
@@ -494,7 +685,40 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-strokes">Stroke Count:</label>
+                            <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-pool">Pool Length (m):</label>
+                            <select id="swolf-pool">
+                                <option value="25" selected>25m</option>
+                                <option value="50">50m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-value" id="swolf-result">35</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Calculation:</strong><br>
+                            <span id="swolf-steps">
+                                SWOLF = 20s + 15 strokes = 35
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">JavaScript Implementation:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -511,6 +735,43 @@ const swolf = calculateSWOLF(20, 15);
 
 const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 // Returns: 35 (normalized to 25m)</code></pre>
+
+                <script>
+                function updateSWOLFCalculator() {
+                    try {
+                        const time = parseFloat(document.getElementById('swolf-time').value);
+                        const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+                        const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+
+                        if (!time || !strokes) return;
+
+                        let swolf, steps;
+                        if (poolLength === 25) {
+                            swolf = time + strokes;
+                            steps = `SWOLF = ${time}s + ${strokes} strokes = ${swolf}`;
+                        } else {
+                            const normalizedTime = time * (25 / poolLength);
+                            const normalizedStrokes = strokes * (25 / poolLength);
+                            swolf = normalizedTime + normalizedStrokes;
+                            steps = `Normalized Time = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `Normalized Strokes = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+                        }
+
+                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                        document.getElementById('swolf-steps').innerHTML = steps;
+                    } catch (e) {
+                        console.error('SWOLF calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+                    document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+                    document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+                    updateSWOLFCalculator();
+                });
+                </script>
             </div>
         </div>
     </div>
@@ -533,7 +794,33 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="sr-strokes">Stroke Count:</label>
+                            <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="sr-time">Time (seconds):</label>
+                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-value" id="sr-result">72</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Calculation:</strong><br>
+                            <span id="sr-steps">
+                                SR = (30 / 25) × 60 = 72 SPM
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">JavaScript Implementation:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -541,6 +828,31 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 // Example:
 const sr = calculateStrokeRate(30, 25);
 // Returns: 72 SPM</code></pre>
+
+                <script>
+                function updateSRCalculator() {
+                    try {
+                        const strokes = parseFloat(document.getElementById('sr-strokes').value);
+                        const time = parseFloat(document.getElementById('sr-time').value);
+
+                        if (!strokes || !time) return;
+
+                        const sr = (strokes / time) * 60;
+
+                        document.getElementById('sr-result').textContent = sr.toFixed(1);
+                        document.getElementById('sr-steps').innerHTML =
+                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                    } catch (e) {
+                        console.error('SR calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                    updateSRCalculator();
+                });
+                </script>
             </div>
         </div>
 
