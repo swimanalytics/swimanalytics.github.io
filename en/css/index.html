@@ -6,23 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-    <title>CSS - SwimAnalytics</title>
-    <meta name="description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <title>Critical Swim Speed (CSS) Calculator & Training Zones | SwimAnalytics</title>
+    <meta name="description" content="Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.">
     <meta name="author" content="Albert Arno">
 
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://swimanalytics.app/en/css/">
-    <meta property="og:title" content="SwimAnalytics">
-    <meta property="og:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta property="og:title" content="SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS">
+    <meta property="og:description" content="Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.">
     <meta property="og:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
     <meta property="og:locale" content="en_US">
 
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://swimanalytics.app/en/css/">
-    <meta name="twitter:title" content="SwimAnalytics">
-    <meta name="twitter:description" content="Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis">
+    <meta name="twitter:title" content="SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS">
+    <meta name="twitter:description" content="Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.">
     <meta name="twitter:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
     
 
@@ -49,10 +49,31 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "SwimAnalytics",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
       "url": "https://swimanalytics.app",
-      "description": "Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
       "inLanguage": "en"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics."
     }
     </script>
 </head>
@@ -66,7 +87,7 @@
         <div class="header-inner">
             
             <a href="/en/" class="site-logo">
-                SwimAnalytics
+                SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS
             </a>
 
             
@@ -185,7 +206,11 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>What is Critical Swim Speed?</h2>
+        <div class="callout callout-info" style="margin-bottom: var(--space-xl);">
+            <h2>What is Critical Swim Speed (CSS)?</h2>
+            <p><strong>Critical Swim Speed (CSS)</strong> is the theoretical maximum swimming velocity you can maintain without exhaustion. It represents your aerobic threshold pace, typically corresponding to 4 mmol/L blood lactate and sustainable for approximately 30 minutes. CSS is calculated using a 400m and 200m time trial to determine personalized training zones.</p>
+        </div>
+
         <p class="lead">Critical Swim Speed (CSS) represents the theoretical maximum swimming velocity you can maintain continuously without exhaustion. It's your aerobic threshold in water—the intensity where lactate production equals lactate clearance.</p>
 
         <div class="callout callout-info">
@@ -319,8 +344,74 @@
                 Pace = 109 seconds<br>
                 Pace = <strong>1:49 per 100m</strong>
             </div>
+        </div>
 
-            <h4>Alternative (Simplified Method):</h4>
+        <h2 style="margin-top: var(--space-3xl);">Free CSS Calculator</h2>
+        <p class="lead">Calculate your Critical Swim Speed and personalized training zones instantly</p>
+
+        <div class="css-calculator">
+            <form id="cssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="time400" class="form-label">400m Time (mm:ss)</label>
+                        <input
+                            type="text"
+                            id="time400"
+                            class="form-input"
+                            placeholder="6:08"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time400-help"
+                        />
+                        <small id="time400-help" class="form-help">Format: minutes:seconds (e.g., 6:08)</small>
+                        <div class="form-error" id="time400-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time200" class="form-label">200m Time (mm:ss)</label>
+                        <input
+                            type="text"
+                            id="time200"
+                            class="form-input"
+                            placeholder="2:30"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time200-help"
+                        />
+                        <small id="time200-help" class="form-help">Format: minutes:seconds (e.g., 2:30)</small>
+                        <div class="form-error" id="time200-error"></div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateBtn">Calculate CSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetBtn">Clear</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results" id="cssResults" style="display:none;" aria-live="polite">
+                <h3>Your Results</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">Critical Swim Speed</div>
+                        <div class="css-result-value" id="cssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">CSS Pace per 100m</div>
+                        <div class="css-result-value" id="cssPace">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Your Personalized Training Zones</h4>
+                    <p style="margin-bottom: var(--space-md); color: var(--color-text-secondary);">
+                        Based on your CSS, here are your training zones in pace per 100m:
+                    </p>
+                    <div id="zonesTable"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="margin-top: var(--space-xl);">Alternative (Simplified Method):</h3>
+        <div class="example-box">
             <div class="calculation">
                 Pace = (368 - 150) / 2<br>
                 Pace = 218 / 2<br>
@@ -520,6 +611,17 @@
             </div>
         </div>
 
+        <div class="callout" style="margin-top: var(--space-2xl);">
+            <h3>Apply Your CSS Knowledge</h3>
+            <p>Now that you understand Critical Swim Speed, take the next steps to optimize your training:</p>
+            <ul>
+                <li><a href="/en/training-load/">Calculate Training Stress Score (TSS)</a> based on your CSS to quantify workout intensity</li>
+                <li><a href="/en/training-zones/">Explore the 7 training zones</a> and learn how to structure workouts for specific adaptations</li>
+                <li><a href="/en/formulas/">View all formulas</a> used in SwimAnalytics for complete transparency</li>
+                <li><a href="/en/">Download SwimAnalytics</a> to automatically track CSS, TSS, and performance trends</li>
+            </ul>
+        </div>
+
         <div style="margin-top: var(--space-xl); text-align: center;">
             <a href="/en/training-load/" class="btn btn-primary">Learn About sTSS Calculation →</a>
             <a href="/en/formulas/" class="btn btn-secondary">View All Formulas →</a>
@@ -535,8 +637,8 @@
         <div class="footer-content">
             
             <div class="footer-section">
-                <h3>SwimAnalytics</h3>
-                <p>Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research &amp; Analysis</p>
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
             </div>
 
             
@@ -605,7 +707,7 @@
 
         
         <div class="footer-bottom">
-            <p>&copy; 2025 SwimAnalytics. All rights reserved.</p>
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. All rights reserved.</p>
         </div>
     </div>
 </footer>

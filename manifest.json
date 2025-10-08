@@ -1,7 +1,7 @@
 {
-  "name": "SwimAnalytics",
-  "short_name": "SwimAnalytics",
-  "description": "Advanced Performance Analytics for Swimming Training - Scientific Metrics, Research & Analysis",
+  "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+  "short_name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+  "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes & coaches. 7-day free trial.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
