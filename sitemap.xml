@@ -141,6 +141,16 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
   </url>
   <url>
+    <loc>https://swimanalytics.app/ca/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+  </url>
+  <url>
     <loc>https://swimanalytics.app/ca/training-load/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -299,6 +309,16 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/en/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/training-load/</loc>
@@ -461,6 +481,16 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
   </url>
   <url>
+    <loc>https://swimanalytics.app/es/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+  </url>
+  <url>
     <loc>https://swimanalytics.app/es/training-load/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -619,6 +649,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/fr/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/training-load/</loc>
@@ -781,6 +821,16 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
   </url>
   <url>
+    <loc>https://swimanalytics.app/de/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+  </url>
+  <url>
     <loc>https://swimanalytics.app/de/training-load/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -939,6 +989,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/it/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/training-load/</loc>
