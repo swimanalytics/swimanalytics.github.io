@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Google Analytics</title>
+</head>
+<body>
+    <h1>Test Google Analytics Debugging</h1>
+
+    <div id="status"></div>
+
+    <button id="acceptCookies">Acceptar Cookies (Simular)</button>
+    <button id="checkStatus">Check Status</button>
+    <button id="clearConsent">Clear Consent</button>
+
+    <h2>Console Output:</h2>
+    <pre id="console"></pre>
+
+    <script>
+        // Override console.log to show in page
+        const consoleOutput = document.getElementById('console');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            consoleOutput.textContent += args.join(' ') + '\n';
+        };
+
+        function updateStatus() {
+            const consent = localStorage.getItem('cookieConsent');
+            const statusDiv = document.getElementById('status');
+            statusDiv.innerHTML = `
+                <p><strong>Cookie Consent:</strong> ${consent || 'NOT SET'}</p>
+                <p><strong>Has _ga cookie:</strong> ${document.cookie.includes('_ga') ? 'YES' : 'NO'}</p>
+                <p><strong>window.gtag exists:</strong> ${typeof window.gtag !== 'undefined' ? 'YES' : 'NO'}</p>
+            `;
+        }
+
+        document.getElementById('acceptCookies').addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'accepted');
+            localStorage.setItem('cookieConsentTimestamp', Date.now().toString());
+            console.log('✅ Cookie consent set to: accepted');
+            updateStatus();
+            window.location.reload();
+        });
+
+        document.getElementById('clearConsent').addEventListener('click', () => {
+            localStorage.removeItem('cookieConsent');
+            localStorage.removeItem('cookieConsentTimestamp');
+            console.log('🗑️ Cookie consent cleared');
+            updateStatus();
+        });
+
+        document.getElementById('checkStatus').addEventListener('click', updateStatus);
+
+        // Initial status
+        updateStatus();
+        console.log('🔍 Page loaded, checking status...');
+    </script>
+
+    <!-- Load actual analytics script -->
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+</body>
+</html>
