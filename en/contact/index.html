@@ -358,7 +358,7 @@
 
         <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
             <!-- Web3Forms Access Key -->
-            <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
+            <input type="hidden" name="access_key" value="{{ site.contact.web3forms_access_key }}">
 
             <!-- Language identifier -->
             <input type="hidden" name="language" value="en">
@@ -405,11 +405,11 @@
             <div class="grid grid-2">
                 <div>
                     <h3 class="text-lg-tight mb-sm">Email</h3>
-                    <p><a href="mailto:info@example.com">info@example.com</a></p>
+                    <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
                 </div>
                 <div>
-                    <h3 class="text-lg-tight mb-sm">Phone</h3>
-                    <p><a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <h3 class="text-lg-tight mb-sm">Social Media</h3>
+                    <p><a href="https://twitter.com/{{ site.social.twitter.lstrip('@') }}" target="_blank" rel="noopener">{{ site.social.twitter }}</a></p>
                 </div>
             </div>
         </div>
