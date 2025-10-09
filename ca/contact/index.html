@@ -40,6 +40,50 @@
     
     <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/contact/">
     
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/contact/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/contact/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/contact/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/contact/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/contact/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/contact/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/contact/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/contact/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/contact/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/contact/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/contact/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/contact/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/contact/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/contact/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/contact/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/contact/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/contact/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/contact/">
+    
     <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/contact/">
 
     
@@ -316,6 +360,94 @@
                         English
                     </option>
                     
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
                 </select>
             </nav>
 
@@ -336,7 +468,20 @@
         <h1 class="mb-md">Contacte</h1>
         <p class="mb-3xl">Ens agradaria saber de tu. Omple el formulari i ens posarem en contacte amb tu el més aviat possible.</p>
 
-        <form class="contact-form" id="contact-form" action="#" method="post">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
+
+            <!-- Language identifier -->
+            <input type="hidden" name="language" value="ca">
+
+            <!-- Email destination -->
+            <input type="hidden" name="from_name" value="SwimAnalytics Contact Form">
+            <input type="hidden" name="subject" value="Nou missatge de contacte (CA)">
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden">
+
             <div class="form-group">
                 <label for="name" class="form-label required">Nom</label>
                 <input type="text" id="name" name="name" class="form-input" required>
@@ -350,19 +495,21 @@
             </div>
 
             <div class="form-group">
-                <label for="subject" class="form-label">Assumpte</label>
-                <input type="text" id="subject" name="subject" class="form-input">
+                <label for="user-subject" class="form-label">Assumpte</label>
+                <input type="text" id="user-subject" name="user_subject" class="form-input">
             </div>
 
             <div class="form-group">
                 <label for="message" class="form-label required">Missatge</label>
-                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
                 <span class="form-error" id="message-error"></span>
             </div>
 
             <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-large">Enviar missatge</button>
             </div>
+
+            <div id="form-status" class="form-status hidden"></div>
         </form>
 
         <div class="mt-3xl pt-3xl divider-top">
@@ -450,6 +597,160 @@
                         <a href="/en/contact/"
                            >
                             English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/contact/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/contact/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/contact/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/contact/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/contact/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/contact/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/contact/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/contact/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/contact/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/contact/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/contact/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/contact/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/contact/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/contact/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/contact/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/contact/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/contact/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/contact/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/contact/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/contact/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/contact/"
+                           >
+                            עברית
                         </a>
                     </li>
                     

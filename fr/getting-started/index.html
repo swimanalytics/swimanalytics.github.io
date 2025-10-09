@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Commencer avec SwimAnalytics - Guide de Configuration Complet | Tutoriel Test CSS</title>
+    <meta name="description" content="Guide de configuration complet SwimAnalytics. Apprenez à effectuer le test CSS, entrer les résultats, suivre les entraînements et comprendre les métriques sTSS, CTL/ATL/TSB. Tutoriel étape par étape avec dépannage pour débutants. Essai gratuit 7 jours.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="guide SwimAnalytics, tutoriel test CSS, tutoriel app natation, comment utiliser SwimAnalytics, guide analytics natation">
+    
+    <link rel="canonical" href="https://swimanalytics.app/fr/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/fr/getting-started/">
+    <meta property="og:title" content="Commencer avec SwimAnalytics - Guide de Configuration Complet | Tutoriel Test CSS">
+    <meta property="og:description" content="Guide de configuration complet SwimAnalytics. Apprenez à effectuer le test CSS, entrer les résultats, suivre les entraînements et comprendre les métriques sTSS, CTL/ATL/TSB. Tutoriel étape par étape avec dépannage pour débutants. Essai gratuit 7 jours.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/fr/getting-started/">
+    <meta name="twitter:title" content="Commencer avec SwimAnalytics - Guide de Configuration Complet | Tutoriel Test CSS">
+    <meta name="twitter:description" content="Guide de configuration complet SwimAnalytics. Apprenez à effectuer le test CSS, entrer les résultats, suivre les entraînements et comprendre les métriques sTSS, CTL/ATL/TSB. Tutoriel étape par étape avec dépannage pour débutants. Essai gratuit 7 jours.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/getting-started/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/getting-started/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/getting-started/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/getting-started/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/getting-started/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/getting-started/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/getting-started/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/getting-started/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/getting-started/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/getting-started/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/getting-started/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "fr"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Commencer avec SwimAnalytics - Guide de Configuration Complet | Tutoriel Test CSS",
+      "description": "Guide de configuration complet SwimAnalytics. Apprenez à effectuer le test CSS, entrer les résultats, suivre les entraînements et comprendre les métriques sTSS, CTL/ATL/TSB. Tutoriel étape par étape avec dépannage pour débutants. Essai gratuit 7 jours.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/fr/getting-started/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Commencer",
+          "item": "https://swimanalytics.app/fr/getting-started/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Aller au contenu</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/fr/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/fr/"
+                               
+                               aria-current="">
+                                Accueil
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Apprendre</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/fr/getting-started/"
+                                       class="active"
+                                       aria-current="page">
+                                        Commencer
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zones
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/training-load/"
+                                       
+                                       aria-current="">
+                                        Charge
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Calculatrice sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Science</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/fr/research/"
+                                       
+                                       aria-current="">
+                                        Recherche
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/formulas/"
+                                       
+                                       aria-current="">
+                                        Formules
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/efficiency/"
+                                       
+                                       aria-current="">
+                                        Efficacité
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mécanique
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliographie
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <a href="/fr/about/"
+                                   
+                                   aria-current="">
+                                    À Propos
+                                </a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/fr/comparisons/"
+                                       
+                                       aria-current="">
+                                        Comparer Apps
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/fr/contact/"
+                                       
+                                       aria-current="">
+                                        Contact
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Sélectionner la langue">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" selected>
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Basculer le menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Débuter avec SwimAnalytics</h1>
+        <p class="lead">Votre guide complet pour suivre les performances en natation, tester le CSS et analyser la charge d'entraînement</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Bienvenue dans la natation pilotée par les données</h2>
+            <p>SwimAnalytics transforme vos entraînements de natation en informations exploitables en utilisant les métriques de <strong>Vitesse Critique de Nage (CSS)</strong>, <strong>Score de Stress d'Entraînement (sTSS)</strong> et <strong>Graphique de gestion de la performance (PMC)</strong>. Ce guide vous mènera de la première configuration à l'analyse avancée de la charge d'entraînement en 4 étapes simples.</p>
+        </div>
+
+        <h2>Démarrage rapide (5 minutes)</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Télécharger et installer</h3>
+                    <p>Téléchargez SwimAnalytics depuis l'App Store et accordez l'autorisation d'accéder à Apple Health. L'application synchronise automatiquement les entraînements de natation—aucune saisie manuelle requise.</p>
+                    <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Télécharger l'app →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Effectuer le test CSS</h3>
+                    <p>Complétez un contre-la-montre de 400m et 200m pour établir votre Vitesse Critique de Nage. C'est la base de toutes les métriques—sans CSS, sTSS et zones d'entraînement ne peuvent pas être calculés.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">Protocole test CSS ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Entrer les résultats CSS</h3>
+                    <p>Saisissez vos temps de 400m et 200m dans l'application. SwimAnalytics calcule le CSS, les zones d'allure et personnalise toutes les métriques à votre physiologie. Mettez à jour tous les 6-8 semaines à mesure que la forme s'améliore.</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Commencer à suivre les entraînements</h3>
+                    <p>Nagez avec Apple Watch et l'application Health. SwimAnalytics importe automatiquement les entraînements, calcule sTSS, met à jour CTL/ATL/TSB et suit les progrès. Aucune saisie manuelle nécessaire.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">Protocole complet de test CSS</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 Ce dont vous avez besoin</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Accès piscine :</strong> Piscine 25m ou 50m (25yd acceptable)</li>
+                        <li><strong>Chronométrage :</strong> Chronomètre, horloge murale ou Apple Watch</li>
+                        <li><strong>Temps d'échauffement :</strong> 15-20 minutes avant le test</li>
+                        <li><strong>Récupération :</strong> 5-10 minutes entre les essais</li>
+                        <li><strong>Effort :</strong> Allure maximale soutenable (pas sprint à fond)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ Conditions le jour du test</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Reposé :</strong> Pas d'entraînement intense 24-48 heures avant</li>
+                        <li><strong>Hydraté :</strong> Bien hydraté, alimentation normale</li>
+                        <li><strong>Temp. piscine :</strong> 26-28°C idéal (éviter très froid/chaud)</li>
+                        <li><strong>Heure du jour :</strong> Quand vous vous entraînez normalement le mieux</li>
+                        <li><strong>Équipement :</strong> Identique à l'entraînement (lunettes, bonnet, maillot)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">Test CSS étape par étape</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">Échauffement</div>
+                <div class="timeline-content">
+                    <h4>15-20 minutes</h4>
+                    <p>400-800m nage facile, exercices et montées progressives. Incluez 2-3×50 à allure croissante (60%, 75%, 85% d'effort). Repos 2-3 minutes avant le test.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Essai 1</div>
+                <div class="timeline-content">
+                    <h4>400m Effort maximum</h4>
+                    <p><strong>Départ poussée</strong> (pas de plongeon). Nagez 400m à l'allure la plus rapide que vous pouvez soutenir sur la distance complète. Ce n'est PAS un sprint—gérez votre allure. Enregistrez le temps au format <strong>mm:ss</strong> (par ex., 6:08).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Conseil d'allure :</strong> Visez des 100m réguliers. Les seconds 200m devraient être ≤ premiers 200m (split négatif idéal).
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Récupération</div>
+                <div class="timeline-content">
+                    <h4>5-10 minutes</h4>
+                    <p><strong>PHASE CRITIQUE :</strong> Nage facile ou repos complet. Attendez que la fréquence cardiaque descende sous 120 bpm et respiration complètement récupérée. Récupération insuffisante = CSS inexact.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Essai 2</div>
+                <div class="timeline-content">
+                    <h4>200m Effort maximum</h4>
+                    <p><strong>Départ poussée</strong> (pas de plongeon). Effort maximal soutenable sur 200m. Cela devrait sembler plus dur par 100m que le 400m. Enregistrez le temps au format <strong>mm:ss</strong> (par ex., 2:30).</p>
+                    <div class="tip-box mt-sm">
+                        <strong>Vérification de validation :</strong> L'allure 200m/100m devrait être 3-6 secondes plus rapide que l'allure 400m/100m. Sinon, récupération insuffisante ou allure incorrecte.
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">Récupération</div>
+                <div class="timeline-content">
+                    <h4>10-15 minutes</h4>
+                    <p>300-500m nage facile, étirements. Enregistrez vos temps immédiatement—ne faites pas confiance à la mémoire.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ Erreurs courantes du test CSS</h3>
+            <ul>
+                <li><strong>Départ trop rapide sur 400m :</strong> Résulte en explosion, CSS inexact. Utilisez allure régulière.</li>
+                <li><strong>Récupération insuffisante entre essais :</strong> La fatigue ralentit le 200m, rendant CSS artificiellement rapide → zones de surentraînement.</li>
+                <li><strong>Utilisation de départs plongés :</strong> Ajoute 0,5-1,5s d'avantage, faussant les calculs. Toujours pousser du mur.</li>
+                <li><strong>Test en état de fatigue :</strong> Charge d'entraînement lourde 24-48h avant = résultats déprimés. Testez frais.</li>
+                <li><strong>Non-enregistrement immédiat :</strong> La mémoire n'est pas fiable. Notez les temps avant la récupération.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Saisie des résultats CSS dans SwimAnalytics</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>Étape 1 : Ouvrir les paramètres CSS</h3>
+                <p>Dans l'application SwimAnalytics, allez dans <strong>Paramètres → Vitesse Critique de Nage</strong>. Appuyez sur « Effectuer test CSS » ou « Mettre à jour CSS ».</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Étape 2 : Saisir les temps</h3>
+                <p>Entrez votre temps de 400m (par ex., <code>6:08</code>) et temps de 200m (par ex., <code>2:30</code>). Utilisez le format exact montré. Appuyez sur « Calculer ».</p>
+            </div>
+
+            <div class="step-item">
+                <h3>Étape 3 : Vérifier les résultats</h3>
+                <p>L'application affiche :</p>
+                <ul>
+                    <li><strong>Vitesse CSS :</strong> 0,917 m/s</li>
+                    <li><strong>Allure CSS :</strong> 1:49/100m</li>
+                    <li><strong>Zones d'entraînement :</strong> 7 zones personnalisées (Zone 1-7)</li>
+                    <li><strong>Base sTSS :</strong> Maintenant activée pour tous les entraînements</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>Étape 4 : Sauvegarder et synchroniser</h3>
+                <p>Appuyez sur « Sauvegarder CSS ». L'application immédiatement :</p>
+                <ul>
+                    <li>Recalcule les zones d'entraînement</li>
+                    <li>Met à jour rétroactivement sTSS pour les 90 derniers jours</li>
+                    <li>Ajuste les calculs CTL/ATL/TSB</li>
+                    <li>Active l'analyse d'entraînement par zones</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 Conseil pro : Test CSS historique</h3>
+            <p>Si vous connaissez déjà votre CSS de tests précédents, vous pouvez saisir ces temps directement. Cependant, pour des résultats plus précis, effectuez un nouveau test tous les 6-8 semaines. Votre CSS devrait s'améliorer (devenir plus rapide) à mesure que l'entraînement progresse.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">Comprendre vos métriques</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Vitesse Critique de Nage (CSS)</h3>
+                <div class="card-content">
+                    <p><strong>Ce que c'est :</strong> Votre allure de seuil aérobie—la vitesse la plus rapide que vous pouvez soutenir pendant ~30 minutes sans épuisement.</p>
+                    <p><strong>Ce que ça signifie :</strong> CSS = 1:49/100m signifie que vous pouvez tenir l'allure 1:49 pour des efforts soutenus au seuil.</p>
+                    <p><strong>Comment l'utiliser :</strong> Base pour toutes les zones d'entraînement et calcul sTSS. Mettre à jour tous les 6-8 semaines.</p>
+                    <a href="/fr/css/" class="btn btn-secondary btn-small mt-md">Apprendre CSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Zones d'entraînement</h3>
+                <div class="card-content">
+                    <p><strong>Ce qu'elles sont :</strong> 7 plages d'intensité basées sur votre CSS, de la récupération (Zone 1) au sprint (Zone 7).</p>
+                    <p><strong>Ce qu'elles signifient :</strong> Chaque zone cible des adaptations physiologiques spécifiques (base aérobie, seuil, VO₂max).</p>
+                    <p><strong>Comment les utiliser :</strong> Suivez les prescriptions de zones pour l'entraînement structuré. L'application montre le temps par zone pour chaque entraînement.</p>
+                    <a href="/fr/training-zones/" class="btn btn-secondary btn-small mt-md">Zones d'entraînement →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Score de Stress d'Entraînement Natation (sTSS)</h3>
+                <div class="card-content">
+                    <p><strong>Ce que c'est :</strong> Stress d'entraînement quantifié combinant intensité et durée. 1 heure à l'allure CSS = 100 sTSS.</p>
+                    <p><strong>Ce que ça signifie :</strong> sTSS 50 = récupération facile, sTSS 100 = modéré, sTSS 200+ = session très dure.</p>
+                    <p><strong>Comment l'utiliser :</strong> Suivez sTSS quotidien/hebdomadaire pour gérer la charge d'entraînement. Visez augmentation de 5-10 sTSS par semaine max.</p>
+                    <a href="/fr/training-load/" class="btn btn-secondary btn-small mt-md">Guide sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>Ce qu'ils sont :</strong></p>
+                    <ul>
+                        <li><strong>CTL :</strong> Charge d'Entraînement Chronique (forme) - moyenne sTSS 42 jours</li>
+                        <li><strong>ATL :</strong> Charge d'Entraînement Aiguë (fatigue) - moyenne sTSS 7 jours</li>
+                        <li><strong>TSB :</strong> Équilibre Stress d'Entraînement (forme) = CTL - ATL</li>
+                    </ul>
+                    <p><strong>Comment les utiliser :</strong> TSB positif = frais/affûté, TSB négatif = fatigué. Courez quand TSB = +5 à +25.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 Objectifs de votre première semaine</h3>
+            <p>Après avoir saisi CSS et complété 3-5 entraînements :</p>
+            <ul>
+                <li><strong>Vérifier valeurs sTSS :</strong> Confirmez qu'elles correspondent à la perception d'effort (facile ~50, modéré ~100, dur ~150+)</li>
+                <li><strong>Réviser distribution zones :</strong> Passez-vous 60-70% en Zone 2 (base aérobie) ?</li>
+                <li><strong>Établir CTL de base :</strong> Votre sTSS moyen de première semaine devient la base initiale de forme</li>
+                <li><strong>Identifier tendances :</strong> Quels entraînements génèrent le sTSS le plus élevé ? Récupérez-vous adéquatement ?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Parcours utilisateur typique (Premières 8 semaines)</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>Semaine 1-2 : Établir la base</h3>
+                <ul>
+                    <li>Effectuer test CSS et saisir résultats</li>
+                    <li>Compléter 3-5 entraînements normaux</li>
+                    <li>Observer valeurs sTSS et distribution zones</li>
+                    <li>Établir CTL initial (niveau de forme)</li>
+                    <li><strong>Objectif :</strong> Comprendre métriques, pas de changements encore</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Semaine 3-4 : Appliquer les zones</h3>
+                <ul>
+                    <li>Utiliser zones CSS dans planification entraînement</li>
+                    <li>Nager intentionnellement Zone 2 pour séries aérobies</li>
+                    <li>Suivre totaux sTSS hebdomadaires (viser cohérence)</li>
+                    <li>Surveiller TSB (devrait être légèrement négatif = entraînement)</li>
+                    <li><strong>Objectif :</strong> S'entraîner par zones, pas au ressenti</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Semaine 5-6 : Surcharge progressive</h3>
+                <ul>
+                    <li>Augmenter sTSS hebdomadaire de 5-10% de la base</li>
+                    <li>Ajouter 1 session seuil (Zone 4) par semaine</li>
+                    <li>CTL devrait augmenter graduellement (forme s'améliore)</li>
+                    <li>ATL peut piquer les semaines dures (normal)</li>
+                    <li><strong>Objectif :</strong> Progression contrôlée de la forme</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>Semaine 7-8 : Retester et ajuster</h3>
+                <ul>
+                    <li>Effectuer second test CSS (devrait être plus rapide)</li>
+                    <li>Mettre à jour zones dans l'app (allure s'améliore)</li>
+                    <li>Comparer CTL Semaine 1 vs Semaine 8 (devrait être +10-20)</li>
+                    <li>Réviser progrès : Les temps baissent ? Se sentir plus facile ?</li>
+                    <li><strong>Objectif :</strong> Valider l'efficacité de l'entraînement</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ Indicateurs de succès</h3>
+            <p>Après 8 semaines d'entraînement structuré avec SwimAnalytics, vous devriez voir :</p>
+            <ul>
+                <li><strong>Amélioration CSS :</strong> 1-3% allure CSS plus rapide (par ex., 1:49 → 1:47)</li>
+                <li><strong>Augmentation CTL :</strong> +15-25 points (par ex., 30 → 50 CTL)</li>
+                <li><strong>sTSS cohérent :</strong> Totaux hebdomadaires avec variance 10-15%</li>
+                <li><strong>Meilleure gestion d'allure :</strong> Splits plus réguliers, meilleur calibrage d'effort</li>
+                <li><strong>Récupération améliorée :</strong> Cycles TSB prévisibles (-10 à +5)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Dépannage et FAQ</h2>
+
+        <div class="faq-item">
+            <h3>Mon sTSS semble trop élevé/faible pour l'effort d'entraînement</h3>
+            <p><strong>Cause :</strong> CSS obsolète ou inexact.</p>
+            <p><strong>Solution :</strong> Retester CSS. Si vous avez testé en fatigue ou avec mauvaise allure, CSS sera faux. Un test CSS approprié est critique pour toutes les métriques en aval.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>L'app affiche « Aucun CSS configuré »</h3>
+            <p><strong>Cause :</strong> Test CSS non complété ou non sauvegardé.</p>
+            <p><strong>Solution :</strong> Allez dans Paramètres → Vitesse Critique de Nage → Effectuer Test. Entrez les temps de 400m et 200m, puis appuyez Sauvegarder.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Les entraînements ne se synchronisent pas depuis Apple Watch</h3>
+            <p><strong>Cause :</strong> Autorisations app Health non accordées ou entraînement non catégorisé comme « Natation ».</p>
+            <p><strong>Solution :</strong> Vérifiez Paramètres → Confidentialité → Santé → SwimAnalytics → Autoriser Lecture pour Entraînements. Assurez-vous que le type d'entraînement Apple Watch est « Natation Piscine » ou « Natation Eau Libre ».</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>CTL n'augmente pas malgré entraînement cohérent</h3>
+            <p><strong>Cause :</strong> Totaux sTSS trop bas ou fréquence incohérente.</p>
+            <p><strong>Solution :</strong> CTL est moyenne mobile pondérée exponentiellement 42 jours. Il augmente lentement. Augmentez sTSS hebdomadaire de 5-10%, et maintenez 4+ entraînements/semaine pour croissance CTL cohérente.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>À quelle fréquence devrais-je retester CSS ?</h3>
+            <p><strong>Recommandation :</strong> Tous les 6-8 semaines pendant phases base/construction. Retester après maladie, blessure, longue pause, ou quand zones semblent constamment trop faciles/dures.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Puis-je utiliser SwimAnalytics pour d'autres nages ?</h3>
+            <p><strong>Oui, avec limitations :</strong> CSS est typiquement testé en nage libre. Pour entraînements 4N/dos/brasse, sTSS est calculé basé sur CSS nage libre. Envisagez effectuer tests CSS spécifiques par nage pour plus de précision.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Prochaines étapes</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Apprendre les zones d'entraînement</h3>
+                <div class="card-content">
+                    <p>Comprendre comment s'entraîner en Zone 2 (base aérobie), Zone 4 (seuil) et Zone 5 (VO₂max) pour des adaptations spécifiques.</p>
+                    <a href="/fr/training-zones/" class="btn btn-secondary btn-small mt-md">Zones d'entraînement →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Calculer sTSS</h3>
+                <div class="card-content">
+                    <p>Utilisez notre calculateur sTSS gratuit pour comprendre la charge d'entraînement avant de vous engager dans les entraînements.</p>
+                    <a href="/fr/stss-calculator/" class="btn btn-secondary btn-small mt-md">Calculateur sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Approfondir les métriques</h3>
+                <div class="card-content">
+                    <p>Explorez la science derrière CSS, sTSS, CTL/ATL/TSB avec références de recherche évaluées par les pairs.</p>
+                    <a href="/fr/research/" class="btn btn-secondary btn-small mt-md">Recherche →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Prêt à commencer le suivi ?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Télécharger SwimAnalytics Gratuitement</a>
+            <p class="mt-sm text-secondary">Essai gratuit 7 jours • Aucune carte de crédit requise • iOS 16+</p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/fr/">
+                            Accueil
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">
+                            Apprendre
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/">
+                            Science
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/about/">
+                            À Propos
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Tous droits réservés</h3>
+                <ul>
+                    <li><a href="/fr/privacy/">Confidentialité</a></li>
+                    <li><a href="/fr/terms/">Conditions</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Sélectionner la langue</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/getting-started/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/getting-started/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/getting-started/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/getting-started/"
+                           aria-current="page">
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/getting-started/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/getting-started/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/getting-started/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/getting-started/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/getting-started/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/getting-started/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/getting-started/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/getting-started/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/getting-started/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/getting-started/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/getting-started/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/getting-started/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/getting-started/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/getting-started/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/getting-started/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/getting-started/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/getting-started/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/getting-started/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/getting-started/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/getting-started/"
+                           >
+                            עברית
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Ce site utilise des cookies pour améliorer votre expérience." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Ce site utilise des cookies pour améliorer votre expérience. <a href="/fr/privacy/">En savoir plus</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Refuser</button>
+            <button class="btn btn-primary" id="cookie-accept">Accepter</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-SWIMANALYTICS"></script>
+    
+</body>
+</html>

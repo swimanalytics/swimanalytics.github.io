@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SwimAnalytics מול Strava, TrainingPeaks, Final Surge - השוואת תכונות</title>
+    <meta name="description" content="השווה SwimAnalytics לאפליקציות Strava, TrainingPeaks, Final Surge לשחייה. השוואה מפורטת של בדיקת CSS, חישוב sTSS, תכונות PMC, תמחור ומי צריך להשתמש בכל פלטפורמה. ניתוח כן לשחיינים תחרותיים.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="SwimAnalytics מול Strava, SwimAnalytics מול TrainingPeaks, אפליקציית שחייה הטובה ביותר, השוואת אנליטיקת שחייה, השוואת אפליקציות מעקב שחייה">
+    
+    <link rel="canonical" href="https://swimanalytics.app/he/comparisons/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/he/comparisons/">
+    <meta property="og:title" content="SwimAnalytics מול Strava, TrainingPeaks, Final Surge - השוואת תכונות">
+    <meta property="og:description" content="השווה SwimAnalytics לאפליקציות Strava, TrainingPeaks, Final Surge לשחייה. השוואה מפורטת של בדיקת CSS, חישוב sTSS, תכונות PMC, תמחור ומי צריך להשתמש בכל פלטפורמה. ניתוח כן לשחיינים תחרותיים.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/he/comparisons/">
+    <meta name="twitter:title" content="SwimAnalytics מול Strava, TrainingPeaks, Final Surge - השוואת תכונות">
+    <meta name="twitter:description" content="השווה SwimAnalytics לאפליקציות Strava, TrainingPeaks, Final Surge לשחייה. השוואה מפורטת של בדיקת CSS, חישוב sTSS, תכונות PMC, תמחור ומי צריך להשתמש בכל פלטפורמה. ניתוח כן לשחיינים תחרותיים.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/og-image.jpg">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/comparisons/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/comparisons/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/comparisons/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/comparisons/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/comparisons/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/comparisons/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/comparisons/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/comparisons/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/comparisons/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/comparisons/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/comparisons/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/comparisons/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/comparisons/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/comparisons/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/comparisons/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/comparisons/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/comparisons/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/comparisons/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/comparisons/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/comparisons/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/comparisons/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "he"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SwimAnalytics מול Strava, TrainingPeaks, Final Surge - השוואת תכונות",
+      "description": "השווה SwimAnalytics לאפליקציות Strava, TrainingPeaks, Final Surge לשחייה. השוואה מפורטת של בדיקת CSS, חישוב sTSS, תכונות PMC, תמחור ומי צריך להשתמש בכל פלטפורמה. ניתוח כן לשחיינים תחרותיים.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/he/comparisons/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/he/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "השוואת אפליקציות",
+          "item": "https://swimanalytics.app/he/comparisons/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">דלג לתוכן</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/he/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/he/"
+                               
+                               aria-current="">
+                                בית
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">למד</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/he/getting-started/"
+                                       
+                                       aria-current="">
+                                        התחלה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/training-zones/"
+                                       
+                                       aria-current="">
+                                        אזורי אימון
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/training-load/"
+                                       
+                                       aria-current="">
+                                        עומס אימון
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        מחשבון sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">מדע</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/he/research/"
+                                       
+                                       aria-current="">
+                                        מחקר
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/formulas/"
+                                       
+                                       aria-current="">
+                                        נוסחאות
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/efficiency/"
+                                       
+                                       aria-current="">
+                                        יעילות
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        מכניקת השחייה
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/bibliography/"
+                                       
+                                       aria-current="">
+                                        ביבליוגרפיה
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <a href="/he/about/"
+                                   
+                                   aria-current="">
+                                    אודות
+                                </a>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/he/comparisons/"
+                                       class="active"
+                                       aria-current="page">
+                                        השוואת אפליקציות
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/he/contact/"
+                                       
+                                       aria-current="">
+                                        צור קשר
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="בחר שפה">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="he" selected>
+                        עברית
+                    </option>
+                    
+                </select>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="החלף תפריט" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>SwimAnalytics vs Otras Apps de Natación - Comparativa de Funcionalidades</h1>
+        <p class="lead">Cómo se compara SwimAnalytics con Strava, TrainingPeaks, Final Surge y otras plataformas de seguimiento de natación</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Por Qué la Natación Necesita Analíticas Especializadas</h2>
+            <p>Las aplicaciones de fitness generales como Strava y TrainingPeaks destacan en ciclismo y running, pero <strong>la natación requiere métricas diferentes</strong>. La Critical Swim Speed (CSS), las zonas de entrenamiento basadas en ritmo y la mecánica de brazada no están correctamente soportadas en plataformas multideporte. SwimAnalytics está construido específicamente para natación, con métricas diseñadas para atletas de piscina y aguas abiertas.</p>
+        </div>
+
+        <h2>Resumen Comparativo Rápido</h2>
+
+        <div class="comparison-table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Funcionalidad</th>
+                        <th>SwimAnalytics</th>
+                        <th>Strava</th>
+                        <th>TrainingPeaks</th>
+                        <th>Final Surge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Test CSS y Zonas</strong></td>
+                        <td class="highlight">✅ Soporte nativo</td>
+                        <td>❌ No</td>
+                        <td>⚠️ Solo manual</td>
+                        <td>⚠️ Solo manual</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cálculo sTSS Natación</strong></td>
+                        <td class="highlight">✅ Automático</td>
+                        <td>❌ No hay TSS natación</td>
+                        <td>✅ Sí (requiere premium)</td>
+                        <td>✅ Sí</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PMC (CTL/ATL/TSB)</strong></td>
+                        <td class="highlight">✅ Incluido gratis</td>
+                        <td>❌ No</td>
+                        <td>✅ Solo premium ($20/mes)</td>
+                        <td>✅ Premium ($10/mes)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Zonas Entrenamiento por Ritmo</strong></td>
+                        <td class="highlight">✅ 7 zonas, basadas en CSS</td>
+                        <td>❌ Zonas genéricas</td>
+                        <td>⚠️ Configuración manual</td>
+                        <td>⚠️ Configuración manual</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Integración Apple Watch</strong></td>
+                        <td class="highlight">✅ vía Apple Health</td>
+                        <td>✅ Nativa</td>
+                        <td>✅ vía Garmin/Wahoo</td>
+                        <td>✅ vía importaciones</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Análisis Mecánica Brazada</strong></td>
+                        <td class="highlight">✅ DPS, SR, SI</td>
+                        <td>⚠️ Básico</td>
+                        <td>⚠️ Básico</td>
+                        <td>⚠️ Básico</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funcionalidades Nivel Gratuito</strong></td>
+                        <td class="highlight">Prueba 7 días, luego $3.99/mes</td>
+                        <td>✅ Gratis (analíticas limitadas)</td>
+                        <td>⚠️ Muy limitado</td>
+                        <td>⚠️ Prueba 14 días</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Soporte Multideporte</strong></td>
+                        <td>❌ Solo natación</td>
+                        <td class="highlight">✅ Todos los deportes</td>
+                        <td class="highlight">✅ Todos los deportes</td>
+                        <td class="highlight">✅ Todos los deportes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funcionalidades Sociales</strong></td>
+                        <td>❌ No</td>
+                        <td class="highlight">✅ Extensas</td>
+                        <td>⚠️ Solo entrenador-atleta</td>
+                        <td>⚠️ Limitadas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">SwimAnalytics vs Strava</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Lo Que Strava Hace Bien</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Funcionalidades sociales:</strong> Clubes, segmentos, kudos, feed de actividades</li>
+                        <li><strong>Seguimiento multideporte:</strong> Running, ciclismo, natación, senderismo, etc.</li>
+                        <li><strong>Nivel gratuito:</strong> Funcionalidades gratuitas generosas para atletas ocasionales</li>
+                        <li><strong>Base de usuarios masiva:</strong> Conecta con millones de atletas en todo el mundo</li>
+                        <li><strong>Integración Apple Watch:</strong> Sincronización directa desde entrenamientos</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Métricas específicas de natación:</strong> CSS, sTSS, zonas de ritmo diseñadas para piscinas</li>
+                        <li><strong>Análisis de carga de entrenamiento:</strong> CTL/ATL/TSB incluido (Strava no tiene esto)</li>
+                        <li><strong>sTSS automático:</strong> Sin entrada manual de datos, calculado desde CSS + ritmo</li>
+                        <li><strong>Mecánica de brazada:</strong> Seguimiento de DPS, frecuencia de brazada, índice de brazada</li>
+                        <li><strong>Zonas de entrenamiento:</strong> 7 zonas de ritmo personalizadas basadas en tu fisiología</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>Veredicto: SwimAnalytics vs Strava</h3>
+            <p><strong>Usa Strava si:</strong> Quieres funcionalidades sociales, seguimiento multideporte o seguimiento casual gratuito. Strava es excelente para registrar entrenamientos y conectar con amigos.</p>
+            <p><strong>Usa SwimAnalytics si:</strong> Te tomas en serio el rendimiento en natación y quieres zonas basadas en CSS, sTSS automático y gestión de carga de entrenamiento (CTL/ATL/TSB). Strava no calcula TSS de natación ni proporciona métricas PMC.</p>
+            <p class="mb-0"><strong>Usa ambos:</strong> Muchos nadadores usan Strava para compartir socialmente y SwimAnalytics para seguimiento de rendimiento. Se complementan bien entre sí.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="mb-xl text-center">SwimAnalytics vs TrainingPeaks</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Lo Que TrainingPeaks Hace Bien</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>PMC completo:</strong> Gráficos CTL/ATL/TSB estándar de la industria</li>
+                        <li><strong>Biblioteca de entrenamientos:</strong> Miles de entrenamientos estructurados</li>
+                        <li><strong>Integración con entrenadores:</strong> Plataforma profesional entrenador-atleta</li>
+                        <li><strong>Entrenamiento multideporte:</strong> Enfocado en triatlón con los tres deportes</li>
+                        <li><strong>Analíticas avanzadas:</strong> Zonas de potencia y frecuencia cardíaca para bici/running</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Test CSS automático:</strong> Calculadora CSS integrada con generación de zonas</li>
+                        <li><strong>PMC incluido para natación:</strong> TrainingPeaks requiere Premium $20/mes para PMC</li>
+                        <li><strong>Interfaz simplificada:</strong> SwimAnalytics está enfocado en natación, no es abrumador</li>
+                        <li><strong>Apple Watch nativo:</strong> Sincronización directa vía Apple Health (sin Garmin necesario)</li>
+                        <li><strong>Menor coste:</strong> $3.99/mes vs $20/mes por TrainingPeaks Premium</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>Veredicto: SwimAnalytics vs TrainingPeaks</h3>
+            <p><strong>Usa TrainingPeaks si:</strong> Eres triatleta entrenando para eventos multideporte, tienes un entrenador usando TrainingPeaks o necesitas entrenamientos estructurados de bici/running. TrainingPeaks destaca para entrenamiento integral de triatlón.</p>
+            <p><strong>Usa SwimAnalytics si:</strong> Eres nadador (no triatleta) o quieres métricas específicas de natación sin pagar $20/mes. SwimAnalytics proporciona CTL/ATL/TSB y cálculo sTSS por un 80% menos de coste que TrainingPeaks Premium.</p>
+            <p class="mb-0"><strong>Diferencia clave:</strong> TrainingPeaks es multideporte con funcionalidades de coaching; SwimAnalytics es solo natación con soporte CSS nativo y acceso PMC asequible.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">SwimAnalytics vs Final Surge</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Lo Que Final Surge Hace Bien</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Plataforma para entrenadores:</strong> Diseñada para relaciones entrenador-atleta</li>
+                        <li><strong>Soporte TSS:</strong> Cálculo TSS de natación disponible</li>
+                        <li><strong>Multideporte:</strong> Natación, running, ciclismo, fuerza</li>
+                        <li><strong>Planificación de entrenamientos:</strong> Planes de entrenamiento basados en calendario</li>
+                        <li><strong>Herramientas de comunicación:</strong> Mensajería entrenador integrada en la app</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>Test CSS nativo:</strong> Calculadora integrada, no entrada manual</li>
+                        <li><strong>sTSS automático:</strong> Calculado desde datos de Apple Watch, sin registro</li>
+                        <li><strong>Enfoque en atleta individual:</strong> Diseñado para nadadores autoentrenados</li>
+                        <li><strong>Integración Apple Watch:</strong> Sincronización perfecta con app Salud</li>
+                        <li><strong>Natación especializada:</strong> No diluido por funcionalidades multideporte</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>Veredicto: SwimAnalytics vs Final Surge</h3>
+            <p><strong>Usa Final Surge si:</strong> Tienes un entrenador que usa Final Surge, o estás entrenando atletas. Final Surge es una plataforma de coaching primero, app de atleta segundo.</p>
+            <p><strong>Usa SwimAnalytics si:</strong> Eres autoentrenado y quieres analíticas automatizadas. SwimAnalytics requiere cero registro manual—todo se sincroniza desde Apple Watch automáticamente.</p>
+            <p class="mb-0"><strong>Diferencia clave:</strong> Final Surge está centrado en entrenadores; SwimAnalytics está centrado en atletas con enfoque en automatización.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Lo Que Hace Único a SwimAnalytics</h2>
+
+        <div class="unique-features">
+            <div class="feature-item">
+                <h3>1. Soporte CSS de Primera Clase</h3>
+                <p>SwimAnalytics es la <strong>única app</strong> con calculadora de test CSS nativa. Introduce tus tiempos de 400m y 200m, obtén instantáneamente:</p>
+                <ul>
+                    <li>Ritmo CSS (ej., 1:49/100m)</li>
+                    <li>7 zonas de entrenamiento personalizadas</li>
+                    <li>Cálculo sTSS automático para todos los entrenamientos</li>
+                    <li>Análisis de entrenamiento basado en zonas</li>
+                </ul>
+                <p class="mt-sm"><strong>Competidores:</strong> Requieren configuración manual de zonas o no soportan zonas de natación en absoluto.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>2. sTSS Automático para Natación</h3>
+                <p>La mayoría de apps requieren entrada manual de TSS o no calculan TSS de natación en absoluto. SwimAnalytics:</p>
+                <ul>
+                    <li>Calcula automáticamente sTSS de cada entrenamiento de Apple Watch</li>
+                    <li>Usa CSS + ritmo de entrenamiento para determinar el Factor de Intensidad</li>
+                    <li>No requiere registro manual—configura CSS una vez, olvídate de ello</li>
+                </ul>
+                <p class="mt-sm"><strong>Strava:</strong> No calcula TSS de natación. <strong>TrainingPeaks:</strong> Requiere Premium $20/mes. <strong>Final Surge:</strong> Requiere entrada manual.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>3. Acceso PMC Asequible</h3>
+                <p>El Performance Management Chart (CTL/ATL/TSB) es <strong>esencial para gestión de carga de entrenamiento</strong>, pero caro en otras plataformas:</p>
+                <ul>
+                    <li><strong>SwimAnalytics:</strong> Incluido por $3.99/mes</li>
+                    <li><strong>TrainingPeaks:</strong> Requiere Premium $20/mes ($240/año)</li>
+                    <li><strong>Strava:</strong> No disponible a ningún precio</li>
+                    <li><strong>Final Surge:</strong> Premium $10/mes ($120/año)</li>
+                </ul>
+                <p class="mt-sm">SwimAnalytics proporciona CTL/ATL/TSB a un <strong>80% menos de coste</strong> que TrainingPeaks.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>4. Apple Watch Nativo</h3>
+                <p>SwimAnalytics se sincroniza directamente con Apple Health—no se requiere reloj Garmin:</p>
+                <ul>
+                    <li>Funciona con cualquier Apple Watch (Series 2+)</li>
+                    <li>Importación automática de entrenamientos desde app Salud</li>
+                    <li>Ritmo largo a largo, número de brazadas, SWOLF</li>
+                    <li>No necesita hardware adicional</li>
+                </ul>
+                <p class="mt-sm"><strong>TrainingPeaks:</strong> Requiere dispositivo Garmin/Wahoo ($200-800). <strong>Strava:</strong> Funciona con Apple Watch pero carece de analíticas de natación.</p>
+            </div>
+
+            <div class="feature-item">
+                <h3>5. Enfoque Solo en Natación</h3>
+                <p>Las apps multideporte intentan hacer todo, a menudo haciendo la natación pobremente. SwimAnalytics está <strong>construido exclusivamente para natación</strong>:</p>
+                <ul>
+                    <li>Interfaz diseñada alrededor del flujo de trabajo de entrenamiento en piscina</li>
+                    <li>Métricas relevantes para nadadores (CSS, sTSS, mecánica de brazada)</li>
+                    <li>Sin sobrecarga de funcionalidades de seguimiento bici/running/senderismo</li>
+                    <li>Actualizaciones enfocadas en mejoras de natación</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Comparación de Precios (Coste Anual)</h2>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>SwimAnalytics</h3>
+                <div class="price">$47.88/año</div>
+                <div class="price-note">($3.99/mes tras prueba 7 días)</div>
+                <ul class="features-included">
+                    <li>✅ Test CSS y zonas</li>
+                    <li>✅ Cálculo sTSS automático</li>
+                    <li>✅ PMC (CTL/ATL/TSB)</li>
+                    <li>✅ Mecánica brazada (DPS, SR, SI)</li>
+                    <li>✅ Sincronización Apple Watch</li>
+                    <li>❌ Multideporte</li>
+                    <li>❌ Funcionalidades sociales</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Strava</h3>
+                <div class="price">$0 - $80/año</div>
+                <div class="price-note">(Gratis o $8/mes Summit)</div>
+                <ul class="features-included">
+                    <li>✅ Seguimiento entrenamientos básico</li>
+                    <li>✅ Funcionalidades sociales (clubes, kudos)</li>
+                    <li>✅ Soporte multideporte</li>
+                    <li>❌ Sin soporte CSS</li>
+                    <li>❌ Sin TSS natación</li>
+                    <li>❌ Sin PMC</li>
+                    <li>❌ Sin analíticas natación</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>TrainingPeaks</h3>
+                <div class="price">$240/año</div>
+                <div class="price-note">($20/mes Premium)</div>
+                <ul class="features-included">
+                    <li>✅ PMC (CTL/ATL/TSB)</li>
+                    <li>✅ Cálculo TSS</li>
+                    <li>✅ Analíticas multideporte</li>
+                    <li>✅ Plataforma entrenadores</li>
+                    <li>⚠️ Sin test CSS nativo</li>
+                    <li>⚠️ Configuración zonas manual</li>
+                    <li>💰 5x coste de SwimAnalytics</li>
+                </ul>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Final Surge</h3>
+                <div class="price">$120/año</div>
+                <div class="price-note">($10/mes Premium)</div>
+                <ul class="features-included">
+                    <li>✅ Seguimiento TSS</li>
+                    <li>✅ Herramientas entrenador-atleta</li>
+                    <li>✅ Multideporte</li>
+                    <li>⚠️ Entrada sTSS manual</li>
+                    <li>⚠️ Sin test CSS nativo</li>
+                    <li>💰 2.5x coste de SwimAnalytics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>💡 Análisis Coste-Beneficio</h3>
+            <p><strong>Si eres atleta solo de natación:</strong> SwimAnalytics proporciona PMC + sTSS + zonas CSS por $48/año. TrainingPeaks cobra $240/año por funcionalidades similares (5x más caro).</p>
+            <p class="mb-0"><strong>Si eres triatleta:</strong> Considera TrainingPeaks o Final Surge para soporte multideporte. SwimAnalytics es solo natación y no seguirá entrenamiento de bici/running.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>¿Quién Debería Usar SwimAnalytics?</h2>
+
+        <div class="use-cases">
+            <div class="use-case">
+                <h3>✅ Perfecto Para:</h3>
+                <ul>
+                    <li><strong>Nadadores competitivos:</strong> Atletas masters, grupos de edad, colegiales enfocados en rendimiento de natación</li>
+                    <li><strong>Atletas autoentrenados:</strong> Nadadores gestionando su propio entrenamiento sin entrenador</li>
+                    <li><strong>Entrenadores orientados a datos:</strong> Atletas que quieren zonas CSS, sTSS y métricas PMC</li>
+                    <li><strong>Usuarios de Apple Watch:</strong> Nadadores que ya usan Apple Watch para seguimiento en piscina</li>
+                    <li><strong>Atletas con presupuesto ajustado:</strong> Quieren funcionalidades PMC sin tarifas premium de $20/mes</li>
+                </ul>
+            </div>
+
+            <div class="use-case">
+                <h3>⚠️ No Ideal Para:</h3>
+                <ul>
+                    <li><strong>Triatletas:</strong> Necesitan seguimiento multideporte (usa TrainingPeaks o Final Surge)</li>
+                    <li><strong>Atletas sociales:</strong> Quieren clubes, kudos, feed de actividades (usa Strava)</li>
+                    <li><strong>Atletas con entrenador:</strong> El entrenador ya usa plataforma TrainingPeaks o Final Surge</li>
+                    <li><strong>Nadadores ocasionales:</strong> No interesados en CSS, sTSS o analíticas de carga de entrenamiento</li>
+                    <li><strong>Usuarios solo Garmin:</strong> No tienen Apple Watch (SwimAnalytics requiere iOS)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <h3>¿Puedo usar SwimAnalytics Y Strava/TrainingPeaks?</h3>
+            <p><strong>Sí—muchos nadadores usan ambos.</strong> Usa SwimAnalytics para analíticas de rendimiento (CSS, sTSS, PMC) y Strava para compartir socialmente y registro multideporte. Se complementan bien entre sí.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Funciona SwimAnalytics con relojes Garmin?</h3>
+            <p><strong>No.</strong> SwimAnalytics se sincroniza vía Apple Health, que requiere Apple Watch. Si usas Garmin, considera TrainingPeaks o Final Surge en su lugar.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Por qué es SwimAnalytics mucho más barato que TrainingPeaks?</h3>
+            <p>SwimAnalytics es <strong>solo natación</strong>, no multideporte. Al enfocarnos exclusivamente en natación, evitamos la complejidad y costes de infraestructura de soportar medidores de potencia de bici, dinámicas de running, plataformas de entrenadores, etc. Esto nos permite ofrecer PMC + sTSS a un 80% menos de coste.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Qué pasa si soy triatleta—debería usar SwimAnalytics?</h3>
+            <p><strong>Probablemente no como tu app principal.</strong> Los triatletas se benefician de plataformas multideporte como TrainingPeaks que siguen bici, running y natación juntos. Sin embargo, algunos triatletas usan SwimAnalytics para analíticas específicas de natación (zonas CSS) y TrainingPeaks para carga de entrenamiento general.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Tiene SwimAnalytics un nivel gratuito?</h3>
+            <p>SwimAnalytics ofrece una <strong>prueba gratuita de 7 días</strong> con todas las funcionalidades (test CSS, sTSS, PMC). Después de la prueba, cuesta $3.99/mes sin compromiso a largo plazo. Sin nivel gratuito—creemos que los atletas merecen analíticas completas sin bloqueos arbitrarios de funcionalidades.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="mt-xl text-center">
+            <h2>¿Listo Para Probar SwimAnalytics?</h2>
+            <p class="lead mb-lg">Experimenta zonas de entrenamiento basadas en CSS, sTSS automático y métricas PMC asequibles diseñadas específicamente para nadadores.</p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Iniciar Prueba Gratuita 7 Días</a>
+            <p class="mt-md text-secondary">Sin tarjeta de crédito requerida • Cancela en cualquier momento • iOS 16+</p>
+
+            <div class="comparison-links mt-xl">
+                <p class="mb-sm"><strong>Más información:</strong></p>
+                <a href="/he/css/" class="btn btn-secondary btn-small mr-sm">Calculadora CSS →</a>
+                <a href="/he/training-zones/" class="btn btn-secondary btn-small mr-sm">Zonas Entrenamiento →</a>
+                <a href="/he/getting-started/" class="btn btn-secondary btn-small">Empezar →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/he/">
+                            בית
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/">
+                            למד
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/">
+                            מדע
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/about/">
+                            אודות
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>כל הזכויות שמורות</h3>
+                <ul>
+                    <li><a href="/he/privacy/">פרטיות</a></li>
+                    <li><a href="/he/terms/">תנאים</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>בחר שפה</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/comparisons/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/comparisons/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/comparisons/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/comparisons/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/comparisons/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/comparisons/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/comparisons/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/comparisons/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/comparisons/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/comparisons/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/comparisons/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/comparisons/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/comparisons/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/comparisons/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/comparisons/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/comparisons/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/comparisons/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/comparisons/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/comparisons/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/comparisons/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/comparisons/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/comparisons/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/comparisons/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/comparisons/"
+                           aria-current="page">
+                            עברית
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. כל הזכויות שמורות.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="אתר זה משתמש בעוגיות כדי לשפר את החוויה שלך." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>אתר זה משתמש בעוגיות כדי לשפר את החוויה שלך. <a href="/he/privacy/">למד עוד</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">דחה</button>
+            <button class="btn btn-primary" id="cookie-accept">קבל</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-SWIMANALYTICS"></script>
+    
+</body>
+</html>
