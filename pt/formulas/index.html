@@ -409,7 +409,7 @@
             <ul>
                 <li>Todos os tempos devem ser convertidos para segundos para os cálculos</li>
                 <li>O ritmo de natação é inverso (maior % = ritmo mais lento)</li>
-                <li>Sempre valide as entradas para intervalos razoáveis</li>
+                <li>Valide sempre as entradas para intervalos razoáveis</li>
                 <li>Trate casos limite (divisão por zero, valores negativos)</li>
             </ul>
         </div>
@@ -421,15 +421,15 @@
         <h2>Métricas de Desempenho Principais</h2>
 
         <div class="formula-card">
-            <h3>Velocidade Crítica de Nado (VCN)</h3>
+            <h3>Velocidade Crítica de Natação (CSS)</h3>
             <div class="formula-content">
                 <h4>Fórmula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        VCN (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                        CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        VCN Ritmo/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS Ritmo/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
@@ -454,14 +454,14 @@
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritmo VCN por 100m:</div>
+                        <div class="result-label">Ritmo CSS por 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Passos do cálculo:</strong><br>
                             <span id="css-steps">
-                                VCN (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br>
+                                CSS (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br>
                                 Ritmo/100m = 100 / 0,917 = 109 segundos = 1:49
                             </span>
                         </small>
@@ -525,7 +525,7 @@ const result = calculateCSS(200, 150, 400, 368);
 
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
-                            `VCN (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
                             `Ritmo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} segundos = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
@@ -549,13 +549,13 @@ const result = calculateCSS(200, 150, 400, 368);
                 <h4>Fórmula Completa:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duração (horas) × 100
+                        sTSS = (FI³) × Duração (horas) × 100
                     </div>
                     <div class="formula">
-                        IF = NSS / FTP
+                        FI = VNN / FTP
                     </div>
                     <div class="formula">
-                        NSS = Distância Total / Tempo Total (m/min)
+                        VNN = Distância Total / Tempo Total (m/min)
                     </div>
                 </div>
 
@@ -571,12 +571,12 @@ const result = calculateCSS(200, 150, 400, 368);
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">Ritmo VCN (mm:ss por 100m):</label>
+                            <label for="stss-css">Ritmo CSS (mm:ss por 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
                             <label>FTP (calculado):</label>
-                            <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+                            <input type="text" id="stss-ftp" readonly value="64,5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
@@ -587,9 +587,9 @@ const result = calculateCSS(200, 150, 400, 368);
                         <small>
                             <strong>Passos do cálculo:</strong><br>
                             <span id="stss-steps">
-                                NSS = 3000m / 55min = 54,5 m/min<br>
+                                VNN = 3000m / 55min = 54,5 m/min<br>
                                 FTP = 100 / (93/60) = 64,5 m/min<br>
-                                IF = 54,5 / 64,5 = 0,845<br>
+                                FI = 54,5 / 64,5 = 0,845<br>
                                 sTSS = 0,845³ × (55/60) × 100 = 55
                             </span>
                         </small>
@@ -673,16 +673,16 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         const stss = calculateSTSS(distance, duration, ftp);
 
                         // Update display
-                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1).replace('.', ',') + ' m/min';
                         document.getElementById('stss-result').textContent = stss;
 
                         // Update calculation steps
                         const hours = duration / 60;
                         document.getElementById('stss-steps').innerHTML =
-                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
-                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
-                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
-                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                            `VNN = ${distance}m / ${duration}min = ${nss.toFixed(1).replace('.', ',')} m/min<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1).replace('.', ',')} m/min<br>` +
+                            `FI = ${nss.toFixed(1).replace('.', ',')} / ${ftp.toFixed(1).replace('.', ',')} = ${intensityFactor.toFixed(3).replace('.', ',')}<br>` +
+                            `sTSS = ${intensityFactor.toFixed(3).replace('.', ',')}³ × (${duration}/60) × 100 = ${stss}`;
                     } catch (e) {
                         console.error('Calculation error:', e);
                     }
@@ -782,12 +782,12 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tempo Normalizado = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Braçadas Normalizadas = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
-                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+                            steps = `Tempo Normalizado = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1).replace('.', ',')}s<br>` +
+                                   `Braçadas Normalizadas = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1).replace('.', ',')}<br>` +
+                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1).replace('.', ',')} + ${normalizedStrokes.toFixed(1).replace('.', ',')} = ${swolf.toFixed(1).replace('.', ',')}`;
                         }
 
-                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                        document.getElementById('swolf-result').textContent = swolf.toFixed(1).replace('.', ',');
                         document.getElementById('swolf-steps').innerHTML = steps;
                     } catch (e) {
                         console.error('SWOLF calculation error:', e);
@@ -868,9 +868,9 @@ const sr = calculateStrokeRate(30, 25);
 
                         const sr = (strokes / time) * 60;
 
-                        document.getElementById('sr-result').textContent = sr.toFixed(1);
+                        document.getElementById('sr-result').textContent = sr.toFixed(1).replace('.', ',');
                         document.getElementById('sr-steps').innerHTML =
-                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} BPM`;
+                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1).replace('.', ',')} BPM`;
                     } catch (e) {
                         console.error('SR calculation error:', e);
                     }
@@ -1033,7 +1033,7 @@ const pmc = calculatePMC(workouts);
         <h2>Cálculos Avançados</h2>
 
         <div class="formula-card">
-            <h3>VCN a partir de Múltiplas Distâncias (Método de Regressão)</h3>
+            <h3>CSS a partir de Múltiplas Distâncias (Método de Regressão)</h3>
             <div class="formula-content">
                 <h4>Implementação em JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
