@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Guia de Zonas de Treino na Natação - Zonas de Intensidade Baseadas em CSS</title>
+    <meta name="description" content="Guia completo das 5 zonas de treino na natação baseadas na Velocidade Crítica de Nado. Aprenda Zona 2 base aeróbica, Zona 4 limiar, Zona 5 treino VO2max. Inclui calculadora de zonas personalizadas, distribuição semanal e exemplos de treino para todos os níveis.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="zonas treino natação, zonas natação, zonas treino CSS, zona 2 natação, treino limiar">
+    
+    <link rel="canonical" href="https://swimanalytics.app/pt/training-zones/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/pt/training-zones/">
+    <meta property="og:title" content="Guia de Zonas de Treino na Natação - Zonas de Intensidade Baseadas em CSS">
+    <meta property="og:description" content="Guia completo das 5 zonas de treino na natação baseadas na Velocidade Crítica de Nado. Aprenda Zona 2 base aeróbica, Zona 4 limiar, Zona 5 treino VO2max. Inclui calculadora de zonas personalizadas, distribuição semanal e exemplos de treino para todos os níveis.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/pt/training-zones/">
+    <meta name="twitter:title" content="Guia de Zonas de Treino na Natação - Zonas de Intensidade Baseadas em CSS">
+    <meta name="twitter:description" content="Guia completo das 5 zonas de treino na natação baseadas na Velocidade Crítica de Nado. Aprenda Zona 2 base aeróbica, Zona 4 limiar, Zona 5 treino VO2max. Inclui calculadora de zonas personalizadas, distribuição semanal e exemplos de treino para todos os níveis.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-zones/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-zones/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-zones/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "pt"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Guia de Zonas de Treino na Natação - Zonas de Intensidade Baseadas em CSS",
+      "description": "Guia completo das 5 zonas de treino na natação baseadas na Velocidade Crítica de Nado. Aprenda Zona 2 base aeróbica, Zona 4 limiar, Zona 5 treino VO2max. Inclui calculadora de zonas personalizadas, distribuição semanal e exemplos de treino para todos os níveis.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/pt/training-zones/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Zonas de Treino",
+          "item": "https://swimanalytics.app/pt/training-zones/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Ir para o conteúdo</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/pt/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/"
+                               
+                               aria-current="">
+                                Início
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Aprender</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/getting-started/"
+                                       
+                                       aria-current="">
+                                        Começar
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-zones/"
+                                       class="active"
+                                       aria-current="page">
+                                        Zonas de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-load/"
+                                       
+                                       aria-current="">
+                                        Carga de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Calculadora sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ciência</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/research/"
+                                       
+                                       aria-current="">
+                                        Pesquisa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/formulas/"
+                                       
+                                       aria-current="">
+                                        Fórmulas
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/efficiency/"
+                                       
+                                       aria-current="">
+                                        Eficiência
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mecânica da Braçada
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/contact/"
+                               
+                               aria-current="">
+                                Contato
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecionar idioma">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="pt" selected>
+                        Português
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Zonas de Treino de Natação - Guia de Intensidade Baseado em VCN</h1>
+        <p class="lead">Domine as 5 zonas de treino para natação - Personalizadas à sua Velocidade Crítica de Nado</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>O Que São Zonas de Treino de Natação?</h2>
+            <p><strong>Zonas de treino</strong> são faixas de intensidade cientificamente definidas com base na sua <strong>Velocidade Crítica de Nado (VCN)</strong>—seu ritmo de limiar aeróbico. Cada zona desencadeia adaptações fisiológicas específicas, desde a construção da base aeróbica (Zona 2) até o desenvolvimento do VO₂máx (Zona 5). As zonas de treino eliminam suposições e garantem que cada treino tenha um propósito claro.</p>
+        </div>
+
+        <h2 class="mt-2xl">Por Que o Treino por Zonas Funciona</h2>
+
+        <p class="mb-md">Treinar por "sensação" ou tabelas de ritmo genéricas falha porque:</p>
+
+        <ul class="mb-xl">
+            <li><strong>A fisiologia individual varia:</strong> Um ritmo de 1:40/100m é fácil para nadadores de elite, mas máximo para iniciantes</li>
+            <li><strong>EPE não é confiável:</strong> O esforço percebido muda com fadiga, hidratação e condições</li>
+            <li><strong>Ritmos genéricos ignoram seu limiar:</strong> Treinos padronizados não consideram seu limiar de lactato único</li>
+            <li><strong>Sem especificidade de adaptação:</strong> Ritmos aleatórios produzem resultados aleatórios</li>
+        </ul>
+
+        <p class="mb-xl"><strong>Zonas baseadas em VCN resolvem isso</strong> ao personalizar cada intensidade à SUA fisiologia. Um treino de Zona 2 desencadeia adaptações aeróbicas tanto se sua VCN é 1:20/100m quanto 2:00/100m.</p>
+
+        <div class="callout callout-tip">
+            <h3>🎯 Princípio Chave: Relação Inversa</h3>
+            <p>Na natação, o ritmo é medido como <strong>tempo por distância</strong>. Portanto:</p>
+            <ul>
+                <li><strong>Maior % de VCN = ritmo MAIS LENTO</strong> (mais fácil, Zona 1-2)</li>
+                <li><strong>Menor % de VCN = ritmo MAIS RÁPIDO</strong> (mais difícil, Zona 4-5)</li>
+            </ul>
+            <p class="mb-0">Isso é <em>inverso ao ciclismo/corrida</em> onde maior % = mais difícil. Pense: "ritmo 108% VCN" = 8% mais lento que o limiar.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">As 5 Zonas de Treino de Natação</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>Nome</th>
+                        <th>% do Ritmo VCN</th>
+                        <th>Exemplo para VCN 1:40/100m</th>
+                        <th>EPE</th>
+                        <th>Propósito Fisiológico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>1</strong></td>
+                        <td>Recuperação</td>
+                        <td>&gt;108%</td>
+                        <td>&gt;1:48/100m</td>
+                        <td>2-3/10</td>
+                        <td>Recuperação ativa, refinamento técnico, aquecimento/desaquecimento</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>2</strong></td>
+                        <td>Base Aeróbica</td>
+                        <td>104-108%</td>
+                        <td>1:44-1:48/100m</td>
+                        <td>4-5/10</td>
+                        <td>Construir capacidade aeróbica, densidade mitocondrial, oxidação de gordura</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>3</strong></td>
+                        <td>Tempo/Ponto Ideal</td>
+                        <td>99-103%</td>
+                        <td>1:39-1:43/100m</td>
+                        <td>6-7/10</td>
+                        <td>Adaptação ao ritmo de prova, eficiência neuromuscular</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>4</strong></td>
+                        <td>Limiar (VCN)</td>
+                        <td>96-100%</td>
+                        <td>1:36-1:40/100m</td>
+                        <td>7-8/10</td>
+                        <td>Melhoria do limiar de lactato, intensidade alta sustentada</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>5</strong></td>
+                        <td>VO₂máx/Anaeróbico</td>
+                        <td>&lt;96%</td>
+                        <td>&lt;1:36/100m</td>
+                        <td>9-10/10</td>
+                        <td>Desenvolvimento de VO₂máx, potência, tolerância ao lactato</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Zona 1: Recuperação</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-1-badge">Zona 1</span>
+                <span class="zone-pace">&gt;108% do ritmo VCN</span>
+                <span class="zone-rpe">EPE 2-3/10</span>
+            </div>
+
+            <h3>Propósito</h3>
+            <p>Recuperação ativa, trabalho técnico, aquecimento, desaquecimento. A Zona 1 promove o fluxo sanguíneo para reparo muscular sem criar estresse adicional de treino. Não é usada para ganhos de condicionamento—puramente regenerativa.</p>
+
+            <h3>Marcadores Fisiológicos</h3>
+            <ul>
+                <li>Frequência cardíaca: 50-60% do máximo</li>
+                <li>Lactato: &lt;1.5 mmol/L (bem abaixo do limiar)</li>
+                <li>Respiração: Respiração nasal possível, ritmo conversacional</li>
+                <li>Sensação: Sem esforço, poderia manter indefinidamente</li>
+            </ul>
+
+            <h3>Treinos de Exemplo</h3>
+            <div class="workout-example">
+                <h4>Sessão de Recuperação</h4>
+                <ul>
+                    <li>500m nado contínuo @ Zona 1 (foco: braçada suave)</li>
+                    <li>10×25 educativos (catchup, sculling, braço único) @ esforço Zona 1</li>
+                    <li>300m puxada com pull buoy @ Zona 1</li>
+                </ul>
+            </div>
+
+            <h3>Volume Semanal</h3>
+            <p><strong>10-20% do volume total</strong> (aquecimentos, desaquecimentos, nados de recuperação em dias livres)</p>
+        </div>
+
+        <h2 class="mt-3xl">Zona 2: Base Aeróbica</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-2-badge">Zona 2</span>
+                <span class="zone-pace">104-108% do ritmo VCN</span>
+                <span class="zone-rpe">EPE 4-5/10</span>
+            </div>
+
+            <h3>Propósito</h3>
+            <p><strong>Fundação de todo treino de resistência.</strong> A Zona 2 constrói densidade mitocondrial, redes capilares, capacidade de oxidação de gordura e enzimas aeróbicas. É aqui que o condicionamento aeróbico é construído—a zona "entediante" que produz campeões.</p>
+
+            <h3>Marcadores Fisiológicos</h3>
+            <ul>
+                <li>Frequência cardíaca: 60-75% do máximo</li>
+                <li>Lactato: 1.5-2.5 mmol/L (abaixo do primeiro limiar de lactato)</li>
+                <li>Respiração: Rítmica, confortável, pode falar em frases</li>
+                <li>Sensação: Confortável, sustentável por 60+ minutos</li>
+            </ul>
+
+            <h3>Treinos de Exemplo</h3>
+            <div class="workout-example">
+                <h4>Sessão de Resistência Aeróbica</h4>
+                <ul>
+                    <li>3000m contínuo @ ritmo Zona 2</li>
+                    <li>20×100 @ ritmo Zona 2 (10s descanso)</li>
+                    <li>5×400 @ ritmo Zona 2 (20s descanso)</li>
+                </ul>
+            </div>
+
+            <h3>Volume Semanal</h3>
+            <p><strong>60-70% do volume total</strong> (zona mais crítica para desenvolvimento de condicionamento)</p>
+
+            <div class="callout callout-warning mt-md">
+                <h4>⚠️ Erro Comum: Treinar Muito Forte</h4>
+                <p>A maioria dos nadadores treina Zona 2 muito rápido, empurrando para Zona 3-4. Isso cria fadiga crônica sem construir base aeróbica. A Zona 2 deve parecer <em>fácil</em>—você deve terminar sentindo que poderia fazer mais.</p>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Zona 3: Tempo / Ponto Ideal</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-3-badge">Zona 3</span>
+                <span class="zone-pace">99-103% do ritmo VCN</span>
+                <span class="zone-rpe">EPE 6-7/10</span>
+            </div>
+
+            <h3>Propósito</h3>
+            <p>Adaptação ao ritmo de prova para provas de média distância (400m-1500m). A Zona 3 treina eficiência neuromuscular em velocidades sustentáveis de prova. Também conhecido como treino de "Ponto Ideal"—mais difícil que base, mais fácil que limiar, com boas adaptações aeróbicas por unidade de fadiga.</p>
+
+            <h3>Marcadores Fisiológicos</h3>
+            <ul>
+                <li>Frequência cardíaca: 75-85% do máximo</li>
+                <li>Lactato: 2.5-4.0 mmol/L (aproximando-se do limiar)</li>
+                <li>Respiração: Controlada mas elevada, apenas frases curtas</li>
+                <li>Sensação: Confortavelmente difícil, sustentável por 20-40 minutos</li>
+            </ul>
+
+            <h3>Treinos de Exemplo</h3>
+            <div class="workout-example">
+                <h4>Sessão de Tempo</h4>
+                <ul>
+                    <li>10×200 @ ritmo Zona 3 (15s descanso)</li>
+                    <li>3×800 @ ritmo Zona 3 (30s descanso)</li>
+                    <li>2000m quebrado (500-400-300-400-500) @ ritmo Zona 3 (20s descanso entre séries)</li>
+                </ul>
+            </div>
+
+            <h3>Volume Semanal</h3>
+            <p><strong>15-20% do volume total</strong> (chave para preparação específica de prova)</p>
+        </div>
+
+        <h2 class="mt-3xl">Zona 4: Limiar (Ritmo VCN)</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-4-badge">Zona 4</span>
+                <span class="zone-pace">96-100% do ritmo VCN</span>
+                <span class="zone-rpe">EPE 7-8/10</span>
+            </div>
+
+            <h3>Propósito</h3>
+            <p><strong>Treino de limiar de lactato—a "zona valiosa".</strong> A Zona 4 eleva seu limiar anaeróbico, melhorando sua capacidade de eliminar lactato e sustentar esforços de alta intensidade. Este é seu ritmo VCN—a velocidade mais rápida que você pode manter por ~30 minutos sem exaustão.</p>
+
+            <h3>Marcadores Fisiológicos</h3>
+            <ul>
+                <li>Frequência cardíaca: 85-92% do máximo</li>
+                <li>Lactato: 4.0-6.0 mmol/L (estado estável máximo de lactato)</li>
+                <li>Respiração: Difícil, trabalhosa, apenas palavras únicas</li>
+                <li>Sensação: Muito difícil, sustentável por 20-30 minutos no máximo</li>
+            </ul>
+
+            <h3>Treinos de Exemplo</h3>
+            <div class="workout-example">
+                <h4>Sessão de Limiar</h4>
+                <ul>
+                    <li>8×100 @ ritmo VCN (15s descanso) — série clássica VCN</li>
+                    <li>5×200 @ 101% VCN (20s descanso)</li>
+                    <li>3×400 @ 103% VCN (30s descanso)</li>
+                    <li>1500m teste cronometrado contínuo @ ritmo VCN</li>
+                </ul>
+            </div>
+
+            <h3>Volume Semanal</h3>
+            <p><strong>10-15% do volume total</strong> (alto estresse de treino, requer recuperação adequada)</p>
+
+            <div class="callout callout-tip mt-md">
+                <h4>💡 Dica Pro: Use sTSS para Gerenciar Carga Zona 4</h4>
+                <p>Treinos de Zona 4 geram 150-250 sTSS por sessão. Acompanhe totais semanais para evitar overtraining. Limite trabalho de Zona 4 a 2-3 sessões por semana no máximo durante fases de construção.</p>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Zona 5: VO₂máx / Anaeróbico</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-5-badge">Zona 5</span>
+                <span class="zone-pace">&lt;96% do ritmo VCN (mais rápido que VCN)</span>
+                <span class="zone-rpe">EPE 9-10/10</span>
+            </div>
+
+            <h3>Propósito</h3>
+            <p>Desenvolvimento de VO₂máx, capacidade anaeróbica, tolerância ao lactato e potência neuromuscular. A Zona 5 treina seu corpo para produzir e tolerar altos níveis de lactato. Usada para provas de sprint (50m-200m) e desenvolvimento de velocidade máxima.</p>
+
+            <h3>Marcadores Fisiológicos</h3>
+            <ul>
+                <li>Frequência cardíaca: 92-100% do máximo</li>
+                <li>Lactato: 6.0-15+ mmol/L (acumulação severa)</li>
+                <li>Respiração: Máxima, ofegante, sem conversação possível</li>
+                <li>Sensação: Esforço total, sustentável apenas por 2-8 minutos</li>
+            </ul>
+
+            <h3>Treinos de Exemplo</h3>
+            <div class="workout-example">
+                <h4>Sessão de VO₂máx</h4>
+                <ul>
+                    <li>12×50 @ esforço máximo (30s descanso)</li>
+                    <li>6×100 @ ritmo de prova 200m (60s descanso)</li>
+                    <li>4×200 @ ritmo 94% VCN (90s descanso)</li>
+                    <li>20×25 sprint total (15s descanso)</li>
+                </ul>
+            </div>
+
+            <h3>Volume Semanal</h3>
+            <p><strong>5-10% do volume total</strong> (maior custo de fadiga, use com moderação)</p>
+
+            <div class="callout callout-warning mt-md">
+                <h4>⚠️ Recuperação Crítica</h4>
+                <p>Trabalho de Zona 5 é extremamente exigente. Requer 48-72 horas de recuperação entre sessões. NÃO empilhe treinos de Zona 5 em dias consecutivos. Acompanhe CTL/ATL/TSB para garantir recuperação adequada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl">Distribuição Semanal de Treino por Nível de Atleta</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Nadadores Recreativos / Fitness</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Volume Total:</strong> 6.000-12.000m/semana (2-3 sessões)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 15% (aquecimento/desaquecimento)</li>
+                        <li><strong>Zona 2:</strong> 70% (construir base aeróbica)</li>
+                        <li><strong>Zona 3:</strong> 10% (tempo ocasional)</li>
+                        <li><strong>Zona 4:</strong> 5% (trabalho de limiar limitado)</li>
+                        <li><strong>Zona 5:</strong> 0% (ainda não necessário)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Nadadores Masters Competitivos</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Volume Total:</strong> 15.000-25.000m/semana (4-6 sessões)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 15% (nados de recuperação)</li>
+                        <li><strong>Zona 2:</strong> 60% (fundação aeróbica)</li>
+                        <li><strong>Zona 3:</strong> 15% (trabalho de ritmo de prova)</li>
+                        <li><strong>Zona 4:</strong> 8% (sessões de limiar)</li>
+                        <li><strong>Zona 5:</strong> 2% (desenvolvimento de velocidade)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Triatletas (Foco em Natação)</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Volume Total:</strong> 10.000-18.000m/semana (3-4 sessões)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 10% (aquecimento/técnica)</li>
+                        <li><strong>Zona 2:</strong> 75% (maximizar eficiência aeróbica)</li>
+                        <li><strong>Zona 3:</strong> 10% (simulação de prova)</li>
+                        <li><strong>Zona 4:</strong> 5% (limitado—preservar energia para bike/corrida)</li>
+                        <li><strong>Zona 5:</strong> 0% (não relevante para provas de resistência)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Nadadores Elite / Universitários</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Volume Total:</strong> 40.000-70.000m/semana (10-12 sessões)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 20% (recuperação essencial em alto volume)</li>
+                        <li><strong>Zona 2:</strong> 50% (manutenção de base aeróbica)</li>
+                        <li><strong>Zona 3:</strong> 15% (especificidade de ritmo de prova)</li>
+                        <li><strong>Zona 4:</strong> 10% (desenvolvimento de limiar)</li>
+                        <li><strong>Zona 5:</strong> 5% (potência e velocidade)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Como Calcular Suas Zonas de Treino Personalizadas</h2>
+
+        <p class="mb-md">Suas zonas de treino são personalizadas à SUA Velocidade Crítica de Nado. Veja como calculá-las:</p>
+
+        <h3>Passo 1: Realizar Teste VCN</h3>
+        <p class="mb-md">Complete um teste cronometrado de 400m e 200m com 5-10 minutos de recuperação entre esforços. <a href="/pt/css/">Aprenda o protocolo completo do teste VCN →</a></p>
+
+        <h3>Passo 2: Calcular Ritmo VCN</h3>
+        <div class="example-box">
+            <p><strong>Exemplo:</strong></p>
+            <ul>
+                <li>Tempo 400m: 6:08 (368 segundos)</li>
+                <li>Tempo 200m: 2:30 (150 segundos)</li>
+            </ul>
+            <p class="mt-md">Ritmo VCN = (T₄₀₀ - T₂₀₀) / 2<br>
+            Ritmo VCN = (368 - 150) / 2 = 109 segundos = <strong>1:49/100m</strong></p>
+        </div>
+
+        <h3 class="mt-lg">Passo 3: Calcular Ritmos de Zona</h3>
+        <p class="mb-md">Multiplique o ritmo VCN pelas porcentagens de zona:</p>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>Faixa %</th>
+                        <th>Cálculo (VCN = 1:49/100m)</th>
+                        <th>Faixa de Ritmo de Zona</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>Zona 1</strong></td>
+                        <td>&gt;108%</td>
+                        <td>109 × 1.08 = 118s</td>
+                        <td>&gt;1:58/100m</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>Zona 2</strong></td>
+                        <td>104-108%</td>
+                        <td>109 × 1.04-1.08 = 113-118s</td>
+                        <td>1:53-1:58/100m</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>Zona 3</strong></td>
+                        <td>99-103%</td>
+                        <td>109 × 0.99-1.03 = 108-112s</td>
+                        <td>1:48-1:52/100m</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>Zona 4</strong></td>
+                        <td>96-100%</td>
+                        <td>109 × 0.96-1.00 = 105-109s</td>
+                        <td>1:45-1:49/100m</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>Zona 5</strong></td>
+                        <td>&lt;96%</td>
+                        <td>109 × 0.96 = 105s</td>
+                        <td>&lt;1:45/100m</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>⚡ Obtenha Cálculo Automático de Zonas</h3>
+            <p>Use nossa <a href="/pt/css/">calculadora VCN gratuita</a> para obter instantaneamente suas zonas de treino personalizadas. Digite seus tempos de 400m e 200m, e calcularemos VCN + todas as 5 faixas de zona automaticamente.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Perguntas Frequentes sobre Zonas de Treino</h2>
+
+        <div class="faq-item">
+            <h3>Com que frequência devo re-testar minha VCN para atualizar as zonas?</h3>
+            <p>A cada <strong>6-8 semanas</strong> durante as fases de base e construção. Sua VCN deve melhorar (ficar mais rápida) conforme o condicionamento aumenta, exigindo ajustes de zona. Re-teste após doença, lesão ou pausas longas.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Posso misturar zonas em um único treino?</h3>
+            <p><strong>Sim—a maioria dos treinos são multi-zona.</strong> Exemplo: 400m aquecimento Zona 1 + 8×100 limiar Zona 4 + 300m desaquecimento Zona 1. A chave é seleção intencional de zona, não natação acidental em "zona intermediária".</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>E se eu não conseguir manter o ritmo de zona?</h3>
+            <p>Se você não consegue manter o ritmo de zona prescrito, então: (1) sua VCN está desatualizada (muito rápida), (2) você está fatigado (verifique TSB), ou (3) recuperação insuficiente entre intervalos. Re-teste VCN se isso acontecer consistentemente.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>As zonas se aplicam a todos os estilos?</h3>
+            <p>VCN é tipicamente testada em <strong>nado livre</strong>. Para outros estilos, você pode realizar testes VCN específicos do estilo, mas a maioria dos nadadores usa zonas VCN de nado livre e ajusta por sensação para medley/costas/peito.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Como as zonas se relacionam com o Training Stress Score (sTSS)?</h3>
+            <p>Zona determina o <strong>Fator de Intensidade (IF)</strong>, que é elevado ao quadrado na fórmula sTSS. Zona 4 (IF ~0.95-1.0) gera 90-100 sTSS por hora. Zona 2 (IF ~0.80) gera apenas 64 sTSS por hora. Zonas mais altas = estresse de treino exponencialmente maior.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Posso treinar apenas na Zona 2?</h3>
+            <p>Treino apenas em Zona 2 funciona para <strong>iniciantes</strong> construindo condicionamento de base. Porém, nadadores avançados precisam de trabalho de Zona 3-5 para desenvolver adaptações específicas de prova. Siga a regra 80/20: 80% fácil (Zona 1-2), 20% difícil (Zona 3-5).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Recursos Relacionados</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Teste VCN</h3>
+                <div class="card-content">
+                    <p>Realize o teste VCN e obtenha suas zonas de treino personalizadas instantaneamente com nossa calculadora gratuita.</p>
+                    <a href="/pt/css/" class="btn btn-secondary btn-small mt-md">Calculadora VCN →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Training Stress Score</h3>
+                <div class="card-content">
+                    <p>Aprenda como a intensidade de zona afeta o cálculo de sTSS e a carga de treino geral.</p>
+                    <a href="/pt/training-load/" class="btn btn-secondary btn-small mt-md">Guia sTSS →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">App SwimAnalytics</h3>
+                <div class="card-content">
+                    <p>Detecção automática de zona para cada treino. Acompanhe tempo em zona e carga de treino específica de zona.</p>
+                    <a href="/pt/" class="btn btn-secondary btn-small mt-md">Saiba Mais →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Pronto para treinar com mais inteligência?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Baixar SwimAnalytics Grátis</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Início
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Aprender
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Ciência
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/">
+                            Contato
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Todos os direitos reservados</h3>
+                <ul>
+                    <li><a href="/pt/privacy/">Privacidade</a></li>
+                    <li><a href="/pt/terms/">Termos</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-zones/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-zones/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-zones/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-zones/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-zones/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-zones/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-zones/"
+                           aria-current="page">
+                            Português
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Este site usa cookies para melhorar sua experiência." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Este site usa cookies para melhorar sua experiência. <a href="/pt/privacy/">Saiba mais</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Recusar</button>
+            <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

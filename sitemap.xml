@@ -9,6 +9,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/about/</loc>
@@ -19,6 +20,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/bibliography/</loc>
@@ -29,6 +31,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/comparisons/</loc>
@@ -39,6 +42,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/contact/</loc>
@@ -49,6 +53,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/css/</loc>
@@ -59,6 +64,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/efficiency/</loc>
@@ -69,6 +75,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/formulas/</loc>
@@ -79,6 +86,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/getting-started/</loc>
@@ -89,6 +97,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/privacy/</loc>
@@ -99,6 +108,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/research/</loc>
@@ -109,6 +119,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/stroke-mechanics/</loc>
@@ -119,6 +130,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/stss-calculator/</loc>
@@ -129,6 +141,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/terms/</loc>
@@ -139,6 +152,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/thanks/</loc>
@@ -149,6 +163,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/training-load/</loc>
@@ -159,6 +174,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/ca/training-zones/</loc>
@@ -169,6 +185,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/</loc>
@@ -179,6 +196,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/about/</loc>
@@ -189,6 +207,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/bibliography/</loc>
@@ -199,6 +218,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/comparisons/</loc>
@@ -209,6 +229,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/contact/</loc>
@@ -219,6 +240,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/css/</loc>
@@ -229,6 +251,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/efficiency/</loc>
@@ -239,6 +262,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/formulas/</loc>
@@ -249,6 +273,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/getting-started/</loc>
@@ -259,6 +284,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/privacy/</loc>
@@ -269,6 +295,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/research/</loc>
@@ -279,6 +306,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/stroke-mechanics/</loc>
@@ -289,6 +317,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/stss-calculator/</loc>
@@ -299,6 +328,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/terms/</loc>
@@ -309,6 +339,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/thanks/</loc>
@@ -319,6 +350,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/training-load/</loc>
@@ -329,6 +361,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/en/training-zones/</loc>
@@ -339,6 +372,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/</loc>
@@ -349,6 +383,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/about/</loc>
@@ -359,6 +394,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/bibliography/</loc>
@@ -369,6 +405,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/comparisons/</loc>
@@ -379,6 +416,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/contact/</loc>
@@ -389,6 +427,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/css/</loc>
@@ -399,6 +438,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/efficiency/</loc>
@@ -409,6 +449,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/formulas/</loc>
@@ -419,6 +460,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/getting-started/</loc>
@@ -429,6 +471,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/privacy/</loc>
@@ -439,6 +482,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/research/</loc>
@@ -449,6 +493,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/stroke-mechanics/</loc>
@@ -459,6 +504,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/stss-calculator/</loc>
@@ -469,6 +515,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/terms/</loc>
@@ -479,6 +526,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/thanks/</loc>
@@ -489,6 +537,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/training-load/</loc>
@@ -499,6 +548,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/es/training-zones/</loc>
@@ -509,6 +559,7 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/</loc>
@@ -519,6 +570,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/about/</loc>
@@ -529,6 +581,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/bibliography/</loc>
@@ -539,6 +592,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/comparisons/</loc>
@@ -549,6 +603,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/contact/</loc>
@@ -559,6 +614,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/css/</loc>
@@ -569,6 +625,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/css/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/efficiency/</loc>
@@ -579,6 +636,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/formulas/</loc>
@@ -589,6 +647,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/formulas/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/getting-started/</loc>
@@ -599,6 +658,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/privacy/</loc>
@@ -609,6 +669,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/privacy/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/research/</loc>
@@ -619,6 +680,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/research/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/stroke-mechanics/</loc>
@@ -629,6 +691,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/stss-calculator/</loc>
@@ -639,6 +702,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/terms/</loc>
@@ -649,6 +713,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/thanks/</loc>
@@ -659,6 +724,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/training-load/</loc>
@@ -669,6 +735,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/fr/training-zones/</loc>
@@ -679,6 +746,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/</loc>
@@ -689,6 +757,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/about/</loc>
@@ -699,6 +768,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/about/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/bibliography/</loc>
@@ -709,6 +779,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/comparisons/</loc>
@@ -719,6 +790,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/contact/</loc>
@@ -729,6 +801,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/contact/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/css/</loc>
@@ -739,6 +812,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/css/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/efficiency/</loc>
@@ -749,6 +823,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/formulas/</loc>
@@ -759,6 +834,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/formulas/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/getting-started/</loc>
@@ -769,6 +845,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/privacy/</loc>
@@ -779,6 +856,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/privacy/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/research/</loc>
@@ -789,6 +867,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/research/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/stroke-mechanics/</loc>
@@ -799,6 +878,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/stss-calculator/</loc>
@@ -809,6 +889,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/terms/</loc>
@@ -819,6 +900,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/thanks/</loc>
@@ -829,6 +911,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/training-load/</loc>
@@ -839,6 +922,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/de/training-zones/</loc>
@@ -849,6 +933,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/</loc>
@@ -859,6 +944,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/about/</loc>
@@ -869,6 +955,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/about/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/about/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/bibliography/</loc>
@@ -879,6 +966,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/bibliography/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/comparisons/</loc>
@@ -889,6 +977,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/comparisons/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/contact/</loc>
@@ -899,6 +988,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/contact/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/contact/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/css/</loc>
@@ -909,6 +999,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/css/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/efficiency/</loc>
@@ -919,6 +1010,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/formulas/</loc>
@@ -929,6 +1021,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/formulas/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/getting-started/</loc>
@@ -939,6 +1032,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/privacy/</loc>
@@ -949,6 +1043,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/privacy/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/privacy/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/research/</loc>
@@ -959,6 +1054,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/research/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/research/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/stroke-mechanics/</loc>
@@ -969,6 +1065,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/stss-calculator/</loc>
@@ -979,6 +1076,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/terms/</loc>
@@ -989,6 +1087,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/terms/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/thanks/</loc>
@@ -999,6 +1098,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/thanks/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/training-load/</loc>
@@ -1009,6 +1109,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/"/>
   </url>
   <url>
     <loc>https://swimanalytics.app/it/training-zones/</loc>
@@ -1019,5 +1120,193 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/about/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/about/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/about/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/about/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/about/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/bibliography/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/bibliography/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/bibliography/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/comparisons/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/comparisons/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/comparisons/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/contact/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/contact/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/contact/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/contact/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/css/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/css/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/css/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/css/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/efficiency/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/formulas/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/getting-started/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/privacy/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/privacy/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/research/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/research/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/research/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/research/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/research/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/research/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/research/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/stroke-mechanics/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/stss-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/terms/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/terms/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/terms/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/terms/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/terms/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/terms/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/thanks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/thanks/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/thanks/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/training-load/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/"/>
+  </url>
+  <url>
+    <loc>https://swimanalytics.app/pt/training-zones/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/"/>
   </url>
 </urlset>

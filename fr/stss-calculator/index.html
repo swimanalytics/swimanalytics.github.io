@@ -55,6 +55,8 @@
     
     <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/">
     
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/">
+    
     <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/stss-calculator/">
 
     
@@ -353,6 +355,10 @@
                         Italiano
                     </option>
                     
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
                 </select>
 
                 
@@ -388,26 +394,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Calculatrice Gratuita de TSS para Natation</h1>
-        <p class="lead">Calcula el Training Stress Score para entraînements de natation - La única calculatrice gratuita de sTSS</p>
+        <h1>Calculateur TSS de Natation Gratuit</h1>
+        <p class="lead">Calculez le Score de Stress d'Entraînement pour les séances de natation - Le seul calculateur sTSS gratuit</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es el TSS de Natation (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifica la charge de entraînement de una sesión de natation combinando intensidad y duración. Está adaptado de la metodología TSS del ciclismo, utilizando tu Critical Swim Speed (CSS) como allure seuil. Un entraînement de 1 hora a allure CSS = 100 sTSS.</p>
+            <h2>Qu'est-ce que le TSS de Natation (sTSS) ?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifie la charge d'entraînement d'une séance de natation en combinant intensité et durée. Il est adapté de la méthodologie TSS du cyclisme, utilisant votre Vitesse Critique de Nage (VCN) comme allure de seuil. Une séance d'1 heure à l'allure VCN = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Calculatrice Gratuita de sTSS</h2>
-        <p class="lead mb-xl">Calcula el estrés de entraînement para cualquier sesión de natation. Requiere tu allure CSS.</p>
+        <h2 class="mt-3xl">Calculateur sTSS Gratuit</h2>
+        <p class="lead mb-xl">Calculez le stress d'entraînement pour n'importe quelle séance de natation. Nécessite votre allure VCN.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Tu Allure CSS (mm:ss por 100m)</label>
+                        <label for="cssPace" class="form-label">Votre Allure VCN (mm:ss par 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -417,12 +423,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tu allure seuil del test CSS (ej., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Votre allure de seuil du test VCN (ex. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Duración del Entraînement (minutos)</label>
+                        <label for="workoutDuration" class="form-label">Durée de la Séance (minutes)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -433,12 +439,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Tiempo total del entraînement incluyendo descansos (1-300 minutos)</small>
+                        <small id="duration-help" class="form-help">Temps total de la séance incluant le repos (1-300 minutes)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Allure Promedio del Entraînement (mm:ss por 100m)</label>
+                        <label for="avgPace" class="form-label">Allure Moyenne de la Séance (mm:ss par 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -448,32 +454,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Tu allure promedio durante el entraînement (ej., 2:05)</small>
+                        <small id="pace-help" class="form-help">Votre allure moyenne durant la séance (ex. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Borrar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculer sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Effacer</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Tu Training Stress Score</h3>
+                <h3>Votre Score de Stress d'Entraînement</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Factor de Intensidad (IF)</div>
+                        <div class="result-label">Facteur d'Intensité (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretación de la Charge de Entraînement</h4>
+                    <h4>Interprétation de la Charge d'Entraînement</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -481,192 +487,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
+        <h2 class="mt-3xl">Comment le sTSS est Calculé</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>Formule</h3>
             <div class="formula">
-                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
+                sTSS = (Durée en heures) × (Facteur d'Intensité)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>Où :</p>
                 <ul>
-                    <li><strong>Factor de Intensidad (IF)</strong> = Allure CSS / Allure Promedio del Entraînement</li>
-                    <li><strong>Duración</strong> = Tiempo total del entraînement en horas</li>
-                    <li><strong>Allure CSS</strong> = Tu allure seuil del test CSS</li>
+                    <li><strong>Facteur d'Intensité (IF)</strong> = Allure VCN / Allure Moyenne de la Séance</li>
+                    <li><strong>Durée</strong> = Temps total de la séance en heures</li>
+                    <li><strong>Allure VCN</strong> = Votre allure de seuil du test VCN</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Ejemplo Práctico</h3>
+        <h3 class="mt-xl">Exemple Pratique</h3>
         <div class="example-box">
-            <h4>Detalles del Entraînement:</h4>
+            <h4>Détails de la Séance :</h4>
             <ul>
-                <li>Allure CSS: <strong>1:49/100m</strong> (109 segundos)</li>
-                <li>Duración del Entraînement: <strong>60 minutos</strong> (1 hora)</li>
-                <li>Allure Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
+                <li>Allure VCN : <strong>1:49/100m</strong> (109 secondes)</li>
+                <li>Durée de la Séance : <strong>60 minutes</strong> (1 heure)</li>
+                <li>Allure Moyenne : <strong>2:05/100m</strong> (125 secondes)</li>
             </ul>
 
-            <h4>Paso 1: Calcular el Factor de Intensidad</h4>
+            <h4>Étape 1 : Calculer le Facteur d'Intensité</h4>
             <div class="calculation">
-                IF = Allure CSS / Allure del Entraînement<br>
+                IF = Allure VCN / Allure de la Séance<br>
                 IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = <strong>0,872</strong>
             </div>
 
-            <h4>Paso 2: Calcular el sTSS</h4>
+            <h4>Étape 2 : Calculer le sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 horas × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = 1,0 heures × (0,872)² × 100<br>
+                sTSS = 1,0 × 0,760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretación:</strong> Este entraînement de 60 minutos a allure suave (más lento que CSS) generó 76 sTSS - una charge de entraînement moderada adecuada para construir la base aeróbica.</p>
+            <p class="mt-md"><strong>Interprétation :</strong> Cette séance de 60 minutes à allure facile (plus lente que VCN) a généré 76 sTSS - une charge d'entraînement modérée adaptée à la construction de la base aérobie.</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretando los Valores de sTSS</h2>
+        <h2 class="mt-3xl">Comprendre les Valeurs sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rango sTSS</th>
-                        <th>Charge de Entraînement</th>
-                        <th>Tiempo de Récupération</th>
-                        <th>Ejemplo de Entraînement</th>
+                        <th>Plage sTSS</th>
+                        <th>Charge d'Entraînement</th>
+                        <th>Temps de Récupération</th>
+                        <th>Exemple de Séance</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Baja</td>
-                        <td>Mismo día</td>
-                        <td>Nado suave de 30 min, ejercicios técnicos</td>
+                        <td>Faible</td>
+                        <td>Même jour</td>
+                        <td>Nage facile 30 min, éducatifs techniques</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderada</td>
-                        <td>1 día</td>
-                        <td>Resistencia de 60 min, allure constante</td>
+                        <td>Modérée</td>
+                        <td>1 jour</td>
+                        <td>Endurance 60 min, allure constante</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Alta</td>
-                        <td>1-2 días</td>
-                        <td>Series de seuil de 90 min, intervalos a allure de competición</td>
+                        <td>Élevée</td>
+                        <td>1-2 jours</td>
+                        <td>Séries seuil 90 min, intervalles allure course</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Muy Alta</td>
-                        <td>2-3 días</td>
-                        <td>Entraînement duro de 2 horas, múltiples bloques de seuil</td>
+                        <td>Très Élevée</td>
+                        <td>2-3 jours</td>
+                        <td>Entraînement intense 2h, multiples blocs seuil</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extrema</td>
-                        <td>3+ días</td>
-                        <td>Competición larga (&gt;2 horas), ultra-resistencia</td>
+                        <td>Extrême</td>
+                        <td>3+ jours</td>
+                        <td>Course longue (&gt;2 heures), ultra-endurance</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Guía de sTSS Semanal</h2>
+        <h2 class="mt-3xl">Directives sTSS Hebdomadaires</h2>
 
-        <p class="mb-md">El sTSS semanal objetivo depende de tu nivel de entraînement y objetivos:</p>
+        <p class="mb-md">Le sTSS hebdomadaire cible dépend de votre niveau d'entraînement et de vos objectifs :</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos</h3>
+                <h3 class="card-title">Nageurs Récréatifs</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
-                    <p>2-3 entraînements por semana, 50-100 sTSS cada uno. Enfoque en technique y construcción de base aeróbica.</p>
+                    <p class="mb-sm"><strong>sTSS Hebdomadaire :</strong> 150-300</p>
+                    <p>2-3 séances par semaine, 50-100 sTSS chacune. Focus sur la technique et construction de la base aérobie.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <h3 class="card-title">Nageurs Fitness / Triathlètes</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
-                    <p>3-4 entraînements por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de seuil.</p>
+                    <p class="mb-sm"><strong>sTSS Hebdomadaire :</strong> 300-500</p>
+                    <p>3-4 séances par semaine, 75-125 sTSS chacune. Mélange d'endurance aérobie et travail au seuil.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Másters Competitivos</h3>
+                <h3 class="card-title">Nageurs Masters Compétitifs</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
-                    <p>4-6 entraînements por semana, 80-150 sTSS cada uno. Entraînement estructurado con periodización.</p>
+                    <p class="mb-sm"><strong>sTSS Hebdomadaire :</strong> 500-800</p>
+                    <p>4-6 séances par semaine, 80-150 sTSS chacune. Entraînement structuré avec périodisation.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Elite / Universitarios</h3>
+                <h3 class="card-title">Nageurs Élite / Universitaires</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
-                    <p>8-12 entraînements por semana, sesiones dobles. Alto volumen con gestión de récupération crítica.</p>
+                    <p class="mb-sm"><strong>sTSS Hebdomadaire :</strong> 800-1200+</p>
+                    <p>8-12 séances par semaine, séances doubles. Volume élevé avec gestion de la récupération critique.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas Importantes</h3>
+            <h3>⚠️ Notes Importantes</h3>
             <ul>
-                <li><strong>Requiere CSS preciso:</strong> Tu CSS debe estar actualizado (testeado dentro de 6-8 semanas) para un sTSS preciso.</li>
-                <li><strong>Calcul simplificado:</strong> Esta calculatrice usa allure promedio. El sTSS avanzado usa Normalized Graded Pace (NGP) que tiene en cuenta la estructura de intervalos.</li>
-                <li><strong>No para trabajo técnico:</strong> El sTSS solo mide el estrés físico del entraînement, no el desarrollo de habilidades.</li>
-                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes nageurs. Ajusta las guías según tu récupération.</li>
+                <li><strong>Nécessite VCN précise :</strong> Votre VCN doit être à jour (testé dans les 6-8 semaines) pour un sTSS précis.</li>
+                <li><strong>Calcul simplifié :</strong> Ce calculateur utilise l'allure moyenne. Le sTSS avancé utilise la Vitesse Graduée Normalisée (NGP) qui tient compte de la structure des intervalles.</li>
+                <li><strong>Pas pour le travail technique :</strong> Le sTSS mesure uniquement le stress physique d'entraînement, pas le développement des compétences.</li>
+                <li><strong>Variation individuelle :</strong> Le même sTSS se ressent différemment pour différents nageurs. Ajustez les directives selon votre récupération.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
+        <h2 class="mt-3xl">Pourquoi le sTSS est Important</h2>
 
-        <p class="mb-md">El Training Stress Score es la base para:</p>
+        <p class="mb-md">Le Score de Stress d'Entraînement est le fondement de :</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Tu nivel de forme physique - promedio ponderado exponencialmente de 42 días del sTSS diario</li>
-            <li><strong>ATL (Acute Training Load):</strong> Tu fatigue - promedio ponderado exponencialmente de 7 días del sTSS diario</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Tu estado de forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
-            <li><strong>Periodización:</strong> Planificar fases de entraînement (base, desarrollo, pico, descenso) usando progresiones de CTL objetivo</li>
-            <li><strong>Gestión de Récupération:</strong> Saber cuándo empujar y cuándo descansar según el TSB</li>
+            <li><strong>CTL (Chronic Training Load) :</strong> Votre niveau de forme physique - moyenne pondérée exponentiellement sur 42 jours du sTSS quotidien</li>
+            <li><strong>ATL (Acute Training Load) :</strong> Votre fatigue - moyenne pondérée exponentiellement sur 7 jours du sTSS quotidien</li>
+            <li><strong>TSB (Training Stress Balance) :</strong> Votre forme - TSB = CTL - ATL (positif = frais, négatif = fatigué)</li>
+            <li><strong>Périodisation :</strong> Planifier les phases d'entraînement (base, construction, pic, affûtage) en utilisant les progressions CTL ciblées</li>
+            <li><strong>Gestion de la Récupération :</strong> Savoir quand pousser et quand se reposer en fonction du TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Consejo Pro: Sigue tu CTL</h3>
-            <p>Registra el sTSS diario en una hoja de calcul o diario de entraînement. Calcula tu promedio de 42 días (CTL) semanalmente. Objetivo de aumento de 5-10 puntos CTL por semana durante la construcción de base. Mantén o reduce ligeramente el CTL durante el descenso (1-2 semanas antes de la competición).</p>
+            <h3>Conseil Pro : Suivez Votre CTL</h3>
+            <p>Enregistrez le sTSS quotidien dans un tableur ou journal d'entraînement. Calculez votre moyenne sur 42 jours (CTL) chaque semaine. Visez une augmentation de 5-10 points CTL par semaine durant la construction de base. Maintenez ou réduisez légèrement le CTL durant l'affûtage (1-2 semaines avant la course).</p>
         </div>
 
-        <h2 class="mt-3xl">Recursos Relacionados</h2>
+        <h2 class="mt-3xl">Ressources Connexes</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Test CSS</h3>
+                <h3 class="card-title">Test VCN</h3>
                 <div class="card-content">
-                    <p>¿Necesitas tu allure CSS? Usa nuestra calculatrice gratuita de CSS con tiempos de test de 400m y 200m.</p>
-                    <a href="/fr/css/" class="btn btn-secondary btn-small mt-md">Calculatrice CSS →</a>
+                    <p>Besoin de votre allure VCN ? Utilisez notre calculateur VCN gratuit avec les temps de test 400m et 200m.</p>
+                    <a href="/fr/css/" class="btn btn-secondary btn-small mt-md">Calculateur VCN →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Guía de Charge de Entraînement</h3>
+                <h3 class="card-title">Guide de Charge d'Entraînement</h3>
                 <div class="card-content">
-                    <p>Aprende sobre CTL, ATL, TSB y las métricas del Performance Management Chart.</p>
-                    <a href="/fr/training-load/" class="btn btn-secondary btn-small mt-md">Charge de Entraînement →</a>
+                    <p>Apprenez sur le CTL, ATL, TSB et les métriques du Graphique de Gestion de la Performance.</p>
+                    <a href="/fr/training-load/" class="btn btn-secondary btn-small mt-md">Charge d'Entraînement →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">Application SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Calcul automático de sTSS para todos los entraînements. Sigue las tendencias de CTL/ATL/TSB a lo longueur del tiempo.</p>
-                    <a href="/fr/" class="btn btn-secondary btn-small mt-md">Más Información →</a>
+                    <p>Calcul automatique du sTSS pour toutes les séances. Suivez les tendances CTL/ATL/TSB au fil du temps.</p>
+                    <a href="/fr/" class="btn btn-secondary btn-small mt-md">En Savoir Plus →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
-            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Vous voulez un suivi automatique du sTSS ?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Télécharger SwimAnalytics Gratuitement</a>
         </div>
     </div>
 </section>
@@ -769,6 +775,13 @@
                         <a href="/it/stss-calculator/"
                            >
                             Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/stss-calculator/"
+                           >
+                            Português
                         </a>
                     </li>
                     

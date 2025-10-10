@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Calculadora Gratuita de TSS para Natação - Calcule Training Stress Score (sTSS)</title>
+    <meta name="description" content="A única calculadora gratuita de TSS para natação. Calcule o Training Stress Score para qualquer treino usando ritmo CSS, duração e ritmo médio. Inclui diretrizes semanais de TSS e explicação de CTL/ATL/TSB.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="calculadora TSS natação, calculadora sTSS, training stress score, carga treino natação, TSS grátis">
+    
+    <link rel="canonical" href="https://swimanalytics.app/pt/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/pt/stss-calculator/">
+    <meta property="og:title" content="Calculadora Gratuita de TSS para Natação - Calcule Training Stress Score (sTSS)">
+    <meta property="og:description" content="A única calculadora gratuita de TSS para natação. Calcule o Training Stress Score para qualquer treino usando ritmo CSS, duração e ritmo médio. Inclui diretrizes semanais de TSS e explicação de CTL/ATL/TSB.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/pt/stss-calculator/">
+    <meta name="twitter:title" content="Calculadora Gratuita de TSS para Natação - Calcule Training Stress Score (sTSS)">
+    <meta name="twitter:description" content="A única calculadora gratuita de TSS para natação. Calcule o Training Stress Score para qualquer treino usando ritmo CSS, duração e ritmo médio. Inclui diretrizes semanais de TSS e explicação de CTL/ATL/TSB.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "pt"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Calculadora Gratuita de TSS para Natação - Calcule Training Stress Score (sTSS)",
+      "description": "A única calculadora gratuita de TSS para natação. Calcule o Training Stress Score para qualquer treino usando ritmo CSS, duração e ritmo médio. Inclui diretrizes semanais de TSS e explicação de CTL/ATL/TSB.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/pt/stss-calculator/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculadora sTSS",
+          "item": "https://swimanalytics.app/pt/stss-calculator/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Ir para o conteúdo</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/pt/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/"
+                               
+                               aria-current="">
+                                Início
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Aprender</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/getting-started/"
+                                       
+                                       aria-current="">
+                                        Começar
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zonas de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-load/"
+                                       
+                                       aria-current="">
+                                        Carga de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stss-calculator/"
+                                       class="active"
+                                       aria-current="page">
+                                        Calculadora sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ciência</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/research/"
+                                       
+                                       aria-current="">
+                                        Pesquisa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/formulas/"
+                                       
+                                       aria-current="">
+                                        Fórmulas
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/efficiency/"
+                                       
+                                       aria-current="">
+                                        Eficiência
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mecânica da Braçada
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/contact/"
+                               
+                               aria-current="">
+                                Contato
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecionar idioma">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="pt" selected>
+                        Português
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Calculadora Gratuita de TSS de Natação</h1>
+        <p class="lead">Calcule o Training Stress Score para treinos de natação - A única calculadora gratuita de sTSS</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>O que é TSS de Natação (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifica a carga de treino de um treino de natação combinando intensidade e duração. É adaptado da metodologia TSS do ciclismo, usando a sua Velocidade Crítica de Nado (VCN) como ritmo de limiar. Um treino de 1 hora ao ritmo VCN = 100 sTSS.</p>
+        </div>
+
+        <h2 class="mt-3xl">Calculadora Gratuita de sTSS</h2>
+        <p class="lead mb-xl">Calcule o stress de treino para qualquer treino de natação. Requer o seu ritmo VCN.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">Seu Ritmo VCN (mm:ss por 100m)</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">Seu ritmo de limiar do teste VCN (ex: 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">Duração do Treino (minutos)</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">Tempo total do treino incluindo descanso (1-300 minutos)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">Ritmo Médio do Treino (mm:ss por 100m)</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">Seu ritmo médio durante o treino (ex: 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Limpar</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>Seu Training Stress Score</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Fator de Intensidade (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Interpretação da Carga de Treino</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- Filled by JavaScript -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Como o sTSS é Calculado</h2>
+
+        <div class="formula-box">
+            <h3>Fórmula</h3>
+            <div class="formula">
+                sTSS = (Duração em horas) × (Fator de Intensidade)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>Onde:</p>
+                <ul>
+                    <li><strong>Fator de Intensidade (IF)</strong> = Ritmo VCN / Ritmo Médio do Treino</li>
+                    <li><strong>Duração</strong> = Tempo total do treino em horas</li>
+                    <li><strong>Ritmo VCN</strong> = Seu ritmo de limiar do teste VCN</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">Exemplo Prático</h3>
+        <div class="example-box">
+            <h4>Detalhes do Treino:</h4>
+            <ul>
+                <li>Ritmo VCN: <strong>1:49/100m</strong> (109 segundos)</li>
+                <li>Duração do Treino: <strong>60 minutos</strong> (1 hora)</li>
+                <li>Ritmo Médio: <strong>2:05/100m</strong> (125 segundos)</li>
+            </ul>
+
+            <h4>Passo 1: Calcular o Fator de Intensidade</h4>
+            <div class="calculation">
+                IF = Ritmo VCN / Ritmo do Treino<br>
+                IF = 109 / 125<br>
+                IF = <strong>0,872</strong>
+            </div>
+
+            <h4>Passo 2: Calcular o sTSS</h4>
+            <div class="calculation">
+                sTSS = 1,0 horas × (0,872)² × 100<br>
+                sTSS = 1,0 × 0,760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>Interpretação:</strong> Este treino de 60 minutos em ritmo suave (mais lento que VCN) gerou 76 sTSS - uma carga de treino moderada adequada para construção de base aeróbica.</p>
+        </div>
+
+        <h2 class="mt-3xl">Compreendendo os Valores de sTSS</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Intervalo sTSS</th>
+                        <th>Carga de Treino</th>
+                        <th>Tempo de Recuperação</th>
+                        <th>Exemplo de Treino</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Baixa</td>
+                        <td>Mesmo dia</td>
+                        <td>Nado suave de 30 min, educativos técnicos</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Moderada</td>
+                        <td>1 dia</td>
+                        <td>Resistência de 60 min, ritmo constante</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Alta</td>
+                        <td>1-2 dias</td>
+                        <td>Séries de limiar de 90 min, intervalos em ritmo de prova</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Muito Alta</td>
+                        <td>2-3 dias</td>
+                        <td>Treino intenso de 2 horas, múltiplos blocos de limiar</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Extrema</td>
+                        <td>3+ dias</td>
+                        <td>Prova longa (&gt;2 horas), ultra-resistência</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">Orientações de sTSS Semanal</h2>
+
+        <p class="mb-md">O sTSS semanal alvo depende do seu nível de treino e objetivos:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">Nadadores Recreativos</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
+                    <p>2-3 treinos por semana, 50-100 sTSS cada. Foco em técnica e construção de base aeróbica.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
+                    <p>3-4 treinos por semana, 75-125 sTSS cada. Mistura de resistência aeróbica e trabalho de limiar.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Nadadores Masters Competitivos</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
+                    <p>4-6 treinos por semana, 80-150 sTSS cada. Treino estruturado com periodização.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Nadadores Elite / Universitários</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
+                    <p>8-12 treinos por semana, sessões duplas. Alto volume com gestão de recuperação crítica.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Notas Importantes</h3>
+            <ul>
+                <li><strong>Requer VCN precisa:</strong> Sua VCN deve estar atualizada (testada dentro de 6-8 semanas) para sTSS preciso.</li>
+                <li><strong>Cálculo simplificado:</strong> Esta calculadora usa ritmo médio. O sTSS avançado usa Normalized Graded Pace (NGP) que contabiliza a estrutura de intervalos.</li>
+                <li><strong>Não para trabalho técnico:</strong> O sTSS mede apenas o stress de treino físico, não o desenvolvimento de habilidades.</li>
+                <li><strong>Variação individual:</strong> O mesmo sTSS é sentido diferentemente por nadadores diferentes. Ajuste as orientações baseado na sua recuperação.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">Por Que o sTSS Importa</h2>
+
+        <p class="mb-md">O Training Stress Score é a base para:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (Chronic Training Load):</strong> Seu nível de condição física - média ponderada exponencialmente de 42 dias do sTSS diário</li>
+            <li><strong>ATL (Acute Training Load):</strong> Sua fadiga - média ponderada exponencialmente de 7 dias do sTSS diário</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Sua forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
+            <li><strong>Periodização:</strong> Planear fases de treino (base, construção, pico, polimento) usando progressões CTL alvo</li>
+            <li><strong>Gestão de Recuperação:</strong> Saber quando empurrar e quando descansar baseado no TSB</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>Dica Pro: Acompanhe Seu CTL</h3>
+            <p>Registe o sTSS diário numa planilha ou diário de treino. Calcule sua média de 42 dias (CTL) semanalmente. Meta de aumento de 5-10 pontos CTL por semana durante construção de base. Mantenha ou reduza ligeiramente o CTL durante polimento (1-2 semanas antes da prova).</p>
+        </div>
+
+        <h2 class="mt-3xl">Recursos Relacionados</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">Teste VCN</h3>
+                <div class="card-content">
+                    <p>Precisa do seu ritmo VCN? Use nossa calculadora gratuita de VCN com tempos de teste de 400m e 200m.</p>
+                    <a href="/pt/css/" class="btn btn-secondary btn-small mt-md">Calculadora VCN →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Guia de Carga de Treino</h3>
+                <div class="card-content">
+                    <p>Aprenda sobre CTL, ATL, TSB e as métricas do Gráfico de Gestão de Desempenho.</p>
+                    <a href="/pt/training-load/" class="btn btn-secondary btn-small mt-md">Carga de Treino →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">App SwimAnalytics</h3>
+                <div class="card-content">
+                    <p>Cálculo automático de sTSS para todos os treinos. Acompanhe tendências CTL/ATL/TSB ao longo do tempo.</p>
+                    <a href="/pt/" class="btn btn-secondary btn-small mt-md">Saiba Mais →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Quer acompanhamento automático de sTSS?</strong></p>
+            <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarregue SwimAnalytics Grátis</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Início
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Aprender
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Ciência
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/">
+                            Contato
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Todos os direitos reservados</h3>
+                <ul>
+                    <li><a href="/pt/privacy/">Privacidade</a></li>
+                    <li><a href="/pt/terms/">Termos</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/stss-calculator/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stss-calculator/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/stss-calculator/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/stss-calculator/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/stss-calculator/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/stss-calculator/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/stss-calculator/"
+                           aria-current="page">
+                            Português
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Este site usa cookies para melhorar sua experiência." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Este site usa cookies para melhorar sua experiência. <a href="/pt/privacy/">Saiba mais</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Recusar</button>
+            <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

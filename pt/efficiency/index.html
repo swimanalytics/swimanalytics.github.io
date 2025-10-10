@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Calculadora SWOLF: Meça a Eficiência na Natação | Menor é Melhor</title>
+    <meta name="description" content="A calculadora SWOLF (Swim + Golf) mede a eficiência na natação. Calcule sua pontuação, compare benchmarks por nível e use exercícios de treino para melhorar. Menor SWOLF = melhor eficiência. Guia gratuito para nadadores.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="SWOLF, eficiência natação, eficiência braçada, pontuação SWOLF, calculadora eficiência">
+    
+    <link rel="canonical" href="https://swimanalytics.app/pt/efficiency/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/pt/efficiency/">
+    <meta property="og:title" content="Calculadora SWOLF: Meça a Eficiência na Natação | Menor é Melhor">
+    <meta property="og:description" content="A calculadora SWOLF (Swim + Golf) mede a eficiência na natação. Calcule sua pontuação, compare benchmarks por nível e use exercícios de treino para melhorar. Menor SWOLF = melhor eficiência. Guia gratuito para nadadores.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/pt/efficiency/">
+    <meta name="twitter:title" content="Calculadora SWOLF: Meça a Eficiência na Natação | Menor é Melhor">
+    <meta name="twitter:description" content="A calculadora SWOLF (Swim + Golf) mede a eficiência na natação. Calcule sua pontuação, compare benchmarks por nível e use exercícios de treino para melhorar. Menor SWOLF = melhor eficiência. Guia gratuito para nadadores.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/efficiency/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/efficiency/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/efficiency/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "pt"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Calculadora SWOLF: Meça a Eficiência na Natação | Menor é Melhor",
+      "description": "A calculadora SWOLF (Swim + Golf) mede a eficiência na natação. Calcule sua pontuação, compare benchmarks por nível e use exercícios de treino para melhorar. Menor SWOLF = melhor eficiência. Guia gratuito para nadadores.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/pt/efficiency/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Eficiência",
+          "item": "https://swimanalytics.app/pt/efficiency/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Ir para o conteúdo</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/pt/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/"
+                               
+                               aria-current="">
+                                Início
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Aprender</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/getting-started/"
+                                       
+                                       aria-current="">
+                                        Começar
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zonas de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-load/"
+                                       
+                                       aria-current="">
+                                        Carga de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Calculadora sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ciência</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/research/"
+                                       
+                                       aria-current="">
+                                        Pesquisa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/formulas/"
+                                       
+                                       aria-current="">
+                                        Fórmulas
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/efficiency/"
+                                       class="active"
+                                       aria-current="page">
+                                        Eficiência
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mecânica da Braçada
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/contact/"
+                               
+                               aria-current="">
+                                Contato
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecionar idioma">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="pt" selected>
+                        Português
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Eficiência na Natação: SWOLF</h1>
+        <p class="lead">Sua Pontuação de Economia de Braçada - Quanto Mais Baixo, Melhor</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>O que é SWOLF?</h2>
+        <p class="lead">SWOLF (Swim + Golf) é uma métrica composta de eficiência que combina a contagem de braçadas e o tempo num único número. Assim como no golfe, o objetivo é minimizar a sua pontuação.</p>
+
+        <div class="formula-box">
+            <h3>Fórmula</h3>
+            <div class="formula">
+                SWOLF = Tempo da Piscina (segundos) + Número de Braçadas
+            </div>
+            <div class="formula-explanation">
+                <p><strong>Exemplo:</strong> Se nadar 25m em 20 segundos com 15 braçadas:</p>
+                <div class="calculation">
+                    SWOLF = 20 + 15 = <strong>35</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <h3>SWOLF Normalizado para Comparação entre Piscinas</h3>
+            <p>Para comparar pontuações entre diferentes comprimentos de piscina:</p>
+            <div class="formula">
+                SWOLF₂₅ = (Tempo × 25/Comprimento Piscina) + (Braçadas × 25/Comprimento Piscina)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Referências SWOLF</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Estilo Livre - Piscina 25m</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Nadadores de Elite</strong>
+                        <div class="value">30-35</div>
+                        <p>Nível nacional/internacional, eficiência excecional</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Competitivos</strong>
+                        <div class="value">35-45</div>
+                        <p>Nível escolar universitário, masters competitivo</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Nadadores de Fitness</strong>
+                        <div class="value">45-60</div>
+                        <p>Treino regular, técnica sólida</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Principiantes</strong>
+                        <div class="value">60+</div>
+                        <p>A desenvolver técnica e condicionamento</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Outros Estilos - Piscina 25m</h3>
+                <div class="stroke-benchmarks">
+                    <div class="benchmark-item">
+                        <h4>Costas</h4>
+                        <p>Tipicamente <strong>5-10 pontos mais alto</strong> que estilo livre</p>
+                        <div class="value-small">Bom: 40-50</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Bruços</h4>
+                        <p>Ampla variação devido à técnica de deslize</p>
+                        <div class="value-small">Intervalo: 40-60</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Mariposa</h4>
+                        <p>Semelhante ao estilo livre para nadadores habilidosos</p>
+                        <div class="value-small">Bom: 38-55</div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <h4>⚠️ Variação Individual</h4>
+                    <p>SWOLF é influenciado pela altura e envergadura dos braços. Nadadores mais altos naturalmente dão menos braçadas. Use SWOLF para acompanhar o <em>seu próprio progresso</em> em vez de comparar-se com outros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Interpretação de Padrões SWOLF</h2>
+
+        <div class="pattern-analysis">
+            <div class="pattern-item">
+                <h3>📉 SWOLF Decrescente = Melhoria de Eficiência</h3>
+                <p>A sua técnica está a melhorar, ou está a tornar-se mais económico num determinado ritmo. Este é o objetivo durante semanas e meses de treino.</p>
+                <div class="example-box">
+                    <strong>Exemplo:</strong> SWOLF reduz de 48 → 45 → 42 durante 8 semanas de trabalho técnico focado.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📈 SWOLF Crescente = Eficiência em Declínio</h3>
+                <p>A fadiga está a instalar-se, a técnica está a deteriorar-se, ou está a nadar mais rápido do que a sua eficiência permite.</p>
+                <div class="example-box">
+                    <strong>Exemplo:</strong> SWOLF sobe de 42 → 48 durante os últimos 200m de uma série de 1000m, indicando fadiga.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📊 Combinações Diferentes com o Mesmo SWOLF</h3>
+                <p>Um SWOLF de 45 pode resultar de múltiplas combinações de braçada/tempo:</p>
+                <ul>
+                    <li><strong>20 segundos + 25 braçadas</strong> = Alta frequência, braçadas mais curtas</li>
+                    <li><strong>25 segundos + 20 braçadas</strong> = Menor frequência, braçadas mais longas</li>
+                </ul>
+                <p><strong>Sempre analise os componentes</strong> (contagem de braçadas E tempo) para entender a sua estratégia de natação.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip">
+            <h3>🎯 Aplicações de Treino com SWOLF</h3>
+            <ul>
+                <li><strong>Sessões de Técnica:</strong> Tente reduzir SWOLF através de melhor pegada, hidrodinâmica e posição corporal</li>
+                <li><strong>Monitorização de Fadiga:</strong> Um SWOLF crescente indica deterioração técnica—altura de fazer uma pausa</li>
+                <li><strong>Equilíbrio Ritmo-Eficiência:</strong> Encontre o ritmo mais rápido que consegue manter sem que SWOLF dispare</li>
+                <li><strong>Eficácia de Educativos:</strong> Registe SWOLF antes/depois de séries de educativos para medir transferência técnica</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Melhores Práticas de Medição</h2>
+
+        <div class="measurement-guidelines">
+            <div class="guideline-box">
+                <h3>📏 Contagem de Braçadas</h3>
+                <ul>
+                    <li>Conte cada entrada de mão (ambos os braços combinados)</li>
+                    <li>Comece a contar a partir da primeira braçada após o impulso</li>
+                    <li>Conte até tocar na parede</li>
+                    <li>Mantenha uma distância de impulso consistente (~5m das bandeiras)</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>⏱️ Cronometragem</h3>
+                <ul>
+                    <li>Meça desde a primeira braçada até ao toque na parede</li>
+                    <li>Use uma intensidade de impulso consistente entre piscinas</li>
+                    <li>Tecnologia (Garmin, Apple Watch, FORM) calcula automaticamente</li>
+                    <li>Cronometragem manual: Use relógio de piscina ou cronómetro</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>🔄 Consistência</h3>
+                <ul>
+                    <li>Meça SWOLF a ritmos semelhantes para comparação</li>
+                    <li>Registe durante séries principais, não em aquecimento/arrefecimento</li>
+                    <li>Anote que tipo de estilo (livre, costas, etc.)</li>
+                    <li>Compare o mesmo comprimento de piscina (25m vs 25m, não 25m vs 50m)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Limitações do SWOLF</h2>
+
+        <div class="limitations-list">
+            <div class="limitation-item">
+                <h3>🚫 Não Pode Comparar entre Atletas</h3>
+                <p>A altura, comprimento dos braços e flexibilidade criam diferenças naturais na contagem de braçadas. Um nadador de 1,88m terá um SWOLF mais baixo que um de 1,68m no mesmo nível de forma física.</p>
+                <p><strong>Solução:</strong> Use SWOLF apenas para acompanhar o seu progresso pessoal.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 A Pontuação Composta Oculta Detalhes</h3>
+                <p>SWOLF combina duas variáveis. Pode melhorar uma enquanto piora a outra e ainda ter a mesma pontuação.</p>
+                <p><strong>Solução:</strong> Sempre examine a contagem de braçadas E o tempo separadamente.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 Não Está Normalizado por Ritmo</h3>
+                <p>SWOLF naturalmente aumenta à medida que nada mais rápido (mais braçadas, menos tempo, mas maior total). Isto não é ineficiência—é física.</p>
+                <p><strong>Solução:</strong> Registe SWOLF a ritmos alvo específicos (ex., "SWOLF a ritmo VCN" vs "SWOLF a ritmo fácil").</p>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 A Ciência por Detrás da Economia na Natação</h3>
+            <p>A investigação de Costill et al. (1985) estabeleceu que a <strong>economia na natação</strong> (custo energético por unidade de distância) é mais importante que o VO₂max para o desempenho em média distância.</p>
+            <p>SWOLF serve como um indicador aproximado de economia—um SWOLF mais baixo tipicamente correlaciona-se com um menor gasto energético num determinado ritmo, permitindo-lhe nadar mais rápido ou mais tempo com o mesmo esforço.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Educativos de Treino SWOLF</h2>
+
+        <div class="drill-set">
+            <h3>🎯 Série de Redução de SWOLF</h3>
+            <div class="workout-box">
+                <h4>8 × 50m (30 segundos descanso)</h4>
+                <ol>
+                    <li><strong>50 #1-2:</strong> Nade a ritmo confortável, registe SWOLF base</li>
+                    <li><strong>50 #3-4:</strong> Reduza contagem de braçadas em 2, mantenha o mesmo tempo → Foque-se em distância por braçada</li>
+                    <li><strong>50 #5-6:</strong> Aumente ligeiramente a frequência de braçada, mantenha a contagem igual → Foque-se em rotação</li>
+                    <li><strong>50 #7-8:</strong> Encontre o equilíbrio ótimo—procure o SWOLF mais baixo</li>
+                </ol>
+                <p><strong>Objetivo:</strong> Descobrir a sua combinação mais eficiente de contagem/frequência de braçada.</p>
+            </div>
+        </div>
+
+        <div class="drill-set">
+            <h3>⚡ Teste de Estabilidade SWOLF</h3>
+            <div class="workout-box">
+                <h4>10 × 100m @ Ritmo VCN (20 segundos descanso)</h4>
+                <p>Registe SWOLF para cada 100m. Analise:</p>
+                <ul>
+                    <li>Que 100m teve o SWOLF mais baixo? (Estava mais eficiente)</li>
+                    <li>Onde disparou o SWOLF? (Deterioração técnica ou fadiga)</li>
+                    <li>Quanto variou SWOLF do primeiro ao último 100m?</li>
+                </ul>
+                <p><strong>Objetivo:</strong> Manter SWOLF ±2 pontos em todas as repetições. A consistência indica técnica sólida sob fadiga.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>A Eficiência Ganha-se com a Repetição</h2>
+        <p class="lead">SWOLF não melhora da noite para o dia. É o resultado acumulativo de milhares de braçadas tecnicamente corretas, prática deliberada e atenção consciente à eficiência sobre a velocidade.</p>
+
+        <p>Registe-o consistentemente. Melhore-o gradualmente. Observe como se transforma a sua natação.</p>
+
+        <div class="mt-xl">
+            <a href="/pt/stroke-mechanics/" class="btn btn-primary">Mecânica de Braçada →</a>
+            <a href="/pt/formulas/" class="btn btn-secondary">Todas as Fórmulas</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Início
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Aprender
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Ciência
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/">
+                            Contato
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Todos os direitos reservados</h3>
+                <ul>
+                    <li><a href="/pt/privacy/">Privacidade</a></li>
+                    <li><a href="/pt/terms/">Termos</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/efficiency/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/efficiency/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/efficiency/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/efficiency/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/efficiency/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/efficiency/"
+                           aria-current="page">
+                            Português
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Este site usa cookies para melhorar sua experiência." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Este site usa cookies para melhorar sua experiência. <a href="/pt/privacy/">Saiba mais</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Recusar</button>
+            <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

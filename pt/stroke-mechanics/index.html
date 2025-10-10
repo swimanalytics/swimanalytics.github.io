@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Mecânica de Braçada na Natação: DPS, Taxa de Braçada e Índice de Braçada</title>
+    <meta name="description" content="Domine as métricas de mecânica de braçada: Distância Por Braçada (DPS), Taxa de Braçada (SR) e Índice de Braçada (SI). Aprenda a otimizar eficiência e velocidade com análises avançadas de natação.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="mecânica braçada, distância por braçada, taxa braçada, índice braçada, técnica natação">
+    
+    <link rel="canonical" href="https://swimanalytics.app/pt/stroke-mechanics/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/pt/stroke-mechanics/">
+    <meta property="og:title" content="Mecânica de Braçada na Natação: DPS, Taxa de Braçada e Índice de Braçada">
+    <meta property="og:description" content="Domine as métricas de mecânica de braçada: Distância Por Braçada (DPS), Taxa de Braçada (SR) e Índice de Braçada (SI). Aprenda a otimizar eficiência e velocidade com análises avançadas de natação.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/pt/stroke-mechanics/">
+    <meta name="twitter:title" content="Mecânica de Braçada na Natação: DPS, Taxa de Braçada e Índice de Braçada">
+    <meta name="twitter:description" content="Domine as métricas de mecânica de braçada: Distância Por Braçada (DPS), Taxa de Braçada (SR) e Índice de Braçada (SI). Aprenda a otimizar eficiência e velocidade com análises avançadas de natação.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stroke-mechanics/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/stroke-mechanics/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "pt"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Mecânica de Braçada na Natação: DPS, Taxa de Braçada e Índice de Braçada",
+      "description": "Domine as métricas de mecânica de braçada: Distância Por Braçada (DPS), Taxa de Braçada (SR) e Índice de Braçada (SI). Aprenda a otimizar eficiência e velocidade com análises avançadas de natação.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/pt/stroke-mechanics/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/pt/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mecânica da Braçada",
+          "item": "https://swimanalytics.app/pt/stroke-mechanics/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Ir para o conteúdo</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/pt/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/"
+                               
+                               aria-current="">
+                                Início
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Aprender</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/getting-started/"
+                                       
+                                       aria-current="">
+                                        Começar
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zonas de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-load/"
+                                       
+                                       aria-current="">
+                                        Carga de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Calculadora sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ciência</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/research/"
+                                       
+                                       aria-current="">
+                                        Pesquisa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/formulas/"
+                                       
+                                       aria-current="">
+                                        Fórmulas
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/efficiency/"
+                                       
+                                       aria-current="">
+                                        Eficiência
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stroke-mechanics/"
+                                       class="active"
+                                       aria-current="page">
+                                        Mecânica da Braçada
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/contact/"
+                               
+                               aria-current="">
+                                Contato
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecionar idioma">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="pt" selected>
+                        Português
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Mecânica de Braçada</h1>
+        <p class="lead">A Biomecânica da Velocidade na Natação</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>A Equação Fundamental da Velocidade na Natação</h2>
+
+        <div class="formula-box formula-highlight">
+            <h3>A Equação de Velocidade</h3>
+            <div class="formula formula-large">
+                Velocidade = Frequência de Braçada (SR) × Distância Por Braçada (DPS)
+            </div>
+            <p class="formula-explanation"><strong>Tradução:</strong> A sua velocidade na natação depende da <em>frequência</em> com que executa braçadas (SR) multiplicada pela <em>distância</em> que percorre por braçada (DPS).</p>
+        </div>
+
+        <p class="lead">Esta equação enganosamente simples governa todo o desempenho na natação. Para nadar mais rápido, deve:</p>
+        <ul class="lead-list">
+            <li><strong>Aumentar a Frequência de Braçada</strong> (cadência mais rápida) mantendo o DPS</li>
+            <li><strong>Aumentar a Distância Por Braçada</strong> (percorrer mais distância por braçada) mantendo o SR</li>
+            <li><strong>Otimizar ambos</strong> (a abordagem ideal)</li>
+        </ul>
+
+        <div class="callout callout-warning">
+            <h3>⚖️ O Equilíbrio</h3>
+            <p>O SR e o DPS estão geralmente <strong>relacionados inversamente</strong>. Quando um aumenta, o outro tende a diminuir. A arte da natação é encontrar o equilíbrio ótimo para a sua prova, tipo de corpo e nível de condição física atual.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Frequência de Braçada (SR)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>O que é a Frequência de Braçada?</h3>
+                <p>A <strong>Frequência de Braçada (SR)</strong>, também chamada de <em>cadência</em> ou <em>ritmo</em>, mede quantos ciclos completos de braçada realiza por minuto, expressos em <strong>Braçadas Por Minuto (SPM)</strong>.</p>
+
+                <div class="formula-box">
+                    <h4>Fórmula</h4>
+                    <div class="formula">
+                        SR = 60 / Tempo de Ciclo
+                    </div>
+                    <p>Ou:</p>
+                    <div class="formula">
+                        SR = (Número de Braçadas / Tempo em segundos) × 60
+                    </div>
+
+                    <div class="example-box mt-md">
+                        <h4>Exemplo:</h4>
+                        <p>Se o seu ciclo de braçada demora 1 segundo:</p>
+                        <div class="calculation">
+                            SR = 60 / 1 = <strong>60 SPM</strong>
+                        </div>
+                        <p>Se completar 30 braçadas em 25 segundos:</p>
+                        <div class="calculation">
+                            SR = (30 / 25) × 60 = <strong>72 SPM</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-info">
+                    <h4>📝 Nota sobre Contagem de Braçadas</h4>
+                    <p>Para <strong>crol/costas:</strong> Conte as entradas individuais de cada braço (esquerdo + direito = 2 braçadas)</p>
+                    <p>Para <strong>bruços/mariposa:</strong> Os braços movem-se simultaneamente (uma puxada = 1 braçada)</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Frequências de Braçada Típicas por Prova</h3>
+
+                <div class="sr-benchmarks">
+                    <h4>Sprint Crol (50m)</h4>
+                    <div class="benchmark-row">
+                        <span class="label">Elite:</span>
+                        <span class="value">120-150 SPM</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">Escalões Jovens:</span>
+                        <span class="value">100-120 SPM</span>
+                    </div>
+
+                    <h4>Crol 100m</h4>
+                    <div class="benchmark-row">
+                        <span class="label">Elite:</span>
+                        <span class="value">95-110 SPM</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">Escalões Jovens:</span>
+                        <span class="value">85-100 SPM</span>
+                    </div>
+
+                    <h4>Média Distância (200-800m)</h4>
+                    <div class="benchmark-row">
+                        <span class="label">Elite:</span>
+                        <span class="value">70-100 SPM</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">Escalões Jovens:</span>
+                        <span class="value">60-85 SPM</span>
+                    </div>
+
+                    <h4>Distância (1500m+ / Águas Abertas)</h4>
+                    <div class="benchmark-row">
+                        <span class="label">Elite:</span>
+                        <span class="value">60-100 SPM</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">Escalões Jovens:</span>
+                        <span class="value">50-75 SPM</span>
+                    </div>
+                </div>
+
+                <div class="callout callout-tip">
+                    <h4>🎯 Diferenças de Género</h4>
+                    <p>Homens elite 50m crol: ~65-70 SPM<br>
+                    Mulheres elite 50m crol: ~60-64 SPM<br>
+                    Homens elite 100m crol: ~50-54 SPM<br>
+                    Mulheres elite 100m crol: ~53-56 SPM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Interpretar a Frequência de Braçada</h2>
+
+        <div class="interpretation-grid">
+            <div class="interpretation-item interpretation-low">
+                <h3>🐢 SR Demasiado Baixo</h3>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Fases de deslize longas entre braçadas</li>
+                    <li>Desaceleração e perda de impulso</li>
+                    <li>"Pontos mortos" onde a velocidade cai significativamente</li>
+                </ul>
+                <p><strong>Resultado:</strong> Uso ineficiente da energia—está constantemente a reacelerar desde velocidade reduzida.</p>
+                <p><strong>Solução:</strong> Reduza o tempo de deslize, inicie a pegada mais cedo, mantenha propulsão contínua.</p>
+            </div>
+
+            <div class="interpretation-item interpretation-high">
+                <h3>🏃 SR Demasiado Alto</h3>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Braçadas curtas e entrecortadas ("rodar sem avançar")</li>
+                    <li>Mecânica de pegada pobre—a mão escorrega na água</li>
+                    <li>Gasto excessivo de energia com propulsão mínima</li>
+                </ul>
+                <p><strong>Resultado:</strong> Alto esforço, baixa eficiência. Sente-se ocupado mas não rápido.</p>
+                <p><strong>Solução:</strong> Alongue a braçada, melhore a pegada, assegure extensão completa e empurre final.</p>
+            </div>
+
+            <div class="interpretation-item interpretation-optimal">
+                <h3>⚡ SR Ótimo</h3>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Ritmo equilibrado—contínuo mas não frenético</li>
+                    <li>Desaceleração mínima entre braçadas</li>
+                    <li>Pegada forte e extensão completa</li>
+                    <li>Sustentável ao ritmo de prova</li>
+                </ul>
+                <p><strong>Resultado:</strong> Velocidade máxima com mínimo desperdício de energia.</p>
+                <p><strong>Como Encontrar:</strong> Experimente com ajustes de ±5 SPM mantendo o ritmo. O RPE mais baixo = SR ótimo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Distância Por Braçada (DPS)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>O que é a Distância Por Braçada?</h3>
+                <p>A <strong>Distância Por Braçada (DPS)</strong>, também chamada de <em>Comprimento de Braçada</em>, mede o quão longe viaja com cada ciclo completo de braçada. É um indicador primário de eficiência de braçada e "sensibilidade da água".</p>
+
+                <div class="formula-box">
+                    <h4>Fórmula</h4>
+                    <div class="formula">
+                        DPS (m/braçada) = Distância / Número de Braçadas
+                    </div>
+                    <p>Ou:</p>
+                    <div class="formula">
+                        DPS = Velocidade / (SR / 60)
+                    </div>
+
+                    <div class="example-box mt-md">
+                        <h4>Exemplo (piscina 25m, 5m de impulso):</h4>
+                        <p>Nadar 20m em 12 braçadas:</p>
+                        <div class="calculation">
+                            DPS = 20 / 12 = <strong>1,67 m/braçada</strong>
+                        </div>
+
+                        <h4 class="mt-sm">Para 100m com 48 braçadas (4 × 5m de impulsos):</h4>
+                        <div class="calculation">
+                            Distância efetiva = 100 - (4 × 5) = 80m<br>
+                            DPS = 80 / 48 = <strong>1,67 m/braçada</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Valores Típicos de DPS (Piscina 25m Crol)</h3>
+
+                <div class="dps-benchmarks">
+                    <h4>Nadadores de Elite</h4>
+                    <div class="benchmark-row">
+                        <span class="label">DPS:</span>
+                        <span class="value">1,8-2,2 m/braçada</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">SPL:</span>
+                        <span class="value">11-14 braçadas/piscina</span>
+                    </div>
+
+                    <h4>Nadadores Competitivos</h4>
+                    <div class="benchmark-row">
+                        <span class="label">DPS:</span>
+                        <span class="value">1,5-1,8 m/braçada</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">SPL:</span>
+                        <span class="value">14-17 braçadas/piscina</span>
+                    </div>
+
+                    <h4>Nadadores de Fitness</h4>
+                    <div class="benchmark-row">
+                        <span class="label">DPS:</span>
+                        <span class="value">1,2-1,5 m/braçada</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">SPL:</span>
+                        <span class="value">17-21 braçadas/piscina</span>
+                    </div>
+
+                    <h4>Principiantes</h4>
+                    <div class="benchmark-row">
+                        <span class="label">DPS:</span>
+                        <span class="value">&lt;1,2 m/braçada</span>
+                    </div>
+                    <div class="benchmark-row">
+                        <span class="label">SPL:</span>
+                        <span class="value">21+ braçadas/piscina</span>
+                    </div>
+                </div>
+
+                <div class="callout callout-info">
+                    <h4>📏 Ajustes por Altura</h4>
+                    <p><strong>1,83m (6'0"):</strong> Objetivo ~12 braçadas/25m<br>
+                    <strong>1,68m (5'6"):</strong> Objetivo ~13 braçadas/25m<br>
+                    <strong>1,52m (5'0"):</strong> Objetivo ~14 braçadas/25m</p>
+                    <p>Nadadores mais altos naturalmente têm maior DPS devido ao comprimento dos braços e tamanho corporal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Fatores que Afetam o DPS</h2>
+
+        <div class="factors-list">
+            <div class="factor-item">
+                <h3>1️⃣ Qualidade da Pegada</h3>
+                <p>A capacidade de "segurar" a água com a sua mão e antebraço durante a fase de puxada. Uma pegada forte = mais propulsão por braçada.</p>
+                <p><strong>Educativo:</strong> Educativo catch-up, nadar com punhos, exercícios de sculling.</p>
+            </div>
+
+            <div class="factor-item">
+                <h3>2️⃣ Finalização da Braçada</h3>
+                <p>Empurrar completamente até à extensão total na anca. Muitos nadadores soltam cedo, perdendo os 20% finais de propulsão.</p>
+                <p><strong>Educativo:</strong> Educativo arrasto de dedos, séries focadas em extensão.</p>
+            </div>
+
+            <div class="factor-item">
+                <h3>3️⃣ Posição Corporal e Hidrodinâmica</h3>
+                <p>Menor resistência = maior percurso por braçada. Ancas altas, corpo horizontal, core firme minimizam a resistência.</p>
+                <p><strong>Educativo:</strong> Batimento de lado, impulsos em hidrodinâmica, trabalho de estabilidade do core.</p>
+            </div>
+
+            <div class="factor-item">
+                <h3>4️⃣ Eficácia do Batimento</h3>
+                <p>O batimento mantém a velocidade entre braçadas. Batimento fraco = desaceleração = DPS mais curto.</p>
+                <p><strong>Educativo:</strong> Batimento vertical, batimento com prancha, batimento de lado.</p>
+            </div>
+
+            <div class="factor-item">
+                <h3>5️⃣ Técnica de Respiração</h3>
+                <p>Uma respiração deficiente interrompe a posição corporal e cria resistência. Minimize o movimento de cabeça e rotação.</p>
+                <p><strong>Educativo:</strong> Educativo de respiração lateral, respiração bilateral, respirar a cada 3/5 braçadas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>O Equilíbrio SR × DPS</h2>
+
+        <p class="lead">Nadadores de elite não têm apenas alto SR ou alto DPS—têm a <em>combinação</em> ótima para a sua prova.</p>
+
+        <div class="example-box">
+            <h3>Exemplo Real: 50m Crol de Caeleb Dressel</h3>
+            <p><strong>Métricas do Recorde Mundial:</strong></p>
+            <ul>
+                <li>Frequência de Braçada: ~130 braçadas/min</li>
+                <li>Distância Por Braçada: ~0,92 jardas/braçada (~0,84 m/braçada)</li>
+                <li>Velocidade: ~2,3 m/s (ritmo de recorde mundial)</li>
+            </ul>
+            <p><strong>Análise:</strong> Dressel combina um SR excecionalmente alto com bom DPS. O seu poder permite-lhe manter um comprimento de braçada razoável apesar da cadência extrema.</p>
+        </div>
+
+        <div class="sr-dps-scenarios">
+            <h3>Análise de Cenários</h3>
+
+            <div class="scenario">
+                <h4>🔴 Alto DPS + Baixo SR = "Excesso de Deslize"</h4>
+                <p><strong>Exemplo:</strong> 1,8 m/braçada × 50 SPM = 1,5 m/s</p>
+                <p><strong>Problema:</strong> Demasiado deslize cria pontos mortos onde a velocidade cai. Ineficiente apesar do bom comprimento de braçada.</p>
+            </div>
+
+            <div class="scenario">
+                <h4>🔴 Baixo DPS + Alto SR = "Rodar sem Avançar"</h4>
+                <p><strong>Exemplo:</strong> 1,2 m/braçada × 90 SPM = 1,8 m/s</p>
+                <p><strong>Problema:</strong> Alto custo energético. Sente-se ocupado mas carece de propulsão por braçada. Insustentável.</p>
+            </div>
+
+            <div class="scenario">
+                <h4>🟢 DPS + SR Equilibrados = Ótimo</h4>
+                <p><strong>Exemplo:</strong> 1,6 m/braçada × 70 SPM = 1,87 m/s</p>
+                <p><strong>Resultado:</strong> Forte propulsão por braçada com cadência sustentável. Eficiente e rápido.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ Encontrar o Seu Equilíbrio Ótimo</h3>
+            <p><strong>Série:</strong> 6 × 100m @ ritmo VCN</p>
+            <ul>
+                <li><strong>100 #1-2:</strong> Nade naturalmente, registe SR e DPS</li>
+                <li><strong>100 #3:</strong> Reduza a contagem de braçadas em 2-3 (aumente DPS), tente manter o ritmo</li>
+                <li><strong>100 #4:</strong> Aumente SR em 5 SPM, tente manter o ritmo</li>
+                <li><strong>100 #5:</strong> Encontre o ponto médio—equilibre SR e DPS</li>
+                <li><strong>100 #6:</strong> Fixe-se no que se sentiu mais eficiente</li>
+            </ul>
+            <p>A repetição que se sentiu mais fácil ao ritmo = a sua combinação ótima de SR/DPS.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Índice de Braçada: A Métrica Potência-Eficiência</h2>
+
+        <div class="formula-box">
+            <h3>Fórmula</h3>
+            <div class="formula">
+                Índice de Braçada (SI) = Velocidade (m/s) × DPS (m/braçada)
+            </div>
+            <div class="formula-explanation">
+                <p>O Índice de Braçada combina velocidade e eficiência numa única métrica. Maior SI = melhor desempenho.</p>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <h4>Exemplo:</h4>
+            <p>Nadador A: 1,5 m/s velocidade × 1,7 m/braçada DPS = <strong>SI de 2,55</strong><br>
+            Nadador B: 1,4 m/s velocidade × 1,9 m/braçada DPS = <strong>SI de 2,66</strong></p>
+            <p><strong>Análise:</strong> O Nadador B é ligeiramente mais lento mas mais eficiente. Com maior potência, tem maior potencial de desempenho.</p>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 Fundamento Científico</h3>
+            <p>Barbosa et al. (2010) descobriram que <strong>o comprimento de braçada é um preditor de desempenho mais importante que a frequência de braçada</strong> na natação competitiva. No entanto, a relação não é linear—há um ponto ótimo além do qual aumentar o DPS (diminuindo o SR) torna-se contraproducente devido à perda de impulso.</p>
+            <p>A chave é a <strong>eficiência biomecânica</strong>: maximizar a propulsão por braçada mantendo um ritmo que previne a desaceleração.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Aplicações Práticas de Treino</h2>
+
+        <div class="application-workout">
+            <h3>🎯 Série de Controlo de SR</h3>
+            <div class="workout-box">
+                <h4>8 × 50m (20s descanso)</h4>
+                <p><strong>Use um Tempo Trainer ou conte braçadas/tempo</strong></p>
+                <ol>
+                    <li>50 #1-2: SR de referência (nade naturalmente)</li>
+                    <li>50 #3-4: SR +10 SPM (cadência mais rápida)</li>
+                    <li>50 #5-6: SR -10 SPM (mais lento, braçadas mais longas)</li>
+                    <li>50 #7-8: Regresse à referência, note qual se sentiu mais eficiente</li>
+                </ol>
+                <p><strong>Objetivo:</strong> Desenvolver consciência de como as mudanças em SR afetam o ritmo e o esforço.</p>
+            </div>
+        </div>
+
+        <div class="application-workout">
+            <h3>🎯 Série de Maximização de DPS</h3>
+            <div class="workout-box">
+                <h4>8 × 25m (15s descanso)</h4>
+                <p><strong>Conte braçadas por piscina</strong></p>
+                <ol>
+                    <li>25 #1: Estabeleça contagem de braçadas de referência</li>
+                    <li>25 #2-4: Reduza 1 braçada por piscina (DPS máximo)</li>
+                    <li>25 #5: Mantenha contagem mínima de braçadas, aumente ritmo ligeiramente</li>
+                    <li>25 #6-8: Encontre contagem reduzida sustentável de braçadas ao ritmo alvo</li>
+                </ol>
+                <p><strong>Objetivo:</strong> Melhorar a eficiência de braçada—percorrer mais distância por braçada sem diminuir a velocidade.</p>
+            </div>
+        </div>
+
+        <div class="application-workout">
+            <h3>🎯 Série Golf (Minimizar SWOLF)</h3>
+            <div class="workout-box">
+                <h4>4 × 100m (30s descanso)</h4>
+                <p><strong>Objetivo: Pontuação SWOLF mais baixa (tempo + braçadas) ao ritmo VCN</strong></p>
+                <p>Experimente com diferentes combinações de SR/DPS. A repetição com menor SWOLF = mais eficiente.</p>
+                <p>Acompanhe como o SWOLF muda nas repetições—SWOLF em aumento indica fadiga a deteriorar a técnica.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Domine a Mecânica, Domine a Velocidade</h2>
+        <p class="lead">Velocidade = SR × DPS não é apenas uma fórmula—é uma estrutura para entender e melhorar cada aspeto da sua técnica de natação.</p>
+
+        <p>Acompanhe ambas as variáveis. Experimente com o equilíbrio. Encontre a sua combinação ótima. A velocidade seguirá.</p>
+
+        <div class="mt-xl">
+            <a href="/pt/efficiency/" class="btn btn-secondary">← Eficiência SWOLF</a>
+            <a href="/pt/research/" class="btn btn-primary">Investigação Científica →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Início
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Aprender
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Ciência
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/">
+                            Contato
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Todos os direitos reservados</h3>
+                <ul>
+                    <li><a href="/pt/privacy/">Privacidade</a></li>
+                    <li><a href="/pt/terms/">Termos</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/stroke-mechanics/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stroke-mechanics/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/stroke-mechanics/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/stroke-mechanics/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/stroke-mechanics/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/stroke-mechanics/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/stroke-mechanics/"
+                           aria-current="page">
+                            Português
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Este site usa cookies para melhorar sua experiência." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Este site usa cookies para melhorar sua experiência. <a href="/pt/privacy/">Saiba mais</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Recusar</button>
+            <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pt" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SwimAnalytics: App de Análise de Desempenho na Natação para iOS</title>
+    <meta name="description" content="Rastreie métricas de natação, calcule CSS e sTSS, analise carga de treino com análises profissionais. Calculadoras gratuitas para nadadores competitivos e triatletas. Teste grátis de 7 dias.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="app rastreamento natação, análise natação, calculadora CSS, desempenho natação, sTSS">
+    
+    <link rel="canonical" href="https://swimanalytics.app/pt/">
+
+    
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimanalytics.app/pt/">
+    <meta property="og:title" content="SwimAnalytics: App de Análise de Desempenho na Natação para iOS">
+    <meta property="og:description" content="Rastreie métricas de natação, calcule CSS e sTSS, analise carga de treino com análises profissionais. Calculadoras gratuitas para nadadores competitivos e triatletas. Teste grátis de 7 dias.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/pt/">
+    <meta name="twitter:title" content="SwimAnalytics: App de Análise de Desempenho na Natação para iOS">
+    <meta name="twitter:description" content="Rastreie métricas de natação, calcule CSS e sTSS, analise carga de treino com análises profissionais. Calculadoras gratuitas para nadadores competitivos e triatletas. Teste grátis de 7 dias.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "pt"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/pt/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Ir para o conteúdo</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/pt/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/"
+                               
+                               aria-current="">
+                                Início
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Aprender</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/getting-started/"
+                                       
+                                       aria-current="">
+                                        Começar
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zonas de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/training-load/"
+                                       
+                                       aria-current="">
+                                        Carga de Treino
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Calculadora sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ciência</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/pt/research/"
+                                       
+                                       aria-current="">
+                                        Pesquisa
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/formulas/"
+                                       
+                                       aria-current="">
+                                        Fórmulas
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/efficiency/"
+                                       
+                                       aria-current="">
+                                        Eficiência
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mecânica da Braçada
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/pt/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/pt/contact/"
+                               
+                               aria-current="">
+                                Contato
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecionar idioma">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="pt" selected>
+                        Português
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alternar menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- SwimAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏊</span>
+          <span>Análise Profissional de Natação</span>
+        </div>
+        <h1>Transforme seus Dados de Natação em Desempenho</h1>
+        <p class="app-hero-subtitle">
+          Métricas científicas, zonas de treino personalizadas e acompanhamento abrangente de desempenho.
+          Tudo processado localmente no seu iPhone com total privacidade.
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            Baixar na App Store
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            Explorar Funcionalidades
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ Teste gratuito de 7 dias &nbsp;&nbsp; ✓ Sem conta necessária &nbsp;&nbsp; ✓ 100% dados locais
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/app-mockup-main.png" alt="App iOS SwimAnalytics mostrando métricas de Velocidade Crítica de Nado (VCN) e Pontuação de Stress de Treino (TSS) no iPhone" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Funcionalidades</div>
+      <h2 class="section-title">Tudo que Você Precisa para Melhorar</h2>
+      <p class="section-subtitle">Análise de nível profissional projetada para nadadores de todos os níveis</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>Métricas Científicas</h3>
+        <p>A <a href="/pt/css/">Velocidade Crítica de Nado (VCN)</a> determina seu limiar aeróbico, permitindo calcular a <a href="/pt/training-load/">Pontuação de Stress de Treino (TSS)</a> e o <a href="/pt/training-load/#pmc">acompanhamento de desempenho com CTL/ATL/TSB</a> baseado em pesquisa científica esportiva comprovada.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>Zonas de Treino</h3>
+        <p>7 zonas de treino personalizadas calibradas de acordo com sua VCN. Otimize cada treino para desenvolvimento de recuperação, aeróbico, limiar ou VO₂max.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>Comparações Inteligentes</h3>
+        <p>Comparações de períodos semanais, mensais e anuais com detecção automática de tendências e mudanças percentuais para todas as métricas.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>Privacidade Total</h3>
+        <p>Todos os dados são processados localmente no seu dispositivo. Sem servidores, sem nuvem, sem rastreamento. Você possui e controla seus dados de natação.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>Exporte para Qualquer Lugar</h3>
+        <p>Exporte treinos e análises em formatos JSON, CSV, HTML ou PDF. Compatível com treinadores, planilhas e plataformas de treinamento.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>Desempenho Instantâneo</h3>
+        <p>Inicialização do app em menos de 0,35s com arquitetura local-first. Visualize seus treinos instantaneamente sem esperar sincronizações ou downloads.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Capturas de Tela</div>
+      <h2 class="section-title">Descubra SwimAnalytics em Ação</h2>
+      <p class="section-subtitle">Interface bonita e intuitiva projetada para nadadores</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Captura anterior">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="Lista de treinos do SwimAnalytics mostrando sessões de natação com pontuações TSS e zonas de treino" loading="lazy" />
+          <p class="screenshot-caption">Resumo de Treinos</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="Análise detalhada de treino de natação com ritmo por volta, eficiência SWOLF e dados de frequência cardíaca" loading="lazy" />
+          <p class="screenshot-caption">Análise Volta por Volta</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="Painel do SwimAnalytics mostrando métricas do Gráfico de Gerenciamento de Desempenho CTL, ATL e TSB" loading="lazy" />
+          <p class="screenshot-caption">Métricas Avançadas</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="Gráfico de tendências de desempenho de natação mostrando progressão de VCN e carga de treino ao longo do tempo" loading="lazy" />
+          <p class="screenshot-caption">Tendências de Desempenho</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="7 zonas de treino de natação personalizadas baseadas no limiar de Velocidade Crítica de Nado" loading="lazy" />
+          <p class="screenshot-caption">Zonas de Treino</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="Exportar dados de natação em formatos JSON, CSV, HTML e PDF para treinadores e análise" loading="lazy" />
+          <p class="screenshot-caption">Opções de Exportação</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="Próxima captura">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegação de capturas"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Baseado em Ciência</div>
+      <h2 class="section-title text-white">Métricas Profissionais que Importam</h2>
+      <p class="section-subtitle text-white-90">
+        SwimAnalytics transforma dados brutos de natação em inteligência acionável
+        utilizando métricas validadas por pesquisa científica esportiva
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">Ritmo de Limiar</div>
+        <h3 class="metric-name">VCN</h3>
+        <p class="metric-description">Velocidade Crítica de Nado - seu ritmo de limiar aeróbico</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">Carga do Treino</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">Pontuação de Stress de Treino quantifica a intensidade do treino</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">Forma Física</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">Carga de Treino Crônica - média móvel de 42 dias</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">Fadiga</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">Carga de Treino Aguda - média móvel de 7 dias</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">Forma</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">Balanço de Stress de Treino indica disponibilidade</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">Eficiência</div>
+        <h3 class="metric-name">SWOLF</h3>
+        <p class="metric-description">Pontuação de eficiência de braçada - menor é melhor</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏊</div>
+        <div class="metric-label">Zonas</div>
+        <h3 class="metric-name">7 Zonas</h3>
+        <p class="metric-description">Níveis de intensidade de Recuperação a Sprint</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">Recordes</div>
+        <h3 class="metric-name">PRs</h3>
+        <p class="metric-description">Acompanhamento automático de recordes pessoais</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Preços</div>
+      <h2 class="section-title">Preços Simples e Transparentes</h2>
+      <p class="section-subtitle">Comece com um teste gratuito de 7 dias. Cancele quando quiser.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Mensal</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/mês</span>
+          </div>
+          <p class="pricing-trial">Teste gratuito de 7 dias</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Sincronização ilimitada de treinos</li>
+          <li>Todas as métricas científicas (VCN, TSS, CTL/ATL/TSB)</li>
+          <li>7 zonas de treino personalizadas</li>
+          <li>Comparações semanais, mensais e anuais</li>
+          <li>Exportação em JSON, CSV, HTML e PDF</li>
+          <li>100% privacidade, dados locais</li>
+          <li>Todas as atualizações futuras</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3 class="pricing-name">Anual</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/ano</span>
+          </div>
+          <p class="pricing-trial">Economize €8,88/ano (18% de desconto)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>Sincronização ilimitada de treinos</li>
+          <li>Todas as métricas científicas (VCN, TSS, CTL/ATL/TSB)</li>
+          <li>7 zonas de treino personalizadas</li>
+          <li>Comparações semanais, mensais e anuais</li>
+          <li>Exportação em JSON, CSV, HTML e PDF</li>
+          <li>100% privacidade, dados locais</li>
+          <li>Todas as atualizações futuras</li>
+          <li><strong>Apenas €3,25/mês</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">Por que SwimAnalytics</div>
+      <h2 class="section-title">Criado para Nadadores Sérios</h2>
+      <p class="section-subtitle">Funcionalidades profissionais sem a complexidade</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🏊</div>
+        <div class="benefit-content">
+          <h3>Protocolo de Teste VCN</h3>
+          <p>Protocolo de teste integrado de 400m + 200m para determinar sua Velocidade Crítica de Nado. Repita a cada 6-8 semanas para acompanhar o progresso e ajustar automaticamente as zonas de treino.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>Experiência Nativa iOS</h3>
+          <p>Construído com SwiftUI para desempenho fluido e integração com iOS. Sincronização perfeita com o app Saúde, suporte de widgets e linguagem de design familiar da Apple.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>Baseado em Pesquisa</h3>
+          <p>Todas as métricas baseadas em pesquisa científica esportiva revisada por pares. VCN de Wakayoshi et al., TSS adaptado para natação com fórmula IF³, modelos comprovados de CTL/ATL.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>Amigável para Treinadores</h3>
+          <p>Exporte relatórios detalhados para treinadores. Compartilhe resumos HTML por e-mail, CSV para análise em planilhas, ou PDF para registros de treinamento.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>Funciona em Todos os Lugares</h3>
+          <p>Piscina ou águas abertas, sprints ou distância. SwimAnalytics se adapta a todos os tipos de natação e detecta automaticamente as características do treino.</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>Sempre Melhorando</h3>
+          <p>Atualizações regulares com novas funcionalidades baseadas no feedback dos usuários. Adições recentes incluem comparações anuais, acompanhamento de recordes pessoais e opções de exportação aprimoradas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">FAQ</div>
+      <h2 class="section-title">Perguntas Frequentes</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>Como o SwimAnalytics obtém meus dados de natação?</h3>
+        <p>SwimAnalytics sincroniza com o Apple Health para importar treinos de natação registrados por qualquer dispositivo ou app compatível. Isso inclui relógios inteligentes, rastreadores de fitness e entradas manuais. O app processa esses dados localmente para calcular métricas avançadas.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>O que é o teste VCN e como eu o realizo?</h3>
+        <p>VCN (Velocidade Crítica de Nado) é um protocolo científico que usa 2 nados em máximo esforço: 400m e 200m com 10-20 minutos de descanso entre eles. O app calcula seu limiar aeróbico a partir desses tempos e ajusta automaticamente todas as zonas de treino. Repita a cada 6-8 semanas para acompanhar o progresso.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Meus dados são enviados para a nuvem?</h3>
+        <p>Não. SwimAnalytics processa todos os dados localmente no seu iPhone. Não há servidores externos, sem contas na nuvem, sem transferências de dados. Você controla as exportações: gere arquivos JSON, CSV, HTML ou PDF e compartilhe-os como quiser.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Posso usar SwimAnalytics para natação em águas abertas?</h3>
+        <p>Sim. SwimAnalytics funciona com qualquer treino de natação no Apple Health, incluindo águas abertas. O app se adapta às métricas disponíveis tanto em piscina quanto em águas abertas, fornecendo análise relevante para cada ambiente.</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Qual é a diferença entre os planos mensal e anual?</h3>
+        <p>Ambos os planos oferecem funcionalidades idênticas: todas as métricas, zonas ilimitadas, comparações temporais, múltiplas exportações e atualizações gratuitas. A única diferença é o preço: o anual economiza 18% (equivalente a €3,25/mês vs €3,99/mês).</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>Posso cancelar minha assinatura a qualquer momento?</h3>
+        <p>Sim. As assinaturas são gerenciadas através da App Store, então você pode cancelar a qualquer momento em Ajustes → [Seu Nome] → Assinaturas. Se cancelar, manterá o acesso até o final do seu período de cobrança atual.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>Pronto para Transformar sua Natação?</h2>
+    <p>Junte-se a milhares de nadadores que usam métricas científicas para melhorar seu desempenho. Comece seu teste gratuito de 7 dias hoje.</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/app/swimanalytics" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        Baixar SwimAnalytics Grátis
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        Saber Mais
+      </a>
+    </div>
+    <p class="section-footer">
+      Sem conta necessária • Cancele quando quiser • Seus dados permanecem no seu dispositivo
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Aprenda Mais sobre Análise de Natação</h2>
+      <p class="section-subtitle">Aprofunde-se na ciência por trás do SwimAnalytics</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Velocidade Crítica de Nado</h3>
+        <div class="card-content">
+          <p>Entenda como a VCN determina seu limiar aeróbico e por que é crucial para o treinamento estruturado.</p>
+          <a href="/pt/css/" class="btn btn-secondary btn-small mt-md">Aprender sobre VCN →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Gerenciamento de Carga de Treino</h3>
+        <div class="card-content">
+          <p>Descubra como TSS, CTL, ATL e TSB ajudam você a equilibrar o stress do treinamento e a recuperação.</p>
+          <a href="/pt/training-load/" class="btn btn-secondary btn-small mt-md">Explorar Carga de Treino →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Zonas de Treino</h3>
+        <div class="card-content">
+          <p>Aprenda sobre as 7 zonas de treino e como usá-las para planejamento específico de treinos.</p>
+          <a href="/pt/training-zones/" class="btn btn-secondary btn-small mt-md">Ver Zonas de Treino →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Início
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Aprender
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/">
+                            Ciência
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/contact/">
+                            Contato
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Todos os direitos reservados</h3>
+                <ul>
+                    <li><a href="/pt/privacy/">Privacidade</a></li>
+                    <li><a href="/pt/terms/">Termos</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecionar idioma</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/"
+                           aria-current="page">
+                            Português
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Este site usa cookies para melhorar sua experiência." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Este site usa cookies para melhorar sua experiência. <a href="/pt/privacy/">Saiba mais</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Recusar</button>
+            <button class="btn btn-primary" id="cookie-accept">Aceitar</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
