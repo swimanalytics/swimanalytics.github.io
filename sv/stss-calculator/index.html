@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Gratis Sim TSS Kalkylator - Beräkna Training Stress Score (sTSS)</title>
+    <meta name="description" content="Den enda gratis sim TSS-kalkylatorn. Beräkna Training Stress Score för varje träningspass med CSS-tempo, varaktighet och genomsnittligt tempo. Inkluderar veckovisa TSS-riktlinjer och CTL/ATL/TSB förklarat.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="sim TSS-kalkylator, sTSS-kalkylator, training stress score, simträningsbelastning, gratis TSS">
+    
+    <link rel="canonical" href="https://swimanalytics.app/sv/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/sv/stss-calculator/">
+    <meta property="og:title" content="Gratis Sim TSS Kalkylator - Beräkna Training Stress Score (sTSS)">
+    <meta property="og:description" content="Den enda gratis sim TSS-kalkylatorn. Beräkna Training Stress Score för varje träningspass med CSS-tempo, varaktighet och genomsnittligt tempo. Inkluderar veckovisa TSS-riktlinjer och CTL/ATL/TSB förklarat.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/sv/stss-calculator/">
+    <meta name="twitter:title" content="Gratis Sim TSS Kalkylator - Beräkna Training Stress Score (sTSS)">
+    <meta name="twitter:description" content="Den enda gratis sim TSS-kalkylatorn. Beräkna Training Stress Score för varje träningspass med CSS-tempo, varaktighet och genomsnittligt tempo. Inkluderar veckovisa TSS-riktlinjer och CTL/ATL/TSB förklarat.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/stss-calculator/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "sv"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Gratis Sim TSS Kalkylator - Beräkna Training Stress Score (sTSS)",
+      "description": "Den enda gratis sim TSS-kalkylatorn. Beräkna Training Stress Score för varje träningspass med CSS-tempo, varaktighet och genomsnittligt tempo. Inkluderar veckovisa TSS-riktlinjer och CTL/ATL/TSB förklarat.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/sv/stss-calculator/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "sTSS Kalkylator",
+          "item": "https://swimanalytics.app/sv/stss-calculator/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Hoppa till innehåll</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sv/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/"
+                               
+                               aria-current="">
+                                Hem
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Lära</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/getting-started/"
+                                       
+                                       aria-current="">
+                                        Komma Igång
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-zones/"
+                                       
+                                       aria-current="">
+                                        Träningszoner
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-load/"
+                                       
+                                       aria-current="">
+                                        Träningsbelastning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stss-calculator/"
+                                       class="active"
+                                       aria-current="page">
+                                        sTSS Kalkylator
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Vetenskap</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/research/"
+                                       
+                                       aria-current="">
+                                        Forskning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/formulas/"
+                                       
+                                       aria-current="">
+                                        Formler
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/efficiency/"
+                                       
+                                       aria-current="">
+                                        Effektivitet
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Simtagsmekanik
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografi
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/contact/"
+                               
+                               aria-current="">
+                                Kontakt
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Välj språk">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" selected>
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Växla meny" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Gratis TSS-kalkylator för simning</h1>
+        <p class="lead">Beräkna Training Stress Score för simträningspass - Den enda kostnadsfria sTSS-kalkylatorn</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Vad är simningens TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> kvantifierar träningsbelastningen från ett simpass genom att kombinera intensitet och varaktighet. Det är anpassat från cyklingens TSS-metodologi och använder din Critical Swim Speed (CSS) som tröskeltempo. Ett träningspass på 1 timme i CSS-tempo = 100 sTSS.</p>
+        </div>
+
+        <h2 class="mt-3xl">Gratis sTSS-kalkylator</h2>
+        <p class="lead mb-xl">Beräkna träningsstress för vilket simpass som helst. Kräver ditt CSS-tempo.</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">Ditt CSS-tempo (mm:ss per 100m)</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">Ditt tröskeltempo från CSS-testet (t.ex. 1:49)</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">Träningspassets varaktighet (minuter)</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">Total passets tid inklusive vila (1-300 minuter)</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">Genomsnittligt träningstempo (mm:ss per 100m)</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">Ditt genomsnittliga tempo under träningspasset (t.ex. 2:05)</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Beräkna sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Rensa</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>Din Training Stress Score</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Intensitetsfaktor (IF)</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>Tolkning av träningsbelastning</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- Filled by JavaScript -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Hur sTSS beräknas</h2>
+
+        <div class="formula-box">
+            <h3>Formel</h3>
+            <div class="formula">
+                sTSS = (Varaktighet i timmar) × (Intensitetsfaktor)² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>Där:</p>
+                <ul>
+                    <li><strong>Intensitetsfaktor (IF)</strong> = CSS-tempo / Genomsnittligt träningstempo</li>
+                    <li><strong>Varaktighet</strong> = Total passets tid i timmar</li>
+                    <li><strong>CSS-tempo</strong> = Ditt tröskeltempo från CSS-testet</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">Praktiskt exempel</h3>
+        <div class="example-box">
+            <h4>Träningspassets detaljer:</h4>
+            <ul>
+                <li>CSS-tempo: <strong>1:49/100m</strong> (109 sekunder)</li>
+                <li>Träningspassets varaktighet: <strong>60 minuter</strong> (1 timme)</li>
+                <li>Genomsnittligt tempo: <strong>2:05/100m</strong> (125 sekunder)</li>
+            </ul>
+
+            <h4>Steg 1: Beräkna intensitetsfaktorn</h4>
+            <div class="calculation">
+                IF = CSS-tempo / Träningstempo<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>Steg 2: Beräkna sTSS</h4>
+            <div class="calculation">
+                sTSS = 1.0 timmar × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>Tolkning:</strong> Detta 60-minuters träningspass i långsamt tempo (långsammare än CSS) genererade 76 sTSS - en måttlig träningsbelastning lämplig för att bygga aerob bas.</p>
+        </div>
+
+        <h2 class="mt-3xl">Tolkning av sTSS-värden</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>sTSS-intervall</th>
+                        <th>Träningsbelastning</th>
+                        <th>Återhämtningstid</th>
+                        <th>Exempel på träningspass</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Låg</td>
+                        <td>Samma dag</td>
+                        <td>30 min lätt simning, teknikövningar</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Måttlig</td>
+                        <td>1 dag</td>
+                        <td>60 min uthållighet, jämnt tempo</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Hög</td>
+                        <td>1-2 dagar</td>
+                        <td>90 min tröskelserier, intervaller i tävlingstempo</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Mycket hög</td>
+                        <td>2-3 dagar</td>
+                        <td>2 timmars hårt träningspass, flera tröskelblock</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Extrem</td>
+                        <td>3+ dagar</td>
+                        <td>Lång tävling (&gt;2 timmar), ultrauthållighet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">Veckans sTSS-guide</h2>
+
+        <p class="mb-md">Målet för veckans sTSS beror på din träningsnivå och dina mål:</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">Motionssimmare</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>Veckans sTSS:</strong> 150-300</p>
+                    <p>2-3 träningspass per vecka, 50-100 sTSS vardera. Fokus på teknik och att bygga aerob bas.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Fitness-simmare / Triatleter</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>Veckans sTSS:</strong> 300-500</p>
+                    <p>3-4 träningspass per vecka, 75-125 sTSS vardera. Blandning av aerob uthållighet och tröskelarbete.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Tävlingssimmare (masters)</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>Veckans sTSS:</strong> 500-800</p>
+                    <p>4-6 träningspass per vecka, 80-150 sTSS vardera. Strukturerad träning med periodisering.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Elit- / Universitetssimmare</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>Veckans sTSS:</strong> 800-1200+</p>
+                    <p>8-12 träningspass per vecka, dubbla pass. Hög volym med kritisk återhämtningshantering.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Viktiga anmärkningar</h3>
+            <ul>
+                <li><strong>Kräver exakt CSS:</strong> Din CSS måste vara uppdaterad (testad inom 6-8 veckor) för exakt sTSS.</li>
+                <li><strong>Förenklad beräkning:</strong> Denna kalkylator använder genomsnittligt tempo. Avancerad sTSS använder Normalized Graded Pace (NGP) som tar hänsyn till intervallstruktur.</li>
+                <li><strong>Inte för tekniskt arbete:</strong> sTSS mäter endast fysisk träningsstress, inte färdighetsutveckling.</li>
+                <li><strong>Individuell variation:</strong> Samma sTSS känns olika för olika simmare. Justera riktlinjerna baserat på din återhämtning.</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">Varför sTSS spelar roll</h2>
+
+        <p class="mb-md">Training Stress Score är grunden för:</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL (Chronic Training Load):</strong> Din konditionsnivå - exponentiellt viktat 42-dagars genomsnitt av daglig sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Din trötthet - exponentiellt viktat 7-dagars genomsnitt av daglig sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Din formstatus - TSB = CTL - ATL (positivt = frisk, negativt = trött)</li>
+            <li><strong>Periodisering:</strong> Planera träningsfaser (bas, utveckling, topp, nedtrappning) med hjälp av målsatta CTL-progressioner</li>
+            <li><strong>Återhämtningshantering:</strong> Veta när man ska träna hårt och när man ska vila baserat på TSB</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>Profftips: Följ din CTL</h3>
+            <p>Registrera daglig sTSS i ett kalkylblad eller träningsdagbok. Beräkna ditt 42-dagars genomsnitt (CTL) varje vecka. Sikta på 5-10 poängs CTL-ökning per vecka under basbyggnad. Behåll eller sänk CTL något under nedtrappning (1-2 veckor före tävling).</p>
+        </div>
+
+        <h2 class="mt-3xl">Relaterade resurser</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">CSS-test</h3>
+                <div class="card-content">
+                    <p>Behöver du ditt CSS-tempo? Använd vår kostnadsfria CSS-kalkylator med 400m och 200m testtider.</p>
+                    <a href="/sv/css/" class="btn btn-secondary btn-small mt-md">CSS-kalkylator →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Guide för träningsbelastning</h3>
+                <div class="card-content">
+                    <p>Lär dig om CTL, ATL, TSB och Performance Management Chart-metriker.</p>
+                    <a href="/sv/training-load/" class="btn btn-secondary btn-small mt-md">Träningsbelastning →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">SwimAnalytics-appen</h3>
+                <div class="card-content">
+                    <p>Automatisk sTSS-beräkning för alla träningspass. Följ CTL/ATL/TSB-trender över tid.</p>
+                    <a href="/sv/" class="btn btn-secondary btn-small mt-md">Mer information →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Vill du ha automatisk sTSS-spårning?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Ladda ner SwimAnalytics gratis</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Hem
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Lära
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Vetenskap
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/contact/">
+                            Kontakt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Alla rättigheter förbehållna</h3>
+                <ul>
+                    <li><a href="/sv/privacy/">Integritet</a></li>
+                    <li><a href="/sv/terms/">Villkor</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Välj språk</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/stss-calculator/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stss-calculator/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/stss-calculator/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/stss-calculator/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/stss-calculator/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/stss-calculator/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/stss-calculator/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/stss-calculator/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/stss-calculator/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/stss-calculator/"
+                           aria-current="page">
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/stss-calculator/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/stss-calculator/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/stss-calculator/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/stss-calculator/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Alla rättigheter förbehållna.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Denna webbplats använder cookies för att förbättra din upplevelse." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Denna webbplats använder cookies för att förbättra din upplevelse. <a href="/sv/privacy/">Läs mer</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Neka</button>
+            <button class="btn btn-primary" id="cookie-accept">Acceptera</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

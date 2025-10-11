@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Simträningszoner Guide - CSS-Baserade Intensitetszoner Förklarade</title>
+    <meta name="description" content="Komplett guide till 5 simträningszoner baserade på Critical Swim Speed. Lär dig Zon 2 aerob bas, Zon 4 tröskel, Zon 5 VO2max träning. Inkluderar personlig zonkalkylator och träningsexempel för alla nivåer.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="simträningszoner, simzoner, CSS träningszoner, zon 2 simning, tröskelträning">
+    
+    <link rel="canonical" href="https://swimanalytics.app/sv/training-zones/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/sv/training-zones/">
+    <meta property="og:title" content="Simträningszoner Guide - CSS-Baserade Intensitetszoner Förklarade">
+    <meta property="og:description" content="Komplett guide till 5 simträningszoner baserade på Critical Swim Speed. Lär dig Zon 2 aerob bas, Zon 4 tröskel, Zon 5 VO2max träning. Inkluderar personlig zonkalkylator och träningsexempel för alla nivåer.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/sv/training-zones/">
+    <meta name="twitter:title" content="Simträningszoner Guide - CSS-Baserade Intensitetszoner Förklarade">
+    <meta name="twitter:description" content="Komplett guide till 5 simträningszoner baserade på Critical Swim Speed. Lär dig Zon 2 aerob bas, Zon 4 tröskel, Zon 5 VO2max träning. Inkluderar personlig zonkalkylator och träningsexempel för alla nivåer.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-zones/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-zones/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-zones/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-zones/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-zones/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-zones/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/training-zones/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/training-zones/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/training-zones/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/training-zones/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-zones/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/training-zones/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/training-zones/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/training-zones/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-zones/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "sv"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Simträningszoner Guide - CSS-Baserade Intensitetszoner Förklarade",
+      "description": "Komplett guide till 5 simträningszoner baserade på Critical Swim Speed. Lär dig Zon 2 aerob bas, Zon 4 tröskel, Zon 5 VO2max träning. Inkluderar personlig zonkalkylator och träningsexempel för alla nivåer.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/sv/training-zones/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Träningszoner",
+          "item": "https://swimanalytics.app/sv/training-zones/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Hoppa till innehåll</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sv/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/"
+                               
+                               aria-current="">
+                                Hem
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Lära</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/getting-started/"
+                                       
+                                       aria-current="">
+                                        Komma Igång
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-zones/"
+                                       class="active"
+                                       aria-current="page">
+                                        Träningszoner
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-load/"
+                                       
+                                       aria-current="">
+                                        Träningsbelastning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS Kalkylator
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Vetenskap</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/research/"
+                                       
+                                       aria-current="">
+                                        Forskning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/formulas/"
+                                       
+                                       aria-current="">
+                                        Formler
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/efficiency/"
+                                       
+                                       aria-current="">
+                                        Effektivitet
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Simtagsmekanik
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografi
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/contact/"
+                               
+                               aria-current="">
+                                Kontakt
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Välj språk">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" selected>
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Växla meny" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Simträningszoner - Intensitetsguide baserad på CSS</h1>
+        <p class="lead">Bemästra de 5 träningszonerna för simning - Anpassade till din Kritiska simhastighet</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>Vad är simträningszoner?</h2>
+            <p><strong>Träningszoner</strong> är vetenskapligt definierade intensitetsområden baserade på din <strong>Kritiska simhastighet (CSS)</strong>—ditt aeroba tröskelintensitet. Varje zon utlöser specifika fysiologiska anpassningar, från att bygga aerob bas (Zon 2) till att utveckla VO₂max (Zon 5). Träningszoner eliminerar gissningar och säkerställer att varje träningspass har ett tydligt syfte.</p>
+        </div>
+
+        <h2 class="mt-2xl">Varför zonträning fungerar</h2>
+
+        <p class="mb-md">Att träna efter "känsla" eller generiska tempotabeller misslyckas eftersom:</p>
+
+        <ul class="mb-xl">
+            <li><strong>Individuell fysiologi varierar:</strong> Ett tempo på 1:40/100m är lätt för elitsimmare men maximalt för nybörjare</li>
+            <li><strong>RPE är inte tillförlitlig:</strong> Upplevd ansträngning förändras med trötthet, hydrering och förhållanden</li>
+            <li><strong>Generiska tempo missar din tröskel:</strong> Standardträningspass ignorerar din unika laktattröskel</li>
+            <li><strong>Ingen anpassningsspecificitet:</strong> Slumpmässiga tempo ger slumpmässiga resultat</li>
+        </ul>
+
+        <p class="mb-xl"><strong>CSS-baserade zoner löser detta</strong> genom att anpassa varje intensitet till DIN fysiologi. Ett Zon 2-pass utlöser aeroba anpassningar oavsett om din CSS är 1:20/100m eller 2:00/100m.</p>
+
+        <div class="callout callout-tip">
+            <h3>🎯 Nyckelprincip: Omvänt förhållande</h3>
+            <p>Inom simning mäts tempo som <strong>tid per distans</strong>. Därför:</p>
+            <ul>
+                <li><strong>Högre % av CSS = LÅNGSAMMARE tempo</strong> (lättare, Zon 1-2)</li>
+                <li><strong>Lägre % av CSS = SNABBARE tempo</strong> (svårare, Zon 4-5)</li>
+            </ul>
+            <p class="mb-0">Detta är <em>omvänt jämfört med cykling/löpning</em> där högre % = svårare. Tänk: "tempo 108% CSS" = 8% långsammare än tröskeln.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">De 5 simträningszonerna</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Zon</th>
+                        <th>Namn</th>
+                        <th>% av CSS-tempo</th>
+                        <th>Exempel för CSS 1:40/100m</th>
+                        <th>RPE</th>
+                        <th>Fysiologiskt syfte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>1</strong></td>
+                        <td>Återhämtning</td>
+                        <td>&gt;108%</td>
+                        <td>&gt;1:48/100m</td>
+                        <td>2-3/10</td>
+                        <td>Aktiv återhämtning, teknisk förfining, uppvärmning/nedvarvning</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>2</strong></td>
+                        <td>Aerob bas</td>
+                        <td>104-108%</td>
+                        <td>1:44-1:48/100m</td>
+                        <td>4-5/10</td>
+                        <td>Bygga aerob kapacitet, mitokondriell densitet, fettoxidation</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>3</strong></td>
+                        <td>Tempo/Sweet Spot</td>
+                        <td>99-103%</td>
+                        <td>1:39-1:43/100m</td>
+                        <td>6-7/10</td>
+                        <td>Anpassning till tävlingstempo, neuromuskulär effektivitet</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>4</strong></td>
+                        <td>Tröskel (CSS)</td>
+                        <td>96-100%</td>
+                        <td>1:36-1:40/100m</td>
+                        <td>7-8/10</td>
+                        <td>Förbättring av laktattröskel, hållbar hög intensitet</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>5</strong></td>
+                        <td>VO₂max/Anaerobt</td>
+                        <td>&lt;96%</td>
+                        <td>&lt;1:36/100m</td>
+                        <td>9-10/10</td>
+                        <td>Utveckling av VO₂max, kraft, laktattolerans</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Zona 1: Återhämtning</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-1-badge">Zona 1</span>
+                <span class="zone-pace">&gt;108% av CSS-tempo</span>
+                <span class="zone-rpe">RPE 2-3/10</span>
+            </div>
+
+            <h3>Syfte</h3>
+            <p>Återhämtning aktiv, tekniskt arbete, uppvärmning, nedvarvning. Zon 1 främjar blodflöde för muskelreparation utan att skapa ytterligare träningsstress. Används inte för konditionsvinster—rent regenerativ.</p>
+
+            <h3>Fysiologiska markörer</h3>
+            <ul>
+                <li>Hjärtfrekvens: 50-60% av max</li>
+                <li>Laktat: &lt;1.5 mmol/L (långt under tröskel)</li>
+                <li>Andning: Näsandning möjlig, tempo samtalsrytm</li>
+                <li>Känsla: Utan ansträngning, du kan hålla det på obestämd tid</li>
+            </ul>
+
+            <h3>Exempel på träningspass</h3>
+            <div class="workout-example">
+                <h4>Pass för Återhämtning</h4>
+                <ul>
+                    <li>500m kontinuerlig simning @ Zon 1 (fokus: mjuka simtag)</li>
+                    <li>10×25 tekniska övningar (räckvidd, paddling, enarmssim) @ Zon ansträngning 1</li>
+                    <li>300m pullövning med pullbuoy @ Zon 1</li>
+                </ul>
+            </div>
+
+            <h3>Veckovolym</h3>
+            <p><strong>10-20% av total volym</strong> (uppvärmnings, nedvarvnings, simningarde återhämtning en días libres)</p>
+        </div>
+
+        <h2 class="mt-3xl">Zona 2: Base Aeróbica</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-2-badge">Zona 2</span>
+                <span class="zone-pace">104-108% av CSS-tempo</span>
+                <span class="zone-rpe">RPE 4-5/10</span>
+            </div>
+
+            <h3>Syfte</h3>
+            <p><strong>Grunden för all uthållighetsträning.</strong> Zon 2 bygger mitokondriell densitet, kapillärnät, fettoxidationsförmåga och aeroba enzymer. Här byggs aerob kondition—den "tråkiga" zonen som producerar mästare.</p>
+
+            <h3>Fysiologiska markörer</h3>
+            <ul>
+                <li>Hjärtfrekvens: 60-75% av max</li>
+                <li>Laktat: 1.5-2.5 mmol/L (under första laktattröskelnet)</li>
+                <li>Andning: Rytmisk, bekväm, du kan tala i meningar</li>
+                <li>Känsla: Bekväm, hållbar under 60+ minuter</li>
+            </ul>
+
+            <h3>Exempel på träningspass</h3>
+            <div class="workout-example">
+                <h4>Pass för Resistencia Aeróbica</h4>
+                <ul>
+                    <li>3000m kontinuerlig @ Zon 2</li>
+                    <li>20×100 @ Zon 2 (10s vila)</li>
+                    <li>5×400 @ Zon 2 (20s vila)</li>
+                </ul>
+            </div>
+
+            <h3>Veckovolym</h3>
+            <p><strong>60-70% av total volym</strong> (mest kritisk zon för konditionsutveckling)</p>
+
+            <div class="callout callout-warning mt-md">
+                <h4>⚠️ Vanligt fel: Träna för hårt</h4>
+                <p>De flesta simmare tränar Zon 2 för snabbt och driver mot Zon 3-4. Detta skapar kronisk trötthet utan att bygga aerob bas. Zon 2 ska kännas <em>lätt</em>—du bör avsluta med känslan av att du kunde gjort mer.</p>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Zona 3: Tempo / Punto Óptimo</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-3-badge">Zona 3</span>
+                <span class="zone-pace">99-103% av CSS-tempo</span>
+                <span class="zone-rpe">RPE 6-7/10</span>
+            </div>
+
+            <h3>Syfte</h3>
+            <p>Anpassning till tävlingstempo för medeldistanslopp (400m-1500m). Zon 3 tränar neuromuskulär effektivitet vid hållbara tävlingshastigheter. Även känd som "Sweet Spot"-träning—svårare än bas, lättare än tröskel, med goda aeroba anpassningar per trötthetsenhet.</p>
+
+            <h3>Fysiologiska markörer</h3>
+            <ul>
+                <li>Hjärtfrekvens: 75-85% av max</li>
+                <li>Laktat: 2.5-4.0 mmol/L (närmar sig tröskeln)</li>
+                <li>Andning: Kontrollerad men förhöjd, endast korta fraser</li>
+                <li>Känsla: Bekvämt svår, hållbar under 20-40 minuter</li>
+            </ul>
+
+            <h3>Exempel på träningspass</h3>
+            <div class="workout-example">
+                <h4>Pass för Tempo</h4>
+                <ul>
+                    <li>10×200 @ Zon 3 (15s vila)</li>
+                    <li>3×800 @ Zon 3 (30s vila)</li>
+                    <li>2000m intervallsim(500-400-300-400-500) @ Zon 3 (20s vila mellan serier)</li>
+                </ul>
+            </div>
+
+            <h3>Veckovolym</h3>
+            <p><strong>15-20% av total volym</strong> (nyckel för tävlingsspecifik förberedelse)</p>
+        </div>
+
+        <h2 class="mt-3xl">Zona 4: Tröskel (CSS-tempo)</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-4-badge">Zona 4</span>
+                <span class="zone-pace">96-100% av CSS-tempo</span>
+                <span class="zone-rpe">RPE 7-8/10</span>
+            </div>
+
+            <h3>Syfte</h3>
+            <p><strong>Laktatträsklings—den "värdefulla zonen".</strong> Zon 4 höjer din anaeroba tröskel, förbättrar din förmåga att clearera laktat och hålla hög intensitet. Este es tu CSS-tempo—den snabbaste hastighet du kan upprätthålla under ~30 minuter utan utmattning.</p>
+
+            <h3>Fysiologiska markörer</h3>
+            <ul>
+                <li>Hjärtfrekvens: 85-92% av max</li>
+                <li>Laktat: 4.0-6.0 mmol/L (maximalt laktatstabilt tillstånd)</li>
+                <li>Andning: Hård, mödosam, endast enstaka ord</li>
+                <li>Känsla: Mycket hård, hållbar under 20-30 minuter max</li>
+            </ul>
+
+            <h3>Exempel på träningspass</h3>
+            <div class="workout-example">
+                <h4>Pass för Umbral</h4>
+                <ul>
+                    <li>8×100 @ CSS-tempo (15s vila) — klassisk serie CSS</li>
+                    <li>5×200 @ 101% CSS (20s vila)</li>
+                    <li>3×400 @ 103% CSS (30s vila)</li>
+                    <li>1500m tidtagning kontinuerlig @ CSS-tempo</li>
+                </ul>
+            </div>
+
+            <h3>Veckovolym</h3>
+            <p><strong>10-15% av total volym</strong> (hög träningsstress, kräver adekvat återhämtning)</p>
+
+            <div class="callout callout-tip mt-md">
+                <h4>💡 Proffstips: Använd sTSS för att hantera Zon 4-belastning</h4>
+                <p>Zon 4-pass genererar 150-250 sTSS per pass. Spåra veckosummor för att undvika överträning. Begränsa Zon 4-arbete till 2-3 pass per vecka max under uppbyggnadsfaser.</p>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">Zona 5: VO₂max / Anaeróbico</h2>
+        <div class="zone-detail">
+            <div class="zone-header">
+                <span class="zone-badge zone-5-badge">Zona 5</span>
+                <span class="zone-pace">&lt;96% av CSS-tempo (snabbare än CSS)</span>
+                <span class="zone-rpe">RPE 9-10/10</span>
+            </div>
+
+            <h3>Syfte</h3>
+            <p>Utveckling av VO₂max, anaerob kapacitet, laktattolerans och neuromuskulär kraft. Zon 5 tränar din kropp att producera och tolerera höga laktatnivåer. Används för sprintlopp (50m-200m) och utveckling av maximal hastighet.</p>
+
+            <h3>Fysiologiska markörer</h3>
+            <ul>
+                <li>Hjärtfrekvens: 92-100% av max</li>
+                <li>Laktat: 6.0-15+ mmol/L (svår ackumulering)</li>
+                <li>Andning: Maximal, flåsande, ingen konversation möjlig</li>
+                <li>Känsla: Total ansträngning, hållbar endast under 2-8 minuter</li>
+            </ul>
+
+            <h3>Exempel på träningspass</h3>
+            <div class="workout-example">
+                <h4>Pass för VO₂max</h4>
+                <ul>
+                    <li>12×50 @ maximal ansträngning (30s vila)</li>
+                    <li>6×100 @ tempo tävling 200m (60s vila)</li>
+                    <li>4×200 @ tempo 94% CSS (90s vila)</li>
+                    <li>20×25 fullständig sprint (15s vila)</li>
+                </ul>
+            </div>
+
+            <h3>Veckovolym</h3>
+            <p><strong>5-10% av total volym</strong> (högre trötthetskostnad, använd med måtta)</p>
+
+            <div class="callout callout-warning mt-md">
+                <h4>⚠️ Kritisk återhämtning</h4>
+                <p>Zon 5-arbete är extremt krävande. Kräver 48-72 timmars återhämtning mellan pass. Stapla INTE Zon 5-pass på konsekutiva dagar. Spåra CTL/ATL/TSB för att säkerställa adekvat återhämtning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl">Veckofördelning av träning per atletnivå</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">Motions-/Fitnesssimmare</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Total volym:</strong> 6,000-12,000m/vecka (2-3 pass)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 15% (uppvärmning/nedvarvning)</li>
+                        <li><strong>Zona 2:</strong> 70% (bygga aerob bas)</li>
+                        <li><strong>Zona 3:</strong> 10% (tempo tillfällig)</li>
+                        <li><strong>Zona 4:</strong> 5% (begränsat tröskelarbete)</li>
+                        <li><strong>Zona 5:</strong> 0% (inte nödvändigt ännu)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Tävlande Masters-simmare</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Total volym:</strong> 15,000-25,000m/vecka (4-6 pass)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 15% (simningarde återhämtning)</li>
+                        <li><strong>Zona 2:</strong> 60% (aerob grund)</li>
+                        <li><strong>Zona 3:</strong> 15% (tävlingstempoarbete)</li>
+                        <li><strong>Zona 4:</strong> 8% (pass de tröskel)</li>
+                        <li><strong>Zona 5:</strong> 2% (hastighetsutveckling)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Triatleter (simfokus)</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Total volym:</strong> 10,000-18,000m/vecka (3-4 pass)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 10% (uppvärmning/teknik)</li>
+                        <li><strong>Zona 2:</strong> 75% (maximera aerob effektivitet)</li>
+                        <li><strong>Zona 3:</strong> 10% (tävlingssimulering)</li>
+                        <li><strong>Zona 4:</strong> 5% (begränsat—bevara energi för cykling/löpning)</li>
+                        <li><strong>Zona 5:</strong> 0% (inte relevant för uthållighetslopp)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Elit-/Universitetssimmare</h3>
+                <div class="card-content">
+                    <p class="mb-md"><strong>Total volym:</strong> 40,000-70,000m/vecka (10-12 pass)</p>
+                    <ul>
+                        <li><strong>Zona 1:</strong> 20% (återhämtning väsentlig vid hög volym)</li>
+                        <li><strong>Zona 2:</strong> 50% (bibehållande av aerob bas)</li>
+                        <li><strong>Zona 3:</strong> 15% (tävlingstempospeci ficitet)</li>
+                        <li><strong>Zona 4:</strong> 10% (trösutveckling)</li>
+                        <li><strong>Zona 5:</strong> 5% (kraft och hastighet)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Hur du beräknar dina personliga träningszoner</h2>
+
+        <p class="mb-md">Dina träningszoner är anpassade till DIN Kritiska simhastighet. Så här beräknar du dem:</p>
+
+        <h3>Steg 1: Genomför CSS-test</h3>
+        <p class="mb-md">Genomför ett tidtagningstest på 400m och 200m med 5-10 minuters återhämtning mellan ansträngningarna. <a href="/sv/css/">Lär dig det fullständiga CSS-testprotokollet →</a></p>
+
+        <h3>Steg 2: Beräkna CSS-tempo</h3>
+        <div class="example-box">
+            <p><strong>Exempel:</strong></p>
+            <ul>
+                <li>Tid 400m: 6:08 (368 sekunder)</li>
+                <li>Tid 200m: 2:30 (150 sekunder)</li>
+            </ul>
+            <p class="mt-md">CSS-tempo = (T₄₀₀ - T₂₀₀) / 2<br>
+            CSS-tempo = (368 - 150) / 2 = 109 sekunder = <strong>1:49/100m</strong></p>
+        </div>
+
+        <h3 class="mt-lg">Steg 3: Beräkna zon-tempo</h3>
+        <p class="mb-md">Multiplicera CSS-tempo med zonprocenterna:</p>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>Zona</th>
+                        <th>%-område</th>
+                        <th>Beräkning (CSS = 1:49/100m)</th>
+                        <th>Zon-tempoområde</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>Zona 1</strong></td>
+                        <td>&gt;108%</td>
+                        <td>109 × 1.08 = 118s</td>
+                        <td>&gt;1:58/100m</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>Zona 2</strong></td>
+                        <td>104-108%</td>
+                        <td>109 × 1.04-1.08 = 113-118s</td>
+                        <td>1:53-1:58/100m</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>Zona 3</strong></td>
+                        <td>99-103%</td>
+                        <td>109 × 0.99-1.03 = 108-112s</td>
+                        <td>1:48-1:52/100m</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>Zona 4</strong></td>
+                        <td>96-100%</td>
+                        <td>109 × 0.96-1.00 = 105-109s</td>
+                        <td>1:45-1:49/100m</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>Zona 5</strong></td>
+                        <td>&lt;96%</td>
+                        <td>109 × 0.96 = 105s</td>
+                        <td>&lt;1:45/100m</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>⚡ Få automatisk zonberäkning</h3>
+            <p>Använd vår <a href="/sv/css/">gratis CSS-kalkylator</a> för att omedelbart få dina personliga träningszoner. Ange dina tider för 400m och 200m, och vi beräknar CSS + alla 5 zonområden automatiskt.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Vanliga frågor om träningszoner</h2>
+
+        <div class="faq-item">
+            <h3>Hur ofta ska jag testa om mitt CSS för att uppdatera zonerna?</h3>
+            <p>Var <strong>6–8:e vecka</strong> under bas- och uppbyggnadsfaser. Ditt CSS bör förbättras (bli snabbare) när konditionen ökar, vilket kräver zonjusteringar. Testa om efter sjukdom, skada eller långa viloperioder.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Kan jag blanda zoner i ett enda träningspass?</h3>
+            <p><strong>Ja—de flesta träningspass är multizon.</strong> Exempel: 400m uppvärmning Zona 1 + 8×100 tröskel Zona 4 + 300m nedvarvning Zona 1. Nyckeln är avsiktligt zonval, inte att simma av misstag i "mellanzon".</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Vad händer om jag inte kan hålla zontempot?</h3>
+            <p>Om du inte kan hålla det föreskrivna zontempot, då: (1) ditt CSS är föråldrat (för snabbt), (2) du är trött (kontrollera TSB), eller (3) otillräcklig återhämtning mellan intervaller. Testa om CSS om detta händer konsekvent.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Gäller zonerna för alla simslag?</h3>
+            <p>CSS testas typiskt i <strong>frisim</strong>. För andra simslag kan du genomföra simslagsspecifika CSS-tester, men de flesta simmare använder frisims CSS-zoner och justerar efter känsla för fjäril/ryggsim/bröstsim.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Hur förhåller sig zonerna till Training Stress Score (sTSS)?</h3>
+            <p>Zonen bestämmer <strong>Intensitetsfaktorn (IF)</strong>, som höjs i kvadrat i sTSS-formeln. Zon 4 (IF ~0,95–1,0) genererar 90–100 sTSS per timme. Zon 2 (IF ~0,80) genererar endast 64 sTSS per timme. Högre zoner = exponentiellt högre träningsstress.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Kan jag träna bara i Zon 2?</h3>
+            <p>Träning enbart i Zon 2 fungerar för <strong>nybörjare</strong> som bygger grundkondition. Dock behöver avancerade simmare Zon 3–5-arbete för att utveckla tävlingsspecifika anpassningar. Sigue la regla 80/20: 80% fácil (Zona 1-2), 20% difícil (Zona 3-5).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Relaterade resurser</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">CSS-test</h3>
+                <div class="card-content">
+                    <p>Genomför CSS-testet och få dina personliga träningszoner direkt med vår gratiskalkylator.</p>
+                    <a href="/sv/css/" class="btn btn-secondary btn-small mt-md">CSS-kalkylator →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">Training Stress Score</h3>
+                <div class="card-content">
+                    <p>Lär dig hur zonintensitet påverkar sTSS-beräkningen och den totala träningsbelastningen.</p>
+                    <a href="/sv/training-load/" class="btn btn-secondary btn-small mt-md">sTSS-guide →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">App SwimAnalytics</h3>
+                <div class="card-content">
+                    <p>Automatisk zondetektering för varje träningspass. Spårar tid i zon och zonspecifik träningsbelastning.</p>
+                    <a href="/sv/" class="btn btn-secondary btn-small mt-md">Läs mer →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>Redo att träna smartare?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Ladda ner SwimAnalytics gratis</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Hem
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Lära
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Vetenskap
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/contact/">
+                            Kontakt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Alla rättigheter förbehållna</h3>
+                <ul>
+                    <li><a href="/sv/privacy/">Integritet</a></li>
+                    <li><a href="/sv/terms/">Villkor</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Välj språk</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-zones/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-zones/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-zones/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-zones/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-zones/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-zones/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/training-zones/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/training-zones/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/training-zones/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/training-zones/"
+                           aria-current="page">
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-zones/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/training-zones/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/training-zones/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/training-zones/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Alla rättigheter förbehållna.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Denna webbplats använder cookies för att förbättra din upplevelse." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Denna webbplats använder cookies för att förbättra din upplevelse. <a href="/sv/privacy/">Läs mer</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Neka</button>
+            <button class="btn btn-primary" id="cookie-accept">Acceptera</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

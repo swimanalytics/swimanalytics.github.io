@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>水泳TSS計算機：トレーニング負荷とPMC(CTL/ATL/TSB)</title>
+    <meta name="description" content="水泳トレーニングストレススコア(sTSS)計算とパフォーマンス管理チャート指標(CTL、ATL、TSB)を学びます。科学的にフィットネスと疲労を追跡します。実例、週間TSS目標、テーパー戦略を含む。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="水泳TSS, sTSS計算機, トレーニングストレススコア, CTL ATL TSB, 水泳PMC">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ja/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ja/training-load/">
+    <meta property="og:title" content="水泳TSS計算機：トレーニング負荷とPMC(CTL/ATL/TSB)">
+    <meta property="og:description" content="水泳トレーニングストレススコア(sTSS)計算とパフォーマンス管理チャート指標(CTL、ATL、TSB)を学びます。科学的にフィットネスと疲労を追跡します。実例、週間TSS目標、テーパー戦略を含む。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ja/training-load/">
+    <meta name="twitter:title" content="水泳TSS計算機：トレーニング負荷とPMC(CTL/ATL/TSB)">
+    <meta name="twitter:description" content="水泳トレーニングストレススコア(sTSS)計算とパフォーマンス管理チャート指標(CTL、ATL、TSB)を学びます。科学的にフィットネスと疲労を追跡します。実例、週間TSS目標、テーパー戦略を含む。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ja"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "水泳TSS計算機：トレーニング負荷とPMC(CTL/ATL/TSB)",
+      "description": "水泳トレーニングストレススコア(sTSS)計算とパフォーマンス管理チャート指標(CTL、ATL、TSB)を学びます。科学的にフィットネスと疲労を追跡します。実例、週間TSS目標、テーパー戦略を含む。",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ja/training-load/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "トレーニング負荷",
+          "item": "https://swimanalytics.app/ja/training-load/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">コンテンツへ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ja/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/"
+                               
+                               aria-current="">
+                                ホーム
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学ぶ</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/getting-started/"
+                                       
+                                       aria-current="">
+                                        はじめに
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-zones/"
+                                       
+                                       aria-current="">
+                                        トレーニングゾーン
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-load/"
+                                       class="active"
+                                       aria-current="page">
+                                        トレーニング負荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS計算機
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/formulas/"
+                                       
+                                       aria-current="">
+                                        数式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/efficiency/"
+                                       
+                                       aria-current="">
+                                        効率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        ストローク
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/contact/"
+                               
+                               aria-current="">
+                                お問い合わせ
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="言語を選択">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" selected>
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>トレーニング負荷とパフォーマンス管理</h1>
+        <p class="lead">ストレスの定量化、フィットネスのモニタリング、パフォーマンスの最適化</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>トレーニング負荷の理解</h2>
+        <p class="lead">トレーニング負荷の定量化は、重要な問いに答えます：<strong>そのトレーニングはどれほど厳しかったか？</strong> 距離や時間だけではなく、身体に課された真の生理学的ストレスを測定します。</p>
+
+        <p>アンドリュー・コーガン博士によって開発されたTraining Stress Score（TSS）システムは、トレーニングの強度と時間を単一の数値で定量化する標準化された方法を提供します。水泳では<strong>Swim Training Stress Score（sTSS）</strong>を使用し、水の抵抗特性を考慮した重要な修正を加えています。</p>
+
+        <div class="callout callout-info">
+            <h3>TSS標準</h3>
+            <p>機能的閾値ペース（CSS）での1時間 = <strong>100 TSS</strong></p>
+            <p>この標準化により、トレーニング、週、トレーニングサイクルを比較できます。閾値での30分の泳ぎ = 約50 TSS。閾値での2時間の泳ぎ = 約200 TSS。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Swim Training Stress Score（sTSS）</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>計算式</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        sTSS = (IF³) × 時間（時間単位） × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>ここで、強度係数（IF）は：</p>
+                        <div class="formula">
+                            IF = NSS / FTP
+                        </div>
+                        <p>正規化水泳速度（NSS）は：</p>
+                        <div class="formula">
+                            NSS = 総距離 / 総時間（m/分）
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning mt-md">
+                    <h4>⚡ 3乗係数（IF³）</h4>
+                    <p><strong>重要な革新：</strong>水泳はIF³を使用し、サイクリング/ランニングはIF²を使用します。これは水の物理学を反映しており、抵抗は速度とともに<em>指数関数的に</em>増加します。</p>
+                    <p>水中で10%速く進むには約33%多くのパワーが必要です。3乗係数は、この生理学的コストの増加を正確に重み付けします。</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>実践例</h3>
+                <div class="example-box">
+                    <h4>スイマーのプロフィール：</h4>
+                    <ul>
+                        <li>CSS：1:33/100m = 93秒/100m</li>
+                        <li>FTP：64.5 m/分（100m / 1.55分）</li>
+                    </ul>
+
+                    <h4>トレーニングデータ：</h4>
+                    <ul>
+                        <li>総距離：3000m</li>
+                        <li>実泳時間：55:00（3300秒）</li>
+                        <li>休憩時間：10:00（カウントせず）</li>
+                    </ul>
+
+                    <h4>ステップ1：NSSを計算</h4>
+                    <div class="calculation">
+                        NSS = 3000m / 55分<br>
+                        NSS = <strong>54.5 m/分</strong>
+                    </div>
+
+                    <h4>ステップ2：IFを計算</h4>
+                    <div class="calculation">
+                        IF = 54.5 / 64.5<br>
+                        IF = <strong>0.845</strong>
+                    </div>
+
+                    <h4>ステップ3：sTSSを計算</h4>
+                    <div class="calculation">
+                        sTSS = (0.845³) × (55/60) × 100<br>
+                        sTSS = 0.603 × 0.917 × 100<br>
+                        sTSS = <strong>55.3</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>sTSS強度ガイド</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>sTSS範囲</th>
+                        <th>強度レベル</th>
+                        <th>説明</th>
+                        <th>トレーニング例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>軽めの回復</td>
+                        <td>軽い泳ぎ、テクニック重視、アクティブリカバリー</td>
+                        <td>30-45分の回復泳、テクニックドリル</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>適度なトレーニング</td>
+                        <td>典型的な日常トレーニング量</td>
+                        <td>60-90分の有酸素持久力、混合ゾーン</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>ハードトレーニング</td>
+                        <td>閾値/VO₂ワークを含む質の高いセッション</td>
+                        <td>90-120分、CSSインターバル、レースペースセット</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>非常にハード</td>
+                        <td>レースシミュレーション、高強度ブロック</td>
+                        <td>2-3時間セッション、タイムトライアル、全力セット</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>極限</td>
+                        <td>レース日、超長距離イベント</td>
+                        <td>競技会、アイアンマンスイム、マラソンスイミング</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 レベル別週間TSS目標</h3>
+            <ul>
+                <li><strong>初心者：</strong>200-400 TSS/週</li>
+                <li><strong>中級者：</strong>400-700 TSS/週</li>
+                <li><strong>上級者/エリート：</strong>700-1000+ TSS/週</li>
+            </ul>
+            <p>これらは慢性トレーニング負荷（CTL）に蓄積されます。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">パフォーマンス管理チャート（PMC）</h2>
+        <p class="text-center lead">PMCは、トレーニングの全体像を物語る3つの相互関連指標を可視化します：フィットネス、疲労、フレッシュネス状態。</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - Chronic Training Load</h3>
+                    <div class="metric-value-label">あなたのフィットネス</div>
+                    <p>日々のTSSの42日間指数加重移動平均。長期的な有酸素フィットネスとトレーニング適応を表します。</p>
+                    <div class="formula-small">
+                        今日のCTL = 昨日のCTL + (今日のTSS - 昨日のCTL) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - Acute Training Load</h3>
+                    <div class="metric-value-label">あなたの疲労</div>
+                    <p>日々のTSSの7日間指数加重移動平均。最近のトレーニングストレスと蓄積疲労を捉えます。</p>
+                    <div class="formula-small">
+                        今日のATL = 昨日のATL + (今日のTSS - 昨日のATL) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - Training Stress Balance</h3>
+                    <div class="metric-value-label">あなたのフレッシュネス状態</div>
+                    <p>昨日のフィットネスと疲労の差。パフォーマンスの準備状態または休息の必要性を示します。</p>
+                    <div class="formula-small">
+                        TSB = 昨日のCTL - 昨日のATL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>CTLの理解：フィットネス指標</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>CTLが表すもの</h3>
+                <p>CTLは、過去6週間で身体が<em>適応した</em>トレーニング負荷を定量化します。CTLが高いということは：</p>
+                <ul>
+                    <li>より大きな有酸素容量と持久力</li>
+                    <li>より多くのトレーニング量を処理する能力</li>
+                    <li>筋肉および代謝適応の向上</li>
+                    <li>持続可能なパフォーマンスの向上</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>時定数：42日</h4>
+                    <p>CTLの半減期は約14.7日です。42日後、単一トレーニングの影響の約36.8%（1/e）が残ります。</p>
+                    <p>この遅い減衰は、フィットネスが徐々に構築されるが、ゆっくりと減退することを意味します。短い休息期間中のデトレーニングから保護します。</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>典型的なCTL値</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>初心者：</strong>
+                        <div class="value">20-40 CTL</div>
+                        <p>基礎体力の構築、週3-4回の泳ぎ</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>中級者：</strong>
+                        <div class="value">40-70 CTL</div>
+                        <p>一貫したトレーニング、週4-5回の泳ぎ</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>上級者：</strong>
+                        <div class="value">70-100 CTL</div>
+                        <p>高ボリューム、週5-6回の泳ぎ、ダブルセッション</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>エリート：</strong>
+                        <div class="value">100-150+ CTL</div>
+                        <p>プロのトレーニング負荷、週8-12セッション</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ CTL増加率の制限</strong>
+                    <ul>
+                        <li><strong>初心者：</strong>週+3-5 CTL</li>
+                        <li><strong>中級者：</strong>週+5-7 CTL</li>
+                        <li><strong>上級者：</strong>週+7-10 CTL</li>
+                    </ul>
+                    <p>これらの率を超えると、怪我や燃え尽きのリスクが大幅に増加します。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>ATLの理解：疲労指標</h2>
+
+        <div class="content-split">
+            <div>
+                <p>ATLは短期的なトレーニングストレス、つまり過去1週間に蓄積された疲労を追跡します。ハードトレーニング後に急速に上昇し、休息中に急速に低下します。</p>
+
+                <h3>ATLの動態</h3>
+                <ul>
+                    <li><strong>迅速な反応：</strong>7日の時定数（半減期約2.4日）</li>
+                    <li><strong>スパイクパターン：</strong>ハードセッション後に跳ね上がり、回復中に低下</li>
+                    <li><strong>回復指標：</strong>ATLの低下 = 疲労の消散</li>
+                    <li><strong>オーバートレーニング警告：</strong>慢性的に高いATLは不十分な回復を示唆</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 フィットネス-疲労モデル</h4>
+                    <p>各トレーニングセッションは2つの効果を生み出します：</p>
+                    <ol>
+                        <li><strong>フィットネス刺激</strong>（ゆっくり構築、長期持続）</li>
+                        <li><strong>疲労</strong>（急速に構築、急速に消散）</li>
+                    </ol>
+                    <p>パフォーマンス = フィットネス - 疲労。PMCはこのモデルを可視化し、科学的なトレーニングの周期化を可能にします。</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>定常状態時</h3>
+                <p>トレーニング負荷が週ごとに一貫している場合、CTLとATLは収束します：</p>
+                <div class="example-box">
+                    <h4>例：一貫して週500 TSS</h4>
+                    <div class="calculation">
+                        1日のTSS ≈ 71<br>
+                        CTLは約71に近づく<br>
+                        ATLは約71に近づく<br>
+                        TSBは0に近づく
+                    </div>
+                    <p><strong>解釈：</strong>フィットネスと疲労がバランスしています。累積的な不足または余剰はありません。</p>
+                </div>
+
+                <h3>構築期間中</h3>
+                <p>トレーニング負荷を増やすとき：</p>
+                <div class="example-box">
+                    <p>ATLは短い時定数のためCTLよりも<em>速く</em>上昇します。TSBはマイナスになります（疲労 > フィットネス）。これは正常かつ生産的です。適応を刺激するために過負荷をかけています。</p>
+                </div>
+
+                <h3>テーパー期間中</h3>
+                <p>トレーニング負荷を減らすとき：</p>
+                <div class="example-box">
+                    <p>ATLはCTLよりも<em>速く</em>低下します。TSBはプラスになります（フィットネス > 疲労）。これが目標です。フィットネスを維持しながら、レース当日にフレッシュな状態で臨みます。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>TSBの理解：フレッシュネス/準備状態指標</h2>
+
+        <p class="lead">TSBは昨日のフィットネス（CTL）と昨日の疲労（ATL）の差です。フレッシュか疲労しているか、競技の準備ができているか回復が必要かを示します。</p>
+
+        <div class="tsb-zones-container">
+            <h3>TSB解釈ガイド</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>TSB範囲</th>
+                        <th>状態</th>
+                        <th>解釈</th>
+                        <th>推奨アクション</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>過負荷リスク</strong></td>
+                        <td>極度の疲労。オーバートレーニングの可能性。</td>
+                        <td>即座の回復が必要。ボリュームを50%以上削減。</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 ~ -30</td>
+                        <td><strong>最適なトレーニングブロック</strong></td>
+                        <td>生産的な過負荷。フィットネスを構築中。</td>
+                        <td>計画を継続。過度な疲労の兆候を監視。</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 ~ -20</td>
+                        <td><strong>適度な負荷</strong></td>
+                        <td>標準的なトレーニング蓄積。</td>
+                        <td>通常のトレーニング。質の高いセッションを処理可能。</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 ~ +15</td>
+                        <td><strong>移行/維持</strong></td>
+                        <td>バランスの取れた状態。軽い疲労またはフレッシュ。</td>
+                        <td>BまたはCレース、テスト、回復週に適している。</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 ~ +25</td>
+                        <td><strong>最適なレースフレッシュネス</strong></td>
+                        <td>フレッシュでフィット。最適なパフォーマンスウィンドウ。</td>
+                        <td>優先Aレース。ピークパフォーマンスが期待される。</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 ~ +35</td>
+                        <td><strong>非常にフレッシュ</strong></td>
+                        <td>非常に休息している。スプリントに適している。</td>
+                        <td>短距離レース、タイムトライアル、非常に休息した状態。</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>デトレーニング</strong></td>
+                        <td>不活動によるフィットネス低下。</td>
+                        <td>トレーニング再開。長期休息によるフィットネス低下。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 レース距離別TSB目標</h3>
+            <ul>
+                <li><strong>スプリント/オリンピックトライアスロン：</strong>TSB +15~+25（7-10日間のテーパー）</li>
+                <li><strong>ハーフアイアンマン（70.3）：</strong>TSB +20~+30（10-14日間のテーパー）</li>
+                <li><strong>フルアイアンマン：</strong>TSB +15~+25（14-21日間のテーパー）</li>
+                <li><strong>プール水泳イベント：</strong>TSB +15~+25（イベントに応じて7-14日間のテーパー）</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>PMC例：トレーニングブロック → テーパー → レース</h2>
+
+        <div class="example-box">
+            <h3>8週間のトレーニングサイクル</h3>
+
+            <h4>第1-5週：構築フェーズ</h4>
+            <ul>
+                <li>週間TSS：400 → 450 → 500 → 550 → 550</li>
+                <li>CTL：50から65へ徐々に増加</li>
+                <li>ATL：週間負荷を追跡、55-80で変動</li>
+                <li>TSB：マイナス（-15~-25）、生産的なトレーニングストレスを示す</li>
+            </ul>
+
+            <h4>第6週：回復週</h4>
+            <ul>
+                <li>週間TSS：300（40%削減）</li>
+                <li>CTL：約63にわずかに低下（フィットネス維持）</li>
+                <li>ATL：約50に低下（疲労消散）</li>
+                <li>TSB：+5に上昇（部分的なフレッシュネス）</li>
+            </ul>
+
+            <h4>第7週：最終構築</h4>
+            <ul>
+                <li>週間TSS：500</li>
+                <li>CTL：約65に上昇</li>
+                <li>ATL：約75に跳ね上がる</li>
+                <li>TSB：-20に戻る（質の高いトレーニングを吸収）</li>
+            </ul>
+
+            <h4>第8週：テーパー + レース</h4>
+            <ul>
+                <li>第1-9日：ボリューム削減、強度維持（合計200 TSS）</li>
+                <li>CTL：約62に緩やかに低下（最小限のフィットネス損失）</li>
+                <li>ATL：約40に急速に低下（疲労除去）</li>
+                <li>TSB：<strong>レース当日+20でピーク</strong></li>
+                <li><strong>結果：</strong>フレッシュでフィット、パフォーマンス準備完了</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ テーパーが機能する理由</h3>
+            <p>異なる時定数（CTLは42日、ATLは7日）がテーパー効果を生み出します：</p>
+            <ul>
+                <li>ATLは迅速に反応 → 疲労は7-10日で消える</li>
+                <li>CTLはゆっくり反応 → フィットネスは数週間持続</li>
+                <li>結果：疲労が消えている間にフィットネスが残る = ピークパフォーマンス</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>実践的な応用ガイド</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ 毎日のsTSSを記録</h3>
+                <p>一貫性が鍵です。各トレーニングのsTSSを記録し、正確なCTL/ATL/TSBトレンドを構築します。欠損データはフィットネスカーブにギャップを生じさせます。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ CTL増加率を監視</h3>
+                <p>CTLを徐々に増やします。週5-7ポイントの増加は、ほとんどのスイマーにとって持続可能です。15-20ポイントのジャンプは怪我を招きます。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ 回復週を計画</h3>
+                <p>3-4週間ごとに、1週間ボリュームを30-50%削減します。TSBを-5~+10に上昇させます。これによりフィットネスが定着し、オーバートレーニングを防ぎます。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ テーパーのタイミング</h3>
+                <p>レース当日にTSB +15~+25を目指します。イベント距離と現在のTSBに応じて、7-14日前にテーパーを開始します。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ マイナスTSBを恐れない</h3>
+                <p>構築フェーズ中のTSB -20~-30は正常かつ生産的です。適応を刺激するための刺激を適用していることを意味します。</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ CTLの減衰を尊重</h3>
+                <p>トレーニングの休止後、すぐに以前のCTLレベルに戻そうとしないでください。怪我を避けるために徐々に再構築します。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>トレーニング負荷をマスターする</h2>
+        <p class="lead">PMCは主観的なトレーニングを客観的なデータに変換します。sTSS、CTL、ATL、TSBを監視することで、フィットネスの進行、疲労管理、ピークパフォーマンスのタイミングを正確にコントロールできます。</p>
+
+        <div class="mt-xl">
+            <a href="/ja/css/" class="btn btn-secondary">← CSS基礎</a>
+            <a href="/ja/efficiency/" class="btn btn-primary">効率指標 →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ja/">
+                            ホーム
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            学ぶ
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/contact/">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>全著作権所有</h3>
+                <ul>
+                    <li><a href="/ja/privacy/">プライバシー</a></li>
+                    <li><a href="/ja/terms/">利用規約</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>言語を選択</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-load/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-load/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-load/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-load/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-load/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/training-load/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/training-load/"
+                           aria-current="page">
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/training-load/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/training-load/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-load/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/training-load/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/training-load/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/training-load/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 全著作権所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="このウェブサイトはクッキーを使用してユーザー体験を向上させています。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。 <a href="/ja/privacy/">詳細</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒否する</button>
+            <button class="btn btn-primary" id="cookie-accept">同意する</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

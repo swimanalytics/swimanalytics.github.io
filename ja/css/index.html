@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>クリティカルスイムスピード(CSS)計算機 - 無料テスト＆トレーニングゾーン</title>
+    <meta name="description" content="スイマー向けの無料CSS計算機。400mと200mのテスト時間からクリティカルスイムスピードを計算します。パーソナライズされたトレーニングゾーン、閾値ペース、レース予測を取得。Wakayoshi研究に基づく。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="クリティカルスイムスピード, CSS計算機, 水泳トレーニングゾーン, CSSテスト, 閾値ペース">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ja/css/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ja/css/">
+    <meta property="og:title" content="クリティカルスイムスピード(CSS)計算機 - 無料テスト＆トレーニングゾーン">
+    <meta property="og:description" content="スイマー向けの無料CSS計算機。400mと200mのテスト時間からクリティカルスイムスピードを計算します。パーソナライズされたトレーニングゾーン、閾値ペース、レース予測を取得。Wakayoshi研究に基づく。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ja/css/">
+    <meta name="twitter:title" content="クリティカルスイムスピード(CSS)計算機 - 無料テスト＆トレーニングゾーン">
+    <meta name="twitter:description" content="スイマー向けの無料CSS計算機。400mと200mのテスト時間からクリティカルスイムスピードを計算します。パーソナライズされたトレーニングゾーン、閾値ペース、レース予測を取得。Wakayoshi研究に基づく。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/css/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/css/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/css/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/css/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/css/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/css/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/css/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/css/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/css/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/css/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/css/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/css/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/css/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/css/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/css/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ja"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "クリティカルスイムスピード(CSS)計算機 - 無料テスト＆トレーニングゾーン",
+      "description": "スイマー向けの無料CSS計算機。400mと200mのテスト時間からクリティカルスイムスピードを計算します。パーソナライズされたトレーニングゾーン、閾値ペース、レース予測を取得。Wakayoshi研究に基づく。",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ja/css/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "CSS",
+          "item": "https://swimanalytics.app/ja/css/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">コンテンツへ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ja/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/"
+                               
+                               aria-current="">
+                                ホーム
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学ぶ</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/getting-started/"
+                                       
+                                       aria-current="">
+                                        はじめに
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/css/"
+                                       class="active"
+                                       aria-current="page">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-zones/"
+                                       
+                                       aria-current="">
+                                        トレーニングゾーン
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-load/"
+                                       
+                                       aria-current="">
+                                        トレーニング負荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS計算機
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/formulas/"
+                                       
+                                       aria-current="">
+                                        数式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/efficiency/"
+                                       
+                                       aria-current="">
+                                        効率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        ストローク
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/contact/"
+                               
+                               aria-current="">
+                                お問い合わせ
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="言語を選択">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" selected>
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>クリティカルスイムスピード（CSS）</h1>
+        <p class="lead">データに基づくスイミングトレーニングの基礎</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>クリティカルスイムスピード（CSS）とは何ですか？</h2>
+            <p><strong>クリティカルスイムスピード（CSS）</strong>は、疲労することなく維持できる理論上の最大遊泳速度です。有酸素閾値ペースを表し、通常は血中乳酸4 mmol/Lに相当し、約30分間持続可能です。CSSは400mと200mのタイムトライアルテストを使用して計算され、個別化されたトレーニングゾーンを決定します。</p>
+        </div>
+
+        <p class="lead">クリティカルスイムスピード（CSS）は、疲労することなく継続的に維持できる理論上の最大遊泳速度を表します。これは水中での有酸素閾値であり、乳酸の生成と除去が等しくなる強度です。</p>
+
+        <div class="callout callout-info">
+            <h3>🎯 生理学的意義</h3>
+            <p>CSSは以下と密接に対応しています：</p>
+            <ul>
+                <li><strong>乳酸閾値2（LT2）</strong> - 第二換気閾値</li>
+                <li><strong>最大乳酸安定状態（MLSS）</strong> - 持続可能な最高乳酸レベル</li>
+                <li><strong>機能的閾値ペース（FTP）</strong> - サイクリングのFTPに相当する水泳版</li>
+                <li><strong>血中乳酸約4 mmol/L</strong> - OBLAの伝統的なマーカー</li>
+            </ul>
+        </div>
+
+        <h3>CSSが重要な理由</h3>
+        <p>CSSは、すべての高度なトレーニング負荷分析を解き放つ<strong>基本的指標</strong>です：</p>
+        <ul>
+            <li><strong>トレーニングゾーン：</strong> あなたの生理学に基づいて強度ゾーンをカスタマイズ</li>
+            <li><strong>sTSS計算：</strong> トレーニングストレススコアの正確な定量化を可能にする</li>
+            <li><strong>CTL/ATL/TSB：</strong> パフォーマンス管理チャート指標に必要</li>
+            <li><strong>進捗の追跡：</strong> 有酸素フィットネスの改善の客観的測定</li>
+        </ul>
+
+        <div class="warning-box">
+            <strong>⚠️ 重要な依存関係：</strong> 有効なCSSテストがないと、高度なトレーニング負荷指標（sTSS、CTL、ATL、TSB）を計算できません。不正確なCSSは、すべての後続のトレーニング分析を損ないます。
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">CSSテストプロトコル</h2>
+        <div class="grid grid-2">
+            <div class="protocol-card">
+                <h3>📋 標準プロトコル</h3>
+                <ol class="protocol-steps">
+                    <li>
+                        <strong>ウォームアップ</strong>
+                        <p>300-800mの軽い遊泳、ドリル、徐々に加速して最大努力に備えます。</p>
+                    </li>
+                    <li>
+                        <strong>400mタイムトライアル</strong>
+                        <p>壁からのプッシュオフで持続的な最大努力（飛び込みなし）。秒単位で時間を記録。目標：持続可能な最速400m。</p>
+                    </li>
+                    <li>
+                        <strong>完全な回復</strong>
+                        <p><span class="highlight-text">5-10分</span>の軽い遊泳または完全休息。これは正確な結果のために重要です。</p>
+                    </li>
+                    <li>
+                        <strong>200mタイムトライアル</strong>
+                        <p>壁からのプッシュオフで最大努力。時間を正確に記録。これは400mより100mあたり速くなるはずです。</p>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⚠️ よくある間違い</h3>
+                <div class="mistake-list">
+                    <div class="mistake-item">
+                        <h4>不十分な回復</h4>
+                        <p><strong>問題：</strong> 疲労が200mタイムを人為的に遅くする</p>
+                        <p><strong>結果：</strong> 計算されたCSSが<em>実際より速く</em>なり、過剰トレーニングゾーンにつながる</p>
+                        <p><strong>解決策：</strong> 心拍数が120 bpm未満に下がるまで、または呼吸が完全に回復するまで休む</p>
+                    </div>
+
+                    <div class="mistake-item">
+                        <h4>400mの不適切なペース配分</h4>
+                        <p><strong>問題：</strong> 速すぎるスタートは劇的な減速を引き起こす</p>
+                        <p><strong>結果：</strong> 400mタイムが真の持続可能なペースを反映しない</p>
+                        <p><strong>解決策：</strong> イーブンペースまたはネガティブスプリット（後半200m ≤ 前半200m）を目指す</p>
+                    </div>
+
+                    <div class="mistake-item">
+                        <h4>飛び込みスタートの使用</h4>
+                        <p><strong>問題：</strong> 約0.5-1.5秒の利点が加わり、計算が偏る</p>
+                        <p><strong>解決策：</strong> 常に壁からのプッシュオフを使用</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🔄 再評価の頻度</h3>
+            <p>フィットネスが向上するにつれてトレーニングゾーンを更新するために、<strong>6-8週間ごと</strong>にCSSを再評価してください。トレーニングに適応するにつれて、ゾーンは徐々に速くなるはずです。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>CSS計算式</h2>
+
+        <div class="formula-box">
+            <h3>計算式</h3>
+            <div class="formula">
+                CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+            </div>
+            <div class="formula-explanation">
+                <p>ここで：</p>
+                <ul>
+                    <li>D₁ = 200メートル</li>
+                    <li>D₂ = 400メートル</li>
+                    <li>T₁ = 200mのタイム（秒単位）</li>
+                    <li>T₂ = 400mのタイム（秒単位）</li>
+                </ul>
+            </div>
+
+            <h3 class="mt-lg">100mあたりのペースに簡略化</h3>
+            <div class="formula">
+                CSSペース/100m（秒） = (T₄₀₀ - T₂₀₀) / 2
+            </div>
+        </div>
+
+        <h3>計算例</h3>
+        <div class="example-box">
+            <h4>テスト結果：</h4>
+            <ul>
+                <li>400mタイム：<strong>6:08</strong>（368秒）</li>
+                <li>200mタイム：<strong>2:30</strong>（150秒）</li>
+            </ul>
+
+            <h4>ステップ1：CSSをm/sで計算</h4>
+            <div class="calculation">
+                CSS = (400 - 200) / (368 - 150)<br>
+                CSS = 200 / 218<br>
+                CSS = <strong>0.917 m/s</strong>
+            </div>
+
+            <h4>ステップ2：100mあたりのペースに変換</h4>
+            <div class="calculation">
+                ペース = 100 / 0.917<br>
+                ペース = 109秒<br>
+                ペース = <strong>1:49 / 100m</strong>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">無料CSS計算機</h2>
+        <p class="lead">クリティカルスイムスピードと個別化されたトレーニングゾーンを即座に計算します</p>
+
+        <div class="css-calculator">
+            <form id="cssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="time400" class="form-label">400mタイム（mm:ss）</label>
+                        <input
+                            type="text"
+                            id="time400"
+                            class="form-input"
+                            placeholder="6:08"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time400-help"
+                        />
+                        <small id="time400-help" class="form-help">形式：分:秒（例：6:08）</small>
+                        <div class="form-error" id="time400-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time200" class="form-label">200mタイム（mm:ss）</label>
+                        <input
+                            type="text"
+                            id="time200"
+                            class="form-input"
+                            placeholder="2:30"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="time200-help"
+                        />
+                        <small id="time200-help" class="form-help">形式：分:秒（例：2:30）</small>
+                        <div class="form-error" id="time200-error"></div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateBtn">CSSを計算</button>
+                        <button type="reset" class="btn btn-ghost" id="resetBtn">クリア</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="cssResults" aria-live="polite">
+                <h3>計算結果</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">クリティカルスイムスピード</div>
+                        <div class="css-result-value" id="cssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">100mあたりのCSSペース</div>
+                        <div class="css-result-value" id="cssPace">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>個別化されたトレーニングゾーン</h4>
+                    <p class="mb-md text-secondary">
+                        CSSに基づいて、100mあたりのペースでのトレーニングゾーンは以下の通りです：
+                    </p>
+                    <div id="zonesTable"></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">代替方法（簡略化）：</h3>
+        <div class="example-box">
+            <div class="calculation">
+                ペース = (368 - 150) / 2<br>
+                ペース = 218 / 2<br>
+                ペース = 109秒 = <strong>1:49 / 100m</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl">CSSに基づくトレーニングゾーン</h2>
+
+        <div class="callout callout-info">
+            <p><strong>注意：</strong> 水泳では、ペースは<em>距離あたりの時間</em>として測定されます。したがって、<strong>パーセンテージが高い = ペースが遅い</strong>、<strong>パーセンテージが低い = ペースが速い</strong>です。これはサイクリング/ランニングとは逆で、高い% = より激しい努力となります。</p>
+        </div>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>ゾーン</th>
+                        <th>名称</th>
+                        <th>CSSペースの%</th>
+                        <th>CSS 1:40/100mの例</th>
+                        <th>RPE</th>
+                        <th>生理学的目的</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="zone-1">
+                        <td><strong>1</strong></td>
+                        <td>リカバリー</td>
+                        <td>&gt;108%</td>
+                        <td>&gt;1:48/100m</td>
+                        <td>2-3/10</td>
+                        <td>アクティブリカバリー、技術向上、ウォームアップ/クールダウン</td>
+                    </tr>
+                    <tr class="zone-2">
+                        <td><strong>2</strong></td>
+                        <td>有酸素ベース</td>
+                        <td>104-108%</td>
+                        <td>1:44-1:48/100m</td>
+                        <td>4-5/10</td>
+                        <td>有酸素能力の構築、ミトコンドリア密度、脂肪酸化</td>
+                    </tr>
+                    <tr class="zone-3">
+                        <td><strong>3</strong></td>
+                        <td>テンポ/スイートスポット</td>
+                        <td>99-103%</td>
+                        <td>1:39-1:43/100m</td>
+                        <td>6-7/10</td>
+                        <td>レースペース適応、神経筋効率</td>
+                    </tr>
+                    <tr class="zone-4">
+                        <td><strong>4</strong></td>
+                        <td>閾値（CSS）</td>
+                        <td>96-100%</td>
+                        <td>1:36-1:40/100m</td>
+                        <td>7-8/10</td>
+                        <td>乳酸閾値の改善、持続可能な高強度</td>
+                    </tr>
+                    <tr class="zone-5">
+                        <td><strong>5</strong></td>
+                        <td>VO₂max/無酸素性</td>
+                        <td>&lt;96%</td>
+                        <td>&lt;1:36/100m</td>
+                        <td>9-10/10</td>
+                        <td>VO₂max開発、パワー、乳酸耐性</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>🎯 ゾーントレーニングの利点</h3>
+            <p>CSSベースのゾーンを使用すると、主観的な「感覚」トレーニングが客観的で再現可能なワークアウトに変わります。各ゾーンは特定の生理学的適応を対象としています：</p>
+            <ul>
+                <li><strong>ゾーン2：</strong> 有酸素エンジンの構築（週間ボリュームの60-70%）</li>
+                <li><strong>ゾーン3：</strong> レースペースでの効率向上（ボリュームの15-20%）</li>
+                <li><strong>ゾーン4：</strong> 乳酸閾値の向上（ボリュームの10-15%）</li>
+                <li><strong>ゾーン5：</strong> 最大スピードとパワーの開発（ボリュームの5-10%）</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>レベル別の典型的なCSS値</h2>
+
+        <div class="levels-comparison">
+            <div class="level-card">
+                <h3>🥇 エリート距離スイマー</h3>
+                <div class="pace-value">1.5-1.8 m/s</div>
+                <div class="pace-equivalent">0:56-1:07 / 100m</div>
+                <p>100m最大速度の80-85%を表します。長年の構造化トレーニングを持つ国内/国際レベルのアスリート。</p>
+            </div>
+
+            <div class="level-card">
+                <h3>🏊 競技年齢グループ</h3>
+                <div class="pace-value">1.2-1.5 m/s</div>
+                <div class="pace-equivalent">1:07-1:23 / 100m</div>
+                <p>高校代表、大学スイマー、競技マスターズ。週5-6日の定期的な構造化トレーニング。</p>
+            </div>
+
+            <div class="level-card">
+                <h3>🏃 トライアスリートとフィットネススイマー</h3>
+                <div class="pace-value">0.9-1.2 m/s</div>
+                <div class="pace-equivalent">1:23-1:51 / 100m</div>
+                <p>週3-4日の定期的なトレーニング。確実な技術。セッションあたり2000-4000m完泳。</p>
+            </div>
+
+            <div class="level-card">
+                <h3>🌊 発展途上のスイマー</h3>
+                <div class="pace-value">&lt;0.9 m/s</div>
+                <div class="pace-equivalent">&gt;1:51 / 100m</div>
+                <p>有酸素ベースと技術を構築中。一貫したトレーニング1-2年未満。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>科学的検証</h2>
+
+        <div class="research-highlight">
+            <h3>Wakayoshi et al. (1992-1993) - 基礎研究</h3>
+            <p>大阪大学のWakayoshi Kohjiによる画期的な研究は、CSSが実験室での乳酸テストに代わる有効で実用的な代替手段であることを確立しました：</p>
+
+            <ul class="research-findings">
+                <li><strong>無酸素閾値でのVO₂との強い相関</strong>（r = 0.818）</li>
+                <li><strong>OBLA速度との優れた相関</strong>（r = 0.949）</li>
+                <li><strong>400mパフォーマンスを予測</strong>（r = 0.864）</li>
+                <li><strong>血中乳酸4 mmol/Lに対応</strong> - 最大乳酸安定状態</li>
+                <li><strong>距離と時間の間の線形関係</strong>（r² &gt; 0.998）</li>
+            </ul>
+
+            <div class="citation">
+                <p><strong>主要論文：</strong></p>
+                <ol>
+                    <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer." <em>European Journal of Applied Physiology</em>, 64(2), 153-157.</li>
+                    <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue threshold in competitive swimming." <em>International Journal of Sports Medicine</em>, 13(5), 367-371.</li>
+                    <li>Wakayoshi K, et al. (1993). "Does critical swimming velocity represent exercise intensity at maximal lactate steady state?" <em>European Journal of Applied Physiology</em>, 66(1), 90-95.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 CSSが機能する理由</h3>
+            <p>CSSは<strong>激しい運動と厳しい運動の領域の間の境界</strong>を表します。CSS以下では、乳酸の生成と除去がバランスを保ち、長時間泳ぐことができます。CSS以上では、乳酸が徐々に蓄積し、20-40分で疲労困憊に至ります。</p>
+            <p>これによりCSSは次のような用途に最適な強度となります：</p>
+            <ul>
+                <li>800m-1500mイベントの持続可能なレースペースの設定</li>
+                <li>閾値インターバルトレーニングの処方</li>
+                <li>有酸素フィットネスの改善のモニタリング</li>
+                <li>トレーニング負荷と回復ニーズの計算</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>実用的な応用</h2>
+
+        <div class="application-grid">
+            <div class="application-item">
+                <h3>1️⃣ トレーニング負荷指標のロック解除</h3>
+                <p>CSSはsTSSの強度係数計算の分母です。これがないと、トレーニングストレスを定量化したり、フィットネス/疲労トレンドを追跡したりできません。</p>
+            </div>
+
+            <div class="application-item">
+                <h3>2️⃣ トレーニングゾーンのカスタマイズ</h3>
+                <p>一般的なペーステーブルは個人の生理学を考慮していません。CSSベースのゾーンは、各スイマーが最適な強度でトレーニングすることを保証します。</p>
+            </div>
+
+            <div class="application-item">
+                <h3>3️⃣ フィットネスの進歩のモニタリング</h3>
+                <p>6-8週間ごとに再評価してください。CSS（ペースが速く）の改善は、有酸素適応の成功を示します。CSSの停滞は、トレーニングの調整が必要であることを示唆しています。</p>
+            </div>
+
+            <div class="application-item">
+                <h3>4️⃣ レースパフォーマンスの予測</h3>
+                <p>CSSペースは、30分間の持続可能なレースペースを近似します。800m、1500m、およびオープンウォーターイベントの現実的な目標を設定するために使用してください。</p>
+            </div>
+
+            <div class="application-item">
+                <h3>5️⃣ 閾値ワークアウトの設計</h3>
+                <p>クラシックなCSSセット：8×100 @ CSSペース（15秒休息）、5×200 @ 101% CSS（20秒休息）、3×400 @ 103% CSS（30秒休息）。乳酸除去能力を構築。</p>
+            </div>
+
+            <div class="application-item">
+                <h3>6️⃣ テーパー戦略の最適化</h3>
+                <p>テーパー前後のCSSを追跡します。成功したテーパーは、疲労を軽減しながらCSSを維持またはわずかに改善します（TSB増加）。</p>
+            </div>
+        </div>
+
+        <div class="callout mt-2xl">
+            <h3>CSS知識を適用する</h3>
+            <p>クリティカルスイムスピードを理解したので、トレーニングを最適化するために次のステップを踏んでください：</p>
+            <ul>
+                <li><a href="/ja/training-load/">トレーニングストレススコア（TSS）を計算</a>して、CSSに基づいてトレーニング強度を定量化</li>
+                <li><a href="/ja/training-zones/">7つのトレーニングゾーンを探索</a>して、特定の適応のためのワークアウトの構造化方法を学ぶ</li>
+                <li><a href="/ja/formulas/">すべての計算式を見る</a> - SwimAnalyticsで使用されるすべての計算式を完全に透明に</li>
+                <li><a href="/ja/">SwimAnalyticsをダウンロード</a>して、CSS、TSS、パフォーマンストレンドを自動的に追跡</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl text-center">
+            <a href="/ja/training-load/" class="btn btn-primary">sTSS計算について学ぶ →</a>
+            <a href="/ja/formulas/" class="btn btn-secondary">すべての計算式を見る →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ja/">
+                            ホーム
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            学ぶ
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/contact/">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>全著作権所有</h3>
+                <ul>
+                    <li><a href="/ja/privacy/">プライバシー</a></li>
+                    <li><a href="/ja/terms/">利用規約</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>言語を選択</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/css/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/css/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/css/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/css/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/css/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/css/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/css/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/css/"
+                           aria-current="page">
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/css/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/css/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/css/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/css/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/css/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/css/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 全著作権所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="このウェブサイトはクッキーを使用してユーザー体験を向上させています。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。 <a href="/ja/privacy/">詳細</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒否する</button>
+            <button class="btn btn-primary" id="cookie-accept">同意する</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

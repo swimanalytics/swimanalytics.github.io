@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>無料水泳TSS計算機 - トレーニングストレススコア(sTSS)を計算</title>
+    <meta name="description" content="唯一の無料水泳TSS計算機。CSSペース、持続時間、平均ペースを使用して、あらゆるワークアウトのトレーニングストレススコアを計算します。週間TSSガイドラインとCTL/ATL/TSBの説明を含む。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="水泳TSS計算機, sTSS計算機, トレーニングストレススコア, 水泳トレーニング負荷, 無料TSS">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ja/stss-calculator/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ja/stss-calculator/">
+    <meta property="og:title" content="無料水泳TSS計算機 - トレーニングストレススコア(sTSS)を計算">
+    <meta property="og:description" content="唯一の無料水泳TSS計算機。CSSペース、持続時間、平均ペースを使用して、あらゆるワークアウトのトレーニングストレススコアを計算します。週間TSSガイドラインとCTL/ATL/TSBの説明を含む。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ja/stss-calculator/">
+    <meta name="twitter:title" content="無料水泳TSS計算機 - トレーニングストレススコア(sTSS)を計算">
+    <meta name="twitter:description" content="唯一の無料水泳TSS計算機。CSSペース、持続時間、平均ペースを使用して、あらゆるワークアウトのトレーニングストレススコアを計算します。週間TSSガイドラインとCTL/ATL/TSBの説明を含む。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/stss-calculator/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/stss-calculator/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/stss-calculator/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/stss-calculator/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/stss-calculator/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/stss-calculator/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/stss-calculator/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/stss-calculator/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/stss-calculator/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/stss-calculator/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/stss-calculator/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/stss-calculator/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ja"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "無料水泳TSS計算機 - トレーニングストレススコア(sTSS)を計算",
+      "description": "唯一の無料水泳TSS計算機。CSSペース、持続時間、平均ペースを使用して、あらゆるワークアウトのトレーニングストレススコアを計算します。週間TSSガイドラインとCTL/ATL/TSBの説明を含む。",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ja/stss-calculator/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "sTSS計算機",
+          "item": "https://swimanalytics.app/ja/stss-calculator/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">コンテンツへ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ja/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/"
+                               
+                               aria-current="">
+                                ホーム
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学ぶ</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/getting-started/"
+                                       
+                                       aria-current="">
+                                        はじめに
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-zones/"
+                                       
+                                       aria-current="">
+                                        トレーニングゾーン
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-load/"
+                                       
+                                       aria-current="">
+                                        トレーニング負荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stss-calculator/"
+                                       class="active"
+                                       aria-current="page">
+                                        sTSS計算機
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/formulas/"
+                                       
+                                       aria-current="">
+                                        数式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/efficiency/"
+                                       
+                                       aria-current="">
+                                        効率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        ストローク
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/contact/"
+                               
+                               aria-current="">
+                                お問い合わせ
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="言語を選択">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" selected>
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>無料の水泳TSS計算機</h1>
+        <p class="lead">水泳トレーニングのTraining Stress Scoreを計算 - 唯一の無料sTSS計算機</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>水泳TSS（sTSS）とは？</h2>
+            <p><strong>Swimming Training Stress Score（sTSS）</strong>は、強度と時間を組み合わせて水泳セッションのトレーニング負荷を定量化します。サイクリングのTSS方法論を適応させ、あなたのCritical Swim Speed（CSS）を閾値ペースとして使用します。CSSペースで1時間 = 100 sTSSです。</p>
+        </div>
+
+        <h2 class="mt-3xl">無料sTSS計算機</h2>
+        <p class="lead mb-xl">任意の水泳セッションのトレーニングストレスを計算します。CSSペースが必要です。</p>
+
+        <div class="css-calculator">
+            <form id="stssCalculatorForm">
+                <div class="calculator-inputs">
+                    <div class="form-group">
+                        <label for="cssPace" class="form-label">CSSペース（100mあたりmm:ss）</label>
+                        <input
+                            type="text"
+                            id="cssPace"
+                            class="form-input"
+                            placeholder="1:49"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="cssPace-help"
+                        />
+                        <small id="cssPace-help" class="form-help">CSSテストからの閾値ペース（例：1:49）</small>
+                        <div class="form-error" id="cssPace-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workoutDuration" class="form-label">トレーニング時間（分）</label>
+                        <input
+                            type="number"
+                            id="workoutDuration"
+                            class="form-input"
+                            placeholder="60"
+                            min="1"
+                            max="300"
+                            aria-required="true"
+                            aria-describedby="duration-help"
+                        />
+                        <small id="duration-help" class="form-help">休憩を含む総トレーニング時間（1〜300分）</small>
+                        <div class="form-error" id="duration-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="avgPace" class="form-label">平均トレーニングペース（100mあたりmm:ss）</label>
+                        <input
+                            type="text"
+                            id="avgPace"
+                            class="form-input"
+                            placeholder="2:05"
+                            pattern="[0-9]{1,2}:[0-5][0-9]"
+                            aria-required="true"
+                            aria-describedby="pace-help"
+                        />
+                        <small id="pace-help" class="form-help">トレーニング中の平均ペース（例：2:05）</small>
+                        <div class="form-error" id="pace-error"></div>
+                    </div>
+
+                    <div class="calculator-buttons">
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSSを計算</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">クリア</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="calculator-results hidden" id="stssResults" aria-live="polite">
+                <h3>あなたのTraining Stress Score</h3>
+                <div class="results-summary">
+                    <div class="result-item">
+                        <div class="result-label">sTSS</div>
+                        <div class="css-result-value" id="stssValue">--</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">強度係数（IF）</div>
+                        <div class="css-result-value" id="intensityFactor">--</div>
+                    </div>
+                </div>
+
+                <div class="zones-result">
+                    <h4>トレーニング負荷の解釈</h4>
+                    <p class="mb-md text-secondary" id="stssInterpretation">
+                        <!-- JavaScriptで埋められます -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-3xl">sTSSの計算方法</h2>
+
+        <div class="formula-box">
+            <h3>公式</h3>
+            <div class="formula">
+                sTSS = （時間単位の時間）×（強度係数）² × 100
+            </div>
+            <div class="formula-explanation">
+                <p>ここで：</p>
+                <ul>
+                    <li><strong>強度係数（IF）</strong> = CSSペース / 平均トレーニングペース</li>
+                    <li><strong>時間</strong> = 時間単位の総トレーニング時間</li>
+                    <li><strong>CSSペース</strong> = CSSテストからの閾値ペース</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="mt-xl">実例</h3>
+        <div class="example-box">
+            <h4>トレーニング詳細：</h4>
+            <ul>
+                <li>CSSペース：<strong>1:49/100m</strong>（109秒）</li>
+                <li>トレーニング時間：<strong>60分</strong>（1時間）</li>
+                <li>平均ペース：<strong>2:05/100m</strong>（125秒）</li>
+            </ul>
+
+            <h4>ステップ1：強度係数を計算</h4>
+            <div class="calculation">
+                IF = CSSペース / トレーニングペース<br>
+                IF = 109 / 125<br>
+                IF = <strong>0.872</strong>
+            </div>
+
+            <h4>ステップ2：sTSSを計算</h4>
+            <div class="calculation">
+                sTSS = 1.0時間 × (0.872)² × 100<br>
+                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = <strong>76</strong>
+            </div>
+
+            <p class="mt-md"><strong>解釈：</strong>このイージーペース（CSSより遅い）での60分トレーニングは76 sTSSを生成しました - 有酸素ベースを構築するのに適した中程度のトレーニング負荷です。</p>
+        </div>
+
+        <h2 class="mt-3xl">sTSS値の解釈</h2>
+
+        <div class="zones-table-container">
+            <table class="zones-table">
+                <thead>
+                    <tr>
+                        <th>sTSS範囲</th>
+                        <th>トレーニング負荷</th>
+                        <th>回復時間</th>
+                        <th>トレーニング例</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>低</td>
+                        <td>同日</td>
+                        <td>30分イージースイム、テクニカルドリル</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>中程度</td>
+                        <td>1日</td>
+                        <td>60分エンデュランス、ステディペース</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>高</td>
+                        <td>1〜2日</td>
+                        <td>90分閾値セット、レースペースインターバル</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>非常に高</td>
+                        <td>2〜3日</td>
+                        <td>2時間ハードセッション、複数の閾値ブロック</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>極端</td>
+                        <td>3日以上</td>
+                        <td>ロングレース（&gt;2時間）、超持久力スイム</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-3xl">週間sTSSガイド</h2>
+
+        <p class="mb-md">目標週間sTSSは、トレーニングレベルと目標によって異なります：</p>
+
+        <div class="grid grid-2 mb-xl">
+            <div class="card">
+                <h3 class="card-title">レクリエーショナルスイマー</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>週間sTSS：</strong>150〜300</p>
+                    <p>週2〜3回のトレーニング、各50〜100 sTSS。テクニックと有酸素ベース構築に重点。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">フィットネス/トライアスリート</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>週間sTSS：</strong>300〜500</p>
+                    <p>週3〜4回のトレーニング、各75〜125 sTSS。有酸素エンデュランスと閾値ワークのミックス。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">競技マスターズ</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>週間sTSS：</strong>500〜800</p>
+                    <p>週4〜6回のトレーニング、各80〜150 sTSS。ピリオダイゼーションを伴う構造化トレーニング。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">エリート/大学生</h3>
+                <div class="card-content">
+                    <p class="mb-sm"><strong>週間sTSS：</strong>800〜1200以上</p>
+                    <p>週8〜12回のトレーニング、2部練習。高ボリュームで重要な回復管理。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ 重要な注意事項</h3>
+            <ul>
+                <li><strong>正確なCSSが必要：</strong>正確なsTSSには、CSSが最新（6〜8週間以内にテスト）である必要があります。</li>
+                <li><strong>簡略計算：</strong>この計算機は平均ペースを使用します。高度なsTSSは、インターバル構造を考慮したNormalized Graded Pace（NGP）を使用します。</li>
+                <li><strong>テクニカルワークには不向き：</strong>sTSSはトレーニングの身体的ストレスのみを測定し、スキル開発は測定しません。</li>
+                <li><strong>個人差：</strong>同じsTSSでもスイマーによって感じ方が異なります。回復に応じてガイドを調整してください。</li>
+            </ul>
+        </div>
+
+        <h2 class="mt-3xl">sTSSが重要な理由</h2>
+
+        <p class="mb-md">Training Stress Scoreは以下の基礎となります：</p>
+
+        <ul class="mb-xl">
+            <li><strong>CTL（Chronic Training Load）：</strong>フィットネスレベル - 毎日のsTSSの42日間指数加重平均</li>
+            <li><strong>ATL（Acute Training Load）：</strong>疲労 - 毎日のsTSSの7日間指数加重平均</li>
+            <li><strong>TSB（Training Stress Balance）：</strong>フォーム状態 - TSB = CTL - ATL（正 = フレッシュ、負 = 疲労）</li>
+            <li><strong>ピリオダイゼーション：</strong>目標CTL進行を使用したトレーニングフェーズ（ベース、ビルド、ピーク、テーパー）の計画</li>
+            <li><strong>回復管理：</strong>TSBに基づいてプッシュするタイミングと休息するタイミングを知る</li>
+        </ul>
+
+        <div class="callout callout-tip">
+            <h3>プロのヒント：CTLを追跡する</h3>
+            <p>毎日のsTSSをスプレッドシートまたはトレーニング日誌に記録します。毎週42日平均（CTL）を計算します。ベース構築中は週5〜10ポイントのCTL増加を目指します。テーパー中（レース1〜2週間前）はCTLを維持または若干減少させます。</p>
+        </div>
+
+        <h2 class="mt-3xl">関連リソース</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">CSSテスト</h3>
+                <div class="card-content">
+                    <p>CSSペースが必要ですか？400mと200mのテストタイムで無料CSS計算機を使用してください。</p>
+                    <a href="/ja/css/" class="btn btn-secondary btn-small mt-md">CSS計算機 →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">トレーニング負荷ガイド</h3>
+                <div class="card-content">
+                    <p>CTL、ATL、TSB、およびPerformance Management Chartメトリクスについて学びます。</p>
+                    <a href="/ja/training-load/" class="btn btn-secondary btn-small mt-md">トレーニング負荷 →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">SwimAnalyticsアプリ</h3>
+                <div class="card-content">
+                    <p>すべてのトレーニングのsTSS自動計算。時間の経過とともにCTL/ATL/TSBトレンドを追跡。</p>
+                    <a href="/ja/" class="btn btn-secondary btn-small mt-md">詳細 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>sTSSの自動追跡が必要ですか？</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">SwimAnalyticsを無料でダウンロード</a>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/stss-calculator.min.js"></script>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ja/">
+                            ホーム
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            学ぶ
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/contact/">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>全著作権所有</h3>
+                <ul>
+                    <li><a href="/ja/privacy/">プライバシー</a></li>
+                    <li><a href="/ja/terms/">利用規約</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>言語を選択</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/stss-calculator/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/stss-calculator/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/stss-calculator/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/stss-calculator/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/stss-calculator/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/stss-calculator/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/stss-calculator/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/stss-calculator/"
+                           aria-current="page">
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/stss-calculator/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/stss-calculator/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/stss-calculator/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/stss-calculator/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/stss-calculator/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/stss-calculator/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 全著作権所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="このウェブサイトはクッキーを使用してユーザー体験を向上させています。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。 <a href="/ja/privacy/">詳細</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒否する</button>
+            <button class="btn btn-primary" id="cookie-accept">同意する</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

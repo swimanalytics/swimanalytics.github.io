@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SWOLF Kalkylator: Mät Simeffektivitet | Lägre är Bättre</title>
+    <meta name="description" content="SWOLF (Sim + Golf) kalkylator mäter simeffektivitet. Beräkna din poäng, jämför riktmärken per nivå och använd träningsövningar för att förbättra. Lägre SWOLF = bättre effektivitet. Gratis guide för simmäre.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="SWOLF, simeffektivitet, tagseffektivitet, simekonomi, SWOLF-kalkylator">
+    
+    <link rel="canonical" href="https://swimanalytics.app/sv/efficiency/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/sv/efficiency/">
+    <meta property="og:title" content="SWOLF Kalkylator: Mät Simeffektivitet | Lägre är Bättre">
+    <meta property="og:description" content="SWOLF (Sim + Golf) kalkylator mäter simeffektivitet. Beräkna din poäng, jämför riktmärken per nivå och använd träningsövningar för att förbättra. Lägre SWOLF = bättre effektivitet. Gratis guide för simmäre.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="sv_SE">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/sv/efficiency/">
+    <meta name="twitter:title" content="SWOLF Kalkylator: Mät Simeffektivitet | Lägre är Bättre">
+    <meta name="twitter:description" content="SWOLF (Sim + Golf) kalkylator mäter simeffektivitet. Beräkna din poäng, jämför riktmärken per nivå och använd träningsövningar för att förbättra. Lägre SWOLF = bättre effektivitet. Gratis guide för simmäre.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/efficiency/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/efficiency/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/efficiency/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/efficiency/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/efficiency/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/efficiency/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/efficiency/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/efficiency/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/efficiency/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/efficiency/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "sv"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SWOLF Kalkylator: Mät Simeffektivitet | Lägre är Bättre",
+      "description": "SWOLF (Sim + Golf) kalkylator mäter simeffektivitet. Beräkna din poäng, jämför riktmärken per nivå och använd träningsövningar för att förbättra. Lägre SWOLF = bättre effektivitet. Gratis guide för simmäre.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/sv/efficiency/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Effektivitet",
+          "item": "https://swimanalytics.app/sv/efficiency/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Hoppa till innehåll</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sv/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/"
+                               
+                               aria-current="">
+                                Hem
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Lära</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/getting-started/"
+                                       
+                                       aria-current="">
+                                        Komma Igång
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-zones/"
+                                       
+                                       aria-current="">
+                                        Träningszoner
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/training-load/"
+                                       
+                                       aria-current="">
+                                        Träningsbelastning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS Kalkylator
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Vetenskap</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sv/research/"
+                                       
+                                       aria-current="">
+                                        Forskning
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/formulas/"
+                                       
+                                       aria-current="">
+                                        Formler
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/efficiency/"
+                                       class="active"
+                                       aria-current="page">
+                                        Effektivitet
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Simtagsmekanik
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sv/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografi
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sv/contact/"
+                               
+                               aria-current="">
+                                Kontakt
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Välj språk">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" selected>
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Växla meny" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Simeffektivitet: SWOLF</h1>
+        <p class="lead">Din simekonomiska poäng - Ju lägre desto bättre</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Vad är SWOLF?</h2>
+        <p class="lead">SWOLF (Swim + Golf) är ett sammansatt effektivitetsmått som kombinerar simtagsräkning och tid till ett enda nummer. Precis som i golf är målet att minimera din poäng.</p>
+
+        <div class="formula-box">
+            <h3>Formel</h3>
+            <div class="formula">
+                SWOLF = Bantid (sekunder) + Antal simtag
+            </div>
+            <div class="formula-explanation">
+                <p><strong>Exempel:</strong> Om du simmar 25m på 20 sekunder med 15 simtag:</p>
+                <div class="calculation">
+                    SWOLF = 20 + 15 = <strong>35</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <h3>Normaliserad SWOLF för jämförelse mellan bassänger</h3>
+            <p>För att jämföra poäng mellan olika bassänglängder:</p>
+            <div class="formula">
+                SWOLF₂₅ = (Tid × 25/Bassänglängd) + (Simtag × 25/Bassänglängd)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">SWOLF-referensvärden</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Frisim - 25m bassäng</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Elitnivå</strong>
+                        <div class="value">30-35</div>
+                        <p>Nationell/internationell nivå, exceptionell effektivitet</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Tävlingssimmare</strong>
+                        <div class="value">35-45</div>
+                        <p>Varsity-nivå, universitetssimning, tävlande masters</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Motionssimmare</strong>
+                        <div class="value">45-60</div>
+                        <p>Regelbunden träning, solid teknik</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>Nybörjare</strong>
+                        <div class="value">60+</div>
+                        <p>Utvecklar teknik och kondition</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Andra simsätt - 25m bassäng</h3>
+                <div class="stroke-benchmarks">
+                    <div class="benchmark-item">
+                        <h4>Ryggsim</h4>
+                        <p>Typiskt <strong>5-10 poäng högre</strong> än frisim</p>
+                        <div class="value-small">Bra: 40-50</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Bröstsim</h4>
+                        <p>Stor variation på grund av glidteknik</p>
+                        <div class="value-small">Intervall: 40-60</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>Fjärilsim</h4>
+                        <p>Liknande frisim för skickliga simmare</p>
+                        <div class="value-small">Bra: 38-55</div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <h4>⚠️ Individuell variation</h4>
+                    <p>SWOLF påverkas av längd och armspann. Längre simmare tar naturligt färre simtag. Använd SWOLF för att följa <em>dina egna framsteg</em> istället för att jämföra dig med andra.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Tolkning av SWOLF-mönster</h2>
+
+        <div class="pattern-analysis">
+            <div class="pattern-item">
+                <h3>📉 Sjunkande SWOLF = Förbättrad effektivitet</h3>
+                <p>Din teknik förbättras, eller du blir mer ekonomisk vid en given tempo. Detta är målet under veckor och månader av träning.</p>
+                <div class="example-box">
+                    <strong>Exempel:</strong> SWOLF sjunker från 48 → 45 → 42 under 8 veckors fokuserat teknikarbete.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📈 Stigande SWOLF = Försämrad effektivitet</h3>
+                <p>Trötthet sätter in, tekniken försämras, eller du simmar snabbare än vad din effektivitet tillåter.</p>
+                <div class="example-box">
+                    <strong>Exempel:</strong> SWOLF stiger från 42 → 48 under de sista 200m av en 1000m-serie, vilket indikerar trötthet.
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📊 Olika kombinationer med samma SWOLF</h3>
+                <p>En SWOLF på 45 kan komma från flera kombinationer av simtag/tid:</p>
+                <ul>
+                    <li><strong>20 sekunder + 25 simtag</strong> = Hög frekvens, kortare simtag</li>
+                    <li><strong>25 sekunder + 20 simtag</strong> = Lägre frekvens, längre simtag</li>
+                </ul>
+                <p><strong>Analysera alltid komponenterna</strong> (simtagsräkning OCH tid) för att förstå din simstrategi.</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip">
+            <h3>🎯 Träningsapplikationer med SWOLF</h3>
+            <ul>
+                <li><strong>Tekniska pass:</strong> Försök minska SWOLF genom bättre grepp, strömlinjeformning och kroppsposition</li>
+                <li><strong>Trötthetsövervakning:</strong> Stigande SWOLF indikerar teknisk försämring—dags att ta en paus</li>
+                <li><strong>Tempo-effektivitetsbalans:</strong> Hitta det snabbaste tempo du kan hålla utan att SWOLF skjuter i höjden</li>
+                <li><strong>Övningseffektivitet:</strong> Registrera SWOLF före/efter övningsserier för att mäta teknisk överföring</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Bästa mätmetoder</h2>
+
+        <div class="measurement-guidelines">
+            <div class="guideline-box">
+                <h3>📏 Simtagsräkning</h3>
+                <ul>
+                    <li>Räkna varje handinslag (båda armarna kombinerat)</li>
+                    <li>Börja räkna från första simtaget efter startsprånget</li>
+                    <li>Räkna till väggkontakt</li>
+                    <li>Håll konsekvent startsprångsdistans (~5m från flaggorna)</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>⏱️ Tidtagning</h3>
+                <ul>
+                    <li>Mät från första simtaget till väggkontakt</li>
+                    <li>Använd konsekvent startsprångsintensitet mellan banor</li>
+                    <li>Teknologi (Garmin, Apple Watch, FORM) beräknar automatiskt</li>
+                    <li>Manuell tidtagning: Använd bassängklocka eller stoppklocka</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>🔄 Konsistens</h3>
+                <ul>
+                    <li>Mät SWOLF vid liknande tempo för jämförelse</li>
+                    <li>Registrera under huvudserier, inte uppvärmning/nedkylning</li>
+                    <li>Notera vilket simsätt (frisim, ryggsim, etc.)</li>
+                    <li>Jämför samma bassänglängd (25m vs 25m, inte 25m vs 50m)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Begränsningar med SWOLF</h2>
+
+        <div class="limitations-list">
+            <div class="limitation-item">
+                <h3>🚫 Du kan inte jämföra mellan idrottare</h3>
+                <p>Längd, armlängd och flexibilitet skapar naturliga skillnader i simtagsräkning. En 188 cm lång simmare kommer att ha lägre SWOLF än en 168 cm lång simmare vid samma konditionsnivå.</p>
+                <p><strong>Lösning:</strong> Använd SWOLF endast för att följa dina personliga framsteg.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 Sammansatt poäng döljer detaljer</h3>
+                <p>SWOLF kombinerar två variabler. Du kan förbättra den ena medan den andra försämras och fortfarande ha samma poäng.</p>
+                <p><strong>Lösning:</strong> Granska alltid simtagsräkning OCH tid separat.</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 Inte normaliserad för tempo</h3>
+                <p>SWOLF ökar naturligt när du simmar snabbare (fler simtag, mindre tid, men högre total). Detta är inte ineffektivitet—det är fysik.</p>
+                <p><strong>Lösning:</strong> Registrera SWOLF vid specifika måltempo (t.ex. "SWOLF vid CSS-tempo" vs "SWOLF vid lätt tempo").</p>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 Vetenskapen bakom simeffektivitet</h3>
+            <p>Forskning av Costill et al. (1985) etablerade att <strong>simeffektivitet</strong> (energikostnad per distansenhet) är viktigare än VO₂max för medeldistansprestanda.</p>
+            <p>SWOLF fungerar som en proxiindikator för ekonomi—lägre SWOLF korrelerar typiskt med lägre energiförbrukning vid en given tempo, vilket gör att du kan simma snabbare eller längre med samma ansträngning.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>SWOLF-träningsövningar</h2>
+
+        <div class="drill-set">
+            <h3>🎯 SWOLF-reduktionsserie</h3>
+            <div class="workout-box">
+                <h4>8 × 50m (30 sekunders vila)</h4>
+                <ol>
+                    <li><strong>50 #1-2:</strong> Simma i bekvämt tempo, registrera bas-SWOLF</li>
+                    <li><strong>50 #3-4:</strong> Minska simtagsräkning med 2, behåll samma tid → Fokusera på distans per simtag</li>
+                    <li><strong>50 #5-6:</strong> Öka simtagsfrekvensen något, behåll samma räkning → Fokusera på rotation</li>
+                    <li><strong>50 #7-8:</strong> Hitta optimal balans—sök lägsta SWOLF</li>
+                </ol>
+                <p><strong>Mål:</strong> Upptäck din mest effektiva kombination av simtagsräkning/frekvens.</p>
+            </div>
+        </div>
+
+        <div class="drill-set">
+            <h3>⚡ SWOLF-stabilitetsstest</h3>
+            <div class="workout-box">
+                <h4>10 × 100m @ CSS-tempo (20 sekunders vila)</h4>
+                <p>Registrera SWOLF för varje 100m. Analysera:</p>
+                <ul>
+                    <li>Vilket 100m hade lägst SWOLF? (Du var mest effektiv)</li>
+                    <li>Var sköt SWOLF i höjden? (Teknisk försämring eller trötthet)</li>
+                    <li>Hur mycket varierade SWOLF från första till sista 100m?</li>
+                </ul>
+                <p><strong>Mål:</strong> Behålla SWOLF ±2 poäng på alla repetitioner. Konsistens indikerar solid teknik under trötthet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Effektivitet tjänas genom upprepning</h2>
+        <p class="lead">SWOLF förbättras inte över en natt. Det är det kumulativa resultatet av tusentals tekniskt korrekta simtag, medveten övning och noggrann uppmärksamhet på effektivitet framför hastighet.</p>
+
+        <p>Registrera konsekvent. Förbättra gradvis. Se hur din simning transformeras.</p>
+
+        <div class="mt-xl">
+            <a href="/sv/stroke-mechanics/" class="btn btn-primary">Simtagsmekanik →</a>
+            <a href="/sv/formulas/" class="btn btn-secondary">Alla formler</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Hem
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Lära
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/">
+                            Vetenskap
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/contact/">
+                            Kontakt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Alla rättigheter förbehållna</h3>
+                <ul>
+                    <li><a href="/sv/privacy/">Integritet</a></li>
+                    <li><a href="/sv/terms/">Villkor</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Välj språk</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/efficiency/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/efficiency/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/efficiency/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/efficiency/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/efficiency/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/efficiency/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/efficiency/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/efficiency/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/efficiency/"
+                           aria-current="page">
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/efficiency/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/efficiency/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/efficiency/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/efficiency/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Alla rättigheter förbehållna.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Denna webbplats använder cookies för att förbättra din upplevelse." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Denna webbplats använder cookies för att förbättra din upplevelse. <a href="/sv/privacy/">Läs mer</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Neka</button>
+            <button class="btn btn-primary" id="cookie-accept">Acceptera</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

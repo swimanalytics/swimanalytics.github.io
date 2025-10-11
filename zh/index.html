@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SwimAnalytics：iOS游泳性能跟踪与分析应用</title>
+    <meta name="description" content="跟踪游泳指标，计算CSS和sTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="游泳跟踪应用, 游泳分析, CSS计算器, 游泳性能, sTSS">
+    
+    <link rel="canonical" href="https://swimanalytics.app/zh/">
+
+    
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimanalytics.app/zh/">
+    <meta property="og:title" content="SwimAnalytics：iOS游泳性能跟踪与分析应用">
+    <meta property="og:description" content="跟踪游泳指标，计算CSS和sTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/zh/">
+    <meta name="twitter:title" content="SwimAnalytics：iOS游泳性能跟踪与分析应用">
+    <meta name="twitter:description" content="跟踪游泳指标，计算CSS和sTSS，通过专业分析来分析训练负荷。为竞技游泳运动员和铁人三项运动员提供免费计算器。7天免费试用。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "zh"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/zh/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/zh/"
+                               
+                               aria-current="">
+                                首页
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学习</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/zh/getting-started/"
+                                       
+                                       aria-current="">
+                                        开始
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/training-zones/"
+                                       
+                                       aria-current="">
+                                        训练区间
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/training-load/"
+                                       
+                                       aria-current="">
+                                        训练负荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS计算器
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/zh/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/formulas/"
+                                       
+                                       aria-current="">
+                                        公式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/efficiency/"
+                                       
+                                       aria-current="">
+                                        效率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        划水技术
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/zh/contact/"
+                               
+                               aria-current="">
+                                联系
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- SwimAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏊</span>
+          <span>专业游泳分析</span>
+        </div>
+        <h1>将游泳数据转化为表现提升</h1>
+        <p class="app-hero-subtitle">
+          科学指标、个性化训练区间和全面的表现追踪。
+          所有数据在您的iPhone上本地处理，完全保护隐私。
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            在App Store下载
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            探索功能
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ 7天免费试用 &nbsp;&nbsp; ✓ 无需注册账号 &nbsp;&nbsp; ✓ 100%本地数据
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOS应用程序显示iPhone上的临界游泳速度(CSS)和训练压力评分(TSS)指标" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">功能特色</div>
+      <h2 class="section-title">提升表现所需的一切</h2>
+      <p class="section-subtitle">专为各水平游泳运动员设计的专业级分析</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>科学指标</h3>
+        <p><a href="/zh/css/">临界游泳速度(CSS)</a>确定您的有氧阈值，从而计算<a href="/zh/training-load/">训练压力评分(TSS)</a>和基于经过验证的运动科学研究的<a href="/zh/training-load/#pmc">CTL/ATL/TSB表现追踪</a>。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>训练区间</h3>
+        <p>根据您的CSS校准的7个个性化训练区间。优化每次训练，用于恢复、有氧、阈值或VO₂max发展。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>智能对比</h3>
+        <p>每周、每月和每年的时间段对比，所有指标均自动检测趋势和百分比变化。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>完全隐私</h3>
+        <p>所有数据都在您的设备上本地处理。无服务器、无云端、无跟踪。您拥有并控制您的游泳数据。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>导出至任何地方</h3>
+        <p>以JSON、CSV、HTML或PDF格式导出训练和分析数据。兼容教练、电子表格和训练平台。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>即时性能</h3>
+        <p>采用本地优先架构，应用启动时间少于0.35秒。无需等待同步或下载即可立即查看训练数据。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">应用截图</div>
+      <h2 class="section-title">探索SwimAnalytics实际效果</h2>
+      <p class="section-subtitle">专为游泳运动员设计的美观直观界面</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="上一张截图">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="SwimAnalytics训练列表显示带有TSS评分和训练区间的游泳训练" loading="lazy" />
+          <p class="screenshot-caption">训练概览</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="游泳训练详细分析，包含每趟配速、SWOLF效率和心率数据" loading="lazy" />
+          <p class="screenshot-caption">单趟分析</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="SwimAnalytics仪表板显示表现管理图表CTL、ATL和TSB指标" loading="lazy" />
+          <p class="screenshot-caption">高级指标</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="游泳表现趋势图显示CSS和训练负荷随时间的进展" loading="lazy" />
+          <p class="screenshot-caption">表现趋势</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="基于临界游泳速度阈值的7个个性化游泳训练区间" loading="lazy" />
+          <p class="screenshot-caption">训练区间</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="以JSON、CSV、HTML和PDF格式导出游泳数据供教练和分析使用" loading="lazy" />
+          <p class="screenshot-caption">导出选项</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="下一张截图">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="截图导航"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">基于科学</div>
+      <h2 class="section-title text-white">重要的专业指标</h2>
+      <p class="section-subtitle text-white-90">
+        SwimAnalytics使用经过运动科学研究验证的指标
+        将原始游泳数据转化为可操作的洞察
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">阈值配速</div>
+        <h3 class="metric-name">CSS</h3>
+        <p class="metric-description">临界游泳速度 - 您的有氧阈值配速</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">训练负荷</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">训练压力评分量化训练强度</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">体能</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">慢性训练负荷 - 42天移动平均</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">疲劳</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">急性训练负荷 - 7天移动平均</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">状态</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">训练压力平衡指示准备度</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">效率</div>
+        <h3 class="metric-name">SWOLF</h3>
+        <p class="metric-description">划水效率评分 - 越低越好</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏊</div>
+        <div class="metric-label">区间</div>
+        <h3 class="metric-name">7区间</h3>
+        <p class="metric-description">从恢复到冲刺的强度等级</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">记录</div>
+        <h3 class="metric-name">PRs</h3>
+        <p class="metric-description">自动追踪个人最佳成绩</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">定价</div>
+      <h2 class="section-title">简单透明的定价</h2>
+      <p class="section-subtitle">从7天免费试用开始。随时取消。</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">月付</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/月</span>
+          </div>
+          <p class="pricing-trial">7天免费试用</p>
+        </div>
+        <ul class="pricing-features">
+          <li>无限制训练同步</li>
+          <li>所有科学指标(CSS、TSS、CTL/ATL/TSB)</li>
+          <li>7个个性化训练区间</li>
+          <li>每周、每月和每年对比</li>
+          <li>JSON、CSV、HTML和PDF导出</li>
+          <li>100%隐私，本地数据</li>
+          <li>所有未来更新</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3 class="pricing-name">年付</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/年</span>
+          </div>
+          <p class="pricing-trial">每年节省€8.88(优惠18%)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>无限制训练同步</li>
+          <li>所有科学指标(CSS、TSS、CTL/ATL/TSB)</li>
+          <li>7个个性化训练区间</li>
+          <li>每周、每月和每年对比</li>
+          <li>JSON、CSV、HTML和PDF导出</li>
+          <li>100%隐私，本地数据</li>
+          <li>所有未来更新</li>
+          <li><strong>仅€3.25/月</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">为何选择SwimAnalytics</div>
+      <h2 class="section-title">专为认真的游泳运动员打造</h2>
+      <p class="section-subtitle">专业功能，无复杂性</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🏊</div>
+        <div class="benefit-content">
+          <h3>CSS测试协议</h3>
+          <p>内置400米+200米测试协议用于确定您的临界游泳速度。每6-8周重复一次以追踪进步并自动调整训练区间。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>原生iOS体验</h3>
+          <p>使用SwiftUI构建，实现流畅性能和iOS集成。与健康应用完美同步，支持小组件和熟悉的Apple设计语言。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>基于研究</h3>
+          <p>所有指标基于同行评审的运动科学研究。CSS来自Wakayoshi等人的研究，TSS采用IF³公式适配游泳，经过验证的CTL/ATL模型。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>教练友好</h3>
+          <p>为教练导出详细报告。通过电子邮件共享HTML摘要，用CSV进行电子表格分析，或用PDF记录训练。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>适用于各种场景</h3>
+          <p>泳池或开放水域，短距离或长距离。SwimAnalytics适应所有游泳类型并自动检测训练特征。</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>持续改进</h3>
+          <p>根据用户反馈定期更新新功能。最近新增的功能包括年度对比、个人最佳成绩追踪和增强的导出选项。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">常见问题</div>
+      <h2 class="section-title">常见问题解答</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>SwimAnalytics如何获取我的游泳数据？</h3>
+        <p>SwimAnalytics与Apple健康同步，导入由任何兼容设备或应用程序记录的游泳训练。这包括智能手表、健身追踪器和手动输入。应用程序在本地处理这些数据以计算高级指标。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>什么是CSS测试，如何进行？</h3>
+        <p>CSS(临界游泳速度)是一种科学协议，使用2次最大努力游泳：400米和200米，两次之间休息10-20分钟。应用程序根据这些时间计算您的有氧阈值，并自动调整所有训练区间。每6-8周重复一次以追踪进步。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我的数据会上传到云端吗？</h3>
+        <p>不会。SwimAnalytics在您的iPhone上本地处理所有数据。没有外部服务器，没有云账户，没有数据传输。您控制导出：生成JSON、CSV、HTML或PDF文件，并按您的意愿共享。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我可以在开放水域游泳中使用SwimAnalytics吗？</h3>
+        <p>可以。SwimAnalytics适用于Apple健康中的任何游泳训练，包括开放水域。应用程序适应泳池和开放水域的可用指标，为每种环境提供相关分析。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>月付和年付计划有什么区别？</h3>
+        <p>两种计划提供完全相同的功能：所有指标、无限区间、时间对比、多种导出格式和免费更新。唯一的区别是价格：年付节省18%(相当于€3.25/月对比€3.99/月)。</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>我可以随时取消订阅吗？</h3>
+        <p>可以。订阅通过App Store管理，因此您可以随时从设置→[您的姓名]→订阅中取消。如果取消，您将保留访问权限直到当前计费周期结束。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>准备好改变您的游泳表现了吗？</h2>
+    <p>加入数千名使用科学指标提升表现的游泳运动员。今天开始您的7天免费试用。</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        免费下载SwimAnalytics
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        了解更多
+      </a>
+    </div>
+    <p class="section-footer">
+      无需账户 • 随时取消 • 您的数据保留在您的设备上
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">深入了解游泳分析</h2>
+      <p class="section-subtitle">探索SwimAnalytics背后的科学</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">临界游泳速度</h3>
+        <div class="card-content">
+          <p>了解CSS如何确定您的有氧阈值，以及为什么它对结构化训练至关重要。</p>
+          <a href="/zh/css/" class="btn btn-secondary btn-small mt-md">了解CSS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">训练负荷管理</h3>
+        <div class="card-content">
+          <p>了解TSS、CTL、ATL和TSB如何帮助您平衡训练压力和恢复。</p>
+          <a href="/zh/training-load/" class="btn btn-secondary btn-small mt-md">探索训练负荷 →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">训练区间</h3>
+        <div class="card-content">
+          <p>了解7个训练区间，以及如何使用它们进行针对性的训练计划。</p>
+          <a href="/zh/training-zones/" class="btn btn-secondary btn-small mt-md">查看训练区间 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/zh/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">
+                            学习
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/contact/">
+                            联系
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>版权所有</h3>
+                <ul>
+                    <li><a href="/zh/privacy/">隐私</a></li>
+                    <li><a href="/zh/terms/">条款</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>选择语言</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/"
+                           aria-current="page">
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 版权所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="本网站使用cookies改善您的体验。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>本网站使用cookies改善您的体验。 <a href="/zh/privacy/">了解更多</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒绝</button>
+            <button class="btn btn-primary" id="cookie-accept">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

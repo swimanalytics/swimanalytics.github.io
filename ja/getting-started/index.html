@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SwimAnalytics入門 - 完全セットアップガイド | CSSテストチュートリアル</title>
+    <meta name="description" content="SwimAnalytics完全セットアップガイド。CSSテストの実行、結果の入力、ワークアウトの追跡、sTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="SwimAnalyticsガイド, CSSテストチュートリアル, 水泳アプリチュートリアル, SwimAnalyticsの使い方, 水泳分析ガイド">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ja/getting-started/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-08T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ja/getting-started/">
+    <meta property="og:title" content="SwimAnalytics入門 - 完全セットアップガイド | CSSテストチュートリアル">
+    <meta property="og:description" content="SwimAnalytics完全セットアップガイド。CSSテストの実行、結果の入力、ワークアウトの追跡、sTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ja/getting-started/">
+    <meta name="twitter:title" content="SwimAnalytics入門 - 完全セットアップガイド | CSSテストチュートリアル">
+    <meta name="twitter:description" content="SwimAnalytics完全セットアップガイド。CSSテストの実行、結果の入力、ワークアウトの追跡、sTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/getting-started/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/getting-started/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/getting-started/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/getting-started/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/getting-started/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/getting-started/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/getting-started/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/getting-started/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/getting-started/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/getting-started/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/getting-started/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/getting-started/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/getting-started/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/getting-started/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/getting-started/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ja"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SwimAnalytics入門 - 完全セットアップガイド | CSSテストチュートリアル",
+      "description": "SwimAnalytics完全セットアップガイド。CSSテストの実行、結果の入力、ワークアウトの追跡、sTSS、CTL/ATL/TSB指標の理解方法を学びます。初心者向けのステップバイステップチュートリアルとトラブルシューティング。7日間無料トライアル。",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-08T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ja/getting-started/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "はじめに",
+          "item": "https://swimanalytics.app/ja/getting-started/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">コンテンツへ</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ja/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/"
+                               
+                               aria-current="">
+                                ホーム
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学ぶ</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/getting-started/"
+                                       class="active"
+                                       aria-current="page">
+                                        はじめに
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-zones/"
+                                       
+                                       aria-current="">
+                                        トレーニングゾーン
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/training-load/"
+                                       
+                                       aria-current="">
+                                        トレーニング負荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS計算機
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ja/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/formulas/"
+                                       
+                                       aria-current="">
+                                        数式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/efficiency/"
+                                       
+                                       aria-current="">
+                                        効率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        ストローク
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ja/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ja/contact/"
+                               
+                               aria-current="">
+                                お問い合わせ
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="言語を選択">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" selected>
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="メニュー切替" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>SwimAnalyticsをはじめよう</h1>
+        <p class="lead">水泳パフォーマンス追跡、CSSテスト、トレーニング負荷分析の完全ガイド</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <div class="callout callout-info mb-xl">
+            <h2>データに基づく水泳へようこそ</h2>
+            <p>SwimAnalyticsは、<strong>クリティカルスイムスピード（CSS）</strong>、<strong>トレーニングストレススコア（sTSS）</strong>、<strong>パフォーマンス管理チャート（PMC）</strong>の指標を用いて、水泳トレーニングを実用的な洞察に変換します。このガイドでは、初期設定から高度なトレーニング負荷分析まで、4つの簡単なステップでご案内します。</p>
+        </div>
+
+        <h2>クイックスタート（5分）</h2>
+
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>ダウンロードとインストール</h3>
+                    <p>App StoreからSwimAnalyticsをダウンロードし、Apple Healthへのアクセス許可を付与してください。アプリは水泳ワークアウトを自動的に同期します。手動での記録は不要です。</p>
+                    <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">アプリをダウンロード →</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>CSSテストを実施</h3>
+                    <p>400mと200mのタイムトライアルを完了して、クリティカルスイムスピードを設定してください。これはすべての指標の基礎です。CSSがなければ、sTSSもトレーニングゾーンも計算できません。</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSSテストプロトコル ↓</a>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>CSS結果を入力</h3>
+                    <p>400mと200mのタイムをアプリに入力してください。SwimAnalyticsがCSS、ペースゾーンを計算し、あなたの生理機能に基づいてすべての指標をカスタマイズします。フィットネスが向上したら、6～8週間ごとに更新してください。</p>
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>ワークアウトの記録を開始</h3>
+                    <p>Apple WatchとHealthアプリで泳いでください。SwimAnalyticsは自動的にワークアウトをインポートし、sTSSを計算し、CTL/ATL/TSBを更新し、進捗を追跡します。手動でのデータ入力は不要です。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt" id="css-test-guide">
+    <div class="container">
+        <h2 class="mb-xl text-center">完全なCSSテストプロトコル</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">📋 必要なもの</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>プールへのアクセス：</strong>25mまたは50mプール（25ydも可）</li>
+                        <li><strong>タイム計測：</strong>ストップウォッチ、プール時計、またはApple Watch</li>
+                        <li><strong>ウォームアップ時間：</strong>テスト前に15～20分</li>
+                        <li><strong>回復：</strong>テスト間に5～10分</li>
+                        <li><strong>努力度：</strong>最大持続可能ペース（全力スプリントではない）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">⏱️ テスト当日の条件</h3>
+                <div class="card-content">
+                    <ul>
+                        <li><strong>休息：</strong>24～48時間前にハードトレーニングなし</li>
+                        <li><strong>水分補給：</strong>十分な水分補給、通常の食事</li>
+                        <li><strong>プール温度：</strong>26～28°Cが理想（非常に冷たい/暑いプールは避ける）</li>
+                        <li><strong>時間帯：</strong>通常、最もパフォーマンスが良い時間</li>
+                        <li><strong>装備：</strong>トレーニング時と同じ（ゴーグル、キャップ、水着）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3xl">CSSテストのステップバイステップ</h3>
+
+        <div class="protocol-timeline">
+            <div class="timeline-item">
+                <div class="timeline-marker">ウォームアップ</div>
+                <div class="timeline-content">
+                    <h4>15～20分</h4>
+                    <p>400～800mのイージースイム、テクニックドリル、ビルドアップ。50m×2～3本をペースを上げて（60%、75%、85%の努力度）行います。テスト前に2～3分休息します。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">テスト1</div>
+                <div class="timeline-content">
+                    <h4>400m 最大努力</h4>
+                    <p><strong>壁からスタート</strong>（飛び込みなし）。全距離を通して維持できる最速ペースで400mを泳ぎます。これはスプリントではありません。努力をペース配分してください。タイムを<strong>mm:ss</strong>形式で記録します（例：6:08）。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>ペースのコツ：</strong>100mごとのスプリットを均等に保つようにしてください。後半の200mは前半の200mと同じか速くするのが理想的です（ネガティブスプリット）。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">回復</div>
+                <div class="timeline-content">
+                    <h4>5～10分</h4>
+                    <p><strong>重要な段階：</strong>イージースイムまたは完全休息。心拍数が120bpm以下になり、呼吸が完全に回復するまで待ちます。不十分な回復＝不正確なCSS。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">テスト2</div>
+                <div class="timeline-content">
+                    <h4>200m 最大努力</h4>
+                    <p><strong>壁からスタート</strong>（飛び込みなし）。200mの最大持続可能努力。これは100mあたりで400mよりもきつく感じるはずです。タイムを<strong>mm:ss</strong>形式で記録します（例：2:30）。</p>
+                    <div class="tip-box mt-sm">
+                        <strong>妥当性チェック：</strong>200m/100mのペースは、400m/100mのペースよりも3～6秒速いはずです。そうでない場合、回復が不十分だったか、ペース配分が適切でなかった可能性があります。
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker">クールダウン</div>
+                <div class="timeline-content">
+                    <h4>10～15分</h4>
+                    <p>300～500mのイージースイム、ストレッチ。タイムをすぐに記録してください。記憶に頼らないでください。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-warning mt-xl">
+            <h3>⚠️ CSSテストのよくある間違い</h3>
+            <ul>
+                <li><strong>400mで速すぎるスタート：</strong>バテてしまい、不正確なCSSになります。均等なペースを使用してください。</li>
+                <li><strong>テスト間の回復不足：</strong>疲労が200mを遅くし、CSSが人為的に速くなります→オーバートレーニングゾーンになります。</li>
+                <li><strong>飛び込みスタートの使用：</strong>0.5～1.5秒の有利さが加わり、計算が偏ります。常に壁からスタートしてください。</li>
+                <li><strong>疲労時のテスト：</strong>24～48時間前の重いトレーニング負荷＝抑制された結果。元気なときにテストしてください。</li>
+                <li><strong>すぐに記録しない：</strong>記憶は信頼できません。クールダウン前にタイムを書き留めてください。</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>SwimAnalyticsにCSS結果を入力する</h2>
+
+        <div class="screenshot-guide">
+            <div class="step-item">
+                <h3>ステップ1：CSS設定を開く</h3>
+                <p>SwimAnalyticsアプリで、<strong>設定 → クリティカルスイムスピード</strong>に移動します。「CSSテストを実施」または「CSSを更新」をタップします。</p>
+            </div>
+
+            <div class="step-item">
+                <h3>ステップ2：タイムを入力</h3>
+                <p>400mタイム（例：<code>6:08</code>）と200mタイム（例：<code>2:30</code>）を入力します。表示されている正確な形式を使用してください。「計算」をタップします。</p>
+            </div>
+
+            <div class="step-item">
+                <h3>ステップ3：結果を確認</h3>
+                <p>アプリは以下を表示します：</p>
+                <ul>
+                    <li><strong>CSSスピード：</strong>0.917 m/s</li>
+                    <li><strong>CSSペース：</strong>1:49/100m</li>
+                    <li><strong>トレーニングゾーン：</strong>7つのパーソナライズされたゾーン（ゾーン1～7）</li>
+                    <li><strong>sTSSベースライン：</strong>すべてのワークアウトで有効化</li>
+                </ul>
+            </div>
+
+            <div class="step-item">
+                <h3>ステップ4：保存と同期</h3>
+                <p>「CSSを保存」をタップします。アプリは即座に：</p>
+                <ul>
+                    <li>トレーニングゾーンを再計算</li>
+                    <li>過去90日間のsTSSを遡及的に更新</li>
+                    <li>CTL/ATL/TSB計算を調整</li>
+                    <li>ゾーン別ワークアウト分析を有効化</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>💡 プロのヒント：過去のCSSテスト</h3>
+            <p>以前のテストからCSSを既に知っている場合は、そのタイムを直接入力できます。ただし、最も正確な結果を得るには、6～8週間ごとに新しいテストを実施してください。トレーニングが進むにつれて、CSSは改善（速く）されるはずです。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="mb-xl text-center">指標を理解する</h2>
+
+        <div class="grid grid-2">
+            <div class="card">
+                <h3 class="card-title">クリティカルスイムスピード（CSS）</h3>
+                <div class="card-content">
+                    <p><strong>定義：</strong>有酸素閾値ペース：疲労せずに約30分間維持できる最速速度。</p>
+                    <p><strong>意味：</strong>CSS＝1:49/100mは、持続的な閾値努力で1:49ペースを維持できることを意味します。</p>
+                    <p><strong>使用方法：</strong>すべてのトレーニングゾーンとsTSS計算の基礎。6～8週間ごとに更新します。</p>
+                    <a href="/ja/css/" class="btn btn-secondary btn-small mt-md">CSSを学ぶ →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">トレーニングゾーン</h3>
+                <div class="card-content">
+                    <p><strong>定義：</strong>CSSに基づく7つの強度範囲、回復（ゾーン1）からスプリント（ゾーン7）まで。</p>
+                    <p><strong>意味：</strong>各ゾーンは特定の生理学的適応（有酸素ベース、閾値、VO₂max）を目標とします。</p>
+                    <p><strong>使用方法：</strong>構造化されたトレーニングのためにゾーンの処方に従います。アプリは各ワークアウトのゾーン滞在時間を表示します。</p>
+                    <a href="/ja/training-zones/" class="btn btn-secondary btn-small mt-md">トレーニングゾーン →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">スイミングトレーニングストレススコア（sTSS）</h3>
+                <div class="card-content">
+                    <p><strong>定義：</strong>強度と持続時間を組み合わせた定量化されたトレーニングストレス。CSSペースで1時間＝100 sTSS。</p>
+                    <p><strong>意味：</strong>sTSS 50＝イージーリカバリー、sTSS 100＝中程度、sTSS 200+＝非常にハードなセッション。</p>
+                    <p><strong>使用方法：</strong>トレーニング負荷を管理するために日々/週間のsTSSを追跡します。週に最大5～10 sTSSの増加を目標とします。</p>
+                    <a href="/ja/training-load/" class="btn btn-secondary btn-small mt-md">sTSSガイド →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">CTL / ATL / TSB</h3>
+                <div class="card-content">
+                    <p><strong>定義：</strong></p>
+                    <ul>
+                        <li><strong>CTL：</strong>慢性トレーニング負荷（フィットネス） - sTSSの42日間平均</li>
+                        <li><strong>ATL：</strong>急性トレーニング負荷（疲労） - sTSSの7日間平均</li>
+                        <li><strong>TSB：</strong>トレーニングストレスバランス（フォーム）＝CTL - ATL</li>
+                    </ul>
+                    <p><strong>使用方法：</strong>TSBがプラス＝新鮮/テーパリング中、TSBがマイナス＝疲労。TSB＝+5～+25でレースに臨みます。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout mt-xl">
+            <h3>📊 最初の1週間の目標</h3>
+            <p>CSSを入力し、3～5回のワークアウトを完了した後：</p>
+            <ul>
+                <li><strong>sTSS値を確認：</strong>努力の認識と一致するか確認（イージー～50、中程度～100、ハード～150+）</li>
+                <li><strong>ゾーン分布を確認：</strong>ゾーン2（有酸素ベース）に60～70%の時間を費やしていますか？</li>
+                <li><strong>CTLベースラインを設定：</strong>最初の週の平均sTSSが初期フィットネスベースラインになります</li>
+                <li><strong>パターンを特定：</strong>どのワークアウトが最も高いsTSSを生成しますか？適切に回復していますか？</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>一般的なユーザージャーニー（最初の8週間）</h2>
+
+        <div class="journey-timeline">
+            <div class="journey-phase">
+                <h3>第1～2週：ベースラインの確立</h3>
+                <ul>
+                    <li>CSSテストを実施し、結果を入力</li>
+                    <li>通常のワークアウトを3～5回完了</li>
+                    <li>sTSS値とゾーン分布を観察</li>
+                    <li>初期CTL（フィットネスレベル）を設定</li>
+                    <li><strong>目標：</strong>指標を理解する、まだ変更なし</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>第3～4週：ゾーンの適用</h3>
+                <ul>
+                    <li>ワークアウト計画にCSSゾーンを使用</li>
+                    <li>有酸素セットでゾーン2を意図的に泳ぐ</li>
+                    <li>週間sTSS合計を追跡（一貫性を求める）</li>
+                    <li>TSBを監視（わずかにマイナスになるはず＝トレーニング中）</li>
+                    <li><strong>目標：</strong>感覚ではなくゾーンでトレーニング</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>第5～6週：漸進的過負荷</h3>
+                <ul>
+                    <li>ベースラインから週間sTSSを5～10%増加</li>
+                    <li>週に1回の閾値（ゾーン4）セッションを追加</li>
+                    <li>CTLは徐々に上昇するはず（フィットネス向上）</li>
+                    <li>ATLはハード週にピークになる可能性（正常）</li>
+                    <li><strong>目標：</strong>フィットネスの管理された進行</li>
+                </ul>
+            </div>
+
+            <div class="journey-phase">
+                <h3>第7～8週：再評価と調整</h3>
+                <ul>
+                    <li>2回目のCSSテストを実施（速くなるはず）</li>
+                    <li>アプリでゾーンを更新（ペースが向上）</li>
+                    <li>第1週と第8週のCTLを比較（+10～20になるはず）</li>
+                    <li>進捗を確認：タイムは下がっていますか？より楽に感じますか？</li>
+                    <li><strong>目標：</strong>トレーニング効果を検証</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="callout callout-success mt-xl">
+            <h3>✅ 成功の指標</h3>
+            <p>SwimAnalyticsでの8週間の構造化されたトレーニング後、以下が見られるはずです：</p>
+            <ul>
+                <li><strong>CSSの改善：</strong>CSSペースが1～3%速くなる（例：1:49 → 1:47）</li>
+                <li><strong>CTLの増加：</strong>+15～25ポイント（例：30 → 50 CTL）</li>
+                <li><strong>一貫したsTSS：</strong>週間合計が10～15%の変動内</li>
+                <li><strong>より良いペース配分：</strong>より均等なスプリット、より良い努力の較正</li>
+                <li><strong>改善された回復：</strong>TSBが予測可能にサイクル（-10～+5）</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>トラブルシューティングとよくある質問</h2>
+
+        <div class="faq-item">
+            <h3>sTSSがワークアウトの努力に対して高すぎる/低すぎるように見える</h3>
+            <p><strong>原因：</strong>CSSが古いか不正確です。</p>
+            <p><strong>解決策：</strong>CSSを再テストしてください。疲労時にテストしたり、ペース配分を誤ったりした場合、CSSは不正確になります。適切なCSSテストはその後のすべての指標にとって重要です。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>アプリに「CSSが設定されていません」と表示される</h3>
+            <p><strong>原因：</strong>CSSテストが完了していないか、保存されていません。</p>
+            <p><strong>解決策：</strong>設定 → クリティカルスイムスピード → テストを実施に移動します。400mと200mの両方のタイムを入力し、保存をタップします。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>ワークアウトがApple Watchから同期されない</h3>
+            <p><strong>原因：</strong>Healthアプリの権限が付与されていないか、ワークアウトが「水泳」として分類されていません。</p>
+            <p><strong>解決策：</strong>設定 → プライバシー → ヘルスケア → SwimAnalytics → ワークアウトの読み取りを許可を確認します。Apple Watchのワークアウトタイプが「プールスイム」または「オープンウォータースイム」であることを確認してください。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>一貫したトレーニングにもかかわらずCTLが増加しない</h3>
+            <p><strong>原因：</strong>sTSS合計が低すぎるか、頻度が一貫していません。</p>
+            <p><strong>解決策：</strong>CTLは42日間の指数加重平均です。ゆっくりと上昇します。週間sTSSを5～10%増やし、CTLの一貫した成長のために週に4回以上のワークアウトを維持してください。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>どのくらいの頻度でCSSを再テストすべきですか？</h3>
+            <p><strong>推奨：</strong>ベース/ビルド期間中は6～8週間ごと。病気、怪我、長い休憩の後、またはゾーンが一貫して簡単すぎる/難しすぎると感じる場合は再テストしてください。</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>他の泳法でSwimAnalyticsを使用できますか？</h3>
+            <p><strong>はい、制限あり：</strong>CSSは通常、自由形でテストされます。IM/背泳ぎ/平泳ぎのワークアウトの場合、sTSSは自由形CSSに基づいて計算されます。精度を高めるために、泳法別のCSSテストの実施を検討してください。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>次のステップ</h2>
+
+        <div class="grid grid-3">
+            <div class="card">
+                <h3 class="card-title">トレーニングゾーンを学ぶ</h3>
+                <div class="card-content">
+                    <p>特定の適応のためにゾーン2（有酸素ベース）、ゾーン4（閾値）、ゾーン5（VO₂max）でトレーニングする方法を理解します。</p>
+                    <a href="/ja/training-zones/" class="btn btn-secondary btn-small mt-md">トレーニングゾーン →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">sTSSを計算</h3>
+                <div class="card-content">
+                    <p>無料のsTSS計算機を使用して、ワークアウトにコミットする前にトレーニング負荷を理解します。</p>
+                    <a href="/ja/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS計算機 →</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="card-title">指標を深く理解</h3>
+                <div class="card-content">
+                    <p>査読済みの研究参照を用いて、CSS、sTSS、CTL/ATL/TSBの背後にある科学を探求します。</p>
+                    <a href="/ja/research/" class="btn btn-secondary btn-small mt-md">研究 →</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-xl text-center">
+            <p class="mb-md"><strong>追跡を開始する準備はできましたか？</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">SwimAnalyticsを無料でダウンロード</a>
+            <p class="mt-sm text-secondary">7日間無料トライアル • クレジットカード不要 • iOS 16+</p>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ja/">
+                            ホーム
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            学ぶ
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/contact/">
+                            お問い合わせ
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>全著作権所有</h3>
+                <ul>
+                    <li><a href="/ja/privacy/">プライバシー</a></li>
+                    <li><a href="/ja/terms/">利用規約</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>言語を選択</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/getting-started/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/getting-started/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/getting-started/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/getting-started/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/getting-started/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/getting-started/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/getting-started/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/getting-started/"
+                           aria-current="page">
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/getting-started/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/getting-started/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/getting-started/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/getting-started/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/getting-started/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/getting-started/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 全著作権所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="このウェブサイトはクッキーを使用してユーザー体験を向上させています。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>このウェブサイトはクッキーを使用してユーザー体験を向上させています。 <a href="/ja/privacy/">詳細</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒否する</button>
+            <button class="btn btn-primary" id="cookie-accept">同意する</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SWOLF计算器：测量游泳效率 | 越低越好</title>
+    <meta name="description" content="SWOLF(游泳+高尔夫)计算器测量游泳效率。计算您的分数，按级别比较基准，并使用训练练习来改进。SWOLF越低=效率越高。游泳运动员免费指南。">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="SWOLF, 游泳效率, 划水效率, SWOLF分数, 效率计算器">
+    
+    <link rel="canonical" href="https://swimanalytics.app/zh/efficiency/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/zh/efficiency/">
+    <meta property="og:title" content="SWOLF计算器：测量游泳效率 | 越低越好">
+    <meta property="og:description" content="SWOLF(游泳+高尔夫)计算器测量游泳效率。计算您的分数，按级别比较基准，并使用训练练习来改进。SWOLF越低=效率越高。游泳运动员免费指南。">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/zh/efficiency/">
+    <meta name="twitter:title" content="SWOLF计算器：测量游泳效率 | 越低越好">
+    <meta name="twitter:description" content="SWOLF(游泳+高尔夫)计算器测量游泳效率。计算您的分数，按级别比较基准，并使用训练练习来改进。SWOLF越低=效率越高。游泳运动员免费指南。">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/efficiency/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/efficiency/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/efficiency/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/efficiency/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/efficiency/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/efficiency/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/efficiency/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/efficiency/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/efficiency/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/efficiency/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/efficiency/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/efficiency/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/efficiency/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/efficiency/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/efficiency/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "zh"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "SWOLF计算器：测量游泳效率 | 越低越好",
+      "description": "SWOLF(游泳+高尔夫)计算器测量游泳效率。计算您的分数，按级别比较基准，并使用训练练习来改进。SWOLF越低=效率越高。游泳运动员免费指南。",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/zh/efficiency/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/zh/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "效率",
+          "item": "https://swimanalytics.app/zh/efficiency/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">跳到内容</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/zh/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/zh/"
+                               
+                               aria-current="">
+                                首页
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">学习</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/zh/getting-started/"
+                                       
+                                       aria-current="">
+                                        开始
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/training-zones/"
+                                       
+                                       aria-current="">
+                                        训练区间
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/training-load/"
+                                       
+                                       aria-current="">
+                                        训练负荷
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS计算器
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">科学</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/zh/research/"
+                                       
+                                       aria-current="">
+                                        研究
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/formulas/"
+                                       
+                                       aria-current="">
+                                        公式
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/efficiency/"
+                                       class="active"
+                                       aria-current="page">
+                                        效率
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        划水技术
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/zh/bibliography/"
+                                       
+                                       aria-current="">
+                                        参考文献
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/zh/contact/"
+                               
+                               aria-current="">
+                                联系
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="选择语言">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" selected>
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="切换菜单" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>游泳效率：SWOLF</h1>
+        <p class="lead">您的划水经济性得分 - 越低越好</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>什么是 SWOLF？</h2>
+        <p class="lead">SWOLF（游泳 + 高尔夫）是一个综合效率指标，将划水次数和时间合并为一个数字。就像高尔夫一样，目标是使您的得分最小化。</p>
+
+        <div class="formula-box">
+            <h3>公式</h3>
+            <div class="formula">
+                SWOLF = 单程时间（秒）+ 划水次数
+            </div>
+            <div class="formula-explanation">
+                <p><strong>示例：</strong> 如果您以20秒游25米，划水15次：</p>
+                <div class="calculation">
+                    SWOLF = 20 + 15 = <strong>35</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="callout callout-info">
+            <h3>跨泳池比较的标准化 SWOLF</h3>
+            <p>要在不同泳池长度之间比较得分：</p>
+            <div class="formula">
+                SWOLF₂₅ = (时间 × 25/泳池长度) + (划水次数 × 25/泳池长度)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">SWOLF 参考值</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>自由泳 - 25米泳池</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>精英游泳运动员</strong>
+                        <div class="value">30-35</div>
+                        <p>国家级/国际级，卓越效率</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>竞技游泳运动员</strong>
+                        <div class="value">35-45</div>
+                        <p>校队、大学、竞技大师级</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>健身游泳者</strong>
+                        <div class="value">45-60</div>
+                        <p>定期训练，技术扎实</p>
+                    </div>
+                    <div class="level-card-compact">
+                        <strong>初学者</strong>
+                        <div class="value">60+</div>
+                        <p>发展技术和体能</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>其他泳姿 - 25米泳池</h3>
+                <div class="stroke-benchmarks">
+                    <div class="benchmark-item">
+                        <h4>仰泳</h4>
+                        <p>通常比自由泳<strong>高5-10点</strong></p>
+                        <div class="value-small">良好：40-50</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>蛙泳</h4>
+                        <p>由于滑行技术导致较大差异</p>
+                        <div class="value-small">范围：40-60</div>
+                    </div>
+
+                    <div class="benchmark-item">
+                        <h4>蝶泳</h4>
+                        <p>熟练游泳者与自由泳相似</p>
+                        <div class="value-small">良好：38-55</div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning">
+                    <h4>⚠️ 个体差异</h4>
+                    <p>SWOLF 受身高和臂展影响。身材较高的游泳者自然划水次数较少。使用 SWOLF 跟踪<em>您自己的进步</em>，而不是与他人比较。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>解读 SWOLF 模式</h2>
+
+        <div class="pattern-analysis">
+            <div class="pattern-item">
+                <h3>📉 SWOLF 下降 = 效率提高</h3>
+                <p>您的技术正在改善，或您在给定配速下变得更经济。这是数周和数月训练的目标。</p>
+                <div class="example-box">
+                    <strong>示例：</strong> 在8周专注技术训练期间，SWOLF 从48下降至45再到42。
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📈 SWOLF 上升 = 效率下降</h3>
+                <p>疲劳正在累积，技术正在恶化，或您游得比效率允许的速度更快。</p>
+                <div class="example-box">
+                    <strong>示例：</strong> 在1000米组的最后200米，SWOLF 从42上升至48，表明疲劳。
+                </div>
+            </div>
+
+            <div class="pattern-item">
+                <h3>📊 相同 SWOLF 的不同组合</h3>
+                <p>SWOLF 为45可能来自多种划水/时间组合：</p>
+                <ul>
+                    <li><strong>20秒 + 25次划水</strong> = 高频率，较短划水</li>
+                    <li><strong>25秒 + 20次划水</strong> = 低频率，较长划水</li>
+                </ul>
+                <p><strong>始终分析组成部分</strong>（划水次数和时间）以了解您的游泳策略。</p>
+            </div>
+        </div>
+
+        <div class="callout callout-tip">
+            <h3>🎯 SWOLF 训练应用</h3>
+            <ul>
+                <li><strong>技术训练：</strong> 通过更好的抓水、流线型和身体姿势尝试降低 SWOLF</li>
+                <li><strong>疲劳监控：</strong> SWOLF 上升表明技术恶化 - 该休息了</li>
+                <li><strong>配速-效率平衡：</strong> 找到在 SWOLF 不飙升的情况下能维持的最快配速</li>
+                <li><strong>练习有效性：</strong> 记录练习组前后的 SWOLF 以衡量技术转移</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>测量最佳实践</h2>
+
+        <div class="measurement-guidelines">
+            <div class="guideline-box">
+                <h3>📏 划水计数</h3>
+                <ul>
+                    <li>计算每次入水（两臂合计）</li>
+                    <li>从推壁后第一次划水开始计数</li>
+                    <li>计数直到触壁</li>
+                    <li>保持一致的推壁距离（距旗帜约5米）</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>⏱️ 计时</h3>
+                <ul>
+                    <li>从第一次划水测量到触壁</li>
+                    <li>在各趟之间使用一致的推壁强度</li>
+                    <li>技术（Garmin、Apple Watch、FORM）自动计算</li>
+                    <li>手动计时：使用泳池时钟或秒表</li>
+                </ul>
+            </div>
+
+            <div class="guideline-box">
+                <h3>🔄 一致性</h3>
+                <ul>
+                    <li>在相似配速下测量 SWOLF 以进行比较</li>
+                    <li>在主组期间记录，而非热身/放松</li>
+                    <li>注明泳姿类型（自由泳、仰泳等）</li>
+                    <li>比较相同泳池长度（25米对25米，不是25米对50米）</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>SWOLF 的局限性</h2>
+
+        <div class="limitations-list">
+            <div class="limitation-item">
+                <h3>🚫 无法跨运动员比较</h3>
+                <p>身高、臂长和灵活性在划水次数上造成自然差异。1.88米的游泳者在相同健康水平下的 SWOLF 会低于1.68米的游泳者。</p>
+                <p><strong>解决方案：</strong> 仅使用 SWOLF 跟踪您的个人进步。</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 综合得分隐藏细节</h3>
+                <p>SWOLF 合并了两个变量。您可能改善一个而恶化另一个，仍然获得相同分数。</p>
+                <p><strong>解决方案：</strong> 始终分别检查划水次数和时间。</p>
+            </div>
+
+            <div class="limitation-item">
+                <h3>🚫 未按配速标准化</h3>
+                <p>SWOLF 随着游泳速度加快而自然增加（更多划水，更少时间，但总数更高）。这不是低效率 - 这是物理学。</p>
+                <p><strong>解决方案：</strong> 在特定目标配速下记录 SWOLF（例如，"CSS 配速下的 SWOLF" 对比 "轻松配速下的 SWOLF"）。</p>
+            </div>
+        </div>
+
+        <div class="callout callout-science">
+            <h3>🔬 游泳经济性背后的科学</h3>
+            <p>Costill 等人（1985）的研究确立了<strong>游泳经济性</strong>（每单位距离的能量成本）对中距离表现比 VO₂max 更重要。</p>
+            <p>SWOLF 作为经济性的粗略指标 - 较低的 SWOLF 通常与给定配速下较低的能量消耗相关，使您能够以相同努力游得更快或更久。</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>SWOLF 训练练习</h2>
+
+        <div class="drill-set">
+            <h3>🎯 SWOLF 降低组</h3>
+            <div class="workout-box">
+                <h4>8 × 50米（30秒休息）</h4>
+                <ol>
+                    <li><strong>50 #1-2：</strong> 以舒适配速游泳，记录基线 SWOLF</li>
+                    <li><strong>50 #3-4：</strong> 减少2次划水，保持相同时间 → 专注于单次划水距离</li>
+                    <li><strong>50 #5-6：</strong> 略微增加划频，保持相同次数 → 专注于转动</li>
+                    <li><strong>50 #7-8：</strong> 找到最佳平衡 - 寻求最低 SWOLF</li>
+                </ol>
+                <p><strong>目标：</strong> 发现您最有效的次数/频率组合。</p>
+            </div>
+        </div>
+
+        <div class="drill-set">
+            <h3>⚡ SWOLF 稳定性测试</h3>
+            <div class="workout-box">
+                <h4>10 × 100米 @ CSS 配速（20秒休息）</h4>
+                <p>记录每个100米的 SWOLF。分析：</p>
+                <ul>
+                    <li>哪个100米的 SWOLF 最低？（最高效）</li>
+                    <li>SWOLF 在哪里飙升？（技术恶化或疲劳）</li>
+                    <li>从第一个到最后一个100米，SWOLF 变化了多少？</li>
+                </ul>
+                <p><strong>目标：</strong> 在所有重复中保持 SWOLF ±2点。一致性表明在疲劳下技术扎实。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>效率来自重复</h2>
+        <p class="lead">SWOLF 不会一夜之间改善。它是数千次技术正确的划水、刻意练习和有意识关注效率而非速度的累积结果。</p>
+
+        <p>持续记录。逐步改善。观察您的游泳如何转变。</p>
+
+        <div class="mt-xl">
+            <a href="/zh/stroke-mechanics/" class="btn btn-primary">划水力学 →</a>
+            <a href="/zh/formulas/" class="btn btn-secondary">所有公式</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/zh/">
+                            首页
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">
+                            学习
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/">
+                            科学
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/contact/">
+                            联系
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>版权所有</h3>
+                <ul>
+                    <li><a href="/zh/privacy/">隐私</a></li>
+                    <li><a href="/zh/terms/">条款</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>选择语言</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/efficiency/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/efficiency/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/efficiency/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/efficiency/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/efficiency/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/efficiency/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/efficiency/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/efficiency/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/efficiency/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/efficiency/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/efficiency/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/efficiency/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/efficiency/"
+                           aria-current="page">
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/efficiency/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. 版权所有.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="本网站使用cookies改善您的体验。" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>本网站使用cookies改善您的体验。 <a href="/zh/privacy/">了解更多</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">拒绝</button>
+            <button class="btn btn-primary" id="cookie-accept">接受</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>

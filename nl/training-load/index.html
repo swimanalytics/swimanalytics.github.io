@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="nl" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Zwem TSS Calculator: Trainingsbelasting &amp; PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="Leer zwem Training Stress Score (sTSS) berekening en Performance Management Chart statistieken (CTL, ATL, TSB). Volg conditie en vermoeidheid wetenschappelijk. Inclusief uitgewerkte voorbeelden, wekelijkse TSS doelen, en taper strategieën.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="zwem TSS, sTSS calculator, training stress score, CTL ATL TSB, zwem PMC">
+    
+    <link rel="canonical" href="https://swimanalytics.app/nl/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/nl/training-load/">
+    <meta property="og:title" content="Zwem TSS Calculator: Trainingsbelasting &amp; PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="Leer zwem Training Stress Score (sTSS) berekening en Performance Management Chart statistieken (CTL, ATL, TSB). Volg conditie en vermoeidheid wetenschappelijk. Inclusief uitgewerkte voorbeelden, wekelijkse TSS doelen, en taper strategieën.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/nl/training-load/">
+    <meta name="twitter:title" content="Zwem TSS Calculator: Trainingsbelasting &amp; PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="Leer zwem Training Stress Score (sTSS) berekening en Performance Management Chart statistieken (CTL, ATL, TSB). Volg conditie en vermoeidheid wetenschappelijk. Inclusief uitgewerkte voorbeelden, wekelijkse TSS doelen, en taper strategieën.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "nl"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Zwem TSS Calculator: Trainingsbelasting &amp; PMC (CTL/ATL/TSB)",
+      "description": "Leer zwem Training Stress Score (sTSS) berekening en Performance Management Chart statistieken (CTL, ATL, TSB). Volg conditie en vermoeidheid wetenschappelijk. Inclusief uitgewerkte voorbeelden, wekelijkse TSS doelen, en taper strategieën.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/nl/training-load/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/nl/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Trainingsbelasting",
+          "item": "https://swimanalytics.app/nl/training-load/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Spring naar inhoud</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/nl/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/nl/"
+                               
+                               aria-current="">
+                                Start
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Leren</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/nl/getting-started/"
+                                       
+                                       aria-current="">
+                                        Aan de Slag
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/training-zones/"
+                                       
+                                       aria-current="">
+                                        Trainingszones
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/training-load/"
+                                       class="active"
+                                       aria-current="page">
+                                        Trainingsbelasting
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        sTSS Calculator
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Wetenschap</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/nl/research/"
+                                       
+                                       aria-current="">
+                                        Onderzoek
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/formulas/"
+                                       
+                                       aria-current="">
+                                        Formules
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/efficiency/"
+                                       
+                                       aria-current="">
+                                        Efficiëntie
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Slagtechniek
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/nl/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografie
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/nl/contact/"
+                               
+                               aria-current="">
+                                Contact
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Selecteer taal">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" selected>
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu openen/sluiten" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Trainingsbelasting en Prestatie Management</h1>
+        <p class="lead">Stress Kwantificeren, Fitness Monitoren, Prestaties Optimaliseren</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Trainingsbelasting Begrijpen</h2>
+        <p class="lead">Trainingsbelasting kwantificering beantwoordt de kritieke vraag: <strong>Hoe zwaar was die training?</strong> Niet alleen afstand of tijd, maar de werkelijke fysiologische stress op je lichaam.</p>
+
+        <p>Het Training Stress Score (TSS) systeem, ontwikkeld door Dr. Andrew Coggan, biedt een gestandaardiseerde methode om trainingsintensiteit en -duur in één getal te kwantificeren. Voor zwemmen gebruiken we <strong>Swim Training Stress Score (sTSS)</strong> met een cruciale modificatie die rekening houdt met de unieke weerstandseigenschappen van water.</p>
+
+        <div class="callout callout-info">
+            <h3>De TSS Standaard</h3>
+            <p>Eén uur op je functionele drempeltempo (CSS) = <strong>100 TSS</strong></p>
+            <p>Deze standaardisatie maakt het mogelijk trainingen, weken en trainingscycli te vergelijken. Een 30 minuten zwemmen op drempel = ~50 TSS. Een 2 uur zwemmen op drempel = ~200 TSS.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>De Formule</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        sTSS = (IF³) × Duur (uren) × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>Waarbij Intensity Factor (IF) is:</p>
+                        <div class="formula">
+                            IF = NSS / FTP
+                        </div>
+                        <p>En Normalized Swim Speed (NSS) is:</p>
+                        <div class="formula">
+                            NSS = Totale Afstand / Totale Tijd (m/min)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning mt-md">
+                    <h4>⚡ De Kubieke Factor (IF³)</h4>
+                    <p><strong>Kern Innovatie:</strong> Zwemmen gebruikt IF³ terwijl fietsen/hardlopen IF² gebruiken. Dit weerspiegelt de fysica van water—weerstand neemt <em>exponentieel</em> toe met snelheid.</p>
+                    <p>10% sneller zwemmen vereist ~33% meer vermogen. De kubieke factor weegt deze stijging in fysiologische kosten nauwkeurig.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Praktisch Voorbeeld</h3>
+                <div class="example-box">
+                    <h4>Zwemmer Profiel:</h4>
+                    <ul>
+                        <li>CSS: 1:33/100m = 93 seconden/100m</li>
+                        <li>FTP: 64.5 m/min (100m / 1.55min)</li>
+                    </ul>
+
+                    <h4>Training Data:</h4>
+                    <ul>
+                        <li>Totale Afstand: 3000m</li>
+                        <li>Bewegingstijd: 55:00 (3300 seconden)</li>
+                        <li>Rusttijd: 10:00 (niet geteld)</li>
+                    </ul>
+
+                    <h4>Stap 1: Bereken NSS</h4>
+                    <div class="calculation">
+                        NSS = 3000m / 55min<br>
+                        NSS = <strong>54.5 m/min</strong>
+                    </div>
+
+                    <h4>Stap 2: Bereken IF</h4>
+                    <div class="calculation">
+                        IF = 54.5 / 64.5<br>
+                        IF = <strong>0.845</strong>
+                    </div>
+
+                    <h4>Stap 3: Bereken sTSS</h4>
+                    <div class="calculation">
+                        sTSS = (0.845³) × (55/60) × 100<br>
+                        sTSS = 0.603 × 0.917 × 100<br>
+                        sTSS = <strong>55.3</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>sTSS Intensiteit Gids</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>sTSS Bereik</th>
+                        <th>Intensiteitsniveau</th>
+                        <th>Beschrijving</th>
+                        <th>Training Voorbeelden</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Licht Herstel</td>
+                        <td>Licht zwemmen, technische focus, actief herstel</td>
+                        <td>30-45min herstelzwemmen, technische oefeningen</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Gematigd Training</td>
+                        <td>Typisch dagelijks trainingsvolume</td>
+                        <td>60-90min aërobe duur, gemengde zones</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Zware Training</td>
+                        <td>Kwaliteitssessies met drempel/VO₂ werk</td>
+                        <td>90-120min met CSS intervallen, wedstrijdtempo series</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Zeer Zwaar</td>
+                        <td>Wedstrijdsimulatie, zeer hoge intensiteit blokken</td>
+                        <td>2-3u sessies, tijdritten, all-out inspanning series</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Extreem</td>
+                        <td>Wedstrijddag, ultra-afstand evenementen</td>
+                        <td>Competitie, Ironman zwemmen, marathonzwemmen</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 Wekelijkse TSS Doelen per Niveau</h3>
+            <ul>
+                <li><strong>Beginners:</strong> 200-400 TSS/week</li>
+                <li><strong>Intermediair:</strong> 400-700 TSS/week</li>
+                <li><strong>Gevorderd/Elite:</strong> 700-1000+ TSS/week</li>
+            </ul>
+            <p>Deze accumuleren naar je Chronic Training Load (CTL).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">Performance Management Chart (PMC)</h2>
+        <p class="text-center lead">De PMC visualiseert drie onderling verbonden metrics die het complete verhaal van je training vertellen: fitness, vermoeidheid en vorm.</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - Chronic Training Load</h3>
+                    <div class="metric-value-label">Je FITNESS</div>
+                    <p>Exponentieel gewogen 42-daags gemiddelde van dagelijkse TSS. Vertegenwoordigt lange termijn aërobe fitness en trainingsaanpassing.</p>
+                    <div class="formula-small">
+                        CTL vandaag = CTL gisteren + (TSS vandaag - CTL gisteren) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - Acute Training Load</h3>
+                    <div class="metric-value-label">Je VERMOEIDHEID</div>
+                    <p>Exponentieel gewogen 7-daags gemiddelde van dagelijkse TSS. Vangt recente trainingsstress en geaccumuleerde vermoeidheid.</p>
+                    <div class="formula-small">
+                        ATL vandaag = ATL gisteren + (TSS vandaag - ATL gisteren) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - Training Stress Balance</h3>
+                    <div class="metric-value-label">Je VORM</div>
+                    <p>Verschil tussen gisteren fitness en vermoeidheid. Geeft bereidheid aan om te presteren of behoefte aan rust.</p>
+                    <div class="formula-small">
+                        TSB = CTL gisteren - ATL gisteren
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>CTL Begrijpen: Je Fitness Metric</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Wat CTL Vertegenwoordigt</h3>
+                <p>CTL kwantificeert de trainingsbelasting waaraan je lichaam is <em>aangepast</em> over de laatste 6 weken. Hogere CTL betekent:</p>
+                <ul>
+                    <li>Grotere aërobe capaciteit en uithoudingsvermogen</li>
+                    <li>Vermogen om meer trainingsvolume aan te kunnen</li>
+                    <li>Verbeteringen in spier- en metabole aanpassingen</li>
+                    <li>Hoger volhoudbaar prestatieniveau</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>Tijdconstante: 42 Dagen</h4>
+                    <p>CTL heeft een halfwaardetijd van ~14.7 dagen. Na 42 dagen blijft ongeveer 36.8% (1/e) van de impact van één training over.</p>
+                    <p>Deze trage afbraak betekent dat fitness geleidelijk opbouwt maar ook langzaam vervalt—beschermt tegen detraining tijdens korte pauzes.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Typische CTL Waarden</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Beginners:</strong>
+                        <div class="value">20-40 CTL</div>
+                        <p>Basis fitness opbouwen, 3-4 zwemmen/week</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Intermediair:</strong>
+                        <div class="value">40-70 CTL</div>
+                        <p>Consistente training, 4-5 zwemmen/week</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Gevorderd:</strong>
+                        <div class="value">70-100 CTL</div>
+                        <p>Hoog volume, 5-6 zwemmen/week, dubbele sessies</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Elite:</strong>
+                        <div class="value">100-150+ CTL</div>
+                        <p>Professionele trainingsbelasting, 8-12 sessies/week</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ CTL Stijgingssnelheid Limieten</strong>
+                    <ul>
+                        <li><strong>Beginners:</strong> +3-5 CTL per week</li>
+                        <li><strong>Intermediair:</strong> +5-7 CTL per week</li>
+                        <li><strong>Gevorderd:</strong> +7-10 CTL per week</li>
+                    </ul>
+                    <p>Deze snelheden overschrijden verhoogt significant blessure en uitputtingsrisico.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>ATL Begrijpen: Je Vermoeidheids Metric</h2>
+
+        <div class="content-split">
+            <div>
+                <p>ATL volgt korte termijn trainingsstress—geaccumuleerde vermoeidheid van de afgelopen week. Stijgt snel na zware trainingen en daalt snel tijdens rust.</p>
+
+                <h3>ATL Dynamiek</h3>
+                <ul>
+                    <li><strong>Snelle Respons:</strong> 7-dagen tijdconstante (halfwaardetijd ~2.4 dagen)</li>
+                    <li><strong>Pieken Patroon:</strong> Springt na zware sessies, daalt tijdens herstel</li>
+                    <li><strong>Herstel Indicator:</strong> Dalende ATL = verdwijnende vermoeidheid</li>
+                    <li><strong>Overtraining Waarschuwing:</strong> Chronisch verhoogde ATL suggereert inadequaat herstel</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 Het Fitness-Vermoeidheid Model</h4>
+                    <p>Elke trainingssessie produceert twee effecten:</p>
+                    <ol>
+                        <li><strong>Fitness stimulus</strong> (langzame opbouw, lange duur)</li>
+                        <li><strong>Vermoeidheid</strong> (snelle opbouw, snelle verdwijning)</li>
+                    </ol>
+                    <p>Prestatie = Fitness - Vermoeidheid. PMC visualiseert dit model, maakt wetenschappelijke trainingsperiodisering mogelijk.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>In Steady State</h3>
+                <p>Wanneer trainingsbelasting consistent is week na week, convergeren CTL en ATL:</p>
+                <div class="example-box">
+                    <h4>Voorbeeld: 500 TSS/week consistent</h4>
+                    <div class="calculation">
+                        Dagelijkse TSS ≈ 71<br>
+                        CTL nadert ~71<br>
+                        ATL nadert ~71<br>
+                        TSB nadert 0
+                    </div>
+                    <p><strong>Interpretatie:</strong> Fitness en vermoeidheid zijn in balans. Geen cumulatief deficit of surplus.</p>
+                </div>
+
+                <h3>Tijdens Opbouw Fasen</h3>
+                <p>Wanneer trainingsbelasting toeneemt:</p>
+                <div class="example-box">
+                    <p>ATL stijgt <em>sneller</em> dan CTL door kortere tijdconstante. TSB wordt negatief (vermoeidheid > fitness). Dit is normaal en productief—je past overbelasting toe om aanpassing te stimuleren.</p>
+                </div>
+
+                <h3>Tijdens Taper</h3>
+                <p>Wanneer trainingsbelasting afneemt:</p>
+                <div class="example-box">
+                    <p>ATL daalt <em>sneller</em> dan CTL. TSB wordt positief (fitness > vermoeidheid). Dit is het doel—wedstrijddag bereiken fris terwijl fitness behouden blijft.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>TSB Begrijpen: Je Vorm/Bereidheid Metric</h2>
+
+        <p class="lead">TSB is het verschil tussen gisteren fitness (CTL) en vermoeidheid (ATL). Geeft aan of je fris of vermoeid bent, klaar om te racen of herstel nodig hebt.</p>
+
+        <div class="tsb-zones-container">
+            <h3>TSB Interpretatie Gids</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>TSB Bereik</th>
+                        <th>Status</th>
+                        <th>Interpretatie</th>
+                        <th>Aanbevolen Actie</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>Overbelasting Risico</strong></td>
+                        <td>Extreme vermoeidheid. Mogelijk overtraining.</td>
+                        <td>Onmiddellijk herstel nodig. Reduceer volume 50%+.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 tot -30</td>
+                        <td><strong>Optimaal Trainingsblok</strong></td>
+                        <td>Productieve overbelasting. Fitness opbouwen.</td>
+                        <td>Ga door met plan. Monitor tekenen van overmatige vermoeidheid.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 tot -20</td>
+                        <td><strong>Gematigde Belasting</strong></td>
+                        <td>Standaard training accumulatie.</td>
+                        <td>Normale training. Kan kwaliteitssessies aan.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 tot +15</td>
+                        <td><strong>Transitie/Onderhoud</strong></td>
+                        <td>Balans status. Lichte vermoeidheid of frisheid.</td>
+                        <td>Goed voor B/C races, tests, of herstelweken.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 tot +25</td>
+                        <td><strong>Optimale Race Vorm</strong></td>
+                        <td>Fris en fit. Optimale prestatie venster.</td>
+                        <td>Prioriteit A races. Piekprestatie verwacht.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 tot +35</td>
+                        <td><strong>Zeer Fris</strong></td>
+                        <td>Zeer uitgerust. Goed voor sprints.</td>
+                        <td>Korte races, tijdritten, zeer uitgerust status.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>Detraining</strong></td>
+                        <td>Fitness verlies door inactiviteit.</td>
+                        <td>Hervat training. Fitness daalt door verlengde rust.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 Doel TSB per Race Afstand</h3>
+            <ul>
+                <li><strong>Sprint/Olympische Triatlon:</strong> TSB +15 tot +25 (7-10 dagen taper)</li>
+                <li><strong>Half Ironman (70.3):</strong> TSB +20 tot +30 (10-14 dagen taper)</li>
+                <li><strong>Volle Ironman:</strong> TSB +15 tot +25 (14-21 dagen taper)</li>
+                <li><strong>Zwembad Zwem Evenementen:</strong> TSB +15 tot +25 (7-14 dagen taper afhankelijk van evenement)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>PMC Voorbeeld: Trainingsblok → Taper → Race</h2>
+
+        <div class="example-box">
+            <h3>8-Weken Training Cyclus</h3>
+
+            <h4>Weken 1-5: Opbouw Fase</h4>
+            <ul>
+                <li>Wekelijkse TSS: 400 → 450 → 500 → 550 → 550</li>
+                <li>CTL: Stijgt geleidelijk van 50 → 65</li>
+                <li>ATL: Volgt wekelijkse belasting, fluctueert 55-80</li>
+                <li>TSB: Negatief (-15 tot -25), geeft productieve trainingsstress aan</li>
+            </ul>
+
+            <h4>Week 6: Herstelweek</h4>
+            <ul>
+                <li>Wekelijkse TSS: 300 (40% reductie)</li>
+                <li>CTL: Kleine daling naar ~63 (fitness behouden)</li>
+                <li>ATL: Daalt naar ~50 (vermoeidheid verdwijnt)</li>
+                <li>TSB: Stijgt naar +5 (gedeeltelijke frisheid)</li>
+            </ul>
+
+            <h4>Week 7: Laatste Opbouw</h4>
+            <ul>
+                <li>Wekelijkse TSS: 500</li>
+                <li>CTL: Stijgt naar ~65</li>
+                <li>ATL: Springt naar ~75</li>
+                <li>TSB: Keert terug naar -20 (kwaliteitswerk geabsorbeerd)</li>
+            </ul>
+
+            <h4>Week 8: Taper + Race</h4>
+            <ul>
+                <li>Dagen 1-9: Gereduceerd volume, behoud intensiteit (200 TSS totaal)</li>
+                <li>CTL: Zachte daling naar ~62 (minimaal fitness verlies)</li>
+                <li>ATL: Snelle daling naar ~40 (vermoeidheid geëlimineerd)</li>
+                <li>TSB: Piek op <strong>+20 race dag</strong></li>
+                <li><strong>Resultaat:</strong> Fris, fit, klaar om te presteren</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ Waarom Taper Werkt</h3>
+            <p>De verschillende tijdconstanten (42 dagen voor CTL, 7 dagen voor ATL) creëren het taper effect:</p>
+            <ul>
+                <li>ATL reageert snel → Vermoeidheid verdwijnt in 7-10 dagen</li>
+                <li>CTL reageert langzaam → Fitness blijft weken behouden</li>
+                <li>Resultaat: Fitness blijft terwijl vermoeidheid verdwijnt = piekprestatie</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Praktische Toepassing Gidsen</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ Log Dagelijkse sTSS</h3>
+                <p>Consistentie is key. Log sTSS van elke training om nauwkeurige CTL/ATL/TSB trends op te bouwen. Ontbrekende data creëert gaten in de fitness curve.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ Monitor CTL Stijgingssnelheid</h3>
+                <p>Verhoog CTL geleidelijk. Een wekelijkse stijging van 5-7 punten is vol te houden voor de meeste zwemmers. 15-20 punten springen nodigt blessures uit.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ Plan Herstelweken</h3>
+                <p>Elke 3-4 weken, reduceer volume 30-50% voor een week. Laat TSB stijgen naar -5 tot +10. Dit consolideert fitness en voorkomt overtraining.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ Time Je Taper</h3>
+                <p>Mik op TSB +15 tot +25 op race dag. Begin taper 7-14 dagen van tevoren afhankelijk van evenement afstand en huidige TSB.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ Wees Niet Bang voor Negatieve TSB</h3>
+                <p>TSB van -20 tot -30 tijdens opbouw fasen is normaal en productief. Betekent je past stimulus toe voor aanpassing.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ Respecteer CTL Afbraak</h3>
+                <p>Na trainingspauze, probeer niet onmiddellijk op vorige CTL te hervatten. Herbouw geleidelijk om blessures te vermijden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Beheers Je Trainingsbelasting</h2>
+        <p class="lead">PMC transformeert subjectieve training in objectieve data. Door sTSS, CTL, ATL en TSB te monitoren, krijg je nauwkeurige controle over fitness progressie, vermoeidheidsmanagement en piekprestatie timing.</p>
+
+        <div class="mt-xl">
+            <a href="/nl/css/" class="btn btn-secondary">← CSS Fundamentals</a>
+            <a href="/nl/efficiency/" class="btn btn-primary">Efficiëntie Metrics →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/nl/">
+                            Start
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">
+                            Leren
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/">
+                            Wetenschap
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/contact/">
+                            Contact
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Alle rechten voorbehouden</h3>
+                <ul>
+                    <li><a href="/nl/privacy/">Privacy</a></li>
+                    <li><a href="/nl/terms/">Voorwaarden</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Selecteer taal</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-load/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-load/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-load/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-load/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-load/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/training-load/"
+                           aria-current="page">
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/training-load/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/training-load/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/training-load/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-load/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/training-load/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/training-load/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/training-load/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Deze website gebruikt cookies om je ervaring te verbeteren." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Deze website gebruikt cookies om je ervaring te verbeteren. <a href="/nl/privacy/">Meer informatie</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Weigeren</button>
+            <button class="btn btn-primary" id="cookie-accept">Accepteren</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
