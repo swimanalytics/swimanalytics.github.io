@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="sk" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Kalkulator TSS dla Pływania: Obciążenie Treningowe i PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="Naucz się obliczania Training Stress Score dla pływania (sTSS) i metryk Performance Management Chart (CTL, ATL, TSB). Śledź formę i zmęczenie naukowo. Zawiera rozwiązane przykłady, tygodniowe cele TSS i strategie zwężania.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="TSS pływania, kalkulator sTSS, training stress score, CTL ATL TSB, PMC pływania">
+    
+    <link rel="canonical" href="https://swimanalytics.app/sk/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-12T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-12T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/sk/training-load/">
+    <meta property="og:title" content="Kalkulator TSS dla Pływania: Obciążenie Treningowe i PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="Naucz się obliczania Training Stress Score dla pływania (sTSS) i metryk Performance Management Chart (CTL, ATL, TSB). Śledź formę i zmęczenie naukowo. Zawiera rozwiązane przykłady, tygodniowe cele TSS i strategie zwężania.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/sk/training-load/">
+    <meta name="twitter:title" content="Kalkulator TSS dla Pływania: Obciążenie Treningowe i PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="Naucz się obliczania Training Stress Score dla pływania (sTSS) i metryk Performance Management Chart (CTL, ATL, TSB). Śledź formę i zmęczenie naukowo. Zawiera rozwiązane przykłady, tygodniowe cele TSS i strategie zwężania.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/training-load/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/training-load/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/training-load/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/training-load/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/training-load/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/training-load/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/training-load/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/training-load/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/training-load/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/training-load/">
+    
+    <link rel="alternate" hreflang="el" href="https://swimanalytics.app/el/training-load/">
+    
+    <link rel="alternate" hreflang="uk" href="https://swimanalytics.app/uk/training-load/">
+    
+    <link rel="alternate" hreflang="ms" href="https://swimanalytics.app/ms/training-load/">
+    
+    <link rel="alternate" hreflang="tl" href="https://swimanalytics.app/tl/training-load/">
+    
+    <link rel="alternate" hreflang="hu" href="https://swimanalytics.app/hu/training-load/">
+    
+    <link rel="alternate" hreflang="ro" href="https://swimanalytics.app/ro/training-load/">
+    
+    <link rel="alternate" hreflang="cs" href="https://swimanalytics.app/cs/training-load/">
+    
+    <link rel="alternate" hreflang="bg" href="https://swimanalytics.app/bg/training-load/">
+    
+    <link rel="alternate" hreflang="sk" href="https://swimanalytics.app/sk/training-load/">
+    
+    <link rel="alternate" hreflang="hr" href="https://swimanalytics.app/hr/training-load/">
+    
+    <link rel="alternate" hreflang="sl" href="https://swimanalytics.app/sl/training-load/">
+    
+    <link rel="alternate" hreflang="sr" href="https://swimanalytics.app/sr/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "sk"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Kalkulator TSS dla Pływania: Obciążenie Treningowe i PMC (CTL/ATL/TSB)",
+      "description": "Naucz się obliczania Training Stress Score dla pływania (sTSS) i metryk Performance Management Chart (CTL, ATL, TSB). Śledź formę i zmęczenie naukowo. Zawiera rozwiązane przykłady, tygodniowe cele TSS i strategie zwężania.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-12T10:00:00Z",
+      "dateModified": "2025-10-12T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/sk/training-load/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/sk/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Obciążenie Treningowe",
+          "item": "https://swimanalytics.app/sk/training-load/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Przejdź do treści</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/sk/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sk/"
+                               
+                               aria-current="">
+                                Strona Główna
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ucz Się</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sk/getting-started/"
+                                       
+                                       aria-current="">
+                                        Rozpocznij
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/training-zones/"
+                                       
+                                       aria-current="">
+                                        Strefy Treningowe
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/training-load/"
+                                       class="active"
+                                       aria-current="page">
+                                        Obciążenie Treningowe
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Kalkulator sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Nauka</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/sk/research/"
+                                       
+                                       aria-current="">
+                                        Badania
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/formulas/"
+                                       
+                                       aria-current="">
+                                        Formuły
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/efficiency/"
+                                       
+                                       aria-current="">
+                                        Wydajność
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mechanika Ruchu
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/sk/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/sk/contact/"
+                               
+                               aria-current="">
+                                Kontakt
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Wybierz język">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="hu" >
+                        Magyar
+                    </option>
+                    
+                    <option value="ro" >
+                        Română
+                    </option>
+                    
+                    <option value="cs" >
+                        Čeština
+                    </option>
+                    
+                    <option value="bg" >
+                        Български
+                    </option>
+                    
+                    <option value="sk" selected>
+                        Slovenčina
+                    </option>
+                    
+                    <option value="hr" >
+                        Hrvatski
+                    </option>
+                    
+                    <option value="sl" >
+                        Slovenščina
+                    </option>
+                    
+                    <option value="sr" >
+                        Српски
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Przełącz menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Carga de Entrenamiento y Gestión del Rendimiento</h1>
+        <p class="lead">Cuantificando el Estrés, Monitorizando la Forma Física, Optimizando el Rendimiento</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Comprendiendo la Carga de Entrenamiento</h2>
+        <p class="lead">La cuantificación de la carga de entrenamiento responde a la pregunta crítica: <strong>¿Cuán duro fue ese entrenamiento?</strong> No solo distancia o tiempo, sino el verdadero estrés fisiológico impuesto en tu cuerpo.</p>
+
+        <p>El sistema de Training Stress Score (TSS), desarrollado por el Dr. Andrew Coggan, proporciona un método estandarizado para cuantificar la intensidad y duración del entrenamiento en un único número. Para natación, usamos <strong>Swim Training Stress Score (sTSS)</strong> con una modificación crucial que tiene en cuenta las propiedades únicas de resistencia del agua.</p>
+
+        <div class="callout callout-info">
+            <h3>El Estándar TSS</h3>
+            <p>Una hora a tu ritmo de umbral funcional (CSS) = <strong>100 TSS</strong></p>
+            <p>Esta estandarización permite comparar entrenamientos, semanas y ciclos de entrenamiento. Un nado de 30 minutos al umbral = ~50 TSS. Un nado de 2 horas al umbral = ~200 TSS.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>La Fórmula</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        sTSS = (IF³) × Duración (horas) × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>Donde el Factor de Intensidad (IF) es:</p>
+                        <div class="formula">
+                            IF = NSS / FTP
+                        </div>
+                        <p>Y la Velocidad de Nado Normalizada (NSS) es:</p>
+                        <div class="formula">
+                            NSS = Distancia Total / Tiempo Total (m/min)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning mt-md">
+                    <h4>⚡ El Factor Cúbico (IF³)</h4>
+                    <p><strong>Innovación Clave:</strong> La natación usa IF³ mientras que el ciclismo/carrera usan IF². Esto refleja la física del agua—la resistencia aumenta <em>exponencialmente</em> con la velocidad.</p>
+                    <p>Ir un 10% más rápido en el agua requiere ~33% más potencia. El factor cúbico pondera con precisión este aumento del coste fisiológico.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Ejemplo Práctico</h3>
+                <div class="example-box">
+                    <h4>Perfil del Nadador:</h4>
+                    <ul>
+                        <li>CSS: 1:33/100m = 93 segundos/100m</li>
+                        <li>FTP: 64.5 m/min (100m / 1.55min)</li>
+                    </ul>
+
+                    <h4>Datos del Entrenamiento:</h4>
+                    <ul>
+                        <li>Distancia Total: 3000m</li>
+                        <li>Tiempo en Movimiento: 55:00 (3300 segundos)</li>
+                        <li>Tiempo de Descanso: 10:00 (no contado)</li>
+                    </ul>
+
+                    <h4>Paso 1: Calcular NSS</h4>
+                    <div class="calculation">
+                        NSS = 3000m / 55min<br>
+                        NSS = <strong>54.5 m/min</strong>
+                    </div>
+
+                    <h4>Paso 2: Calcular IF</h4>
+                    <div class="calculation">
+                        IF = 54.5 / 64.5<br>
+                        IF = <strong>0.845</strong>
+                    </div>
+
+                    <h4>Paso 3: Calcular sTSS</h4>
+                    <div class="calculation">
+                        sTSS = (0.845³) × (55/60) × 100<br>
+                        sTSS = 0.603 × 0.917 × 100<br>
+                        sTSS = <strong>55.3</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>Guía de Intensidad sTSS</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>Rango sTSS</th>
+                        <th>Nivel de Intensidad</th>
+                        <th>Descripción</th>
+                        <th>Ejemplos de Entrenamientos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Recuperación Suave</td>
+                        <td>Natación ligera, enfoque técnico, descanso activo</td>
+                        <td>30-45min nado de recuperación, series de técnica</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Entrenamiento Moderado</td>
+                        <td>Volumen de entrenamiento diario típico</td>
+                        <td>60-90min resistencia aeróbica, zonas mixtas</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Entrenamiento Duro</td>
+                        <td>Sesiones de calidad con trabajo de umbral/VO₂</td>
+                        <td>90-120min con intervalos CSS, series a ritmo de carrera</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Muy Duro</td>
+                        <td>Simulación de carrera, bloques de muy alta intensidad</td>
+                        <td>2-3h sesiones, pruebas contrarreloj, series a esfuerzo máximo</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Extremo</td>
+                        <td>Día de carrera, eventos de ultra distancia</td>
+                        <td>Competición, nados Ironman, natación de maratón</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 Objetivos de TSS Semanales por Nivel</h3>
+            <ul>
+                <li><strong>Principiantes:</strong> 200-400 TSS/semana</li>
+                <li><strong>Intermedios:</strong> 400-700 TSS/semana</li>
+                <li><strong>Avanzados/Élite:</strong> 700-1000+ TSS/semana</li>
+            </ul>
+            <p>Estos se acumulan hacia tu Carga de Entrenamiento Crónica (CTL).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">Gráfico de Gestión del Rendimiento (PMC)</h2>
+        <p class="text-center lead">El PMC visualiza tres métricas interconectadas que cuentan la historia completa de tu entrenamiento: forma física, fatiga y estado de forma.</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - Chronic Training Load</h3>
+                    <div class="metric-value-label">Tu FORMA FÍSICA</div>
+                    <p>Promedio ponderado exponencialmente de 42 días del TSS diario. Representa la forma física aeróbica a largo plazo y la adaptación al entrenamiento.</p>
+                    <div class="formula-small">
+                        CTL hoy = CTL ayer + (TSS hoy - CTL ayer) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - Acute Training Load</h3>
+                    <div class="metric-value-label">Tu FATIGA</div>
+                    <p>Promedio ponderado exponencialmente de 7 días del TSS diario. Captura el estrés de entrenamiento reciente y la fatiga acumulada.</p>
+                    <div class="formula-small">
+                        ATL hoy = ATL ayer + (TSS hoy - ATL ayer) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - Training Stress Balance</h3>
+                    <div class="metric-value-label">Tu ESTADO DE FORMA</div>
+                    <p>Diferencia entre la forma física y la fatiga de ayer. Indica la preparación para rendir o la necesidad de descansar.</p>
+                    <div class="formula-small">
+                        TSB = CTL ayer - ATL ayer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Comprendiendo el CTL: Tu Métrica de Forma Física</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Qué Representa el CTL</h3>
+                <p>El CTL cuantifica la carga de entrenamiento a la que tu cuerpo se ha <em>adaptado</em> durante las últimas 6 semanas. Un CTL más alto significa:</p>
+                <ul>
+                    <li>Mayor capacidad aeróbica y resistencia</li>
+                    <li>Capacidad para manejar más volumen de entrenamiento</li>
+                    <li>Mejoras en adaptaciones musculares y metabólicas</li>
+                    <li>Mayor rendimiento sostenible</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>Constante de Tiempo: 42 Días</h4>
+                    <p>El CTL tiene una vida media de ~14.7 días. Después de 42 días, aproximadamente el 36.8% (1/e) del impacto de un único entrenamiento permanece.</p>
+                    <p>Esta lenta degradación significa que la forma física se construye gradualmente pero también se desvanece lentamente—protegiendo contra el desentrenamiento durante descansos breves.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Valores Típicos de CTL</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Principiantes:</strong>
+                        <div class="value">20-40 CTL</div>
+                        <p>Construyendo base física, 3-4 nados/semana</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Intermedios:</strong>
+                        <div class="value">40-70 CTL</div>
+                        <p>Entrenamiento consistente, 4-5 nados/semana</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Avanzados:</strong>
+                        <div class="value">70-100 CTL</div>
+                        <p>Alto volumen, 5-6 nados/semana, dobles</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Élite:</strong>
+                        <div class="value">100-150+ CTL</div>
+                        <p>Carga de entrenamiento profesional, 8-12 sesiones/semana</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ Límites de Tasa de Incremento del CTL</strong>
+                    <ul>
+                        <li><strong>Principiantes:</strong> +3-5 CTL por semana</li>
+                        <li><strong>Intermedios:</strong> +5-7 CTL por semana</li>
+                        <li><strong>Avanzados:</strong> +7-10 CTL por semana</li>
+                    </ul>
+                    <p>Exceder estas tasas aumenta significativamente el riesgo de lesión y agotamiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Comprendiendo el ATL: Tu Métrica de Fatiga</h2>
+
+        <div class="content-split">
+            <div>
+                <p>El ATL rastrea el estrés de entrenamiento a corto plazo—la fatiga acumulada en la última semana. Aumenta rápidamente después de entrenamientos duros y baja rápidamente durante el descanso.</p>
+
+                <h3>Dinámica del ATL</h3>
+                <ul>
+                    <li><strong>Respuesta Rápida:</strong> Constante de tiempo de 7 días (vida media ~2.4 días)</li>
+                    <li><strong>Patrón con Picos:</strong> Salta después de sesiones duras, baja durante la recuperación</li>
+                    <li><strong>Indicador de Recuperación:</strong> ATL bajando = fatiga disipándose</li>
+                    <li><strong>Advertencia de Sobreentrenamiento:</strong> ATL crónicamente elevado sugiere recuperación inadecuada</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 El Modelo Forma Física-Fatiga</h4>
+                    <p>Cada sesión de entrenamiento produce dos efectos:</p>
+                    <ol>
+                        <li><strong>Estímulo de forma física</strong> (construcción lenta, duración prolongada)</li>
+                        <li><strong>Fatiga</strong> (construcción rápida, disipación rápida)</li>
+                    </ol>
+                    <p>Rendimiento = Forma Física - Fatiga. El PMC visualiza este modelo, permitiendo una periodización científica del entrenamiento.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>En Estado Estable</h3>
+                <p>Cuando la carga de entrenamiento es consistente semana tras semana, el CTL y el ATL convergen:</p>
+                <div class="example-box">
+                    <h4>Ejemplo: 500 TSS/semana consistentemente</h4>
+                    <div class="calculation">
+                        TSS diario ≈ 71<br>
+                        CTL se aproxima a ~71<br>
+                        ATL se aproxima a ~71<br>
+                        TSB se aproxima a 0
+                    </div>
+                    <p><strong>Interpretación:</strong> La forma física y la fatiga están equilibradas. No hay déficit o superávit acumulativo.</p>
+                </div>
+
+                <h3>Durante Fases de Construcción</h3>
+                <p>Cuando se aumenta la carga de entrenamiento:</p>
+                <div class="example-box">
+                    <p>El ATL aumenta <em>más rápido</em> que el CTL debido a la constante de tiempo más corta. El TSB se vuelve negativo (fatiga > forma física). Esto es normal y productivo—estás aplicando sobrecarga para estimular la adaptación.</p>
+                </div>
+
+                <h3>Durante la Puesta a Punto</h3>
+                <p>Cuando se reduce la carga de entrenamiento:</p>
+                <div class="example-box">
+                    <p>El ATL baja <em>más rápido</em> que el CTL. El TSB se vuelve positivo (forma física > fatiga). Este es el objetivo—llegar al día de la carrera fresco mientras se retiene la forma física.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Comprendiendo el TSB: Tu Métrica de Estado de Forma/Preparación</h2>
+
+        <p class="lead">El TSB es la diferencia entre la forma física de ayer (CTL) y la fatiga de ayer (ATL). Indica si estás fresco o fatigado, listo para competir o necesitando recuperación.</p>
+
+        <div class="tsb-zones-container">
+            <h3>Guía de Interpretación del TSB</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>Rango TSB</th>
+                        <th>Estado</th>
+                        <th>Interpretación</th>
+                        <th>Acción Recomendada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>Riesgo de Sobrecarga</strong></td>
+                        <td>Fatiga extrema. Posible sobreentrenamiento.</td>
+                        <td>Recuperación inmediata necesaria. Reducir volumen 50%+.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 a -30</td>
+                        <td><strong>Bloque de Entrenamiento Óptimo</strong></td>
+                        <td>Sobrecarga productiva. Construyendo forma física.</td>
+                        <td>Continuar plan. Monitorizar signos de fatiga excesiva.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 a -20</td>
+                        <td><strong>Carga Moderada</strong></td>
+                        <td>Acumulación de entrenamiento estándar.</td>
+                        <td>Entrenamiento normal. Puede manejar sesiones de calidad.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 a +15</td>
+                        <td><strong>Transición/Mantenimiento</strong></td>
+                        <td>Estado equilibrado. Fatiga ligera o frescura.</td>
+                        <td>Bueno para carreras B/C, pruebas, o semanas de recuperación.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 a +25</td>
+                        <td><strong>Forma Óptima de Carrera</strong></td>
+                        <td>Fresco y en forma. Ventana de rendimiento óptimo.</td>
+                        <td>Carreras prioritarias A. Rendimiento pico esperado.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 a +35</td>
+                        <td><strong>Muy Fresco</strong></td>
+                        <td>Altamente descansado. Bueno para sprints.</td>
+                        <td>Carreras cortas, contrarrelojes, estado muy descansado.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>Desentrenamiento</strong></td>
+                        <td>Perdiendo forma física por inactividad.</td>
+                        <td>Reanudar entrenamiento. Forma física declinando por descanso prolongado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 TSB Objetivo por Distancia de Carrera</h3>
+            <ul>
+                <li><strong>Sprint/Triatlón Olímpico:</strong> TSB +15 a +25 (puesta a punto 7-10 días)</li>
+                <li><strong>Medio Ironman (70.3):</strong> TSB +20 a +30 (puesta a punto 10-14 días)</li>
+                <li><strong>Ironman Completo:</strong> TSB +15 a +25 (puesta a punto 14-21 días)</li>
+                <li><strong>Eventos de Natación en Piscina:</strong> TSB +15 a +25 (puesta a punto 7-14 días dependiendo del evento)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Ejemplo de PMC: Bloque de Entrenamiento → Puesta a Punto → Carrera</h2>
+
+        <div class="example-box">
+            <h3>Ciclo de Entrenamiento de 8 Semanas</h3>
+
+            <h4>Semanas 1-5: Fase de Construcción</h4>
+            <ul>
+                <li>TSS Semanal: 400 → 450 → 500 → 550 → 550</li>
+                <li>CTL: Aumenta gradualmente de 50 → 65</li>
+                <li>ATL: Sigue la carga semanal, fluctúa 55-80</li>
+                <li>TSB: Negativo (-15 a -25), indica estrés de entrenamiento productivo</li>
+            </ul>
+
+            <h4>Semana 6: Semana de Recuperación</h4>
+            <ul>
+                <li>TSS Semanal: 300 (reducción del 40%)</li>
+                <li>CTL: Ligera caída a ~63 (forma física retenida)</li>
+                <li>ATL: Baja a ~50 (fatiga se disipa)</li>
+                <li>TSB: Sube a +5 (frescura parcial)</li>
+            </ul>
+
+            <h4>Semana 7: Última Construcción</h4>
+            <ul>
+                <li>TSS Semanal: 500</li>
+                <li>CTL: Sube a ~65</li>
+                <li>ATL: Salta a ~75</li>
+                <li>TSB: Regresa a -20 (entrenamiento de calidad absorbido)</li>
+            </ul>
+
+            <h4>Semana 8: Puesta a Punto + Carrera</h4>
+            <ul>
+                <li>Días 1-9: Volumen reducido, mantener intensidad (200 TSS total)</li>
+                <li>CTL: Descenso suave a ~62 (pérdida mínima de forma física)</li>
+                <li>ATL: Caída rápida a ~40 (fatiga eliminada)</li>
+                <li>TSB: Pico de <strong>+20 el día de la carrera</strong></li>
+                <li><strong>Resultado:</strong> Fresco, en forma, listo para rendir</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ Por Qué Funciona la Puesta a Punto</h3>
+            <p>Las diferentes constantes de tiempo (42 días para CTL, 7 días para ATL) crean el efecto de puesta a punto:</p>
+            <ul>
+                <li>El ATL responde rápidamente → La fatiga desaparece en 7-10 días</li>
+                <li>El CTL responde lentamente → La forma física persiste durante semanas</li>
+                <li>Resultado: La forma física permanece mientras la fatiga desaparece = rendimiento pico</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Guías de Aplicación Práctica</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ Registra el sTSS Diario</h3>
+                <p>La consistencia es clave. Registra el sTSS de cada entrenamiento para construir tendencias precisas de CTL/ATL/TSB. Los datos perdidos crean vacíos en la curva de forma física.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ Monitoriza la Tasa de Incremento del CTL</h3>
+                <p>Aumenta el CTL gradualmente. Un incremento semanal de 5-7 puntos es sostenible para la mayoría de nadadores. Saltar 15-20 puntos invita a lesiones.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ Planifica Semanas de Recuperación</h3>
+                <p>Cada 3-4 semanas, reduce el volumen 30-50% durante una semana. Deja que el TSB suba a -5 a +10. Esto consolida la forma física y previene el sobreentrenamiento.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ Temporiza Tu Puesta a Punto</h3>
+                <p>Apunta a TSB +15 a +25 el día de la carrera. Comienza la puesta a punto 7-14 días antes dependiendo de la distancia del evento y el TSB actual.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ No Te Asustes con el TSB Negativo</h3>
+                <p>Un TSB de -20 a -30 durante las fases de construcción es normal y productivo. Significa que estás aplicando estímulo para la adaptación.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ Respeta la Degradación del CTL</h3>
+                <p>Después de un descanso del entrenamiento, no intentes reanudar inmediatamente al CTL anterior. Reconstruye gradualmente para evitar lesiones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Domina Tu Carga de Entrenamiento</h2>
+        <p class="lead">El PMC transforma el entrenamiento subjetivo en datos objetivos. Al monitorizar el sTSS, CTL, ATL y TSB, obtienes control preciso sobre la progresión de la forma física, la gestión de la fatiga y la temporización del rendimiento pico.</p>
+
+        <div class="mt-xl">
+            <a href="/es/css/" class="btn btn-secondary">← Fundamentos CSS</a>
+            <a href="/es/efficiency/" class="btn btn-primary">Métricas de Eficiencia →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/sk/">
+                            Strona Główna
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/">
+                            Ucz Się
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/">
+                            Nauka
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/contact/">
+                            Kontakt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Wszelkie prawa zastrzeżone</h3>
+                <ul>
+                    <li><a href="/sk/privacy/">Prywatność</a></li>
+                    <li><a href="/sk/terms/">Warunki</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Wybierz język</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-load/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-load/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-load/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-load/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-load/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/training-load/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/training-load/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/training-load/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/training-load/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-load/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/training-load/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/training-load/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/training-load/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/training-load/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/training-load/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/training-load/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/training-load/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/training-load/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/training-load/"
+                           >
+                            עברית
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/training-load/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/training-load/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/training-load/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/training-load/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/training-load/"
+                           >
+                            Ελληνικά
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/uk/training-load/"
+                           >
+                            Українська
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/training-load/"
+                           >
+                            Bahasa Melayu
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/training-load/"
+                           >
+                            Tagalog
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hu/training-load/"
+                           >
+                            Magyar
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ro/training-load/"
+                           >
+                            Română
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/cs/training-load/"
+                           >
+                            Čeština
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bg/training-load/"
+                           >
+                            Български
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/training-load/"
+                           aria-current="page">
+                            Slovenčina
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hr/training-load/"
+                           >
+                            Hrvatski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sl/training-load/"
+                           >
+                            Slovenščina
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sr/training-load/"
+                           >
+                            Српски
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Ta strona używa plików cookie, aby poprawić Twoje wrażenia." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Ta strona używa plików cookie, aby poprawić Twoje wrażenia. <a href="/sk/privacy/">Dowiedz się więcej</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Odrzuć</button>
+            <button class="btn btn-primary" id="cookie-accept">Akceptuj</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
