@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="ms" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Kalkulator TSS Renang: Beban Latihan &amp; PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="Pelajari perhitungan Training Stress Score renang (sTSS) dan metrik Performance Management Chart (CTL, ATL, TSB). Lacak kebugaran dan kelelahan secara ilmiah. Termasuk contoh yang diselesaikan, target TSS mingguan, dan strategi taper.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="TSS renang, kalkulator sTSS, training stress score, CTL ATL TSB, PMC renang">
+    
+    <link rel="canonical" href="https://swimanalytics.app/ms/training-load/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-12T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-12T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/ms/training-load/">
+    <meta property="og:title" content="Kalkulator TSS Renang: Beban Latihan &amp; PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="Pelajari perhitungan Training Stress Score renang (sTSS) dan metrik Performance Management Chart (CTL, ATL, TSB). Lacak kebugaran dan kelelahan secara ilmiah. Termasuk contoh yang diselesaikan, target TSS mingguan, dan strategi taper.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="ms_MY">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/ms/training-load/">
+    <meta name="twitter:title" content="Kalkulator TSS Renang: Beban Latihan &amp; PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="Pelajari perhitungan Training Stress Score renang (sTSS) dan metrik Performance Management Chart (CTL, ATL, TSB). Lacak kebugaran dan kelelahan secara ilmiah. Termasuk contoh yang diselesaikan, target TSS mingguan, dan strategi taper.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/training-load/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/training-load/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/training-load/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/training-load/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/training-load/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/training-load/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/training-load/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/training-load/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/training-load/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/training-load/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/training-load/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/training-load/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/training-load/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/training-load/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/training-load/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/training-load/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/training-load/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/training-load/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/training-load/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/training-load/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/training-load/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/training-load/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/training-load/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/training-load/">
+    
+    <link rel="alternate" hreflang="el" href="https://swimanalytics.app/el/training-load/">
+    
+    <link rel="alternate" hreflang="uk" href="https://swimanalytics.app/uk/training-load/">
+    
+    <link rel="alternate" hreflang="ms" href="https://swimanalytics.app/ms/training-load/">
+    
+    <link rel="alternate" hreflang="tl" href="https://swimanalytics.app/tl/training-load/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/training-load/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "ms"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Kalkulator TSS Renang: Beban Latihan &amp; PMC (CTL/ATL/TSB)",
+      "description": "Pelajari perhitungan Training Stress Score renang (sTSS) dan metrik Performance Management Chart (CTL, ATL, TSB). Lacak kebugaran dan kelelahan secara ilmiah. Termasuk contoh yang diselesaikan, target TSS mingguan, dan strategi taper.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-12T10:00:00Z",
+      "dateModified": "2025-10-12T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/ms/training-load/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/ms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Beban Latihan",
+          "item": "https://swimanalytics.app/ms/training-load/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Lewati ke konten</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/ms/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ms/"
+                               
+                               aria-current="">
+                                Beranda
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Belajar</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ms/getting-started/"
+                                       
+                                       aria-current="">
+                                        Memulai
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/training-zones/"
+                                       
+                                       aria-current="">
+                                        Zona Latihan
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/training-load/"
+                                       class="active"
+                                       aria-current="page">
+                                        Beban Latihan
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Kalkulator sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Sains</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/ms/research/"
+                                       
+                                       aria-current="">
+                                        Penelitian
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/formulas/"
+                                       
+                                       aria-current="">
+                                        Rumus
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/efficiency/"
+                                       
+                                       aria-current="">
+                                        Efisiensi
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mekanika Gaya
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/ms/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografi
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/ms/contact/"
+                               
+                               aria-current="">
+                                Kontak
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Pilih bahasa">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="ms" selected>
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Alihkan menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Beban Latihan dan Manajemen Performa</h1>
+        <p class="lead">Cuantificando Stres, Monitorizando Kebugaran, Optimizando Performa</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Comprendiendo Beban Latihan</h2>
+        <p class="lead">La cuantificación beban latihan responde pregunta kritis: <strong>¿Cuán duro fue itu latihan?</strong> No solo distancia atau tiempo, sino verdadero stres fisiológico impuini di Anda cuerpo.</p>
+
+        <p>El sistema Training Stress Score (TSS), dikembangkando oleh Dr. Andrew Coggan, proporciona método estandarizado untuk cuantificar intensidad dan duración latihan di único número. Para renang, usamos <strong>Swim Training Stress Score (sTSS)</strong> dengan modificación crucial yang tiene di cuenta propiedades únicas resistencia agua.</p>
+
+        <div class="callout callout-info">
+            <h3>El Standar TSS</h3>
+            <p>Una hora Anda ritmo umbral funcional (CSS) = <strong>100 TSS</strong></p>
+            <p>Esta estandarización permite comparar latihans, semanas dan ciclos latihan. Un renang 30 minutos al umbral = ~50 TSS. Un renang 2 horas al umbral = ~200 TSS.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="text-center mb-xl">Swim Training Stress Score (sTSS)</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>La Fórmula</h3>
+                <div class="formula-box">
+                    <div class="formula">
+                        sTSS = (IF³) × Duración (horas) × 100
+                    </div>
+                    <div class="formula-explanation">
+                        <p>Donde Factor Intensidad (IF) es:</p>
+                        <div class="formula">
+                            IF = NSS / FTP
+                        </div>
+                        <p>Y Kecepatan Renang Normalizada (NSS) es:</p>
+                        <div class="formula">
+                            NSS = Distancia Total / Waktu Total (m/min)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout callout-warning mt-md">
+                    <h4>⚡ El Factor Cúbico (IF³)</h4>
+                    <p><strong>Innovación Clave:</strong> La renang usa IF³ mientras yang ciclismo/carrera usan IF². Esto refleja física agua—la resistencia aumenta <em>exponencialmente</em> dengan kecepatan.</p>
+                    <p>Ir 10% lebih dari rápido di agua requiere ~33% lebih dari potencia. El factor cúbico pondera dengan ketepatan este aumento coste fisiológico.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Ejemplo Práctico</h3>
+                <div class="example-box">
+                    <h4>Perfil Nadador:</h4>
+                    <ul>
+                        <li>CSS: 1:33/100m = 93 segundos/100m</li>
+                        <li>FTP: 64.5 m/min (100m / 1.55min)</li>
+                    </ul>
+
+                    <h4>Datos Latihan:</h4>
+                    <ul>
+                        <li>Distancia Total: 3000m</li>
+                        <li>Waktu di Movimiento: 55:00 (3300 segundos)</li>
+                        <li>Waktu Descanso: 10:00 (no contado)</li>
+                    </ul>
+
+                    <h4>Paso 1: Calcular NSS</h4>
+                    <div class="calculation">
+                        NSS = 3000m / 55min<br>
+                        NSS = <strong>54.5 m/min</strong>
+                    </div>
+
+                    <h4>Paso 2: Calcular IF</h4>
+                    <div class="calculation">
+                        IF = 54.5 / 64.5<br>
+                        IF = <strong>0.845</strong>
+                    </div>
+
+                    <h4>Paso 3: Calcular sTSS</h4>
+                    <div class="calculation">
+                        sTSS = (0.845³) × (55/60) × 100<br>
+                        sTSS = 0.603 × 0.917 × 100<br>
+                        sTSS = <strong>55.3</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="intensity-guide mt-xl">
+            <h3>Guía Intensidad sTSS</h3>
+            <table class="intensity-table">
+                <thead>
+                    <tr>
+                        <th>Rango sTSS</th>
+                        <th>Nivel Intensidad</th>
+                        <th>Descripción</th>
+                        <th>Ejemplos Latihans</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 50</td>
+                        <td>Recuperación Suave</td>
+                        <td>Natación ligera, enfoyang técnico, descanso activo</td>
+                        <td>30-45min renang recuperación, series técnica</td>
+                    </tr>
+                    <tr>
+                        <td>50-100</td>
+                        <td>Latihan Moderado</td>
+                        <td>Volumen latihan diario típico</td>
+                        <td>60-90min resistencia aeróbica, zona mixtas</td>
+                    </tr>
+                    <tr>
+                        <td>100-200</td>
+                        <td>Latihan Duro</td>
+                        <td>Sesiones calidad dengan trabajo umbral/VO₂</td>
+                        <td>90-120min dengan intervalos CSS, series ritmo carrera</td>
+                    </tr>
+                    <tr>
+                        <td>200-300</td>
+                        <td>Muy Duro</td>
+                        <td>Simulación carrera, bloques muy alta intensidad</td>
+                        <td>2-3h sesi, pruebas contrarreloj, series esfuerzo máximo</td>
+                    </tr>
+                    <tr>
+                        <td>&gt; 300</td>
+                        <td>Extremo</td>
+                        <td>Día carrera, eventos ultra distancia</td>
+                        <td>Competición, renangs Ironman, renang maratón</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-lg">
+            <h3>📊 Objetivos TSS Semanales oleh Nivel</h3>
+            <ul>
+                <li><strong>Principiantes:</strong> 200-400 TSS/semana</li>
+                <li><strong>Intermedios:</strong> 400-700 TSS/semana</li>
+                <li><strong>Avanzados/Élite:</strong> 700-1000+ TSS/semana</li>
+            </ul>
+            <p>Estos se acumulan hacia Anda Chronic Training Load (CTL).</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="text-center mb-xl">Grafik Manajemen Performa (PMC)</h2>
+        <p class="text-center lead">El PMC visualiza tres metrik interconectadas yang cuentan historia completa Anda latihan: forma física, fatiga dan estado forma.</p>
+
+        <div class="pmc-overview">
+            <div class="grid grid-3">
+                <div class="pmc-metric">
+                    <div class="metric-icon">📈</div>
+                    <h3>CTL - Chronic Training Load</h3>
+                    <div class="metric-value-label">Anda FORMA FÍSICA</div>
+                    <p>Promedio ponderado exponencialmente 42 días TSS diario. Representa forma física aeróbica largo plazo dan adaptación al latihan.</p>
+                    <div class="formula-small">
+                        CTL hoy = CTL ayer + (TSS hoy - CTL ayer) × (1/42)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">⚡</div>
+                    <h3>ATL - Acute Training Load</h3>
+                    <div class="metric-value-label">Anda FATIGA</div>
+                    <p>Promedio ponderado exponencialmente 7 días TSS diario. Captura stres latihan reciente dan fatiga acumulada.</p>
+                    <div class="formula-small">
+                        ATL hoy = ATL ayer + (TSS hoy - ATL ayer) × (1/7)
+                    </div>
+                </div>
+
+                <div class="pmc-metric">
+                    <div class="metric-icon">🎯</div>
+                    <h3>TSB - Training Stress Keseimbangan</h3>
+                    <div class="metric-value-label">Anda ESTADO DE FORMA</div>
+                    <p>Diferencia entre forma física dan fatiga ayer. Indica preparación untuk rendir atau necesidad descansar.</p>
+                    <div class="formula-small">
+                        TSB = CTL ayer - ATL ayer
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Comprendiendo CTL: Anda Métrica Kebugaran</h2>
+
+        <div class="grid grid-2">
+            <div>
+                <h3>Qué Representa CTL</h3>
+                <p>El CTL cuantifica beban latihan yang Anda cuerpo se ha <em>adaptado</em> durante terakhirs 6 semanas. Un CTL lebih dari alto significa:</p>
+                <ul>
+                    <li>Mayor capacidad aeróbica dan resistencia</li>
+                    <li>Capacidad untuk manejar lebih dari volumen latihan</li>
+                    <li>Mejoras di adaptaciones musculares dan metabólicas</li>
+                    <li>Mayor performa sostenible</li>
+                </ul>
+
+                <div class="callout callout-info">
+                    <h4>Constante Waktu: 42 Días</h4>
+                    <p>El CTL tiene vida rata-rata ~14.7 días. Setelah 42 días, aproximadamente 36.8% (1/e) impacto único latihan permanece.</p>
+                    <p>Esta lenta degradación significa yang forma física se construye gradualmente pero juga se desvanece lentamente—protegiendo contra deslatihan durante descansos breves.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>Valores Típicos CTL</h3>
+                <div class="levels-comparison">
+                    <div class="level-card-compact">
+                        <strong>Principiantes:</strong>
+                        <div class="value">20-40 CTL</div>
+                        <p>Construyendo base física, 3-4 renangs/semana</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Intermedios:</strong>
+                        <div class="value">40-70 CTL</div>
+                        <p>Latihan consistente, 4-5 renangs/semana</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Avanzados:</strong>
+                        <div class="value">70-100 CTL</div>
+                        <p>Alto volumen, 5-6 renangs/semana, dobles</p>
+                    </div>
+
+                    <div class="level-card-compact">
+                        <strong>Élite:</strong>
+                        <div class="value">100-150+ CTL</div>
+                        <p>Carga latihan profesional, 8-12 sesi/semana</p>
+                    </div>
+                </div>
+
+                <div class="warning-box mt-md">
+                    <strong>⚠️ Límites Tasa Incremento CTL</strong>
+                    <ul>
+                        <li><strong>Principiantes:</strong> +3-5 CTL oleh semana</li>
+                        <li><strong>Intermedios:</strong> +5-7 CTL oleh semana</li>
+                        <li><strong>Avanzados:</strong> +7-10 CTL oleh semana</li>
+                    </ul>
+                    <p>Exceder estas tasas aumenta significativamente riesgo lesión dan agotamiento.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Comprendiendo ATL: Anda Métrica Kelelahan</h2>
+
+        <div class="content-split">
+            <div>
+                <p>El ATL rastrea stres latihan corto plazo—la fatiga acumulada di terakhir semana. Aumenta rápidamente setelah latihans duros dan baja rápidamente durante descanso.</p>
+
+                <h3>Dinámica ATL</h3>
+                <ul>
+                    <li><strong>Respuini Rápida:</strong> Constante tiempo 7 días (vida rata-rata ~2.4 días)</li>
+                    <li><strong>Patrón dengan Picos:</strong> Salta setelah sesi duras, baja durante recuperación</li>
+                    <li><strong>Indicador Recuperación:</strong> ATL bajando = fatiga disipándose</li>
+                    <li><strong>Advertencia Sobrelatihan:</strong> ATL kronismente elevado sugiere recuperación inadecuada</li>
+                </ul>
+
+                <div class="callout callout-science">
+                    <h4>🔬 El Modelo Kebugaran-Kelelahan</h4>
+                    <p>Cada sesión latihan produce dos efectos:</p>
+                    <ol>
+                        <li><strong>Estímulo forma física</strong> (construcción lenta, duración prolongada)</li>
+                        <li><strong>Kelelahan</strong> (construcción rápida, disipación rápida)</li>
+                    </ol>
+                    <p>Performa = Kebugaran - Kelelahan. El PMC visualiza este modelo, permitiendo periodización científica latihan.</p>
+                </div>
+            </div>
+
+            <div>
+                <h3>En Estado Estable</h3>
+                <p>Cuando beban latihan es consistente semana tras semana, CTL dan ATL convergen:</p>
+                <div class="example-box">
+                    <h4>Ejemplo: 500 TSS/semana consistentemente</h4>
+                    <div class="calculation">
+                        TSS diario ≈ 71<br>
+                        CTL se aproxima ~71<br>
+                        ATL se aproxima ~71<br>
+                        TSB se aproxima 0
+                    </div>
+                    <p><strong>Interpretación:</strong> La forma física dan fatiga adalahn equilibradas. Tidak ada déficit atau superávit acumulativo.</p>
+                </div>
+
+                <h3>Durante Fases Construcción</h3>
+                <p>Cuando se aumenta beban latihan:</p>
+                <div class="example-box">
+                    <p>El ATL aumenta <em>lebih dari rápido</em> yang CTL debido constante tiempo lebih dari corta. El TSB se vuelve negativo (fatiga > forma física). Esto es normal dan productivo—adalahs aplicando tentangcarga untuk estimular adaptación.</p>
+                </div>
+
+                <h3>Durante Puini Punto</h3>
+                <p>Cuando se reduce beban latihan:</p>
+                <div class="example-box">
+                    <p>El ATL baja <em>lebih dari rápido</em> yang CTL. El TSB se vuelve positivo (forma física > fatiga). Este es objetivo—llegar al día carrera fresco mientras se retiene forma física.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Comprendiendo TSB: Anda Métrica Estado Kondisi/Preparación</h2>
+
+        <p class="lead">El TSB es diferencia entre forma física ayer (CTL) dan fatiga ayer (ATL). Indica jika adalahs fresco atau fatigado, listo untuk competir atau necesitando recuperación.</p>
+
+        <div class="tsb-zones-container">
+            <h3>Guía Interpretación TSB</h3>
+            <table class="tsb-zones-table">
+                <thead>
+                    <tr>
+                        <th>Rango TSB</th>
+                        <th>Estado</th>
+                        <th>Interpretación</th>
+                        <th>Acción Recomendada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tsb-critical">
+                        <td>&lt; -30</td>
+                        <td><strong>Riesgo Sobrecarga</strong></td>
+                        <td>Kelelahan extrema. Posible tentanglatihan.</td>
+                        <td>Recuperación inrata-ratata necesaria. Reducir volumen 50%+.</td>
+                    </tr>
+                    <tr class="tsb-training">
+                        <td>-20 -30</td>
+                        <td><strong>Bloyang Latihan Óptimo</strong></td>
+                        <td>Sobrecarga productiva. Construyendo forma física.</td>
+                        <td>Continuar plan. Monitorizar signos fatiga excesiva.</td>
+                    </tr>
+                    <tr class="tsb-moderate">
+                        <td>-10 -20</td>
+                        <td><strong>Carga Moderada</strong></td>
+                        <td>Acumulación latihan adalahndar.</td>
+                        <td>Latihan normal. Puede manejar sesi calidad.</td>
+                    </tr>
+                    <tr class="tsb-neutral">
+                        <td>-10 +15</td>
+                        <td><strong>Transición/Mantenimiento</strong></td>
+                        <td>Estado equilibrado. Kelelahan ligera atau frescura.</td>
+                        <td>Bueno untuk carreras B/C, pruebas, atau semanas recuperación.</td>
+                    </tr>
+                    <tr class="tsb-fresh">
+                        <td>+15 +25</td>
+                        <td><strong>Kondisi Óptima Carrera</strong></td>
+                        <td>Fresco dan di forma. Ventana performa óptimo.</td>
+                        <td>Carreras prioritarias A. Performa pico esperado.</td>
+                    </tr>
+                    <tr class="tsb-very-fresh">
+                        <td>+25 +35</td>
+                        <td><strong>Muy Fresco</strong></td>
+                        <td>Altamente descansado. Bueno untuk sprints.</td>
+                        <td>Carreras cortas, contrarrelojes, estado muy descansado.</td>
+                    </tr>
+                    <tr class="tsb-detraining">
+                        <td>&gt; +35</td>
+                        <td><strong>Deslatihan</strong></td>
+                        <td>Perdiendo forma física oleh inactividad.</td>
+                        <td>Reanudar latihan. Kondisi física declinando oleh descanso prolongado.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout callout-tip mt-xl">
+            <h3>🎯 TSB Objetivo oleh Distancia Carrera</h3>
+            <ul>
+                <li><strong>Sprint/Triatlón Olímpico:</strong> TSB +15 +25 (puini punto 7-10 días)</li>
+                <li><strong>Medio Ironman (70.3):</strong> TSB +20 +30 (puini punto 10-14 días)</li>
+                <li><strong>Ironman Completo:</strong> TSB +15 +25 (puini punto 14-21 días)</li>
+                <li><strong>Eventos Natación di Piscina:</strong> TSB +15 +25 (puini punto 7-14 días dependiendo evento)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Ejemplo PMC: Bloyang Latihan → Puini Punto → Carrera</h2>
+
+        <div class="example-box">
+            <h3>Ciclo Latihan 8 Semanas</h3>
+
+            <h4>Semanas 1-5: Fase Construcción</h4>
+            <ul>
+                <li>TSS Semanal: 400 → 450 → 500 → 550 → 550</li>
+                <li>CTL: Aumenta gradualmente 50 → 65</li>
+                <li>ATL: Sigue carga semanal, fluctúa 55-80</li>
+                <li>TSB: Negativo (-15 -25), indica stres latihan productivo</li>
+            </ul>
+
+            <h4>Semana 6: Semana Recuperación</h4>
+            <ul>
+                <li>TSS Semanal: 300 (reducción 40%)</li>
+                <li>CTL: Ligera caída ~63 (forma física retenida)</li>
+                <li>ATL: Baja ~50 (fatiga se disipa)</li>
+                <li>TSB: Sube +5 (frescura parcial)</li>
+            </ul>
+
+            <h4>Semana 7: Terakhir Construcción</h4>
+            <ul>
+                <li>TSS Semanal: 500</li>
+                <li>CTL: Sube ~65</li>
+                <li>ATL: Salta ~75</li>
+                <li>TSB: Regritu -20 (latihan calidad absorbido)</li>
+            </ul>
+
+            <h4>Semana 8: Puini Punto + Carrera</h4>
+            <ul>
+                <li>Días 1-9: Volumen reducido, mantener intensidad (200 TSS total)</li>
+                <li>CTL: Descenso suave ~62 (pérdida mínima forma física)</li>
+                <li>ATL: Caída rápida ~40 (fatiga eliminada)</li>
+                <li>TSB: Pico <strong>+20 día carrera</strong></li>
+                <li><strong>Resultado:</strong> Fresco, di forma, listo untuk rendir</li>
+            </ul>
+        </div>
+
+        <div class="callout callout-success">
+            <h3>✅ Por Qué Funciona Puini Punto</h3>
+            <p>Las diferentes constantes tiempo (42 días untuk CTL, 7 días untuk ATL) crean efecto puini punto:</p>
+            <ul>
+                <li>El ATL responde rápidamente → La fatiga desaparece di 7-10 días</li>
+                <li>El CTL responde lentamente → La forma física persiste durante semanas</li>
+                <li>Resultado: La forma física permanece mientras fatiga desaparece = performa pico</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow">
+        <h2>Guías Aplicación Práctica</h2>
+
+        <div class="guidelines-grid">
+            <div class="guideline-item">
+                <h3>1️⃣ Registra sTSS Diario</h3>
+                <p>La consistencia es clave. Registra sTSS setiap latihan untuk construir tendencias precisas CTL/ATL/TSB. Los data perdidos crean vacíos di curva forma física.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>2️⃣ Monitoriza Tasa Incremento CTL</h3>
+                <p>Aumenta CTL gradualmente. Un incremento semanal 5-7 puntos es sostenible untuk mayoría nadadores. Saltar 15-20 puntos invita lesiones.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>3️⃣ Planifica Semanas Recuperación</h3>
+                <p>Cada 3-4 semanas, reduce volumen 30-50% durante semana. Deja yang TSB suba -5 +10. Esto consolida forma física dan previene tentanglatihan.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>4️⃣ Temporiza Anda Puini Punto</h3>
+                <p>Apunta TSB +15 +25 día carrera. Comienza puini punto 7-14 días antes dependiendo distancia evento dan TSB actual.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>5️⃣ No Te Asustes dengan TSB Negativo</h3>
+                <p>Un TSB -20 -30 durante fases construcción es normal dan productivo. Significa yang adalahs aplicando estímulo untuk adaptación.</p>
+            </div>
+
+            <div class="guideline-item">
+                <h3>6️⃣ Respeta Degradación CTL</h3>
+                <p>Setelah descanso latihan, tidak intentes reanudar inrata-ratatamente al CTL anterior. Reconstruye gradualmente untuk evitar lesiones.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Domina Anda Beban Latihan</h2>
+        <p class="lead">El PMC transforma latihan subjetivo di data objetivos. Al monitorizar sTSS, CTL, ATL dan TSB, obtienes control preciso tentang progresión forma física, manajemen fatiga dan temporización performa pico.</p>
+
+        <div class="mt-xl">
+            <a href="/ms/css/" class="btn btn-secondary">← Dasars CSS</a>
+            <a href="/ms/efficiency/" class="btn btn-primary">Metrik Efisiensi →</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ms/">
+                            Beranda
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">
+                            Belajar
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/">
+                            Sains
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/contact/">
+                            Kontak
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Hak cipta dilindungi</h3>
+                <ul>
+                    <li><a href="/ms/privacy/">Privasi</a></li>
+                    <li><a href="/ms/terms/">Ketentuan</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Pilih bahasa</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/training-load/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/training-load/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/training-load/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/training-load/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/training-load/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/training-load/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/training-load/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/training-load/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/training-load/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/training-load/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/training-load/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/training-load/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/training-load/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/training-load/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/training-load/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/training-load/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/training-load/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/training-load/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/training-load/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/training-load/"
+                           >
+                            עברית
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/training-load/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/training-load/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/training-load/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/training-load/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/training-load/"
+                           >
+                            Ελληνικά
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/uk/training-load/"
+                           >
+                            Українська
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/training-load/"
+                           aria-current="page">
+                            Bahasa Melayu
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/training-load/"
+                           >
+                            Tagalog
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Hak cipta dilindungi.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Situs web ini menggunakan cookie untuk meningkatkan pengalaman Anda." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Situs web ini menggunakan cookie untuk meningkatkan pengalaman Anda. <a href="/ms/privacy/">Pelajari lebih lanjut</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Tolak</button>
+            <button class="btn btn-primary" id="cookie-accept">Terima</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
