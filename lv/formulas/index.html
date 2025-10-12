@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+<html lang="lv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>Formuły Wydajności Pływania: Obliczenia CSS, TSS, CTL/ATL</title>
+    <meta name="description" content="Kompletne formuły matematyczne dla analityki pływania. Naucz się ręcznie obliczać CSS, sTSS, CTL, ATL, TSB. Zawiera rozwiązane przykłady, wyprowadzenia i wyjaśnienie praktycznego zastosowania. Dla trenerów i zaawansowanych sportowców.">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="formuły pływania, obliczanie CSS, formuła TSS, matematyka treningowa, obliczenia wydajności">
+    
+    <link rel="canonical" href="https://swimanalytics.app/lv/formulas/">
+
+    
+    
+    <meta property="article:published_time" content="2025-10-12T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-12T14:30:00Z">
+    <meta property="article:author" content="Albert Arno">
+    
+
+    
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://swimanalytics.app/lv/formulas/">
+    <meta property="og:title" content="Formuły Wydajności Pływania: Obliczenia CSS, TSS, CTL/ATL">
+    <meta property="og:description" content="Kompletne formuły matematyczne dla analityki pływania. Naucz się ręcznie obliczać CSS, sTSS, CTL, ATL, TSB. Zawiera rozwiązane przykłady, wyprowadzenia i wyjaśnienie praktycznego zastosowania. Dla trenerów i zaawansowanych sportowców.">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="lv_LV">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/lv/formulas/">
+    <meta name="twitter:title" content="Formuły Wydajności Pływania: Obliczenia CSS, TSS, CTL/ATL">
+    <meta name="twitter:description" content="Kompletne formuły matematyczne dla analityki pływania. Naucz się ręcznie obliczać CSS, sTSS, CTL, ATL, TSB. Zawiera rozwiązane przykłady, wyprowadzenia i wyjaśnienie praktycznego zastosowania. Dla trenerów i zaawansowanych sportowców.">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/formulas/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/formulas/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/formulas/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/formulas/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/formulas/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/formulas/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/formulas/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/formulas/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/formulas/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/formulas/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/formulas/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/formulas/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/formulas/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/formulas/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/formulas/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/formulas/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/formulas/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/formulas/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/formulas/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/formulas/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/formulas/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/formulas/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/formulas/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/formulas/">
+    
+    <link rel="alternate" hreflang="el" href="https://swimanalytics.app/el/formulas/">
+    
+    <link rel="alternate" hreflang="uk" href="https://swimanalytics.app/uk/formulas/">
+    
+    <link rel="alternate" hreflang="ms" href="https://swimanalytics.app/ms/formulas/">
+    
+    <link rel="alternate" hreflang="tl" href="https://swimanalytics.app/tl/formulas/">
+    
+    <link rel="alternate" hreflang="hu" href="https://swimanalytics.app/hu/formulas/">
+    
+    <link rel="alternate" hreflang="ro" href="https://swimanalytics.app/ro/formulas/">
+    
+    <link rel="alternate" hreflang="cs" href="https://swimanalytics.app/cs/formulas/">
+    
+    <link rel="alternate" hreflang="bg" href="https://swimanalytics.app/bg/formulas/">
+    
+    <link rel="alternate" hreflang="sk" href="https://swimanalytics.app/sk/formulas/">
+    
+    <link rel="alternate" hreflang="hr" href="https://swimanalytics.app/hr/formulas/">
+    
+    <link rel="alternate" hreflang="sl" href="https://swimanalytics.app/sl/formulas/">
+    
+    <link rel="alternate" hreflang="sr" href="https://swimanalytics.app/sr/formulas/">
+    
+    <link rel="alternate" hreflang="af" href="https://swimanalytics.app/af/formulas/">
+    
+    <link rel="alternate" hreflang="is" href="https://swimanalytics.app/is/formulas/">
+    
+    <link rel="alternate" hreflang="bn" href="https://swimanalytics.app/bn/formulas/">
+    
+    <link rel="alternate" hreflang="sw" href="https://swimanalytics.app/sw/formulas/">
+    
+    <link rel="alternate" hreflang="fa" href="https://swimanalytics.app/fa/formulas/">
+    
+    <link rel="alternate" hreflang="et" href="https://swimanalytics.app/et/formulas/">
+    
+    <link rel="alternate" hreflang="lt" href="https://swimanalytics.app/lt/formulas/">
+    
+    <link rel="alternate" hreflang="lv" href="https://swimanalytics.app/lv/formulas/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/formulas/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "lv"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Formuły Wydajności Pływania: Obliczenia CSS, TSS, CTL/ATL",
+      "description": "Kompletne formuły matematyczne dla analityki pływania. Naucz się ręcznie obliczać CSS, sTSS, CTL, ATL, TSB. Zawiera rozwiązane przykłady, wyprowadzenia i wyjaśnienie praktycznego zastosowania. Dla trenerów i zaawansowanych sportowców.",
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "SwimAnalytics",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://swimanalytics.app/assets/images/logo.png"
+        }
+      },
+      "datePublished": "2025-10-12T10:00:00Z",
+      "dateModified": "2025-10-12T14:30:00Z",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://swimanalytics.app/lv/formulas/"
+      }
+    }
+    </script>
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/lv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Formuły",
+          "item": "https://swimanalytics.app/lv/formulas/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">Przejdź do treści</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/lv/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/lv/"
+                               
+                               aria-current="">
+                                Strona Główna
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Ucz Się</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/lv/getting-started/"
+                                       
+                                       aria-current="">
+                                        Rozpocznij
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/training-zones/"
+                                       
+                                       aria-current="">
+                                        Strefy Treningowe
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/training-load/"
+                                       
+                                       aria-current="">
+                                        Obciążenie Treningowe
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        Kalkulator sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">Nauka</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/lv/research/"
+                                       
+                                       aria-current="">
+                                        Badania
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/formulas/"
+                                       class="active"
+                                       aria-current="page">
+                                        Formuły
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/efficiency/"
+                                       
+                                       aria-current="">
+                                        Wydajność
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        Mechanika Ruchu
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/lv/bibliography/"
+                                       
+                                       aria-current="">
+                                        Bibliografia
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/lv/contact/"
+                               
+                               aria-current="">
+                                Kontakt
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="Wybierz język">
+                    
+                    <option value="af" >
+                        Afrikaans
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="bg" >
+                        Български
+                    </option>
+                    
+                    <option value="bn" >
+                        বাংলা
+                    </option>
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="cs" >
+                        Čeština
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="el" >
+                        Ελληνικά
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="et" >
+                        Eesti
+                    </option>
+                    
+                    <option value="fa" >
+                        فارسی
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="hr" >
+                        Hrvatski
+                    </option>
+                    
+                    <option value="hu" >
+                        Magyar
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="is" >
+                        Íslenska
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="lt" >
+                        Lietuvių
+                    </option>
+                    
+                    <option value="lv" selected>
+                        Latviešu
+                    </option>
+                    
+                    <option value="ms" >
+                        Bahasa Melayu
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ro" >
+                        Română
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="sk" >
+                        Slovenčina
+                    </option>
+                    
+                    <option value="sl" >
+                        Slovenščina
+                    </option>
+                    
+                    <option value="sr" >
+                        Српски
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="sw" >
+                        Kiswahili
+                    </option>
+                    
+                    <option value="th" >
+                        ไทย
+                    </option>
+                    
+                    <option value="tl" >
+                        Tagalog
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="uk" >
+                        Українська
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="Przełącz menu" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <section class="hero hero-small">
+    <div class="container">
+        <h1>Dokumentacja Techniczna i Formuły</h1>
+        <p class="lead">Kompletna Implementacja Matematyczna</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Przewodnik Implementacji</h2>
+        <p class="lead">Ta strona dostarcza formuł gotowych do skopiowania oraz metod obliczeniowych krok po kroku dla wszystkich metryk SwimAnalytics. Użyj ich do niestandardowych implementacji, weryfikacji lub głębszego zrozumienia.</p>
+
+        <div class="callout callout-warning">
+            <h3>⚠️ Uwagi Implementacyjne</h3>
+            <ul>
+                <li>Wszystkie czasy muszą być przekonwertowane na sekundy do obliczeń</li>
+                <li>Tempo pływania jest odwrotne (wyższy % = wolniejsze tempo)</li>
+                <li>Zawsze waliduj dane wejściowe dla rozsądnych zakresów</li>
+                <li>Obsługuj przypadki graniczne (dzielenie przez zero, wartości ujemne)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Główne Metryki Wydolności</h2>
+
+        <div class="formula-card">
+            <h3>Critical Swim Speed (CSS)</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
+                    </div>
+                    <div class="formula">
+                        CSS Tempo/100m (sekundy) = (T₄₀₀ - T₂₀₀) / 2
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Kalkulator Interaktywny - Przetestuj Formułę</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="css-d1">Dystans 1 (metry):</label>
+                            <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t1">Czas 1 (mm:ss):</label>
+                            <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-d2">Dystans 2 (metry):</label>
+                            <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="css-t2">Czas 2 (mm:ss):</label>
+                            <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Tempo CSS na 100m:</div>
+                        <div class="result-value" id="css-result">1:49</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Kroki obliczenia:</strong><br>
+                            <span id="css-steps">
+                                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
+                                Tempo/100m = 100 / 0.917 = 109 sekund = 1:49
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Implementacja w JavaScript:</h4>
+                <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
+  // Convert times to seconds if needed
+  const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
+  const t2 = typeof time2 === 'string' ? timeToSeconds(time2) : time2;
+
+  // Calculate CSS in m/s
+  const css_ms = (distance2 - distance1) / (t2 - t1);
+
+  // Calculate pace per 100m in seconds
+  const pace_per_100m = 100 / css_ms;
+
+  // Convert to mm:ss format
+  const minutes = Math.floor(pace_per_100m / 60);
+  const seconds = Math.round(pace_per_100m % 60);
+
+  return {
+    css_ms: css_ms,
+    pace_seconds: pace_per_100m,
+    pace_formatted: `${minutes}:${seconds.toString().padStart(2, '0')}`
+  };
+}
+
+// Example usage:
+const result = calculateCSS(200, 150, 400, 368);
+// Returns: { css_ms: 0.917, pace_seconds: 109, pace_formatted: "1:49" }</code></pre>
+
+                <script>
+                function timeToSecondsCSS(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                function secondsToTimeCSS(seconds) {
+                    const minutes = Math.floor(seconds / 60);
+                    const secs = Math.round(seconds % 60);
+                    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+                }
+
+                function updateCSSCalculator() {
+                    try {
+                        const d1 = parseFloat(document.getElementById('css-d1').value);
+                        const t1Input = document.getElementById('css-t1').value;
+                        const d2 = parseFloat(document.getElementById('css-d2').value);
+                        const t2Input = document.getElementById('css-t2').value;
+
+                        if (!d1 || !t1Input || !d2 || !t2Input) return;
+
+                        const t1 = timeToSecondsCSS(t1Input);
+                        const t2 = timeToSecondsCSS(t2Input);
+
+                        const css_ms = (d2 - d1) / (t2 - t1);
+                        const pace_per_100m = 100 / css_ms;
+                        const pace_formatted = secondsToTimeCSS(pace_per_100m);
+
+                        document.getElementById('css-result').textContent = pace_formatted;
+                        document.getElementById('css-steps').innerHTML =
+                            `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
+                            `Tempo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} sekund = ${pace_formatted}`;
+                    } catch (e) {
+                        console.error('CSS calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('css-d1').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-t1').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-d2').addEventListener('input', updateCSSCalculator);
+                    document.getElementById('css-t2').addEventListener('input', updateCSSCalculator);
+                    updateCSSCalculator();
+                });
+                </script>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Swim Training Stress Score (sTSS)</h3>
+            <div class="formula-content">
+                <h4>Formuła Kompletna:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        sTSS = (IF³) × Czas Trwania (godziny) × 100
+                    </div>
+                    <div class="formula">
+                        IF = NSS / FTP
+                    </div>
+                    <div class="formula">
+                        NSS = Dystans Całkowity / Czas Całkowity (m/min)
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Kalkulator Interaktywny - Przetestuj Formułę</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="stss-distance">Dystans (metry):</label>
+                            <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-duration">Czas Trwania (minuty):</label>
+                            <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="stss-css">Tempo CSS (mm:ss na 100m):</label>
+                            <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
+                        </div>
+                        <div class="input-group">
+                            <label>FTP (obliczone):</label>
+                            <input type="text" id="stss-ftp" readonly value="64.5 m/min">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Obliczone sTSS:</div>
+                        <div class="result-value" id="stss-result">55</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Kroki obliczenia:</strong><br>
+                            <span id="stss-steps">
+                                NSS = 3000m / 55min = 54.5 m/min<br>
+                                FTP = 100 / (93/60) = 64.5 m/min<br>
+                                IF = 54.5 / 64.5 = 0.845<br>
+                                sTSS = 0.845³ × (55/60) × 100 = 55
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Implementacja w JavaScript:</h4>
+                <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+  // Calculate Normalized Swim Speed
+  const nss = distance / timeMinutes;
+
+  // Calculate Intensity Factor
+  const intensityFactor = nss / ftpMetersPerMin;
+
+  // Calculate hours
+  const hours = timeMinutes / 60;
+
+  // Calculate sTSS using cubed intensity factor
+  const stss = Math.pow(intensityFactor, 3) * hours * 100;
+
+  return Math.round(stss);
+}
+
+// Example usage:
+const stss = calculateSTSS(3000, 55, 64.5);
+// Returns: 55
+
+// Helper: Convert CSS to FTP
+function cssToFTP(cssPacePer100mSeconds) {
+  // FTP in m/min = 100m / (pace in minutes)
+  return 100 / (cssPacePer100mSeconds / 60);
+}
+
+// Example: CSS of 1:33 (93 seconds)
+const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
+
+                <script>
+                // Time conversion helper
+                function timeToSeconds(timeString) {
+                    const parts = timeString.split(':');
+                    return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+                }
+
+                // CSS to FTP conversion
+                function cssToFTP(cssPacePer100mSeconds) {
+                    return 100 / (cssPacePer100mSeconds / 60);
+                }
+
+                // sTSS calculation
+                function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
+                    const nss = distance / timeMinutes;
+                    const intensityFactor = nss / ftpMetersPerMin;
+                    const hours = timeMinutes / 60;
+                    const stss = Math.pow(intensityFactor, 3) * hours * 100;
+                    return Math.round(stss);
+                }
+
+                // Update calculator
+                function updateSTSSCalculator() {
+                    try {
+                        const distance = parseFloat(document.getElementById('stss-distance').value);
+                        const duration = parseFloat(document.getElementById('stss-duration').value);
+                        const cssInput = document.getElementById('stss-css').value;
+
+                        // Validate inputs
+                        if (!distance || !duration || !cssInput) return;
+
+                        // Convert CSS to seconds
+                        const cssPaceSeconds = timeToSeconds(cssInput);
+
+                        // Calculate FTP
+                        const ftp = cssToFTP(cssPaceSeconds);
+
+                        // Calculate NSS
+                        const nss = distance / duration;
+
+                        // Calculate Intensity Factor
+                        const intensityFactor = nss / ftp;
+
+                        // Calculate sTSS
+                        const stss = calculateSTSS(distance, duration, ftp);
+
+                        // Update display
+                        document.getElementById('stss-ftp').value = ftp.toFixed(1) + ' m/min';
+                        document.getElementById('stss-result').textContent = stss;
+
+                        // Update calculation steps
+                        const hours = duration / 60;
+                        document.getElementById('stss-steps').innerHTML =
+                            `NSS = ${distance}m / ${duration}min = ${nss.toFixed(1)} m/min<br>` +
+                            `FTP = 100 / (${cssPaceSeconds}/60) = ${ftp.toFixed(1)} m/min<br>` +
+                            `IF = ${nss.toFixed(1)} / ${ftp.toFixed(1)} = ${intensityFactor.toFixed(3)}<br>` +
+                            `sTSS = ${intensityFactor.toFixed(3)}³ × (${duration}/60) × 100 = ${stss}`;
+                    } catch (e) {
+                        console.error('Calculation error:', e);
+                    }
+                }
+
+                // Add event listeners when page loads
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('stss-distance').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-duration').addEventListener('input', updateSTSSCalculator);
+                    document.getElementById('stss-css').addEventListener('input', updateSTSSCalculator);
+
+                    // Initial calculation
+                    updateSTSSCalculator();
+                });
+                </script>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>SWOLF</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SWOLF = Czas Długości (sekundy) + Liczba Ruchów
+                    </div>
+                    <div class="formula">
+                        SWOLF₂₅ = (Czas × 25/Długość Basenu) + (Ruchy × 25/Długość Basenu)
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Kalkulator Interaktywny - Przetestuj Formułę</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="swolf-time">Czas Długości (sekundy):</label>
+                            <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-strokes">Liczba Ruchów:</label>
+                            <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="swolf-pool">Długość Basenu (m):</label>
+                            <select id="swolf-pool">
+                                <option value="25" selected>25m</option>
+                                <option value="50">50m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Wynik SWOLF:</div>
+                        <div class="result-value" id="swolf-result">35</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Obliczenie:</strong><br>
+                            <span id="swolf-steps">
+                                SWOLF = 20s + 15 ruchów = 35
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Implementacja w JavaScript:</h4>
+                <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
+  return timeSeconds + strokeCount;
+}
+
+function calculateNormalizedSWOLF(timeSeconds, strokeCount, poolLength) {
+  const normalizedTime = timeSeconds * (25 / poolLength);
+  const normalizedStrokes = strokeCount * (25 / poolLength);
+  return normalizedTime + normalizedStrokes;
+}
+
+// Example:
+const swolf = calculateSWOLF(20, 15);
+// Returns: 35
+
+const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
+// Returns: 35 (normalized to 25m)</code></pre>
+
+                <script>
+                function updateSWOLFCalculator() {
+                    try {
+                        const time = parseFloat(document.getElementById('swolf-time').value);
+                        const strokes = parseFloat(document.getElementById('swolf-strokes').value);
+                        const poolLength = parseFloat(document.getElementById('swolf-pool').value);
+
+                        if (!time || !strokes) return;
+
+                        let swolf, steps;
+                        if (poolLength === 25) {
+                            swolf = time + strokes;
+                            steps = `SWOLF = ${time}s + ${strokes} ruchów = ${swolf}`;
+                        } else {
+                            const normalizedTime = time * (25 / poolLength);
+                            const normalizedStrokes = strokes * (25 / poolLength);
+                            swolf = normalizedTime + normalizedStrokes;
+                            steps = `Znormalizowany Czas = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `Znormalizowane Ruchy = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                                   `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
+                        }
+
+                        document.getElementById('swolf-result').textContent = swolf.toFixed(1);
+                        document.getElementById('swolf-steps').innerHTML = steps;
+                    } catch (e) {
+                        console.error('SWOLF calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('swolf-time').addEventListener('input', updateSWOLFCalculator);
+                    document.getElementById('swolf-strokes').addEventListener('input', updateSWOLFCalculator);
+                    document.getElementById('swolf-pool').addEventListener('change', updateSWOLFCalculator);
+                    updateSWOLFCalculator();
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Mechanika Ruchu</h2>
+
+        <div class="formula-card">
+            <h3>Stroke Rate (SR)</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SR = 60 / Czas Cyklu (sekundy)
+                    </div>
+                    <div class="formula">
+                        SR = (Liczba Ruchów / Czas w sekundach) × 60
+                    </div>
+                </div>
+
+                <div class="callout callout-info mt-lg">
+                    <h4>🧪 Kalkulator Interaktywny - Przetestuj Formułę</h4>
+                    <div class="calculator-grid">
+                        <div class="input-group">
+                            <label for="sr-strokes">Liczba Ruchów:</label>
+                            <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
+                        </div>
+                        <div class="input-group">
+                            <label for="sr-time">Czas (sekundy):</label>
+                            <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
+                        </div>
+                    </div>
+                    <div class="calculator-result mt-md">
+                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-value" id="sr-result">72</div>
+                    </div>
+                    <div class="calculation-breakdown mt-md">
+                        <small>
+                            <strong>Obliczenie:</strong><br>
+                            <span id="sr-steps">
+                                SR = (30 / 25) × 60 = 72 SPM
+                            </span>
+                        </small>
+                    </div>
+                </div>
+
+                <h4 class="mt-xl">Implementacja w JavaScript:</h4>
+                <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
+  return (strokeCount / timeSeconds) * 60;
+}
+
+// Example:
+const sr = calculateStrokeRate(30, 25);
+// Returns: 72 SPM</code></pre>
+
+                <script>
+                function updateSRCalculator() {
+                    try {
+                        const strokes = parseFloat(document.getElementById('sr-strokes').value);
+                        const time = parseFloat(document.getElementById('sr-time').value);
+
+                        if (!strokes || !time) return;
+
+                        const sr = (strokes / time) * 60;
+
+                        document.getElementById('sr-result').textContent = sr.toFixed(1);
+                        document.getElementById('sr-steps').innerHTML =
+                            `SR = (${strokes} / ${time}) × 60 = ${sr.toFixed(1)} SPM`;
+                    } catch (e) {
+                        console.error('SR calculation error:', e);
+                    }
+                }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('sr-strokes').addEventListener('input', updateSRCalculator);
+                    document.getElementById('sr-time').addEventListener('input', updateSRCalculator);
+                    updateSRCalculator();
+                });
+                </script>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Distance Per Stroke (DPS)</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        DPS = Dystans / Liczba Ruchów
+                    </div>
+                    <div class="formula">
+                        DPS = Dystans / (SR / 60)
+                    </div>
+                </div>
+
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
+  const effectiveDistance = distance - pushoffDistance;
+  return effectiveDistance / strokeCount;
+}
+
+// Example (25m pool, 5m push-off):
+const dps = calculateDPS(25, 12, 5);
+// Returns: 1.67 m/stroke
+
+// For multiple laps:
+const dps100m = calculateDPS(100, 48, 4 * 5);
+// Returns: 1.67 m/stroke (4 laps × 5m push-off)</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Prędkość z SR i DPS</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        Prędkość (m/s) = (SR / 60) × DPS
+                    </div>
+                </div>
+
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function calculateVelocity(strokeRate, dps) {
+  return (strokeRate / 60) * dps;
+}
+
+// Example:
+const velocity = calculateVelocity(70, 1.6);
+// Returns: 1.87 m/s</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Stroke Index (SI)</h3>
+            <div class="formula-content">
+                <h4>Formuła:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        SI = Prędkość (m/s) × DPS (m/ruch)
+                    </div>
+                </div>
+
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function calculateStrokeIndex(velocity, dps) {
+  return velocity * dps;
+}
+
+// Example:
+const si = calculateStrokeIndex(1.5, 1.7);
+// Returns: 2.55</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Wykres Zarządzania Wydolnością (PMC)</h2>
+
+        <div class="formula-card">
+            <h3>Obliczenia CTL, ATL, TSB</h3>
+            <div class="formula-content">
+                <h4>Formuły:</h4>
+                <div class="formula-box-large">
+                    <div class="formula">
+                        CTL dziś = CTL wczoraj + (TSS dziś - CTL wczoraj) × (1/42)
+                    </div>
+                    <div class="formula">
+                        ATL dziś = ATL wczoraj + (TSS dziś - ATL wczoraj) × (1/7)
+                    </div>
+                    <div class="formula">
+                        TSB = CTL wczoraj - ATL wczoraj
+                    </div>
+                </div>
+
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function updateCTL(previousCTL, todayTSS) {
+  return previousCTL + (todayTSS - previousCTL) * (1/42);
+}
+
+function updateATL(previousATL, todayTSS) {
+  return previousATL + (todayTSS - previousATL) * (1/7);
+}
+
+function calculateTSB(yesterdayCTL, yesterdayATL) {
+  return yesterdayCTL - yesterdayATL;
+}
+
+// Calculate PMC for series of workouts
+function calculatePMC(workouts) {
+  let ctl = 0, atl = 0;
+  const results = [];
+
+  workouts.forEach(workout => {
+    ctl = updateCTL(ctl, workout.tss);
+    atl = updateATL(atl, workout.tss);
+    const tsb = calculateTSB(ctl, atl);
+
+    results.push({
+      date: workout.date,
+      tss: workout.tss,
+      ctl: Math.round(ctl * 10) / 10,
+      atl: Math.round(atl * 10) / 10,
+      tsb: Math.round(tsb * 10) / 10
+    });
+  });
+
+  return results;
+}
+
+// Example usage:
+const workouts = [
+  { date: '2025-01-01', tss: 50 },
+  { date: '2025-01-02', tss: 60 },
+  { date: '2025-01-03', tss: 45 },
+  // ... more workouts
+];
+
+const pmc = calculatePMC(workouts);
+// Returns array with CTL, ATL, TSB for each day</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Obliczenia Zaawansowane</h2>
+
+        <div class="formula-card">
+            <h3>CSS z Wielu Dystansów (Metoda Regresji)</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function calculateCSSRegression(distances, times) {
+  // Linear regression: distance = a + b*time
+  const n = distances.length;
+  const sumX = times.reduce((a, b) => a + b, 0);
+  const sumY = distances.reduce((a, b) => a + b, 0);
+  const sumXY = times.reduce((sum, x, i) => sum + x * distances[i], 0);
+  const sumXX = times.reduce((sum, x) => sum + x * x, 0);
+
+  const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+  const intercept = (sumY - slope * sumX) / n;
+
+  return {
+    css: slope, // Critical swimming velocity (m/s)
+    anaerobic_capacity: intercept // Anaerobic distance capacity (m)
+  };
+}
+
+// Example with multiple test distances:
+const distances = [100, 200, 400, 800];
+const times = [65, 150, 340, 720]; // in seconds
+const result = calculateCSSRegression(distances, times);
+// Returns: { css: 1.18, anaerobic_capacity: 15.3 }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Czynnik Intensywności z Tempa</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
+  // Convert pace to speed (m/s)
+  const actualSpeed = 100 / actualPace100m;
+  const thresholdSpeed = 100 / thresholdPace100m;
+  return actualSpeed / thresholdSpeed;
+}
+
+// Example:
+const if_value = calculateIntensityFactor(110, 93);
+// Returns: 0.845 (swimming at 84.5% of threshold)</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Analiza Konsystencji Tempa</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function analyzePaceConsistency(laps) {
+  const paces = laps.map(lap => lap.distance / lap.time);
+  const avgPace = paces.reduce((a, b) => a + b) / paces.length;
+
+  const variance = paces.reduce((sum, pace) =>
+    sum + Math.pow(pace - avgPace, 2), 0) / paces.length;
+  const stdDev = Math.sqrt(variance);
+  const coefficientOfVariation = (stdDev / avgPace) * 100;
+
+  return {
+    avgPace,
+    stdDev,
+    coefficientOfVariation,
+    consistency: coefficientOfVariation < 5 ? "Doskonała" :
+                 coefficientOfVariation < 10 ? "Dobra" :
+                 coefficientOfVariation < 15 ? "Umiarkowana" : "Zmienna"
+  };
+}
+
+// Example:
+const laps = [
+  { distance: 100, time: 70 },
+  { distance: 100, time: 72 },
+  { distance: 100, time: 71 },
+  // ...
+];
+const analysis = analyzePaceConsistency(laps);
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Doskonała" }</code></pre>
+            </div>
+        </div>
+
+        <div class="formula-card">
+            <h3>Wykrywanie Zmęczenia poprzez Liczbę Ruchów</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function detectFatigue(laps) {
+  const firstThird = laps.slice(0, Math.floor(laps.length/3));
+  const lastThird = laps.slice(-Math.floor(laps.length/3));
+
+  const firstThirdAvg = firstThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / firstThird.length;
+  const lastThirdAvg = lastThird.reduce((sum, lap) =>
+    sum + lap.strokeCount, 0) / lastThird.length;
+
+  const strokeCountIncrease = ((lastThirdAvg - firstThirdAvg) / firstThirdAvg) * 100;
+
+  return {
+    firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
+    lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
+    percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
+    fatigueLevel: strokeCountIncrease < 5 ? "Minimalne" :
+                  strokeCountIncrease < 10 ? "Umiarkowane" :
+                  strokeCountIncrease < 20 ? "Znaczące" : "Poważne"
+  };
+}
+
+// Example:
+const laps = [
+  { strokeCount: 14 }, { strokeCount: 14 }, { strokeCount: 15 },
+  { strokeCount: 15 }, { strokeCount: 16 }, { strokeCount: 16 },
+  { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
+];
+const fatigue = detectFatigue(laps);
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Poważne" }</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Walidacja Danych</h2>
+
+        <div class="formula-card">
+            <h3>Weryfikacja Jakości Danych Treningowych</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>function validateWorkoutData(workout) {
+  const issues = [];
+
+  // Check for reasonable pace ranges (1:00-5:00 per 100m)
+  const avgPace = (workout.totalTime / workout.totalDistance) * 100;
+  if (avgPace < 60 || avgPace > 300) {
+    issues.push(`Niezwykłe tempo średnie: ${Math.round(avgPace)}s na 100m`);
+  }
+
+  // Check for reasonable stroke counts (10-50 per 25m)
+  const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
+  if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
+    issues.push(`Niezwykła liczba ruchów: ${Math.round(avgStrokesPer25m)} na 25m`);
+  }
+
+  // Check for reasonable stroke rate (30-150 SPM)
+  const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
+  if (avgSR < 30 || avgSR > 150) {
+    issues.push(`Niezwykła częstotliwość ruchów: ${Math.round(avgSR)} SPM`);
+  }
+
+  // Check for missing laps (gaps in time)
+  if (workout.laps && workout.laps.length > 1) {
+    for (let i = 1; i < workout.laps.length; i++) {
+      const gap = workout.laps[i].startTime -
+                  (workout.laps[i-1].startTime + workout.laps[i-1].duration);
+      if (gap > 300) { // 5 minute gap
+        issues.push(`Wykryto dużą przerwę między długościami ${i} i ${i+1}`);
+      }
+    }
+  }
+
+  return {
+    isValid: issues.length === 0,
+    issues
+  };
+}
+
+// Example:
+const workout = {
+  totalDistance: 2000,
+  totalTime: 1800, // 30 minutes
+  totalStrokes: 800,
+  laps: [/* lap data */]
+};
+const validation = validateWorkoutData(workout);
+// Returns: { isValid: true, issues: [] }</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow">
+        <h2>Funkcje Pomocnicze</h2>
+
+        <div class="formula-card">
+            <h3>Narzędzia Konwersji Czasu</h3>
+            <div class="formula-content">
+                <h4>Implementacja w JavaScript:</h4>
+                <pre><code>// Convert mm:ss to seconds
+function timeToSeconds(timeString) {
+  const parts = timeString.split(':');
+  return parseInt(parts[0]) * 60 + parseInt(parts[1]);
+}
+
+// Convert seconds to mm:ss
+function secondsToTime(seconds) {
+  const minutes = Math.floor(seconds / 60);
+  const secs = Math.round(seconds % 60);
+  return `${minutes}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Convert seconds to hh:mm:ss
+function secondsToTimeDetailed(seconds) {
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const secs = Math.round(seconds % 60);
+  return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+// Examples:
+timeToSeconds("1:33"); // Returns: 93
+secondsToTime(93); // Returns: "1:33"
+secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container container-narrow text-center">
+        <h2>Zasoby Implementacyjne</h2>
+        <p class="lead">Wszystkie formuły na tej stronie są gotowe do produkcji i zwalidowane względem literatury naukowej. Użyj ich do niestandardowych narzędzi analitycznych, weryfikacji lub głębszego zrozumienia obliczeń wydolności pływackiej.</p>
+
+        <div class="callout callout-tip">
+            <h3>💡 Najlepsze Praktyki</h3>
+            <ul class="text-left">
+                <li><strong>Waliduj dane wejściowe:</strong> Sprawdzaj rozsądne zakresy przed obliczeniami</li>
+                <li><strong>Obsługuj przypadki graniczne:</strong> Dzielenie przez zero, wartości ujemne, dane puste</li>
+                <li><strong>Zaokrąglaj odpowiednio:</strong> CTL/ATL/TSB do 1 miejsca po przecinku, sTSS do liczby całkowitej</li>
+                <li><strong>Przechowuj precyzję:</strong> Zachowuj pełną precyzję w bazie danych, zaokrąglaj do wyświetlenia</li>
+                <li><strong>Testuj gruntownie:</strong> Używaj znanych poprawnych danych do weryfikacji obliczeń</li>
+            </ul>
+        </div>
+
+        <div class="mt-xl">
+            <a href="/lv/" class="btn btn-primary btn-large">Powrót do Strony Głównej</a>
+            <a href="/lv/research/" class="btn btn-secondary">Podstawy Naukowe</a>
+        </div>
+    </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/lv/">
+                            Strona Główna
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lv/">
+                            Ucz Się
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lv/">
+                            Nauka
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lv/contact/">
+                            Kontakt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Wszelkie prawa zastrzeżone</h3>
+                <ul>
+                    <li><a href="/lv/privacy/">Prywatność</a></li>
+                    <li><a href="/lv/terms/">Warunki</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>Wybierz język</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/formulas/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/formulas/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/formulas/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/formulas/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/formulas/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/formulas/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/formulas/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/formulas/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/formulas/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/formulas/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/formulas/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/formulas/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/formulas/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/formulas/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/formulas/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/formulas/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/formulas/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/formulas/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/formulas/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/formulas/"
+                           >
+                            עברית
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/formulas/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/formulas/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/formulas/"
+                           >
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/formulas/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/el/formulas/"
+                           >
+                            Ελληνικά
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/uk/formulas/"
+                           >
+                            Українська
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ms/formulas/"
+                           >
+                            Bahasa Melayu
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tl/formulas/"
+                           >
+                            Tagalog
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hu/formulas/"
+                           >
+                            Magyar
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ro/formulas/"
+                           >
+                            Română
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/cs/formulas/"
+                           >
+                            Čeština
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bg/formulas/"
+                           >
+                            Български
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sk/formulas/"
+                           >
+                            Slovenčina
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hr/formulas/"
+                           >
+                            Hrvatski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sl/formulas/"
+                           >
+                            Slovenščina
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sr/formulas/"
+                           >
+                            Српски
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/af/formulas/"
+                           >
+                            Afrikaans
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/is/formulas/"
+                           >
+                            Íslenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/bn/formulas/"
+                           >
+                            বাংলা
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sw/formulas/"
+                           >
+                            Kiswahili
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fa/formulas/"
+                           >
+                            فارسی
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/et/formulas/"
+                           >
+                            Eesti
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lt/formulas/"
+                           >
+                            Lietuvių
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/lv/formulas/"
+                           aria-current="page">
+                            Latviešu
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Ta strona używa plików cookie, aby poprawić Twoje wrażenia." aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>Ta strona używa plików cookie, aby poprawić Twoje wrażenia. <a href="/lv/privacy/">Dowiedz się więcej</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">Odrzuć</button>
+            <button class="btn btn-primary" id="cookie-accept">Akceptuj</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
