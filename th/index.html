@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <title>SwimAnalytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS</title>
+    <meta name="description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CSS และ sTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
+    <meta name="author" content="Albert Arno">
+    
+    <meta name="keywords" content="แอปติดตามการว่ายน้ำ, การวิเคราะห์การว่ายน้ำ, เครื่องคำนวณ CSS, ประสิทธิภาพการว่ายน้ำ, sTSS">
+    
+    <link rel="canonical" href="https://swimanalytics.app/th/">
+
+    
+    
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swimanalytics.app/th/">
+    <meta property="og:title" content="SwimAnalytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS">
+    <meta property="og:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CSS และ sTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
+    <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    <meta property="og:locale" content="th_TH">
+    <meta property="og:site_name" content="SwimAnalytics">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://swimanalytics.app/th/">
+    <meta name="twitter:title" content="SwimAnalytics: แอปติดตามและวิเคราะห์ประสิทธิภาพการว่ายน้ำสำหรับ iOS">
+    <meta name="twitter:description" content="ติดตามข้อมูลการว่ายน้ำ คำนวณ CSS และ sTSS วิเคราะห์ภาระการฝึกด้วยการวิเคราะห์แบบมืออาชีพ เครื่องคำนวณฟรีสำหรับนักว่ายน้ำและนักไตรกีฬา ทดลองใช้ฟรี 7 วัน">
+    <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
+    
+    <meta name="twitter:site" content="@swimanalytics">
+    <meta name="twitter:creator" content="@swimanalytics">
+    
+
+    
+    
+    <link rel="alternate" hreflang="ca" href="https://swimanalytics.app/ca/">
+    
+    <link rel="alternate" hreflang="en" href="https://swimanalytics.app/en/">
+    
+    <link rel="alternate" hreflang="es" href="https://swimanalytics.app/es/">
+    
+    <link rel="alternate" hreflang="fr" href="https://swimanalytics.app/fr/">
+    
+    <link rel="alternate" hreflang="de" href="https://swimanalytics.app/de/">
+    
+    <link rel="alternate" hreflang="it" href="https://swimanalytics.app/it/">
+    
+    <link rel="alternate" hreflang="nl" href="https://swimanalytics.app/nl/">
+    
+    <link rel="alternate" hreflang="ja" href="https://swimanalytics.app/ja/">
+    
+    <link rel="alternate" hreflang="pl" href="https://swimanalytics.app/pl/">
+    
+    <link rel="alternate" hreflang="sv" href="https://swimanalytics.app/sv/">
+    
+    <link rel="alternate" hreflang="pt" href="https://swimanalytics.app/pt/">
+    
+    <link rel="alternate" hreflang="ru" href="https://swimanalytics.app/ru/">
+    
+    <link rel="alternate" hreflang="zh" href="https://swimanalytics.app/zh/">
+    
+    <link rel="alternate" hreflang="ko" href="https://swimanalytics.app/ko/">
+    
+    <link rel="alternate" hreflang="no" href="https://swimanalytics.app/no/">
+    
+    <link rel="alternate" hreflang="da" href="https://swimanalytics.app/da/">
+    
+    <link rel="alternate" hreflang="fi" href="https://swimanalytics.app/fi/">
+    
+    <link rel="alternate" hreflang="tr" href="https://swimanalytics.app/tr/">
+    
+    <link rel="alternate" hreflang="ar" href="https://swimanalytics.app/ar/">
+    
+    <link rel="alternate" hreflang="he" href="https://swimanalytics.app/he/">
+    
+    <link rel="alternate" hreflang="hi" href="https://swimanalytics.app/hi/">
+    
+    <link rel="alternate" hreflang="id" href="https://swimanalytics.app/id/">
+    
+    <link rel="alternate" hreflang="th" href="https://swimanalytics.app/th/">
+    
+    <link rel="alternate" hreflang="vi" href="https://swimanalytics.app/vi/">
+    
+    <link rel="alternate" hreflang="x-default" href="https://swimanalytics.app/en/">
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0066CC">
+
+    
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS",
+      "url": "https://swimanalytics.app",
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.",
+      "inLanguage": "th"
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SwimAnalytics",
+      "operatingSystem": "iOS",
+      "applicationCategory": "HealthApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "3.99",
+        "priceCurrency": "EUR"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Albert Arno"
+      },
+      "description": "Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics.",
+      "featureList": ["CSS Tracking", "sTSS Calculation", "Training Zones", "Performance Analytics", "CTL/ATL/TSB"]
+    }
+    </script>
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SwimAnalytics",
+      "url": "https://swimanalytics.app",
+      "logo": "https://swimanalytics.app/assets/images/logo.png",
+      "description": "Science-based swimming analytics app for iOS. Track CSS, TSS, and performance metrics.",
+      "foundingDate": "2024",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Support",
+        "email": "Albert Arno"
+      }
+    }
+    </script>
+
+    
+
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://swimanalytics.app/th/"
+        }
+      ]
+    }
+    </script>
+
+    
+
+    
+</head>
+<body>
+    
+    <a href="#main-content" class="skip-to-content">ข้ามไปยังเนื้อหา</a>
+
+    
+    <header class="site-header">
+    <div class="container">
+        <div class="header-inner">
+            
+            <a href="/th/" class="site-logo">
+                <picture>
+                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
+                </picture>
+                <span class="logo-text">SwimAnalytics</span>
+            </a>
+
+            
+            <nav class="nav-primary" id="nav-primary" role="navigation" aria-label="Main navigation">
+                <ul>
+                    
+                    <li>
+                        
+                            
+                            <a href="/th/"
+                               
+                               aria-current="">
+                                หน้าแรก
+                            </a>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">เรียนรู้</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/th/getting-started/"
+                                       
+                                       aria-current="">
+                                        เริ่มต้น
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/css/"
+                                       
+                                       aria-current="">
+                                        CSS
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/training-zones/"
+                                       
+                                       aria-current="">
+                                        โซนการฝึก
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/training-load/"
+                                       
+                                       aria-current="">
+                                        ภาระการฝึก
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/stss-calculator/"
+                                       
+                                       aria-current="">
+                                        เครื่องคำนวณ sTSS
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li class="has-submenu">
+                        
+                            
+                            
+                                
+                                <span class="nav-label">วิทยาศาสตร์</span>
+                            
+                            <ul class="submenu">
+                                
+                                <li>
+                                    <a href="/th/research/"
+                                       
+                                       aria-current="">
+                                        การวิจัย
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/formulas/"
+                                       
+                                       aria-current="">
+                                        สูตร
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/efficiency/"
+                                       
+                                       aria-current="">
+                                        ประสิทธิภาพ
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/stroke-mechanics/"
+                                       
+                                       aria-current="">
+                                        กลศาสตร์การว่าย
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="/th/bibliography/"
+                                       
+                                       aria-current="">
+                                        บรรณานุกรม
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        
+                    </li>
+                    
+                    <li>
+                        
+                            
+                            <a href="/th/contact/"
+                               
+                               aria-current="">
+                                ติดต่อ
+                            </a>
+                        
+                    </li>
+                    
+                </ul>
+
+                
+                <div class="search-container">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input
+                        type="search"
+                        id="site-search"
+                        class="search-input"
+                        aria-expanded="false"
+                        aria-haspopup="listbox"
+                        aria-autocomplete="list"
+                        autocomplete="off"
+                        spellcheck="false"
+                    />
+                    <div id="search-results" class="search-results hidden" role="region" aria-live="polite"></div>
+                </div>
+
+                
+                <select class="language-selector" id="language-select" aria-label="เลือกภาษา">
+                    
+                    <option value="ca" >
+                        Català
+                    </option>
+                    
+                    <option value="en" >
+                        English
+                    </option>
+                    
+                    <option value="es" >
+                        Español
+                    </option>
+                    
+                    <option value="fr" >
+                        Français
+                    </option>
+                    
+                    <option value="de" >
+                        Deutsch
+                    </option>
+                    
+                    <option value="it" >
+                        Italiano
+                    </option>
+                    
+                    <option value="nl" >
+                        Nederlands
+                    </option>
+                    
+                    <option value="ja" >
+                        日本語
+                    </option>
+                    
+                    <option value="pl" >
+                        Polski
+                    </option>
+                    
+                    <option value="sv" >
+                        Svenska
+                    </option>
+                    
+                    <option value="pt" >
+                        Português
+                    </option>
+                    
+                    <option value="ru" >
+                        Русский
+                    </option>
+                    
+                    <option value="zh" >
+                        中文
+                    </option>
+                    
+                    <option value="ko" >
+                        한국어
+                    </option>
+                    
+                    <option value="no" >
+                        Norsk
+                    </option>
+                    
+                    <option value="da" >
+                        Dansk
+                    </option>
+                    
+                    <option value="fi" >
+                        Suomi
+                    </option>
+                    
+                    <option value="tr" >
+                        Türkçe
+                    </option>
+                    
+                    <option value="ar" >
+                        العربية
+                    </option>
+                    
+                    <option value="he" >
+                        עברית
+                    </option>
+                    
+                    <option value="hi" >
+                        हिन्दी
+                    </option>
+                    
+                    <option value="id" >
+                        Bahasa Indonesia
+                    </option>
+                    
+                    <option value="th" selected>
+                        ไทย
+                    </option>
+                    
+                    <option value="vi" >
+                        Tiếng Việt
+                    </option>
+                    
+                </select>
+
+                
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </nav>
+
+            
+            <button class="menu-toggle" id="menu-toggle" aria-label="สลับเมนู" aria-expanded="false" aria-controls="nav-primary">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+    
+    <main id="main-content" class="main-content">
+        <!-- SwimAnalytics App Landing Page - Homepage -->
+
+<!-- Hero Section with App Introduction -->
+<section class="app-hero">
+  <div class="container">
+    <div class="app-hero-content">
+      <div class="app-hero-text">
+        <div class="app-hero-badge">
+          <span>🏊</span>
+          <span>การวิเคราะห์การว่ายน้ำระดับมืออาชีพ</span>
+        </div>
+        <h1>เปลี่ยนข้อมูลการว่ายน้ำของคุณให้เป็นผลงาน</h1>
+        <p class="app-hero-subtitle">
+          เมตริกทางวิทยาศาสตร์ โซนการฝึกซ้อมที่ปรับแต่งเฉพาะบุคคล และการติดตามผลงานอย่างละเอียด
+          ทั้งหมดประมวลผลภายในเครื่อง iPhone ของคุณด้วยความเป็นส่วนตัวอย่างสมบูรณ์
+        </p>
+        <div class="app-hero-cta">
+          <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+            ดาวน์โหลดบน App Store
+          </a>
+          <a href="#features" class="btn btn-large btn-secondary">
+            สำรวจฟีเจอร์
+          </a>
+        </div>
+        <p class="mt-6 text-sm-muted">
+          ✓ ทดลองใช้ฟรี 7 วัน &nbsp;&nbsp; ✓ ไม่ต้องสร้างบัญชี &nbsp;&nbsp; ✓ ข้อมูลอยู่ในเครื่อง 100%
+        </p>
+      </div>
+      <div class="app-hero-mockup">
+        <div class="mockup-phone">
+          <img src="/assets/images/app-mockup-main.png" alt="แอป iOS SwimAnalytics แสดงเมตริก Critical Swim Speed (CSS) และ Training Stress Score (TSS) บน iPhone" width="400" height="auto" loading="eager" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section id="features" class="app-features">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ฟีเจอร์</div>
+      <h2 class="section-title">ทุกสิ่งที่คุณต้องการเพื่อพัฒนา</h2>
+      <p class="section-subtitle">การวิเคราะห์ระดับมืออาชีพที่ออกแบบมาสำหรับนักว่ายน้ำทุกระดับ</p>
+    </div>
+    <div class="app-features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+          </svg>
+        </div>
+        <h3>เมตริกทางวิทยาศาสตร์</h3>
+        <p><a href="/th/css/">Critical Swim Speed (CSS)</a> กำหนดเกณฑ์แอโรบิกของคุณ ช่วยให้คำนวณ <a href="/th/training-load/">Training Stress Score (TSS)</a> และ<a href="/th/training-load/#pmc">การติดตามผลงานด้วย CTL/ATL/TSB</a> ที่อิงจากงานวิจัยกีฬาศาสตร์ที่พิสูจน์แล้ว</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
+          </svg>
+        </div>
+        <h3>โซนการฝึกซ้อม</h3>
+        <p>7 โซนการฝึกซ้อมที่ปรับเทียบตาม CSS ของคุณ เพิ่มประสิทธิภาพการฝึกซ้อมแต่ละครั้งเพื่อพัฒนาการฟื้นตัว แอโรบิก เกณฑ์ หรือ VO₂max</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
+          </svg>
+        </div>
+        <h3>การเปรียบเทียบอัจฉริยะ</h3>
+        <p>การเปรียบเทียบรายสัปดาห์ รายเดือน และรายปี พร้อมการตรวจจับแนวโน้มและเปอร์เซ็นต์การเปลี่ยนแปลงอัตโนมัติสำหรับทุกเมตริก</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
+          </svg>
+        </div>
+        <h3>ความเป็นส่วนตัวสมบูรณ์</h3>
+        <p>ข้อมูลทั้งหมดประมวลผลภายในอุปกรณ์ของคุณ ไม่มีเซิร์ฟเวอร์ ไม่มีคลาวด์ ไม่มีการติดตาม คุณเป็นเจ้าของและควบคุมข้อมูลการว่ายน้ำของคุณ</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+          </svg>
+        </div>
+        <h3>ส่งออกไปได้ทุกที่</h3>
+        <p>ส่งออกการฝึกซ้อมและการวิเคราะห์ในรูปแบบ JSON, CSV, HTML หรือ PDF เข้ากันได้กับโค้ช สเปรดชีต และแพลตฟอร์มการฝึกซ้อม</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg class="icon" aria-hidden="true">
+            <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+          </svg>
+        </div>
+        <h3>ประสิทธิภาพทันที</h3>
+        <p>เปิดแอปใน 0.35 วินาทีด้วยสถาปัตยกรรม local-first ดูการฝึกซ้อมของคุณได้ทันทีโดยไม่ต้องรอการซิงค์หรือดาวน์โหลด</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Screenshots Carousel -->
+<section class="app-screenshots">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ภาพหน้าจอ</div>
+      <h2 class="section-title">ค้นพบ SwimAnalytics ในการใช้งานจริง</h2>
+      <p class="section-subtitle">อินเทอร์เฟซที่สวยงามและใช้งานง่ายสำหรับนักว่ายน้ำ</p>
+    </div>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn carousel-btn-prev" aria-label="ภาพก่อนหน้า">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
+        </svg>
+      </button>
+      <div class="screenshots-carousel" id="screenshotsCarousel">
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workouts-list.png" alt="รายการการฝึกซ้อมของ SwimAnalytics แสดงเซสชันการว่ายน้ำพร้อมคะแนน TSS และโซนการฝึกซ้อม" loading="lazy" />
+          <p class="screenshot-caption">สรุปการฝึกซ้อม</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/workout-detail.png" alt="การวิเคราะห์การฝึกซ้อมการว่ายน้ำแบบละเอียดพร้อมจังหวะต่อรอบ ประสิทธิภาพ SWOLF และข้อมูลอัตราการเต้นของหัวใจ" loading="lazy" />
+          <p class="screenshot-caption">การวิเคราะห์แต่ละรอบ</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/analytics.png" alt="แดชบอร์ด SwimAnalytics แสดงเมตริก Performance Management Chart CTL, ATL และ TSB" loading="lazy" />
+          <p class="screenshot-caption">เมตริกขั้นสูง</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/performance.png" alt="กราฟแนวโน้มผลงานการว่ายน้ำแสดงความก้าวหน้าของ CSS และภาระการฝึกซ้อมตามเวลา" loading="lazy" />
+          <p class="screenshot-caption">แนวโน้มผลงาน</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/training-zones.png" alt="7 โซนการฝึกซ้อมการว่ายน้ำที่ปรับแต่งตามเกณฑ์ Critical Swim Speed" loading="lazy" />
+          <p class="screenshot-caption">โซนการฝึกซ้อม</p>
+        </div>
+        <div class="screenshot-item">
+          <img src="/assets/images/screenshots/export-options.png" alt="ส่งออกข้อมูลการว่ายน้ำในรูปแบบ JSON, CSV, HTML และ PDF สำหรับโค้ชและการวิเคราะห์" loading="lazy" />
+          <p class="screenshot-caption">ตัวเลือกการส่งออก</p>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" aria-label="ภาพถัดไป">
+        <svg aria-hidden="true">
+          <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
+        </svg>
+      </button>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="การนำทางภาพหน้าจอ"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Scientific Metrics Section -->
+<section class="app-metrics">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">อิงวิทยาศาสตร์</div>
+      <h2 class="section-title text-white">เมตริกระดับมืออาชีพที่สำคัญ</h2>
+      <p class="section-subtitle text-white-90">
+        SwimAnalytics เปลี่ยนข้อมูลการว่ายน้ำดิบให้เป็นข้อมูลเชิงลึกที่ใช้งานได้
+        โดยใช้เมตริกที่ผ่านการตรวจสอบจากงานวิจัยกีฬาศาสตร์
+      </p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon">🎯</div>
+        <div class="metric-label">จังหวะเกณฑ์</div>
+        <h3 class="metric-name">CSS</h3>
+        <p class="metric-description">Critical Swim Speed - จังหวะเกณฑ์แอโรบิกของคุณ</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">📊</div>
+        <div class="metric-label">ภาระการฝึกซ้อม</div>
+        <h3 class="metric-name">TSS</h3>
+        <p class="metric-description">Training Stress Score วัดความหนักของการฝึกซ้อม</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">💪</div>
+        <div class="metric-label">สมรรถภาพ</div>
+        <h3 class="metric-name">CTL</h3>
+        <p class="metric-description">Chronic Training Load - ค่าเฉลี่ยเคลื่อนที่ 42 วัน</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">😴</div>
+        <div class="metric-label">ความเมื่อยล้า</div>
+        <h3 class="metric-name">ATL</h3>
+        <p class="metric-description">Acute Training Load - ค่าเฉลี่ยเคลื่อนที่ 7 วัน</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚖️</div>
+        <div class="metric-label">สภาพร่างกาย</div>
+        <h3 class="metric-name">TSB</h3>
+        <p class="metric-description">Training Stress Balance บ่งบอกความพร้อม</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">⚡</div>
+        <div class="metric-label">ประสิทธิภาพ</div>
+        <h3 class="metric-name">SWOLF</h3>
+        <p class="metric-description">คะแนนประสิทธิภาพการพาย - ยิ่งต่ำยิ่งดี</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏊</div>
+        <div class="metric-label">โซน</div>
+        <h3 class="metric-name">7 โซน</h3>
+        <p class="metric-description">ระดับความเข้มจากการฟื้นตัวถึงสปรินต์</p>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon">🏆</div>
+        <div class="metric-label">สถิติ</div>
+        <h3 class="metric-name">PRs</h3>
+        <p class="metric-description">ติดตามสถิติส่วนตัวอัตโนมัติ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="app-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ราคา</div>
+      <h2 class="section-title">ราคาที่เรียบง่ายและโปร่งใส</h2>
+      <p class="section-subtitle">เริ่มต้นด้วยการทดลองใช้ฟรี 7 วัน ยกเลิกได้ทุกเมื่อ</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-header">
+          <h3 class="pricing-name">รายเดือน</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">3.99</span>
+            <span class="pricing-period">/เดือน</span>
+          </div>
+          <p class="pricing-trial">ทดลองใช้ฟรี 7 วัน</p>
+        </div>
+        <ul class="pricing-features">
+          <li>ซิงค์การฝึกซ้อมไม่จำกัด</li>
+          <li>เมตริกทางวิทยาศาสตร์ทั้งหมด (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 โซนการฝึกซ้อมที่ปรับแต่งเฉพาะบุคคล</li>
+          <li>การเปรียบเทียบรายสัปดาห์ รายเดือน และรายปี</li>
+          <li>ส่งออกในรูปแบบ JSON, CSV, HTML และ PDF</li>
+          <li>ความเป็นส่วนตัว 100% ข้อมูลอยู่ในเครื่อง</li>
+          <li>อัปเดตในอนาคตทั้งหมด</li>
+        </ul>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-header">
+          <h3 class="pricing-name">รายปี</h3>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">39</span>
+            <span class="pricing-period">/ปี</span>
+          </div>
+          <p class="pricing-trial">ประหยัด €8.88/ปี (ส่วนลด 18%)</p>
+        </div>
+        <ul class="pricing-features">
+          <li>ซิงค์การฝึกซ้อมไม่จำกัด</li>
+          <li>เมตริกทางวิทยาศาสตร์ทั้งหมด (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 โซนการฝึกซ้อมที่ปรับแต่งเฉพาะบุคคล</li>
+          <li>การเปรียบเทียบรายสัปดาห์ รายเดือน และรายปี</li>
+          <li>ส่งออกในรูปแบบ JSON, CSV, HTML และ PDF</li>
+          <li>ความเป็นส่วนตัว 100% ข้อมูลอยู่ในเครื่อง</li>
+          <li>อัปเดตในอนาคตทั้งหมด</li>
+          <li><strong>เพียง €3.25/เดือน</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="app-benefits">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-badge">ทำไมต้อง SwimAnalytics</div>
+      <h2 class="section-title">สร้างขึ้นสำหรับนักว่ายน้ำจริงจัง</h2>
+      <p class="section-subtitle">ฟีเจอร์ระดับมืออาชีพโดยไม่ซับซ้อน</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon">🏊</div>
+        <div class="benefit-content">
+          <h3>โปรโตคอลทดสอบ CSS</h3>
+          <p>โปรโตคอลทดสอบแบบผสมผสาน 400 ม. + 200 ม. เพื่อกำหนด Critical Swim Speed ของคุณ ทดสอบซ้ำทุก 6-8 สัปดาห์เพื่อติดตามความก้าวหน้าและปรับโซนการฝึกซ้อมอัตโนมัติ</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📱</div>
+        <div class="benefit-content">
+          <h3>ประสบการณ์ Native iOS</h3>
+          <p>สร้างด้วย SwiftUI สำหรับประสิทธิภาพที่ลื่นไหลและบูรณาการกับ iOS ซิงค์อย่างลงตัวกับแอป Health รองรับวิดเจ็ต และภาษาการออกแบบที่คุ้นเคยของ Apple</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔬</div>
+        <div class="benefit-content">
+          <h3>อิงงานวิจัย</h3>
+          <p>เมตริกทั้งหมดอิงจากงานวิจัยกีฬาศาสตร์ที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิ CSS จาก Wakayoshi et al., TSS ดัดแปลงสำหรับการว่ายน้ำด้วยสูตร IF³, โมเดล CTL/ATL ที่พิสูจน์แล้ว</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">👥</div>
+        <div class="benefit-content">
+          <h3>เหมาะสำหรับโค้ช</h3>
+          <p>ส่งออกรายงานโดยละเอียดสำหรับโค้ช แชร์สรุป HTML ทางอีเมล, CSV สำหรับการวิเคราะห์ในสเปรดชีต หรือ PDF สำหรับบันทึกการฝึกซ้อม</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🌍</div>
+        <div class="benefit-content">
+          <h3>ใช้งานได้ทุกที่</h3>
+          <p>สระว่ายน้ำหรือน้ำเปิด สปรินต์หรือระยะไกล SwimAnalytics ปรับตัวกับการว่ายน้ำทุกประเภทและตรวจจับลักษณะการฝึกซ้อมอัตโนมัติ</p>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🚀</div>
+        <div class="benefit-content">
+          <h3>พัฒนาอยู่เสมอ</h3>
+          <p>อัปเดตเป็นประจำพร้อมฟีเจอร์ใหม่ตามความคิดเห็นของผู้ใช้ การเพิ่มเติมล่าสุดรวมถึงการเปรียบเทียบรายปี การติดตามสถิติส่วนตัว และตัวเลือกการส่งออกที่ปรับปรุงแล้ว</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <div class="section-badge">คำถามที่พบบ่อย</div>
+      <h2 class="section-title">คำถามที่พบบ่อย</h2>
+    </div>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <h3>SwimAnalytics รับข้อมูลการว่ายน้ำของฉันได้อย่างไร?</h3>
+        <p>SwimAnalytics ซิงค์กับ Apple Health เพื่อนำเข้าการฝึกซ้อมการว่ายน้ำที่บันทึกโดยอุปกรณ์หรือแอปที่เข้ากันได้ รวมถึงนาฬิกาอัจฉริยะ ตัวติดตามสุขภาพ และการป้อนด้วยตนเอง แอปประมวลผลข้อมูลเหล่านี้ภายในเครื่องเพื่อคำนวณเมตริกขั้นสูง</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>การทดสอบ CSS คืออะไรและฉันทำอย่างไร?</h3>
+        <p>CSS (Critical Swim Speed) เป็นโปรโตคอลทางวิทยาศาสตร์ที่ใช้การว่าย 2 ครั้งด้วยความพยายามสูงสุด: 400 ม. และ 200 ม. โดยพัก 10-20 นาทีระหว่างครั้ง แอปคำนวณเกณฑ์แอโรบิกของคุณจากเวลาเหล่านี้และปรับโซนการฝึกซ้อมทั้งหมดอัตโนมัติ ทดสอบซ้ำทุก 6-8 สัปดาห์เพื่อติดตามความก้าวหน้า</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>ข้อมูลของฉันถูกอัปโหลดไปยังคลาวด์หรือไม่?</h3>
+        <p>ไม่ SwimAnalytics ประมวลผลข้อมูลทั้งหมดภายในเครื่อง iPhone ของคุณ ไม่มีเซิร์ฟเวอร์ภายนอก ไม่มีบัญชีคลาวด์ ไม่มีการถ่ายโอนข้อมูล คุณควบคุมการส่งออก: สร้างไฟล์ JSON, CSV, HTML หรือ PDF และแชร์ตามที่คุณต้องการ</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>ฉันสามารถใช้ SwimAnalytics สำหรับการว่ายน้ำในน้ำเปิดได้หรือไม่?</h3>
+        <p>ได้ SwimAnalytics ใช้งานได้กับการฝึกซ้อมการว่ายน้ำใดๆ ใน Apple Health รวมถึงน้ำเปิด แอปปรับตัวกับเมตริกที่มีทั้งในสระว่ายน้ำและน้ำเปิด โดยให้การวิเคราะห์ที่เหมาะสมสำหรับแต่ละสภาพแวดล้อม</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>แพ็กเกจรายเดือนและรายปีต่างกันอย่างไร?</h3>
+        <p>แพ็กเกจทั้งสองมีฟีเจอร์เหมือนกัน: เมตริกทั้งหมด โซนไม่จำกัด การเปรียบเทียบตามเวลา การส่งออกหลายรูปแบบ และอัปเดตฟรี ความแตกต่างเพียงอย่างเดียวคือราคา: รายปีประหยัด 18% (เท่ากับ €3.25/เดือน เทียบกับ €3.99/เดือน)</p>
+      </div>
+
+      <div class="feature-item">
+        <h3>ฉันสามารถยกเลิกการสมัครสมาชิกได้ทุกเมื่อหรือไม่?</h3>
+        <p>ได้ การสมัครสมาชิกจัดการผ่าน App Store ดังนั้นคุณสามารถยกเลิกได้ทุกเมื่อจากการตั้งค่า → [ชื่อของคุณ] → การสมัครสมาชิก หากคุณยกเลิก คุณจะยังคงเข้าถึงได้จนถึงสิ้นสุดช่วงเวลาชำระเงินปัจจุบันของคุณ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="app-cta-final">
+  <div class="container">
+    <h2>พร้อมที่จะเปลี่ยนการว่ายน้ำของคุณหรือยัง?</h2>
+    <p>เข้าร่วมกับนักว่ายน้ำหลายพันคนที่ใช้เมตริกทางวิทยาศาสตร์เพื่อพัฒนาผลงานของพวกเขา เริ่มการทดลองใช้ฟรี 7 วันของคุณวันนี้</p>
+    <div class="app-hero-cta">
+      <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
+        ดาวน์โหลด SwimAnalytics ฟรี
+      </a>
+      <a href="#features" class="btn btn-large btn-accent-outline">
+        เรียนรู้เพิ่มเติม
+      </a>
+    </div>
+    <p class="section-footer">
+      ไม่ต้องสร้างบัญชี • ยกเลิกได้ทุกเมื่อ • ข้อมูลของคุณอยู่ในอุปกรณ์ของคุณ
+    </p>
+  </div>
+</section>
+
+<!-- Additional Information Links -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">เรียนรู้เพิ่มเติมเกี่ยวกับการวิเคราะห์การว่ายน้ำ</h2>
+      <p class="section-subtitle">ลงลึกในวิทยาศาสตร์เบื้องหลัง SwimAnalytics</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3 class="card-title">Critical Swim Speed</h3>
+        <div class="card-content">
+          <p>เข้าใจว่า CSS กำหนดเกณฑ์แอโรบิกของคุณอย่างไร และทำไมมันจึงสำคัญสำหรับการฝึกซ้อมที่มีโครงสร้าง</p>
+          <a href="/th/css/" class="btn btn-secondary btn-small mt-md">เรียนรู้เกี่ยวกับ CSS →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">การจัดการภาระการฝึกซ้อม</h3>
+        <div class="card-content">
+          <p>ค้นพบว่า TSS, CTL, ATL และ TSB ช่วยคุณสมดุลความเครียดจากการฝึกซ้อมและการฟื้นตัวอย่างไร</p>
+          <a href="/th/training-load/" class="btn btn-secondary btn-small mt-md">สำรวจภาระการฝึกซ้อม →</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">โซนการฝึกซ้อม</h3>
+        <div class="card-content">
+          <p>เรียนรู้เกี่ยวกับ 7 โซนการฝึกซ้อมและวิธีใช้สำหรับการวางแผนการฝึกซ้อมเฉพาะเจาะจง</p>
+          <a href="/th/training-zones/" class="btn btn-secondary btn-small mt-md">ดูโซนการฝึกซ้อม →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            
+            <div class="footer-section">
+                <h3>SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS</h3>
+                <p>Track Critical Swim Speed, Training Stress Score, and performance metrics with SwimAnalytics. Science-based iOS app for swimmers, triathletes &amp; coaches. 7-day free trial.</p>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3></h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/th/">
+                            หน้าแรก
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/">
+                            เรียนรู้
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/">
+                            วิทยาศาสตร์
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/contact/">
+                            ติดต่อ
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>สงวนลิขสิทธิ์</h3>
+                <ul>
+                    <li><a href="/th/privacy/">ความเป็นส่วนตัว</a></li>
+                    <li><a href="/th/terms/">เงื่อนไข</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="footer-section">
+                <h3>เลือกภาษา</h3>
+                <ul>
+                    
+                    <li>
+                        <a href="/ca/"
+                           >
+                            Català
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/en/"
+                           >
+                            English
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/es/"
+                           >
+                            Español
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fr/"
+                           >
+                            Français
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/de/"
+                           >
+                            Deutsch
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/it/"
+                           >
+                            Italiano
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/nl/"
+                           >
+                            Nederlands
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ja/"
+                           >
+                            日本語
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pl/"
+                           >
+                            Polski
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/sv/"
+                           >
+                            Svenska
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/pt/"
+                           >
+                            Português
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ru/"
+                           >
+                            Русский
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/zh/"
+                           >
+                            中文
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ko/"
+                           >
+                            한국어
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/no/"
+                           >
+                            Norsk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/da/"
+                           >
+                            Dansk
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/fi/"
+                           >
+                            Suomi
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/tr/"
+                           >
+                            Türkçe
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/ar/"
+                           >
+                            العربية
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/he/"
+                           >
+                            עברית
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/hi/"
+                           >
+                            हिन्दी
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/id/"
+                           >
+                            Bahasa Indonesia
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/th/"
+                           aria-current="page">
+                            ไทย
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/vi/"
+                           >
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 SwimAnalytics - Swimming Analytics App | CSS, TSS, CTL/ATL/TSB for iOS. สงวนลิขสิทธิ์.</p>
+        </div>
+    </div>
+</footer>
+
+    
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ" aria-live="polite">
+    <div class="cookie-banner-content">
+        <div class="cookie-banner-text">
+            <p>เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ <a href="/th/privacy/">เรียนรู้เพิ่มเติม</a></p>
+        </div>
+        <div class="cookie-banner-actions">
+            <button class="btn btn-secondary" id="cookie-decline">ปฏิเสธ</button>
+            <button class="btn btn-primary" id="cookie-accept">ยอมรับ</button>
+        </div>
+    </div>
+</div>
+
+    
+    <script src="/assets/js/main.min.js"></script>
+    <script src="/assets/js/cookie-consent.min.js"></script>
+    <script src="/assets/js/lazy-load.min.js"></script>
+    <script src="/assets/js/carousel.min.js"></script>
+    <script src="/assets/js/css-calculator.min.js"></script>
+
+    
+    <script src="/assets/js/fuse.min.js"></script>
+    <script src="/assets/js/search.min.js"></script>
+
+    
+    
+    <script src="/assets/js/analytics.min.js" data-ga-id="G-558XX0CFBT"></script>
+    
+</body>
+</html>
