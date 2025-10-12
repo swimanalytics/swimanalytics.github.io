@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Calculadora Gratuita de TSS para Natación</h1>
-        <p class="lead">Calcula el Training Stress Score para entrenamientos de natación - La única calculadora gratuita de sTSS</p>
+        <h1>Ókeypis TSS Reiknivél fyrir Sund</h1>
+        <p class="lead">Reiknaðu Training Stress Score fyrir sundlotum - Eina ókeypis sTSS reiknivélin</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es el TSS de Natación (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifica la carga de entrenamiento de una sesión de natación combinando intensidad y duración. Está adaptado de la metodología TSS del ciclismo, utilizando tu Critical Swim Speed (CSS) como ritmo umbral. Un entrenamiento de 1 hora a ritmo CSS = 100 sTSS.</p>
+            <h2>Hvað er Sunda TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> magnbindur æfingaálag lotu með því að sameina ákefð og lengd. Það er aðlagað frá hjólaaðferðafræði TSS og notar Critical Swim Speed (CSS) þinn sem þröskuldhraða. 1 klukkustundar æfing á CSS hraða = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Calculadora Gratuita de sTSS</h2>
-        <p class="lead mb-xl">Calcula el estrés de entrenamiento para cualquier sesión de natación. Requiere tu ritmo CSS.</p>
+        <h2 class="mt-3xl">Ókeypis sTSS Reiknivél</h2>
+        <p class="lead mb-xl">Reiknaðu æfingaálag fyrir hvaða sundlotu sem er. Krefst CSS hraða þíns.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Tu Ritmo CSS (mm:ss por 100m)</label>
+                        <label for="cssPace" class="form-label">CSS Hraði Þinn (mm:ss á 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tu ritmo umbral del test CSS (ej., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Þröskuldhraði þinn úr CSS prófi (t.d., 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Duración del Entrenamiento (minutos)</label>
+                        <label for="workoutDuration" class="form-label">Lengd Æfingar (mínútur)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Tiempo total del entrenamiento incluyendo descansos (1-300 minutos)</small>
+                        <small id="duration-help" class="form-help">Heildartími æfingar þ.m.t. hvíld (1-300 mínútur)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Ritmo Promedio del Entrenamiento (mm:ss por 100m)</label>
+                        <label for="avgPace" class="form-label">Meðalhraði Æfingar (mm:ss á 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,225 +719,225 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Tu ritmo promedio durante el entrenamiento (ej., 2:05)</small>
+                        <small id="pace-help" class="form-help">Meðalhraði þinn í æfingunni (t.d., 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Borrar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Reikna sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Hreinsa</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Tu Training Stress Score</h3>
+                <h3>Training Stress Score Þinn</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Factor de Intensidad (IF)</div>
+                        <div class="result-label">Intensity Factor (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretación de la Carga de Entrenamiento</h4>
+                    <h4>Túlkun Æfingaálags</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
+                        <!-- Fyllt af JavaScript -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
+        <h2 class="mt-3xl">Hvernig sTSS Er Reiknað</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>Formúla</h3>
             <div class="formula">
-                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
+                sTSS = (Lengd í klukkustundum) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>Þar sem:</p>
                 <ul>
-                    <li><strong>Factor de Intensidad (IF)</strong> = Ritmo CSS / Ritmo Promedio del Entrenamiento</li>
-                    <li><strong>Duración</strong> = Tiempo total del entrenamiento en horas</li>
-                    <li><strong>Ritmo CSS</strong> = Tu ritmo umbral del test CSS</li>
+                    <li><strong>Intensity Factor (IF)</strong> = CSS Hraði / Meðalhraði Æfingar</li>
+                    <li><strong>Lengd</strong> = Heildartími æfingar í klukkustundum</li>
+                    <li><strong>CSS Hraði</strong> = Þröskuldhraði þinn úr CSS prófi</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Ejemplo Práctico</h3>
+        <h3 class="mt-xl">Hagnýtt Dæmi</h3>
         <div class="example-box">
-            <h4>Detalles del Entrenamiento:</h4>
+            <h4>Upplýsingar um Æfingu:</h4>
             <ul>
-                <li>Ritmo CSS: <strong>1:49/100m</strong> (109 segundos)</li>
-                <li>Duración del Entrenamiento: <strong>60 minutos</strong> (1 hora)</li>
-                <li>Ritmo Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
+                <li>CSS Hraði: <strong>1:49/100m</strong> (109 sekúndur)</li>
+                <li>Lengd Æfingar: <strong>60 mínútur</strong> (1 klukkustund)</li>
+                <li>Meðalhraði: <strong>2:05/100m</strong> (125 sekúndur)</li>
             </ul>
 
-            <h4>Paso 1: Calcular el Factor de Intensidad</h4>
+            <h4>Skref 1: Reikna Intensity Factor</h4>
             <div class="calculation">
-                IF = Ritmo CSS / Ritmo del Entrenamiento<br>
+                IF = CSS Hraði / Hraði Æfingar<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Paso 2: Calcular el sTSS</h4>
+            <h4>Skref 2: Reikna sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 horas × (0.872)² × 100<br>
+                sTSS = 1.0 klukkustundir × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretación:</strong> Este entrenamiento de 60 minutos a ritmo suave (más lento que CSS) generó 76 sTSS - una carga de entrenamiento moderada adecuada para construir la base aeróbica.</p>
+            <p class="mt-md"><strong>Túlkun:</strong> Þessi 60 mínútna æfing á slökum hraða (hægari en CSS) skapaði 76 sTSS - hóflegt æfingaálag hentugt til að byggja upp lofthæfnisgrundvöll.</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretando los Valores de sTSS</h2>
+        <h2 class="mt-3xl">Túlkun sTSS Gilda</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rango sTSS</th>
-                        <th>Carga de Entrenamiento</th>
-                        <th>Tiempo de Recuperación</th>
-                        <th>Ejemplo de Entrenamiento</th>
+                        <th>sTSS Svið</th>
+                        <th>Æfingaálag</th>
+                        <th>Batatími</th>
+                        <th>Dæmi um Æfingu</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Baja</td>
-                        <td>Mismo día</td>
-                        <td>Nado suave de 30 min, ejercicios técnicos</td>
+                        <td>Lágt</td>
+                        <td>Sama dag</td>
+                        <td>Slökt 30 mín sund, tækniæfingar</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderada</td>
-                        <td>1 día</td>
-                        <td>Resistencia de 60 min, ritmo constante</td>
+                        <td>Hóflegt</td>
+                        <td>1 dagur</td>
+                        <td>60 mín þol, stöðugur hraði</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Alta</td>
-                        <td>1-2 días</td>
-                        <td>Series de umbral de 90 min, intervalos a ritmo de competición</td>
+                        <td>Hátt</td>
+                        <td>1-2 dagar</td>
+                        <td>90 mín þröskuldssett, keppnishraða bil</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Muy Alta</td>
-                        <td>2-3 días</td>
-                        <td>Entrenamiento duro de 2 horas, múltiples bloques de umbral</td>
+                        <td>Mjög Hátt</td>
+                        <td>2-3 dagar</td>
+                        <td>2 klukkustunda erfið æfing, margir þröskuldsblokkir</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extrema</td>
-                        <td>3+ días</td>
-                        <td>Competición larga (&gt;2 horas), ultra-resistencia</td>
+                        <td>Gríðarlegt</td>
+                        <td>3+ dagar</td>
+                        <td>Löng keppni (&gt;2 klukkustundir), ofurþol</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Guía de sTSS Semanal</h2>
+        <h2 class="mt-3xl">Vikuleg sTSS Leiðbeiningar</h2>
 
-        <p class="mb-md">El sTSS semanal objetivo depende de tu nivel de entrenamiento y objetivos:</p>
+        <p class="mb-md">Markmið vikulegt sTSS fer eftir þjálfunarstigi þínu og markmiðum:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos</h3>
+                <h3 class="card-title">Afþreyingarsundmenn</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
-                    <p>2-3 entrenamientos por semana, 50-100 sTSS cada uno. Enfoque en técnica y construcción de base aeróbica.</p>
+                    <p class="mb-sm"><strong>Vikulegt sTSS:</strong> 150-300</p>
+                    <p>2-3 æfingar á viku, 50-100 sTSS hver. Áhersla á tækni og uppbyggingu lofthæfnisgrunns.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <h3 class="card-title">Líkamsræktarsundmenn / Þrístjörnuborgari</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
-                    <p>3-4 entrenamientos por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de umbral.</p>
+                    <p class="mb-sm"><strong>Vikulegt sTSS:</strong> 300-500</p>
+                    <p>3-4 æfingar á viku, 75-125 sTSS hver. Blanda af lofthæfnisþoli og þröskuldavinnu.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Másters Competitivos</h3>
+                <h3 class="card-title">Keppnisfulleldur Sundmenn</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
-                    <p>4-6 entrenamientos por semana, 80-150 sTSS cada uno. Entrenamiento estructurado con periodización.</p>
+                    <p class="mb-sm"><strong>Vikulegt sTSS:</strong> 500-800</p>
+                    <p>4-6 æfingar á viku, 80-150 sTSS hver. Skipulögð þjálfun með tímaskipulagningu.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Elite / Universitarios</h3>
+                <h3 class="card-title">Úrvalsundmenn / Háskólasundmenn</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
-                    <p>8-12 entrenamientos por semana, sesiones dobles. Alto volumen con gestión de recuperación crítica.</p>
+                    <p class="mb-sm"><strong>Vikulegt sTSS:</strong> 800-1200+</p>
+                    <p>8-12 æfingar á viku, tvöfaldar lotur. Hátt magn með mikilvægri bata stjórnun.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas Importantes</h3>
+            <h3>⚠️ Mikilvægar Athugasemdir</h3>
             <ul>
-                <li><strong>Requiere CSS preciso:</strong> Tu CSS debe estar actualizado (testeado dentro de 6-8 semanas) para un sTSS preciso.</li>
-                <li><strong>Cálculo simplificado:</strong> Esta calculadora usa ritmo promedio. El sTSS avanzado usa Normalized Graded Pace (NGP) que tiene en cuenta la estructura de intervalos.</li>
-                <li><strong>No para trabajo técnico:</strong> El sTSS solo mide el estrés físico del entrenamiento, no el desarrollo de habilidades.</li>
-                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes nadadores. Ajusta las guías según tu recuperación.</li>
+                <li><strong>Krefst nákvæms CSS:</strong> CSS þinn verður að vera uppfærður (prófað innan 6-8 vikna) fyrir nákvæmt sTSS.</li>
+                <li><strong>Einfaldaður útreikningur:</strong> Þessi reiknivél notar meðalhraða. Ítarlegt sTSS notar Normalized Graded Pace (NGP) sem tekur tillit til bilaskipulags.</li>
+                <li><strong>Ekki fyrir tæknivinnu:</strong> sTSS mælir aðeins líkamlegt álag æfingar, ekki færniþróun.</li>
+                <li><strong>Einstaklingsbundin frávik:</strong> Sama sTSS finnst mismunandi fyrir ólíka sundmenn. Aðlagaðu leiðbeiningar að batanum þínum.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
+        <h2 class="mt-3xl">Af Hverju sTSS Skiptir Máli</h2>
 
-        <p class="mb-md">El Training Stress Score es la base para:</p>
+        <p class="mb-md">Training Stress Score er grunnurinn fyrir:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Tu nivel de forma física - promedio ponderado exponencialmente de 42 días del sTSS diario</li>
-            <li><strong>ATL (Acute Training Load):</strong> Tu fatiga - promedio ponderado exponencialmente de 7 días del sTSS diario</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Tu estado de forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
-            <li><strong>Periodización:</strong> Planificar fases de entrenamiento (base, desarrollo, pico, descenso) usando progresiones de CTL objetivo</li>
-            <li><strong>Gestión de Recuperación:</strong> Saber cuándo empujar y cuándo descansar según el TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Líkamsástand þitt - veldisvigið 42 daga meðaltal af daglegu sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Þreyta þín - veldisvigið 7 daga meðaltal af daglegu sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Stöðuástand þitt - TSB = CTL - ATL (jákvætt = ferskur, neikvætt = þreyttur)</li>
+            <li><strong>Tímaskipulagning:</strong> Skipuleggja þjálfunarfasa (grunnur, þróun, hámark, affall) með markmið CTL framgangi</li>
+            <li><strong>Bata Stjórnun:</strong> Vita hvenær á að ýta og hvenær á að hvílast miðað við TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Consejo Pro: Sigue tu CTL</h3>
-            <p>Registra el sTSS diario en una hoja de cálculo o diario de entrenamiento. Calcula tu promedio de 42 días (CTL) semanalmente. Objetivo de aumento de 5-10 puntos CTL por semana durante la construcción de base. Mantén o reduce ligeramente el CTL durante el descenso (1-2 semanas antes de la competición).</p>
+            <h3>Pro Ábending: Fylgstu með CTL Þínu</h3>
+            <p>Skráðu daglegt sTSS í töflureikni eða æfingadagbók. Reiknaðu 42 daga meðaltal þitt (CTL) vikulega. Markmiðsaukning 5-10 CTL stig á viku í uppbyggingarfasa. Haltu eða lækkaðu CTL lítillega í affallstíma (1-2 vikur fyrir keppni).</p>
         </div>
 
-        <h2 class="mt-3xl">Recursos Relacionados</h2>
+        <h2 class="mt-3xl">Tengd Úrræði</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Test CSS</h3>
+                <h3 class="card-title">CSS Próf</h3>
                 <div class="card-content">
-                    <p>¿Necesitas tu ritmo CSS? Usa nuestra calculadora gratuita de CSS con tiempos de test de 400m y 200m.</p>
-                    <a href="/is/css/" class="btn btn-secondary btn-small mt-md">Calculadora CSS →</a>
+                    <p>Þarftu CSS hraðann þinn? Notaðu ókeypis CSS reiknivélina okkar með 400m og 200m prófunartímum.</p>
+                    <a href="/is/css/" class="btn btn-secondary btn-small mt-md">CSS Reiknivél →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Guía de Carga de Entrenamiento</h3>
+                <h3 class="card-title">Æfingaálag Leiðarvísir</h3>
                 <div class="card-content">
-                    <p>Aprende sobre CTL, ATL, TSB y las métricas del Performance Management Chart.</p>
-                    <a href="/is/training-load/" class="btn btn-secondary btn-small mt-md">Carga de Entrenamiento →</a>
+                    <p>Lærðu um CTL, ATL, TSB og Performance Management Chart mælikvarða.</p>
+                    <a href="/is/training-load/" class="btn btn-secondary btn-small mt-md">Æfingaálag →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">SwimAnalytics Forrit</h3>
                 <div class="card-content">
-                    <p>Cálculo automático de sTSS para todos los entrenamientos. Sigue las tendencias de CTL/ATL/TSB a lo largo del tiempo.</p>
-                    <a href="/is/" class="btn btn-secondary btn-small mt-md">Más Información →</a>
+                    <p>Sjálfvirkur sTSS útreikningur fyrir allar æfingar. Fylgstu með CTL/ATL/TSB þróun yfir tíma.</p>
+                    <a href="/is/" class="btn btn-secondary btn-small mt-md">Frekari Upplýsingar →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Viltu sjálfvirka sTSS rakningu?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Sækja SwimAnalytics Ókeypis</a>
         </div>
     </div>
 </section>

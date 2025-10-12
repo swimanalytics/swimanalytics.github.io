@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Free Swimming TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for swimming workouts - The only free sTSS calculator</p>
+        <h1>Kikokotoo cha Bure cha Swimming TSS</h1>
+        <p class="lead">Hesabu Alama ya Msongo wa Mafunzo kwa zoezi la kuogelea - Kikokotoo cha bure pekee cha sTSS</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Swimming TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifies the training load of a swimming workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A 1-hour workout at CSS pace = 100 sTSS.</p>
+            <h2>Ni Nini Swimming TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> inapima mzigo wa mafunzo wa zoezi la kuogelea kwa kuchanganya ukali na muda. Imebadilishwa kutoka kwa mbinu ya TSS ya uendeshaji baiskeli, ikitumia Critical Swim Speed (CSS) yako kama kasi ya kizingiti. Zoezi la saa 1 kwa kasi ya CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any swimming workout. Requires your CSS pace.</p>
+        <h2 class="mt-3xl">Kikokotoo cha Bure cha sTSS</h2>
+        <p class="lead mb-xl">Hesabu msongo wa mafunzo kwa zoezi lolote la kuogelea. Linahitaji kasi yako ya CSS.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CSS Pace (mm:ss per 100m)</label>
+                        <label for="cssPace" class="form-label">Kasi Yako ya CSS (mm:ss kwa 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CSS test (e.g., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Kasi yako ya kizingiti kutoka kwa mtihani wa CSS (k.m., 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">Muda wa Zoezi (dakika)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <small id="duration-help" class="form-help">Muda wote wa zoezi ikiwa ni pamoja na mapumziko (1-300 dakika)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
+                        <label for="avgPace" class="form-label">Kasi ya Wastani ya Zoezi (mm:ss kwa 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,19 +719,19 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <small id="pace-help" class="form-help">Kasi yako ya wastani wakati wa zoezi (k.m., 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Hesabu sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Futa</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Alama Yako ya Msongo wa Mafunzo</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
@@ -744,200 +744,200 @@
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Tafsiri ya Mzigo wa Mafunzo</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
+                        <!-- Imejazwa na JavaScript -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Jinsi sTSS Inavyohesabiwa</h2>
 
         <div class="formula-box">
             <h3>Formula</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                sTSS = (Muda katika masaa) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Ambapo:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CSS Pace</strong> = Your threshold pace from CSS test</li>
+                    <li><strong>Intensity Factor (IF)</strong> = Kasi ya CSS / Kasi ya Wastani ya Zoezi</li>
+                    <li><strong>Muda</strong> = Muda wote wa zoezi katika masaa</li>
+                    <li><strong>Kasi ya CSS</strong> = Kasi yako ya kizingiti kutoka kwa mtihani wa CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Mfano Uliofanyiwa Kazi</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Maelezo ya Zoezi:</h4>
             <ul>
-                <li>CSS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Kasi ya CSS: <strong>1:49/100m</strong> (sekunde 109)</li>
+                <li>Muda wa Zoezi: <strong>Dakika 60</strong> (saa 1)</li>
+                <li>Kasi ya Wastani: <strong>2:05/100m</strong> (sekunde 125)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Hatua ya 1: Hesabu Intensity Factor</h4>
             <div class="calculation">
-                IF = CSS Pace / Workout Pace<br>
+                IF = Kasi ya CSS / Kasi ya Zoezi<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Hatua ya 2: Hesabu sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 masaa × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CSS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Tafsiri:</strong> Zoezi hili la dakika 60 kwa kasi rahisi (polepole kuliko CSS) lalizalisha sTSS 76 - mzigo wa mafunzo wa wastani unaofaa kwa kujenga msingi wa aerobic.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Kuelewa Thamani za sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Masafa ya sTSS</th>
+                        <th>Mzigo wa Mafunzo</th>
+                        <th>Muda wa Kupona</th>
+                        <th>Mfano wa Zoezi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min swim, technique drills</td>
+                        <td>Chini</td>
+                        <td>Siku hiyo</td>
+                        <td>Kuogelea rahisi kwa dakika 30, mazoezi ya mbinu</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Wastani</td>
+                        <td>Siku 1</td>
+                        <td>Uvumilivu wa dakika 60, kasi ya kudumu</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Juu</td>
+                        <td>Siku 1-2</td>
+                        <td>Seti za kizingiti za dakika 90, intervals za kasi ya mashindano</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Juu Sana</td>
+                        <td>Siku 2-3</td>
+                        <td>Mafunzo magumu ya masaa 2, vitalu vingi vya kizingiti</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Ya Kupindukia</td>
+                        <td>Siku 3+</td>
+                        <td>Mashindano marefu (&gt;masaa 2), uvumilivu wa ultra</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Miongozo ya sTSS ya Kila Wiki</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">Lengo la sTSS ya kila wiki linategemea kiwango chako cha mafunzo na malengo:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Swimmers</h3>
+                <h3 class="card-title">Waogeleaji wa Burudani</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 150-300</p>
+                    <p>Zoezi 2-3 kwa wiki, sTSS 50-100 kila moja. Zingatia mbinu na kujenga msingi wa aerobic.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Swimmers / Triathletes</h3>
+                <h3 class="card-title">Waogeleaji wa Fitness / Triathletes</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 300-500</p>
+                    <p>Zoezi 3-4 kwa wiki, sTSS 75-125 kila moja. Mchanganyiko wa uvumilivu wa aerobic na kazi ya kizingiti.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Swimmers</h3>
+                <h3 class="card-title">Waogeleaji wa Ushindani wa Masters</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 500-800</p>
+                    <p>Zoezi 4-6 kwa wiki, sTSS 80-150 kila moja. Mafunzo yaliyoratibiwa na periodization.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
+                <h3 class="card-title">Waogeleaji wa Elite / Chuo</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS ya Kila Wiki:</strong> 800-1200+</p>
+                    <p>Zoezi 8-12 kwa wiki, siku mara mbili. Wingi mkubwa na usimamizi wa kupona muhimu.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Maelezo Muhimu</h3>
             <ul>
-                <li><strong>Requires accurate CSS:</strong> Your CSS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different swimmers. Adjust guidelines based on your recovery.</li>
+                <li><strong>Linahitaji CSS sahihi:</strong> CSS yako lazima iwe ya sasa (imepimwa ndani ya wiki 6-8) ili sTSS iwe sahihi.</li>
+                <li><strong>Mahesabu yaliyorahisishwa:</strong> Kikokotoo hiki kinatumia kasi ya wastani. sTSS ya juu inatumia Normalized Graded Pace (NGP) ambayo inazingatia muundo wa interval.</li>
+                <li><strong>Si kwa kazi ya mbinu:</strong> sTSS inapima tu msongo wa mafunzo ya kimwili, si maendeleo ya ujuzi.</li>
+                <li><strong>Tofauti za kibinafsi:</strong> sTSS sawa inahisi tofauti kwa waogeleaji tofauti. Rekebisha miongozo kulingana na kupona kwako.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Kwa Nini sTSS ni Muhimu</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Training Stress Score ni msingi wa:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Kiwango chako cha fitness - wastani wa kipimo cha kiotomatiki cha siku 42 wa sTSS ya kila siku</li>
+            <li><strong>ATL (Acute Training Load):</strong> Uchovu wako - wastani wa kipimo cha kiotomatiki cha siku 7 wa sTSS ya kila siku</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Fomu yako - TSB = CTL - ATL (chanya = mpya, hasi = umechoka)</li>
+            <li><strong>Periodization:</strong> Panga awamu za mafunzo (msingi, kujenga, kilele, kupungua) kwa kutumia maendeleo ya CTL lengwa</li>
+            <li><strong>Usimamizi wa Kupona:</strong> Jua lini kusukuma na lini kupumzika kulingana na TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Ushauri wa Kitaalamu: Fuatilia CTL Yako</h3>
+            <p>Rekodi sTSS ya kila siku kwenye spreadsheet au kumbukumbu ya mafunzo. Hesabu wastani wako wa siku 42 (CTL) kila wiki. Lengo ongezeko la pointi 5-10 za CTL kwa wiki wakati wa kujenga msingi. Dhibiti au upunguze kidogo CTL wakati wa kupungua (wiki 1-2 kabla ya mashindano).</p>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Rasilimali Zinazohusiana</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">Mtihani wa CSS</h3>
                 <div class="card-content">
-                    <p>Need your CSS pace? Use our free CSS calculator with 400m and 200m test times.</p>
-                    <a href="/sw/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>Unahitaji kasi yako ya CSS? Tumia kikokotoo chetu cha bure cha CSS na nyakati za mtihani wa 400m na 200m.</p>
+                    <a href="/sw/css/" class="btn btn-secondary btn-small mt-md">Kikokotoo cha CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Mwongozo wa Mzigo wa Mafunzo</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/sw/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Jifunze kuhusu CTL, ATL, TSB na vipimo vya Chati ya Usimamizi wa Utendaji.</p>
+                    <a href="/sw/training-load/" class="btn btn-secondary btn-small mt-md">Mzigo wa Mafunzo →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">SwimAnalytics App</h3>
+                <h3 class="card-title">Programu ya SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/sw/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Mahesabu ya kiotomatiki ya sTSS kwa mazoezi yote. Fuatilia mitindo ya CTL/ATL/TSB kwa muda.</p>
+                    <a href="/sw/" class="btn btn-secondary btn-small mt-md">Jifunze Zaidi →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Free</a>
+            <p class="mb-md"><strong>Unataka ufuatiliaji wa kiotomatiki wa sTSS?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Pakua SwimAnalytics Bure</a>
         </div>
     </div>
 </section>

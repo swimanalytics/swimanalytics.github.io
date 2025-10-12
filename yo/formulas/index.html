@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>Ìtọ́kasí Ìmọ̀-ẹ̀rọ & Àwọn Fọ́múlà</h1>
+        <p class="lead">Ìṣiṣẹ́ Mathematics Kíkún</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all SwimAnalytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>Ìtọ́sọ́nà Ìṣiṣẹ́</h2>
+        <p class="lead">Ojú-ìwé yìí ń pèsè àwọn fọ́múlà tí a lè ṣe àdàkọ àti àwọn ọ̀nà ìṣirò tí ó lọ ní ìgbésẹ̀-síní-ìgbésẹ̀ fún gbogbo àwọn ìwọ̀n SwimAnalytics. Lo wọ́n fún àwọn ìṣiṣẹ́ aláìlẹ́gbẹ́, ìfìdímúlẹ̀, tàbí òye jinlẹ̀ sí i.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ Àwọn Àkíyèsí Ìṣiṣẹ́</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Swimming pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>Gbogbo àwọn àkókò yẹ kí ó di yíyí padà sí ìṣẹ́jú-àáyá fún àwọn ìṣirò</li>
+                <li>Iyara wíwẹ́ jẹ́ ìdápadà (% tí ó ga jù = iyara tí ó lọra jù)</li>
+                <li>Máa ṣe ìfìdímúlẹ̀ àwọn input fún àwọn ìwọ̀n tí ó tọ́</li>
+                <li>Ṣàkóso àwọn ọ̀ràn igun (pípin pẹ̀lú òdo, àwọn iye òdì)</li>
             </ul>
         </div>
     </div>
@@ -683,48 +683,48 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>Àwọn Ìwọ̀n Ìṣesí Ìpìlẹ̀</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS Pace/100m (ìṣẹ́jú-àáyá) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Ẹ̀rọ Ìṣirò Ìbáṣepọ̀ - Dán Fọ́múlà Wò</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">Ìjìnnàsí 1 (mítà):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
+                            <label for="css-t1">Àkókò 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">Ìjìnnàsí 2 (mítà):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
+                            <label for="css-t2">Àkókò 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-label">Iyara CSS fún 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Àwọn ìgbésẹ̀ ìṣirò:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
                                 Pace/100m = 100 / 0.917 = 109 seconds = 1:49
@@ -733,7 +733,7 @@
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -811,46 +811,46 @@ const result = calculateCSS(200, 150, 400, 368);
         <div class="formula-card">
             <h3>Swim Training Stress Score (sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>Fọ́múlà Kíkún:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duration (hours) × 100
+                        sTSS = (IF³) × Duration (wákàtí) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Total Distance / Total Time (m/min)
+                        NSS = Àp apọ̀ Ìjìnnàsí / Àpapọ̀ Àkókò (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Ẹ̀rọ Ìṣirò Ìbáṣepọ̀ - Dán Fọ́múlà Wò</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">Ìjìnnàsí (mítà):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">Ìgbà (ìṣẹ́jú):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
+                            <label for="stss-css">Iyara CSS (mm:ss fún 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
+                            <label>FTP (tí a ṣe ìṣirò):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">sTSS Tí A Ṣe Ìṣirò:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Àwọn ìgbésẹ̀ ìṣirò:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -969,29 +969,29 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Lap Time (seconds) + Stroke Count
+                        SWOLF = Àkókò Lap (ìṣẹ́jú-àáyá) + Iye Stroke
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
+                        SWOLF₂₅ = (Àkókò × 25/Gígùn Pool) + (Strokes × 25/Gígùn Pool)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Ẹ̀rọ Ìṣirò Ìbáṣepọ̀ - Dán Fọ́múlà Wò</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <label for="swolf-time">Àkókò Lap (ìṣẹ́jú-àáyá):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Stroke Count:</label>
+                            <label for="swolf-strokes">Iye Stroke:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Pool Length (m):</label>
+                            <label for="swolf-pool">Gígùn Pool (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,12 +999,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">Àmì SWOLF:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Ìṣirò:</strong><br>
                             <span id="swolf-steps">
                                 SWOLF = 20s + 15 strokes = 35
                             </span>
@@ -1012,7 +1012,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1073,40 +1073,40 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Stroke Mechanics</h2>
+        <h2>Àwọn Ẹ̀rọ Stroke</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>Oṣùwọ̀n Stroke (SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cycle Time (seconds)
+                        SR = 60 / Àkókò Ìyípo (ìṣẹ́jú-àáyá)
                     </div>
                     <div class="formula">
-                        SR = (Number of Strokes / Time in seconds) × 60
+                        SR = (Iye Àwọn Stroke / Àkókò ní ìṣẹ́jú-àáyá) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Ẹ̀rọ Ìṣirò Ìbáṣepọ̀ - Dán Fọ́múlà Wò</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Stroke Count:</label>
+                            <label for="sr-strokes">Iye Stroke:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">Àkókò (ìṣẹ́jú-àáyá):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-label">Oṣùwọ̀n Stroke (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Ìṣirò:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1151,19 +1151,19 @@ const sr = calculateStrokeRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>Ìjìnnàsí Fún Stroke (DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distance / Stroke Count
+                        DPS = Ìjìnnàsí / Iye Stroke
                     </div>
                     <div class="formula">
-                        DPS = Distance / (SR / 60)
+                        DPS = Ìjìnnàsí / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,16 +1180,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>Iyara Láti SR àti DPS</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocity (m/s) = (SR / 60) × DPS
+                        Iyara (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1201,16 +1201,16 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>Ìtọ́kasí Stroke (SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocity (m/s) × DPS (m/stroke)
+                        SI = Iyara (m/s) × DPS (m/stroke)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1225,25 +1225,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>Àwo Ìṣàkóso Ìṣesí (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>Àwọn Ìṣirò CTL, ATL, TSB</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>Àwọn Fọ́múlà:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
+                        CTL òní = CTL àná + (TSS òní - CTL àná) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL today = ATL yesterday + (TSS today - ATL yesterday) × (1/7)
+                        ATL òní = ATL àná + (TSS òní - ATL àná) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL yesterday - ATL yesterday
+                        TSB = CTL àná - ATL àná
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>Àwọn Ìṣirò Tí Ó Ga Jù</h2>
 
         <div class="formula-card">
-            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <h3>CSS Láti Àwọn Ìjìnnàsí Púpọ̀ (Ọ̀nà Regression)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>Intensity Factor Láti Iyara</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>Ìtúpalẹ̀ Ìdogba Iyara</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1379,9 +1379,9 @@ const analysis = analyzePaceConsistency(laps);
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stroke Count</h3>
+            <h3>Ìwádìí Àárẹ̀ Láti Iye Stroke</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1418,12 +1418,12 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>Ìfìdímúlẹ̀ Data</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>Àwọn Àyẹ̀wò Dídára Data Workout</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Helper Functions</h2>
+        <h2>Àwọn Iṣẹ́ Ìrànlọ́wọ́</h2>
 
         <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
+            <h3>Àwọn Ìlò Yíyí Àkókò Padà</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Ìṣiṣẹ́ JavaScript:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
+        <h2>Àwọn Àǹfààní Ìṣiṣẹ́</h2>
+        <p class="lead">Gbogbo àwọn fọ́múlà lórí ojú-ìwé yìí ti ṣetán fún iṣẹ́-iṣelọpọ àti wọ́n ti ṣe ìfìdímúlẹ̀ pẹ̀lú ìwé-ẹ̀kọ́ sáyẹ́ǹsì. Lo wọ́n fún àwọn irinṣẹ́ ìtúpalẹ̀ aláìlẹ́gbẹ́, ìfìdímúlẹ̀, tàbí òye jinlẹ̀ sí àwọn ìṣirò ìṣesí wíwẹ́.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
+            <h3>💡 Àwọn Ìṣe Tí Ó Dára Jù</h3>
             <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+                <li><strong>Ṣe ìfìdímúlẹ̀ àwọn input:</strong> Ṣàyẹ̀wò àwọn ìwọ̀n tí ó tọ́ ṣáájú ìṣirò</li>
+                <li><strong>Ṣàkóso àwọn ọ̀ràn igun:</strong> Pípin pẹ̀lú òdo, àwọn iye òdì, data null</li>
+                <li><strong>Ṣe ìrọ̀ṣọ̀ tí ó tọ́:</strong> CTL/ATL/TSB sí 1 decimal, sTSS sí integer</li>
+                <li><strong>Fi ìpéye pamọ́:</strong> Dúró ìpéye kíkún nínú database, ṣe ìrọ̀ṣọ̀ fún ìfihàn</li>
+                <li><strong>Ṣe ìdánwò dáradára:</strong> Lo data tí ó dára tí a mọ̀ láti ṣe ìfìdímúlẹ̀ àwọn ìṣirò</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/yo/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/yo/research/" class="btn btn-secondary">Scientific Foundation</a>
+            <a href="/yo/" class="btn btn-primary btn-large">Padà Sí Ojú-ìwé Àkọ́kọ́</a>
+            <a href="/yo/research/" class="btn btn-secondary">Ìpìlẹ̀ Sáyẹ́ǹsì</a>
         </div>
     </div>
 </section>

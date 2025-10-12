@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Referencia Técnica y Fórmulas</h1>
-        <p class="lead">Implementación Matemática Completa</p>
+        <h1>تکنیکی حوالہ اور فارمولے</h1>
+        <p class="lead">مکمل ریاضیاتی نفاذ</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Guía de Implementación</h2>
-        <p class="lead">Esta página proporciona fórmulas listas para copiar y pegar, así como métodos de cálculo paso a paso para todas las métricas de SwimAnalytics. Úsalas para implementaciones personalizadas, verificación o comprensión más profunda.</p>
+        <h2>نفاذ کی گائیڈ</h2>
+        <p class="lead">یہ صفحہ SwimAnalytics کے تمام میٹرکس کے لیے کاپی اور پیسٹ کے لیے تیار فارمولے، اور قدم بہ قدم حساب کتاب کے طریقے فراہم کرتا ہے۔ انہیں حسب ضرورت نفاذ، تصدیق یا گہری سمجھ کے لیے استعمال کریں۔</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas de Implementación</h3>
+            <h3>⚠️ نفاذ کے نوٹس</h3>
             <ul>
-                <li>Todos los tiempos deben convertirse a segundos para los cálculos</li>
-                <li>El ritmo de natación es inverso (mayor % = ritmo más lento)</li>
-                <li>Valida siempre las entradas para rangos razonables</li>
-                <li>Maneja casos límite (división por cero, valores negativos)</li>
+                <li>تمام اوقات کو حساب کتاب کے لیے سیکنڈ میں تبدیل کرنا ضروری ہے</li>
+                <li>تیراکی کی رفتار الٹی ہے (زیادہ % = آہستہ رفتار)</li>
+                <li>معقول حدود کے لیے ہمیشہ ان پٹس کی توثیق کریں</li>
+                <li>حد کی صورتوں کو سنبھالیں (صفر سے تقسیم، منفی اقدار)</li>
             </ul>
         </div>
     </div>
@@ -683,57 +683,57 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Métricas de Rendimiento Principales</h2>
+        <h2>بنیادی کارکردگی میٹرکس</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Ritmo/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS رفتار/100m (سیکنڈ) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 انٹرایکٹو کیلکولیٹر - فارمولہ آزمائیں</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distancia 1 (metros):</label>
+                            <label for="css-d1">فاصلہ 1 (میٹر):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Tiempo 1 (mm:ss):</label>
+                            <label for="css-t1">وقت 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distancia 2 (metros):</label>
+                            <label for="css-d2">فاصلہ 2 (میٹر):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Tiempo 2 (mm:ss):</label>
+                            <label for="css-t2">وقت 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritmo CSS por 100m:</div>
+                        <div class="result-label">CSS رفتار فی 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Pasos del cálculo:</strong><br>
+                            <strong>حساب کتاب کے مراحل:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Ritmo/100m = 100 / 0.917 = 109 segundos = 1:49
+                                رفتار/100m = 100 / 0.917 = 109 سیکنڈ = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -791,7 +791,7 @@ const result = calculateCSS(200, 150, 400, 368);
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
                             `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Ritmo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} segundos = ${pace_formatted}`;
+                            `رفتار/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} سیکنڈ = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -811,46 +811,46 @@ const result = calculateCSS(200, 150, 400, 368);
         <div class="formula-card">
             <h3>Swim Training Stress Score (sTSS)</h3>
             <div class="formula-content">
-                <h4>Fórmula Completa:</h4>
+                <h4>مکمل فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duración (horas) × 100
+                        sTSS = (IF³) × دورانیہ (گھنٹے) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Distancia Total / Tiempo Total (m/min)
+                        NSS = کل فاصلہ / کل وقت (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 انٹرایکٹو کیلکولیٹر - فارمولہ آزمائیں</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distancia (metros):</label>
+                            <label for="stss-distance">فاصلہ (میٹر):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duración (minutos):</label>
+                            <label for="stss-duration">دورانیہ (منٹ):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">Ritmo CSS (mm:ss por 100m):</label>
+                            <label for="stss-css">CSS رفتار (mm:ss فی 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculado):</label>
+                            <label>FTP (شمار شدہ):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">sTSS Calculado:</div>
+                        <div class="result-label">شمار شدہ sTSS:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Pasos del cálculo:</strong><br>
+                            <strong>حساب کتاب کے مراحل:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -969,29 +969,29 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Tiempo del Largo (segundos) + Cuenta de Brazadas
+                        SWOLF = لیپ کا وقت (سیکنڈ) + اسٹروک کی گنتی
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Tiempo × 25/Longitud Piscina) + (Brazadas × 25/Longitud Piscina)
+                        SWOLF₂₅ = (وقت × 25/پول کی لمبائی) + (اسٹروک × 25/پول کی لمبائی)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 انٹرایکٹو کیلکولیٹر - فارمولہ آزمائیں</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Tiempo del Largo (segundos):</label>
+                            <label for="swolf-time">لیپ کا وقت (سیکنڈ):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Cuenta de Brazadas:</label>
+                            <label for="swolf-strokes">اسٹروک کی گنتی:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Longitud de Piscina (m):</label>
+                            <label for="swolf-pool">پول کی لمبائی (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,20 +999,20 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Puntuación SWOLF:</div>
+                        <div class="result-label">SWOLF اسکور:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Cálculo:</strong><br>
+                            <strong>حساب:</strong><br>
                             <span id="swolf-steps">
-                                SWOLF = 20s + 15 brazadas = 35
+                                SWOLF = 20s + 15 اسٹروک = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1042,13 +1042,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} brazadas = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} اسٹروک = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tiempo Normalizado = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Brazadas Normalizadas = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                            steps = `نارملائزڈ وقت = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `نارملائزڈ اسٹروک = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
@@ -1073,30 +1073,30 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Mecánica de Brazada</h2>
+        <h2>اسٹروک میکینکس</h2>
 
         <div class="formula-card">
             <h3>Stroke Rate (SR)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Tiempo de Ciclo (segundos)
+                        SR = 60 / سائیکل کا وقت (سیکنڈ)
                     </div>
                     <div class="formula">
-                        SR = (Número de Brazadas / Tiempo en segundos) × 60
+                        SR = (اسٹروک کی تعداد / وقت سیکنڈ میں) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 انٹرایکٹو کیلکولیٹر - فارمولہ آزمائیں</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Cuenta de Brazadas:</label>
+                            <label for="sr-strokes">اسٹروک کی گنتی:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Tiempo (segundos):</label>
+                            <label for="sr-time">وقت (سیکنڈ):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
@@ -1106,7 +1106,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Cálculo:</strong><br>
+                            <strong>حساب:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1153,17 +1153,17 @@ const sr = calculateStrokeRate(30, 25);
         <div class="formula-card">
             <h3>Distance Per Stroke (DPS)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distancia / Cuenta de Brazadas
+                        DPS = فاصلہ / اسٹروک کی گنتی
                     </div>
                     <div class="formula">
-                        DPS = Distancia / (SR / 60)
+                        DPS = فاصلہ / (SR / 60)
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,16 +1180,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocidad a partir de SR y DPS</h3>
+            <h3>SR اور DPS سے رفتار</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocidad (m/s) = (SR / 60) × DPS
+                        رفتار (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1203,14 +1203,14 @@ const velocity = calculateVelocity(70, 1.6);
         <div class="formula-card">
             <h3>Stroke Index (SI)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>فارمولا:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocidad (m/s) × DPS (m/brazada)
+                        SI = رفتار (m/s) × DPS (m/اسٹروک)
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1225,25 +1225,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Gráfico de Gestión del Rendimiento (PMC)</h2>
+        <h2>Performance Management Chart (PMC)</h2>
 
         <div class="formula-card">
-            <h3>Cálculos de CTL, ATL, TSB</h3>
+            <h3>CTL، ATL، TSB کے حسابات</h3>
             <div class="formula-content">
-                <h4>Fórmulas:</h4>
+                <h4>فارمولے:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL hoy = CTL ayer + (TSS hoy - CTL ayer) × (1/42)
+                        CTL آج = CTL کل + (TSS آج - CTL کل) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL hoy = ATL ayer + (TSS hoy - ATL ayer) × (1/7)
+                        ATL آج = ATL کل + (TSS آج - ATL کل) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL ayer - ATL ayer
+                        TSB = CTL کل - ATL کل
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Cálculos Avanzados</h2>
+        <h2>جدید حسابات</h2>
 
         <div class="formula-card">
-            <h3>CSS desde Múltiples Distancias (Método de Regresión)</h3>
+            <h3>متعدد فاصلوں سے CSS (ریگریشن طریقہ)</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Factor de Intensidad desde el Ritmo</h3>
+            <h3>رفتار سے شدت کا عنصر</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Análisis de Consistencia del Ritmo</h3>
+            <h3>رفتار کی مستقل مزاجی کا تجزیہ</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1360,9 +1360,9 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Excelente" :
-                 coefficientOfVariation < 10 ? "Buena" :
-                 coefficientOfVariation < 15 ? "Moderada" : "Variable"
+    consistency: coefficientOfVariation < 5 ? "بہترین" :
+                 coefficientOfVariation < 10 ? "اچھا" :
+                 coefficientOfVariation < 15 ? "معتدل" : "متغیر"
   };
 }
 
@@ -1374,14 +1374,14 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excelente" }</code></pre>
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "بہترین" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Detección de Fatiga mediante Cuenta de Brazadas</h3>
+            <h3>اسٹروک کی گنتی کے ذریعے تھکاوٹ کا پتہ لگانا</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1397,9 +1397,9 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease < 5 ? "Mínima" :
-                  strokeCountIncrease < 10 ? "Moderada" :
-                  strokeCountIncrease < 20 ? "Significativa" : "Severa"
+    fatigueLevel: strokeCountIncrease < 5 ? "کم از کم" :
+                  strokeCountIncrease < 10 ? "معتدل" :
+                  strokeCountIncrease < 20 ? "قابل ذکر" : "شدید"
   };
 }
 
@@ -1410,7 +1410,7 @@ const laps = [
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "شدید" }</code></pre>
             </div>
         </div>
     </div>
@@ -1418,31 +1418,31 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Validación de Datos</h2>
+        <h2>ڈیٹا کی تصدیق</h2>
 
         <div class="formula-card">
-            <h3>Verificación de Calidad de Datos de Entrenamiento</h3>
+            <h3>تربیتی ڈیٹا کے معیار کی تصدیق</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (1:00-5:00 per 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Ritmo promedio inusual: ${Math.round(avgPace)}s por 100m`);
+    issues.push(`غیر معمولی اوسط رفتار: ${Math.round(avgPace)}s فی 100m`);
   }
 
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Cuenta de brazadas inusual: ${Math.round(avgStrokesPer25m)} por 25m`);
+    issues.push(`غیر معمولی اسٹروک کی گنتی: ${Math.round(avgStrokesPer25m)} فی 25m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Frecuencia de brazada inusual: ${Math.round(avgSR)} SPM`);
+    issues.push(`غیر معمولی اسٹروک کی شرح: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)
@@ -1451,7 +1451,7 @@ const fatigue = detectFatigue(laps);
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
       if (gap > 300) { // 5 minute gap
-        issues.push(`Hueco grande detectado entre largos ${i} y ${i+1}`);
+        issues.push(`لیپ ${i} اور ${i+1} کے درمیان بڑا وقفہ`);
       }
     }
   }
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Funciones Auxiliares</h2>
+        <h2>معاون فنکشنز</h2>
 
         <div class="formula-card">
-            <h3>Utilidades de Conversión de Tiempo</h3>
+            <h3>وقت کی تبدیلی کی افادیت</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript میں نفاذ:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Recursos de Implementación</h2>
-        <p class="lead">Todas las fórmulas en esta página están listas para producción y validadas contra literatura científica. Úsalas para herramientas de análisis personalizadas, verificación o comprensión más profunda de los cálculos de rendimiento en natación.</p>
+        <h2>نفاذ کے وسائل</h2>
+        <p class="lead">اس صفحے پر تمام فارمولے پروڈکشن کے لیے تیار ہیں اور سائنسی لٹریچر کے خلاف تصدیق شدہ ہیں۔ انہیں حسب ضرورت تجزیہ کے ٹولز، تصدیق یا تیراکی کی کارکردگی کے حسابات کی گہری سمجھ کے لیے استعمال کریں۔</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Mejores Prácticas</h3>
+            <h3>💡 بہترین طریقے</h3>
             <ul class="text-left">
-                <li><strong>Valida las entradas:</strong> Verifica rangos razonables antes de calcular</li>
-                <li><strong>Maneja casos límite:</strong> División por cero, valores negativos, datos nulos</li>
-                <li><strong>Redondea apropiadamente:</strong> CTL/ATL/TSB a 1 decimal, sTSS a entero</li>
-                <li><strong>Almacena precisión:</strong> Mantén precisión completa en base de datos, redondea para mostrar</li>
-                <li><strong>Prueba exhaustivamente:</strong> Usa datos conocidos y correctos para verificar cálculos</li>
+                <li><strong>ان پٹس کی توثیق کریں:</strong> حساب سے پہلے معقول حدود کی جانچ کریں</li>
+                <li><strong>حد کی صورتوں کو سنبھالیں:</strong> صفر سے تقسیم، منفی اقدار، خالی ڈیٹا</li>
+                <li><strong>مناسب طریقے سے گول کریں:</strong> CTL/ATL/TSB کو 1 اعشاریہ تک، sTSS کو انٹیجر تک</li>
+                <li><strong>درستگی محفوظ کریں:</strong> ڈیٹا بیس میں مکمل درستگی برقرار رکھیں، ڈسپلے کے لیے گول کریں</li>
+                <li><strong>مکمل طور پر ٹیسٹ کریں:</strong> حسابات کی تصدیق کے لیے معلوم اور درست ڈیٹا استعمال کریں</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/ur/" class="btn btn-primary btn-large">Volver al Inicio</a>
-            <a href="/ur/research/" class="btn btn-secondary">Fundamento Científico</a>
+            <a href="/ur/" class="btn btn-primary btn-large">ہوم پر واپس جائیں</a>
+            <a href="/ur/research/" class="btn btn-secondary">سائنسی بنیاد</a>
         </div>
     </div>
 </section>

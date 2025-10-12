@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Referencia Técnica y Fórmulas</h1>
-        <p class="lead">Implementación Matemática Completa</p>
+        <h1>প্রযুক্তিগত রেফারেন্স এবং সূত্র</h1>
+        <p class="lead">সম্পূর্ণ গাণিতিক বাস্তবায়ন</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Guía de Implementación</h2>
-        <p class="lead">Esta página proporciona fórmulas listas para copiar y pegar, así como métodos de cálculo paso a paso para todas las métricas de SwimAnalytics. Úsalas para implementaciones personalizadas, verificación o comprensión más profunda.</p>
+        <h2>বাস্তবায়ন নির্দেশিকা</h2>
+        <p class="lead">এই পৃষ্ঠা SwimAnalytics এর সমস্ত মেট্রিকের জন্য অনুলিপি এবং পেস্ট করার জন্য প্রস্তুত সূত্র এবং ধাপে ধাপে গণনা পদ্ধতি প্রদান করে। কাস্টম বাস্তবায়ন, যাচাইকরণ বা গভীর বোঝার জন্য এগুলি ব্যবহার করুন।</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas de Implementación</h3>
+            <h3>⚠️ বাস্তবায়ন নোট</h3>
             <ul>
-                <li>Todos los tiempos deben convertirse a segundos para los cálculos</li>
-                <li>El ritmo de natación es inverso (mayor % = ritmo más lento)</li>
-                <li>Valida siempre las entradas para rangos razonables</li>
-                <li>Maneja casos límite (división por cero, valores negativos)</li>
+                <li>গণনার জন্য সমস্ত সময় সেকেন্ডে রূপান্তর করতে হবে</li>
+                <li>সাঁতারের গতি বিপরীত (উচ্চতর % = ধীর গতি)</li>
+                <li>যুক্তিসঙ্গত পরিসরের জন্য সর্বদা ইনপুট যাচাই করুন</li>
+                <li>সীমা কেস পরিচালনা করুন (শূন্য দ্বারা বিভাজন, নেতিবাচক মান)</li>
             </ul>
         </div>
     </div>
@@ -683,57 +683,57 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Métricas de Rendimiento Principales</h2>
+        <h2>মূল কর্মক্ষমতা মেট্রিক</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Ritmo/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS পেস/100m (সেকেন্ড) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 ইন্টারেক্টিভ ক্যালকুলেটর - সূত্র পরীক্ষা করুন</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distancia 1 (metros):</label>
+                            <label for="css-d1">দূরত্ব ১ (মিটার):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Tiempo 1 (mm:ss):</label>
+                            <label for="css-t1">সময় ১ (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distancia 2 (metros):</label>
+                            <label for="css-d2">দূরত্ব ২ (মিটার):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Tiempo 2 (mm:ss):</label>
+                            <label for="css-t2">সময় ২ (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritmo CSS por 100m:</div>
+                        <div class="result-label">CSS পেস প্রতি 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Pasos del cálculo:</strong><br>
+                            <strong>গণনার ধাপ:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Ritmo/100m = 100 / 0.917 = 109 segundos = 1:49
+                                পেস/100m = 100 / 0.917 = 109 সেকেন্ড = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -791,7 +791,7 @@ const result = calculateCSS(200, 150, 400, 368);
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
                             `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Ritmo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} segundos = ${pace_formatted}`;
+                            `পেস/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} সেকেন্ড = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -811,46 +811,46 @@ const result = calculateCSS(200, 150, 400, 368);
         <div class="formula-card">
             <h3>Swim Training Stress Score (sTSS)</h3>
             <div class="formula-content">
-                <h4>Fórmula Completa:</h4>
+                <h4>সম্পূর্ণ সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duración (horas) × 100
+                        sTSS = (IF³) × সময়কাল (ঘন্টা) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Distancia Total / Tiempo Total (m/min)
+                        NSS = মোট দূরত্ব / মোট সময় (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 ইন্টারেক্টিভ ক্যালকুলেটর - সূত্র পরীক্ষা করুন</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distancia (metros):</label>
+                            <label for="stss-distance">দূরত্ব (মিটার):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duración (minutos):</label>
+                            <label for="stss-duration">সময়কাল (মিনিট):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">Ritmo CSS (mm:ss por 100m):</label>
+                            <label for="stss-css">CSS পেস (mm:ss প্রতি 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculado):</label>
+                            <label>FTP (গণনা করা):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">sTSS Calculado:</div>
+                        <div class="result-label">গণনাকৃত sTSS:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Pasos del cálculo:</strong><br>
+                            <strong>গণনার ধাপ:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -969,29 +969,29 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Tiempo del Largo (segundos) + Cuenta de Brazadas
+                        SWOLF = ল্যাপ সময় (সেকেন্ড) + স্ট্রোক গণনা
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Tiempo × 25/Longitud Piscina) + (Brazadas × 25/Longitud Piscina)
+                        SWOLF₂₅ = (সময় × 25/পুল দৈর্ঘ্য) + (স্ট্রোক × 25/পুল দৈর্ঘ্য)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 ইন্টারেক্টিভ ক্যালকুলেটর - সূত্র পরীক্ষা করুন</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Tiempo del Largo (segundos):</label>
+                            <label for="swolf-time">ল্যাপ সময় (সেকেন্ড):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Cuenta de Brazadas:</label>
+                            <label for="swolf-strokes">স্ট্রোক গণনা:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Longitud de Piscina (m):</label>
+                            <label for="swolf-pool">পুল দৈর্ঘ্য (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,20 +999,20 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Puntuación SWOLF:</div>
+                        <div class="result-label">SWOLF স্কোর:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Cálculo:</strong><br>
+                            <strong>গণনা:</strong><br>
                             <span id="swolf-steps">
-                                SWOLF = 20s + 15 brazadas = 35
+                                SWOLF = 20s + 15 স্ট্রোক = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1042,13 +1042,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} brazadas = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} স্ট্রোক = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tiempo Normalizado = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Brazadas Normalizadas = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                            steps = `নরমালাইজড সময় = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `নরমালাইজড স্ট্রোক = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
@@ -1073,30 +1073,30 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Mecánica de Brazada</h2>
+        <h2>স্ট্রোক মেকানিক্স</h2>
 
         <div class="formula-card">
             <h3>Stroke Rate (SR)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Tiempo de Ciclo (segundos)
+                        SR = 60 / চক্রের সময় (সেকেন্ড)
                     </div>
                     <div class="formula">
-                        SR = (Número de Brazadas / Tiempo en segundos) × 60
+                        SR = (স্ট্রোক সংখ্যা / সময় সেকেন্ডে) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 ইন্টারেক্টিভ ক্যালকুলেটর - সূত্র পরীক্ষা করুন</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Cuenta de Brazadas:</label>
+                            <label for="sr-strokes">স্ট্রোক গণনা:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Tiempo (segundos):</label>
+                            <label for="sr-time">সময় (সেকেন্ড):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
@@ -1106,7 +1106,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Cálculo:</strong><br>
+                            <strong>গণনা:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementación en JavaScript:</h4>
+                <h4 class="mt-xl">JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1153,17 +1153,17 @@ const sr = calculateStrokeRate(30, 25);
         <div class="formula-card">
             <h3>Distance Per Stroke (DPS)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distancia / Cuenta de Brazadas
+                        DPS = দূরত্ব / স্ট্রোক গণনা
                     </div>
                     <div class="formula">
-                        DPS = Distancia / (SR / 60)
+                        DPS = দূরত্ব / (SR / 60)
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,16 +1180,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocidad a partir de SR y DPS</h3>
+            <h3>SR এবং DPS থেকে বেগ</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocidad (m/s) = (SR / 60) × DPS
+                        বেগ (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1203,14 +1203,14 @@ const velocity = calculateVelocity(70, 1.6);
         <div class="formula-card">
             <h3>Stroke Index (SI)</h3>
             <div class="formula-content">
-                <h4>Fórmula:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocidad (m/s) × DPS (m/brazada)
+                        SI = বেগ (m/s) × DPS (m/স্ট্রোক)
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1225,25 +1225,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Gráfico de Gestión del Rendimiento (PMC)</h2>
+        <h2>পারফরম্যান্স ম্যানেজমেন্ট চার্ট (PMC)</h2>
 
         <div class="formula-card">
-            <h3>Cálculos de CTL, ATL, TSB</h3>
+            <h3>CTL, ATL, TSB গণনা</h3>
             <div class="formula-content">
-                <h4>Fórmulas:</h4>
+                <h4>সূত্র:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL hoy = CTL ayer + (TSS hoy - CTL ayer) × (1/42)
+                        CTL আজ = CTL গতকাল + (TSS আজ - CTL গতকাল) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL hoy = ATL ayer + (TSS hoy - ATL ayer) × (1/7)
+                        ATL আজ = ATL গতকাল + (TSS আজ - ATL গতকাল) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL ayer - ATL ayer
+                        TSB = CTL গতকাল - ATL গতকাল
                     </div>
                 </div>
 
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Cálculos Avanzados</h2>
+        <h2>উন্নত গণনা</h2>
 
         <div class="formula-card">
-            <h3>CSS desde Múltiples Distancias (Método de Regresión)</h3>
+            <h3>একাধিক দূরত্ব থেকে CSS (রিগ্রেশন পদ্ধতি)</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Factor de Intensidad desde el Ritmo</h3>
+            <h3>পেস থেকে তীব্রতা ফ্যাক্টর</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Análisis de Consistencia del Ritmo</h3>
+            <h3>পেস সামঞ্জস্য বিশ্লেষণ</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1360,9 +1360,9 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Excelente" :
-                 coefficientOfVariation < 10 ? "Buena" :
-                 coefficientOfVariation < 15 ? "Moderada" : "Variable"
+    consistency: coefficientOfVariation < 5 ? "চমৎকার" :
+                 coefficientOfVariation < 10 ? "ভালো" :
+                 coefficientOfVariation < 15 ? "মাঝারি" : "পরিবর্তনশীল"
   };
 }
 
@@ -1374,14 +1374,14 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excelente" }</code></pre>
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "চমৎকার" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Detección de Fatiga mediante Cuenta de Brazadas</h3>
+            <h3>স্ট্রোক গণনা দ্বারা ক্লান্তি সনাক্তকরণ</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1397,9 +1397,9 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease < 5 ? "Mínima" :
-                  strokeCountIncrease < 10 ? "Moderada" :
-                  strokeCountIncrease < 20 ? "Significativa" : "Severa"
+    fatigueLevel: strokeCountIncrease < 5 ? "ন্যূনতম" :
+                  strokeCountIncrease < 10 ? "মাঝারি" :
+                  strokeCountIncrease < 20 ? "উল্লেখযোগ্য" : "গুরুতর"
   };
 }
 
@@ -1410,7 +1410,7 @@ const laps = [
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "গুরুতর" }</code></pre>
             </div>
         </div>
     </div>
@@ -1418,31 +1418,31 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Validación de Datos</h2>
+        <h2>ডেটা যাচাইকরণ</h2>
 
         <div class="formula-card">
-            <h3>Verificación de Calidad de Datos de Entrenamiento</h3>
+            <h3>প্রশিক্ষণ ডেটা মান যাচাই</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (1:00-5:00 per 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Ritmo promedio inusual: ${Math.round(avgPace)}s por 100m`);
+    issues.push(`অস্বাভাবিক গড় পেস: ${Math.round(avgPace)}s প্রতি 100m`);
   }
 
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Cuenta de brazadas inusual: ${Math.round(avgStrokesPer25m)} por 25m`);
+    issues.push(`অস্বাভাবিক স্ট্রোক গণনা: ${Math.round(avgStrokesPer25m)} প্রতি 25m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Frecuencia de brazada inusual: ${Math.round(avgSR)} SPM`);
+    issues.push(`অস্বাভাবিক স্ট্রোক হার: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)
@@ -1451,7 +1451,7 @@ const fatigue = detectFatigue(laps);
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
       if (gap > 300) { // 5 minute gap
-        issues.push(`Hueco grande detectado entre largos ${i} y ${i+1}`);
+        issues.push(`ল্যাপ ${i} এবং ${i+1} এর মধ্যে বড় ফাঁক সনাক্ত করা হয়েছে`);
       }
     }
   }
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Funciones Auxiliares</h2>
+        <h2>সহায়ক ফাংশন</h2>
 
         <div class="formula-card">
-            <h3>Utilidades de Conversión de Tiempo</h3>
+            <h3>সময় রূপান্তর ইউটিলিটি</h3>
             <div class="formula-content">
-                <h4>Implementación en JavaScript:</h4>
+                <h4>JavaScript-এ বাস্তবায়ন:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Recursos de Implementación</h2>
-        <p class="lead">Todas las fórmulas en esta página están listas para producción y validadas contra literatura científica. Úsalas para herramientas de análisis personalizadas, verificación o comprensión más profunda de los cálculos de rendimiento en natación.</p>
+        <h2>বাস্তবায়ন সম্পদ</h2>
+        <p class="lead">এই পৃষ্ঠার সমস্ত সূত্র উৎপাদনের জন্য প্রস্তুত এবং বৈজ্ঞানিক সাহিত্যের বিপরীতে যাচাই করা হয়েছে। কাস্টম বিশ্লেষণ সরঞ্জাম, যাচাইকরণ বা সাঁতার কর্মক্ষমতা গণনার গভীর বোঝার জন্য এগুলি ব্যবহার করুন।</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Mejores Prácticas</h3>
+            <h3>💡 সেরা অনুশীলন</h3>
             <ul class="text-left">
-                <li><strong>Valida las entradas:</strong> Verifica rangos razonables antes de calcular</li>
-                <li><strong>Maneja casos límite:</strong> División por cero, valores negativos, datos nulos</li>
-                <li><strong>Redondea apropiadamente:</strong> CTL/ATL/TSB a 1 decimal, sTSS a entero</li>
-                <li><strong>Almacena precisión:</strong> Mantén precisión completa en base de datos, redondea para mostrar</li>
-                <li><strong>Prueba exhaustivamente:</strong> Usa datos conocidos y correctos para verificar cálculos</li>
+                <li><strong>ইনপুট যাচাই করুন:</strong> গণনা করার আগে যুক্তিসঙ্গত পরিসীমা যাচাই করুন</li>
+                <li><strong>সীমা কেস পরিচালনা করুন:</strong> শূন্য দ্বারা বিভাজন, নেতিবাচক মান, নাল ডেটা</li>
+                <li><strong>যথাযথভাবে রাউন্ড করুন:</strong> CTL/ATL/TSB 1 দশমিকে, sTSS পূর্ণসংখ্যায়</li>
+                <li><strong>নির্ভুলতা সংরক্ষণ করুন:</strong> ডেটাবেসে সম্পূর্ণ নির্ভুলতা বজায় রাখুন, প্রদর্শনের জন্য রাউন্ড করুন</li>
+                <li><strong>পুঙ্খানুপুঙ্খভাবে পরীক্ষা করুন:</strong> গণনা যাচাই করতে জানা সঠিক ডেটা ব্যবহার করুন</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/bn/" class="btn btn-primary btn-large">Volver al Inicio</a>
-            <a href="/bn/research/" class="btn btn-secondary">Fundamento Científico</a>
+            <a href="/bn/" class="btn btn-primary btn-large">হোমে ফিরে যান</a>
+            <a href="/bn/research/" class="btn btn-secondary">বৈজ্ঞানিক ভিত্তি</a>
         </div>
     </div>
 </section>

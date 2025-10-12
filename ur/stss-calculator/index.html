@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Calculadora Gratuita de TSS para Natación</h1>
-        <p class="lead">Calcula el Training Stress Score para entrenamientos de natación - La única calculadora gratuita de sTSS</p>
+        <h1>تیراکی کے لیے مفت TSS کیلکولیٹر</h1>
+        <p class="lead">تیراکی کی تربیت کے لیے Training Stress Score کا حساب لگائیں - واحد مفت sTSS کیلکولیٹر</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es el TSS de Natación (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifica la carga de entrenamiento de una sesión de natación combinando intensidad y duración. Está adaptado de la metodología TSS del ciclismo, utilizando tu Critical Swim Speed (CSS) como ritmo umbral. Un entrenamiento de 1 hora a ritmo CSS = 100 sTSS.</p>
+            <h2>تیراکی TSS (sTSS) کیا ہے؟</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> شدت اور مدت کو ملا کر تیراکی کے سیشن کے تربیتی بوجھ کی مقدار بتاتا ہے۔ یہ سائیکلنگ TSS کی طریقہ کار سے موافق ہے، آپ کی Critical Swim Speed (CSS) کو حد کی رفتار کے طور پر استعمال کرتے ہوئے۔ CSS رفتار پر 1 گھنٹے کی تربیت = 100 sTSS۔</p>
         </div>
 
-        <h2 class="mt-3xl">Calculadora Gratuita de sTSS</h2>
-        <p class="lead mb-xl">Calcula el estrés de entrenamiento para cualquier sesión de natación. Requiere tu ritmo CSS.</p>
+        <h2 class="mt-3xl">مفت sTSS کیلکولیٹر</h2>
+        <p class="lead mb-xl">کسی بھی تیراکی کے سیشن کے لیے تربیتی تناؤ کا حساب لگائیں۔ آپ کی CSS رفتار کی ضرورت ہے۔</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Tu Ritmo CSS (mm:ss por 100m)</label>
+                        <label for="cssPace" class="form-label">آپ کی CSS رفتار (mm:ss فی 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tu ritmo umbral del test CSS (ej., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">CSS ٹیسٹ سے آپ کی حد کی رفتار (مثال، 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Duración del Entrenamiento (minutos)</label>
+                        <label for="workoutDuration" class="form-label">تربیت کی مدت (منٹ)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Tiempo total del entrenamiento incluyendo descansos (1-300 minutos)</small>
+                        <small id="duration-help" class="form-help">آرام سمیت کل تربیت کا وقت (1-300 منٹ)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Ritmo Promedio del Entrenamiento (mm:ss por 100m)</label>
+                        <label for="avgPace" class="form-label">تربیت کی اوسط رفتار (mm:ss فی 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,32 +719,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Tu ritmo promedio durante el entrenamiento (ej., 2:05)</small>
+                        <small id="pace-help" class="form-help">تربیت کے دوران آپ کی اوسط رفتار (مثال، 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Borrar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS کا حساب لگائیں</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">صاف کریں</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Tu Training Stress Score</h3>
+                <h3>آپ کا Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Factor de Intensidad (IF)</div>
+                        <div class="result-label">شدت کا عنصر (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretación de la Carga de Entrenamiento</h4>
+                    <h4>تربیتی بوجھ کی تشریح</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -752,192 +752,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
+        <h2 class="mt-3xl">sTSS کیسے شمار کیا جاتا ہے</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>فارمولا</h3>
             <div class="formula">
-                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
+                sTSS = (گھنٹوں میں مدت) × (شدت کا عنصر)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>جہاں:</p>
                 <ul>
-                    <li><strong>Factor de Intensidad (IF)</strong> = Ritmo CSS / Ritmo Promedio del Entrenamiento</li>
-                    <li><strong>Duración</strong> = Tiempo total del entrenamiento en horas</li>
-                    <li><strong>Ritmo CSS</strong> = Tu ritmo umbral del test CSS</li>
+                    <li><strong>شدت کا عنصر (IF)</strong> = CSS رفتار / تربیت کی اوسط رفتار</li>
+                    <li><strong>مدت</strong> = گھنٹوں میں کل تربیت کا وقت</li>
+                    <li><strong>CSS رفتار</strong> = CSS ٹیسٹ سے آپ کی حد کی رفتار</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Ejemplo Práctico</h3>
+        <h3 class="mt-xl">عملی مثال</h3>
         <div class="example-box">
-            <h4>Detalles del Entrenamiento:</h4>
+            <h4>تربیت کی تفصیلات:</h4>
             <ul>
-                <li>Ritmo CSS: <strong>1:49/100m</strong> (109 segundos)</li>
-                <li>Duración del Entrenamiento: <strong>60 minutos</strong> (1 hora)</li>
-                <li>Ritmo Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
+                <li>CSS رفتار: <strong>1:49/100m</strong> (109 سیکنڈ)</li>
+                <li>تربیت کی مدت: <strong>60 منٹ</strong> (1 گھنٹہ)</li>
+                <li>اوسط رفتار: <strong>2:05/100m</strong> (125 سیکنڈ)</li>
             </ul>
 
-            <h4>Paso 1: Calcular el Factor de Intensidad</h4>
+            <h4>مرحلہ 1: شدت کے عنصر کا حساب</h4>
             <div class="calculation">
-                IF = Ritmo CSS / Ritmo del Entrenamiento<br>
+                IF = CSS رفتار / تربیت کی رفتار<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Paso 2: Calcular el sTSS</h4>
+            <h4>مرحلہ 2: sTSS کا حساب</h4>
             <div class="calculation">
-                sTSS = 1.0 horas × (0.872)² × 100<br>
+                sTSS = 1.0 گھنٹے × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretación:</strong> Este entrenamiento de 60 minutos a ritmo suave (más lento que CSS) generó 76 sTSS - una carga de entrenamiento moderada adecuada para construir la base aeróbica.</p>
+            <p class="mt-md"><strong>تشریح:</strong> CSS سے آہستہ رفتار پر یہ 60 منٹ کی تربیت نے 76 sTSS پیدا کیا - ایروبک بنیاد بنانے کے لیے موزوں ایک اعتدال پسند تربیتی بوجھ۔</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretando los Valores de sTSS</h2>
+        <h2 class="mt-3xl">sTSS اقدار کی تشریح</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rango sTSS</th>
-                        <th>Carga de Entrenamiento</th>
-                        <th>Tiempo de Recuperación</th>
-                        <th>Ejemplo de Entrenamiento</th>
+                        <th>sTSS رینج</th>
+                        <th>تربیتی بوجھ</th>
+                        <th>بحالی کا وقت</th>
+                        <th>تربیت کی مثال</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Baja</td>
-                        <td>Mismo día</td>
-                        <td>Nado suave de 30 min, ejercicios técnicos</td>
+                        <td>کم</td>
+                        <td>اسی دن</td>
+                        <td>30 منٹ کی ہلکی تیراکی، تکنیکی مشقیں</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderada</td>
-                        <td>1 día</td>
-                        <td>Resistencia de 60 min, ritmo constante</td>
+                        <td>اعتدال پسند</td>
+                        <td>1 دن</td>
+                        <td>60 منٹ برداشت، مستقل رفتار</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Alta</td>
-                        <td>1-2 días</td>
-                        <td>Series de umbral de 90 min, intervalos a ritmo de competición</td>
+                        <td>بلند</td>
+                        <td>1-2 دن</td>
+                        <td>90 منٹ حد کے سیٹس، مقابلے کی رفتار کے وقفے</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Muy Alta</td>
-                        <td>2-3 días</td>
-                        <td>Entrenamiento duro de 2 horas, múltiples bloques de umbral</td>
+                        <td>بہت بلند</td>
+                        <td>2-3 دن</td>
+                        <td>2 گھنٹے کی سخت تربیت، متعدد حد بلاکس</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extrema</td>
-                        <td>3+ días</td>
-                        <td>Competición larga (&gt;2 horas), ultra-resistencia</td>
+                        <td>انتہائی</td>
+                        <td>3+ دن</td>
+                        <td>لمبا مقابلہ (&gt;2 گھنٹے)، الٹرا برداشت</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Guía de sTSS Semanal</h2>
+        <h2 class="mt-3xl">ہفتہ وار sTSS گائیڈ</h2>
 
-        <p class="mb-md">El sTSS semanal objetivo depende de tu nivel de entrenamiento y objetivos:</p>
+        <p class="mb-md">ہدف ہفتہ وار sTSS آپ کی تربیتی سطح اور اہداف پر منحصر ہے:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos</h3>
+                <h3 class="card-title">تفریحی تیراک</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
-                    <p>2-3 entrenamientos por semana, 50-100 sTSS cada uno. Enfoque en técnica y construcción de base aeróbica.</p>
+                    <p class="mb-sm"><strong>ہفتہ وار sTSS:</strong> 150-300</p>
+                    <p>ہفتے میں 2-3 تربیتیں، ہر ایک 50-100 sTSS۔ تکنیک اور ایروبک بنیاد کی تعمیر پر توجہ۔</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <h3 class="card-title">فٹنس تیراک / ٹرائیتھلیٹس</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
-                    <p>3-4 entrenamientos por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de umbral.</p>
+                    <p class="mb-sm"><strong>ہفتہ وار sTSS:</strong> 300-500</p>
+                    <p>ہفتے میں 3-4 تربیتیں، ہر ایک 75-125 sTSS۔ ایروبک برداشت اور حد کے کام کا امتزاج۔</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Másters Competitivos</h3>
+                <h3 class="card-title">مسابقتی ماسٹرز تیراک</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
-                    <p>4-6 entrenamientos por semana, 80-150 sTSS cada uno. Entrenamiento estructurado con periodización.</p>
+                    <p class="mb-sm"><strong>ہفتہ وار sTSS:</strong> 500-800</p>
+                    <p>ہفتے میں 4-6 تربیتیں، ہر ایک 80-150 sTSS۔ دورانیہ بندی کے ساتھ منظم تربیت۔</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Elite / Universitarios</h3>
+                <h3 class="card-title">اعلیٰ درجے / یونیورسٹی تیراک</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
-                    <p>8-12 entrenamientos por semana, sesiones dobles. Alto volumen con gestión de recuperación crítica.</p>
+                    <p class="mb-sm"><strong>ہفتہ وار sTSS:</strong> 800-1200+</p>
+                    <p>ہفتے میں 8-12 تربیتیں، دوہرے سیشن۔ بحالی کے انتظام کے ساتھ اعلیٰ حجم اہم۔</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas Importantes</h3>
+            <h3>⚠️ اہم نوٹس</h3>
             <ul>
-                <li><strong>Requiere CSS preciso:</strong> Tu CSS debe estar actualizado (testeado dentro de 6-8 semanas) para un sTSS preciso.</li>
-                <li><strong>Cálculo simplificado:</strong> Esta calculadora usa ritmo promedio. El sTSS avanzado usa Normalized Graded Pace (NGP) que tiene en cuenta la estructura de intervalos.</li>
-                <li><strong>No para trabajo técnico:</strong> El sTSS solo mide el estrés físico del entrenamiento, no el desarrollo de habilidades.</li>
-                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes nadadores. Ajusta las guías según tu recuperación.</li>
+                <li><strong>درست CSS کی ضرورت ہے:</strong> درست sTSS کے لیے آپ کی CSS تازہ ہونی چاہیے (6-8 ہفتوں کے اندر جانچ شدہ)۔</li>
+                <li><strong>آسان حساب:</strong> یہ کیلکولیٹر اوسط رفتار استعمال کرتا ہے۔ جدید sTSS Normalized Graded Pace (NGP) استعمال کرتا ہے جو وقفے کی ساخت کا حساب رکھتا ہے۔</li>
+                <li><strong>تکنیکی کام کے لیے نہیں:</strong> sTSS صرف تربیت کے جسمانی تناؤ کی پیمائش کرتا ہے، مہارت کی ترقی کی نہیں۔</li>
+                <li><strong>انفرادی تغیر:</strong> ایک ہی sTSS مختلف تیراکوں کے لیے مختلف محسوس ہوتا ہے۔ اپنی بحالی کے مطابق رہنمائی کو ایڈجسٹ کریں۔</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
+        <h2 class="mt-3xl">sTSS کیوں اہم ہے</h2>
 
-        <p class="mb-md">El Training Stress Score es la base para:</p>
+        <p class="mb-md">Training Stress Score درج ذیل کی بنیاد ہے:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Tu nivel de forma física - promedio ponderado exponencialmente de 42 días del sTSS diario</li>
-            <li><strong>ATL (Acute Training Load):</strong> Tu fatiga - promedio ponderado exponencialmente de 7 días del sTSS diario</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Tu estado de forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
-            <li><strong>Periodización:</strong> Planificar fases de entrenamiento (base, desarrollo, pico, descenso) usando progresiones de CTL objetivo</li>
-            <li><strong>Gestión de Recuperación:</strong> Saber cuándo empujar y cuándo descansar según el TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> آپ کی فٹنس کی سطح - روزانہ sTSS کی 42 دن کی تیز رفتار وزنی اوسط</li>
+            <li><strong>ATL (Acute Training Load):</strong> آپ کی تھکاوٹ - روزانہ sTSS کی 7 دن کی تیز رفتار وزنی اوسط</li>
+            <li><strong>TSB (Training Stress Balance):</strong> آپ کی فارم کی حالت - TSB = CTL - ATL (مثبت = تازہ، منفی = تھکا ہوا)</li>
+            <li><strong>دورانیہ بندی:</strong> CTL کے ہدف کی ترقی استعمال کرتے ہوئے تربیتی مراحل (بنیاد، ترقی، عروج، کمی) کی منصوبہ بندی</li>
+            <li><strong>بحالی کا انتظام:</strong> TSB کی بنیاد پر جاننا کہ کب دھکا دینا ہے اور کب آرام کرنا ہے</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Consejo Pro: Sigue tu CTL</h3>
-            <p>Registra el sTSS diario en una hoja de cálculo o diario de entrenamiento. Calcula tu promedio de 42 días (CTL) semanalmente. Objetivo de aumento de 5-10 puntos CTL por semana durante la construcción de base. Mantén o reduce ligeramente el CTL durante el descenso (1-2 semanas antes de la competición).</p>
+            <h3>پرو ٹپ: اپنی CTL کو ٹریک کریں</h3>
+            <p>اسپریڈ شیٹ یا تربیتی ڈائری میں روزانہ sTSS کو ریکارڈ کریں۔ ہفتہ وار اپنی 42 دن کی اوسط (CTL) کا حساب لگائیں۔ بنیاد کی تعمیر کے دوران ہفتے میں 5-10 پوائنٹس CTL میں اضافے کا ہدف رکھیں۔ کمی کے دوران CTL کو برقرار رکھیں یا تھوڑا کم کریں (مقابلے سے 1-2 ہفتے پہلے)۔</p>
         </div>
 
-        <h2 class="mt-3xl">Recursos Relacionados</h2>
+        <h2 class="mt-3xl">متعلقہ وسائل</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Test CSS</h3>
+                <h3 class="card-title">CSS ٹیسٹ</h3>
                 <div class="card-content">
-                    <p>¿Necesitas tu ritmo CSS? Usa nuestra calculadora gratuita de CSS con tiempos de test de 400m y 200m.</p>
-                    <a href="/ur/css/" class="btn btn-secondary btn-small mt-md">Calculadora CSS →</a>
+                    <p>اپنی CSS رفتار کی ضرورت ہے؟ 400m اور 200m ٹیسٹ کے اوقات کے ساتھ ہمارا مفت CSS کیلکولیٹر استعمال کریں۔</p>
+                    <a href="/ur/css/" class="btn btn-secondary btn-small mt-md">CSS کیلکولیٹر →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Guía de Carga de Entrenamiento</h3>
+                <h3 class="card-title">تربیتی بوجھ کی گائیڈ</h3>
                 <div class="card-content">
-                    <p>Aprende sobre CTL, ATL, TSB y las métricas del Performance Management Chart.</p>
-                    <a href="/ur/training-load/" class="btn btn-secondary btn-small mt-md">Carga de Entrenamiento →</a>
+                    <p>CTL، ATL، TSB اور Performance Management Chart کے میٹرکس کے بارے میں سیکھیں۔</p>
+                    <a href="/ur/training-load/" class="btn btn-secondary btn-small mt-md">تربیتی بوجھ →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">SwimAnalytics ایپ</h3>
                 <div class="card-content">
-                    <p>Cálculo automático de sTSS para todos los entrenamientos. Sigue las tendencias de CTL/ATL/TSB a lo largo del tiempo.</p>
-                    <a href="/ur/" class="btn btn-secondary btn-small mt-md">Más Información →</a>
+                    <p>تمام تربیتوں کے لیے خودکار sTSS حساب۔ وقت کے ساتھ CTL/ATL/TSB کے رجحانات کو ٹریک کریں۔</p>
+                    <a href="/ur/" class="btn btn-secondary btn-small mt-md">مزید معلومات →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>خودکار sTSS ٹریکنگ چاہتے ہیں؟</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">SwimAnalytics مفت ڈاؤن لوڈ کریں</a>
         </div>
     </div>
 </section>

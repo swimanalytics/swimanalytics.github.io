@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Free Swimming TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for swimming workouts - The only free sTSS calculator</p>
+        <h1>Ẹ̀rọ Ìṣirò TSS Wíwẹ́ Ọ̀fẹ́</h1>
+        <p class="lead">Ṣe ìṣirò Training Stress Score fún àwọn ìkọ́ni wíwẹ́ - Ẹ̀rọ ìṣirò sTSS ọ̀fẹ́ kan ṣoṣo</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Swimming TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifies the training load of a swimming workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A 1-hour workout at CSS pace = 100 sTSS.</p>
+            <h2>Kí Ni Swimming TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> ṣe ìṣirò ẹrù ìkọ́ni ti ìkọ́ni wíwẹ́ nípa ṣíṣepọ̀ intensity àti ìgbà. A ṣe àtúnṣe rẹ̀ láti ọ̀nà TSS kíkọ́-kẹ̀kẹ́, tí ó ń lo Critical Swim Speed (CSS) rẹ gẹ́gẹ́ bí pace threshold. Ìkọ́ni wákàtí 1 ní pace CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any swimming workout. Requires your CSS pace.</p>
+        <h2 class="mt-3xl">Ẹ̀rọ Ìṣirò sTSS Ọ̀fẹ́</h2>
+        <p class="lead mb-xl">Ṣe ìṣirò stress ìkọ́ni fún ìkọ́ni wíwẹ́ èyíkéyìí. Ó nílò pace CSS rẹ.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CSS Pace (mm:ss per 100m)</label>
+                        <label for="cssPace" class="form-label">Pace CSS Rẹ (mm:ss fún 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CSS test (e.g., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Pace threshold rẹ láti ìdánwò CSS (fún àpẹrẹ, 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">Ìgbà Ìkọ́ni (ìṣẹ́jú)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <small id="duration-help" class="form-help">Àkókò ìkọ́ni lápapọ̀ pẹ̀lú ìsinmi (1-300 ìṣẹ́jú)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
+                        <label for="avgPace" class="form-label">Pace Àpapọ̀ Ìkọ́ni (mm:ss fún 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,19 +719,19 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <small id="pace-help" class="form-help">Pace àpapọ̀ rẹ nígbà ìkọ́ni (fún àpẹrẹ, 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Ṣe Ìṣirò sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Paarẹ́</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Training Stress Score Rẹ</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
@@ -744,200 +744,200 @@
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Ìtúmọ̀ Ẹrù Ìkọ́ni</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Filled by JavaScript -->
+                        <!-- Tí JavaScript yóò kún -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Bí A Ṣe Ń Ṣe Ìṣirò sTSS</h2>
 
         <div class="formula-box">
             <h3>Formula</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                sTSS = (Ìgbà ní wákàtí) × (Intensity Factor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Níbi tí:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CSS Pace</strong> = Your threshold pace from CSS test</li>
+                    <li><strong>Intensity Factor (IF)</strong> = Pace CSS / Pace Àpapọ̀ Ìkọ́ni</li>
+                    <li><strong>Ìgbà</strong> = Àkókò ìkọ́ni lápapọ̀ ní wákàtí</li>
+                    <li><strong>Pace CSS</strong> = Pace threshold rẹ láti ìdánwò CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Àpẹrẹ Tí A Ṣiṣẹ́</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Àwọn Àlàyé Ìkọ́ni:</h4>
             <ul>
-                <li>CSS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Pace CSS: <strong>1:49/100m</strong> (ìṣẹ́jú-àáyá 109)</li>
+                <li>Ìgbà Ìkọ́ni: <strong>ìṣẹ́jú 60</strong> (wákàtí 1)</li>
+                <li>Pace Àpapọ̀: <strong>2:05/100m</strong> (ìṣẹ́jú-àáyá 125)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Ìgbésẹ̀ 1: Ṣe Ìṣirò Intensity Factor</h4>
             <div class="calculation">
-                IF = CSS Pace / Workout Pace<br>
+                IF = Pace CSS / Pace Ìkọ́ni<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Ìgbésẹ̀ 2: Ṣe Ìṣirò sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 wákàtí × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CSS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Ìtúmọ̀:</strong> Ìkọ́ni ìṣẹ́jú-60 yìí ní pace tí ó rọrùn (tí ó lọ́ra ju CSS) ṣẹ̀dá 76 sTSS - ẹrù ìkọ́ni àárín tó yẹ fún kíkọ́ ìpìlẹ̀ aerobic.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Òye Àwọn Iye sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Ìwọ̀n sTSS</th>
+                        <th>Ẹrù Ìkọ́ni</th>
+                        <th>Àkókò Ìmúpadàbọ̀</th>
+                        <th>Àpẹrẹ Ìkọ́ni</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min swim, technique drills</td>
+                        <td>Kékeré</td>
+                        <td>Ọjọ́ kannáà</td>
+                        <td>Wíwẹ́ ìṣẹ́jú-30 tó rọrùn, àwọn drills technique</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Àárín</td>
+                        <td>Ọjọ́ 1</td>
+                        <td>Endurance ìṣẹ́jú-60, pace tó dúró</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Gíga</td>
+                        <td>Ọjọ́ 1-2</td>
+                        <td>Àwọn sets threshold ìṣẹ́jú-90, àwọn intervals pace ìdíje</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Gíga Púpọ̀</td>
+                        <td>Ọjọ́ 2-3</td>
+                        <td>Ìkọ́ni lílé wákàtí-2, àwọn blocks threshold púpọ̀</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Líle</td>
+                        <td>Ọjọ́ 3+</td>
+                        <td>Ìdíje gígùn (&gt;wákàtí 2), ultra-endurance</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Àwọn Ìtọ́sọ́nà sTSS Ọ̀sọ̀ọ̀sẹ̀</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">Afojúsùn sTSS ọ̀sọ̀ọ̀sẹ̀ dá lórí ìpele ìkọ́ni àti àwọn ibi-afẹ́dí rẹ:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Swimmers</h3>
+                <h3 class="card-title">Àwọn Olùwẹ̀ Ìgbádùn</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS Ọ̀sọ̀ọ̀sẹ̀:</strong> 150-300</p>
+                    <p>Àwọn ìkọ́ni 2-3 fún ọ̀sẹ̀, sTSS 50-100 kọ̀ọ̀kan. Fojúsùn lórí technique àti kíkọ́ ìpìlẹ̀ aerobic.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Swimmers / Triathletes</h3>
+                <h3 class="card-title">Àwọn Olùwẹ̀ Fitness / Triathletes</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS Ọ̀sọ̀ọ̀sẹ̀:</strong> 300-500</p>
+                    <p>Àwọn ìkọ́ni 3-4 fún ọ̀sẹ̀, sTSS 75-125 kọ̀ọ̀kan. Ìdàpọ̀ ti endurance aerobic àti iṣẹ́ threshold.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Swimmers</h3>
+                <h3 class="card-title">Àwọn Olùwẹ̀ Masters Ìdíje</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS Ọ̀sọ̀ọ̀sẹ̀:</strong> 500-800</p>
+                    <p>Àwọn ìkọ́ni 4-6 fún ọ̀sẹ̀, sTSS 80-150 kọ̀ọ̀kan. Ìkọ́ni tí a ṣe ètò pẹ̀lú periodization.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
+                <h3 class="card-title">Àwọn Olùwẹ̀ Elite / Collegiate</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS Ọ̀sọ̀ọ̀sẹ̀:</strong> 800-1200+</p>
+                    <p>Àwọn ìkọ́ni 8-12 fún ọ̀sẹ̀, àwọn ọjọ́ méjì. Ìwọ̀n gíga pẹ̀lú ìṣàkóso ìmúpadàbọ̀ tó ṣe pàtàkì.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Àwọn Àkíyèsí Pàtàkì</h3>
             <ul>
-                <li><strong>Requires accurate CSS:</strong> Your CSS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different swimmers. Adjust guidelines based on your recovery.</li>
+                <li><strong>Ó nílò CSS tó péye:</strong> CSS rẹ gbọ́dọ̀ jẹ́ ti òde-òní (tí a dánwò láàrin ọ̀sẹ̀ 6-8) fún sTSS tó péye.</li>
+                <li><strong>Ìṣirò tó rọrùn:</strong> Ẹ̀rọ ìṣirò yìí ń lo pace àpapọ̀. sTSS tó ga ń lo Normalized Graded Pace (NGP) tí ó kà fún ètò interval.</li>
+                <li><strong>Kì í ṣe fún iṣẹ́ technique:</strong> sTSS kàn ṣe ìwọ̀n stress ìkọ́ni ara, kì í ṣe ìdàgbàsókè ọgbọ́n.</li>
+                <li><strong>Ìyàtọ̀ ẹni-kọ̀ọ̀kan:</strong> sTSS kannáà ń rí bí àyípadà fún àwọn olùwẹ̀ oríṣiríṣi. Ṣe àtúnṣe àwọn ìtọ́sọ́nà dá lórí ìmúpadàbọ̀ rẹ.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Ìdí Tí sTSS Ṣe Pàtàkì</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Training Stress Score jẹ́ ìpìlẹ̀ fún:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Ìpele fitness rẹ - àpapọ̀ tí a fọwọ́ ṣe lọ́nà exponential ti ọjọ́ 42 ti sTSS ojoojúmọ́</li>
+            <li><strong>ATL (Acute Training Load):</strong> Àárẹ̀ rẹ - àpapọ̀ tí a fọwọ́ ṣe lọ́nà exponential ti ọjọ́ 7 ti sTSS ojoojúmọ́</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Ipò rẹ - TSB = CTL - ATL (ìlọ́wọ́sí = túútùú, ìdinku = àárẹ̀)</li>
+            <li><strong>Periodization:</strong> Ṣètò àwọn ìpele ìkọ́ni (ìpìlẹ̀, kíkọ́, òkè, ìdínkù) nípa lílo àwọn ìlọsíwájú CTL afojúsùn</li>
+            <li><strong>Ìṣàkóso Ìmúpadàbọ̀:</strong> Mọ ìgbà láti tì àti ìgbà láti sinmi dá lórí TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Ìmọ̀ràn Pro: Ṣe Ìtọpinpin CTL Rẹ</h3>
+            <p>Ṣe àkọsílẹ̀ sTSS ojoojúmọ́ nínú spreadsheet tàbí ìwé àkọsílẹ̀ ìkọ́ni. Ṣe ìṣirò àpapọ̀ ọjọ́-42 rẹ (CTL) lọ́sọ̀ọ̀sẹ̀. Afojúsùn ìpọ̀sí àwọn point CTL 5-10 fún ọ̀sẹ̀ nígbà kíkọ́ ìpìlẹ̀. Dáàbò bo tàbí dínkù CTL díẹ̀ nígbà taper (ọ̀sẹ̀ 1-2 ṣáájú ìdíje).</p>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Àwọn Ohun-èlò Tó Jọmọ́</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">Ìdánwò CSS</h3>
                 <div class="card-content">
-                    <p>Need your CSS pace? Use our free CSS calculator with 400m and 200m test times.</p>
-                    <a href="/yo/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>O nílò pace CSS rẹ? Lo ẹ̀rọ ìṣirò CSS ọ̀fẹ́ wa pẹ̀lú àwọn àkókò ìdánwò 400m àti 200m.</p>
+                    <a href="/yo/css/" class="btn btn-secondary btn-small mt-md">Ẹ̀rọ Ìṣirò CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Ìtọ́sọ́nà Ẹrù Ìkọ́ni</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/yo/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Kọ́ nípa CTL, ATL, TSB àti àwọn metrics Performance Management Chart.</p>
+                    <a href="/yo/training-load/" class="btn btn-secondary btn-small mt-md">Ẹrù Ìkọ́ni →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">SwimAnalytics App</h3>
+                <h3 class="card-title">App SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/yo/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Ìṣirò sTSS aládàáṣe fún gbogbo àwọn ìkọ́ni. Ṣe ìtọpinpin àwọn ìṣesí CTL/ATL/TSB ní àkókò.</p>
+                    <a href="/yo/" class="btn btn-secondary btn-small mt-md">Kọ́ Síi →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Free</a>
+            <p class="mb-md"><strong>Ṣé o fẹ́ ìtọpinpin sTSS aládàáṣe?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Ṣàgbékalẹ̀ SwimAnalytics Ọ̀fẹ́</a>
         </div>
     </div>
 </section>

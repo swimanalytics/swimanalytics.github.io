@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Technical Reference & Formulas</h1>
-        <p class="lead">Complete Mathematical Implementation</p>
+        <h1>Rejea ya Kiufundi & Fomula</h1>
+        <p class="lead">Utekelezaji Kamili wa Kihisabati</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementation Guide</h2>
-        <p class="lead">This page provides copy-paste formulas and step-by-step calculation methods for all SwimAnalytics metrics. Use these for custom implementations, verification, or deeper understanding.</p>
+        <h2>Mwongozo wa Utekelezaji</h2>
+        <p class="lead">Ukurasa huu unatoa fomula za kunakili-bandika na mbinu za kuhesabu hatua kwa hatua kwa vipimo vyote vya SwimAnalytics. Tumia hizi kwa utekelezaji wa kawaida, uthibitisho, au uelewa wa kina zaidi.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementation Notes</h3>
+            <h3>⚠️ Vidokezo vya Utekelezaji</h3>
             <ul>
-                <li>All times should be converted to seconds for calculations</li>
-                <li>Swimming pace is inverse (higher % = slower pace)</li>
-                <li>Always validate inputs for reasonable ranges</li>
-                <li>Handle edge cases (division by zero, negative values)</li>
+                <li>Nyakati zote zinapaswa kubadilishwa kuwa sekunde kwa mahesabu</li>
+                <li>Kasi ya kuogelea ni inverse (% ya juu = kasi ya pole)</li>
+                <li>Daima thibitisha ingizo kwa masafa yenye mantiki</li>
+                <li>Shughulikia kesi za pembeni (kugawanya kwa sifuri, thamani hasi)</li>
             </ul>
         </div>
     </div>
@@ -683,12 +683,12 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Core Performance Metrics</h2>
+        <h2>Vipimo Vya Msingi vya Utendaji</h2>
 
         <div class="formula-card">
-            <h3>Critical Swim Speed (CSS)</h3>
+            <h3>Kasi Muhimu ya Kuogelea (CSS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
@@ -699,32 +699,32 @@
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Kikokotoo cha Kuingiliana - Jaribu Fomula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distance 1 (meters):</label>
+                            <label for="css-d1">Umbali 1 (mita):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Time 1 (mm:ss):</label>
+                            <label for="css-t1">Muda 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distance 2 (meters):</label>
+                            <label for="css-d2">Umbali 2 (mita):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Time 2 (mm:ss):</label>
+                            <label for="css-t2">Muda 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">CSS Pace per 100m:</div>
+                        <div class="result-label">Kasi ya CSS kwa 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Hatua za kuhesabu:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
                                 Pace/100m = 100 / 0.917 = 109 seconds = 1:49
@@ -733,7 +733,7 @@
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -809,9 +809,9 @@ const result = calculateCSS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>Alama ya Mkazo wa Mafunzo ya Kuogelea (sTSS)</h3>
             <div class="formula-content">
-                <h4>Complete Formula:</h4>
+                <h4>Fomula Kamili:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         sTSS = (IF³) × Duration (hours) × 100
@@ -825,32 +825,32 @@ const result = calculateCSS(200, 150, 400, 368);
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Kikokotoo cha Kuingiliana - Jaribu Fomula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distance (meters):</label>
+                            <label for="stss-distance">Umbali (mita):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duration (minutes):</label>
+                            <label for="stss-duration">Muda (dakika):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">CSS Pace (mm:ss per 100m):</label>
+                            <label for="stss-css">Kasi ya CSS (mm:ss kwa 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calculated):</label>
+                            <label>FTP (iliyohesabiwa):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Calculated sTSS:</div>
+                        <div class="result-label">sTSS Iliyohesabiwa:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation steps:</strong><br>
+                            <strong>Hatua za kuhesabu:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -969,7 +969,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
         <div class="formula-card">
             <h3>SWOLF</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         SWOLF = Lap Time (seconds) + Stroke Count
@@ -980,18 +980,18 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Kikokotoo cha Kuingiliana - Jaribu Fomula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Lap Time (seconds):</label>
+                            <label for="swolf-time">Muda wa Lap (sekunde):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Stroke Count:</label>
+                            <label for="swolf-strokes">Hesabu ya Mikwaju:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Pool Length (m):</label>
+                            <label for="swolf-pool">Urefu wa Bwawa (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,12 +999,12 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">Alama ya SWOLF:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Hesabu:</strong><br>
                             <span id="swolf-steps">
                                 SWOLF = 20s + 15 strokes = 35
                             </span>
@@ -1012,7 +1012,7 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1073,12 +1073,12 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Stroke Mechanics</h2>
+        <h2>Mekanika ya Mvuto</h2>
 
         <div class="formula-card">
-            <h3>Stroke Rate (SR)</h3>
+            <h3>Kiwango cha Mvuto (SR)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         SR = 60 / Cycle Time (seconds)
@@ -1089,24 +1089,24 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactive Calculator - Test the Formula</h4>
+                    <h4>🧪 Kikokotoo cha Kuingiliana - Jaribu Fomula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Stroke Count:</label>
+                            <label for="sr-strokes">Hesabu ya Mikwaju:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Time (seconds):</label>
+                            <label for="sr-time">Muda (sekunde):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Stroke Rate (SPM):</div>
+                        <div class="result-label">Kiwango cha Mvuto (SPM):</div>
                         <div class="result-value" id="sr-result">72</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calculation:</strong><br>
+                            <strong>Hesabu:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementation:</h4>
+                <h4 class="mt-xl">Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1151,9 +1151,9 @@ const sr = calculateStrokeRate(30, 25);
         </div>
 
         <div class="formula-card">
-            <h3>Distance Per Stroke (DPS)</h3>
+            <h3>Umbali kwa Mvuto (DPS)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         DPS = Distance / Stroke Count
@@ -1163,7 +1163,7 @@ const sr = calculateStrokeRate(30, 25);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,16 +1180,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocity from SR and DPS</h3>
+            <h3>Kasi kutoka SR na DPS</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         Velocity (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1201,16 +1201,16 @@ const velocity = calculateVelocity(70, 1.6);
         </div>
 
         <div class="formula-card">
-            <h3>Stroke Index (SI)</h3>
+            <h3>Faharasa ya Mvuto (SI)</h3>
             <div class="formula-content">
-                <h4>Formula:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         SI = Velocity (m/s) × DPS (m/stroke)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1225,12 +1225,12 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Performance Management Chart (PMC)</h2>
+        <h2>Chati ya Usimamizi wa Utendaji (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Calculations</h3>
+            <h3>Mahesabu ya CTL, ATL, TSB</h3>
             <div class="formula-content">
-                <h4>Formulas:</h4>
+                <h4>Fomula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
                         CTL today = CTL yesterday + (TSS today - CTL yesterday) × (1/42)
@@ -1243,7 +1243,7 @@ const si = calculateStrokeIndex(1.5, 1.7);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Advanced Calculations</h2>
+        <h2>Mahesabu ya Juu</h2>
 
         <div class="formula-card">
-            <h3>CSS from Multiple Distances (Regression Method)</h3>
+            <h3>CSS kutoka Umbali Mwingi (Njia ya Regression)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Intensity Factor from Pace</h3>
+            <h3>Sababu ya Ukali kutoka Kasi</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Pace Consistency Analysis</h3>
+            <h3>Uchanganuzi wa Uthabiti wa Kasi</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1379,9 +1379,9 @@ const analysis = analyzePaceConsistency(laps);
         </div>
 
         <div class="formula-card">
-            <h3>Fatigue Detection from Stroke Count</h3>
+            <h3>Ugunduzi wa Uchovu kutoka Hesabu ya Mikwaju</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1418,12 +1418,12 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validation</h2>
+        <h2>Uthibitishaji wa Data</h2>
 
         <div class="formula-card">
-            <h3>Workout Data Quality Checks</h3>
+            <h3>Ukaguzi wa Ubora wa Data ya Mazoezi</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Helper Functions</h2>
+        <h2>Vipengele vya Kusaidia</h2>
 
         <div class="formula-card">
-            <h3>Time Conversion Utilities</h3>
+            <h3>Zana za Kubadilisha Muda</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementation:</h4>
+                <h4>Utekelezaji wa JavaScript:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Implementation Resources</h2>
-        <p class="lead">All formulas on this page are production-ready and validated against scientific literature. Use them for custom analytics tools, verification, or deeper understanding of swimming performance calculations.</p>
+        <h2>Rasilimali za Utekelezaji</h2>
+        <p class="lead">Fomula zote kwenye ukurasa huu ziko tayari kwa uzalishaji na zimethibitishwa dhidi ya fasihi ya kisayansi. Tumia kwa zana za uchanganuzi wa kawaida, uthibitisho, au uelewa wa kina zaidi wa mahesabu ya utendaji wa kuogelea.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
+            <h3>💡 Mazoea Bora</h3>
             <ul class="text-left">
-                <li><strong>Validate inputs:</strong> Check for reasonable ranges before calculating</li>
-                <li><strong>Handle edge cases:</strong> Division by zero, negative values, null data</li>
-                <li><strong>Round appropriately:</strong> CTL/ATL/TSB to 1 decimal, sTSS to integer</li>
-                <li><strong>Store precision:</strong> Keep full precision in database, round for display</li>
-                <li><strong>Test thoroughly:</strong> Use known-good data to verify calculations</li>
+                <li><strong>Thibitisha ingizo:</strong> Angalia masafa yenye mantiki kabla ya kuhesabu</li>
+                <li><strong>Shughulikia kesi za pembeni:</strong> Kugawanya kwa sifuri, thamani hasi, data isiyo na kitu</li>
+                <li><strong>Zungushia vizuri:</strong> CTL/ATL/TSB hadi decimal 1, sTSS hadi integer</li>
+                <li><strong>Hifadhi usahihi:</strong> Weka usahihi kamili katika hifadhidata, zungushia kwa kuonyesha</li>
+                <li><strong>Jaribu kwa ukamilifu:</strong> Tumia data inayojulikana nzuri kuthibitisha mahesabu</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/sw/" class="btn btn-primary btn-large">Back to Home</a>
-            <a href="/sw/research/" class="btn btn-secondary">Scientific Foundation</a>
+            <a href="/sw/" class="btn btn-primary btn-large">Rudi Nyumbani</a>
+            <a href="/sw/research/" class="btn btn-secondary">Msingi wa Kisayansi</a>
         </div>
     </div>
 </section>

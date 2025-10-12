@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Free Swimming TSS Calculator</h1>
-        <p class="lead">Calculate Training Stress Score for swimming workouts - The only free sTSS calculator</p>
+        <h1>Na'urar Ƙididdigewa Ta TSS Kyauta Don Iyo</h1>
+        <p class="lead">Ƙididdige Makin Damuwa Na Horo don motsa jikin iyo - Na'urar sTSS kawai mai kyauta</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>What is Swimming TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifies the training load of a swimming workout by combining intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A 1-hour workout at CSS pace = 100 sTSS.</p>
+            <h2>Menene Swimming TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> yana ƙididdigewar nauyin horo na motsa jikin iyo ta hanyar haɗa ƙarfi da tsawon lokaci. An gyara shi daga dabarar TSS na keke, yana amfani da Critical Swim Speed (CSS) ku a matsayin saurin iyaka. Motsa jiki na awa 1 a saurin CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Free sTSS Calculator</h2>
-        <p class="lead mb-xl">Calculate training stress for any swimming workout. Requires your CSS pace.</p>
+        <h2 class="mt-3xl">Na'urar Ƙididdigewa Ta sTSS Kyauta</h2>
+        <p class="lead mb-xl">Ƙididdige damuwar horo don kowane motsa jikin iyo. Yana buƙatar saurin CSS ku.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Your CSS Pace (mm:ss per 100m)</label>
+                        <label for="cssPace" class="form-label">Saurin CSS Ku (mm:ss kowace 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Your threshold pace from CSS test (e.g., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Saurin iyaka ku daga gwajin CSS (misali, 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Workout Duration (minutes)</label>
+                        <label for="workoutDuration" class="form-label">Tsawon Lokacin Motsa Jiki (mintuna)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Total workout time including rest (1-300 minutes)</small>
+                        <small id="duration-help" class="form-help">Jimlar lokacin motsa jiki ciki har da hutu (1-300 mintuna)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Average Workout Pace (mm:ss per 100m)</label>
+                        <label for="avgPace" class="form-label">Matsakaicin Saurin Motsa Jiki (mm:ss kowace 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,32 +719,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Your average pace during the workout (e.g., 2:05)</small>
+                        <small id="pace-help" class="form-help">Matsakaicin saurin ku yayin motsa jiki (misali, 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculate sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Ƙididdige sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Share</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Your Training Stress Score</h3>
+                <h3>Makin Damuwar Horo Ku</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Ma'aunin Ƙarfi (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Training Load Interpretation</h4>
+                    <h4>Fassarar Nauyin Horo</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -752,192 +752,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">How sTSS is Calculated</h2>
+        <h2 class="mt-3xl">Yadda Ake Ƙididdigewar sTSS</h2>
 
         <div class="formula-box">
-            <h3>Formula</h3>
+            <h3>Dabara</h3>
             <div class="formula">
-                sTSS = (Duration in hours) × (Intensity Factor)² × 100
+                sTSS = (Tsawon lokaci a cikin sa'o'i) × (Ma'aunin Ƙarfi)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Where:</p>
+                <p>Inda:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Pace / Average Workout Pace</li>
-                    <li><strong>Duration</strong> = Total workout time in hours</li>
-                    <li><strong>CSS Pace</strong> = Your threshold pace from CSS test</li>
+                    <li><strong>Ma'aunin Ƙarfi (IF)</strong> = Saurin CSS / Matsakaicin Saurin Motsa Jiki</li>
+                    <li><strong>Tsawon lokaci</strong> = Jimlar lokacin motsa jiki a cikin sa'o'i</li>
+                    <li><strong>Saurin CSS</strong> = Saurin iyaka ku daga gwajin CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Worked Example</h3>
+        <h3 class="mt-xl">Misali Na Aiki</h3>
         <div class="example-box">
-            <h4>Workout Details:</h4>
+            <h4>Cikakkun Bayanai Na Motsa Jiki:</h4>
             <ul>
-                <li>CSS Pace: <strong>1:49/100m</strong> (109 seconds)</li>
-                <li>Workout Duration: <strong>60 minutes</strong> (1 hour)</li>
-                <li>Average Pace: <strong>2:05/100m</strong> (125 seconds)</li>
+                <li>Saurin CSS: <strong>1:49/100m</strong> (daƙiƙa 109)</li>
+                <li>Tsawon Lokacin Motsa Jiki: <strong>mintuna 60</strong> (awa 1)</li>
+                <li>Matsakaicin Sauri: <strong>2:05/100m</strong> (daƙiƙa 125)</li>
             </ul>
 
-            <h4>Step 1: Calculate Intensity Factor</h4>
+            <h4>Mataki 1: Ƙididdigewar Ma'aunin Ƙarfi</h4>
             <div class="calculation">
-                IF = CSS Pace / Workout Pace<br>
+                IF = Saurin CSS / Saurin Motsa Jiki<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Step 2: Calculate sTSS</h4>
+            <h4>Mataki 2: Ƙididdigewar sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 hours × (0.872)² × 100<br>
+                sTSS = 1.0 sa'o'i × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretation:</strong> This 60-minute workout at easy pace (slower than CSS) generated 76 sTSS - a moderate training load suitable for aerobic base building.</p>
+            <p class="mt-md"><strong>Fassara:</strong> Wannan motsa jikin mintuna 60 a saurin mai sauƙi (jinkirin fiye da CSS) ya samar da sTSS 76 - nauyin horo matsakaici mai dacewa don gina tushen aerobic.</p>
         </div>
 
-        <h2 class="mt-3xl">Understanding sTSS Values</h2>
+        <h2 class="mt-3xl">Fahimtar Ƙimar sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Range</th>
-                        <th>Training Load</th>
-                        <th>Recovery Time</th>
-                        <th>Example Workout</th>
+                        <th>Kewayo Na sTSS</th>
+                        <th>Nauyin Horo</th>
+                        <th>Lokacin Farfadowa</th>
+                        <th>Misali Na Motsa Jiki</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Low</td>
-                        <td>Same day</td>
-                        <td>Easy 30-min swim, technique drills</td>
+                        <td>Ƙarami</td>
+                        <td>Ranar guda</td>
+                        <td>Iyo mai sauƙi na min-30, motsin dabara</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderate</td>
-                        <td>1 day</td>
-                        <td>60-min endurance, steady pace</td>
+                        <td>Matsakaici</td>
+                        <td>Rana 1</td>
+                        <td>Jimrewa na min-60, saurin daidai</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>High</td>
-                        <td>1-2 days</td>
-                        <td>90-min threshold sets, race pace intervals</td>
+                        <td>Babba</td>
+                        <td>Kwanaki 1-2</td>
+                        <td>Saiti na iyaka na min-90, tazaran saurin gasa</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Very High</td>
-                        <td>2-3 days</td>
-                        <td>2-hour hard training, multiple threshold blocks</td>
+                        <td>Mai Girma Sosai</td>
+                        <td>Kwanaki 2-3</td>
+                        <td>Horo mai wuya na awa-2, tubalan iyaka da yawa</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreme</td>
-                        <td>3+ days</td>
-                        <td>Long race (&gt;2 hours), ultra-endurance</td>
+                        <td>Mai Matsananci</td>
+                        <td>Kwanaki 3+</td>
+                        <td>Gasa mai tsawo (&gt;sa'o'i 2), jimrewa-ultra</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Weekly sTSS Guidelines</h2>
+        <h2 class="mt-3xl">Jagorancin sTSS Na Mako-Mako</h2>
 
-        <p class="mb-md">Target weekly sTSS depends on your training level and goals:</p>
+        <p class="mb-md">Manufar sTSS na mako-mako yana dogara kan matakin horon ku da manufofi:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreational Swimmers</h3>
+                <h3 class="card-title">Masu Iyo Na Nishaɗi</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 150-300</p>
-                    <p>2-3 workouts per week, 50-100 sTSS each. Focus on technique and building aerobic base.</p>
+                    <p class="mb-sm"><strong>sTSS Na Mako:</strong> 150-300</p>
+                    <p>Motsa jiki 2-3 a mako, sTSS 50-100 kowane. Mayar da hankali akan dabara da gina tushen aerobic.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Swimmers / Triathletes</h3>
+                <h3 class="card-title">Masu Iyo Na Lafiya / Triathletes</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 300-500</p>
-                    <p>3-4 workouts per week, 75-125 sTSS each. Mix of aerobic endurance and threshold work.</p>
+                    <p class="mb-sm"><strong>sTSS Na Mako:</strong> 300-500</p>
+                    <p>Motsa jiki 3-4 a mako, sTSS 75-125 kowane. Haɗuwa na jimrewa aerobic da aikin iyaka.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Competitive Masters Swimmers</h3>
+                <h3 class="card-title">Masu Iyo Na Masters Na Gasa</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 500-800</p>
-                    <p>4-6 workouts per week, 80-150 sTSS each. Structured training with periodization.</p>
+                    <p class="mb-sm"><strong>sTSS Na Mako:</strong> 500-800</p>
+                    <p>Motsa jiki 4-6 a mako, sTSS 80-150 kowane. Horo mai tsari tare da periodization.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
+                <h3 class="card-title">Masu Iyo Elite / Na Kwaleji</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Weekly sTSS:</strong> 800-1200+</p>
-                    <p>8-12 workouts per week, double days. High volume with recovery management critical.</p>
+                    <p class="mb-sm"><strong>sTSS Na Mako:</strong> 800-1200+</p>
+                    <p>Motsa jiki 8-12 a mako, kwanaki biyu. Yawa mai girma tare da sarrafa farfadowa mai mahimmanci.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Important Notes</h3>
+            <h3>⚠️ Bayanai Masu Mahimmanci</h3>
             <ul>
-                <li><strong>Requires accurate CSS:</strong> Your CSS must be current (tested within 6-8 weeks) for accurate sTSS.</li>
-                <li><strong>Simplified calculation:</strong> This calculator uses average pace. Advanced sTSS uses Normalized Graded Pace (NGP) which accounts for interval structure.</li>
-                <li><strong>Not for technique work:</strong> sTSS only measures physical training stress, not skill development.</li>
-                <li><strong>Individual variation:</strong> Same sTSS feels different for different swimmers. Adjust guidelines based on your recovery.</li>
+                <li><strong>Yana buƙatar CSS mai inganci:</strong> CSS ku dole ne ya kasance na zamani (an gwada a cikin makonni 6-8) don sTSS mai inganci.</li>
+                <li><strong>Ƙididdigewar mai sauƙi:</strong> Wannan na'urar ƙididdigewa tana amfani da matsakaicin sauri. Ƙididdigewar sTSS mai haɓaka tana amfani da Normalized Graded Pace (NGP) wanda ke ƙididdigewar tsarin tazara.</li>
+                <li><strong>Ba don aikin fasaha ba:</strong> sTSS kawai yana auna damuwar horon jiki, ba haɓakar fasaha ba.</li>
+                <li><strong>Bambancin mutum-mutum:</strong> sTSS iri ɗaya yana jin daban ga masu iyo daban-daban. Daidaita jagorarori bisa farfadowar ku.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Why sTSS Matters</h2>
+        <h2 class="mt-3xl">Me ya sa sTSS Yana Da Mahimmanci</h2>
 
-        <p class="mb-md">Training Stress Score is the foundation for:</p>
+        <p class="mb-md">Makin Damuwar Horo shine tushe don:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Your fitness level - 42-day exponentially weighted average of daily sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Your fatigue - 7-day exponentially weighted average of daily sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Your form - TSB = CTL - ATL (positive = fresh, negative = fatigued)</li>
-            <li><strong>Periodization:</strong> Plan training phases (base, build, peak, taper) using target CTL progressions</li>
-            <li><strong>Recovery Management:</strong> Know when to push and when to rest based on TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Matakin lafiyar ku - matsakaici mai nauyi na yau da kullun na kwanaki-42 na sTSS na yau da kullun</li>
+            <li><strong>ATL (Acute Training Load):</strong> Gajiyar ku - matsakaici mai nauyi na yau da kullun na kwana-7 na sTSS na yau da kullun</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Sifar ku - TSB = CTL - ATL (tabbatacce = sabo, korau = gajiyawa)</li>
+            <li><strong>Periodization:</strong> Shirya lokutan horo (tushe, gini, kololuwa, taper) ta amfani da ci gaban CTL na manufa</li>
+            <li><strong>Sarrafa Farfadowa:</strong> San lokacin da za ku turawa da lokacin da za ku huta bisa TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Track Your CTL</h3>
-            <p>Record daily sTSS in a spreadsheet or training log. Calculate your 42-day average (CTL) weekly. Target 5-10 CTL points increase per week during base building. Maintain or slightly reduce CTL during taper (1-2 weeks before race).</p>
+            <h3>Shawarar Pro: Bi Diddigin CTL Ku</h3>
+            <p>Yi rikodin sTSS na yau da kullun a cikin spreadsheet ko rubutun horo. Ƙididdigewar matsakaicin ku na kwanaki-42 (CTL) kowane mako. Manufa ƙimar CTL ta ƙaru 5-10 a kowane mako yayin ginin tushe. Kiyaye ko rage CTL kaɗan yayin taper (makonni 1-2 kafin gasa).</p>
         </div>
 
-        <h2 class="mt-3xl">Related Resources</h2>
+        <h2 class="mt-3xl">Albarkatun Da Suka Dace</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">Gwajin CSS</h3>
                 <div class="card-content">
-                    <p>Need your CSS pace? Use our free CSS calculator with 400m and 200m test times.</p>
-                    <a href="/ha/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>Kuna buƙatar saurin CSS ku? Yi amfani da na'urar ƙididdigewa ta CSS kyauta tare da lokutan gwaji na 400m da 200m.</p>
+                    <a href="/ha/css/" class="btn btn-secondary btn-small mt-md">Na'urar CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Training Load Guide</h3>
+                <h3 class="card-title">Jagorar Nauyin Horo</h3>
                 <div class="card-content">
-                    <p>Learn about CTL, ATL, TSB and Performance Management Chart metrics.</p>
-                    <a href="/ha/training-load/" class="btn btn-secondary btn-small mt-md">Training Load →</a>
+                    <p>Koyi game da CTL, ATL, TSB da ma'aunai na Performance Management Chart.</p>
+                    <a href="/ha/training-load/" class="btn btn-secondary btn-small mt-md">Nauyin Horo →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">SwimAnalytics App</h3>
+                <h3 class="card-title">Aikace-aikacen SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Automatic sTSS calculation for all workouts. Track CTL/ATL/TSB trends over time.</p>
-                    <a href="/ha/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
+                    <p>Ƙididdigewar sTSS ta atomatik don duk motsa jiki. Bi diddigin yanayin CTL/ATL/TSB akan lokaci.</p>
+                    <a href="/ha/" class="btn btn-secondary btn-small mt-md">Ƙara Koyo →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Want automatic sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Free</a>
+            <p class="mb-md"><strong>Kuna son bin diddigin sTSS ta atomatik?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Zazzage SwimAnalytics Kyauta</a>
         </div>
     </div>
 </section>
