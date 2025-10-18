@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Technische Referentie en Formules</h1>
-        <p class="lead">Volledige Wiskundige Implementatie</p>
+        <h1>Tegniese Verwysing en Formules</h1>
+        <p class="lead">Volledige Wiskundige Implementering</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Implementatiegids</h2>
-        <p class="lead">Deze pagina biedt kant-en-klare formules voor kopiëren en plakken, plus stap-voor-stap berekeningsmethoden voor alle SwimAnalytics metrieken. Gebruik ze voor aangepaste implementaties, verificatie of dieper begrip.</p>
+        <h2>Implementeringsgids</h2>
+        <p class="lead">Hierdie bladsy bied kant-en-klaar formules vir kopieer en plak, plus stap-vir-stap berekeningsmetodes vir alle SwimAnalytics maatstawwe. Gebruik hulle vir pasgemaakte implementerings, verifikasie of dieper begrip.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Implementatie Opmerkingen</h3>
+            <h3>⚠️ Implementering Notas</h3>
             <ul>
-                <li>Alle tijden moeten omgezet worden naar seconden voor berekeningen</li>
-                <li>Zwemtempo is omgekeerd (hoger % = langzamer tempo)</li>
-                <li>Valideer altijd invoer voor redelijke bereiken</li>
-                <li>Behandel edge cases (delen door nul, negatieve waarden)</li>
+                <li>Alle tye moet omgeskakel word na sekondes vir berekeninge</li>
+                <li>Swem tempo is omgekeerd (hoër % = stadiger tempo)</li>
+                <li>Valideer altyd insette vir redelike reekse</li>
+                <li>Hanteer randgevalle (deling deur nul, negatiewe waardes)</li>
             </ul>
         </div>
     </div>
@@ -683,7 +683,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Kernprestatie Metrieken</h2>
+        <h2>Kern Prestasie Maatstawwe</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
@@ -694,19 +694,19 @@
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Tempo/100m (seconden) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS Tempo/100m (sekondes) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactieve Calculator - Test de Formule</h4>
+                    <h4>🧪 Interaktiewe Sakrekenaar - Toets die Formule</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="css-d1">Afstand 1 (meters):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Tijd 1 (mm:ss):</label>
+                            <label for="css-t1">Tyd 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
@@ -714,7 +714,7 @@
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Tijd 2 (mm:ss):</label>
+                            <label for="css-t2">Tyd 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
@@ -724,16 +724,16 @@
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Berekeningsstappen:</strong><br>
+                            <strong>Berekeningstappe:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Tempo/100m = 100 / 0.917 = 109 seconden = 1:49
+                                Tempo/100m = 100 / 0.917 = 109 sekondes = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementatie:</h4>
+                <h4 class="mt-xl">JavaScript Implementering:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -777,7 +777,7 @@ const result = calculateCSS(200, 150, 400, 368);
                         const d1 = parseFloat(document.getElementById('css-d1').value);
                         const t1Input = document.getElementById('css-t1').value;
                         const d2 = parseFloat(document.getElementById('css-d2').value);
-                        const t2Input = document.getElementById('css-t2').value);
+                        const t2Input = document.getElementById('css-t2').value;
 
                         if (!d1 || !t1Input || !d2 || !t2Input) return;
 
@@ -791,7 +791,7 @@ const result = calculateCSS(200, 150, 400, 368);
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
                             `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3)} m/s<br>` +
-                            `Tempo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} seconden = ${pace_formatted}`;
+                            `Tempo/100m = 100 / ${css_ms.toFixed(3)} = ${Math.round(pace_per_100m)} sekondes = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -814,25 +814,25 @@ const result = calculateCSS(200, 150, 400, 368);
                 <h4>Volledige Formule:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duur (uren) × 100
+                        sTSS = (IF³) × Duur (ure) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Totale Afstand / Totale Tijd (m/min)
+                        NSS = Totale Afstand / Totale Tyd (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactieve Calculator - Test de Formule</h4>
+                    <h4>🧪 Interaktiewe Sakrekenaar - Toets die Formule</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
                             <label for="stss-distance">Afstand (meters):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Duur (minuten):</label>
+                            <label for="stss-duration">Duur (minute):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
@@ -840,7 +840,7 @@ const result = calculateCSS(200, 150, 400, 368);
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (berekend):</label>
+                            <label>FTP (bereken):</label>
                             <input type="text" id="stss-ftp" readonly value="64.5 m/min">
                         </div>
                     </div>
@@ -850,7 +850,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Berekeningsstappen:</strong><br>
+                            <strong>Berekeningstappe:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54.5 m/min<br>
                                 FTP = 100 / (93/60) = 64.5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementatie:</h4>
+                <h4 class="mt-xl">JavaScript Implementering:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -972,26 +972,26 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                 <h4>Formule:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Baantijd (seconden) + Slagtelling
+                        SWOLF = Baan Tyd (sekondes) + Slag Telling
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Tijd × 25/Baanlengte) + (Slagen × 25/Baanlengte)
+                        SWOLF₂₅ = (Tyd × 25/Swembad Lengte) + (Slae × 25/Swembad Lengte)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactieve Calculator - Test de Formule</h4>
+                    <h4>🧪 Interaktiewe Sakrekenaar - Toets die Formule</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Baantijd (seconden):</label>
+                            <label for="swolf-time">Baan Tyd (sekondes):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Slagtelling:</label>
+                            <label for="swolf-strokes">Slag Telling:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Baanlengte (m):</label>
+                            <label for="swolf-pool">Swembad Lengte (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,20 +999,20 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">SWOLF Score:</div>
+                        <div class="result-label">SWOLF Telling:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
                             <strong>Berekening:</strong><br>
                             <span id="swolf-steps">
-                                SWOLF = 20s + 15 slagen = 35
+                                SWOLF = 20s + 15 slae = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementatie:</h4>
+                <h4 class="mt-xl">JavaScript Implementering:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1042,13 +1042,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} slagen = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} slae = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Genormaliseerde Tijd = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
-                                   `Genormaliseerde Slagen = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
+                            steps = `Genormaliseerde Tyd = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1)}s<br>` +
+                                   `Genormaliseerde Slae = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1)}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1)} + ${normalizedStrokes.toFixed(1)} = ${swolf.toFixed(1)}`;
                         }
 
@@ -1073,7 +1073,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Slagmechanica</h2>
+        <h2>Slag Meganika</h2>
 
         <div class="formula-card">
             <h3>Stroke Rate (SR)</h3>
@@ -1081,22 +1081,22 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                 <h4>Formule:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Cyclustijd (seconden)
+                        SR = 60 / Siklus Tyd (sekondes)
                     </div>
                     <div class="formula">
-                        SR = (Aantal Slagen / Tijd in seconden) × 60
+                        SR = (Aantal Slae / Tyd in sekondes) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Interactieve Calculator - Test de Formule</h4>
+                    <h4>🧪 Interaktiewe Sakrekenaar - Toets die Formule</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Slagtelling:</label>
+                            <label for="sr-strokes">Slag Telling:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Tijd (seconden):</label>
+                            <label for="sr-time">Tyd (sekondes):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">JavaScript Implementatie:</h4>
+                <h4 class="mt-xl">JavaScript Implementering:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1156,14 +1156,14 @@ const sr = calculateStrokeRate(30, 25);
                 <h4>Formule:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Afstand / Slagtelling
+                        DPS = Afstand / Slag Telling
                     </div>
                     <div class="formula">
                         DPS = Afstand / (SR / 60)
                     </div>
                 </div>
 
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,7 +1180,7 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Snelheid vanuit SR en DPS</h3>
+            <h3>Snelheid vanaf SR en DPS</h3>
             <div class="formula-content">
                 <h4>Formule:</h4>
                 <div class="formula-box-large">
@@ -1189,7 +1189,7 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1210,7 +1210,7 @@ const velocity = calculateVelocity(70, 1.6);
                     </div>
                 </div>
 
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1228,22 +1228,22 @@ const si = calculateStrokeIndex(1.5, 1.7);
         <h2>Performance Management Chart (PMC)</h2>
 
         <div class="formula-card">
-            <h3>CTL, ATL, TSB Berekeningen</h3>
+            <h3>CTL, ATL, TSB Berekeninge</h3>
             <div class="formula-content">
                 <h4>Formules:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL vandaag = CTL gisteren + (TSS vandaag - CTL gisteren) × (1/42)
+                        CTL vandag = CTL gister + (TSS vandag - CTL gister) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL vandaag = ATL gisteren + (TSS vandaag - ATL gisteren) × (1/7)
+                        ATL vandag = ATL gister + (TSS vandag - ATL gister) × (1/7)
                     </div>
                     <div class="formula">
-                        TSB = CTL gisteren - ATL gisteren
+                        TSB = CTL gister - ATL gister
                     </div>
                 </div>
 
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Geavanceerde Berekeningen</h2>
+        <h2>Gevorderde Berekeninge</h2>
 
         <div class="formula-card">
-            <h3>CSS van Meerdere Afstanden (Regressie Methode)</h3>
+            <h3>CSS vanaf Veelvuldige Afstande (Regressie Metode)</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Intensiteitsfactor vanuit Tempo</h3>
+            <h3>Intensiteitsfaktor vanaf Tempo</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Tempo Consistentie Analyse</h3>
+            <h3>Tempo Konsekwentheid Analise</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1362,7 +1362,7 @@ const if_value = calculateIntensityFactor(110, 93);
     coefficientOfVariation,
     consistency: coefficientOfVariation < 5 ? "Uitstekend" :
                  coefficientOfVariation < 10 ? "Goed" :
-                 coefficientOfVariation < 15 ? "Matig" : "Variabel"
+                 coefficientOfVariation < 15 ? "Matig" : "Wisselvallig"
   };
 }
 
@@ -1379,9 +1379,9 @@ const analysis = analyzePaceConsistency(laps);
         </div>
 
         <div class="formula-card">
-            <h3>Vermoeidheid Detectie via Slagtelling</h3>
+            <h3>Moegheid Opsporing deur Slag Telling</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1399,7 +1399,7 @@ const analysis = analyzePaceConsistency(laps);
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
     fatigueLevel: strokeCountIncrease < 5 ? "Minimaal" :
                   strokeCountIncrease < 10 ? "Matig" :
-                  strokeCountIncrease < 20 ? "Significant" : "Ernstig"
+                  strokeCountIncrease < 20 ? "Beduidend" : "Ernstig"
   };
 }
 
@@ -1418,31 +1418,31 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Data Validatie</h2>
+        <h2>Data Validering</h2>
 
         <div class="formula-card">
-            <h3>Trainingsdata Kwaliteitscontrole</h3>
+            <h3>Oefening Data Kwaliteitskontrole</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (1:00-5:00 per 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Ongebruikelijk gemiddeld tempo: ${Math.round(avgPace)}s per 100m`);
+    issues.push(`Ongewone gemiddelde tempo: ${Math.round(avgPace)}s per 100m`);
   }
 
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Ongebruikelijke slagtelling: ${Math.round(avgStrokesPer25m)} per 25m`);
+    issues.push(`Ongewone slag telling: ${Math.round(avgStrokesPer25m)} per 25m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Ongebruikelijke slagfrequentie: ${Math.round(avgSR)} SPM`);
+    issues.push(`Ongewone slag frekwensie: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)
@@ -1451,7 +1451,7 @@ const fatigue = detectFatigue(laps);
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
       if (gap > 300) { // 5 minute gap
-        issues.push(`Groot gat gedetecteerd tussen banen ${i} en ${i+1}`);
+        issues.push(`Groot gaping opgespoor tussen bane ${i} en ${i+1}`);
       }
     }
   }
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Hulpfuncties</h2>
+        <h2>Hulpfunksies</h2>
 
         <div class="formula-card">
-            <h3>Tijd Conversie Utilities</h3>
+            <h3>Tyd Omsetting Nutsprogramme</h3>
             <div class="formula-content">
-                <h4>JavaScript Implementatie:</h4>
+                <h4>JavaScript Implementering:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Implementatie Bronnen</h2>
-        <p class="lead">Alle formules op deze pagina zijn productie-klaar en gevalideerd tegen wetenschappelijke literatuur. Gebruik ze voor aangepaste analyse tools, verificatie of dieper begrip van zwemprestatie berekeningen.</p>
+        <h2>Implementering Hulpbronne</h2>
+        <p class="lead">Alle formules op hierdie bladsy is produksie-gereed en gevalideer teen wetenskaplike literatuur. Gebruik hulle vir pasgemaakte ontledings gereedskap, verifikasie of dieper begrip van swemprestasie berekeninge.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Best Practices</h3>
+            <h3>💡 Beste Praktyke</h3>
             <ul class="text-left">
-                <li><strong>Valideer invoer:</strong> Controleer redelijke bereiken voor berekeningen</li>
-                <li><strong>Behandel edge cases:</strong> Delen door nul, negatieve waarden, null data</li>
-                <li><strong>Rond juist af:</strong> CTL/ATL/TSB op 1 decimaal, sTSS als geheel getal</li>
-                <li><strong>Bewaar precisie:</strong> Behoud volledige precisie in database, rond af voor weergave</li>
-                <li><strong>Test grondig:</strong> Gebruik bekende correcte data om berekeningen te verifiëren</li>
+                <li><strong>Valideer insette:</strong> Verifieer redelike reekse voor berekeninge</li>
+                <li><strong>Hanteer randgevalle:</strong> Deling deur nul, negatiewe waardes, nul data</li>
+                <li><strong>Rond korrek af:</strong> CTL/ATL/TSB tot 1 desimaal, sTSS tot heelgetal</li>
+                <li><strong>Bewaar presisie:</strong> Hou volle presisie in databasis, rond af vir vertoon</li>
+                <li><strong>Toets deeglik:</strong> Gebruik bekende korrekte data om berekeninge te verifieer</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/af/" class="btn btn-primary btn-large">Terug naar Home</a>
-            <a href="/af/research/" class="btn btn-secondary">Wetenschappelijke Basis</a>
+            <a href="/af/" class="btn btn-primary btn-large">Terug na Tuisblad</a>
+            <a href="/af/research/" class="btn btn-secondary">Wetenskaplike Basis</a>
         </div>
     </div>
 </section>

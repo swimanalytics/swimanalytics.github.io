@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Gratis Zwem TSS Calculator</h1>
-        <p class="lead">Bereken Training Stress Score voor zwemtrainingen - De enige gratis sTSS calculator</p>
+        <h1>Gratis TSS Sakrekenaar vir Swem</h1>
+        <p class="lead">Bereken Training Stress Score vir swemoefeninge - Die enigste gratis sTSS sakrekenaar</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Wat is Zwem TSS (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> kwantificeert de trainingslast van een zwemsessie door intensiteit en duur te combineren. Het is aangepast van de wielrennen TSS methodologie, waarbij je Critical Swim Speed (CSS) gebruikt wordt als drempeltempo. Een training van 1 uur op CSS tempo = 100 sTSS.</p>
+            <h2>Wat is Swem TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> kwantifiseer die oefening las van 'n swemsessie deur intensiteit en duur te kombineer. Dit is aangepas van die fietsry TSS metodologie, wat jou Critical Swim Speed (CSS) as drempel tempo gebruik. 'n Oefening van 1 uur teen CSS tempo = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Gratis sTSS Calculator</h2>
-        <p class="lead mb-xl">Bereken trainingsstress voor elke zwemsessie. Vereist je CSS tempo.</p>
+        <h2 class="mt-3xl">Gratis sTSS Sakrekenaar</h2>
+        <p class="lead mb-xl">Bereken oefening stres vir enige swemsessie. Vereis jou CSS tempo.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Je CSS Tempo (mm:ss per 100m)</label>
+                        <label for="cssPace" class="form-label">Jou CSS Tempo (mm:ss per 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Je drempeltempo van CSS test (bijv. 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Jou drempel tempo van CSS toets (bv. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Trainingsduur (minuten)</label>
+                        <label for="workoutDuration" class="form-label">Oefening Duur (minute)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Totale trainingstijd inclusief pauzes (1-300 minuten)</small>
+                        <small id="duration-help" class="form-help">Totale oefening tyd insluitend rusperiodes (1-300 minute)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Gemiddeld Trainingstempo (mm:ss per 100m)</label>
+                        <label for="avgPace" class="form-label">Gemiddelde Oefening Tempo (mm:ss per 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,32 +719,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Je gemiddelde tempo tijdens de training (bijv. 2:05)</small>
+                        <small id="pace-help" class="form-help">Jou gemiddelde tempo gedurende die oefening (bv. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
                         <button type="submit" class="btn btn-primary" id="calculateStssBtn">Bereken sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Wissen</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Vee uit</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Je Training Stress Score</h3>
+                <h3>Jou Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Intensity Factor (IF)</div>
+                        <div class="result-label">Intensiteitsfaktor (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Trainingslast Interpretatie</h4>
+                    <h4>Oefening Las Interpretasie</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -752,192 +752,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">Hoe sTSS Berekend Wordt</h2>
+        <h2 class="mt-3xl">Hoe sTSS Bereken Word</h2>
 
         <div class="formula-box">
             <h3>Formule</h3>
             <div class="formula">
-                sTSS = (Duur in uren) × (Intensity Factor)² × 100
+                sTSS = (Duur in ure) × (Intensiteitsfaktor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Waarbij:</p>
+                <p>Waar:</p>
                 <ul>
-                    <li><strong>Intensity Factor (IF)</strong> = CSS Tempo / Gemiddeld Trainingstempo</li>
-                    <li><strong>Duur</strong> = Totale trainingstijd in uren</li>
-                    <li><strong>CSS Tempo</strong> = Je drempeltempo van CSS test</li>
+                    <li><strong>Intensiteitsfaktor (IF)</strong> = CSS Tempo / Gemiddelde Oefening Tempo</li>
+                    <li><strong>Duur</strong> = Totale oefening tyd in ure</li>
+                    <li><strong>CSS Tempo</strong> = Jou drempel tempo van CSS toets</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Praktisch Voorbeeld</h3>
+        <h3 class="mt-xl">Praktiese Voorbeeld</h3>
         <div class="example-box">
-            <h4>Trainingsdetails:</h4>
+            <h4>Oefening Besonderhede:</h4>
             <ul>
-                <li>CSS Tempo: <strong>1:49/100m</strong> (109 seconden)</li>
-                <li>Trainingsduur: <strong>60 minuten</strong> (1 uur)</li>
-                <li>Gemiddeld Tempo: <strong>2:05/100m</strong> (125 seconden)</li>
+                <li>CSS Tempo: <strong>1:49/100m</strong> (109 sekondes)</li>
+                <li>Oefening Duur: <strong>60 minute</strong> (1 uur)</li>
+                <li>Gemiddelde Tempo: <strong>2:05/100m</strong> (125 sekondes)</li>
             </ul>
 
-            <h4>Stap 1: Bereken Intensity Factor</h4>
+            <h4>Stap 1: Bereken Intensiteitsfaktor</h4>
             <div class="calculation">
-                IF = CSS Tempo / Trainingstempo<br>
+                IF = CSS Tempo / Oefening Tempo<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
             <h4>Stap 2: Bereken sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 uur × (0.872)² × 100<br>
+                sTSS = 1.0 ure × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretatie:</strong> Deze 60 minuten training op rustig tempo (langzamer dan CSS) genereerde 76 sTSS - een gematigde trainingslast geschikt voor het opbouwen van aërobe basis.</p>
+            <p class="mt-md"><strong>Interpretasie:</strong> Hierdie 60 minute oefening teen gemaklike tempo (stadiger as CSS) het 76 sTSS gegenereer - 'n matige oefening las geskik vir die bou van aërobiese basis.</p>
         </div>
 
-        <h2 class="mt-3xl">sTSS Waarden Interpreteren</h2>
+        <h2 class="mt-3xl">Interpreteer sTSS Waardes</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>sTSS Bereik</th>
-                        <th>Trainingslast</th>
-                        <th>Hersteltijd</th>
-                        <th>Voorbeeldtraining</th>
+                        <th>sTSS Reeks</th>
+                        <th>Oefening Las</th>
+                        <th>Herstel Tyd</th>
+                        <th>Voorbeeld Oefening</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
                         <td>Laag</td>
-                        <td>Zelfde dag</td>
-                        <td>30 min rustig zwemmen, technische oefeningen</td>
+                        <td>Dieselfde dag</td>
+                        <td>30 min gemaklike swem, tegniese oefeninge</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Gematigd</td>
+                        <td>Matig</td>
                         <td>1 dag</td>
-                        <td>60 min duur, steady tempo</td>
+                        <td>60 min uithouvermoë, bestendige tempo</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
                         <td>Hoog</td>
-                        <td>1-2 dagen</td>
-                        <td>90 min drempel sets, wedstrijdtempo intervallen</td>
+                        <td>1-2 dae</td>
+                        <td>90 min drempel stelle, wedloop tempo intervalle</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Zeer Hoog</td>
-                        <td>2-3 dagen</td>
-                        <td>2 uur harde training, meerdere drempel blokken</td>
+                        <td>Baie Hoog</td>
+                        <td>2-3 dae</td>
+                        <td>2 uur harde oefening, veelvuldige drempel blokke</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extreem</td>
-                        <td>3+ dagen</td>
-                        <td>Lange wedstrijd (&gt;2 uur), ultra-duur</td>
+                        <td>Uiters</td>
+                        <td>3+ dae</td>
+                        <td>Lang wedloop (&gt;2 ure), ultra-uithouvermoë</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Wekelijkse sTSS Gids</h2>
+        <h2 class="mt-3xl">Weeklikse sTSS Gids</h2>
 
-        <p class="mb-md">Doel wekelijkse sTSS hangt af van je trainingsniveau en doelen:</p>
+        <p class="mb-md">Teiken weeklikse sTSS hang af van jou oefening vlak en doelwitte:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Recreatieve Zwemmers</h3>
+                <h3 class="card-title">Ontspanning Swemmers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 150-300</p>
-                    <p>2-3 trainingen per week, 50-100 sTSS elk. Focus op techniek en aërobe basis opbouw.</p>
+                    <p class="mb-sm"><strong>Weeklikse sTSS:</strong> 150-300</p>
+                    <p>2-3 oefeninge per week, 50-100 sTSS elk. Fokus op tegniek en bou van aërobiese basis.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Fitness Zwemmers / Triathleten</h3>
+                <h3 class="card-title">Fiksheid Swemmers / Driekampatlete</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 300-500</p>
-                    <p>3-4 trainingen per week, 75-125 sTSS elk. Mix van aërobe duur en drempelwerk.</p>
+                    <p class="mb-sm"><strong>Weeklikse sTSS:</strong> 300-500</p>
+                    <p>3-4 oefeninge per week, 75-125 sTSS elk. Mengsel van aërobiese uithouvermoë en drempel werk.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Masters Competitieve Zwemmers</h3>
+                <h3 class="card-title">Meesters Kompeterende Swemmers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 500-800</p>
-                    <p>4-6 trainingen per week, 80-150 sTSS elk. Gestructureerde training met periodisering.</p>
+                    <p class="mb-sm"><strong>Weeklikse sTSS:</strong> 500-800</p>
+                    <p>4-6 oefeninge per week, 80-150 sTSS elk. Gestruktureerde oefening met periodisering.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Elite / Universiteit Zwemmers</h3>
+                <h3 class="card-title">Elite / Universiteit Swemmers</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Wekelijkse sTSS:</strong> 800-1200+</p>
-                    <p>8-12 trainingen per week, dubbele sessies. Hoog volume met kritisch herstelmanagement.</p>
+                    <p class="mb-sm"><strong>Weeklikse sTSS:</strong> 800-1200+</p>
+                    <p>8-12 oefeninge per week, dubbele sessies. Hoë volume met kritieke herstel bestuur.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Belangrijke Opmerkingen</h3>
+            <h3>⚠️ Belangrike Notas</h3>
             <ul>
-                <li><strong>Vereist accurate CSS:</strong> Je CSS moet up-to-date zijn (getest binnen 6-8 weken) voor nauwkeurige sTSS.</li>
-                <li><strong>Vereenvoudigde berekening:</strong> Deze calculator gebruikt gemiddeld tempo. Geavanceerde sTSS gebruikt Normalized Graded Pace (NGP) die intervalstructuur meeneemt.</li>
-                <li><strong>Niet voor technisch werk:</strong> sTSS meet alleen fysieke trainingsstress, niet vaardigheidsontwikkeling.</li>
-                <li><strong>Individuele variatie:</strong> Dezelfde sTSS voelt anders voor verschillende zwemmers. Pas richtlijnen aan op je herstel.</li>
+                <li><strong>Vereis akkurate CSS:</strong> Jou CSS moet op datum wees (getoets binne 6-8 weke) vir akkurate sTSS.</li>
+                <li><strong>Vereenvoudigde berekening:</strong> Hierdie sakrekenaar gebruik gemiddelde tempo. Gevorderde sTSS gebruik Normalized Graded Pace (NGP) wat interval struktuur in ag neem.</li>
+                <li><strong>Nie vir tegniese werk nie:</strong> sTSS meet slegs fisiese oefening stres, nie vaardigheidsontwikkeling nie.</li>
+                <li><strong>Individuele variasie:</strong> Dieselfde sTSS voel anders vir verskillende swemmers. Pas riglyne aan volgens jou herstel.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Waarom sTSS Belangrijk Is</h2>
+        <h2 class="mt-3xl">Waarom sTSS Belangrik Is</h2>
 
-        <p class="mb-md">Training Stress Score is de basis voor:</p>
+        <p class="mb-md">Training Stress Score is die basis vir:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Je fitnessniveau - exponentieel gewogen 42-daags gemiddelde van dagelijkse sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Je vermoeidheid - exponentieel gewogen 7-daags gemiddelde van dagelijkse sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Je vorm toestand - TSB = CTL - ATL (positief = fris, negatief = vermoeid)</li>
-            <li><strong>Periodisering:</strong> Trainingsfasen plannen (basis, ontwikkeling, piek, taper) met doel CTL progressies</li>
-            <li><strong>Herstelmanagement:</strong> Weten wanneer te pushen en wanneer te rusten gebaseerd op TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Jou fiksheidsvlak - eksponensieel geweegde 42-dag gemiddelde van daaglikse sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Jou moegheid - eksponensieel geweegde 7-dag gemiddelde van daaglikse sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Jou vorm toestand - TSB = CTL - ATL (positief = vars, negatief = moeg)</li>
+            <li><strong>Periodisering:</strong> Beplanning van oefening fases (basis, ontwikkeling, piek, afbou) met teiken CTL progressies</li>
+            <li><strong>Herstel Bestuur:</strong> Weet wanneer om te stoot en wanneer om te rus gebaseer op TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Pro Tip: Volg je CTL</h3>
-            <p>Log dagelijkse sTSS in een spreadsheet of trainingsdagboek. Bereken je 42-daags gemiddelde (CTL) wekelijks. Doel voor 5-10 punt CTL stijging per week tijdens basis opbouw. Handhaaf of verlaag CTL licht tijdens taper (1-2 weken voor wedstrijd).</p>
+            <h3>Pro Wenk: Volg jou CTL</h3>
+            <p>Log daaglikse sTSS in 'n sigblad of oefening dagboek. Bereken jou 42-dag gemiddelde (CTL) weekliks. Mik vir 5-10 punt CTL styging per week gedurende basis bou. Handhaaf of verminder CTL effens gedurende afbou (1-2 weke voor wedloop).</p>
         </div>
 
-        <h2 class="mt-3xl">Gerelateerde Bronnen</h2>
+        <h2 class="mt-3xl">Verwante Hulpbronne</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">CSS Test</h3>
+                <h3 class="card-title">CSS Toets</h3>
                 <div class="card-content">
-                    <p>Heb je je CSS tempo nodig? Gebruik onze gratis CSS calculator met 400m en 200m testtijden.</p>
-                    <a href="/af/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
+                    <p>Het jy jou CSS tempo nodig? Gebruik ons gratis CSS sakrekenaar met 400m en 200m toets tye.</p>
+                    <a href="/af/css/" class="btn btn-secondary btn-small mt-md">CSS Sakrekenaar →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Trainingslast Gids</h3>
+                <h3 class="card-title">Oefening Las Gids</h3>
                 <div class="card-content">
-                    <p>Leer over CTL, ATL, TSB en Performance Management Chart metrics.</p>
-                    <a href="/af/training-load/" class="btn btn-secondary btn-small mt-md">Trainingslast →</a>
+                    <p>Leer oor CTL, ATL, TSB en Performance Management Chart statistieke.</p>
+                    <a href="/af/training-load/" class="btn btn-secondary btn-small mt-md">Oefening Las →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">SwimAnalytics App</h3>
                 <div class="card-content">
-                    <p>Automatische sTSS berekening voor alle trainingen. Volg CTL/ATL/TSB trends over tijd.</p>
-                    <a href="/af/" class="btn btn-secondary btn-small mt-md">Meer Informatie →</a>
+                    <p>Outomatiese sTSS berekening vir alle oefeninge. Volg CTL/ATL/TSB tendense oor tyd.</p>
+                    <a href="/af/" class="btn btn-secondary btn-small mt-md">Meer Inligting →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Wil je automatische sTSS tracking?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Wil jy outomatiese sTSS opsporing?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Laai SwimAnalytics Gratis Af</a>
         </div>
     </div>
 </section>
