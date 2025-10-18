@@ -659,23 +659,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Riferimento Tecnico e Formule</h1>
-        <p class="lead">Implementazione Matematica Completa</p>
+        <h1>Referință Tehnică și Formule</h1>
+        <p class="lead">Implementare Matematică Completă</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Guida all'Implementazione</h2>
-        <p class="lead">Questa pagina fornisce formule pronte per copia-incolla, oltre a metodi di calcolo passo dopo passo per tutte le metriche di SwimAnalytics. Utilizzale per implementazioni personalizzate, verifica o comprensione approfondita.</p>
+        <h2>Ghid de Implementare</h2>
+        <p class="lead">Această pagină oferă formule gata de copiere-lipire, plus metode de calcul pas cu pas pentru toate metricile SwimAnalytics. Folosește-le pentru implementări personalizate, verificare sau înțelegere aprofundată.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Note di Implementazione</h3>
+            <h3>⚠️ Note de Implementare</h3>
             <ul>
-                <li>Tutti i tempi devono essere convertiti in secondi per i calcoli</li>
-                <li>Il ritmo di nuoto è inverso (percentuale maggiore = ritmo più lento)</li>
-                <li>Valida sempre gli input per intervalli ragionevoli</li>
-                <li>Gestisci i casi limite (divisione per zero, valori negativi)</li>
+                <li>Toate timpii trebuie convertite în secunde pentru calcule</li>
+                <li>Tempoul de înot este invers (procent mai mare = tempo mai lent)</li>
+                <li>Validează întotdeauna intrările pentru intervale rezonabile</li>
+                <li>Gestionează cazurile limită (împărțire la zero, valori negative)</li>
             </ul>
         </div>
     </div>
@@ -683,7 +683,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Metriche di Prestazione Principali</h2>
+        <h2>Metrici de Performanță Principale</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
@@ -694,46 +694,46 @@
                         CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
                     </div>
                     <div class="formula">
-                        CSS Ritmo/100m (secondi) = (T₄₀₀ - T₂₀₀) / 2
+                        CSS Tempo/100m (secunde) = (T₄₀₀ - T₂₀₀) / 2
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calcolatore Interattivo - Testa la Formula</h4>
+                    <h4>🧪 Calculator Interactiv - Testează Formula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distanza 1 (metri):</label>
+                            <label for="css-d1">Distanță 1 (metri):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Tempo 1 (mm:ss):</label>
+                            <label for="css-t1">Timp 1 (mm:ss):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distanza 2 (metri):</label>
+                            <label for="css-d2">Distanță 2 (metri):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Tempo 2 (mm:ss):</label>
+                            <label for="css-t2">Timp 2 (mm:ss):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritmo CSS per 100m:</div>
+                        <div class="result-label">Tempo CSS per 100m:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Passi del calcolo:</strong><br>
+                            <strong>Pași de calcul:</strong><br>
                             <span id="css-steps">
                                 CSS (m/s) = (400 - 200) / (368 - 150) = 0,917 m/s<br>
-                                Ritmo/100m = 100 / 0,917 = 109 secondi = 1:49
+                                Tempo/100m = 100 / 0,917 = 109 secunde = 1:49
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementazione in JavaScript:</h4>
+                <h4 class="mt-xl">Implementare în JavaScript:</h4>
                 <pre><code>function calculateCSS(distance1, time1, distance2, time2) {
   // Convert times to seconds if needed
   const t1 = typeof time1 === 'string' ? timeToSeconds(time1) : time1;
@@ -791,7 +791,7 @@ const result = calculateCSS(200, 150, 400, 368);
                         document.getElementById('css-result').textContent = pace_formatted;
                         document.getElementById('css-steps').innerHTML =
                             `CSS (m/s) = (${d2} - ${d1}) / (${t2} - ${t1}) = ${css_ms.toFixed(3).replace('.', ',')} m/s<br>` +
-                            `Ritmo/100m = 100 / ${css_ms.toFixed(3).replace('.', ',')} = ${Math.round(pace_per_100m)} secondi = ${pace_formatted}`;
+                            `Tempo/100m = 100 / ${css_ms.toFixed(3).replace('.', ',')} = ${Math.round(pace_per_100m)} secunde = ${pace_formatted}`;
                     } catch (e) {
                         console.error('CSS calculation error:', e);
                     }
@@ -811,46 +811,46 @@ const result = calculateCSS(200, 150, 400, 368);
         <div class="formula-card">
             <h3>Swim Training Stress Score (sTSS)</h3>
             <div class="formula-content">
-                <h4>Formula Completa:</h4>
+                <h4>Formula Completă:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Durata (ore) × 100
+                        sTSS = (IF³) × Durată (ore) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Distanza Totale / Tempo Totale (m/min)
+                        NSS = Distanță Totală / Timp Total (m/min)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calcolatore Interattivo - Testa la Formula</h4>
+                    <h4>🧪 Calculator Interactiv - Testează Formula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="stss-distance">Distanza (metri):</label>
+                            <label for="stss-distance">Distanță (metri):</label>
                             <input type="number" id="stss-distance" value="3000" min="100" max="10000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="stss-duration">Durata (minuti):</label>
+                            <label for="stss-duration">Durată (minute):</label>
                             <input type="number" id="stss-duration" value="55" min="1" max="300" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="stss-css">Ritmo CSS (mm:ss per 100m):</label>
+                            <label for="stss-css">Tempo CSS (mm:ss per 100m):</label>
                             <input type="text" id="stss-css" value="1:33" placeholder="1:33" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label>FTP (calcolato):</label>
+                            <label>FTP (calculat):</label>
                             <input type="text" id="stss-ftp" readonly value="64,5 m/min">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">sTSS Calcolato:</div>
+                        <div class="result-label">sTSS Calculat:</div>
                         <div class="result-value" id="stss-result">55</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Passi del calcolo:</strong><br>
+                            <strong>Pași de calcul:</strong><br>
                             <span id="stss-steps">
                                 NSS = 3000m / 55min = 54,5 m/min<br>
                                 FTP = 100 / (93/60) = 64,5 m/min<br>
@@ -861,7 +861,7 @@ const result = calculateCSS(200, 150, 400, 368);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementazione in JavaScript:</h4>
+                <h4 class="mt-xl">Implementare în JavaScript:</h4>
                 <pre><code>function calculateSTSS(distance, timeMinutes, ftpMetersPerMin) {
   // Calculate Normalized Swim Speed
   const nss = distance / timeMinutes;
@@ -972,26 +972,26 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                 <h4>Formula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SWOLF = Tempo della Vasca (secondi) + Conteggio Bracciate
+                        SWOLF = Timp per Lungime (secunde) + Număr de Brațe
                     </div>
                     <div class="formula">
-                        SWOLF₂₅ = (Tempo × 25/Lunghezza Vasca) + (Bracciate × 25/Lunghezza Vasca)
+                        SWOLF₂₅ = (Timp × 25/Lungime Piscină) + (Brațe × 25/Lungime Piscină)
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calcolatore Interattivo - Testa la Formula</h4>
+                    <h4>🧪 Calculator Interactiv - Testează Formula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="swolf-time">Tempo della Vasca (secondi):</label>
+                            <label for="swolf-time">Timp per Lungime (secunde):</label>
                             <input type="number" id="swolf-time" value="20" min="10" max="120" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-strokes">Conteggio Bracciate:</label>
+                            <label for="swolf-strokes">Număr de Brațe:</label>
                             <input type="number" id="swolf-strokes" value="15" min="5" max="50" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="swolf-pool">Lunghezza Vasca (m):</label>
+                            <label for="swolf-pool">Lungime Piscină (m):</label>
                             <select id="swolf-pool">
                                 <option value="25" selected>25m</option>
                                 <option value="50">50m</option>
@@ -999,20 +999,20 @@ const ftp = cssToFTP(93); // Returns: 64.5 m/min</code></pre>
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Punteggio SWOLF:</div>
+                        <div class="result-label">Scor SWOLF:</div>
                         <div class="result-value" id="swolf-result">35</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calcolo:</strong><br>
+                            <strong>Calcul:</strong><br>
                             <span id="swolf-steps">
-                                SWOLF = 20s + 15 bracciate = 35
+                                SWOLF = 20s + 15 brațe = 35
                             </span>
                         </small>
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementazione in JavaScript:</h4>
+                <h4 class="mt-xl">Implementare în JavaScript:</h4>
                 <pre><code>function calculateSWOLF(timeSeconds, strokeCount) {
   return timeSeconds + strokeCount;
 }
@@ -1042,13 +1042,13 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                         let swolf, steps;
                         if (poolLength === 25) {
                             swolf = time + strokes;
-                            steps = `SWOLF = ${time}s + ${strokes} bracciate = ${swolf}`;
+                            steps = `SWOLF = ${time}s + ${strokes} brațe = ${swolf}`;
                         } else {
                             const normalizedTime = time * (25 / poolLength);
                             const normalizedStrokes = strokes * (25 / poolLength);
                             swolf = normalizedTime + normalizedStrokes;
-                            steps = `Tempo Normalizzato = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1).replace('.', ',')}s<br>` +
-                                   `Bracciate Normalizzate = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1).replace('.', ',')}<br>` +
+                            steps = `Timp Normalizat = ${time} × (25/${poolLength}) = ${normalizedTime.toFixed(1).replace('.', ',')}s<br>` +
+                                   `Brațe Normalizate = ${strokes} × (25/${poolLength}) = ${normalizedStrokes.toFixed(1).replace('.', ',')}<br>` +
                                    `SWOLF₂₅ = ${normalizedTime.toFixed(1).replace('.', ',')} + ${normalizedStrokes.toFixed(1).replace('.', ',')} = ${swolf.toFixed(1).replace('.', ',')}`;
                         }
 
@@ -1073,7 +1073,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Meccanica della Bracciata</h2>
+        <h2>Mecanica Brațelor</h2>
 
         <div class="formula-card">
             <h3>Stroke Rate (SR)</h3>
@@ -1081,22 +1081,22 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                 <h4>Formula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SR = 60 / Tempo di Ciclo (secondi)
+                        SR = 60 / Timp de Ciclu (secunde)
                     </div>
                     <div class="formula">
-                        SR = (Numero di Bracciate / Tempo in secondi) × 60
+                        SR = (Număr de Brațe / Timp în secunde) × 60
                     </div>
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calcolatore Interattivo - Testa la Formula</h4>
+                    <h4>🧪 Calculator Interactiv - Testează Formula</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="sr-strokes">Conteggio Bracciate:</label>
+                            <label for="sr-strokes">Număr de Brațe:</label>
                             <input type="number" id="sr-strokes" value="30" min="1" max="100" step="1">
                         </div>
                         <div class="input-group">
-                            <label for="sr-time">Tempo (secondi):</label>
+                            <label for="sr-time">Timp (secunde):</label>
                             <input type="number" id="sr-time" value="25" min="1" max="180" step="1">
                         </div>
                     </div>
@@ -1106,7 +1106,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Calcolo:</strong><br>
+                            <strong>Calcul:</strong><br>
                             <span id="sr-steps">
                                 SR = (30 / 25) × 60 = 72 SPM
                             </span>
@@ -1114,7 +1114,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
                     </div>
                 </div>
 
-                <h4 class="mt-xl">Implementazione in JavaScript:</h4>
+                <h4 class="mt-xl">Implementare în JavaScript:</h4>
                 <pre><code>function calculateStrokeRate(strokeCount, timeSeconds) {
   return (strokeCount / timeSeconds) * 60;
 }
@@ -1156,14 +1156,14 @@ const sr = calculateStrokeRate(30, 25);
                 <h4>Formula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        DPS = Distanza / Conteggio Bracciate
+                        DPS = Distanță / Număr de Brațe
                     </div>
                     <div class="formula">
-                        DPS = Distanza / (SR / 60)
+                        DPS = Distanță / (SR / 60)
                     </div>
                 </div>
 
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function calculateDPS(distance, strokeCount, pushoffDistance = 0) {
   const effectiveDistance = distance - pushoffDistance;
   return effectiveDistance / strokeCount;
@@ -1180,16 +1180,16 @@ const dps100m = calculateDPS(100, 48, 4 * 5);
         </div>
 
         <div class="formula-card">
-            <h3>Velocità da SR e DPS</h3>
+            <h3>Viteză din SR și DPS</h3>
             <div class="formula-content">
                 <h4>Formula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        Velocità (m/s) = (SR / 60) × DPS
+                        Viteză (m/s) = (SR / 60) × DPS
                     </div>
                 </div>
 
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function calculateVelocity(strokeRate, dps) {
   return (strokeRate / 60) * dps;
 }
@@ -1206,11 +1206,11 @@ const velocity = calculateVelocity(70, 1.6);
                 <h4>Formula:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        SI = Velocità (m/s) × DPS (m/bracciata)
+                        SI = Viteză (m/s) × DPS (m/brațe)
                     </div>
                 </div>
 
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function calculateStrokeIndex(velocity, dps) {
   return velocity * dps;
 }
@@ -1225,25 +1225,25 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Grafico di Gestione della Prestazione (PMC)</h2>
+        <h2>Performance Management Chart (PMC)</h2>
 
         <div class="formula-card">
-            <h3>Calcoli di CTL, ATL, TSB</h3>
+            <h3>Calcule CTL, ATL, TSB</h3>
             <div class="formula-content">
                 <h4>Formule:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        CTL oggi = CTL ieri + (TSS oggi - CTL ieri) × (1/42)
+                        CTL astăzi = CTL ieri + (TSS astăzi - CTL ieri) × (1/42)
                     </div>
                     <div class="formula">
-                        ATL oggi = ATL ieri + (TSS oggi - ATL ieri) × (1/7)
+                        ATL astăzi = ATL ieri + (TSS astăzi - ATL ieri) × (1/7)
                     </div>
                     <div class="formula">
                         TSB = CTL ieri - ATL ieri
                     </div>
                 </div>
 
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function updateCTL(previousCTL, todayTSS) {
   return previousCTL + (todayTSS - previousCTL) * (1/42);
 }
@@ -1295,12 +1295,12 @@ const pmc = calculatePMC(workouts);
 
 <section class="section">
     <div class="container">
-        <h2>Calcoli Avanzati</h2>
+        <h2>Calcule Avansate</h2>
 
         <div class="formula-card">
-            <h3>CSS da Multiple Distanze (Metodo di Regressione)</h3>
+            <h3>CSS din Multiple Distanțe (Metoda Regresiei)</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function calculateCSSRegression(distances, times) {
   // Linear regression: distance = a + b*time
   const n = distances.length;
@@ -1327,9 +1327,9 @@ const result = calculateCSSRegression(distances, times);
         </div>
 
         <div class="formula-card">
-            <h3>Fattore di Intensità dal Ritmo</h3>
+            <h3>Factor de Intensitate din Tempo</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function calculateIntensityFactor(actualPace100m, thresholdPace100m) {
   // Convert pace to speed (m/s)
   const actualSpeed = 100 / actualPace100m;
@@ -1344,9 +1344,9 @@ const if_value = calculateIntensityFactor(110, 93);
         </div>
 
         <div class="formula-card">
-            <h3>Analisi della Consistenza del Ritmo</h3>
+            <h3>Analiza Consistenței Tempo</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function analyzePaceConsistency(laps) {
   const paces = laps.map(lap => lap.distance / lap.time);
   const avgPace = paces.reduce((a, b) => a + b) / paces.length;
@@ -1360,9 +1360,9 @@ const if_value = calculateIntensityFactor(110, 93);
     avgPace,
     stdDev,
     coefficientOfVariation,
-    consistency: coefficientOfVariation < 5 ? "Eccellente" :
-                 coefficientOfVariation < 10 ? "Buona" :
-                 coefficientOfVariation < 15 ? "Moderata" : "Variabile"
+    consistency: coefficientOfVariation < 5 ? "Excelent" :
+                 coefficientOfVariation < 10 ? "Bun" :
+                 coefficientOfVariation < 15 ? "Moderat" : "Variabil"
   };
 }
 
@@ -1374,14 +1374,14 @@ const laps = [
   // ...
 ];
 const analysis = analyzePaceConsistency(laps);
-// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Eccellente" }</code></pre>
+// Returns: { avgPace: 1.41, stdDev: 0.02, coefficientOfVariation: 1.4, consistency: "Excelent" }</code></pre>
             </div>
         </div>
 
         <div class="formula-card">
-            <h3>Rilevamento della Fatica tramite Conteggio Bracciate</h3>
+            <h3>Detectare Oboseală prin Număr de Brațe</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function detectFatigue(laps) {
   const firstThird = laps.slice(0, Math.floor(laps.length/3));
   const lastThird = laps.slice(-Math.floor(laps.length/3));
@@ -1397,9 +1397,9 @@ const analysis = analyzePaceConsistency(laps);
     firstThirdAvg: Math.round(firstThirdAvg * 10) / 10,
     lastThirdAvg: Math.round(lastThirdAvg * 10) / 10,
     percentIncrease: Math.round(strokeCountIncrease * 10) / 10,
-    fatigueLevel: strokeCountIncrease < 5 ? "Minima" :
-                  strokeCountIncrease < 10 ? "Moderata" :
-                  strokeCountIncrease < 20 ? "Significativa" : "Severa"
+    fatigueLevel: strokeCountIncrease < 5 ? "Minimă" :
+                  strokeCountIncrease < 10 ? "Moderată" :
+                  strokeCountIncrease < 20 ? "Semnificativă" : "Severă"
   };
 }
 
@@ -1410,7 +1410,7 @@ const laps = [
   { strokeCount: 17 }, { strokeCount: 18 }, { strokeCount: 18 }
 ];
 const fatigue = detectFatigue(laps);
-// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severa" }</code></pre>
+// Returns: { firstThirdAvg: 14.3, lastThirdAvg: 17.7, percentIncrease: 23.8, fatigueLevel: "Severă" }</code></pre>
             </div>
         </div>
     </div>
@@ -1418,31 +1418,31 @@ const fatigue = detectFatigue(laps);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Validazione dei Dati</h2>
+        <h2>Validarea Datelor</h2>
 
         <div class="formula-card">
-            <h3>Verifica della Qualità dei Dati di Allenamento</h3>
+            <h3>Verificarea Calității Datelor de Antrenament</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>function validateWorkoutData(workout) {
   const issues = [];
 
   // Check for reasonable pace ranges (1:00-5:00 per 100m)
   const avgPace = (workout.totalTime / workout.totalDistance) * 100;
   if (avgPace < 60 || avgPace > 300) {
-    issues.push(`Ritmo medio insolito: ${Math.round(avgPace)}s per 100m`);
+    issues.push(`Tempo mediu neobișnuit: ${Math.round(avgPace)}s per 100m`);
   }
 
   // Check for reasonable stroke counts (10-50 per 25m)
   const avgStrokesPer25m = (workout.totalStrokes / workout.totalDistance) * 25;
   if (avgStrokesPer25m < 10 || avgStrokesPer25m > 50) {
-    issues.push(`Conteggio bracciate insolito: ${Math.round(avgStrokesPer25m)} per 25m`);
+    issues.push(`Număr de brațe neobișnuit: ${Math.round(avgStrokesPer25m)} per 25m`);
   }
 
   // Check for reasonable stroke rate (30-150 SPM)
   const avgSR = calculateStrokeRate(workout.totalStrokes, workout.totalTime);
   if (avgSR < 30 || avgSR > 150) {
-    issues.push(`Frequenza di bracciata insolita: ${Math.round(avgSR)} SPM`);
+    issues.push(`Frecvență brațe neobișnuită: ${Math.round(avgSR)} SPM`);
   }
 
   // Check for missing laps (gaps in time)
@@ -1451,7 +1451,7 @@ const fatigue = detectFatigue(laps);
       const gap = workout.laps[i].startTime -
                   (workout.laps[i-1].startTime + workout.laps[i-1].duration);
       if (gap > 300) { // 5 minute gap
-        issues.push(`Lacuna ampia rilevata tra vasche ${i} e ${i+1}`);
+        issues.push(`Decalaj mare detectat între lungimile ${i} și ${i+1}`);
       }
     }
   }
@@ -1478,12 +1478,12 @@ const validation = validateWorkoutData(workout);
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Funzioni Ausiliarie</h2>
+        <h2>Funcții Ajutătoare</h2>
 
         <div class="formula-card">
-            <h3>Utilità di Conversione del Tempo</h3>
+            <h3>Utilități Conversie Timp</h3>
             <div class="formula-content">
-                <h4>Implementazione in JavaScript:</h4>
+                <h4>Implementare în JavaScript:</h4>
                 <pre><code>// Convert mm:ss to seconds
 function timeToSeconds(timeString) {
   const parts = timeString.split(':');
@@ -1516,23 +1516,23 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 
 <section class="section section-alt">
     <div class="container container-narrow text-center">
-        <h2>Risorse per l'Implementazione</h2>
-        <p class="lead">Tutte le formule in questa pagina sono pronte per la produzione e validate rispetto alla letteratura scientifica. Utilizzale per strumenti di analisi personalizzati, verifica o comprensione approfondita dei calcoli di prestazione nel nuoto.</p>
+        <h2>Resurse pentru Implementare</h2>
+        <p class="lead">Toate formulele din această pagină sunt gata pentru producție și validate față de literatura științifică. Folosește-le pentru instrumente de analiză personalizate, verificare sau înțelegere aprofundată a calculelor de performanță în înot.</p>
 
         <div class="callout callout-tip">
-            <h3>💡 Migliori Pratiche</h3>
+            <h3>💡 Cele Mai Bune Practici</h3>
             <ul class="text-left">
-                <li><strong>Valida gli input:</strong> Verifica intervalli ragionevoli prima di calcolare</li>
-                <li><strong>Gestisci i casi limite:</strong> Divisione per zero, valori negativi, dati nulli</li>
-                <li><strong>Arrotonda appropriatamente:</strong> CTL/ATL/TSB a 1 decimale, sTSS a intero</li>
-                <li><strong>Conserva la precisione:</strong> Mantieni precisione completa nel database, arrotonda per la visualizzazione</li>
-                <li><strong>Testa esaustivamente:</strong> Usa dati noti e corretti per verificare i calcoli</li>
+                <li><strong>Validează intrările:</strong> Verifică intervale rezonabile înainte de a calcula</li>
+                <li><strong>Gestionează cazurile limită:</strong> Împărțire la zero, valori negative, date nule</li>
+                <li><strong>Rotunjește corespunzător:</strong> CTL/ATL/TSB la 1 zecimală, sTSS la întreg</li>
+                <li><strong>Păstrează precizia:</strong> Menține precizie completă în baza de date, rotunjește pentru afișare</li>
+                <li><strong>Testează exhaustiv:</strong> Folosește date cunoscute și corecte pentru a verifica calculele</li>
             </ul>
         </div>
 
         <div class="mt-xl">
-            <a href="/ro/" class="btn btn-primary btn-large">Torna alla Home</a>
-            <a href="/ro/research/" class="btn btn-secondary">Fondamento Scientifico</a>
+            <a href="/ro/" class="btn btn-primary btn-large">Înapoi la Pagina Principală</a>
+            <a href="/ro/research/" class="btn btn-secondary">Fundament Științific</a>
         </div>
     </div>
 </section>

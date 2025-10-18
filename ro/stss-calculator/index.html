@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Calcolatore Gratuita de TSS para Nuoto</h1>
-        <p class="lead">Calcula el Training Stress Score para allenamenti de nuoto - La única calcolatore gratuita de sTSS</p>
+        <h1>Calculator Gratuit TSS pentru Înot</h1>
+        <p class="lead">Calculează Training Stress Score pentru antrenamente de înot - Singurul calculator gratuit de sTSS</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es el TSS de Nuoto (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifica la carico de allenamento de una sesión de nuoto combinando intensidad y duración. Está adaptado de la metodología TSS del ciclismo, utilizando tu Critical Swim Speed (CSS) como andatura soglia. Un allenamento de 1 hora a andatura CSS = 100 sTSS.</p>
+            <h2>Ce este TSS pentru Înot (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifică sarcina de antrenament dintr-o sesiune de înot combinând intensitatea și durata. Este adaptat din metodologia TSS a ciclismului, folosind Critical Swim Speed (CSS) ca tempo de prag. Un antrenament de 1 oră la tempo CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Calcolatore Gratuita de sTSS</h2>
-        <p class="lead mb-xl">Calcula el estrés de allenamento para cualquier sesión de nuoto. Requiere tu andatura CSS.</p>
+        <h2 class="mt-3xl">Calculator Gratuit sTSS</h2>
+        <p class="lead mb-xl">Calculează stresul de antrenament pentru orice sesiune de înot. Necesită tempoul tău CSS.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Tu Andatura CSS (mm:ss por 100m)</label>
+                        <label for="cssPace" class="form-label">Tempoul Tău CSS (mm:ss per 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tu andatura soglia del test CSS (ej., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Tempoul tău de prag din testul CSS (ex. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Duración del Allenamento (minutos)</label>
+                        <label for="workoutDuration" class="form-label">Durata Antrenamentului (minute)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Tiempo total del allenamento incluyendo descansos (1-300 minutos)</small>
+                        <small id="duration-help" class="form-help">Timp total antrenament incluzând pauzele (1-300 minute)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Andatura Promedio del Allenamento (mm:ss por 100m)</label>
+                        <label for="avgPace" class="form-label">Tempo Mediu Antrenament (mm:ss per 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,32 +719,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Tu andatura promedio durante el allenamento (ej., 2:05)</small>
+                        <small id="pace-help" class="form-help">Tempoul tău mediu în timpul antrenamentului (ex. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Borrar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calculează sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Șterge</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Tu Training Stress Score</h3>
+                <h3>Training Stress Score-ul Tău</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Factor de Intensidad (IF)</div>
+                        <div class="result-label">Factor de Intensitate (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretación de la Carico de Allenamento</h4>
+                    <h4>Interpretarea Sarcinii de Antrenament</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -752,192 +752,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
+        <h2 class="mt-3xl">Cum se Calculează sTSS</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>Formula</h3>
             <div class="formula">
-                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
+                sTSS = (Durată în ore) × (Factor Intensitate)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>Unde:</p>
                 <ul>
-                    <li><strong>Factor de Intensidad (IF)</strong> = Andatura CSS / Andatura Promedio del Allenamento</li>
-                    <li><strong>Duración</strong> = Tiempo total del allenamento en horas</li>
-                    <li><strong>Andatura CSS</strong> = Tu andatura soglia del test CSS</li>
+                    <li><strong>Factor de Intensitate (IF)</strong> = Tempo CSS / Tempo Mediu Antrenament</li>
+                    <li><strong>Durată</strong> = Timp total antrenament în ore</li>
+                    <li><strong>Tempo CSS</strong> = Tempoul tău de prag din testul CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Ejemplo Práctico</h3>
+        <h3 class="mt-xl">Exemplu Practic</h3>
         <div class="example-box">
-            <h4>Detalles del Allenamento:</h4>
+            <h4>Detalii Antrenament:</h4>
             <ul>
-                <li>Andatura CSS: <strong>1:49/100m</strong> (109 segundos)</li>
-                <li>Duración del Allenamento: <strong>60 minutos</strong> (1 hora)</li>
-                <li>Andatura Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
+                <li>Tempo CSS: <strong>1:49/100m</strong> (109 secunde)</li>
+                <li>Durată Antrenament: <strong>60 minute</strong> (1 oră)</li>
+                <li>Tempo Mediu: <strong>2:05/100m</strong> (125 secunde)</li>
             </ul>
 
-            <h4>Paso 1: Calcular el Factor de Intensidad</h4>
+            <h4>Pasul 1: Calculează Factorul de Intensitate</h4>
             <div class="calculation">
-                IF = Andatura CSS / Andatura del Allenamento<br>
+                IF = Tempo CSS / Tempo Antrenament<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Paso 2: Calcular el sTSS</h4>
+            <h4>Pasul 2: Calculează sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 horas × (0.872)² × 100<br>
+                sTSS = 1.0 ore × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretación:</strong> Este allenamento de 60 minutos a andatura suave (más lento que CSS) generó 76 sTSS - una carico de allenamento moderada adecuada para construir la base aeróbica.</p>
+            <p class="mt-md"><strong>Interpretare:</strong> Acest antrenament de 60 minute la tempo ușor (mai lent decât CSS) a generat 76 sTSS - o sarcină de antrenament moderată potrivită pentru construirea bazei aerobice.</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretando los Valores de sTSS</h2>
+        <h2 class="mt-3xl">Interpretarea Valorilor sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rango sTSS</th>
-                        <th>Carico de Allenamento</th>
-                        <th>Tiempo de Recupero</th>
-                        <th>Ejemplo de Allenamento</th>
+                        <th>Interval sTSS</th>
+                        <th>Sarcină Antrenament</th>
+                        <th>Timp Recuperare</th>
+                        <th>Exemplu Antrenament</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Baja</td>
-                        <td>Mismo día</td>
-                        <td>Nado suave de 30 min, ejercicios técnicos</td>
+                        <td>Scăzută</td>
+                        <td>Aceeași zi</td>
+                        <td>Înot ușor 30 min, exerciții tehnice</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderada</td>
-                        <td>1 día</td>
-                        <td>Resistencia de 60 min, andatura constante</td>
+                        <td>Moderată</td>
+                        <td>1 zi</td>
+                        <td>Rezistență 60 min, tempo constant</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Alta</td>
-                        <td>1-2 días</td>
-                        <td>Series de soglia de 90 min, intervalos a andatura de competición</td>
+                        <td>Ridicată</td>
+                        <td>1-2 zile</td>
+                        <td>Serii de prag 90 min, intervale la tempo de cursă</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Muy Alta</td>
-                        <td>2-3 días</td>
-                        <td>Allenamento duro de 2 horas, múltiples bloques de soglia</td>
+                        <td>Foarte Ridicată</td>
+                        <td>2-3 zile</td>
+                        <td>Antrenament dur 2 ore, blocuri multiple de prag</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extrema</td>
-                        <td>3+ días</td>
-                        <td>Competición larga (&gt;2 horas), ultra-resistencia</td>
+                        <td>Extremă</td>
+                        <td>3+ zile</td>
+                        <td>Competiție lungă (&gt;2 ore), ultra-rezistență</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Guía de sTSS Semanal</h2>
+        <h2 class="mt-3xl">Ghid sTSS Săptămânal</h2>
 
-        <p class="mb-md">El sTSS semanal objetivo depende de tu nivel de allenamento y objetivos:</p>
+        <p class="mb-md">Ținta de sTSS săptămânal depinde de nivelul tău de antrenament și obiective:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos</h3>
+                <h3 class="card-title">Înotători Recreativi</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
-                    <p>2-3 allenamenti por semana, 50-100 sTSS cada uno. Enfoque en tecnica y construcción de base aeróbica.</p>
+                    <p class="mb-sm"><strong>sTSS Săptămânal:</strong> 150-300</p>
+                    <p>2-3 antrenamente pe săptămână, 50-100 sTSS fiecare. Focus pe tehnică și construire bază aerobică.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <h3 class="card-title">Înotători Fitness / Triatloniști</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
-                    <p>3-4 allenamenti por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de soglia.</p>
+                    <p class="mb-sm"><strong>sTSS Săptămânal:</strong> 300-500</p>
+                    <p>3-4 antrenamente pe săptămână, 75-125 sTSS fiecare. Mix de rezistență aerobică și lucru de prag.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Másters Competitivos</h3>
+                <h3 class="card-title">Înotători Master Competitivi</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
-                    <p>4-6 allenamenti por semana, 80-150 sTSS cada uno. Allenamento estructurado con periodización.</p>
+                    <p class="mb-sm"><strong>sTSS Săptămânal:</strong> 500-800</p>
+                    <p>4-6 antrenamente pe săptămână, 80-150 sTSS fiecare. Antrenament structurat cu periodizare.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Elite / Universitarios</h3>
+                <h3 class="card-title">Înotători Elită / Universitari</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
-                    <p>8-12 allenamenti por semana, sesiones dobles. Alto volumen con gestión de recupero crítica.</p>
+                    <p class="mb-sm"><strong>sTSS Săptămânal:</strong> 800-1200+</p>
+                    <p>8-12 antrenamente pe săptămână, sesiuni duble. Volum mare cu gestionare critică a recuperării.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas Importantes</h3>
+            <h3>⚠️ Note Importante</h3>
             <ul>
-                <li><strong>Requiere CSS preciso:</strong> Tu CSS debe estar actualizado (testeado dentro de 6-8 semanas) para un sTSS preciso.</li>
-                <li><strong>Calcolo simplificado:</strong> Esta calcolatore usa andatura promedio. El sTSS avanzado usa Normalized Graded Pace (NGP) que tiene en cuenta la estructura de intervalos.</li>
-                <li><strong>No para trabajo técnico:</strong> El sTSS solo mide el estrés físico del allenamento, no el desarrollo de habilidades.</li>
-                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes nuotatori. Ajusta las guías según tu recupero.</li>
+                <li><strong>Necesită CSS precis:</strong> CSS-ul tău trebuie actualizat (testat în ultimele 6-8 săptămâni) pentru un sTSS precis.</li>
+                <li><strong>Calcul simplificat:</strong> Acest calculator folosește tempoul mediu. sTSS-ul avansat folosește Normalized Graded Pace (NGP) care ia în considerare structura intervalelor.</li>
+                <li><strong>Nu pentru lucru tehnic:</strong> sTSS-ul măsoară doar stresul fizic al antrenamentului, nu dezvoltarea abilităților.</li>
+                <li><strong>Variație individuală:</strong> Același sTSS se simte diferit pentru înotători diferiți. Ajustează ghidurile conform recuperării tale.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
+        <h2 class="mt-3xl">De Ce Contează sTSS</h2>
 
-        <p class="mb-md">El Training Stress Score es la base para:</p>
+        <p class="mb-md">Training Stress Score este baza pentru:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Tu nivel de forma fisica - promedio ponderado exponencialmente de 42 días del sTSS diario</li>
-            <li><strong>ATL (Acute Training Load):</strong> Tu fatica - promedio ponderado exponencialmente de 7 días del sTSS diario</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Tu estado de forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
-            <li><strong>Periodización:</strong> Planificar fases de allenamento (base, desarrollo, pico, descenso) usando progresiones de CTL objetivo</li>
-            <li><strong>Gestión de Recupero:</strong> Saber cuándo empujar y cuándo descansar según el TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Nivelul tău de formă fizică - medie ponderată exponențial pe 42 zile a sTSS-ului zilnic</li>
+            <li><strong>ATL (Acute Training Load):</strong> Oboseala ta - medie ponderată exponențial pe 7 zile a sTSS-ului zilnic</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Starea ta de formă - TSB = CTL - ATL (pozitiv = proaspăt, negativ = obosit)</li>
+            <li><strong>Periodizare:</strong> Planificare faze antrenament (bază, dezvoltare, vârf, coborâre) folosind progresii CTL țintă</li>
+            <li><strong>Gestionare Recuperare:</strong> A ști când să împingi și când să te odihnești conform TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Consejo Pro: Sigue tu CTL</h3>
-            <p>Registra el sTSS diario en una hoja de calcolo o diario de allenamento. Calcula tu promedio de 42 días (CTL) semanalmente. Objetivo de aumento de 5-10 puntos CTL por semana durante la construcción de base. Mantén o reduce ligeramente el CTL durante el descenso (1-2 semanas antes de la competición).</p>
+            <h3>Sfat Pro: Urmărește-ți CTL-ul</h3>
+            <p>Înregistrează sTSS-ul zilnic într-o foaie de calcul sau jurnal de antrenament. Calculează media ta pe 42 zile (CTL) săptămânal. Țintește creștere 5-10 puncte CTL pe săptămână în timpul construirii bazei. Menține sau reduce ușor CTL-ul în timpul coborârii (1-2 săptămâni înainte de competiție).</p>
         </div>
 
-        <h2 class="mt-3xl">Recursos Relacionados</h2>
+        <h2 class="mt-3xl">Resurse Conexe</h2>
 
         <div class="grid grid-3">
             <div class="card">
                 <h3 class="card-title">Test CSS</h3>
                 <div class="card-content">
-                    <p>¿Necesitas tu andatura CSS? Usa nuestra calcolatore gratuita de CSS con tiempos de test de 400m y 200m.</p>
-                    <a href="/ro/css/" class="btn btn-secondary btn-small mt-md">Calcolatore CSS →</a>
+                    <p>Ai nevoie de tempoul tău CSS? Folosește calculatorul nostru gratuit CSS cu timpii de test de 400m și 200m.</p>
+                    <a href="/ro/css/" class="btn btn-secondary btn-small mt-md">Calculator CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Guía de Carico de Allenamento</h3>
+                <h3 class="card-title">Ghid Sarcină Antrenament</h3>
                 <div class="card-content">
-                    <p>Aprende sobre CTL, ATL, TSB y las métricas del Performance Management Chart.</p>
-                    <a href="/ro/training-load/" class="btn btn-secondary btn-small mt-md">Carico de Allenamento →</a>
+                    <p>Învață despre CTL, ATL, TSB și metricile Performance Management Chart.</p>
+                    <a href="/ro/training-load/" class="btn btn-secondary btn-small mt-md">Sarcină Antrenament →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">Aplicația SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Calcolo automático de sTSS para todos los allenamenti. Sigue las tendencias de CTL/ATL/TSB a lo vasca del tiempo.</p>
-                    <a href="/ro/" class="btn btn-secondary btn-small mt-md">Más Información →</a>
+                    <p>Calcul automat sTSS pentru toate antrenamentele. Urmărește tendințele CTL/ATL/TSB în timp.</p>
+                    <a href="/ro/" class="btn btn-secondary btn-small mt-md">Mai Multe Informații →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Vrei urmărire automată sTSS?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarcă SwimAnalytics Gratuit</a>
         </div>
     </div>
 </section>

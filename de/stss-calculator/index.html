@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Rechner Gratuita de TSS para Schwimmen</h1>
-        <p class="lead">Calcula el Training Stress Score para Trainings de Schwimmen - La única Rechner gratuita de sTSS</p>
+        <h1>Kostenloser Schwimm-TSS-Rechner</h1>
+        <p class="lead">Berechnen Sie den Training Stress Score für Schwimmtrainings - Der einzige kostenlose sTSS-Rechner</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es el TSS de Schwimmen (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> cuantifica la Belastung de Training de una sesión de Schwimmen combinando intensidad y duración. Está adaptado de la metodología TSS del ciclismo, utilizando tu Critical Swim Speed (CSS) como Tempo Schwelle. Un Training de 1 hora a Tempo CSS = 100 sTSS.</p>
+            <h2>Was ist Schwimm-TSS (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> quantifiziert die Trainingsbelastung einer Schwimmeinheit durch Kombination von Intensität und Dauer. Es ist adaptiert von der TSS-Methodik des Radsports, wobei Ihre Critical Swim Speed (CSS) als Schwellentempo verwendet wird. Ein Training von 1 Stunde bei CSS-Tempo = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Rechner Gratuita de sTSS</h2>
-        <p class="lead mb-xl">Calcula el estrés de Training para cualquier sesión de Schwimmen. Requiere tu Tempo CSS.</p>
+        <h2 class="mt-3xl">Kostenloser sTSS-Rechner</h2>
+        <p class="lead mb-xl">Berechnen Sie den Trainingsstress für jede Schwimmeinheit. Benötigt Ihr CSS-Tempo.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Tu Tempo CSS (mm:ss por 100m)</label>
+                        <label for="cssPace" class="form-label">Ihr CSS-Tempo (mm:ss pro 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tu Tempo Schwelle del test CSS (ej., 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Ihr Schwellentempo aus dem CSS-Test (z.B. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Duración del Training (minutos)</label>
+                        <label for="workoutDuration" class="form-label">Trainingsdauer (Minuten)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Tiempo total del Training incluyendo descansos (1-300 minutos)</small>
+                        <small id="duration-help" class="form-help">Gesamttrainingszeit einschließlich Pausen (1-300 Minuten)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Tempo Promedio del Training (mm:ss por 100m)</label>
+                        <label for="avgPace" class="form-label">Durchschnittliches Trainingstempo (mm:ss pro 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,32 +719,32 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Tu Tempo promedio durante el Training (ej., 2:05)</small>
+                        <small id="pace-help" class="form-help">Ihr durchschnittliches Tempo während des Trainings (z.B. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Calcular sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Borrar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">sTSS berechnen</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Löschen</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Tu Training Stress Score</h3>
+                <h3>Ihr Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Factor de Intensidad (IF)</div>
+                        <div class="result-label">Intensitätsfaktor (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretación de la Belastung de Training</h4>
+                    <h4>Trainingsbelastungsinterpretation</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
                         <!-- Filled by JavaScript -->
                     </p>
@@ -752,192 +752,192 @@
             </div>
         </div>
 
-        <h2 class="mt-3xl">Cómo se Calcula el sTSS</h2>
+        <h2 class="mt-3xl">Wie sTSS berechnet wird</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>Formel</h3>
             <div class="formula">
-                sTSS = (Duración en horas) × (Factor de Intensidad)² × 100
+                sTSS = (Dauer in Stunden) × (Intensitätsfaktor)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>Wobei:</p>
                 <ul>
-                    <li><strong>Factor de Intensidad (IF)</strong> = Tempo CSS / Tempo Promedio del Training</li>
-                    <li><strong>Duración</strong> = Tiempo total del Training en horas</li>
-                    <li><strong>Tempo CSS</strong> = Tu Tempo Schwelle del test CSS</li>
+                    <li><strong>Intensitätsfaktor (IF)</strong> = CSS-Tempo / Durchschnittliches Trainingstempo</li>
+                    <li><strong>Dauer</strong> = Gesamttrainingszeit in Stunden</li>
+                    <li><strong>CSS-Tempo</strong> = Ihr Schwellentempo aus dem CSS-Test</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Ejemplo Práctico</h3>
+        <h3 class="mt-xl">Praktisches Beispiel</h3>
         <div class="example-box">
-            <h4>Detalles del Training:</h4>
+            <h4>Trainingsdetails:</h4>
             <ul>
-                <li>Tempo CSS: <strong>1:49/100m</strong> (109 segundos)</li>
-                <li>Duración del Training: <strong>60 minutos</strong> (1 hora)</li>
-                <li>Tempo Promedio: <strong>2:05/100m</strong> (125 segundos)</li>
+                <li>CSS-Tempo: <strong>1:49/100m</strong> (109 Sekunden)</li>
+                <li>Trainingsdauer: <strong>60 Minuten</strong> (1 Stunde)</li>
+                <li>Durchschnittstempo: <strong>2:05/100m</strong> (125 Sekunden)</li>
             </ul>
 
-            <h4>Paso 1: Calcular el Factor de Intensidad</h4>
+            <h4>Schritt 1: Intensitätsfaktor berechnen</h4>
             <div class="calculation">
-                IF = Tempo CSS / Tempo del Training<br>
+                IF = CSS-Tempo / Trainingstempo<br>
                 IF = 109 / 125<br>
-                IF = <strong>0.872</strong>
+                IF = <strong>0,872</strong>
             </div>
 
-            <h4>Paso 2: Calcular el sTSS</h4>
+            <h4>Schritt 2: sTSS berechnen</h4>
             <div class="calculation">
-                sTSS = 1.0 horas × (0.872)² × 100<br>
-                sTSS = 1.0 × 0.760 × 100<br>
+                sTSS = 1,0 Stunden × (0,872)² × 100<br>
+                sTSS = 1,0 × 0,760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretación:</strong> Este Training de 60 minutos a Tempo suave (más lento que CSS) generó 76 sTSS - una Belastung de Training moderada adecuada para construir la base aeróbica.</p>
+            <p class="mt-md"><strong>Interpretation:</strong> Dieses 60-Minuten-Training bei moderatem Tempo (langsamer als CSS) erzeugte 76 sTSS - eine moderate Trainingsbelastung, die für den Aufbau der aeroben Basis geeignet ist.</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretando los Valores de sTSS</h2>
+        <h2 class="mt-3xl">sTSS-Werte interpretieren</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Rango sTSS</th>
-                        <th>Belastung de Training</th>
-                        <th>Tiempo de Erholung</th>
-                        <th>Ejemplo de Training</th>
+                        <th>sTSS-Bereich</th>
+                        <th>Trainingsbelastung</th>
+                        <th>Erholungszeit</th>
+                        <th>Trainingsbeispiel</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Baja</td>
-                        <td>Mismo día</td>
-                        <td>Nado suave de 30 min, ejercicios técnicos</td>
+                        <td>Niedrig</td>
+                        <td>Gleicher Tag</td>
+                        <td>30 Min leichtes Schwimmen, Technikübungen</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Moderada</td>
-                        <td>1 día</td>
-                        <td>Resistencia de 60 min, Tempo constante</td>
+                        <td>Moderat</td>
+                        <td>1 Tag</td>
+                        <td>60 Min Ausdauer, konstantes Tempo</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Alta</td>
-                        <td>1-2 días</td>
-                        <td>Series de Schwelle de 90 min, intervalos a Tempo de competición</td>
+                        <td>Hoch</td>
+                        <td>1-2 Tage</td>
+                        <td>90 Min Schwellenserien, Intervalle bei Wettkampftempo</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Muy Alta</td>
-                        <td>2-3 días</td>
-                        <td>Training duro de 2 horas, múltiples bloques de Schwelle</td>
+                        <td>Sehr hoch</td>
+                        <td>2-3 Tage</td>
+                        <td>2 Stunden hartes Training, mehrere Schwellenblöcke</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Extrema</td>
-                        <td>3+ días</td>
-                        <td>Competición larga (&gt;2 horas), ultra-resistencia</td>
+                        <td>Extrem</td>
+                        <td>3+ Tage</td>
+                        <td>Langer Wettkampf (&gt;2 Stunden), Ultraausdauer</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Guía de sTSS Semanal</h2>
+        <h2 class="mt-3xl">Wöchentlicher sTSS-Leitfaden</h2>
 
-        <p class="mb-md">El sTSS semanal objetivo depende de tu nivel de Training y objetivos:</p>
+        <p class="mb-md">Das wöchentliche sTSS-Ziel hängt von Ihrem Trainingsniveau und Ihren Zielen ab:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos</h3>
+                <h3 class="card-title">Freizeitschwimmer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 150-300</p>
-                    <p>2-3 Trainings por semana, 50-100 sTSS cada uno. Enfoque en Technik y construcción de base aeróbica.</p>
+                    <p class="mb-sm"><strong>Wöchentlicher sTSS:</strong> 150-300</p>
+                    <p>2-3 Trainings pro Woche, je 50-100 sTSS. Fokus auf Technik und Aufbau der aeroben Basis.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores de Fitness / Triatletas</h3>
+                <h3 class="card-title">Fitnessschwimmer / Triathleten</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 300-500</p>
-                    <p>3-4 Trainings por semana, 75-125 sTSS cada uno. Mezcla de resistencia aeróbica y trabajo de Schwelle.</p>
+                    <p class="mb-sm"><strong>Wöchentlicher sTSS:</strong> 300-500</p>
+                    <p>3-4 Trainings pro Woche, je 75-125 sTSS. Mischung aus aerober Ausdauer und Schwellenarbeit.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Másters Competitivos</h3>
+                <h3 class="card-title">Masters-Wettkampfschwimmer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 500-800</p>
-                    <p>4-6 Trainings por semana, 80-150 sTSS cada uno. Training estructurado con periodización.</p>
+                    <p class="mb-sm"><strong>Wöchentlicher sTSS:</strong> 500-800</p>
+                    <p>4-6 Trainings pro Woche, je 80-150 sTSS. Strukturiertes Training mit Periodisierung.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Elite / Universitarios</h3>
+                <h3 class="card-title">Elite / Universitätsschwimmer</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>sTSS Semanal:</strong> 800-1200+</p>
-                    <p>8-12 Trainings por semana, sesiones dobles. Alto volumen con gestión de Erholung crítica.</p>
+                    <p class="mb-sm"><strong>Wöchentlicher sTSS:</strong> 800-1200+</p>
+                    <p>8-12 Trainings pro Woche, Doppeleinheiten. Hohes Volumen mit kritischem Erholungsmanagement.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas Importantes</h3>
+            <h3>⚠️ Wichtige Hinweise</h3>
             <ul>
-                <li><strong>Requiere CSS preciso:</strong> Tu CSS debe estar actualizado (testeado dentro de 6-8 semanas) para un sTSS preciso.</li>
-                <li><strong>Berechnung simplificado:</strong> Esta Rechner usa Tempo promedio. El sTSS avanzado usa Normalized Graded Pace (NGP) que tiene en cuenta la estructura de intervalos.</li>
-                <li><strong>No para trabajo técnico:</strong> El sTSS solo mide el estrés físico del Training, no el desarrollo de habilidades.</li>
-                <li><strong>Variación individual:</strong> El mismo sTSS se siente diferente para diferentes Schwimmer. Ajusta las guías según tu Erholung.</li>
+                <li><strong>Benötigt genaue CSS:</strong> Ihre CSS muss aktuell sein (innerhalb von 6-8 Wochen getestet) für genaue sTSS.</li>
+                <li><strong>Vereinfachte Berechnung:</strong> Dieser Rechner verwendet das Durchschnittstempo. Fortgeschrittenes sTSS verwendet Normalized Graded Pace (NGP), das die Intervallstruktur berücksichtigt.</li>
+                <li><strong>Nicht für Technikarbeit:</strong> sTSS misst nur den physischen Trainingsstress, nicht die Entwicklung von Fähigkeiten.</li>
+                <li><strong>Individuelle Variation:</strong> Derselbe sTSS fühlt sich für verschiedene Schwimmer unterschiedlich an. Passen Sie die Richtlinien an Ihre Erholung an.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Por Qué Importa el sTSS</h2>
+        <h2 class="mt-3xl">Warum sTSS wichtig ist</h2>
 
-        <p class="mb-md">El Training Stress Score es la base para:</p>
+        <p class="mb-md">Training Stress Score ist die Grundlage für:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Tu nivel de Fitness - promedio ponderado exponencialmente de 42 días del sTSS diario</li>
-            <li><strong>ATL (Acute Training Load):</strong> Tu Ermüdung - promedio ponderado exponencialmente de 7 días del sTSS diario</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Tu estado de forma - TSB = CTL - ATL (positivo = fresco, negativo = fatigado)</li>
-            <li><strong>Periodización:</strong> Planificar fases de Training (base, desarrollo, pico, descenso) usando progresiones de CTL objetivo</li>
-            <li><strong>Gestión de Erholung:</strong> Saber cuándo empujar y cuándo descansar según el TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Ihr Fitnesslevel - exponentiell gewichteter 42-Tage-Durchschnitt des täglichen sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Ihre Ermüdung - exponentiell gewichteter 7-Tage-Durchschnitt des täglichen sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Ihr Formzustand - TSB = CTL - ATL (positiv = frisch, negativ = ermüdet)</li>
+            <li><strong>Periodisierung:</strong> Planung von Trainingsphasen (Basis, Aufbau, Spitze, Taper) mit CTL-Zielprogressionen</li>
+            <li><strong>Erholungsmanagement:</strong> Wissen, wann zu pushen und wann zu ruhen basierend auf TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Consejo Pro: Sigue tu CTL</h3>
-            <p>Registra el sTSS diario en una hoja de Berechnung o diario de Training. Calcula tu promedio de 42 días (CTL) semanalmente. Objetivo de aumento de 5-10 puntos CTL por semana durante la construcción de base. Mantén o reduce ligeramente el CTL durante el descenso (1-2 semanas antes de la competición).</p>
+            <h3>Profi-Tipp: Verfolgen Sie Ihr CTL</h3>
+            <p>Protokollieren Sie tägliches sTSS in einer Tabellenkalkulation oder einem Trainingstagebuch. Berechnen Sie wöchentlich Ihren 42-Tage-Durchschnitt (CTL). Ziel ist eine Steigerung von 5-10 CTL-Punkten pro Woche während des Basisaufbaus. Halten oder reduzieren Sie CTL während des Tapers (1-2 Wochen vor Wettkampf).</p>
         </div>
 
-        <h2 class="mt-3xl">Recursos Relacionados</h2>
+        <h2 class="mt-3xl">Verwandte Ressourcen</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Test CSS</h3>
+                <h3 class="card-title">CSS-Test</h3>
                 <div class="card-content">
-                    <p>¿Necesitas tu Tempo CSS? Usa nuestra Rechner gratuita de CSS con tiempos de test de 400m y 200m.</p>
-                    <a href="/de/css/" class="btn btn-secondary btn-small mt-md">Rechner CSS →</a>
+                    <p>Benötigen Sie Ihr CSS-Tempo? Verwenden Sie unseren kostenlosen CSS-Rechner mit 400m- und 200m-Testzeiten.</p>
+                    <a href="/de/css/" class="btn btn-secondary btn-small mt-md">CSS-Rechner →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Guía de Belastung de Training</h3>
+                <h3 class="card-title">Trainingsbelastungs-Leitfaden</h3>
                 <div class="card-content">
-                    <p>Aprende sobre CTL, ATL, TSB y las métricas del Performance Management Chart.</p>
-                    <a href="/de/training-load/" class="btn btn-secondary btn-small mt-md">Belastung de Training →</a>
+                    <p>Erfahren Sie mehr über CTL, ATL, TSB und die Performance Management Chart-Metriken.</p>
+                    <a href="/de/training-load/" class="btn btn-secondary btn-small mt-md">Trainingsbelastung →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">SwimAnalytics App</h3>
                 <div class="card-content">
-                    <p>Berechnung automático de sTSS para todos los Trainings. Sigue las tendencias de CTL/ATL/TSB a lo Bahn del tiempo.</p>
-                    <a href="/de/" class="btn btn-secondary btn-small mt-md">Más Información →</a>
+                    <p>Automatische sTSS-Berechnung für alle Trainings. Verfolgen Sie CTL/ATL/TSB-Trends im Zeitverlauf.</p>
+                    <a href="/de/" class="btn btn-secondary btn-small mt-md">Mehr erfahren →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Quieres seguimiento automático de sTSS?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Möchten Sie automatisches sTSS-Tracking?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">SwimAnalytics kostenlos herunterladen</a>
         </div>
     </div>
 </section>

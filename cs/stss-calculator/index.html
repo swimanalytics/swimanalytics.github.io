@@ -659,26 +659,26 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Darmowy Kalkulator TSS dla Pływania</h1>
-        <p class="lead">Oblicz Training Stress Score dla treningów pływackich - Jedyny darmowy kalkulator sTSS</p>
+        <h1>Bezplatná Kalkulačka TSS pro Plavání</h1>
+        <p class="lead">Vypočítejte Training Stress Score pro plavecké tréninky - Jediná bezplatná kalkulačka sTSS</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Czym jest TSS dla Pływania (sTSS)?</h2>
-            <p><strong>Swimming Training Stress Score (sTSS)</strong> kwantyfikuje obciążenie treningowe sesji pływackiej, łącząc intensywność i czas trwania. Jest to adaptacja metodologii TSS z kolarstwa, wykorzystująca Critical Swim Speed (CSS) jako tempo progowe. Trening o czasie 1 godziny w tempie CSS = 100 sTSS.</p>
+            <h2>Co je TSS pro Plavání (sTSS)?</h2>
+            <p><strong>Swimming Training Stress Score (sTSS)</strong> kvantifikuje tréninkovou zátěž plaveckého sezení kombinací intenzity a délky trvání. Je to adaptace metodologie TSS z cyklistiky využívající Critical Swim Speed (CSS) jako práhové tempo. Trénink po dobu 1 hodiny v tempu CSS = 100 sTSS.</p>
         </div>
 
-        <h2 class="mt-3xl">Darmowy Kalkulator sTSS</h2>
-        <p class="lead mb-xl">Oblicz stres treningowy dla każdej sesji pływackiej. Wymaga znajomości tempa CSS.</p>
+        <h2 class="mt-3xl">Bezplatná Kalkulačka sTSS</h2>
+        <p class="lead mb-xl">Vypočítejte tréninkový stres pro každé plavecké sezení. Vyžaduje znalost tempa CSS.</p>
 
         <div class="css-calculator">
             <form id="stssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="cssPace" class="form-label">Twoje Tempo CSS (mm:ss na 100m)</label>
+                        <label for="cssPace" class="form-label">Vaše Tempo CSS (mm:ss na 100m)</label>
                         <input
                             type="text"
                             id="cssPace"
@@ -688,12 +688,12 @@
                             aria-required="true"
                             aria-describedby="cssPace-help"
                         />
-                        <small id="cssPace-help" class="form-help">Tempo progowe z testu CSS (np. 1:49)</small>
+                        <small id="cssPace-help" class="form-help">Práhové tempo z testu CSS (např. 1:49)</small>
                         <div class="form-error" id="cssPace-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="workoutDuration" class="form-label">Czas Trwania Treningu (minuty)</label>
+                        <label for="workoutDuration" class="form-label">Délka Tréninku (minuty)</label>
                         <input
                             type="number"
                             id="workoutDuration"
@@ -704,12 +704,12 @@
                             aria-required="true"
                             aria-describedby="duration-help"
                         />
-                        <small id="duration-help" class="form-help">Całkowity czas treningu włącznie z przerwami (1-300 minut)</small>
+                        <small id="duration-help" class="form-help">Celková doba tréninku včetně přestávek (1-300 minut)</small>
                         <div class="form-error" id="duration-error"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="avgPace" class="form-label">Średnie Tempo Treningu (mm:ss na 100m)</label>
+                        <label for="avgPace" class="form-label">Průměrné Tempo Tréninku (mm:ss na 100m)</label>
                         <input
                             type="text"
                             id="avgPace"
@@ -719,225 +719,225 @@
                             aria-required="true"
                             aria-describedby="pace-help"
                         />
-                        <small id="pace-help" class="form-help">Średnie tempo podczas treningu (np. 2:05)</small>
+                        <small id="pace-help" class="form-help">Průměrné tempo během tréninku (např. 2:05)</small>
                         <div class="form-error" id="pace-error"></div>
                     </div>
 
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Oblicz sTSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Wyczyść</button>
+                        <button type="submit" class="btn btn-primary" id="calculateStssBtn">Vypočítat sTSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetStssBtn">Vymazat</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="stssResults" aria-live="polite">
-                <h3>Twój Training Stress Score</h3>
+                <h3>Váš Training Stress Score</h3>
                 <div class="results-summary">
                     <div class="result-item">
                         <div class="result-label">sTSS</div>
                         <div class="css-result-value" id="stssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Współczynnik Intensywności (IF)</div>
+                        <div class="result-label">Faktor Intenzity (IF)</div>
                         <div class="css-result-value" id="intensityFactor">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Interpretacja Obciążenia Treningowego</h4>
+                    <h4>Interpretace Tréninkové Zátěže</h4>
                     <p class="mb-md text-secondary" id="stssInterpretation">
-                        <!-- Wypełniane przez JavaScript -->
+                        <!-- Vyplňováno JavaScriptem -->
                     </p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Jak Obliczany Jest sTSS</h2>
+        <h2 class="mt-3xl">Jak se Vypočítává sTSS</h2>
 
         <div class="formula-box">
-            <h3>Formuła</h3>
+            <h3>Vzorec</h3>
             <div class="formula">
-                sTSS = (Czas trwania w godzinach) × (Współczynnik Intensywności)² × 100
+                sTSS = (Délka v hodinách) × (Faktor Intenzity)² × 100
             </div>
             <div class="formula-explanation">
-                <p>Gdzie:</p>
+                <p>Kde:</p>
                 <ul>
-                    <li><strong>Współczynnik Intensywności (IF)</strong> = Tempo CSS / Średnie Tempo Treningu</li>
-                    <li><strong>Czas trwania</strong> = Całkowity czas treningu w godzinach</li>
-                    <li><strong>Tempo CSS</strong> = Tempo progowe z testu CSS</li>
+                    <li><strong>Faktor Intenzity (IF)</strong> = Tempo CSS / Průměrné Tempo Tréninku</li>
+                    <li><strong>Délka</strong> = Celková doba tréninku v hodinách</li>
+                    <li><strong>Tempo CSS</strong> = Práhové tempo z testu CSS</li>
                 </ul>
             </div>
         </div>
 
-        <h3 class="mt-xl">Praktyczny Przykład</h3>
+        <h3 class="mt-xl">Praktický Příklad</h3>
         <div class="example-box">
-            <h4>Szczegóły Treningu:</h4>
+            <h4>Detail Tréninku:</h4>
             <ul>
                 <li>Tempo CSS: <strong>1:49/100m</strong> (109 sekund)</li>
-                <li>Czas Trwania Treningu: <strong>60 minut</strong> (1 godzina)</li>
-                <li>Średnie Tempo: <strong>2:05/100m</strong> (125 sekund)</li>
+                <li>Délka Tréninku: <strong>60 minut</strong> (1 hodina)</li>
+                <li>Průměrné Tempo: <strong>2:05/100m</strong> (125 sekund)</li>
             </ul>
 
-            <h4>Krok 1: Oblicz Współczynnik Intensywności</h4>
+            <h4>Krok 1: Vypočítat Faktor Intenzity</h4>
             <div class="calculation">
-                IF = Tempo CSS / Tempo Treningu<br>
+                IF = Tempo CSS / Tempo Tréninku<br>
                 IF = 109 / 125<br>
                 IF = <strong>0.872</strong>
             </div>
 
-            <h4>Krok 2: Oblicz sTSS</h4>
+            <h4>Krok 2: Vypočítat sTSS</h4>
             <div class="calculation">
-                sTSS = 1.0 godziny × (0.872)² × 100<br>
+                sTSS = 1.0 hodiny × (0.872)² × 100<br>
                 sTSS = 1.0 × 0.760 × 100<br>
                 sTSS = <strong>76</strong>
             </div>
 
-            <p class="mt-md"><strong>Interpretacja:</strong> Ten 60-minutowy trening w łagodnym tempie (wolniejszym niż CSS) wygenerował 76 sTSS - umiarkowane obciążenie treningowe odpowiednie do budowania bazy tlenowej.</p>
+            <p class="mt-md"><strong>Interpretace:</strong> Tento 60minutový trénink v lehkém tempu (pomalejším než CSS) vygeneroval 76 sTSS - mírnou tréninkovou zátěž vhodnou pro budování aerobní základny.</p>
         </div>
 
-        <h2 class="mt-3xl">Interpretacja Wartości sTSS</h2>
+        <h2 class="mt-3xl">Interpretace Hodnot sTSS</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Zakres sTSS</th>
-                        <th>Obciążenie Treningowe</th>
-                        <th>Czas Regeneracji</th>
-                        <th>Przykład Treningu</th>
+                        <th>Rozsah sTSS</th>
+                        <th>Tréninková Zátěž</th>
+                        <th>Doba Zotavení</th>
+                        <th>Příklad Tréninku</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>&lt; 50</td>
-                        <td>Niskie</td>
-                        <td>Tego samego dnia</td>
-                        <td>Łagodne pływanie 30 min, ćwiczenia techniczne</td>
+                        <td>Nízká</td>
+                        <td>Tentýž den</td>
+                        <td>Lehké plavání 30 min, technické cviky</td>
                     </tr>
                     <tr>
                         <td>50-100</td>
-                        <td>Umiarkowane</td>
-                        <td>1 dzień</td>
-                        <td>Wytrzymałość 60 min, stałe tempo</td>
+                        <td>Mírná</td>
+                        <td>1 den</td>
+                        <td>Vytrvalost 60 min, stabilní tempo</td>
                     </tr>
                     <tr>
                         <td>100-200</td>
-                        <td>Wysokie</td>
-                        <td>1-2 dni</td>
-                        <td>Serie progowe 90 min, interwały w tempie wyścigowym</td>
+                        <td>Vysoká</td>
+                        <td>1-2 dny</td>
+                        <td>Práhové série 90 min, intervaly v závodním tempu</td>
                     </tr>
                     <tr>
                         <td>200-300</td>
-                        <td>Bardzo Wysokie</td>
-                        <td>2-3 dni</td>
-                        <td>Intensywny trening 2 godziny, wielokrotne bloki progowe</td>
+                        <td>Velmi Vysoká</td>
+                        <td>2-3 dny</td>
+                        <td>Intenzivní trénink 2 hodiny, vícenásobné práhové bloky</td>
                     </tr>
                     <tr>
                         <td>&gt; 300</td>
-                        <td>Ekstremalne</td>
-                        <td>3+ dni</td>
-                        <td>Długi wyścig (&gt;2 godziny), ultra-wytrzymałość</td>
+                        <td>Extrémní</td>
+                        <td>3+ dny</td>
+                        <td>Dlouhý závod (&gt;2 hodiny), ultra-vytrvalost</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2 class="mt-3xl">Przewodnik Tygodniowego sTSS</h2>
+        <h2 class="mt-3xl">Průvodce Týdenního sTSS</h2>
 
-        <p class="mb-md">Docelowy tygodniowy sTSS zależy od poziomu treningu i celów:</p>
+        <p class="mb-md">Cílový týdenní sTSS závisí na úrovni tréninku a cílech:</p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
-                <h3 class="card-title">Pływacy Rekreacyjni</h3>
+                <h3 class="card-title">Rekreační Plavci</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Tygodniowy sTSS:</strong> 150-300</p>
-                    <p>2-3 treningi tygodniowo, 50-100 sTSS każdy. Skupienie na technice i budowaniu bazy tlenowej.</p>
+                    <p class="mb-sm"><strong>Týdenní sTSS:</strong> 150-300</p>
+                    <p>2-3 tréninky týdně, 50-100 sTSS každý. Zaměření na techniku a budování aerobní základny.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Pływacy Fitness / Triathloniści</h3>
+                <h3 class="card-title">Fitness Plavci / Triatlonisté</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Tygodniowy sTSS:</strong> 300-500</p>
-                    <p>3-4 treningi tygodniowo, 75-125 sTSS każdy. Mieszanka wytrzymałości tlenowej i pracy progowej.</p>
+                    <p class="mb-sm"><strong>Týdenní sTSS:</strong> 300-500</p>
+                    <p>3-4 tréninky týdně, 75-125 sTSS každý. Směs aerobní vytrvalosti a práhové práce.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Pływacy Masters Wyczynowi</h3>
+                <h3 class="card-title">Závodní Masters Plavci</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Tygodniowy sTSS:</strong> 500-800</p>
-                    <p>4-6 treningów tygodniowo, 80-150 sTSS każdy. Ustrukturyzowany trening z periodyzacją.</p>
+                    <p class="mb-sm"><strong>Týdenní sTSS:</strong> 500-800</p>
+                    <p>4-6 tréninků týdně, 80-150 sTSS každý. Strukturovaný trénink s periodizací.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Pływacy Elitarni / Uniwersyteccy</h3>
+                <h3 class="card-title">Elitní / Univerzitní Plavci</h3>
                 <div class="card-content">
-                    <p class="mb-sm"><strong>Tygodniowy sTSS:</strong> 800-1200+</p>
-                    <p>8-12 treningów tygodniowo, sesje podwójne. Wysoki wolumen z krytycznym zarządzaniem regeneracją.</p>
+                    <p class="mb-sm"><strong>Týdenní sTSS:</strong> 800-1200+</p>
+                    <p>8-12 tréninků týdně, dvojitá sezení. Vysoký objem s kritickým řízením zotavení.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Ważne Uwagi</h3>
+            <h3>⚠️ Důležité Poznámky</h3>
             <ul>
-                <li><strong>Wymaga dokładnego CSS:</strong> CSS powinno być aktualne (testowane w ciągu 6-8 tygodni) dla precyzyjnego sTSS.</li>
-                <li><strong>Uproszczone obliczenia:</strong> Ten kalkulator używa średniego tempa. Zaawansowany sTSS używa Normalized Graded Pace (NGP), który uwzględnia strukturę interwałów.</li>
-                <li><strong>Nie dla pracy technicznej:</strong> sTSS mierzy tylko fizyczny stres treningu, nie rozwój umiejętności.</li>
-                <li><strong>Indywidualna zmienność:</strong> Ten sam sTSS różnie odczuwany przez różnych pływaków. Dostosuj wytyczne według regeneracji.</li>
+                <li><strong>Vyžaduje přesné CSS:</strong> CSS by mělo být aktuální (testováno během 6-8 týdnů) pro přesné sTSS.</li>
+                <li><strong>Zjednodušený výpočet:</strong> Tato kalkulačka používá průměrné tempo. Pokročilé sTSS používá Normalized Graded Pace (NGP), které zohledňuje strukturu intervalů.</li>
+                <li><strong>Ne pro technickou práci:</strong> sTSS měří pouze fyzický stres tréninku, ne rozvoj dovedností.</li>
+                <li><strong>Individuální variabilita:</strong> Stejné sTSS pociťováno různě různými plavci. Upravte pokyny podle zotavení.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl">Dlaczego sTSS Ma Znaczenie</h2>
+        <h2 class="mt-3xl">Proč sTSS Záleží</h2>
 
-        <p class="mb-md">Training Stress Score jest podstawą dla:</p>
+        <p class="mb-md">Training Stress Score je základem pro:</p>
 
         <ul class="mb-xl">
-            <li><strong>CTL (Chronic Training Load):</strong> Poziom formy fizycznej - wykładnicza średnia ważona z 42 dni dziennego sTSS</li>
-            <li><strong>ATL (Acute Training Load):</strong> Zmęczenie - wykładnicza średnia ważona z 7 dni dziennego sTSS</li>
-            <li><strong>TSB (Training Stress Balance):</strong> Stan formy - TSB = CTL - ATL (dodatni = świeży, ujemny = zmęczony)</li>
-            <li><strong>Periodyzacja:</strong> Planowanie faz treningowych (baza, rozwój, szczyt, tapering) używając docelowych progresji CTL</li>
-            <li><strong>Zarządzanie Regeneracją:</strong> Wiedza, kiedy forsować, a kiedy odpoczywać na podstawie TSB</li>
+            <li><strong>CTL (Chronic Training Load):</strong> Úroveň fyzické kondice - exponenciálně vážený 42denní průměr denního sTSS</li>
+            <li><strong>ATL (Acute Training Load):</strong> Únava - exponenciálně vážený 7denní průměr denního sTSS</li>
+            <li><strong>TSB (Training Stress Balance):</strong> Stav formy - TSB = CTL - ATL (pozitivní = svěží, negativní = unavený)</li>
+            <li><strong>Periodizace:</strong> Plánování tréninkových fází (základna, rozvoj, vrchol, tapering) pomocí cílových CTL progresí</li>
+            <li><strong>Řízení Zotavení:</strong> Vědomí, kdy tlačit a kdy odpočívat na základě TSB</li>
         </ul>
 
         <div class="callout callout-tip">
-            <h3>Porada Pro: Śledź CTL</h3>
-            <p>Zapisuj dzienne sTSS w arkuszu kalkulacyjnym lub dzienniku treningowym. Obliczaj średnią z 42 dni (CTL) co tydzień. Celuj w wzrost 5-10 punktów CTL tygodniowo podczas budowania bazy. Utrzymuj lub lekko redukuj CTL podczas taperingu (1-2 tygodnie przed zawodami).</p>
+            <h3>Profesionální Tip: Sledujte CTL</h3>
+            <p>Zaznamenávejte denní sTSS v tabulkovém procesoru nebo tréninkové deníku. Vypočítejte 42denní průměr (CTL) každý týden. Cílte na nárůst CTL o 5-10 bodů týdně během budování základny. Udržujte nebo mírně snižujte CTL během taperingu (1-2 týdny před závodem).</p>
         </div>
 
-        <h2 class="mt-3xl">Powiązane Zasoby</h2>
+        <h2 class="mt-3xl">Související Zdroje</h2>
 
         <div class="grid grid-3">
             <div class="card">
                 <h3 class="card-title">Test CSS</h3>
                 <div class="card-content">
-                    <p>Potrzebujesz tempa CSS? Użyj naszego darmowego kalkulatora CSS z czasami testowymi 400m i 200m.</p>
-                    <a href="/cs/css/" class="btn btn-secondary btn-small mt-md">Kalkulator CSS →</a>
+                    <p>Potřebujete tempo CSS? Použijte naši bezplatnou CSS kalkulačku s časy testů 400m a 200m.</p>
+                    <a href="/cs/css/" class="btn btn-secondary btn-small mt-md">Kalkulačka CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Przewodnik Obciążenia Treningowego</h3>
+                <h3 class="card-title">Průvodce Tréninkovou Zátěží</h3>
                 <div class="card-content">
-                    <p>Dowiedz się o CTL, ATL, TSB i metrykach Performance Management Chart.</p>
-                    <a href="/cs/training-load/" class="btn btn-secondary btn-small mt-md">Obciążenie Treningowe →</a>
+                    <p>Naučte se o CTL, ATL, TSB a metrikách Performance Management Chart.</p>
+                    <a href="/cs/training-load/" class="btn btn-secondary btn-small mt-md">Tréninková Zátěž →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Aplikacja SwimAnalytics</h3>
+                <h3 class="card-title">Aplikace SwimAnalytics</h3>
                 <div class="card-content">
-                    <p>Automatyczne obliczanie sTSS dla wszystkich treningów. Śledź trendy CTL/ATL/TSB w czasie.</p>
-                    <a href="/cs/" class="btn btn-secondary btn-small mt-md">Więcej Informacji →</a>
+                    <p>Automatický výpočet sTSS pro všechny tréninky. Sledujte trendy CTL/ATL/TSB v čase.</p>
+                    <a href="/cs/" class="btn btn-secondary btn-small mt-md">Více Informací →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Chcesz automatyczne śledzenie sTSS?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Pobierz SwimAnalytics Za Darmo</a>
+            <p class="mb-md"><strong>Chcete automatické sledování sTSS?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Stáhnout SwimAnalytics Zdarma</a>
         </div>
     </div>
 </section>
