@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <title>Coach Affiliate Program - Join SwimAnalytics</title>
     <meta name="description" content="Join the SwimAnalytics Coach Affiliate Program. Earn passive income helping your swimmers track CSS, TSS, and training zones. $1/month per athlete.">
     <meta name="author" content="Albert Arno">
@@ -161,65 +161,107 @@
 
     <main id="main-content" class="main-content">
         <!-- Hero Section -->
-        <section class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 0;">
-            <div class="container container-narrow" style="text-align: center;">
-                <h1 class="mb-md" style="font-size: 2.5rem; color: white;">Join Our Coach Affiliate Program</h1>
-                <p class="mb-lg" style="font-size: 1.25rem; color: rgba(255,255,255,0.95);">
-                    Earn passive income while helping your swimmers improve their training with science-based analytics.
-                </p>
-                <p style="font-size: 1.5rem; font-weight: bold; color: white;">
-                    💰 $1/month per athlete • 🎁 1 Month Free for Your Team • 🤝 Zero Effort
-                </p>
+        <section class="app-hero">
+            <div class="container">
+                <div class="app-hero-content">
+                    <div class="app-hero-text">
+                        <div class="app-hero-badge">
+                            <span>Professional Affiliate Program</span>
+                        </div>
+                        <h1>Join Our Coach Affiliate Program</h1>
+                        <p class="app-hero-subtitle">
+                            Earn passive income while helping your swimmers improve their training with science-based analytics.
+                            Get paid monthly for each active subscriber who uses your promo code.
+                        </p>
+                        <div class="app-hero-cta">
+                            <a href="#apply" class="btn btn-large btn-accent">
+                                Apply Now
+                            </a>
+                            <a href="#calculator" class="btn btn-large btn-secondary">
+                                Calculate Earnings
+                            </a>
+                        </div>
+                        <p class="mt-6 text-sm-muted">
+                            $1/month per athlete • 1 Month Free for Your Team • Zero Effort Required
+                        </p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Earnings Calculator -->
-        <section class="section" style="background: #f8f9fa;">
+        <section id="calculator" class="section">
             <div class="container container-narrow">
-                <h2 class="mb-md" style="text-align: center;">Calculate Your Potential Earnings</h2>
-                <div style="background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 500px; margin: 0 auto;">
-                    <div class="form-group">
-                        <label for="athlete-count" class="form-label">Number of Athletes on Your Team:</label>
-                        <input type="number" id="athlete-count" class="form-input" value="30" min="1" max="500" style="font-size: 1.2rem; text-align: center;">
-                    </div>
-                    <div style="text-align: center; padding: 1.5rem; background: #667eea; color: white; border-radius: 8px; margin-top: 1rem;">
-                        <p style="font-size: 0.9rem; margin-bottom: 0.5rem; opacity: 0.9;">Your Potential Monthly Income:</p>
-                        <p id="monthly-earning" style="font-size: 2.5rem; font-weight: bold; margin: 0;">$30</p>
-                        <p id="yearly-earning" style="font-size: 1.2rem; margin-top: 0.5rem; opacity: 0.9;">$360/year</p>
+                <div class="section-header">
+                    <div class="section-badge">Calculator</div>
+                    <h2 class="section-title">Calculate Your Potential Earnings</h2>
+                    <p class="section-subtitle">See how much you could earn with your team size</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="form-group">
+                            <label for="athlete-count" class="form-label">Number of Athletes on Your Team:</label>
+                            <input type="number" id="athlete-count" class="form-input" value="30" min="1" max="500">
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Your Potential Monthly Income:</div>
+                            <h3 class="metric-name" id="monthly-earning">$30</h3>
+                            <p class="metric-description" id="yearly-earning">$360/year</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- How It Works -->
-        <section class="section">
+        <section class="app-features">
             <div class="container">
-                <h2 class="mb-3xl" style="text-align: center;">How It Works</h2>
-                <div class="grid grid-3" style="gap: 2rem;">
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="width: 60px; height: 60px; background: #667eea; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
-                        <h3 class="mb-sm">Apply Today</h3>
-                        <p>Fill out the simple application form below. We'll review and send you the affiliate agreement.</p>
+                <div class="section-header">
+                    <div class="section-badge">Process</div>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Three simple steps to start earning passive income</p>
+                </div>
+                <div class="app-features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
+                            </svg>
+                        </div>
+                        <h3>Apply Today</h3>
+                        <p>Fill out the simple application form below. We'll review and send you the affiliate agreement within 24 hours for your review and signature.</p>
                     </div>
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="width: 60px; height: 60px; background: #667eea; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
-                        <h3 class="mb-sm">Get Your Code</h3>
-                        <p>Receive your personal promo code (e.g., COACH-JOHN). Your athletes get 1 month free when they sign up.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
+                            </svg>
+                        </div>
+                        <h3>Get Your Code</h3>
+                        <p>Receive your personal promo code (e.g., COACH-JOHN). Your athletes get 1 month free when they sign up with your code.</p>
                     </div>
-                    <div style="text-align: center; padding: 2rem;">
-                        <div style="width: 60px; height: 60px; background: #667eea; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
-                        <h3 class="mb-sm">Earn Passive Income</h3>
-                        <p>Earn $1/month recurring for each active subscriber. We handle everything—billing, support, updates.</p>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg class="icon" aria-hidden="true">
+                                <use href="/assets/images/icons-sprite.svg#icon-export"></use>
+                            </svg>
+                        </div>
+                        <h3>Earn Passive Income</h3>
+                        <p>Earn $1/month recurring for each active subscriber. We handle everything—billing, support, updates. You just collect the income.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Application Form -->
-        <section class="section" style="background: #f8f9fa;">
+        <section id="apply" class="section">
             <div class="container container-narrow">
-                <h2 class="mb-md" style="text-align: center;">Apply to Join the Program</h2>
-                <p class="mb-3xl" style="text-align: center; color: #666;">Fill out the form below and we'll send you the affiliate agreement within 24 hours.</p>
+                <div class="section-header">
+                    <div class="section-badge">Apply</div>
+                    <h2 class="section-title">Apply to Join the Program</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll send you the affiliate agreement within 24 hours</p>
+                </div>
 
                 <form class="contact-form" id="affiliate-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
@@ -244,7 +286,7 @@
                         <input type="text" id="business-name" name="business_name" class="form-input" required>
                     </div>
 
-                    <div class="grid grid-2" style="gap: 1rem;">
+                    <div class="grid grid-2">
                         <div class="form-group">
                             <label for="city" class="form-label required">City</label>
                             <input type="text" id="city" name="city" class="form-input" required>
@@ -270,17 +312,21 @@
                         <input type="number" id="athlete-count-form" name="athlete_count" class="form-input" min="1" required>
                     </div>
 
-                    <div class="form-group" style="margin-top: 2rem; padding: 1.5rem; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
-                        <label style="display: flex; align-items: start; cursor: pointer;">
-                            <input type="checkbox" id="agree-terms" name="agree_terms" required style="margin-right: 0.75rem; margin-top: 0.25rem; width: 18px; height: 18px;">
-                            <span style="font-size: 0.95rem;">
-                                I agree to the <strong>SwimAnalytics Affiliate Agreement</strong> and understand that I will receive the full agreement via email for review and signature. By submitting this form, I confirm my interest in joining the program.
-                            </span>
-                        </label>
+                    <div class="form-group mb-lg">
+                        <div class="card">
+                            <div class="card-content">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="agree-terms" name="agree_terms" required>
+                                    <span>
+                                        I agree to the <strong>SwimAnalytics Affiliate Agreement</strong> and understand that I will receive the full agreement via email for review and signature. By submitting this form, I confirm my interest in joining the program.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="form-group" style="margin-top: 2rem;">
-                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%; font-size: 1.1rem; padding: 1rem;">
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-large">
                             Apply Now - Join the Program
                         </button>
                     </div>
@@ -289,7 +335,7 @@
                 </form>
 
                 <div class="divider-top-xl">
-                    <p style="color: #666; font-size: 0.9rem; text-align: center;">
+                    <p class="text-center text-sm-muted">
                         Questions? Email us at <a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a>
                     </p>
                 </div>
@@ -384,7 +430,7 @@
                 if (response.ok) {
                     statusDiv.className = 'form-status form-status-success';
                     statusDiv.innerHTML = `
-                        <strong>✓ Application Submitted Successfully!</strong><br>
+                        <strong>Application Submitted Successfully!</strong><br>
                         Thank you for applying to our affiliate program. We'll review your application and send you the affiliate agreement within 24 hours.<br>
                         <br>
                         <strong>Next Steps:</strong><br>
