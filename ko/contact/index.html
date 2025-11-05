@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/ko/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -661,89 +776,66 @@
     
     <main id="main-content" class="main-content">
         <section class="section">
-    <div class="container max-w-prose">
-        <h1 class="mb-lg">문의하기</h1>
+    <div class="container container-narrow">
+        <h1 class="mb-md">Contact</h1>
+        <p class="mb-3xl">We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.</p>
 
-        <p class="text-lg mb-xl">질문이 있으시거나 피드백을 공유하고 싶으시거나 도움이 필요하신가요? 기꺼이 도와드리겠습니다!</p>
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
+            <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
 
-        <form id="contact-form" class="mb-xl">
-            <input type="hidden" name="access_key" value="f09aee8b-c14a-490a-9f69-f0491e2bec41">
-            <input type="hidden" name="subject" value="SwimAnalytics 문의 - 한국어">
-            <input type="hidden" name="language" value="ko">
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <!-- Language identifier -->
+            <input type="hidden" name="language" value="en">
+
+            <!-- Email destination -->
+            <input type="hidden" name="from_name" value="SwimAnalytics Contact Form">
+            <input type="hidden" name="subject" value="New Contact Form Submission (EN)">
+
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden">
 
             <div class="form-group">
-                <label for="name" class="form-label">이름 *</label>
+                <label for="name" class="form-label required">Name</label>
                 <input type="text" id="name" name="name" class="form-input" required>
+                <span class="form-error" id="name-error"></span>
             </div>
 
             <div class="form-group">
-                <label for="email" class="form-label">이메일 *</label>
+                <label for="email" class="form-label required">Email</label>
                 <input type="email" id="email" name="email" class="form-input" required>
+                <span class="form-error" id="email-error"></span>
             </div>
 
             <div class="form-group">
-                <label for="subject" class="form-label">제목</label>
-                <input type="text" id="subject-input" name="user_subject" class="form-input">
+                <label for="user-subject" class="form-label">Subject</label>
+                <input type="text" id="user-subject" name="user_subject" class="form-input">
             </div>
 
             <div class="form-group">
-                <label for="message" class="form-label">메시지 *</label>
+                <label for="message" class="form-label required">Message</label>
                 <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
+                <span class="form-error" id="message-error"></span>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-large">메시지 보내기</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+            </div>
 
-            <div id="form-status" class="form-status" style="display: none;"></div>
+            <div id="form-status" class="form-status hidden"></div>
         </form>
 
-        <div class="callout mb-xl">
-            <h2 class="mb-md">기타 연락 방법</h2>
-            <p class="mb-sm"><strong>이메일:</strong> <a href="mailto:info@swimanalytics.app">info@swimanalytics.app</a></p>
-            <p class="mb-sm"><strong>지원:</strong> <a href="mailto:support@swimanalytics.app">support@swimanalytics.app</a></p>
-            <p><strong>응답 시간:</strong> 보통 24-48시간 내에 답변드립니다.</p>
-        </div>
-
-        <h2 class="mb-md">자주 묻는 질문</h2>
-        <p class="mb-lg">바로 답변이 필요하신가요? 다음 리소스를 확인해보세요:</p>
-
-        <div class="grid grid-2 gap-lg">
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">시작하기</h3>
-                    <p>CSS 테스트를 수행하고 SwimAnalytics를 설정하는 방법을 배우세요.</p>
-                    <a href="/ko/getting-started/" class="btn btn-small mt-md">가이드 읽기</a>
+        <div class="divider-top-xl">
+            <h2 class="mb-md">Other Ways to Contact</h2>
+            <div class="grid grid-2">
+                <div>
+                    <h3 class="text-lg-tight mb-sm">Email</h3>
+                    <p><a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a></p>
+                </div>
+                <div>
+                    <h3 class="text-lg-tight mb-sm">Social Media</h3>
+                    <p><a href="https://twitter.com/swimanalytics" target="_blank" rel="noopener">@swimanalytics</a></p>
                 </div>
             </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">CSS 이해하기</h3>
-                    <p>Critical Swim Speed가 무엇이며 왜 중요한지 알아보세요.</p>
-                    <a href="/ko/css/" class="btn btn-small mt-md">CSS 알아보기</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">훈련 구역</h3>
-                    <p>5개의 CSS 기반 훈련 구역과 각각을 사용하는 시기를 탐색하세요.</p>
-                    <a href="/ko/training-zones/" class="btn btn-small mt-md">구역 알아보기</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="card-title">sTSS 계산</h3>
-                    <p>수영 Training Stress Score를 이해하고 계산하세요.</p>
-                    <a href="/ko/stss-calculator/" class="btn btn-small mt-md">계산기 사용</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="callout callout-info mt-xl">
-            <h3>기능 요청 또는 버그 신고</h3>
-            <p>문제가 발생하셨거나 새로운 기능에 대한 아이디어가 있으신가요? 저희는 귀하의 의견을 듣고 싶습니다! 기술적 세부사항(iOS 버전, 재현 단계 등)을 최대한 많이 포함하여 위의 양식을 사용해 주세요.</p>
         </div>
     </div>
 </section>
@@ -1185,15 +1277,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

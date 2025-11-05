@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/lt/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,63 +809,63 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Mechanika Ruchu</h1>
-        <p class="lead">Biomechanika Prędkości w Pływaniu</p>
+        <h1>Stroke Mechanics</h1>
+        <p class="lead">The Biomechanics of Swimming Speed</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Podstawowe Równanie Prędkości w Pływaniu</h2>
+        <h2>The Fundamental Equation of Swimming Speed</h2>
 
         <div class="formula-box formula-highlight">
-            <h3>Równanie Prędkości</h3>
+            <h3>The Velocity Equation</h3>
             <div class="formula formula-large">
-                Prędkość = Częstotliwość Ruchów (SR) × Długość Ruchu (DPS)
+                Velocity = Stroke Rate (SR) × Distance Per Stroke (DPS)
             </div>
-            <p class="formula-explanation"><strong>Wyjaśnienie:</strong> Prędkość pływania zależy od <em>częstotliwości</em> wykonywanych ruchów (SR) pomnożonej przez <em>dystans</em> pokonywany na jeden ruch (DPS).</p>
+            <p class="formula-explanation"><strong>Translation:</strong> How fast you swim depends on how <em>often</em> you stroke (SR) multiplied by how <em>far</em> you travel per stroke (DPS).</p>
         </div>
 
-        <p class="lead">To pozornie proste równanie rządzi całą wydajnością w pływaniu. Aby pływać szybciej, należy:</p>
+        <p class="lead">This deceptively simple equation governs all swimming performance. To get faster, you must either:</p>
         <ul class="lead-list">
-            <li><strong>Zwiększyć Częstotliwość Ruchów</strong> (szybszy rytm) przy zachowaniu DPS</li>
-            <li><strong>Zwiększyć Długość Ruchu</strong> (pokonywać większy dystans na ruch) przy zachowaniu SR</li>
-            <li><strong>Zoptymalizować oba parametry</strong> (idealne podejście)</li>
+            <li><strong>Increase Stroke Rate</strong> (turnover faster) while maintaining DPS</li>
+            <li><strong>Increase Distance Per Stroke</strong> (travel farther per stroke) while maintaining SR</li>
+            <li><strong>Optimize both</strong> (the ideal approach)</li>
         </ul>
 
         <div class="callout callout-warning">
-            <h3>⚖️ Równowaga</h3>
-            <p>SR i DPS są zazwyczaj <strong>odwrotnie proporcjonalne</strong>. Gdy jeden wzrasta, drugi ma tendencję do spadku. Sztuka pływania polega na znalezieniu optymalnej równowagi dla danej konkurencji, budowy ciała i aktualnego poziomu kondycji.</p>
+            <h3>⚖️ The Trade-off</h3>
+            <p>SR and DPS are generally <strong>inversely related</strong>. As one increases, the other tends to decrease. The art of swimming is finding the optimal balance for your event, body type, and current fitness level.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Częstotliwość Ruchów (SR)</h2>
+        <h2 class="text-center mb-xl">Stroke Rate (SR)</h2>
 
         <div class="grid grid-2">
             <div>
-                <h3>Czym Jest Częstotliwość Ruchów?</h3>
-                <p><strong>Częstotliwość Ruchów (SR)</strong>, zwana również <em>kadencją</em> lub <em>tempem</em>, mierzy liczbę pełnych cykli ruchów wykonywanych na minutę, wyrażoną w <strong>Ruchach Na Minutę (SPM)</strong>.</p>
+                <h3>What is Stroke Rate?</h3>
+                <p><strong>Stroke Rate (SR)</strong>, also called <em>cadence</em> or <em>tempo</em>, measures how many complete stroke cycles you perform per minute, expressed in <strong>Strokes Per Minute (SPM)</strong>.</p>
 
                 <div class="formula-box">
-                    <h4>Wzór</h4>
+                    <h4>Formula</h4>
                     <div class="formula">
-                        SR = 60 / Czas Cyklu
+                        SR = 60 / Cycle Time
                     </div>
-                    <p>Lub:</p>
+                    <p>Or:</p>
                     <div class="formula">
-                        SR = (Liczba Ruchów / Czas w sekundach) × 60
+                        SR = (Number of Strokes / Time in seconds) × 60
                     </div>
 
                     <div class="example-box mt-md">
-                        <h4>Przykład:</h4>
-                        <p>Jeśli cykl ruchu trwa 1 sekundę:</p>
+                        <h4>Example:</h4>
+                        <p>If your stroke cycle takes 1 second:</p>
                         <div class="calculation">
                             SR = 60 / 1 = <strong>60 SPM</strong>
                         </div>
-                        <p>Jeśli wykonasz 30 ruchów w 25 sekund:</p>
+                        <p>If you complete 30 strokes in 25 seconds:</p>
                         <div class="calculation">
                             SR = (30 / 25) × 60 = <strong>72 SPM</strong>
                         </div>
@@ -758,63 +873,63 @@
                 </div>
 
                 <div class="callout callout-info">
-                    <h4>📝 Uwaga Dotycząca Liczenia Ruchów</h4>
-                    <p>Dla <strong>kraula/grzbietówki:</strong> Liczone są pojedyncze wejścia każdej ręki (lewa + prawa = 2 ruchy)</p>
-                    <p>Dla <strong>żabki/motylka:</strong> Ramiona poruszają się jednocześnie (jedno pociągnięcie = 1 ruch)</p>
+                    <h4>📝 Stroke Counting Note</h4>
+                    <p>For <strong>freestyle/backstroke:</strong> Count individual arm entries (left + right = 2 strokes)</p>
+                    <p>For <strong>breaststroke/butterfly:</strong> Arms move simultaneously (one pull = 1 stroke)</p>
                 </div>
             </div>
 
             <div>
-                <h3>Typowe Częstotliwości Ruchów według Konkurencji</h3>
+                <h3>Typical Stroke Rates by Event</h3>
 
                 <div class="sr-benchmarks">
-                    <h4>Sprint Kraulem (50m)</h4>
+                    <h4>Freestyle Sprint (50m)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Elita:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">120-150 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Kategorie Młodzieżowe:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">100-120 SPM</span>
                     </div>
 
-                    <h4>Kraul 100m</h4>
+                    <h4>Freestyle 100m</h4>
                     <div class="benchmark-row">
-                        <span class="label">Elita:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">95-110 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Kategorie Młodzieżowe:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">85-100 SPM</span>
                     </div>
 
-                    <h4>Średni Dystans (200-800m)</h4>
+                    <h4>Middle Distance (200-800m)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Elita:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">70-100 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Kategorie Młodzieżowe:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">60-85 SPM</span>
                     </div>
 
-                    <h4>Długi Dystans (1500m+ / Wody Otwarte)</h4>
+                    <h4>Distance (1500m+ / Open Water)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Elita:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">60-100 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Kategorie Młodzieżowe:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">50-75 SPM</span>
                     </div>
                 </div>
 
                 <div class="callout callout-tip">
-                    <h4>🎯 Różnice Płciowe</h4>
-                    <p>Mężczyźni elita 50m kraul: ~65-70 SPM<br>
-                    Kobiety elita 50m kraul: ~60-64 SPM<br>
-                    Mężczyźni elita 100m kraul: ~50-54 SPM<br>
-                    Kobiety elita 100m kraul: ~53-56 SPM</p>
+                    <h4>🎯 Gender Differences</h4>
+                    <p>Elite male 50m free: ~65-70 SPM<br>
+                    Elite female 50m free: ~60-64 SPM<br>
+                    Elite male 100m free: ~50-54 SPM<br>
+                    Elite female 100m free: ~53-56 SPM</p>
                 </div>
             </div>
         </div>
@@ -823,44 +938,44 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Interpretacja Częstotliwości Ruchów</h2>
+        <h2>Interpreting Stroke Rate</h2>
 
         <div class="interpretation-grid">
             <div class="interpretation-item interpretation-low">
-                <h3>🐢 SR Zbyt Niskie</h3>
-                <p><strong>Charakterystyka:</strong></p>
+                <h3>🐢 SR Too Low</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Długie fazy ślizgu między ruchami</li>
-                    <li>Spowolnienie i utrata impetu</li>
-                    <li>"Martwe punkty", gdzie prędkość znacząco spada</li>
+                    <li>Long glide phases between strokes</li>
+                    <li>Deceleration and momentum loss</li>
+                    <li>"Dead spots" where velocity drops significantly</li>
                 </ul>
-                <p><strong>Rezultat:</strong> Nieefektywne wykorzystanie energii—ciągłe przyśpieszanie z obniżonej prędkości.</p>
-                <p><strong>Rozwiązanie:</strong> Skróć czas ślizgu, rozpocznij chwyt wcześniej, utrzymuj ciągły napęd.</p>
+                <p><strong>Result:</strong> Inefficient energy use—you're constantly re-accelerating from reduced speed.</p>
+                <p><strong>Fix:</strong> Reduce glide time, initiate catch earlier, maintain continuous propulsion.</p>
             </div>
 
             <div class="interpretation-item interpretation-high">
-                <h3>🏃 SR Zbyt Wysokie</h3>
-                <p><strong>Charakterystyka:</strong></p>
+                <h3>🏃 SR Too High</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Krótkie, rwane ruchy ("poślizg bez postępu")</li>
-                    <li>Słaba mechanika chwytu—ręka ślizga się po wodzie</li>
-                    <li>Nadmierne zużycie energii przy minimalnym napędzie</li>
+                    <li>Short, choppy strokes ("spinning wheels")</li>
+                    <li>Poor catch mechanics—hand slipping past water</li>
+                    <li>Excessive energy expenditure for minimal propulsion</li>
                 </ul>
-                <p><strong>Rezultat:</strong> Duży wysiłek, niska efektywność. Intensywne ruchy bez szybkości.</p>
-                <p><strong>Rozwiązanie:</strong> Wydłuż ruch, popraw chwyt, zapewnij pełne wyciągnięcie i zakończenie.</p>
+                <p><strong>Result:</strong> High effort, low efficiency. Feels busy but not fast.</p>
+                <p><strong>Fix:</strong> Lengthen stroke, improve catch, ensure full extension and push-through.</p>
             </div>
 
             <div class="interpretation-item interpretation-optimal">
-                <h3>⚡ SR Optymalne</h3>
-                <p><strong>Charakterystyka:</strong></p>
+                <h3>⚡ Optimal SR</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Zrównoważony rytm—ciągły ale nie chaotyczny</li>
-                    <li>Minimalne spowolnienie między ruchami</li>
-                    <li>Silny chwyt i pełne wyciągnięcie</li>
-                    <li>Możliwe do utrzymania w tempie wyścigu</li>
+                    <li>Balanced rhythm—continuous but not frantic</li>
+                    <li>Minimal deceleration between strokes</li>
+                    <li>Strong catch and full extension</li>
+                    <li>Sustainable at race pace</li>
                 </ul>
-                <p><strong>Rezultat:</strong> Maksymalna prędkość przy minimalnym marnowaniu energii.</p>
-                <p><strong>Jak To Znaleźć:</strong> Eksperymentuj ze zmianami ±5 SPM utrzymując tempo. Najniższe RPE = optymalne SR.</p>
+                <p><strong>Result:</strong> Maximum velocity with minimum wasted energy.</p>
+                <p><strong>How to Find:</strong> Experiment with ±5 SPM adjustments while maintaining pace. Lowest RPE = optimal SR.</p>
             </div>
         </div>
     </div>
@@ -868,90 +983,90 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Długość Ruchu (DPS)</h2>
+        <h2 class="text-center mb-xl">Distance Per Stroke (DPS)</h2>
 
         <div class="grid grid-2">
             <div>
-                <h3>Czym Jest Długość Ruchu?</h3>
-                <p><strong>Długość Ruchu (DPS)</strong>, zwana również <em>Długością Ruchu</em>, mierzy odległość pokonaną z każdym pełnym cyklem ruchu. Jest to główny wskaźnik efektywności ruchu i "wyczucia wody".</p>
+                <h3>What is Distance Per Stroke?</h3>
+                <p><strong>Distance Per Stroke (DPS)</strong>, also called <em>Stroke Length</em>, measures how far you travel with each complete stroke cycle. It's a primary indicator of stroke efficiency and "feel for the water."</p>
 
                 <div class="formula-box">
-                    <h4>Wzór</h4>
+                    <h4>Formula</h4>
                     <div class="formula">
-                        DPS (m/ruch) = Dystans / Liczba Ruchów
+                        DPS (m/stroke) = Distance / Number of Strokes
                     </div>
-                    <p>Lub:</p>
+                    <p>Or:</p>
                     <div class="formula">
-                        DPS = Prędkość / (SR / 60)
+                        DPS = Velocity / (SR / 60)
                     </div>
 
                     <div class="example-box mt-md">
-                        <h4>Przykład (basen 25m, 5m odbicia):</h4>
-                        <p>Płyniesz 20m w 12 ruchach:</p>
+                        <h4>Example (25m pool, 5m push-off):</h4>
+                        <p>Swim 20m in 12 strokes:</p>
                         <div class="calculation">
-                            DPS = 20 / 12 = <strong>1.67 m/ruch</strong>
+                            DPS = 20 / 12 = <strong>1.67 m/stroke</strong>
                         </div>
 
-                        <h4 class="mt-sm">Na 100m z 48 ruchami (4 × 5m odbić):</h4>
+                        <h4 class="mt-sm">For 100m with 48 strokes (4 × 5m push-offs):</h4>
                         <div class="calculation">
-                            Efektywny dystans = 100 - (4 × 5) = 80m<br>
-                            DPS = 80 / 48 = <strong>1.67 m/ruch</strong>
+                            Effective distance = 100 - (4 × 5) = 80m<br>
+                            DPS = 80 / 48 = <strong>1.67 m/stroke</strong>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div>
-                <h3>Typowe Wartości DPS (Basen 25m Kraul)</h3>
+                <h3>Typical DPS Values (25m Pool Freestyle)</h3>
 
                 <div class="dps-benchmarks">
-                    <h4>Pływacy Elita</h4>
+                    <h4>Elite Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.8-2.2 m/ruch</span>
+                        <span class="value">1.8-2.2 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">11-14 ruchów/długość</span>
+                        <span class="value">11-14 strokes/length</span>
                     </div>
 
-                    <h4>Pływacy Wyczynowi</h4>
+                    <h4>Competitive Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.5-1.8 m/ruch</span>
+                        <span class="value">1.5-1.8 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">14-17 ruchów/długość</span>
+                        <span class="value">14-17 strokes/length</span>
                     </div>
 
-                    <h4>Pływacy Rekreacyjni</h4>
+                    <h4>Fitness Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.2-1.5 m/ruch</span>
+                        <span class="value">1.2-1.5 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">17-21 ruchów/długość</span>
+                        <span class="value">17-21 strokes/length</span>
                     </div>
 
-                    <h4>Początkujący</h4>
+                    <h4>Beginners</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">&lt;1.2 m/ruch</span>
+                        <span class="value">&lt;1.2 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">21+ ruchów/długość</span>
+                        <span class="value">21+ strokes/length</span>
                     </div>
                 </div>
 
                 <div class="callout callout-info">
-                    <h4>📏 Dostosowania Wzrostowe</h4>
-                    <p><strong>1.83m (6'0"):</strong> Cel ~12 ruchów/25m<br>
-                    <strong>1.68m (5'6"):</strong> Cel ~13 ruchów/25m<br>
-                    <strong>1.52m (5'0"):</strong> Cel ~14 ruchów/25m</p>
-                    <p>Wyżsi pływacy naturalnie mają większe DPS ze względu na długość ramion i rozmiar ciała.</p>
+                    <h4>📏 Height Adjustments</h4>
+                    <p><strong>6'0" (183cm):</strong> Target ~12 strokes/25m<br>
+                    <strong>5'6" (168cm):</strong> Target ~13 strokes/25m<br>
+                    <strong>5'0" (152cm):</strong> Target ~14 strokes/25m</p>
+                    <p>Taller swimmers naturally have longer DPS due to arm length and body size.</p>
                 </div>
             </div>
         </div>
@@ -960,37 +1075,37 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Czynniki Wpływające na DPS</h2>
+        <h2>Factors Affecting DPS</h2>
 
         <div class="factors-list">
             <div class="factor-item">
-                <h3>1️⃣ Jakość Chwytu</h3>
-                <p>Zdolność do "utrzymania" wody dłonią i przedramieniem podczas fazy pociągnięcia. Silny chwyt = większy napęd na ruch.</p>
-                <p><strong>Ćwiczenie:</strong> Ćwiczenie zasięgu, pływanie na pięściach, ćwiczenia sculling.</p>
+                <h3>1️⃣ Catch Quality</h3>
+                <p>The ability to "hold" water with your hand and forearm during the pull phase. A strong catch = more propulsion per stroke.</p>
+                <p><strong>Drill:</strong> Catch-up drill, fist swimming, sculling exercises.</p>
             </div>
 
             <div class="factor-item">
-                <h3>2️⃣ Zakończenie Ruchu</h3>
-                <p>Pełne wypchnięcie do pełnego wyciągnięcia przy biodrze. Wielu pływaków puszcza za wcześnie, tracąc końcowe 20% napędu.</p>
-                <p><strong>Ćwiczenie:</strong> Ćwiczenie przeciągania palców, serie skupione na wyciągnięciu.</p>
+                <h3>2️⃣ Stroke Completion</h3>
+                <p>Pushing all the way through to full extension at the hip. Many swimmers release early, losing the final 20% of propulsion.</p>
+                <p><strong>Drill:</strong> Fingertip drag drill, extension focus sets.</p>
             </div>
 
             <div class="factor-item">
-                <h3>3️⃣ Pozycja Ciała i Opływowość</h3>
-                <p>Mniejszy opór = większy dystans na ruch. Wysokie biodra, poziome ciało, napięty tułów minimalizują opór.</p>
-                <p><strong>Ćwiczenie:</strong> Kopanie na boku, odbicia w opływowości, praca nad stabilnością tułowia.</p>
+                <h3>3️⃣ Body Position & Streamline</h3>
+                <p>Reduced drag = farther travel per stroke. High hips, horizontal body, tight core all minimize resistance.</p>
+                <p><strong>Drill:</strong> Kick on side, streamline push-offs, core stability work.</p>
             </div>
 
             <div class="factor-item">
-                <h3>4️⃣ Efektywność Kopania</h3>
-                <p>Kopanie utrzymuje prędkość między ruchami. Słabe kopanie = spowolnienie = krótsze DPS.</p>
-                <p><strong>Ćwiczenie:</strong> Kopanie pionowe, kopanie z deską, kopanie na boku.</p>
+                <h3>4️⃣ Kick Effectiveness</h3>
+                <p>The kick maintains velocity between arm strokes. Weak kick = deceleration = shorter DPS.</p>
+                <p><strong>Drill:</strong> Vertical kicking, kick with board, kick on side.</p>
             </div>
 
             <div class="factor-item">
-                <h3>5️⃣ Technika Oddychania</h3>
-                <p>Słabe oddychanie zakłóca pozycję ciała i tworzy opór. Minimalizuj ruch głowy i obrót.</p>
-                <p><strong>Ćwiczenie:</strong> Ćwiczenie oddychania bocznego, oddychanie obustronne, oddychać co 3/5 ruchów.</p>
+                <h3>5️⃣ Breathing Technique</h3>
+                <p>Poor breathing disrupts body position and creates drag. Minimize head movement and rotation.</p>
+                <p><strong>Drill:</strong> Side breathing drill, bilateral breathing, breathing every 3/5 strokes.</p>
             </div>
         </div>
     </div>
@@ -998,128 +1113,128 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Równowaga SR × DPS</h2>
+        <h2>The SR × DPS Balance</h2>
 
-        <p class="lead">Pływacy elita nie mają po prostu wysokiego SR lub wysokiego DPS—mają <em>optymalną kombinację</em> dla swojej konkurencji.</p>
+        <p class="lead">Elite swimmers don't just have high SR or high DPS—they have the optimal <em>combination</em> for their event.</p>
 
         <div class="example-box">
-            <h3>Przykład Rzeczywisty: 50m Kraul Caeleb Dressel</h3>
-            <p><strong>Metryki Rekordu Świata:</strong></p>
+            <h3>Real-World Example: Caeleb Dressel's 50m Freestyle</h3>
+            <p><strong>World Record Metrics:</strong></p>
             <ul>
-                <li>Częstotliwość Ruchów: ~130 ruchów/min</li>
-                <li>Długość Ruchu: ~0.92 jardów/ruch (~0.84 m/ruch)</li>
-                <li>Prędkość: ~2.3 m/s (tempo rekordu świata)</li>
+                <li>Stroke Rate: ~130 strokes/min</li>
+                <li>Distance Per Stroke: ~0.92 yards/stroke (~0.84 m/stroke)</li>
+                <li>Velocity: ~2.3 m/s (world record pace)</li>
             </ul>
-            <p><strong>Analiza:</strong> Dressel łączy wyjątkowo wysokie SR z dobrym DPS. Jego moc pozwala mu utrzymać rozsądną długość ruchu mimo ekstremalnej kadencji.</p>
+            <p><strong>Analysis:</strong> Dressel combines exceptionally high SR with good DPS. His power allows him to maintain reasonable stroke length despite extreme turnover.</p>
         </div>
 
         <div class="sr-dps-scenarios">
-            <h3>Analiza Scenariuszy</h3>
+            <h3>Scenario Analysis</h3>
 
             <div class="scenario">
-                <h4>🔴 Wysokie DPS + Niskie SR = "Nadmierny Ślizg"</h4>
-                <p><strong>Przykład:</strong> 1.8 m/ruch × 50 SPM = 1.5 m/s</p>
-                <p><strong>Problem:</strong> Zbyt długi ślizg tworzy martwe punkty, gdzie prędkość spada. Nieefektywne mimo dobrej długości ruchu.</p>
+                <h4>🔴 High DPS + Low SR = "Overgliding"</h4>
+                <p><strong>Example:</strong> 1.8 m/stroke × 50 SPM = 1.5 m/s</p>
+                <p><strong>Problem:</strong> Too much glide creates dead spots where velocity drops. Inefficient despite good stroke length.</p>
             </div>
 
             <div class="scenario">
-                <h4>🔴 Niskie DPS + Wysokie SR = "Poślizg Bez Postępu"</h4>
-                <p><strong>Przykład:</strong> 1.2 m/ruch × 90 SPM = 1.8 m/s</p>
-                <p><strong>Problem:</strong> Wysoki koszt energetyczny. Intensywne ruchy ale brak napędu na ruch. Niemożliwe do utrzymania.</p>
+                <h4>🔴 Low DPS + High SR = "Spinning Wheels"</h4>
+                <p><strong>Example:</strong> 1.2 m/stroke × 90 SPM = 1.8 m/s</p>
+                <p><strong>Problem:</strong> High energy cost. Feels busy but lacks propulsion per stroke. Unsustainable.</p>
             </div>
 
             <div class="scenario">
-                <h4>🟢 DPS + SR Zrównoważone = Optymalne</h4>
-                <p><strong>Przykład:</strong> 1.6 m/ruch × 70 SPM = 1.87 m/s</p>
-                <p><strong>Rezultat:</strong> Silny napęd na ruch z możliwą do utrzymania kadencją. Efektywne i szybkie.</p>
+                <h4>🟢 Balanced DPS + SR = Optimal</h4>
+                <p><strong>Example:</strong> 1.6 m/stroke × 70 SPM = 1.87 m/s</p>
+                <p><strong>Result:</strong> Strong propulsion per stroke with sustainable turnover. Efficient and fast.</p>
             </div>
         </div>
 
         <div class="callout callout-success">
-            <h3>✅ Znalezienie Optymalnej Równowagi</h3>
-            <p><strong>Seria:</strong> 6 × 100m @ tempo CSS</p>
+            <h3>✅ Finding Your Optimal Balance</h3>
+            <p><strong>Set:</strong> 6 × 100m @ CSS pace</p>
             <ul>
-                <li><strong>100 #1-2:</strong> Płyń naturalnie, zapisz SR i DPS</li>
-                <li><strong>100 #3:</strong> Zmniejsz liczbę ruchów o 2-3 (zwiększ DPS), próbuj utrzymać tempo</li>
-                <li><strong>100 #4:</strong> Zwiększ SR o 5 SPM, próbuj utrzymać tempo</li>
-                <li><strong>100 #5:</strong> Znajdź złoty środek—zrównoważ SR i DPS</li>
-                <li><strong>100 #6:</strong> Zauważ, co było najbardziej efektywne</li>
+                <li><strong>100 #1-2:</strong> Swim naturally, record SR and DPS</li>
+                <li><strong>100 #3:</strong> Reduce stroke count by 2-3 (increase DPS), try to maintain pace</li>
+                <li><strong>100 #4:</strong> Increase SR by 5 SPM, try to maintain pace</li>
+                <li><strong>100 #5:</strong> Find middle ground—balance SR and DPS</li>
+                <li><strong>100 #6:</strong> Lock in on what felt most efficient</li>
             </ul>
-            <p>Powtórzenie, które było najłatwiejsze w tempie = optymalna kombinacja SR/DPS.</p>
+            <p>The rep that felt easiest at pace = your optimal SR/DPS combination. Each swimmer has a "critical stroke rate"—the turnover frequency where stroke length begins to collapse. Finding this threshold helps optimize the SR/DPS balance.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Indeks Ruchu: Metryka Mocy-Efektywności</h2>
+        <h2>Stroke Index: The Power-Efficiency Metric</h2>
 
         <div class="formula-box">
-            <h3>Wzór</h3>
+            <h3>Formula</h3>
             <div class="formula">
-                Indeks Ruchu (SI) = Prędkość (m/s) × DPS (m/ruch)
+                Stroke Index (SI) = Velocity (m/s) × DPS (m/stroke)
             </div>
             <div class="formula-explanation">
-                <p>Indeks Ruchu łączy prędkość i efektywność w jedną metrykę. Wyższe SI = lepsza wydajność.</p>
+                <p>Stroke Index combines speed and efficiency into one metric. Higher SI = better performance.</p>
             </div>
         </div>
 
         <div class="example-box">
-            <h4>Przykład:</h4>
-            <p>Pływak A: 1.5 m/s prędkość × 1.7 m/ruch DPS = <strong>SI wynosi 2.55</strong><br>
-            Pływak B: 1.4 m/s prędkość × 1.9 m/ruch DPS = <strong>SI wynosi 2.66</strong></p>
-            <p><strong>Analiza:</strong> Pływak B jest nieznacznie wolniejszy ale bardziej efektywny. Z większą mocą ma większy potencjał wydajnościowy.</p>
+            <h4>Example:</h4>
+            <p>Swimmer A: 1.5 m/s velocity × 1.7 m/stroke DPS = <strong>SI of 2.55</strong><br>
+            Swimmer B: 1.4 m/s velocity × 1.9 m/stroke DPS = <strong>SI of 2.66</strong></p>
+            <p><strong>Analysis:</strong> Swimmer B is slightly slower but more efficient. With improved power, they have higher performance potential.</p>
         </div>
 
         <div class="callout callout-science">
-            <h3>🔬 Podstawa Naukowa</h3>
-            <p>Barbosa i in. (2010) stwierdzili, że <strong>długość ruchu jest ważniejszym predyktorem wydajności niż częstotliwość ruchu</strong> w pływaniu wyczynowym. Jednak zależność nie jest liniowa—istnieje punkt optymalny, poza którym zwiększanie DPS (zmniejszanie SR) staje się kontraproduktywne ze względu na utratę impetu.</p>
-            <p>Kluczem jest <strong>efektywność biomechaniczna</strong>: maksymalizacja napędu na ruch przy zachowaniu tempa, które zapobiega spowolnieniu.</p>
+            <h3>🔬 Research Foundation</h3>
+            <p>Barbosa et al. (2010) found that <strong>stroke length is a more important predictor of performance than stroke rate</strong> in competitive swimming. However, the relationship isn't linear—there's an optimal point beyond which increasing DPS (by decreasing SR) becomes counterproductive due to lost momentum.</p>
+            <p>The key is <strong>biomechanical efficiency</strong>: maximizing propulsion per stroke while maintaining rhythm that prevents deceleration.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Praktyczne Zastosowania Treningowe</h2>
+        <h2>Practical Training Applications</h2>
 
         <div class="application-workout">
-            <h3>🎯 Seria Kontroli SR</h3>
+            <h3>🎯 SR Control Set</h3>
             <div class="workout-box">
-                <h4>8 × 50m (20s odpoczynek)</h4>
-                <p><strong>Użyj Tempo Trainer lub licz ruchy/czas</strong></p>
+                <h4>8 × 50m (20s rest)</h4>
+                <p><strong>Use a Tempo Trainer or count strokes/time</strong></p>
                 <ol>
-                    <li>50 #1-2: SR bazowe (płyń naturalnie)</li>
-                    <li>50 #3-4: SR +10 SPM (szybsza kadencja)</li>
-                    <li>50 #5-6: SR -10 SPM (wolniej, dłuższe ruchy)</li>
-                    <li>50 #7-8: Wróć do bazowego, zauważ co było najbardziej efektywne</li>
+                    <li>50 #1-2: Baseline SR (swim naturally)</li>
+                    <li>50 #3-4: SR +10 SPM (faster turnover)</li>
+                    <li>50 #5-6: SR -10 SPM (slower, longer strokes)</li>
+                    <li>50 #7-8: Return to baseline, note which felt most efficient</li>
                 </ol>
-                <p><strong>Cel:</strong> Rozwinąć świadomość jak zmiany SR wpływają na tempo i wysiłek.</p>
+                <p><strong>Goal:</strong> Develop awareness of how SR changes affect pace and effort.</p>
             </div>
         </div>
 
         <div class="application-workout">
-            <h3>🎯 Seria Maksymalizacji DPS</h3>
+            <h3>🎯 DPS Maximization Set</h3>
             <div class="workout-box">
-                <h4>8 × 25m (15s odpoczynek)</h4>
-                <p><strong>Licz ruchy na długość</strong></p>
+                <h4>8 × 25m (15s rest)</h4>
+                <p><strong>Count strokes per length</strong></p>
                 <ol>
-                    <li>25 #1: Ustal bazową liczbę ruchów</li>
-                    <li>25 #2-4: Zmniejsz o 1 ruch na długość (maksymalne DPS)</li>
-                    <li>25 #5: Utrzymaj minimalną liczbę ruchów, zwiększ tempo nieznacznie</li>
-                    <li>25 #6-8: Znajdź możliwą do utrzymania zmniejszoną liczbę ruchów w docelowym tempie</li>
+                    <li>25 #1: Establish baseline stroke count</li>
+                    <li>25 #2-4: Reduce by 1 stroke per lap (max DPS)</li>
+                    <li>25 #5: Hold minimum stroke count, increase pace slightly</li>
+                    <li>25 #6-8: Find sustainable reduced stroke count at target pace</li>
                 </ol>
-                <p><strong>Cel:</strong> Poprawić efektywność ruchu—pokonywać większy dystans na ruch bez zmniejszania prędkości.</p>
+                <p><strong>Goal:</strong> Improve stroke efficiency—travel farther per stroke without slowing down.</p>
             </div>
         </div>
 
         <div class="application-workout">
-            <h3>🎯 Seria Golf (Minimalizuj SWOLF)</h3>
+            <h3>🎯 Golf Set (Minimize SWOLF)</h3>
             <div class="workout-box">
-                <h4>4 × 100m (30s odpoczynek)</h4>
-                <p><strong>Cel: Najniższy wynik SWOLF (czas + ruchy) w tempie CSS</strong></p>
-                <p>Eksperymentuj z różnymi kombinacjami SR/DPS. Powtórzenie z najniższym SWOLF = najbardziej efektywne.</p>
-                <p>Śledź jak SWOLF zmienia się w powtórzeniach—rosnący SWOLF wskazuje zmęczenie pogarszające technikę.</p>
+                <h4>4 × 100m (30s rest)</h4>
+                <p><strong>Goal: Lowest SWOLF score (time + strokes) at CSS pace</strong></p>
+                <p>Experiment with different SR/DPS combinations. The rep with lowest SWOLF = most efficient.</p>
+                <p>Track how SWOLF changes across reps—rising SWOLF indicates fatigue breaking down technique.</p>
             </div>
         </div>
     </div>
@@ -1127,14 +1242,14 @@
 
 <section class="section">
     <div class="container container-narrow text-center">
-        <h2>Opanuj Mechanikę, Opanuj Prędkość</h2>
-        <p class="lead">Prędkość = SR × DPS to nie tylko wzór—to rama do zrozumienia i poprawy każdego aspektu techniki pływania.</p>
+        <h2>Master the Mechanics, Master the Speed</h2>
+        <p class="lead">Velocity = SR × DPS isn't just a formula—it's a framework for understanding and improving every aspect of your swimming technique.</p>
 
-        <p>Śledź oba parametry. Eksperymentuj z równowagą. Znajdź swoją optymalną kombinację. Prędkość nadejdzie.</p>
+        <p>Track both variables. Experiment with the balance. Find your optimal combination. Speed will follow.</p>
 
         <div class="mt-xl">
-            <a href="/lt/efficiency/" class="btn btn-secondary">← Efektywność SWOLF</a>
-            <a href="/lt/research/" class="btn btn-primary">Badania Naukowe →</a>
+            <a href="/en/efficiency/" class="btn btn-secondary">← SWOLF Efficiency</a>
+            <a href="/en/research/" class="btn btn-primary">Scientific Research →</a>
         </div>
     </div>
 </section>
@@ -1576,15 +1691,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/lv/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -663,28 +778,31 @@
       <div class="app-hero-text">
         <div class="app-hero-badge">
           <span>🏊</span>
-          <span>Profesjonalna Analityka Pływacka</span>
+          <span>Professional Swimming Analytics</span>
         </div>
-        <h1>Przekształć Dane Pływackie w Wydajność</h1>
+        <h1>Transform Your Swimming Data Into Performance</h1>
         <p class="app-hero-subtitle">
-          Metryki naukowe, spersonalizowane strefy treningowe i kompleksowe śledzenie wydajności.
-          Wszystko przetwarzane lokalnie na Twoim iPhonie z pełną prywatnością.
+          Scientific metrics, personalized training zones, and comprehensive performance tracking.
+          All processed locally on your iPhone with complete privacy.
         </p>
         <div class="app-hero-cta">
           <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-            Pobierz z App Store
+            Download on App Store
           </a>
           <a href="#features" class="btn btn-large btn-secondary">
-            Poznaj Funkcje
+            Explore Features
           </a>
         </div>
         <p class="mt-6 text-sm-muted">
-          ✓ 7-dniowy darmowy okres próbny &nbsp;&nbsp; ✓ Bez wymaganego konta &nbsp;&nbsp; ✓ 100% danych lokalnych
+          ✓ 7-day free trial &nbsp;&nbsp; ✓ No account required &nbsp;&nbsp; ✓ 100% local data
         </p>
       </div>
       <div class="app-hero-mockup">
         <div class="mockup-phone">
-          <img src="/assets/images/app-mockup-main.png" alt="Aplikacja iOS SwimAnalytics pokazująca metryki Critical Swim Speed (CSS) i Training Stress Score (TSS) na iPhonie" width="400" height="auto" loading="eager" />
+          <picture>
+                    <source srcset="/assets/images/app-mockup-main.webp" type="image/webp">
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOS app showing Critical Swim Speed (CSS) and Training Stress Score (TSS) metrics dashboard on iPhone" width="400" height="auto" loading="eager" />
+                </picture>
         </div>
       </div>
     </div>
@@ -695,9 +813,9 @@
 <section id="features" class="app-features">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Funkcje</div>
-      <h2 class="section-title">Wszystko, Czego Potrzebujesz do Poprawy</h2>
-      <p class="section-subtitle">Analityka na poziomie profesjonalnym zaprojektowana dla pływaków wszystkich poziomów</p>
+      <div class="section-badge">Features</div>
+      <h2 class="section-title">Everything You Need to Improve</h2>
+      <p class="section-subtitle">Professional-grade analytics designed for swimmers at every level</p>
     </div>
     <div class="app-features-grid">
       <div class="feature-card">
@@ -706,8 +824,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
           </svg>
         </div>
-        <h3>Metryki Naukowe</h3>
-        <p><a href="/lv/css/">Critical Swim Speed (CSS)</a> określa próg tlenowy, umożliwiając obliczenie <a href="/lv/training-load/">Training Stress Score (TSS)</a> i <a href="/lv/training-load/#pmc">śledzenie wydajności za pomocą CTL/ATL/TSB</a> w oparciu o sprawdzone badania naukowe w sporcie.</p>
+        <h3>Scientific Metrics</h3>
+        <p><a href="/en/css/">Critical Swim Speed (CSS)</a> determines your aerobic threshold, enabling <a href="/en/training-load/">Training Stress Score (TSS)</a> calculation and <a href="/en/training-load/#pmc">CTL/ATL/TSB performance tracking</a> based on proven sports science research.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -715,8 +833,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
           </svg>
         </div>
-        <h3>Strefy Treningowe</h3>
-        <p>7 spersonalizowanych stref treningowych skalibrowanych według Twojego CSS. Optymalizuj każdy trening pod kątem regeneracji, rozwoju tlenowego, progowego lub VO₂max.</p>
+        <h3>Training Zones</h3>
+        <p>7 personalized training zones calibrated to your CSS. Optimize every workout for recovery, aerobic, threshold, or VO₂max development.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -724,8 +842,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
           </svg>
         </div>
-        <h3>Inteligentne Porównania</h3>
-        <p>Porównania okresów tygodniowych, miesięcznych i rocznych z automatycznym wykrywaniem trendów i zmian procentowych dla wszystkich metryk.</p>
+        <h3>Smart Comparisons</h3>
+        <p>Weekly, monthly, and yearly period comparisons with automatic trend detection and percentage changes for all metrics.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -733,8 +851,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
           </svg>
         </div>
-        <h3>Pełna Prywatność</h3>
-        <p>Wszystkie dane są przetwarzane lokalnie na Twoim urządzeniu. Bez serwerów, bez chmury, bez śledzenia. Posiadasz i kontrolujesz swoje dane pływackie.</p>
+        <h3>Complete Privacy</h3>
+        <p>All data processed locally on your device. No servers, no cloud, no tracking. You own and control your swimming data.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -742,8 +860,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-export"></use>
           </svg>
         </div>
-        <h3>Eksportuj Gdziekolwiek</h3>
-        <p>Eksportuj treningi i analitykę w formatach JSON, CSV, HTML lub PDF. Kompatybilne z trenerami, arkuszami kalkulacyjnymi i platformami treningowymi.</p>
+        <h3>Export Anywhere</h3>
+        <p>Export workouts and analytics in JSON, CSV, HTML, or PDF formats. Compatible with coaches, spreadsheets, and training platforms.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -751,8 +869,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
           </svg>
         </div>
-        <h3>Natychmiastowa Wydajność</h3>
-        <p>Uruchomienie aplikacji w mniej niż 0,35 s dzięki architekturze local-first. Przeglądaj treningi natychmiast bez oczekiwania na synchronizację lub pobieranie.</p>
+        <h3>Instant Performance</h3>
+        <p>Sub-0.35s app launch with local-first architecture. View your workouts instantly without waiting for syncs or downloads.</p>
       </div>
     </div>
   </div>
@@ -762,48 +880,132 @@
 <section class="app-screenshots">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Zrzuty Ekranu</div>
-      <h2 class="section-title">Odkryj SwimAnalytics w Akcji</h2>
-      <p class="section-subtitle">Piękny i intuicyjny interfejs zaprojektowany dla pływaków</p>
+      <div class="section-badge">Screenshots</div>
+      <h2 class="section-title">See SwimAnalytics in Action</h2>
+      <p class="section-subtitle">Beautiful, intuitive interface designed for swimmers</p>
     </div>
     <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="Poprzedni zrzut">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <div class="screenshots-carousel" id="screenshotsCarousel">
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workouts-list.png" alt="Lista treningów SwimAnalytics pokazująca sesje pływackie z wynikami TSS i strefami treningowymi" loading="lazy" />
-          <p class="screenshot-caption">Podsumowanie Treningów</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="SwimAnalytics workout list showing swimming sessions with TSS scores and training zones" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Workouts Overview</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workout-detail.png" alt="Szczegółowa analiza treningu pływackiego z tempem na długość, efektywnością SWOLF i danymi tętna" loading="lazy" />
-          <p class="screenshot-caption">Analiza Długość po Długości</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="Detailed swimming workout analysis with lap-by-lap pace, SWOLF efficiency and heart rate data" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Lap-by-Lap Analysis</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/analytics.png" alt="Panel SwimAnalytics pokazujący metryki Performance Management Chart CTL, ATL i TSB" loading="lazy" />
-          <p class="screenshot-caption">Zaawansowane Metryki</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="SwimAnalytics dashboard displaying CTL, ATL, and TSB Performance Management Chart metrics" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Advanced Metrics</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/performance.png" alt="Wykres trendów wydajności pływackiej pokazujący progresję CSS i obciążenie treningowe w czasie" loading="lazy" />
-          <p class="screenshot-caption">Trendy Wydajności</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="Swimming performance trends chart showing CSS progression and training load over time" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Performance Trends</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/training-zones.png" alt="7 spersonalizowanych stref treningowych pływania opartych na progu Critical Swim Speed" loading="lazy" />
-          <p class="screenshot-caption">Strefy Treningowe</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="7 personalized swimming training zones based on Critical Swim Speed threshold" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Training Zones</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/export-options.png" alt="Eksportuj dane pływackie w formatach JSON, CSV, HTML i PDF dla trenerów i analizy" loading="lazy" />
-          <p class="screenshot-caption">Opcje Eksportu</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="Export swimming data in JSON, CSV, HTML and PDF formats for coaches and analysis" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Export Options</p>
         </div>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="Następny zrzut">
+      <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Nawigacja zrzutów"></div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Screenshot navigation"></div>
     </div>
   </div>
 </section>
@@ -812,61 +1014,61 @@
 <section class="app-metrics">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Oparte na Nauce</div>
-      <h2 class="section-title text-white">Profesjonalne Metryki, Które Mają Znaczenie</h2>
+      <div class="section-badge">Science-Based</div>
+      <h2 class="section-title text-white">Professional Metrics That Matter</h2>
       <p class="section-subtitle text-white-90">
-        SwimAnalytics przekształca surowe dane pływackie w praktyczne informacje
-        wykorzystując metryki zwalidowane przez badania naukowe w sporcie
+        SwimAnalytics transforms raw swimming data into actionable intelligence
+        using metrics validated by sports science research
       </p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-icon">🎯</div>
-        <div class="metric-label">Tempo Progowe</div>
+        <div class="metric-label">Threshold Pace</div>
         <h3 class="metric-name">CSS</h3>
-        <p class="metric-description">Critical Swim Speed - Twoje tempo progu tlenowego</p>
+        <p class="metric-description">Critical Swim Speed - your aerobic threshold pace</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">📊</div>
-        <div class="metric-label">Obciążenie Treningowe</div>
+        <div class="metric-label">Workout Load</div>
         <h3 class="metric-name">TSS</h3>
-        <p class="metric-description">Training Stress Score kwantyfikuje intensywność treningu</p>
+        <p class="metric-description">Training Stress Score quantifies workout intensity</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">💪</div>
-        <div class="metric-label">Forma Fizyczna</div>
+        <div class="metric-label">Fitness</div>
         <h3 class="metric-name">CTL</h3>
-        <p class="metric-description">Chronic Training Load - średnia ruchoma 42-dniowa</p>
+        <p class="metric-description">Chronic Training Load - 42-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">😴</div>
-        <div class="metric-label">Zmęczenie</div>
+        <div class="metric-label">Fatigue</div>
         <h3 class="metric-name">ATL</h3>
-        <p class="metric-description">Acute Training Load - średnia ruchoma 7-dniowa</p>
+        <p class="metric-description">Acute Training Load - 7-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚖️</div>
-        <div class="metric-label">Forma</div>
+        <div class="metric-label">Form</div>
         <h3 class="metric-name">TSB</h3>
-        <p class="metric-description">Training Stress Balance wskazuje gotowość</p>
+        <p class="metric-description">Training Stress Balance indicates readiness</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚡</div>
-        <div class="metric-label">Efektywność</div>
+        <div class="metric-label">Efficiency</div>
         <h3 class="metric-name">SWOLF</h3>
-        <p class="metric-description">Wynik efektywności ruchu - niższy jest lepszy</p>
+        <p class="metric-description">Stroke efficiency score - lower is better</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏊</div>
-        <div class="metric-label">Strefy</div>
-        <h3 class="metric-name">7 Stref</h3>
-        <p class="metric-description">Poziomy intensywności od Regeneracji do Sprintu</p>
+        <div class="metric-label">Zones</div>
+        <h3 class="metric-name">7 Zones</h3>
+        <p class="metric-description">Recovery to Sprint intensity levels</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏆</div>
-        <div class="metric-label">Rekordy</div>
+        <div class="metric-label">Records</div>
         <h3 class="metric-name">PRs</h3>
-        <p class="metric-description">Automatyczne śledzenie rekordów osobistych</p>
+        <p class="metric-description">Automatic personal record tracking</p>
       </div>
     </div>
   </div>
@@ -876,50 +1078,50 @@
 <section class="app-pricing">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Cennik</div>
-      <h2 class="section-title">Proste i Przejrzyste Ceny</h2>
-      <p class="section-subtitle">Zacznij od 7-dniowego darmowego okresu próbnego. Anuluj w dowolnym momencie.</p>
+      <div class="section-badge">Pricing</div>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Start with a 7-day free trial. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-header">
-          <h3 class="pricing-name">Miesięcznie</h3>
+          <h3 class="pricing-name">Monthly</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">3.99</span>
-            <span class="pricing-period">/miesiąc</span>
+            <span class="pricing-period">/month</span>
           </div>
-          <p class="pricing-trial">7-dniowy darmowy okres próbny</p>
+          <p class="pricing-trial">7-day free trial</p>
         </div>
         <ul class="pricing-features">
-          <li>Nieograniczona synchronizacja treningów</li>
-          <li>Wszystkie metryki naukowe (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 spersonalizowanych stref treningowych</li>
-          <li>Porównania tygodniowe, miesięczne i roczne</li>
-          <li>Eksport w JSON, CSV, HTML i PDF</li>
-          <li>100% prywatność, dane lokalne</li>
-          <li>Wszystkie przyszłe aktualizacje</li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
         </ul>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-header">
-          <h3 class="pricing-name">Rocznie</h3>
+          <h3 class="pricing-name">Annual</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">39</span>
-            <span class="pricing-period">/rok</span>
+            <span class="pricing-period">/year</span>
           </div>
-          <p class="pricing-trial">Oszczędź €8.88/rok (18% zniżki)</p>
+          <p class="pricing-trial">Save €8.88/year (18% off)</p>
         </div>
         <ul class="pricing-features">
-          <li>Nieograniczona synchronizacja treningów</li>
-          <li>Wszystkie metryki naukowe (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 spersonalizowanych stref treningowych</li>
-          <li>Porównania tygodniowe, miesięczne i roczne</li>
-          <li>Eksport w JSON, CSV, HTML i PDF</li>
-          <li>100% prywatność, dane lokalne</li>
-          <li>Wszystkie przyszłe aktualizacje</li>
-          <li><strong>Tylko €3.25/miesiąc</strong></li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
+          <li><strong>Only €3.25/month</strong></li>
         </ul>
       </div>
     </div>
@@ -930,51 +1132,51 @@
 <section class="app-benefits">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Dlaczego SwimAnalytics</div>
-      <h2 class="section-title">Stworzone dla Poważnych Pływaków</h2>
-      <p class="section-subtitle">Profesjonalne funkcje bez złożoności</p>
+      <div class="section-badge">Why SwimAnalytics</div>
+      <h2 class="section-title">Built for Serious Swimmers</h2>
+      <p class="section-subtitle">Professional features without the complexity</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-item">
         <div class="benefit-icon">🏊</div>
         <div class="benefit-content">
-          <h3>Protokół Testu CSS</h3>
-          <p>Wbudowany protokół testu 400m + 200m do określenia Twojego Critical Swim Speed. Powtarzaj co 6-8 tygodni, aby śledzić postępy i automatycznie dostosowywać strefy treningowe.</p>
+          <h3>CSS Test Protocol</h3>
+          <p>Built-in 400m + 200m test protocol to determine your Critical Swim Speed. Repeat every 6-8 weeks to track progress and adjust training zones automatically.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">📱</div>
         <div class="benefit-content">
-          <h3>Natywne Doświadczenie iOS</h3>
-          <p>Zbudowane w SwiftUI dla płynnej wydajności i integracji z iOS. Perfekcyjna synchronizacja z aplikacją Zdrowie, obsługa widżetów i znajomy język projektowania Apple.</p>
+          <h3>Native iOS Experience</h3>
+          <p>Built with SwiftUI for smooth performance and iOS integration. Seamless Health app sync, widgets support, and familiar Apple design language.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🔬</div>
         <div class="benefit-content">
-          <h3>Oparte na Badaniach</h3>
-          <p>Wszystkie metryki oparte na recenzowanych badaniach naukowych w sporcie. CSS od Wakayoshi et al., TSS dostosowany do pływania z formułą IF³, sprawdzone modele CTL/ATL.</p>
+          <h3>Research-Based</h3>
+          <p>All metrics based on peer-reviewed sports science research. CSS from Wakayoshi et al., TSS adapted for swimming with IF³ formula, proven CTL/ATL models.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">👥</div>
         <div class="benefit-content">
-          <h3>Przyjazne dla Trenerów</h3>
-          <p>Eksportuj szczegółowe raporty dla trenerów. Udostępniaj podsumowania HTML e-mailem, CSV do analizy w arkuszach kalkulacyjnych lub PDF do dzienników treningowych.</p>
+          <h3>Coach-Friendly</h3>
+          <p>Export detailed reports for coaches. Share HTML summaries via email, CSV for spreadsheet analysis, or PDF for training logs and records.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🌍</div>
         <div class="benefit-content">
-          <h3>Działa Wszędzie</h3>
-          <p>Basen lub wody otwarte, sprinty lub dystans. SwimAnalytics dostosowuje się do wszystkich typów pływania i automatycznie wykrywa cechy treningu.</p>
+          <h3>Works Everywhere</h3>
+          <p>Pool or open water, sprints or distance. SwimAnalytics adapts to all swimming types and automatically detects workout characteristics.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🚀</div>
         <div class="benefit-content">
-          <h3>Stale Ulepszane</h3>
-          <p>Regularne aktualizacje z nowymi funkcjami opartymi na opiniach użytkowników. Ostatnie dodatki obejmują porównania roczne, śledzenie rekordów osobistych i ulepszone opcje eksportu.</p>
+          <h3>Always Improving</h3>
+          <p>Regular updates with new features based on user feedback. Recent additions include yearly comparisons, personal records tracking, and enhanced export options.</p>
         </div>
       </div>
     </div>
@@ -986,38 +1188,38 @@
   <div class="container container-narrow">
     <div class="section-header">
       <div class="section-badge">FAQ</div>
-      <h2 class="section-title">Najczęściej Zadawane Pytania</h2>
+      <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
     <div class="feature-list">
       <div class="feature-item">
-        <h3>Jak SwimAnalytics pobiera moje dane pływackie?</h3>
-        <p>SwimAnalytics synchronizuje się z Apple Health, aby importować treningi pływackie rejestrowane przez dowolne kompatybilne urządzenie lub aplikację. Obejmuje to smartwatche, trackery fitness i wpisy ręczne. Aplikacja przetwarza te dane lokalnie, aby obliczyć zaawansowane metryki.</p>
+        <h3>How does SwimAnalytics get my swimming data?</h3>
+        <p>SwimAnalytics syncs with Apple Health to import swimming workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Czym jest test CSS i jak go wykonać?</h3>
-        <p>CSS (Critical Swim Speed) to protokół naukowy używający 2 pływań z maksymalnym wysiłkiem: 400m i 200m z 10-20 minutami odpoczynku między nimi. Aplikacja oblicza próg tlenowy na podstawie tych czasów i automatycznie dostosowuje wszystkie strefy treningowe. Powtarzaj co 6-8 tygodni, aby śledzić postępy.</p>
+        <h3>What is the CSS test and how do I perform it?</h3>
+        <p>CSS (Critical Swim Speed) is a scientific protocol using 2 maximum effort swims: 400m and 200m with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Czy moje dane są przesyłane do chmury?</h3>
-        <p>Nie. SwimAnalytics przetwarza wszystkie dane lokalnie na Twoim iPhonie. Brak zewnętrznych serwerów, bez kont w chmurze, bez transferów danych. Ty kontrolujesz eksporty: generuj pliki JSON, CSV, HTML lub PDF i udostępniaj je według własnego uznania.</p>
+        <h3>Is my data uploaded to the cloud?</h3>
+        <p>No. SwimAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Czy mogę używać SwimAnalytics do pływania w wodach otwartych?</h3>
-        <p>Tak. SwimAnalytics działa z każdym treningiem pływackim w Apple Health, w tym wodami otwartymi. Aplikacja dostosowuje się do dostępnych metryk zarówno w basenie, jak i w wodach otwartych, zapewniając odpowiednią analizę dla każdego środowiska.</p>
+        <h3>Can I use SwimAnalytics for open water swimming?</h3>
+        <p>Yes. SwimAnalytics works with any swimming workout in Apple Health, including open water. The app adapts to available metrics whether you're in a pool or open water, providing relevant analysis for each environment.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Jaka jest różnica między planami miesięcznym i rocznym?</h3>
-        <p>Oba plany oferują identyczne funkcje: wszystkie metryki, nieograniczone strefy, porównania czasowe, wiele eksportów i darmowe aktualizacje. Jedyną różnicą jest cena: roczny oszczędza 18% (odpowiednik €3.25/miesiąc vs €3.99/miesiąc).</p>
+        <h3>What's the difference between monthly and annual plans?</h3>
+        <p>Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month).</p>
       </div>
 
       <div class="feature-item">
-        <h3>Czy mogę anulować subskrypcję w dowolnym momencie?</h3>
-        <p>Tak. Subskrypcje są zarządzane przez App Store, więc możesz anulować w dowolnym momencie z Ustawienia → [Twoje Imię] → Subskrypcje. Jeśli anulujesz, zachowasz dostęp do końca bieżącego okresu rozliczeniowego.</p>
+        <h3>Can I cancel my subscription anytime?</h3>
+        <p>Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period.</p>
       </div>
     </div>
   </div>
@@ -1026,18 +1228,18 @@
 <!-- Final CTA Section -->
 <section class="app-cta-final">
   <div class="container">
-    <h2>Gotowy, aby Przekształcić Swoje Pływanie?</h2>
-    <p>Dołącz do tysięcy pływaków, którzy używają metryk naukowych do poprawy wydajności. Rozpocznij 7-dniowy darmowy okres próbny już dziś.</p>
+    <h2>Ready to Transform Your Swimming?</h2>
+    <p>Join thousands of swimmers who use scientific metrics to improve performance. Start your 7-day free trial today.</p>
     <div class="app-hero-cta">
       <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-        Pobierz SwimAnalytics za Darmo
+        Download SwimAnalytics Free
       </a>
       <a href="#features" class="btn btn-large btn-accent-outline">
-        Dowiedz się Więcej
+        Learn More
       </a>
     </div>
     <p class="section-footer">
-      Bez wymaganego konta • Anuluj w dowolnym momencie • Twoje dane pozostają na urządzeniu
+      No account required • Cancel anytime • Your data stays on your device
     </p>
   </div>
 </section>
@@ -1046,29 +1248,29 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Dowiedz się Więcej o Analityce Pływackiej</h2>
-      <p class="section-subtitle">Zgłęb naukę stojącą za SwimAnalytics</p>
+      <h2 class="section-title">Learn More About Swimming Analytics</h2>
+      <p class="section-subtitle">Dive deeper into the science behind SwimAnalytics</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
         <h3 class="card-title">Critical Swim Speed</h3>
         <div class="card-content">
-          <p>Zrozum, jak CSS określa próg tlenowy i dlaczego jest kluczowy dla ustrukturyzowanego treningu.</p>
-          <a href="/lv/css/" class="btn btn-secondary btn-small mt-md">Poznaj CSS →</a>
+          <p>Understand how CSS determines your aerobic threshold and why it's crucial for structured training.</p>
+          <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn about CSS →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Zarządzanie Obciążeniem Treningowym</h3>
+        <h3 class="card-title">Training Load Management</h3>
         <div class="card-content">
-          <p>Odkryj, jak TSS, CTL, ATL i TSB pomagają zrównoważyć stres treningowy i regenerację.</p>
-          <a href="/lv/training-load/" class="btn btn-secondary btn-small mt-md">Poznaj Obciążenie Treningowe →</a>
+          <p>Discover how TSS, CTL, ATL, and TSB help you balance training stress and recovery.</p>
+          <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">Explore Training Load →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Strefy Treningowe</h3>
+        <h3 class="card-title">Training Zones</h3>
         <div class="card-content">
-          <p>Poznaj 7 stref treningowych i jak ich używać do specyficznego planowania treningów.</p>
-          <a href="/lv/training-zones/" class="btn btn-secondary btn-small mt-md">Zobacz Strefy Treningowe →</a>
+          <p>Learn about the 7 training zones and how to use them for targeted workout planning.</p>
+          <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">View Training Zones →</a>
         </div>
       </div>
     </div>
@@ -1512,15 +1714,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

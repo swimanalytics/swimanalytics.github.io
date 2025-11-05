@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/fa/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -664,106 +779,106 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">سياسة الخصوصية</h1>
+        <h1 class="mb-lg">Privacy Policy</h1>
 
-        <p class="text-secondary mb-xl">آخر تحديث: <strong>يناير 2024</strong></p>
+        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
 
         <div class="mb-xl">
-            <h2 class="mb-md">مقدمة</h2>
+            <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                تصف سياسة الخصوصية هذه كيفية جمع واستخدام وحماية معلوماتك الشخصية عند زيارة موقعنا الإلكتروني.
+                This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website.
             </p>
             <p class="mb-md">
-                نحن ملتزمون بحماية خصوصيتك وضمان التعامل مع معلوماتك الشخصية بطريقة آمنة ومسؤولة.
+                We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">المعلومات التي نجمعها</h2>
-            <h3 class="mb-sm">المعلومات التي تقدمها مباشرة:</h3>
+            <h2 class="mb-md">Information We Collect</h2>
+            <h3 class="mb-sm">Information you provide directly:</h3>
             <ul class="mb-md">
-                <li>معلومات الاتصال (الاسم، البريد الإلكتروني) عند استخدام نموذج الاتصال الخاص بنا</li>
-                <li>أي معلومات أخرى تختار تقديمها</li>
+                <li>Contact information (name, email) when you use our contact form</li>
+                <li>Any other information you choose to provide</li>
             </ul>
 
-            <h3 class="mb-sm">المعلومات المجمعة تلقائياً:</h3>
+            <h3 class="mb-sm">Information collected automatically:</h3>
             <ul class="mb-md">
-                <li>نوع وإصدار المتصفح</li>
-                <li>نظام التشغيل</li>
-                <li>الصفحات التي تمت زيارتها والوقت المستغرق في الصفحات</li>
-                <li>عنوان IP (مجهول الهوية)</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">كيف نستخدم معلوماتك</h2>
-            <p class="mb-sm">نستخدم المعلومات التي نجمعها من أجل:</p>
-            <ul class="mb-md">
-                <li>الرد على استفساراتك وطلباتك</li>
-                <li>تحسين موقعنا وخدماتنا</li>
-                <li>تحليل كيفية استخدام موقعنا</li>
-                <li>ضمان أمن وسلامة موقعنا</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on pages</li>
+                <li>IP address (anonymized)</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">ملفات تعريف الارتباط</h2>
-            <p class="mb-md">
-                نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا. ملفات تعريف الارتباط هي ملفات نصية صغيرة مخزنة على جهازك تساعدنا على فهم كيفية استخدامك لموقعنا.
-            </p>
-            <p class="mb-sm">نستخدم الأنواع التالية من ملفات تعريف الارتباط:</p>
+            <h2 class="mb-md">How We Use Your Information</h2>
+            <p class="mb-sm">We use the information we collect to:</p>
             <ul class="mb-md">
-                <li><strong>ملفات تعريف الارتباط الأساسية:</strong> ضرورية للتشغيل السليم للموقع</li>
-                <li><strong>ملفات تعريف الارتباط التحليلية:</strong> تساعدنا على فهم كيفية تفاعل الزوار مع موقعنا (فقط بموافقتك)</li>
+                <li>Respond to your inquiries and requests</li>
+                <li>Improve our website and services</li>
+                <li>Analyze how our website is used</li>
+                <li>Ensure the security and integrity of our website</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Cookies</h2>
+            <p class="mb-md">
+                We use cookies to improve your experience on our website. Cookies are small text files stored on your device that help us understand how you use our site.
+            </p>
+            <p class="mb-sm">We use the following types of cookies:</p>
+            <ul class="mb-md">
+                <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
+                <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website (only with your consent)</li>
             </ul>
             <p class="mb-md">
-                يمكنك التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح الخاص بك. يرجى ملاحظة أن تعطيل ملفات تعريف الارتباط قد يؤثر على وظائف موقعنا.
+                You can control cookies through your browser settings. Please note that disabling cookies may affect the functionality of our website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">خدمات الطرف الثالث</h2>
+            <h2 class="mb-md">Third-Party Services</h2>
             <p class="mb-md">
-                قد نستخدم خدمات الطرف الثالث مثل Google Analytics لمساعدتنا في تحليل حركة المرور على الموقع. قد تجمع هذه الخدمات معلومات حول استخدامك لموقعنا.
+                We may use third-party services such as Google Analytics to help us analyze website traffic. These services may collect information about your use of our website.
             </p>
             <p class="mb-md">
-                هؤلاء الأطراف الثالثة لديهم سياسات خصوصية خاصة بهم، ونوصي بمراجعتها.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">أمن البيانات</h2>
-            <p class="mb-md">
-                ننفذ تدابير تقنية وتنظيمية مناسبة لحماية معلوماتك الشخصية من الوصول أو التغيير أو الكشف أو التدمير غير المصرح به.
+                These third parties have their own privacy policies, and we encourage you to review them.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">حقوقك</h2>
-            <p class="mb-sm">لديك الحق في:</p>
+            <h2 class="mb-md">Data Security</h2>
+            <p class="mb-md">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Your Rights</h2>
+            <p class="mb-sm">You have the right to:</p>
             <ul class="mb-md">
-                <li>الوصول إلى معلوماتك الشخصية</li>
-                <li>تصحيح المعلومات غير الدقيقة</li>
-                <li>طلب حذف معلوماتك</li>
-                <li>سحب الموافقة على معالجة البيانات</li>
-                <li>الاعتراض على معالجة معلوماتك</li>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Withdraw consent for data processing</li>
+                <li>Object to processing of your information</li>
             </ul>
             <p class="mb-md">
-                لممارسة هذه الحقوق، اتصل بنا باستخدام المعلومات المقدمة في <a href="/fa/contact/">صفحة الاتصال</a> الخاصة بنا.
+                To exercise these rights, please contact us using the information provided on our <a href="/en/contact/">contact page</a>.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">التغييرات على هذه السياسة</h2>
+            <h2 class="mb-md">Changes to This Policy</h2>
             <p class="mb-md">
-                قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات عن طريق نشر السياسة الجديدة على هذه الصفحة مع تاريخ "آخر تحديث" محدث.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated "Last updated" date.
             </p>
         </div>
 
         <div class="callout callout-info">
-            <h2 class="mb-sm">أسئلة؟</h2>
+            <h2 class="mb-sm">Questions?</h2>
             <p>
-                إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى <a href="/fa/contact/">الاتصال بنا</a>.
+                If you have any questions about this Privacy Policy, please <a href="/en/contact/">contact us</a>.
             </p>
         </div>
     </div>
@@ -1206,15 +1321,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

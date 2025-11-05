@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/lt/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,139 +809,139 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>O SwimAnalytics</h1>
-        <p class="lead">Śledzenie wydajności pływackiej oparte na nauce, stworzone przez pływaków dla pływaków</p>
+        <h1>About SwimAnalytics</h1>
+        <p class="lead">Science-based swimming performance tracking, built by swimmers for swimmers</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Nasza Misja</h2>
-            <p><strong>SwimAnalytics</strong> przynosi śledzenie wydajności na poziomie profesjonalnym każdemu pływakowi. Wierzymy, że zaawansowane metryki, takie jak Critical Swim Speed (CSS), Training Stress Score (TSS) i Performance Management Charts, nie powinny być zablokowane za kosztownymi platformami ani wymagać skomplikowanego oprogramowania dla trenerów.</p>
+            <h2>Our Mission</h2>
+            <p><strong>SwimAnalytics</strong> brings professional-grade performance tracking to every swimmer. We believe that advanced metrics like Critical Swim Speed (CSS), Training Stress Score (TSS), and Performance Management Charts shouldn't be locked behind expensive platforms or require complex coaching software.</p>
         </div>
 
-        <h2 class="mb-lg">Poznaj Dewelopera</h2>
+        <h2 class="mb-lg">Meet the Developer</h2>
 
         <div class="author-bio mb-xl">
             <div class="author-content">
                 <h3>Albert Arno</h3>
-                <p class="text-secondary mb-md">Twórca i Główny Deweloper</p>
+                <p class="text-secondary mb-md">Creator & Lead Developer</p>
 
                 <p class="mb-md">
-                    Albert jest deweloperem oprogramowania i byłym pływakiem wyczynowym z ponad 15-letnim doświadczeniem w pływaniu Masters. Po trudnościach ze znalezieniem przystępnych cenowo i opartych na nauce narzędzi analityki pływackiej, które nie są związane z konkretnym sprzętem lub platformami chmurowymi, stworzył SwimAnalytics.
+                    Albert is a software developer and former competitive swimmer with over 15 years of Masters swimming experience. After struggling to find affordable, science-based swim analytics tools that weren't tied to specific hardware or cloud platforms, he created SwimAnalytics.
                 </p>
 
-                <h4 class="mt-lg mb-sm">Doświadczenie i Wykształcenie:</h4>
+                <h4 class="mt-lg mb-sm">Background & Expertise:</h4>
                 <ul class="mb-md">
-                    <li><strong>Ponad 15 lat pływania wyczynowego</strong> - Pływak Masters specjalizujący się w stylu dowolnym na średnim dystansie</li>
-                    <li><strong>Magister Informatyki</strong> - Universitat Politècnica de Catalunya</li>
-                    <li><strong>Rozwój iOS</strong> - Ponad 8 lat tworzenia natywnych aplikacji w Swift/SwiftUI</li>
-                    <li><strong>Badania w Naukach o Sporcie</strong> - Dogłębne studium fizjologii pływania, testów progu mleczanowego i kwantyfikacji obciążenia treningowego</li>
-                    <li><strong>Obrońca Prywatności Danych</strong> - Zaangażowany w oprogramowanie priorytetyzujące lokalne przechowywanie i zachowujące prywatność</li>
+                    <li><strong>15+ years competitive swimming</strong> - Masters swimmer specializing in middle-distance freestyle</li>
+                    <li><strong>MSc Computer Science</strong> - Universitat Politècnica de Catalunya</li>
+                    <li><strong>iOS Development</strong> - 8+ years building native Swift/SwiftUI applications</li>
+                    <li><strong>Sports Science Research</strong> - Deep study of swimming physiology, lactate threshold testing, and training load quantification</li>
+                    <li><strong>Data Privacy Advocate</strong> - Committed to local-first, privacy-preserving software</li>
                 </ul>
 
-                <h4 class="mt-lg mb-sm">Dlaczego Powstał SwimAnalytics:</h4>
+                <h4 class="mt-lg mb-sm">Why SwimAnalytics Was Created:</h4>
                 <p class="mb-md">
-                    "Po latach korzystania z różnych platform śledzenia byłem sfrustrowany trzema powtarzającymi się problemami: kosztownymi subskrypcjami, zależnością od dostawców wymagających konkretnych urządzeń i brakiem kontroli nad własnymi danymi. Chciałem narzędzia, które poprawnie oblicza CSS i TSS, działa z dowolnym urządzeniem kompatybilnym z Apple Health i zachowuje prywatność moich danych. Kiedy nie mogłem go znaleźć, stworzyłem go."
+                    "After years of using various tracking platforms, I was frustrated by three recurring problems: expensive subscriptions, vendor lock-in requiring specific devices, and lack of control over my own data. I wanted a tool that calculated CSS and TSS correctly, worked with any Apple Health-compatible device, and kept my data private. When I couldn't find it, I built it."
                 </p>
 
                 <p class="mb-md">
-                    "SwimAnalytics to aplikacja, którą chciałbym mieć podczas treningu do mojego pierwszego CSS poniżej 1:10/100m. Łączy rygorystyczne nauki o sporcie (oparte na badaniach CSS Wakayoshi i metodologii TSS Coggana) z nowoczesnym designem iOS i pełną prywatnością danych."
+                    "SwimAnalytics is the app I wish I had when I was training for my first sub-1:10/100m CSS. It combines rigorous sports science (based on Wakayoshi's CSS research and Coggan's TSS methodology) with modern iOS design and complete data privacy."
                 </p>
             </div>
         </div>
 
         <div class="callout callout-tip">
-            <h3>Nasze Zasady</h3>
+            <h3>Our Principles</h3>
             <ul>
-                <li><strong>Nauka na Pierwszym Miejscu:</strong> Wszystkie metryki oparte na recenzowanych badaniach. Cytujemy nasze źródła i pokazujemy nasze formuły.</li>
-                <li><strong>Prywatność z Założenia:</strong> 100% lokalnego przetwarzania danych. Bez serwerów, bez kont, bez śledzenia. Ty posiadasz swoje dane.</li>
-                <li><strong>Niezależność od Platformy:</strong> Działa z dowolnym urządzeniem kompatybilnym z Apple Health. Bez zależności od dostawców.</li>
-                <li><strong>Przejrzystość:</strong> Otwarte formuły, jasne obliczenia, uczciwe ograniczenia. Bez algorytmów czarnej skrzynki.</li>
-                <li><strong>Dostępność:</strong> Zaawansowane metryki nie powinny wymagać stopnia z nauk o sporcie. Wyjaśniamy koncepcje w sposób jasny.</li>
+                <li><strong>Science First:</strong> All metrics based on peer-reviewed research. We cite our sources and show our formulas.</li>
+                <li><strong>Privacy by Design:</strong> 100% local data processing. No servers, no accounts, no tracking. You own your data.</li>
+                <li><strong>Platform Agnostic:</strong> Works with any Apple Health compatible device. No vendor lock-in.</li>
+                <li><strong>Transparency:</strong> Open formulas, clear calculations, honest limitations. No black box algorithms.</li>
+                <li><strong>Accessibility:</strong> Advanced metrics shouldn't require a degree in sports science. We explain concepts clearly.</li>
             </ul>
         </div>
 
-        <h2 class="mt-3xl mb-lg">Podstawy Naukowe</h2>
+        <h2 class="mt-3xl mb-lg">Scientific Foundation</h2>
 
         <p class="mb-md">
-            SwimAnalytics jest zbudowany na dziesięcioleciach recenzowanych badań z nauk o sporcie:
+            SwimAnalytics is built on decades of peer-reviewed sports science research:
         </p>
 
         <div class="grid grid-2 mb-xl">
             <div class="card">
                 <h3 class="card-title">Critical Swim Speed (CSS)</h3>
                 <div class="card-content">
-                    <p>Oparte na badaniach Wakayoshi et al. (1992-1993) z Uniwersytetu Osaka. CSS reprezentuje maksymalną teoretyczną prędkość pływania możliwą do utrzymania bez wyczerpania, odpowiadającą progowi mleczanowemu.</p>
-                    <p class="text-sm text-secondary mt-sm"><strong>Kluczowe Badania:</strong> Wakayoshi K, et al. "Determination and validity of critical velocity as an index of swimming performance." European Journal of Applied Physiology, 1992.</p>
+                    <p>Based on Wakayoshi et al. (1992-1993) research at Osaka University. CSS represents the theoretical maximum swimming velocity sustainable without exhaustion, corresponding to lactate threshold.</p>
+                    <p class="text-sm text-secondary mt-sm"><strong>Key Research:</strong> Wakayoshi K, et al. "Determination and validity of critical velocity as an index of swimming performance." European Journal of Applied Physiology, 1992.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Training Stress Score (TSS)</h3>
                 <div class="card-content">
-                    <p>Zaadaptowane z metodologii TSS kolarstwa dr. Andrew Coggana do pływania. Kwantyfikuje obciążenie treningowe łącząc intensywność (względem CSS) i czas trwania.</p>
-                    <p class="text-sm text-secondary mt-sm"><strong>Kluczowe Badania:</strong> Coggan AR, Allen H. "Training and Racing with a Power Meter." VeloPress, 2010. Zaadaptowane do pływania przez SwimAnalytics używając CSS jako progu.</p>
+                    <p>Adapted from Dr. Andrew Coggan's cycling TSS methodology for swimming. Quantifies training load by combining intensity (relative to CSS) and duration.</p>
+                    <p class="text-sm text-secondary mt-sm"><strong>Key Research:</strong> Coggan AR, Allen H. "Training and Racing with a Power Meter." VeloPress, 2010. Adapted for swimming by SwimAnalytics using CSS as threshold.</p>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Performance Management Chart (PMC)</h3>
                 <div class="card-content">
-                    <p>Metryki Chronic Training Load (CTL), Acute Training Load (ATL) i Training Stress Balance (TSB). Śledzi formę fizyczną, zmęczenie i formę w czasie.</p>
-                    <p class="text-sm text-secondary mt-sm"><strong>Implementacja:</strong> Wykładniczo ważona średnia ruchoma 42-dniowa dla CTL, 7-dniowa dla ATL. TSB = CTL - ATL.</p>
+                    <p>Chronic Training Load (CTL), Acute Training Load (ATL), and Training Stress Balance (TSB) metrics. Tracks fitness, fatigue, and form over time.</p>
+                    <p class="text-sm text-secondary mt-sm"><strong>Implementation:</strong> 42-day exponentially weighted moving average for CTL, 7-day for ATL. TSB = CTL - ATL.</p>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">SWOLF i Metryki Ruchu</h3>
+                <h3 class="card-title">SWOLF & Stroke Metrics</h3>
                 <div class="card-content">
-                    <p>Metryki efektywności pływania łączące czas i liczbę ruchów. Wykorzystywane przez elitarnych pływaków i trenerów na całym świecie do śledzenia ulepszeń technicznych.</p>
-                    <p class="text-sm text-secondary mt-sm"><strong>Standardowe Metryki:</strong> SWOLF = Czas + Ruchy. Niższe wyniki wskazują lepszą efektywność. Uzupełnione o Distance Per Stroke (DPS) i Stroke Rate (SR).</p>
+                    <p>Swimming efficiency metrics combining time and stroke count. Used by elite swimmers and coaches worldwide to track technical improvements.</p>
+                    <p class="text-sm text-secondary mt-sm"><strong>Standard Metrics:</strong> SWOLF = Time + Strokes. Lower scores indicate better efficiency. Supplemented by Distance Per Stroke (DPS) and Stroke Rate (SR).</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="mb-lg">Rozwój i Aktualizacje</h2>
+        <h2 class="mb-lg">Development & Updates</h2>
 
         <p class="mb-md">
-            SwimAnalytics jest aktywnie rozwijany z regularnymi aktualizacjami opartymi na opiniach użytkowników i najnowszych badaniach z nauk o sporcie. Aplikacja jest zbudowana z:
+            SwimAnalytics is actively developed with regular updates based on user feedback and the latest sports science research. The app is built with:
         </p>
 
         <ul class="mb-xl">
-            <li><strong>Swift i SwiftUI</strong> - Nowoczesny natywny rozwój iOS</li>
-            <li><strong>Integracja z HealthKit</strong> - Perfekcyjna synchronizacja z Apple Health</li>
-            <li><strong>Core Data</strong> - Wydajne lokalne przechowywanie danych</li>
-            <li><strong>Swift Charts</strong> - Piękne i interaktywne wizualizacje danych</li>
-            <li><strong>Bez Analityki Firm Trzecich</strong> - Twoje dane użytkowania pozostają prywatne</li>
+            <li><strong>Swift & SwiftUI</strong> - Modern iOS native development</li>
+            <li><strong>HealthKit Integration</strong> - Seamless Apple Health sync</li>
+            <li><strong>Core Data</strong> - Efficient local data storage</li>
+            <li><strong>Swift Charts</strong> - Beautiful, interactive data visualizations</li>
+            <li><strong>No Third-Party Analytics</strong> - Your usage data stays private</li>
         </ul>
 
         <div class="callout callout-warning">
-            <h3>Standardy Edytorskie</h3>
-            <p>Wszystkie metryki i formuły w SwimAnalytics i na tej stronie internetowej są oparte na recenzowanych badaniach z nauk o sporcie. Cytujemy oryginalne źródła i zapewniamy przejrzyste obliczenia. Treść jest sprawdzana pod kątem dokładności naukowej przez dewelopera (ponad 15 lat doświadczenia w pływaniu, Magister Informatyki).</p>
-            <p class="mt-sm"><strong>Ostatnia Recenzja Treści:</strong> Październik 2025</p>
+            <h3>Editorial Standards</h3>
+            <p>All metrics and formulas on SwimAnalytics and this website are based on peer-reviewed sports science research. We cite original sources and provide transparent calculations. Content is reviewed for scientific accuracy by the developer (15+ years swimming experience, MSc Computer Science).</p>
+            <p class="mt-sm"><strong>Last Content Review:</strong> October 2025</p>
         </div>
 
-        <h2 class="mt-3xl mb-lg">Uznanie i Prasa</h2>
+        <h2 class="mt-3xl mb-lg">Recognition & Press</h2>
 
         <div class="card mb-xl">
             <div class="card-content">
-                <p class="mb-sm"><strong>Ponad 10 000 Pobrań</strong> - Zaufany przez pływaków wyczynowych, zawodników masters, triatlonistów i trenerów na całym świecie.</p>
-                <p class="mb-sm"><strong>Ocena 4.8★ w App Store</strong> - Konsekwentnie oceniana jako jedna z najlepszych aplikacji analityki pływackiej.</p>
-                <p><strong>100% Skupienie na Prywatności</strong> - Bez gromadzenia danych, bez zewnętrznych serwerów, bez śledzenia użytkowników.</p>
+                <p class="mb-sm"><strong>10,000+ Downloads</strong> - Trusted by competitive swimmers, masters athletes, triathletes, and coaches worldwide.</p>
+                <p class="mb-sm"><strong>4.8★ App Store Rating</strong> - Consistently rated as one of the best swimming analytics apps.</p>
+                <p><strong>100% Privacy-Focused</strong> - No data collection, no external servers, no user tracking.</p>
             </div>
         </div>
 
-        <h2 class="mb-lg">Skontaktuj się z Nami</h2>
+        <h2 class="mb-lg">Get in Touch</h2>
 
         <p class="mb-md">
-            Masz pytania, opinie lub sugestie? Chętnie od Ciebie usłyszymy.
+            Have questions, feedback, or suggestions? We'd love to hear from you.
         </p>
 
         <div class="mt-xl text-center">
-            <a href="/lt/contact/" class="btn btn-primary btn-large">Skontaktuj się z Nami</a>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-large" target="_blank" rel="noopener">Pobierz SwimAnalytics</a>
+            <a href="/en/contact/" class="btn btn-primary btn-large">Contact Us</a>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-large" target="_blank" rel="noopener">Download SwimAnalytics</a>
         </div>
     </div>
 </section>
@@ -1268,15 +1383,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

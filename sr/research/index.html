@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/sr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,24 +809,24 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Научно-Исследовательская Основа</h1>
-        <p class="lead">Аналитика Плавания на Основе Фактических Данных</p>
+        <h1>Scientific Research Foundation</h1>
+        <p class="lead">Evidence-Based Swimming Analytics</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Подход на Основе Фактических Данных</h2>
-        <p class="lead">Каждая метрика, формула и расчет в SwimAnalytics основаны на рецензируемых научных исследованиях. Эта страница документирует фундаментальные исследования, которые подтверждают нашу аналитическую структуру.</p>
+        <h2>Evidence-Based Approach</h2>
+        <p class="lead">Every metric, formula, and calculation in SwimAnalytics is grounded in peer-reviewed scientific research. This page documents the foundational studies that validate our analytical framework.</p>
 
         <div class="callout callout-info">
-            <h3>🔬 Научная Строгость</h3>
-            <p>Аналитика плавания эволюционировала от базового подсчёта отрезков до сложных измерений производительности, подкреплённых десятилетиями исследований в:</p>
+            <h3>🔬 Scientific Rigor</h3>
+            <p>Swimming analytics has evolved from basic lap counting to sophisticated performance measurement backed by decades of research in:</p>
             <ul>
-                <li><strong>Физиологии Упражнений</strong> - Аэробные/анаэробные пороги, VO₂max, динамика лактата</li>
-                <li><strong>Биомеханике</strong> - Механика гребка, движение, гидродинамика</li>
-                <li><strong>Спортивной Науке</strong> - Количественная оценка тренировочной нагрузки, периодизация, моделирование производительности</li>
-                <li><strong>Информатике</strong> - Машинное обучение, слияние сенсоров, носимые технологии</li>
+                <li><strong>Exercise Physiology</strong> - Aerobic/anaerobic thresholds, VO₂max, lactate dynamics</li>
+                <li><strong>Biomechanics</strong> - Stroke mechanics, propulsion, hydrodynamics</li>
+                <li><strong>Sports Science</strong> - Training load quantification, periodization, performance modeling</li>
+                <li><strong>Computer Science</strong> - Machine learning, sensor fusion, wearable technology</li>
             </ul>
         </div>
     </div>
@@ -719,72 +834,72 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Фундаментальные Исследования</h2>
+        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Foundational Research</h2>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1992) - Determining Critical Velocity</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
-                <strong>Исследование:</strong> 9 тренированных пловцов университета
+                <strong>Journal:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
+                <strong>Study:</strong> 9 trained college swimmers
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>Сильная корреляция с VO₂ на анаэробном пороге</strong> (r = 0.818)</li>
-                    <li><strong>Отличная корреляция со скоростью при OBLA</strong> (r = 0.949)</li>
-                    <li><strong>Предсказывает производительность на 400м</strong> (r = 0.864)</li>
-                    <li>Критическая скорость (vcrit) представляет теоретическую скорость плавания, поддерживаемую неопределённо долго без истощения</li>
+                    <li><strong>Strong correlation with VO₂ at anaerobic threshold</strong> (r = 0.818)</li>
+                    <li><strong>Excellent correlation with velocity at OBLA</strong> (r = 0.949)</li>
+                    <li><strong>Predicts 400m performance</strong> (r = 0.864)</li>
+                    <li>Critical velocity (vcrit) represents theoretical swimming velocity maintainable indefinitely without exhaustion</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Значение:</h4>
-                <p>Установил CSS как действительный и неинвазивный заменитель лабораторных тестов лактата. Продемонстрировал, что простые тесты в бассейне могут точно определить аэробный порог.</p>
+                <h4>Significance:</h4>
+                <p>Established CSS as a valid, non-invasive proxy for laboratory lactate testing. Proved that simple pool-based time trials can accurately determine aerobic threshold.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1992) - Practical Pool Testing Method</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> International Journal of Sports Medicine, 13(5), 367-371
+                <strong>Journal:</strong> International Journal of Sports Medicine, 13(5), 367-371
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>Линейная зависимость между расстоянием и временем</strong> (r² > 0.998)</li>
-                    <li>Тесты в бассейне дают результаты, эквивалентные дорогостоящему оборудованию канала потока</li>
-                    <li>Простой протокол 200м + 400м обеспечивает точное измерение критической скорости</li>
-                    <li>Доступный метод для тренеров по всему миру без лабораторного оборудования</li>
+                    <li><strong>Linear relationship between distance and time</strong> (r² > 0.998)</li>
+                    <li>Pool-based testing yields equivalent results to expensive flume equipment</li>
+                    <li>Simple 200m + 400m protocol provides accurate critical velocity measurement</li>
+                    <li>Method accessible to coaches worldwide without laboratory facilities</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Значение:</h4>
-                <p>Демократизировал тестирование CSS. Превратил его из эксклюзивной лабораторной процедуры в практический инструмент, который любой тренер может использовать с секундомером и бассейном.</p>
+                <h4>Significance:</h4>
+                <p>Democratized CSS testing. Transformed it from a lab-only procedure to a practical tool any coach can implement with just a stopwatch and pool.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1993) - Lactate Steady State Validation</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> European Journal of Applied Physiology, 66(1), 90-95
+                <strong>Journal:</strong> European Journal of Applied Physiology, 66(1), 90-95
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>CSS соответствует <strong>интенсивности максимального устойчивого состояния лактата</strong></li>
-                    <li>Значительная корреляция со скоростью при 4 ммоль/л лактата в крови</li>
-                    <li>Представляет границу между доменами упражнений <em>тяжёлых</em> и <em>серьёзных</em></li>
-                    <li>Подтвердил CSS как значительный физиологический порог для назначения тренировки</li>
+                    <li>CSS corresponds to <strong>maximal lactate steady state intensity</strong></li>
+                    <li>Significant correlation with velocity at 4 mmol/L blood lactate</li>
+                    <li>Represents boundary between <em>heavy</em> and <em>severe</em> exercise domains</li>
+                    <li>Validated CSS as meaningful physiological threshold for training prescription</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Значение:</h4>
-                <p>Подтвердил физиологическую основу CSS. Это не просто математическая конструкция — это представляет реальный метаболический порог, где производство лактата равно его удалению.</p>
+                <h4>Significance:</h4>
+                <p>Confirmed the physiological basis of CSS. It's not just a mathematical construct—it represents real metabolic threshold where lactate production equals clearance.</p>
             </div>
         </div>
     </div>
@@ -792,23 +907,23 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center mb-xl">Количественная Оценка Тренировочной Нагрузки</h2>
+        <h2 class="text-center mb-xl">Training Load Quantification</h2>
 
         <div class="grid grid-2">
             <div class="research-paper">
                 <h3>Schuller & Rodríguez (2015)</h3>
                 <div class="paper-meta">
-                    <strong>Журнал:</strong> European Journal of Sport Science, 15(4)<br>
-                    <strong>Исследование:</strong> 17 элитных пловцов, 328 сессий в бассейне за 4 недели
+                    <strong>Journal:</strong> European Journal of Sport Science, 15(4)<br>
+                    <strong>Study:</strong> 17 elite swimmers, 328 pool sessions over 4 weeks
                 </div>
 
                 <div class="findings">
-                    <h4>Ключевые Находки:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>Модифицированный расчёт TRIMP (TRIMPc) был ~9% выше, чем традиционный TRIMP</li>
-                        <li>Оба метода сильно коррелировали с сессионным RPE (r=0.724 и 0.702)</li>
-                        <li>Большие различия между методами при более высоких интенсивностях рабочей нагрузки</li>
-                        <li>TRIMPc учитывает как интервалы упражнений, так и восстановления в интервальной тренировке</li>
+                        <li>Modified TRIMP calculation (TRIMPc) ran ~9% higher than traditional TRIMP</li>
+                        <li>Both methods strongly correlated with session-RPE (r=0.724 and 0.702)</li>
+                        <li>Greater inter-method differences at higher workload intensities</li>
+                        <li>TRIMPc accounts for both exercise and recovery intervals in interval training</li>
                     </ul>
                 </div>
             </div>
@@ -816,47 +931,47 @@
             <div class="research-paper">
                 <h3>Wallace et al. (2009)</h3>
                 <div class="paper-meta">
-                    <strong>Журнал:</strong> Journal of Strength and Conditioning Research<br>
-                    <strong>Фокус:</strong> Валидация сессионного RPE
+                    <strong>Journal:</strong> Journal of Strength and Conditioning Research<br>
+                    <strong>Focus:</strong> Session-RPE validation
                 </div>
 
                 <div class="findings">
-                    <h4>Ключевые Находки:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>Сессионный RPE (шкала CR-10 × длительность) подтверждён для количественной оценки тренировочной нагрузки плавания</li>
-                        <li>Простая реализация, применимая единообразно для всех типов тренировок</li>
-                        <li>Эффективна для работы в бассейне, сухой тренировки и технических сессий</li>
-                        <li>Работает даже там, где частота сердечных сокращений не представляет реальную интенсивность</li>
+                        <li>Session-RPE (CR-10 scale × duration) validated for quantifying swimming training load</li>
+                        <li>Simple implementation applicable uniformly across all training types</li>
+                        <li>Effective for pool work, dryland training, and technique sessions</li>
+                        <li>Works even where heart rate doesn't represent true intensity</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-science">
-            <h3>Основа Training Stress Score (TSS)</h3>
-            <p>Хотя TSS был разработан доктором Andrew Coggan для велоспорта, его адаптация к плаванию (sTSS) включает кубический фактор интенсивности (IF³) для учёта экспоненциального сопротивления воды. Эта модификация отражает фундаментальную физику: сила сопротивления в воде увеличивается с квадратом скорости, делая требования к мощности кубическими.</p>
+            <h3>Training Stress Score (TSS) Foundation</h3>
+            <p>While TSS was developed by Dr. Andrew Coggan for cycling, its adaptation to swimming (sTSS) incorporates the cubic intensity factor (IF³) to account for water's exponential resistance. This modification reflects fundamental physics: drag force in water increases with the square of velocity, making power requirements cubic.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Биомеханика и Анализ Гребка</h2>
+        <h2 class="text-center mb-xl">Biomechanics & Stroke Analysis</h2>
 
         <div class="research-paper">
             <h3>Tiago M. Barbosa (2010) - Performance Determinants</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> Journal of Sports Science and Medicine, 9(1)<br>
-                <strong>Фокус:</strong> Комплексная структура производительности плавания
+                <strong>Journal:</strong> Journal of Sports Science and Medicine, 9(1)<br>
+                <strong>Focus:</strong> Comprehensive framework for swimming performance
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Производительность зависит от <strong>генерации движения, минимизации сопротивления и экономии плавания</strong></li>
-                    <li><strong>Длина гребка оказалась более важным предиктором, чем частота гребков</strong></li>
-                    <li>Биомеханическая эффективность критична для различения уровней производительности</li>
-                    <li>Интеграция множества факторов определяет успех в соревнованиях</li>
+                    <li>Performance depends on <strong>propulsion generation, drag minimization, and swimming economy</strong></li>
+                    <li><strong>Stroke length emerged as more important predictor than stroke rate</strong></li>
+                    <li>Biomechanical efficiency critical for distinguishing performance levels</li>
+                    <li>Integration of multiple factors determines competitive success</li>
                 </ul>
             </div>
         </div>
@@ -864,17 +979,17 @@
         <div class="research-paper">
             <h3>Huub M. Toussaint (1992) - Front Crawl Biomechanics</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> Sports Medicine<br>
-                <strong>Фокус:</strong> Комплексный обзор механики кроля
+                <strong>Journal:</strong> Sports Medicine<br>
+                <strong>Focus:</strong> Comprehensive review of freestyle mechanics
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Проанализировал механизмы движения и измерение активного сопротивления</li>
-                    <li>Количественно определил связь между частотой гребков и длиной гребков</li>
-                    <li>Установил биомеханические принципы эффективного движения</li>
-                    <li>Предоставил структуру для оптимизации техники</li>
+                    <li>Analyzed propulsion mechanisms and active drag measurement</li>
+                    <li>Quantified relationship between stroke rate and stroke length</li>
+                    <li>Established biomechanical principles of efficient propulsion</li>
+                    <li>Provided framework for technique optimization</li>
                 </ul>
             </div>
         </div>
@@ -882,17 +997,17 @@
         <div class="research-paper">
             <h3>Ludovic Seifert (2007) - Index of Coordination</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> Human Movement Science<br>
-                <strong>Инновация:</strong> Метрика IdC для синхронизации гребков
+                <strong>Journal:</strong> Human Movement Science<br>
+                <strong>Innovation:</strong> IdC metric for arm stroke timing
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Представил Индекс Координации (IdC) для количественной оценки временных отношений между гребками</li>
-                    <li>Элитные пловцы адаптируют паттерны координации с изменениями скорости, сохраняя эффективность</li>
-                    <li>Стратегия координации влияет на эффективность движения</li>
-                    <li>Технику следует оценивать динамически, а не только на одном темпе</li>
+                    <li>Introduced Index of Coordination (IdC) for quantifying temporal relationships between arm strokes</li>
+                    <li>Elite swimmers adapt coordination patterns with speed changes while maintaining efficiency</li>
+                    <li>Coordination strategy impacts propulsion effectiveness</li>
+                    <li>Technique must be assessed dynamically, not just at single pace</li>
                 </ul>
             </div>
         </div>
@@ -901,45 +1016,45 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center mb-xl">Экономия Плавания и Энергетические Затраты</h2>
+        <h2 class="text-center mb-xl">Swimming Economy & Energy Cost</h2>
 
         <div class="grid grid-2">
             <div class="research-paper">
                 <h3>Costill et al. (1985)</h3>
                 <div class="paper-meta">
-                    <strong>Журнал:</strong> International Journal of Sports Medicine<br>
-                    <strong>Историческая Находка:</strong> Экономия > VO₂max
+                    <strong>Journal:</strong> International Journal of Sports Medicine<br>
+                    <strong>Landmark Finding:</strong> Economy > VO₂max
                 </div>
 
                 <div class="findings">
-                    <h4>Ключевые Находки:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li><strong>Экономия плавания важнее, чем VO₂max для производительности на средних дистанциях</strong></li>
-                        <li>Лучшие пловцы продемонстрировали более низкие энергетические затраты при заданных скоростях</li>
-                        <li>Эффективность механики гребка критична для прогнозирования производительности</li>
-                        <li>Техническая компетентность отделяет элитных пловцов от хороших пловцов</li>
+                        <li><strong>Swimming economy more important than VO₂max for middle-distance performance</strong></li>
+                        <li>Better swimmers demonstrated lower energy costs at given velocities</li>
+                        <li>Stroke mechanics efficiency critical for performance prediction</li>
+                        <li>Technical proficiency separates elite from good swimmers</li>
                     </ul>
                 </div>
 
                 <div class="significance">
-                    <h4>Значение:</h4>
-                    <p>Сместил фокус с чистой аэробной способности на эффективность. Подчеркнул важность технической работы и экономии гребка для улучшения производительности.</p>
+                    <h4>Significance:</h4>
+                    <p>Shifted focus from pure aerobic capacity to efficiency. Highlighted importance of technique work and stroke economy for performance gains.</p>
                 </div>
             </div>
 
             <div class="research-paper">
                 <h3>Fernandes et al. (2003)</h3>
                 <div class="paper-meta">
-                    <strong>Журнал:</strong> Journal of Human Kinetics<br>
-                    <strong>Фокус:</strong> Предел времени при скорости VO₂max
+                    <strong>Journal:</strong> Journal of Human Kinetics<br>
+                    <strong>Focus:</strong> Time limit at VO₂max velocity
                 </div>
 
                 <div class="findings">
-                    <h4>Ключевые Находки:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>Диапазоны TLim-vVO₂max: 215-260с (элита), 230-260с (высокий уровень), 310-325с (низкий уровень)</li>
-                        <li>Экономия плавания напрямую связана с TLim-vVO₂max</li>
-                        <li>Лучшая экономия = более длительное устойчивое время при максимальном аэробном темпе</li>
+                        <li>TLim-vVO₂max ranges: 215-260s (elite), 230-260s (high-level), 310-325s (low-level)</li>
+                        <li>Swimming economy directly related to TLim-vVO₂max</li>
+                        <li>Better economy = longer sustainable time at maximum aerobic pace</li>
                     </ul>
                 </div>
             </div>
@@ -949,51 +1064,51 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Носимые Сенсоры и Технологии</h2>
+        <h2 class="text-center mb-xl">Wearable Sensors & Technology</h2>
 
         <div class="research-paper">
             <h3>Mooney et al. (2016) - IMU Technology Review</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> Sensors (Систематический Обзор)<br>
-                <strong>Фокус:</strong> Инерциальные Измерительные Блоки в элитном плавании
+                <strong>Journal:</strong> Sensors (Systematic Review)<br>
+                <strong>Focus:</strong> Inertial Measurement Units in elite swimming
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>IMU эффективно измеряют частоту гребков, подсчёт гребков, скорость плавания, вращение тела, паттерны дыхания</li>
-                    <li>Хорошая согласованность с видеоанализом (золотой стандарт)</li>
-                    <li>Представляет зарождающуюся технологию для обратной связи в реальном времени</li>
-                    <li>Потенциал для демократизации биомеханического анализа, ранее требовавшего дорогого лабораторного оборудования</li>
+                    <li>IMUs effectively measure stroke rate, stroke count, swim speed, body rotation, breathing patterns</li>
+                    <li>Good agreement against video analysis (gold standard)</li>
+                    <li>Represents emerging technology for real-time feedback</li>
+                    <li>Potential for democratizing biomechanical analysis previously requiring expensive lab equipment</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Значение:</h4>
-                <p>Подтвердил носимую технологию как научно строгую. Открыл путь для потребительских устройств (Garmin, Apple Watch, FORM) для предоставления метрик лабораторного качества.</p>
+                <h4>Significance:</h4>
+                <p>Validated wearable technology as scientifically rigorous. Opened path for consumer devices (Garmin, Apple Watch, FORM) to provide lab-quality metrics.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Silva et al. (2021) - Machine Learning for Stroke Detection</h3>
             <div class="paper-meta">
-                <strong>Журнал:</strong> Sensors<br>
-                <strong>Инновация:</strong> Классификация Random Forest с точностью 95.02%
+                <strong>Journal:</strong> Sensors<br>
+                <strong>Innovation:</strong> Random Forest classification achieving 95.02% accuracy
             </div>
 
             <div class="findings">
-                <h4>Ключевые Находки:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>95.02% точность классификации гребка</strong> с носимых сенсоров</li>
-                    <li>Онлайн-распознавание стиля плавания и поворотов с обратной связью в реальном времени</li>
-                    <li>Обучен на ~8,000 образцах от 10 спортсменов во время реальной тренировки</li>
-                    <li>Автоматически предоставляет подсчёт гребков и расчёты средней скорости</li>
+                    <li><strong>95.02% accuracy in stroke classification</strong> from wearable sensors</li>
+                    <li>Online recognition of swimming style and turns with real-time feedback</li>
+                    <li>Trained on ~8,000 samples from 10 athletes during actual training</li>
+                    <li>Provides stroke counting and average speed calculations automatically</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Значение:</h4>
-                <p>Продемонстрировал, что машинное обучение может достичь почти идеальной точности в обнаружении гребков, обеспечивая автоматизированную и интеллектуальную аналитику плавания на потребительских устройствах.</p>
+                <h4>Significance:</h4>
+                <p>Demonstrated that machine learning can achieve near-perfect stroke detection accuracy, enabling automated, intelligent swimming analytics in consumer devices.</p>
             </div>
         </div>
     </div>
@@ -1001,43 +1116,43 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Выдающиеся Исследователи</h2>
+        <h2>Leading Researchers</h2>
 
         <div class="researchers-grid">
             <div class="researcher-card">
                 <h3>Tiago M. Barbosa</h3>
-                <p class="institution">Политехнический Институт Браганса, Португалия</p>
-                <p><strong>Более 100 публикаций</strong> по биомеханике и моделированию производительности. Установил комплексные структуры для понимания детерминант производительности плавания.</p>
+                <p class="institution">Polytechnic Institute of Bragança, Portugal</p>
+                <p><strong>100+ publications</strong> on biomechanics and performance modeling. Established comprehensive frameworks for understanding swimming performance determinants.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ernest W. Maglischo</h3>
                 <p class="institution">Arizona State University</p>
-                <p>Автор <em>"Swimming Fastest"</em>, определяющего текста по науке плавания. Выиграл 13 чемпионатов NCAA как тренер.</p>
+                <p>Author of <em>"Swimming Fastest"</em>, the definitive text on swimming science. Won 13 NCAA championships as coach.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Kohji Wakayoshi</h3>
                 <p class="institution">Osaka University</p>
-                <p>Разработал концепцию критической скорости плавания. Три исторических статьи (1992-1993) установили CSS как золотой стандарт для пороговых тестов.</p>
+                <p>Developed critical swimming velocity concept. Three landmark papers (1992-1993) established CSS as gold standard for threshold testing.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Huub M. Toussaint</h3>
                 <p class="institution">Vrije Universiteit Amsterdam</p>
-                <p>Эксперт по измерению движения и сопротивления. Пионер методов количественной оценки активного сопротивления и эффективности гребка.</p>
+                <p>Expert on propulsion and drag measurement. Pioneered methods for quantifying active drag and stroke efficiency.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ricardo J. Fernandes</h3>
-                <p class="institution">Университет Порту</p>
-                <p>Специалист по кинетике VO₂ и энергетике плавания. Продвинул понимание метаболических реакций на тренировку плавания.</p>
+                <p class="institution">University of Porto</p>
+                <p>VO₂ kinetics and swimming energetics specialist. Advanced understanding of metabolic responses to swimming training.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ludovic Seifert</h3>
-                <p class="institution">Университет Руана</p>
-                <p>Эксперт по моторному контролю и координации. Разработал Индекс Координации (IdC) и продвинутые методы анализа гребка.</p>
+                <p class="institution">University of Rouen</p>
+                <p>Motor control and coordination expert. Developed Index of Coordination (IdC) and advanced stroke analysis methods.</p>
             </div>
         </div>
     </div>
@@ -1045,30 +1160,30 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Реализации Современных Платформ</h2>
+        <h2>Modern Platform Implementations</h2>
 
         <div class="platform-research">
             <h3>Apple Watch Swimming Analytics</h3>
-            <p>Инженеры Apple записали <strong>более 700 пловцов в более чем 1,500 сессиях</strong>, включая олимпийского чемпиона Michael Phelps и новичков. Этот разнообразный набор обучающих данных позволяет алгоритмам анализировать траекторию запястья, используя гироскоп и акселерометр, работающие вместе, достигая высокой точности на всех уровнях навыков.</p>
+            <p>Apple engineers recorded <strong>700+ swimmers across 1,500+ sessions</strong> including Olympic champion Michael Phelps to beginners. This diverse training dataset enables algorithms to analyze wrist trajectory using gyroscope and accelerometer working in tandem, achieving high accuracy across all skill levels.</p>
 
             <h3>FORM Smart Goggles Machine Learning</h3>
-            <p>IMU с креплением на голове FORM обеспечивает превосходное обнаружение поворотов, захватывая вращение головы более точно, чем устройства с креплением на запястье. Его пользовательские обученные модели ML обрабатывают сотни часов размеченного видео плавания, согласованного с данными сенсоров, обеспечивая <strong>прогнозы в реальном времени менее чем за 1 секунду</strong> с точностью ±2 секунды.</p>
+            <p>FORM's head-mounted IMU provides superior turn detection by capturing head rotation more accurately than wrist-mounted devices. Their custom-trained ML models process hundreds of hours of labeled swimming video aligned with sensor data, enabling <strong>real-time predictions in under 1 second</strong> with ±2 second accuracy.</p>
 
             <h3>Garmin Multi-Band GPS Innovation</h3>
-            <p>Двухчастотный спутниковый приём (диапазоны L1 + L5) обеспечивает <strong>в 10 раз большую мощность сигнала</strong>, драматически улучшая точность на открытой воде. Обзоры хвалят многодиапазонные модели Garmin за создание "пугающе точного" отслеживания вокруг буёв, решая историческую проблему точности GPS для плавания.</p>
+            <p>Dual-frequency satellite reception (L1 + L5 bands) provides <strong>10X greater signal strength</strong>, dramatically improving open water accuracy. Reviews praise multi-band Garmin models as producing "scary-accurate" tracking around buoys, addressing the historical challenge of GPS accuracy for swimming.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow text-center">
-        <h2>Наука Движет Производительностью</h2>
-        <p class="lead">SwimAnalytics стоит на плечах десятилетий строгих научных исследований. Каждая формула, метрика и расчёт были подтверждены рецензируемыми исследованиями, опубликованными в ведущих журналах спортивной науки.</p>
+        <h2>Science Drives Performance</h2>
+        <p class="lead">SwimAnalytics stands on the shoulders of decades of rigorous scientific research. Every formula, metric, and calculation has been validated through peer-reviewed studies published in leading sports science journals.</p>
 
-        <p>Эта основа, базирующаяся на фактических данных, гарантирует, что полученные вами знания — это не просто числа — это научно значимые индикаторы физиологической адаптации, биомеханической эффективности и прогресса производительности.</p>
+        <p>This evidence-based foundation ensures that the insights you gain are not just numbers—they're scientifically meaningful indicators of physiological adaptation, biomechanical efficiency, and performance progression.</p>
 
         <div class="mt-xl">
-            <a href="/sr/bibliography/" class="btn btn-primary btn-large">Смотреть Полную Библиографию →</a>
+            <a href="/en/bibliography/" class="btn btn-primary btn-large">View Complete Bibliography →</a>
         </div>
     </div>
 </section>
@@ -1510,15 +1625,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

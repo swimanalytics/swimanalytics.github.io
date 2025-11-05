@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/ja/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -684,7 +799,10 @@
       </div>
       <div class="app-hero-mockup">
         <div class="mockup-phone">
-          <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOSアプリ - iPhoneでクリティカルスイムスピード（CSS）とトレーニングストレススコア（TSS）の指標を表示" width="400" height="auto" loading="eager" />
+          <picture>
+                    <source srcset="/assets/images/app-mockup-main.webp" type="image/webp">
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOSアプリ - iPhoneでクリティカルスイムスピード（CSS）とトレーニングストレススコア（TSS）の指標を表示" width="400" height="auto" loading="eager" />
+                </picture>
         </div>
       </div>
     </div>
@@ -774,27 +892,111 @@
       </button>
       <div class="screenshots-carousel" id="screenshotsCarousel">
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workouts-list.png" alt="TSSスコアとトレーニングゾーンを表示するSwimAnalyticsのワークアウトリスト" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="TSSスコアとトレーニングゾーンを表示するSwimAnalyticsのワークアウトリスト" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">ワークアウト概要</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workout-detail.png" alt="ラップごとのペース、SWOLF効率、心拍数データを含む詳細なワークアウト分析" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="ラップごとのペース、SWOLF効率、心拍数データを含む詳細なワークアウト分析" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">ラップ分析</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/analytics.png" alt="パフォーマンスマネジメントチャートのCTL、ATL、TSB指標を表示するSwimAnalyticsダッシュボード" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="パフォーマンスマネジメントチャートのCTL、ATL、TSB指標を表示するSwimAnalyticsダッシュボード" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">高度な指標</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/performance.png" alt="時間経過によるCSS進行とトレーニング負荷を示すパフォーマンストレンドグラフ" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="時間経過によるCSS進行とトレーニング負荷を示すパフォーマンストレンドグラフ" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">パフォーマンス推移</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/training-zones.png" alt="クリティカルスイムスピード閾値に基づく7つのカスタマイズされたトレーニングゾーン" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="クリティカルスイムスピード閾値に基づく7つのカスタマイズされたトレーニングゾーン" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">トレーニングゾーン</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/export-options.png" alt="コーチと分析のためにJSON、CSV、HTML、PDF形式で水泳データをエクスポート" loading="lazy" />
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="コーチと分析のためにJSON、CSV、HTML、PDF形式で水泳データをエクスポート" loading="lazy" / width="1200" height="800">
+                </picture>
           <p class="screenshot-caption">エクスポートオプション</p>
         </div>
       </div>
@@ -1512,15 +1714,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

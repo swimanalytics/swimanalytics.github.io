@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/fa/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -663,28 +778,31 @@
       <div class="app-hero-text">
         <div class="app-hero-badge">
           <span>🏊</span>
-          <span>تحليلات السباحة الاحترافية</span>
+          <span>Professional Swimming Analytics</span>
         </div>
-        <h1>حوّل بيانات السباحة إلى أداء متميز</h1>
+        <h1>Transform Your Swimming Data Into Performance</h1>
         <p class="app-hero-subtitle">
-          مقاييس علمية، ومناطق تدريب مخصصة، وتتبع شامل للأداء.
-          جميع البيانات تُعالج محلياً على جهاز iPhone الخاص بك مع خصوصية تامة.
+          Scientific metrics, personalized training zones, and comprehensive performance tracking.
+          All processed locally on your iPhone with complete privacy.
         </p>
         <div class="app-hero-cta">
           <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-            تحميل من App Store
+            Download on App Store
           </a>
           <a href="#features" class="btn btn-large btn-secondary">
-            استكشاف الميزات
+            Explore Features
           </a>
         </div>
         <p class="mt-6 text-sm-muted">
-          ✓ تجربة مجانية لمدة 7 أيام &nbsp;&nbsp; ✓ لا يتطلب حساباً &nbsp;&nbsp; ✓ بيانات محلية 100%
+          ✓ 7-day free trial &nbsp;&nbsp; ✓ No account required &nbsp;&nbsp; ✓ 100% local data
         </p>
       </div>
       <div class="app-hero-mockup">
         <div class="mockup-phone">
-          <img src="/assets/images/app-mockup-main.png" alt="تطبيق SwimAnalytics على iOS يعرض مقاييس السرعة الحرجة للسباحة (CSS) ونقاط إجهاد التدريب (TSS) على iPhone" width="400" height="auto" loading="eager" />
+          <picture>
+                    <source srcset="/assets/images/app-mockup-main.webp" type="image/webp">
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOS app showing Critical Swim Speed (CSS) and Training Stress Score (TSS) metrics dashboard on iPhone" width="400" height="auto" loading="eager" />
+                </picture>
         </div>
       </div>
     </div>
@@ -695,9 +813,9 @@
 <section id="features" class="app-features">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">الميزات</div>
-      <h2 class="section-title">كل ما تحتاجه للتحسين</h2>
-      <p class="section-subtitle">تحليلات احترافية مصممة للسباحين من جميع المستويات</p>
+      <div class="section-badge">Features</div>
+      <h2 class="section-title">Everything You Need to Improve</h2>
+      <p class="section-subtitle">Professional-grade analytics designed for swimmers at every level</p>
     </div>
     <div class="app-features-grid">
       <div class="feature-card">
@@ -706,8 +824,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
           </svg>
         </div>
-        <h3>مقاييس علمية</h3>
-        <p>تحدد <a href="/fa/css/">السرعة الحرجة للسباحة (CSS)</a> عتبة الأكسجين لديك، مما يتيح حساب <a href="/fa/training-load/">نقاط إجهاد التدريب (TSS)</a> و<a href="/fa/training-load/#pmc">تتبع الأداء باستخدام CTL/ATL/TSB</a> بناءً على الأبحاث الرياضية العلمية المثبتة.</p>
+        <h3>Scientific Metrics</h3>
+        <p><a href="/en/css/">Critical Swim Speed (CSS)</a> determines your aerobic threshold, enabling <a href="/en/training-load/">Training Stress Score (TSS)</a> calculation and <a href="/en/training-load/#pmc">CTL/ATL/TSB performance tracking</a> based on proven sports science research.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -715,8 +833,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
           </svg>
         </div>
-        <h3>مناطق التدريب</h3>
-        <p>7 مناطق تدريب مخصصة ومعايرة بناءً على CSS الخاص بك. حسّن كل تمرين لتطوير الاستشفاء والأكسجين والعتبة أو VO₂max.</p>
+        <h3>Training Zones</h3>
+        <p>7 personalized training zones calibrated to your CSS. Optimize every workout for recovery, aerobic, threshold, or VO₂max development.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -724,8 +842,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
           </svg>
         </div>
-        <h3>مقارنات ذكية</h3>
-        <p>مقارنات فترات أسبوعية وشهرية وسنوية مع كشف تلقائي للاتجاهات والتغيرات المئوية لجميع المقاييس.</p>
+        <h3>Smart Comparisons</h3>
+        <p>Weekly, monthly, and yearly period comparisons with automatic trend detection and percentage changes for all metrics.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -733,8 +851,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
           </svg>
         </div>
-        <h3>خصوصية تامة</h3>
-        <p>جميع البيانات تُعالج محلياً على جهازك. بدون خوادم، بدون سحابة، بدون تتبع. أنت تملك وتتحكم في بيانات السباحة الخاصة بك.</p>
+        <h3>Complete Privacy</h3>
+        <p>All data processed locally on your device. No servers, no cloud, no tracking. You own and control your swimming data.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -742,8 +860,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-export"></use>
           </svg>
         </div>
-        <h3>التصدير إلى أي مكان</h3>
-        <p>صدّر التدريبات والتحليلات بتنسيقات JSON و CSV و HTML أو PDF. متوافق مع المدربين وجداول البيانات ومنصات التدريب.</p>
+        <h3>Export Anywhere</h3>
+        <p>Export workouts and analytics in JSON, CSV, HTML, or PDF formats. Compatible with coaches, spreadsheets, and training platforms.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -751,8 +869,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
           </svg>
         </div>
-        <h3>أداء فوري</h3>
-        <p>بدء التطبيق في أقل من 0.35 ثانية باستخدام بنية محلية أولاً. اعرض تمريناتك فوراً دون انتظار المزامنة أو التنزيلات.</p>
+        <h3>Instant Performance</h3>
+        <p>Sub-0.35s app launch with local-first architecture. View your workouts instantly without waiting for syncs or downloads.</p>
       </div>
     </div>
   </div>
@@ -762,48 +880,132 @@
 <section class="app-screenshots">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">لقطات الشاشة</div>
-      <h2 class="section-title">اكتشف SwimAnalytics في العمل</h2>
-      <p class="section-subtitle">واجهة جميلة وبديهية مصممة للسباحين</p>
+      <div class="section-badge">Screenshots</div>
+      <h2 class="section-title">See SwimAnalytics in Action</h2>
+      <p class="section-subtitle">Beautiful, intuitive interface designed for swimmers</p>
     </div>
     <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="اللقطة السابقة">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <div class="screenshots-carousel" id="screenshotsCarousel">
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workouts-list.png" alt="قائمة تمرينات SwimAnalytics تعرض جلسات السباحة مع نقاط TSS ومناطق التدريب" loading="lazy" />
-          <p class="screenshot-caption">ملخص التمرينات</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="SwimAnalytics workout list showing swimming sessions with TSS scores and training zones" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Workouts Overview</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workout-detail.png" alt="تحليل تفصيلي لتمرين السباحة مع الإيقاع لكل طول وكفاءة SWOLF وبيانات معدل ضربات القلب" loading="lazy" />
-          <p class="screenshot-caption">تحليل طول بطول</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="Detailed swimming workout analysis with lap-by-lap pace, SWOLF efficiency and heart rate data" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Lap-by-Lap Analysis</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/analytics.png" alt="لوحة تحكم SwimAnalytics تعرض مقاييس مخطط إدارة الأداء CTL و ATL و TSB" loading="lazy" />
-          <p class="screenshot-caption">مقاييس متقدمة</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="SwimAnalytics dashboard displaying CTL, ATL, and TSB Performance Management Chart metrics" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Advanced Metrics</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/performance.png" alt="رسم بياني لاتجاهات أداء السباحة يظهر تقدم CSS وحمل التدريب عبر الزمن" loading="lazy" />
-          <p class="screenshot-caption">اتجاهات الأداء</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="Swimming performance trends chart showing CSS progression and training load over time" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Performance Trends</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/training-zones.png" alt="7 مناطق تدريب سباحة مخصصة بناءً على عتبة السرعة الحرجة للسباحة" loading="lazy" />
-          <p class="screenshot-caption">مناطق التدريب</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="7 personalized swimming training zones based on Critical Swim Speed threshold" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Training Zones</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/export-options.png" alt="تصدير بيانات السباحة بتنسيقات JSON و CSV و HTML و PDF للمدربين والتحليل" loading="lazy" />
-          <p class="screenshot-caption">خيارات التصدير</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="Export swimming data in JSON, CSV, HTML and PDF formats for coaches and analysis" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Export Options</p>
         </div>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="اللقطة التالية">
+      <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="التنقل بين اللقطات"></div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Screenshot navigation"></div>
     </div>
   </div>
 </section>
@@ -812,61 +1014,61 @@
 <section class="app-metrics">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">قائم على العلم</div>
-      <h2 class="section-title text-white">مقاييس احترافية مهمة</h2>
+      <div class="section-badge">Science-Based</div>
+      <h2 class="section-title text-white">Professional Metrics That Matter</h2>
       <p class="section-subtitle text-white-90">
-        يحول SwimAnalytics بيانات السباحة الخام إلى معلومات قابلة للتنفيذ
-        باستخدام مقاييس موثقة من الأبحاث الرياضية العلمية
+        SwimAnalytics transforms raw swimming data into actionable intelligence
+        using metrics validated by sports science research
       </p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-icon">🎯</div>
-        <div class="metric-label">إيقاع العتبة</div>
+        <div class="metric-label">Threshold Pace</div>
         <h3 class="metric-name">CSS</h3>
-        <p class="metric-description">Critical Swim Speed - إيقاع عتبة الأكسجين لديك</p>
+        <p class="metric-description">Critical Swim Speed - your aerobic threshold pace</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">📊</div>
-        <div class="metric-label">حمل التدريب</div>
+        <div class="metric-label">Workout Load</div>
         <h3 class="metric-name">TSS</h3>
-        <p class="metric-description">Training Stress Score تقيس شدة التدريب</p>
+        <p class="metric-description">Training Stress Score quantifies workout intensity</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">💪</div>
-        <div class="metric-label">اللياقة البدنية</div>
+        <div class="metric-label">Fitness</div>
         <h3 class="metric-name">CTL</h3>
-        <p class="metric-description">Chronic Training Load - متوسط متحرك لـ 42 يوماً</p>
+        <p class="metric-description">Chronic Training Load - 42-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">😴</div>
-        <div class="metric-label">الإجهاد</div>
+        <div class="metric-label">Fatigue</div>
         <h3 class="metric-name">ATL</h3>
-        <p class="metric-description">Acute Training Load - متوسط متحرك لـ 7 أيام</p>
+        <p class="metric-description">Acute Training Load - 7-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚖️</div>
-        <div class="metric-label">الجاهزية</div>
+        <div class="metric-label">Form</div>
         <h3 class="metric-name">TSB</h3>
-        <p class="metric-description">Training Stress Balance يشير إلى الجاهزية</p>
+        <p class="metric-description">Training Stress Balance indicates readiness</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚡</div>
-        <div class="metric-label">الكفاءة</div>
+        <div class="metric-label">Efficiency</div>
         <h3 class="metric-name">SWOLF</h3>
-        <p class="metric-description">نقاط كفاءة الضربة - الأقل أفضل</p>
+        <p class="metric-description">Stroke efficiency score - lower is better</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏊</div>
-        <div class="metric-label">المناطق</div>
-        <h3 class="metric-name">7 مناطق</h3>
-        <p class="metric-description">مستويات الشدة من الاستشفاء إلى السباق السريع</p>
+        <div class="metric-label">Zones</div>
+        <h3 class="metric-name">7 Zones</h3>
+        <p class="metric-description">Recovery to Sprint intensity levels</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏆</div>
-        <div class="metric-label">الأرقام القياسية</div>
+        <div class="metric-label">Records</div>
         <h3 class="metric-name">PRs</h3>
-        <p class="metric-description">تتبع تلقائي للأرقام القياسية الشخصية</p>
+        <p class="metric-description">Automatic personal record tracking</p>
       </div>
     </div>
   </div>
@@ -876,50 +1078,50 @@
 <section class="app-pricing">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">الأسعار</div>
-      <h2 class="section-title">أسعار بسيطة وشفافة</h2>
-      <p class="section-subtitle">ابدأ بتجربة مجانية لمدة 7 أيام. ألغِ في أي وقت.</p>
+      <div class="section-badge">Pricing</div>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Start with a 7-day free trial. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-header">
-          <h3 class="pricing-name">شهري</h3>
+          <h3 class="pricing-name">Monthly</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">3.99</span>
-            <span class="pricing-period">/شهر</span>
+            <span class="pricing-period">/month</span>
           </div>
-          <p class="pricing-trial">تجربة مجانية لمدة 7 أيام</p>
+          <p class="pricing-trial">7-day free trial</p>
         </div>
         <ul class="pricing-features">
-          <li>مزامنة غير محدودة للتمرينات</li>
-          <li>جميع المقاييس العلمية (CSS، TSS، CTL/ATL/TSB)</li>
-          <li>7 مناطق تدريب مخصصة</li>
-          <li>مقارنات أسبوعية وشهرية وسنوية</li>
-          <li>تصدير بتنسيق JSON و CSV و HTML و PDF</li>
-          <li>خصوصية 100%، بيانات محلية</li>
-          <li>جميع التحديثات المستقبلية</li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
         </ul>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-header">
-          <h3 class="pricing-name">سنوي</h3>
+          <h3 class="pricing-name">Annual</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">39</span>
-            <span class="pricing-period">/سنة</span>
+            <span class="pricing-period">/year</span>
           </div>
-          <p class="pricing-trial">وفر €8.88/سنة (خصم 18%)</p>
+          <p class="pricing-trial">Save €8.88/year (18% off)</p>
         </div>
         <ul class="pricing-features">
-          <li>مزامنة غير محدودة للتمرينات</li>
-          <li>جميع المقاييس العلمية (CSS، TSS، CTL/ATL/TSB)</li>
-          <li>7 مناطق تدريب مخصصة</li>
-          <li>مقارنات أسبوعية وشهرية وسنوية</li>
-          <li>تصدير بتنسيق JSON و CSV و HTML و PDF</li>
-          <li>خصوصية 100%، بيانات محلية</li>
-          <li>جميع التحديثات المستقبلية</li>
-          <li><strong>فقط €3.25/شهر</strong></li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
+          <li><strong>Only €3.25/month</strong></li>
         </ul>
       </div>
     </div>
@@ -930,51 +1132,51 @@
 <section class="app-benefits">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">لماذا SwimAnalytics</div>
-      <h2 class="section-title">مصمم للسباحين الجادين</h2>
-      <p class="section-subtitle">ميزات احترافية دون التعقيد</p>
+      <div class="section-badge">Why SwimAnalytics</div>
+      <h2 class="section-title">Built for Serious Swimmers</h2>
+      <p class="section-subtitle">Professional features without the complexity</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-item">
         <div class="benefit-icon">🏊</div>
         <div class="benefit-content">
-          <h3>بروتوكول اختبار CSS</h3>
-          <p>بروتوكول اختبار مدمج 400م + 200م لتحديد السرعة الحرجة للسباحة لديك. كرر كل 6-8 أسابيع لتتبع التقدم وضبط مناطق التدريب تلقائياً.</p>
+          <h3>CSS Test Protocol</h3>
+          <p>Built-in 400m + 200m test protocol to determine your Critical Swim Speed. Repeat every 6-8 weeks to track progress and adjust training zones automatically.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">📱</div>
         <div class="benefit-content">
-          <h3>تجربة iOS أصلية</h3>
-          <p>مبني باستخدام SwiftUI للحصول على أداء سلس وتكامل مع iOS. مزامنة مثالية مع تطبيق الصحة، ودعم الويدجت، ولغة تصميم Apple المألوفة.</p>
+          <h3>Native iOS Experience</h3>
+          <p>Built with SwiftUI for smooth performance and iOS integration. Seamless Health app sync, widgets support, and familiar Apple design language.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🔬</div>
         <div class="benefit-content">
-          <h3>قائم على الأبحاث</h3>
-          <p>جميع المقاييس قائمة على أبحاث رياضية علمية محكّمة. CSS من Wakayoshi et al.، TSS مُكيّف للسباحة مع صيغة IF³، نماذج CTL/ATL المجربة.</p>
+          <h3>Research-Based</h3>
+          <p>All metrics based on peer-reviewed sports science research. CSS from Wakayoshi et al., TSS adapted for swimming with IF³ formula, proven CTL/ATL models.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">👥</div>
         <div class="benefit-content">
-          <h3>ملائم للمدربين</h3>
-          <p>صدّر تقارير تفصيلية للمدربين. شارك ملخصات HTML عبر البريد الإلكتروني، CSV للتحليل في جداول البيانات، أو PDF لسجلات التدريب.</p>
+          <h3>Coach-Friendly</h3>
+          <p>Export detailed reports for coaches. Share HTML summaries via email, CSV for spreadsheet analysis, or PDF for training logs and records.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🌍</div>
         <div class="benefit-content">
-          <h3>يعمل في كل مكان</h3>
-          <p>حمام السباحة أو المياه المفتوحة، سباق سريع أو مسافات. يتكيف SwimAnalytics مع جميع أنواع السباحة ويكتشف تلقائياً خصائص التمرين.</p>
+          <h3>Works Everywhere</h3>
+          <p>Pool or open water, sprints or distance. SwimAnalytics adapts to all swimming types and automatically detects workout characteristics.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🚀</div>
         <div class="benefit-content">
-          <h3>تحسين مستمر</h3>
-          <p>تحديثات منتظمة بميزات جديدة بناءً على ملاحظات المستخدمين. الإضافات الأخيرة تشمل المقارنات السنوية، وتتبع الأرقام القياسية الشخصية، وخيارات تصدير محسّنة.</p>
+          <h3>Always Improving</h3>
+          <p>Regular updates with new features based on user feedback. Recent additions include yearly comparisons, personal records tracking, and enhanced export options.</p>
         </div>
       </div>
     </div>
@@ -985,39 +1187,39 @@
 <section class="section">
   <div class="container container-narrow">
     <div class="section-header">
-      <div class="section-badge">الأسئلة الشائعة</div>
-      <h2 class="section-title">أسئلة متكررة</h2>
+      <div class="section-badge">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
     <div class="feature-list">
       <div class="feature-item">
-        <h3>كيف يحصل SwimAnalytics على بيانات السباحة الخاصة بي؟</h3>
-        <p>يتزامن SwimAnalytics مع Apple Health لاستيراد تمرينات السباحة المسجلة من أي جهاز أو تطبيق متوافق. يشمل ذلك الساعات الذكية، وأجهزة تتبع اللياقة، والإدخالات اليدوية. يعالج التطبيق هذه البيانات محلياً لحساب المقاييس المتقدمة.</p>
+        <h3>How does SwimAnalytics get my swimming data?</h3>
+        <p>SwimAnalytics syncs with Apple Health to import swimming workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics.</p>
       </div>
 
       <div class="feature-item">
-        <h3>ما هو اختبار CSS وكيف أجريه؟</h3>
-        <p>CSS (Critical Swim Speed) هو بروتوكول علمي يستخدم سباحتين بأقصى جهد: 400م و200م مع راحة 10-20 دقيقة بينهما. يحسب التطبيق عتبة الأكسجين لديك من هذه الأوقات ويضبط تلقائياً جميع مناطق التدريب. كرر كل 6-8 أسابيع لتتبع التقدم.</p>
+        <h3>What is the CSS test and how do I perform it?</h3>
+        <p>CSS (Critical Swim Speed) is a scientific protocol using 2 maximum effort swims: 400m and 200m with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress.</p>
       </div>
 
       <div class="feature-item">
-        <h3>هل تُرفع بياناتي إلى السحابة؟</h3>
-        <p>لا. يعالج SwimAnalytics جميع البيانات محلياً على iPhone الخاص بك. لا توجد خوادم خارجية، لا حسابات سحابية، لا نقل للبيانات. أنت تتحكم في التصدير: أنشئ ملفات JSON أو CSV أو HTML أو PDF وشاركها كما تريد.</p>
+        <h3>Is my data uploaded to the cloud?</h3>
+        <p>No. SwimAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want.</p>
       </div>
 
       <div class="feature-item">
-        <h3>هل يمكنني استخدام SwimAnalytics لسباحة المياه المفتوحة؟</h3>
-        <p>نعم. يعمل SwimAnalytics مع أي تمرين سباحة في Apple Health، بما في ذلك المياه المفتوحة. يتكيف التطبيق مع المقاييس المتاحة في كل من حمامات السباحة والمياه المفتوحة، مما يوفر تحليلاً ملائماً لكل بيئة.</p>
+        <h3>Can I use SwimAnalytics for open water swimming?</h3>
+        <p>Yes. SwimAnalytics works with any swimming workout in Apple Health, including open water. The app adapts to available metrics whether you're in a pool or open water, providing relevant analysis for each environment.</p>
       </div>
 
       <div class="feature-item">
-        <h3>ما الفرق بين الخطط الشهرية والسنوية؟</h3>
-        <p>كلا الخطتين تقدمان ميزات متطابقة: جميع المقاييس، مناطق غير محدودة، مقارنات زمنية، تصديرات متعددة، وتحديثات مجانية. الفرق الوحيد هو السعر: السنوية توفر 18% (تعادل €3.25/شهر مقابل €3.99/شهر).</p>
+        <h3>What's the difference between monthly and annual plans?</h3>
+        <p>Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month).</p>
       </div>
 
       <div class="feature-item">
-        <h3>هل يمكنني إلغاء اشتراكي في أي وقت؟</h3>
-        <p>نعم. تُدار الاشتراكات عبر App Store، لذا يمكنك الإلغاء في أي وقت من الإعدادات ← [اسمك] ← الاشتراكات. إذا ألغيت، ستحتفظ بالوصول حتى نهاية فترة الفوترة الحالية.</p>
+        <h3>Can I cancel my subscription anytime?</h3>
+        <p>Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period.</p>
       </div>
     </div>
   </div>
@@ -1026,18 +1228,18 @@
 <!-- Final CTA Section -->
 <section class="app-cta-final">
   <div class="container">
-    <h2>هل أنت مستعد لتحويل سباحتك؟</h2>
-    <p>انضم إلى آلاف السباحين الذين يستخدمون المقاييس العلمية لتحسين أدائهم. ابدأ تجربتك المجانية لمدة 7 أيام اليوم.</p>
+    <h2>Ready to Transform Your Swimming?</h2>
+    <p>Join thousands of swimmers who use scientific metrics to improve performance. Start your 7-day free trial today.</p>
     <div class="app-hero-cta">
       <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-        تحميل SwimAnalytics مجاناً
+        Download SwimAnalytics Free
       </a>
       <a href="#features" class="btn btn-large btn-accent-outline">
-        معرفة المزيد
+        Learn More
       </a>
     </div>
     <p class="section-footer">
-      لا يتطلب حساباً • ألغِ في أي وقت • بياناتك تبقى على جهازك
+      No account required • Cancel anytime • Your data stays on your device
     </p>
   </div>
 </section>
@@ -1046,29 +1248,29 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">تعلم المزيد عن تحليلات السباحة</h2>
-      <p class="section-subtitle">تعمق في العلم وراء SwimAnalytics</p>
+      <h2 class="section-title">Learn More About Swimming Analytics</h2>
+      <p class="section-subtitle">Dive deeper into the science behind SwimAnalytics</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
-        <h3 class="card-title">السرعة الحرجة للسباحة</h3>
+        <h3 class="card-title">Critical Swim Speed</h3>
         <div class="card-content">
-          <p>افهم كيف يحدد CSS عتبة الأكسجين لديك ولماذا هو حاسم للتدريب المنظم.</p>
-          <a href="/fa/css/" class="btn btn-secondary btn-small mt-md">تعلم عن CSS ←</a>
+          <p>Understand how CSS determines your aerobic threshold and why it's crucial for structured training.</p>
+          <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn about CSS →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">إدارة حمل التدريب</h3>
+        <h3 class="card-title">Training Load Management</h3>
         <div class="card-content">
-          <p>اكتشف كيف تساعدك TSS و CTL و ATL و TSB على موازنة إجهاد التدريب والاستشفاء.</p>
-          <a href="/fa/training-load/" class="btn btn-secondary btn-small mt-md">استكشف حمل التدريب ←</a>
+          <p>Discover how TSS, CTL, ATL, and TSB help you balance training stress and recovery.</p>
+          <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">Explore Training Load →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">مناطق التدريب</h3>
+        <h3 class="card-title">Training Zones</h3>
         <div class="card-content">
-          <p>تعلم عن المناطق السبع للتدريب وكيفية استخدامها للتخطيط المحدد للتمرينات.</p>
-          <a href="/fa/training-zones/" class="btn btn-secondary btn-small mt-md">عرض مناطق التدريب ←</a>
+          <p>Learn about the 7 training zones and how to use them for targeted workout planning.</p>
+          <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">View Training Zones →</a>
         </div>
       </div>
     </div>
@@ -1512,15 +1714,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

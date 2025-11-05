@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/ms/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -663,28 +778,31 @@
       <div class="app-hero-text">
         <div class="app-hero-badge">
           <span>🏊</span>
-          <span>Analitik Renang Profesional</span>
+          <span>Professional Swimming Analytics</span>
         </div>
-        <h1>Ubah Data Renang Anda Menjadi Performa</h1>
+        <h1>Transform Your Swimming Data Into Performance</h1>
         <p class="app-hero-subtitle">
-          Metrik ilmiah, zona latihan yang dipersonalisasi dan pelacakan performa yang komprehensif.
-          Semua diproses secara lokal di iPhone Anda dengan privasi total.
+          Scientific metrics, personalized training zones, and comprehensive performance tracking.
+          All processed locally on your iPhone with complete privacy.
         </p>
         <div class="app-hero-cta">
           <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-            Unduh di App Store
+            Download on App Store
           </a>
           <a href="#features" class="btn btn-large btn-secondary">
-            Jelajahi Fitur
+            Explore Features
           </a>
         </div>
         <p class="mt-6 text-sm-muted">
-          ✓ Uji coba gratis 7 hari &nbsp;&nbsp; ✓ Tanpa akun diperlukan &nbsp;&nbsp; ✓ 100% data lokal
+          ✓ 7-day free trial &nbsp;&nbsp; ✓ No account required &nbsp;&nbsp; ✓ 100% local data
         </p>
       </div>
       <div class="app-hero-mockup">
         <div class="mockup-phone">
-          <img src="/assets/images/app-mockup-main.png" alt="Aplikasi iOS SwimAnalytics menampilkan metrik Kecepatan Kritis Renang (CSS) dan Skor Stres Latihan (TSS) di iPhone" width="400" height="auto" loading="eager" />
+          <picture>
+                    <source srcset="/assets/images/app-mockup-main.webp" type="image/webp">
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOS app showing Critical Swim Speed (CSS) and Training Stress Score (TSS) metrics dashboard on iPhone" width="400" height="auto" loading="eager" />
+                </picture>
         </div>
       </div>
     </div>
@@ -695,9 +813,9 @@
 <section id="features" class="app-features">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Fitur</div>
-      <h2 class="section-title">Semua yang Anda Butuhkan untuk Meningkat</h2>
-      <p class="section-subtitle">Analitik tingkat profesional yang dirancang untuk perenang di semua level</p>
+      <div class="section-badge">Features</div>
+      <h2 class="section-title">Everything You Need to Improve</h2>
+      <p class="section-subtitle">Professional-grade analytics designed for swimmers at every level</p>
     </div>
     <div class="app-features-grid">
       <div class="feature-card">
@@ -706,8 +824,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
           </svg>
         </div>
-        <h3>Metrik Ilmiah</h3>
-        <p><a href="/ms/css/">Critical Swim Speed (CSS)</a> menentukan ambang aerobik Anda, memungkinkan perhitungan <a href="/ms/training-load/">Skor Stres Latihan (TSS)</a> dan <a href="/ms/training-load/#pmc">pelacakan performa dengan CTL/ATL/TSB</a> berdasarkan penelitian ilmu olahraga yang terbukti.</p>
+        <h3>Scientific Metrics</h3>
+        <p><a href="/en/css/">Critical Swim Speed (CSS)</a> determines your aerobic threshold, enabling <a href="/en/training-load/">Training Stress Score (TSS)</a> calculation and <a href="/en/training-load/#pmc">CTL/ATL/TSB performance tracking</a> based on proven sports science research.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -715,8 +833,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
           </svg>
         </div>
-        <h3>Zona Latihan</h3>
-        <p>7 zona latihan yang dipersonalisasi dikalibrasi berdasarkan Anda CSS. Optimalkan setiap sesi latihan untuk pengembangan pemulihan, aerobik, ambang, atau VO₂max.</p>
+        <h3>Training Zones</h3>
+        <p>7 personalized training zones calibrated to your CSS. Optimize every workout for recovery, aerobic, threshold, or VO₂max development.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -724,8 +842,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
           </svg>
         </div>
-        <h3>Perbandingan Cerdas</h3>
-        <p>Perbandingan periode mingguan, bulanan, dan tahunan dengan deteksi tren otomatis dan perubahan persentase untuk semua metrik.</p>
+        <h3>Smart Comparisons</h3>
+        <p>Weekly, monthly, and yearly period comparisons with automatic trend detection and percentage changes for all metrics.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -733,8 +851,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
           </svg>
         </div>
-        <h3>Privasi Total</h3>
-        <p>Semua data diproses secara lokal di perangkat Anda. Tanpa server, tanpa cloud, tanpa pelacakan. Anda memiliki dan mengontrol data renang Anda.</p>
+        <h3>Complete Privacy</h3>
+        <p>All data processed locally on your device. No servers, no cloud, no tracking. You own and control your swimming data.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -742,8 +860,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-export"></use>
           </svg>
         </div>
-        <h3>Ekspor ke Mana Saja</h3>
-        <p>Ekspor latihan dan analitik dalam format JSON, CSV, HTML atau PDF. Kompatibel dengan pelatih, spreadsheet, dan platform pelatihan.</p>
+        <h3>Export Anywhere</h3>
+        <p>Export workouts and analytics in JSON, CSV, HTML, or PDF formats. Compatible with coaches, spreadsheets, and training platforms.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -751,8 +869,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
           </svg>
         </div>
-        <h3>Performa Instan</h3>
-        <p>Startup aplikasi dalam waktu kurang dari 0.35 detik dengan arsitektur local-first. Lihat latihan Anda secara instan tanpa menunggu sinkronisasi atau unduhan.</p>
+        <h3>Instant Performance</h3>
+        <p>Sub-0.35s app launch with local-first architecture. View your workouts instantly without waiting for syncs or downloads.</p>
       </div>
     </div>
   </div>
@@ -762,48 +880,132 @@
 <section class="app-screenshots">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Tangkapan Layar</div>
-      <h2 class="section-title">Temukan SwimAnalytics dalam Aksi</h2>
-      <p class="section-subtitle">Antarmuka yang indah dan intuitif dirancang untuk perenang</p>
+      <div class="section-badge">Screenshots</div>
+      <h2 class="section-title">See SwimAnalytics in Action</h2>
+      <p class="section-subtitle">Beautiful, intuitive interface designed for swimmers</p>
     </div>
     <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="Tangkapan sebelumnya">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <div class="screenshots-carousel" id="screenshotsCarousel">
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workouts-list.png" alt="Daftar latihan SwimAnalytics menampilkan sesi renang dengan skor TSS dan zona latihan" loading="lazy" />
-          <p class="screenshot-caption">Ringkasan Latihan</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="SwimAnalytics workout list showing swimming sessions with TSS scores and training zones" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Workouts Overview</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workout-detail.png" alt="Analisis latihan renang terperinci dengan kecepatan per lap, efisiensi SWOLF dan data detak jantung" loading="lazy" />
-          <p class="screenshot-caption">Analisis Per Lap</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="Detailed swimming workout analysis with lap-by-lap pace, SWOLF efficiency and heart rate data" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Lap-by-Lap Analysis</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/analytics.png" alt="Dashboard SwimAnalytics menampilkan metrik Performance Management Chart CTL, ATL dan TSB" loading="lazy" />
-          <p class="screenshot-caption">Metrik Lanjutan</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="SwimAnalytics dashboard displaying CTL, ATL, and TSB Performance Management Chart metrics" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Advanced Metrics</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/performance.png" alt="Grafik tren performa renang menampilkan perkembangan CSS dan beban latihan dari waktu ke waktu" loading="lazy" />
-          <p class="screenshot-caption">Tren Performa</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="Swimming performance trends chart showing CSS progression and training load over time" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Performance Trends</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/training-zones.png" alt="7 zona latihan renang yang dipersonalisasi berdasarkan ambang Critical Swim Speed" loading="lazy" />
-          <p class="screenshot-caption">Zona Latihan</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="7 personalized swimming training zones based on Critical Swim Speed threshold" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Training Zones</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/export-options.png" alt="Ekspor data renang dalam format JSON, CSV, HTML dan PDF untuk pelatih dan analitik" loading="lazy" />
-          <p class="screenshot-caption">Opsi Ekspor</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="Export swimming data in JSON, CSV, HTML and PDF formats for coaches and analysis" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Export Options</p>
         </div>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="Tangkapan berikutnya">
+      <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigasi tangkapan"></div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Screenshot navigation"></div>
     </div>
   </div>
 </section>
@@ -812,61 +1014,61 @@
 <section class="app-metrics">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Berbasis Sains</div>
-      <h2 class="section-title text-white">Metrik Profesional yang Penting</h2>
+      <div class="section-badge">Science-Based</div>
+      <h2 class="section-title text-white">Professional Metrics That Matter</h2>
       <p class="section-subtitle text-white-90">
-        SwimAnalytics mengubah data renang mentah menjadi wawasan yang dapat ditindaklanjuti
-        menggunakan metrik yang divalidasi oleh penelitian ilmu olahraga
+        SwimAnalytics transforms raw swimming data into actionable intelligence
+        using metrics validated by sports science research
       </p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-icon">🎯</div>
-        <div class="metric-label">Kecepatan Ambang</div>
+        <div class="metric-label">Threshold Pace</div>
         <h3 class="metric-name">CSS</h3>
-        <p class="metric-description">Critical Swim Speed - kecepatan ambang aerobik Anda</p>
+        <p class="metric-description">Critical Swim Speed - your aerobic threshold pace</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">📊</div>
-        <div class="metric-label">Beban Latihan</div>
+        <div class="metric-label">Workout Load</div>
         <h3 class="metric-name">TSS</h3>
-        <p class="metric-description">Training Stress Score mengukur intensitas latihan</p>
+        <p class="metric-description">Training Stress Score quantifies workout intensity</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">💪</div>
-        <div class="metric-label">Kebugaran</div>
+        <div class="metric-label">Fitness</div>
         <h3 class="metric-name">CTL</h3>
-        <p class="metric-description">Chronic Training Load - rata-rata bergerak 42 hari</p>
+        <p class="metric-description">Chronic Training Load - 42-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">😴</div>
-        <div class="metric-label">Kelelahan</div>
+        <div class="metric-label">Fatigue</div>
         <h3 class="metric-name">ATL</h3>
-        <p class="metric-description">Acute Training Load - rata-rata bergerak 7 hari</p>
+        <p class="metric-description">Acute Training Load - 7-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚖️</div>
-        <div class="metric-label">Kondisi</div>
+        <div class="metric-label">Form</div>
         <h3 class="metric-name">TSB</h3>
-        <p class="metric-description">Training Stress Keseimbangan menunjukkan kesiapan</p>
+        <p class="metric-description">Training Stress Balance indicates readiness</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚡</div>
-        <div class="metric-label">Efisiensi</div>
+        <div class="metric-label">Efficiency</div>
         <h3 class="metric-name">SWOLF</h3>
-        <p class="metric-description">Skor efisiensi kayuhan - lebih rendah lebih baik</p>
+        <p class="metric-description">Stroke efficiency score - lower is better</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏊</div>
-        <div class="metric-label">Zona</div>
-        <h3 class="metric-name">7 Zona</h3>
-        <p class="metric-description">Level intensitas dari Pemulihan hingga Sprint</p>
+        <div class="metric-label">Zones</div>
+        <h3 class="metric-name">7 Zones</h3>
+        <p class="metric-description">Recovery to Sprint intensity levels</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏆</div>
-        <div class="metric-label">Rekor</div>
+        <div class="metric-label">Records</div>
         <h3 class="metric-name">PRs</h3>
-        <p class="metric-description">Pelacakan rekor pribadi otomatis</p>
+        <p class="metric-description">Automatic personal record tracking</p>
       </div>
     </div>
   </div>
@@ -876,50 +1078,50 @@
 <section class="app-pricing">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Harga</div>
-      <h2 class="section-title">Harga Sederhana dan Transparan</h2>
-      <p class="section-subtitle">Mulai dengan uji coba gratis 7 hari. Batalkan kapan saja.</p>
+      <div class="section-badge">Pricing</div>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Start with a 7-day free trial. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-header">
-          <h3 class="pricing-name">Bulanan</h3>
+          <h3 class="pricing-name">Monthly</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">3.99</span>
-            <span class="pricing-period">/bulan</span>
+            <span class="pricing-period">/month</span>
           </div>
-          <p class="pricing-trial">Uji coba gratis 7 hari</p>
+          <p class="pricing-trial">7-day free trial</p>
         </div>
         <ul class="pricing-features">
-          <li>Sinkronisasi latihan tak terbatas</li>
-          <li>Semua metrik ilmiah (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 zona latihan yang dipersonalisasi</li>
-          <li>Perbandingan mingguan, bulanan, dan tahunan</li>
-          <li>Ekspor dalam JSON, CSV, HTML dan PDF</li>
-          <li>100% privasi, data lokal</li>
-          <li>Semua pembaruan masa depan</li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
         </ul>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-header">
-          <h3 class="pricing-name">Tahunan</h3>
+          <h3 class="pricing-name">Annual</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">39</span>
-            <span class="pricing-period">/tahun</span>
+            <span class="pricing-period">/year</span>
           </div>
-          <p class="pricing-trial">Hemat €8.88/tahun (18% diskon)</p>
+          <p class="pricing-trial">Save €8.88/year (18% off)</p>
         </div>
         <ul class="pricing-features">
-          <li>Sinkronisasi latihan tak terbatas</li>
-          <li>Semua metrik ilmiah (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 zona latihan yang dipersonalisasi</li>
-          <li>Perbandingan mingguan, bulanan, dan tahunan</li>
-          <li>Ekspor dalam JSON, CSV, HTML dan PDF</li>
-          <li>100% privasi, data lokal</li>
-          <li>Semua pembaruan masa depan</li>
-          <li><strong>Hanya €3.25/bulan</strong></li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
+          <li><strong>Only €3.25/month</strong></li>
         </ul>
       </div>
     </div>
@@ -930,51 +1132,51 @@
 <section class="app-benefits">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Mengapa SwimAnalytics</div>
-      <h2 class="section-title">Dibuat untuk Perenang Serius</h2>
-      <p class="section-subtitle">Fitur profesional tanpa kompleksitas</p>
+      <div class="section-badge">Why SwimAnalytics</div>
+      <h2 class="section-title">Built for Serious Swimmers</h2>
+      <p class="section-subtitle">Professional features without the complexity</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-item">
         <div class="benefit-icon">🏊</div>
         <div class="benefit-content">
-          <h3>Protokol Tes CSS</h3>
-          <p>Protokol tes terintegrasi 400m + 200m untuk menentukan Critical Swim Speed Anda. Ulangi setiap 6-8 minggu untuk melacak kemajuan dan menyesuaikan zona latihan secara otomatis.</p>
+          <h3>CSS Test Protocol</h3>
+          <p>Built-in 400m + 200m test protocol to determine your Critical Swim Speed. Repeat every 6-8 weeks to track progress and adjust training zones automatically.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">📱</div>
         <div class="benefit-content">
-          <h3>Pengalaman iOS Native</h3>
-          <p>Dibangun dengan SwiftUI untuk performa yang mulus dan integrasi iOS. Sinkronisasi sempurna dengan aplikasi Kesehatan, dukungan widget, dan bahasa desain Apple yang familiar.</p>
+          <h3>Native iOS Experience</h3>
+          <p>Built with SwiftUI for smooth performance and iOS integration. Seamless Health app sync, widgets support, and familiar Apple design language.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🔬</div>
         <div class="benefit-content">
-          <h3>Berbasis Penelitian</h3>
-          <p>Semua metrik berdasarkan penelitian ilmu olahraga yang telah ditinjau sejawat. CSS Wakayoshi et al., TSS diadaptasi untuk renang dengan formula IF³, model yang terbukti CTL/ATL.</p>
+          <h3>Research-Based</h3>
+          <p>All metrics based on peer-reviewed sports science research. CSS from Wakayoshi et al., TSS adapted for swimming with IF³ formula, proven CTL/ATL models.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">👥</div>
         <div class="benefit-content">
-          <h3>Ramah Pelatih</h3>
-          <p>Ekspor laporan terperinci untuk pelatih. Bagikan ringkasan HTML melalui email, CSV untuk analitik spreadsheet, atau PDF untuk catatan latihan.</p>
+          <h3>Coach-Friendly</h3>
+          <p>Export detailed reports for coaches. Share HTML summaries via email, CSV for spreadsheet analysis, or PDF for training logs and records.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🌍</div>
         <div class="benefit-content">
-          <h3>Berfungsi di Mana Saja</h3>
-          <p>Kolam atau air terbuka, sprint atau jarak jauh. SwimAnalytics beradaptasi dengan semua jenis renang dan secara otomatis mendeteksi karakteristik latihan.</p>
+          <h3>Works Everywhere</h3>
+          <p>Pool or open water, sprints or distance. SwimAnalytics adapts to all swimming types and automatically detects workout characteristics.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🚀</div>
         <div class="benefit-content">
-          <h3>Selalu Berkembang</h3>
-          <p>Pembaruan berkala dengan fitur baru berdasarkan umpan balik pengguna. Penambahan terbaru termasuk perbandingan tahunan, pelacakan rekor pribadi, dan opsi ekspor yang ditingkatkan.</p>
+          <h3>Always Improving</h3>
+          <p>Regular updates with new features based on user feedback. Recent additions include yearly comparisons, personal records tracking, and enhanced export options.</p>
         </div>
       </div>
     </div>
@@ -986,38 +1188,38 @@
   <div class="container container-narrow">
     <div class="section-header">
       <div class="section-badge">FAQ</div>
-      <h2 class="section-title">Pertanyaan Umum</h2>
+      <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
     <div class="feature-list">
       <div class="feature-item">
-        <h3>Bagaimana SwimAnalytics mendapatkan data renang saya?</h3>
-        <p>SwimAnalytics disinkronkan dengan Apple Health untuk mengimpor latihan renang yang dicatat oleh perangkat atau aplikasi yang kompatibel. Ini termasuk jam tangan pintar, pelacak kebugaran, dan entri manual. Aplikasi memproses data ini secara lokal untuk menghitung metrik lanjutan.</p>
+        <h3>How does SwimAnalytics get my swimming data?</h3>
+        <p>SwimAnalytics syncs with Apple Health to import swimming workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Apa itu tes CSS dan bagaimana cara melakukannya?</h3>
-        <p>CSS (Critical Swim Speed) adalah protokol ilmiah yang menggunakan 2 renang dengan usaha maksimal: 400m dan 200m dengan istirahat 10-20 menit di antaranya. Aplikasi menghitung ambang aerobik Anda dari waktu ini dan secara otomatis menyesuaikan semua zona latihan. Ulangi setiap 6-8 minggu untuk melacak kemajuan.</p>
+        <h3>What is the CSS test and how do I perform it?</h3>
+        <p>CSS (Critical Swim Speed) is a scientific protocol using 2 maximum effort swims: 400m and 200m with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Apakah data saya diunggah ke cloud?</h3>
-        <p>Tidak. SwimAnalytics memproses semua data secara lokal di iPhone Anda. Tidak ada server eksternal, tanpa akun cloud, tanpa transfer data. Anda mengontrol ekspor: buat file JSON, CSV, HTML atau PDF dan bagikan sesuai keinginan Anda.</p>
+        <h3>Is my data uploaded to the cloud?</h3>
+        <p>No. SwimAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Bisakah saya menggunakan SwimAnalytics untuk renang air terbuka?</h3>
-        <p>Ya. SwimAnalytics berfungsi dengan latihan renang apa pun di Apple Health, termasuk air terbuka. Aplikasi beradaptasi dengan metrik yang tersedia baik di kolam maupun air terbuka, memberikan analitik yang relevan untuk setiap lingkungan.</p>
+        <h3>Can I use SwimAnalytics for open water swimming?</h3>
+        <p>Yes. SwimAnalytics works with any swimming workout in Apple Health, including open water. The app adapts to available metrics whether you're in a pool or open water, providing relevant analysis for each environment.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Apa perbedaan antara paket bulanan dan tahunan?</h3>
-        <p>Kedua paket menawarkan fitur yang identik: semua metrik, zona tak terbatas, perbandingan temporal, ekspor ganda dan pembaruan gratis. Satu-satunya perbedaan adalah harga: tahunan menghemat 18% (setara dengan €3.25/bulan vs €3.99/bulan).</p>
+        <h3>What's the difference between monthly and annual plans?</h3>
+        <p>Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month).</p>
       </div>
 
       <div class="feature-item">
-        <h3>Bisakah saya membatalkan langganan kapan saja?</h3>
-        <p>Ya. Langganan dikelola melalui App Store, jadi Anda dapat membatalkan kapan saja dari Pengaturan → [Nama Anda] → Langganan. Jika Anda membatalkan, Anda akan tetap memiliki akses hingga akhir periode penagihan Anda saat ini.</p>
+        <h3>Can I cancel my subscription anytime?</h3>
+        <p>Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period.</p>
       </div>
     </div>
   </div>
@@ -1026,18 +1228,18 @@
 <!-- Final CTA Section -->
 <section class="app-cta-final">
   <div class="container">
-    <h2>Siap Mengubah Renang Anda?</h2>
-    <p>Bergabunglah dengan ribuan perenang yang menggunakan metrik ilmiah untuk meningkatkan performa mereka. Mulai uji coba gratis 7 hari Anda hari ini.</p>
+    <h2>Ready to Transform Your Swimming?</h2>
+    <p>Join thousands of swimmers who use scientific metrics to improve performance. Start your 7-day free trial today.</p>
     <div class="app-hero-cta">
       <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-        Unduh SwimAnalytics Gratis
+        Download SwimAnalytics Free
       </a>
       <a href="#features" class="btn btn-large btn-accent-outline">
-        Pelajari Lebih Lanjut
+        Learn More
       </a>
     </div>
     <p class="section-footer">
-      Tanpa akun diperlukan • Batalkan kapan saja • Data Anda tetap di perangkat Anda
+      No account required • Cancel anytime • Your data stays on your device
     </p>
   </div>
 </section>
@@ -1046,29 +1248,29 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Pelajari Lebih Lanjut tentang Analitik Renang</h2>
-      <p class="section-subtitle">Pelajari lebih dalam sains di balik SwimAnalytics</p>
+      <h2 class="section-title">Learn More About Swimming Analytics</h2>
+      <p class="section-subtitle">Dive deeper into the science behind SwimAnalytics</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
         <h3 class="card-title">Critical Swim Speed</h3>
         <div class="card-content">
-          <p>Pahami bagaimana CSS menentukan ambang aerobik Anda dan mengapa ini penting untuk latihan terstruktur.</p>
-          <a href="/ms/css/" class="btn btn-secondary btn-small mt-md">Pelajari tentang CSS →</a>
+          <p>Understand how CSS determines your aerobic threshold and why it's crucial for structured training.</p>
+          <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn about CSS →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Manajemen Beban Latihan</h3>
+        <h3 class="card-title">Training Load Management</h3>
         <div class="card-content">
-          <p>Temukan bagaimana TSS, CTL, ATL dan TSB membantu Anda menyeimbangkan stres latihan dan pemulihan.</p>
-          <a href="/ms/training-load/" class="btn btn-secondary btn-small mt-md">Jelajahi Beban Latihan →</a>
+          <p>Discover how TSS, CTL, ATL, and TSB help you balance training stress and recovery.</p>
+          <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">Explore Training Load →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Zona Latihan</h3>
+        <h3 class="card-title">Training Zones</h3>
         <div class="card-content">
-          <p>Pelajari tentang 7 zona latihan dan cara menggunakannya untuk perencanaan latihan yang spesifik.</p>
-          <a href="/ms/training-zones/" class="btn btn-secondary btn-small mt-md">Lihat Zona Latihan →</a>
+          <p>Learn about the 7 training zones and how to use them for targeted workout planning.</p>
+          <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">View Training Zones →</a>
         </div>
       </div>
     </div>
@@ -1512,15 +1714,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

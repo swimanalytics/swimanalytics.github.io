@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/sw/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -1121,58 +1236,58 @@
             <a href="/sw/training-load/" class="btn btn-primary">Jifunze Kuhusu Hesabu ya sTSS →</a>
             <a href="/sw/formulas/" class="btn btn-secondary">Angalia Fomula Zote →</a>
         </div>
-    </div>        <h2 class="mt-3xl">How to Test Your CSS</h2>
+    </div>        <h2 class="mt-3xl">Jinsi ya Kupima CSS Yako</h2>
 
         <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="How to Test Your CSS">
-            <meta itemprop="description" content="Follow this step-by-step protocol to accurately measure your Critical Swim Speed (CSS)">
+            <meta itemprop="name" content="Jinsi ya Kupima CSS Yako">
+            <meta itemprop="description" content="Fuata itifaki hii ya hatua kwa hatua ili kupima kwa usahihi Kasi Muhimu ya Kuogelea (CSS) yako">
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="1">
-                <h3 itemprop="name">Step 1: Warm Up Properly</h3>
+                <h3 itemprop="name">Hatua ya 1: Joto Vizuri</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Complete 300-800 meters of easy swimming, including drills and progressive build-ups. This prepares your body for maximal effort and prevents injury.</p>
+                        <p>Maliza mita 300-800 za kuogelea kwa urahisi, ikijumuisha mazoezi na kujenga kwa uendelezaji. Hii inaandaa mwili wako kwa juhudi za juu na kuzuia majeraha.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="2">
-                <h3 itemprop="name">Step 2: Perform 400m Time Trial</h3>
+                <h3 itemprop="name">Hatua ya 2: Fanya Jaribio la Muda la Mita 400</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Swim 400 meters at maximum sustained effort from a push start (no dive). Record your time to the second. Aim for even splits or a negative split (second 200m equal to or faster than first 200m).</p>
+                        <p>Ogelea mita 400 kwa juhudi za juu zaidi zilizoendelea kutoka kuanza kwa kusukuma (hakuna kuzamia). Rekodi muda wako kwa sekunde. Lenga mgawanyiko sawa au mgawanyiko hasi (mita 200 ya pili sawa na au haraka kuliko 200 ya kwanza).</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="3">
-                <h3 itemprop="name">Step 3: Recover Completely</h3>
+                <h3 itemprop="name">Hatua ya 3: Pona Kabisa</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Rest for 5-10 minutes with easy swimming or complete rest. This recovery is CRITICAL. Wait until your heart rate drops below 120 bpm and breathing is fully recovered before continuing.</p>
+                        <p>Pumzika kwa dakika 5-10 kwa kuogelea kwa urahisi au kupumzika kabisa. Upoaji huu ni MUHIMU. Subiri hadi mapigo ya moyo yako yashuke chini ya 120 bpm na kupumua kuponje kabisa kabla ya kuendelea.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="4">
-                <h3 itemprop="name">Step 4: Perform 200m Time Trial</h3>
+                <h3 itemprop="name">Hatua ya 4: Fanya Jaribio la Muda la Mita 200</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Swim 200 meters at maximum effort from a push start. Record your time precisely. This should be faster per 100m than your 400m pace.</p>
+                        <p>Ogelea mita 200 kwa juhudi za juu kutoka kuanza kwa kusukuma. Rekodi muda wako kwa usahihi. Hii inapaswa kuwa haraka kwa kila mita 100 kuliko kasi yako ya mita 400.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="5">
-                <h3 itemprop="name">Step 5: Calculate Your CSS</h3>
+                <h3 itemprop="name">Hatua ya 5: Kokotoa CSS Yako</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Use the formula: CSS Pace/100m = (T400 - T200) / 2. Example: (368s - 150s) / 2 = 109s = 1:49/100m. Or use the calculator on this page to get instant results with personalized training zones.</p>
+                        <p>Tumia formula: CSS Pace/100m = (T400 - T200) / 2. Mfano: (368s - 150s) / 2 = 109s = 1:49/100m. Au tumia kikokotoo kwenye ukurasa huu ili kupata matokeo ya papo hapo na maeneo ya mafunzo ya kibinafsi.</p>
                     </div>
                 </div>
             </div>
@@ -1618,15 +1733,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

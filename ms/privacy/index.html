@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/ms/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -664,106 +779,106 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Kebijakan Privasi</h1>
+        <h1 class="mb-lg">Privacy Policy</h1>
 
-        <p class="text-secondary mb-xl">Terakhir diperbarui: <strong>Enero 2024</strong></p>
+        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Pendahuluan</h2>
+            <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                Esta Kebijakan Privasi describe cómo recopilamos, usamos dan protegemos Anda informasi personal ketika visitas nuestro sitio web.
+                This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website.
             </p>
             <p class="mb-md">
-                Estamos comprometidos dengan protección Anda privasi dan garantizar yang Anda informasi personal se maneje forma segura dan responsable.
+                We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Informasi yang Kami Kumpulkan</h2>
-            <h3 class="mb-sm">Información yang proporcionas directamente:</h3>
+            <h2 class="mb-md">Information We Collect</h2>
+            <h3 class="mb-sm">Information you provide directly:</h3>
             <ul class="mb-md">
-                <li>Información contacto (nombre, correo electrónico) ketika usas nuestro formulario contacto</li>
-                <li>Cualquier otra informasi yang elijas proporcionar</li>
+                <li>Contact information (name, email) when you use our contact form</li>
+                <li>Any other information you choose to provide</li>
             </ul>
 
-            <h3 class="mb-sm">Información recopilada automáticamente:</h3>
+            <h3 class="mb-sm">Information collected automatically:</h3>
             <ul class="mb-md">
-                <li>Tipo dan versión navegador</li>
-                <li>Sistema operativo</li>
-                <li>Páginas visitadas dan tiempo pasado di páginas</li>
-                <li>Dirección IP (anonimizada)</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Bagaimana Kami Menggunakan Informasi Anda</h2>
-            <p class="mb-sm">Usamos informasi yang recopilamos para:</p>
-            <ul class="mb-md">
-                <li>Responder Anda consultas dan solicitudes</li>
-                <li>Mejorar nuestro sitio web dan servicios</li>
-                <li>Analizar cómo se usa nuestro sitio web</li>
-                <li>Garantizar seguridad e integridad nuestro sitio web</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on pages</li>
+                <li>IP address (anonymized)</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Cookie</h2>
-            <p class="mb-md">
-                Usamos cookiadalahtuk mejorar Anda pengalaman di nuestro sitio web. Las cookies son pequeños archivos texto almacerenangs di Anda dispositivo yang nos ayudan comprender cómo usas nuestro sitio.
-            </p>
-            <p class="mb-sm">Usamos siguientes tipos cookies:</p>
+            <h2 class="mb-md">How We Use Your Information</h2>
+            <p class="mb-sm">We use the information we collect to:</p>
             <ul class="mb-md">
-                <li><strong>Cookie esenciales:</strong> Necesarias untuk funcionamiento correcto sitio web</li>
-                <li><strong>Cookie analíticas:</strong> Nos ayudan comprender cómo visitantes interactúan dengan nuestro sitio web (solo dengan Anda consentimiento)</li>
+                <li>Respond to your inquiries and requests</li>
+                <li>Improve our website and services</li>
+                <li>Analyze how our website is used</li>
+                <li>Ensure the security and integrity of our website</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Cookies</h2>
+            <p class="mb-md">
+                We use cookies to improve your experience on our website. Cookies are small text files stored on your device that help us understand how you use our site.
+            </p>
+            <p class="mb-sm">We use the following types of cookies:</p>
+            <ul class="mb-md">
+                <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
+                <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website (only with your consent)</li>
             </ul>
             <p class="mb-md">
-                Puedes controlar cookies rata-ratante configuración Anda navegador. Ten di cuenta yang deshabilitar cookies puede afectar funcionalidad nuestro sitio web.
+                You can control cookies through your browser settings. Please note that disabling cookies may affect the functionality of our website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Layanan Pihak Ketiga</h2>
+            <h2 class="mb-md">Third-Party Services</h2>
             <p class="mb-md">
-                Podemos usar servicios terceros sebagai Google Analytics untuk ayudarnos analizar tráfico sitio web. Estos servicios pueden recopilar informasi tentang Anda uso nuestro sitio web.
+                We may use third-party services such as Google Analytics to help us analyze website traffic. These services may collect information about your use of our website.
             </p>
             <p class="mb-md">
-                Estos terceros tienen sus propias políticas privasi, dan te recomendamos revisarlas.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Keamanan Data</h2>
-            <p class="mb-md">
-                Implementamos medidas técnicas dan organizativas apropiadas untuk proteger Anda informasi personal contra acceso tidak autorizado, alteración, divulgación atau destrucción.
+                These third parties have their own privacy policies, and we encourage you to review them.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Hak Anda</h2>
-            <p class="mb-sm">Tienes derecho a:</p>
+            <h2 class="mb-md">Data Security</h2>
+            <p class="mb-md">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Your Rights</h2>
+            <p class="mb-sm">You have the right to:</p>
             <ul class="mb-md">
-                <li>Acceder Anda informasi personal</li>
-                <li>Corregir informasi inexacta</li>
-                <li>Solicitar eliminación Anda informasi</li>
-                <li>Retirar consentimiento untuk procesamiento data</li>
-                <li>Oponerte al procesamiento Anda informasi</li>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Withdraw consent for data processing</li>
+                <li>Object to processing of your information</li>
             </ul>
             <p class="mb-md">
-                Para ejercer estos derechos, hubungi kami utilizando informasi proporcionada di nuestra <a href="/ms/contact/">página contacto</a>.
+                To exercise these rights, please contact us using the information provided on our <a href="/en/contact/">contact page</a>.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Perubahan pada Kebijakan Ini</h2>
+            <h2 class="mb-md">Changes to This Policy</h2>
             <p class="mb-md">
-                Podemos actualizar ini Kebijakan Privasi vez di cuando. Te notificaremos apa pun cambio publicando nueva política di ini página dengan fecha "Terakhir diperbarui" actualizada.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated "Last updated" date.
             </p>
         </div>
 
         <div class="callout callout-info">
-            <h2 class="mb-sm">Ada Pertanyaan?</h2>
+            <h2 class="mb-sm">Questions?</h2>
             <p>
-                Jika Anda memiliki pertanyaan tentang ini Kebijakan Privasi, silakan <a href="/ms/contact/">hubungi kami</a>.
+                If you have any questions about this Privacy Policy, please <a href="/en/contact/">contact us</a>.
             </p>
         </div>
     </div>
@@ -1206,15 +1321,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

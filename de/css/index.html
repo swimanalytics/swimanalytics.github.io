@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/de/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -766,8 +881,8 @@
                     <div class="mistake-item">
                         <h4>Unzureichende Erholung</h4>
                         <p><strong>Problem:</strong> Ermüdung verlangsamt die 200m-Zeit künstlich</p>
-                        <p><strong>Ergebnis:</strong> Berechnetes CSS wird <em>schneller als die Realität</em>, was zu übertrainierten Zonen führt</p>
-                        <p><strong>Lösung:</strong> Ruhen bis HF unter 120 bpm fällt oder bis die Atmung vollständig erholt ist</p>
+                        <p><strong>Ergebnis:</strong> Berechnetes CSS wird <em>schneller als die Realität</em>, was zu überfordernd intensiven Zonen führt</p>
+                        <p><strong>Lösung:</strong> Ruhen, bis die Herzfrequenz unter 120 Schläge pro Minute fällt oder die Atmung vollständig erholt ist</p>
                     </div>
 
                     <div class="mistake-item">
@@ -1003,14 +1118,14 @@
                 <h3>🥇 Elite-Langstreckenschwimmer</h3>
                 <div class="pace-value">1,5-1,8 m/s</div>
                 <div class="pace-equivalent">0:56-1:07 pro 100m</div>
-                <p>Stellt 80-85% der maximalen 100m-Geschwindigkeit dar. Nationale/internationale Athleten mit Jahren strukturierten Trainings.</p>
+                <p>Entspricht 80-85% der maximalen 100m-Geschwindigkeit. Nationale/internationale Athleten mit jahrelangem strukturiertem Training.</p>
             </div>
 
             <div class="level-card">
-                <h3>🏊 Wettkampf-Altersgrup pe</h3>
+                <h3>🏊 Wettkampf-Altersgruppe</h3>
                 <div class="pace-value">1,2-1,5 m/s</div>
                 <div class="pace-equivalent">1:07-1:23 pro 100m</div>
-                <p>Highschool-Auswahl, College-Schwimmer, Wettkampf-Masters. Regelmäßiges strukturiertes Training 5-6 Tage/Woche.</p>
+                <p>Schulmannschaft, Universitätsschwimmer, Wettkampf-Masters. Regelmäßiges strukturiertes Training 5-6 Tage pro Woche.</p>
             </div>
 
             <div class="level-card">
@@ -1121,58 +1236,58 @@
             <a href="/de/training-load/" class="btn btn-primary">Mehr über sTSS-Berechnung erfahren →</a>
             <a href="/de/formulas/" class="btn btn-secondary">Alle Formeln anzeigen →</a>
         </div>
-    </div>        <h2 class="mt-3xl">How to Test Your CSS</h2>
+    </div>        <h2 class="mt-3xl">So testen Sie Ihre CSS</h2>
 
         <div class="howto-section" itemscope itemtype="https://schema.org/HowTo">
-            <meta itemprop="name" content="How to Test Your CSS">
-            <meta itemprop="description" content="Follow this step-by-step protocol to accurately measure your Critical Swim Speed (CSS)">
+            <meta itemprop="name" content="So testen Sie Ihre CSS">
+            <meta itemprop="description" content="Befolgen Sie dieses schrittweise Protokoll zur genauen Messung Ihrer Kritischen Schwimmgeschwindigkeit (CSS)">
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="1">
-                <h3 itemprop="name">Step 1: Warm Up Properly</h3>
+                <h3 itemprop="name">Schritt 1: Ordentlich aufwärmen</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Complete 300-800 meters of easy swimming, including drills and progressive build-ups. This prepares your body for maximal effort and prevents injury.</p>
+                        <p>Absolvieren Sie 300-800 Meter lockeres Schwimmen, einschließlich Technikübungen und progressiver Steigerungen. Dies bereitet Ihren Körper auf maximale Anstrengung vor und beugt Verletzungen vor.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="2">
-                <h3 itemprop="name">Step 2: Perform 400m Time Trial</h3>
+                <h3 itemprop="name">Schritt 2: 400m-Zeitfahren durchführen</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Swim 400 meters at maximum sustained effort from a push start (no dive). Record your time to the second. Aim for even splits or a negative split (second 200m equal to or faster than first 200m).</p>
+                        <p>Schwimmen Sie 400 Meter mit maximaler nachhaltiger Anstrengung vom Abstoß (kein Sprung). Erfassen Sie Ihre Zeit sekundengenau. Streben Sie gleichmäßige Splits oder einen negativen Split an (zweite 200m gleich oder schneller als erste 200m).</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="3">
-                <h3 itemprop="name">Step 3: Recover Completely</h3>
+                <h3 itemprop="name">Schritt 3: Vollständig erholen</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Rest for 5-10 minutes with easy swimming or complete rest. This recovery is CRITICAL. Wait until your heart rate drops below 120 bpm and breathing is fully recovered before continuing.</p>
+                        <p>Ruhen Sie sich 5-10 Minuten mit lockerem Schwimmen oder vollständiger Ruhe aus. Diese Erholung ist ENTSCHEIDEND. Warten Sie, bis Ihre Herzfrequenz unter 120 Schläge pro Minute sinkt und die Atmung vollständig erholt ist, bevor Sie fortfahren.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="4">
-                <h3 itemprop="name">Step 4: Perform 200m Time Trial</h3>
+                <h3 itemprop="name">Schritt 4: 200m-Zeitfahren durchführen</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Swim 200 meters at maximum effort from a push start. Record your time precisely. This should be faster per 100m than your 400m pace.</p>
+                        <p>Schwimmen Sie 200 Meter mit maximaler Anstrengung vom Abstoß. Erfassen Sie Ihre Zeit präzise. Dies sollte schneller pro 100m sein als Ihr 400m-Tempo.</p>
                     </div>
                 </div>
             </div>
 
             <div class="howto-step" itemprop="step" itemscope itemtype="https://schema.org/HowToStep">
                 <meta itemprop="position" content="5">
-                <h3 itemprop="name">Step 5: Calculate Your CSS</h3>
+                <h3 itemprop="name">Schritt 5: CSS berechnen</h3>
                 <div itemprop="itemListElement" itemscope itemtype="https://schema.org/HowToDirection">
                     <div itemprop="text">
-                        <p>Use the formula: CSS Pace/100m = (T400 - T200) / 2. Example: (368s - 150s) / 2 = 109s = 1:49/100m. Or use the calculator on this page to get instant results with personalized training zones.</p>
+                        <p>Verwenden Sie die Formel: CSS-Tempo/100m = (T400 - T200) / 2. Beispiel: (368s - 150s) / 2 = 109s = 1:49/100m. Oder nutzen Sie den Rechner auf dieser Seite für sofortige Ergebnisse mit personalisierten Trainingszonen.</p>
                     </div>
                 </div>
             </div>
@@ -1618,15 +1733,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

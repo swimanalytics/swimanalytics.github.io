@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/vi/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -663,28 +778,31 @@
       <div class="app-hero-text">
         <div class="app-hero-badge">
           <span>🏊</span>
-          <span>Phân Tích Chuyên Nghiệp Bơi Lội</span>
+          <span>Professional Swimming Analytics</span>
         </div>
-        <h1>Chuyển Đổi Dữ Liệu Bơi Lội Thành Hiệu Suất</h1>
+        <h1>Transform Your Swimming Data Into Performance</h1>
         <p class="app-hero-subtitle">
-          Các chỉ số khoa học, vùng huấn luyện cá nhân hóa và theo dõi hiệu suất toàn diện.
-          Tất cả được xử lý cục bộ trên iPhone của bạn với quyền riêng tư tuyệt đối.
+          Scientific metrics, personalized training zones, and comprehensive performance tracking.
+          All processed locally on your iPhone with complete privacy.
         </p>
         <div class="app-hero-cta">
           <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-            Tải xuống trên App Store
+            Download on App Store
           </a>
           <a href="#features" class="btn btn-large btn-secondary">
-            Khám Phá Tính Năng
+            Explore Features
           </a>
         </div>
         <p class="mt-6 text-sm-muted">
-          ✓ Dùng thử miễn phí 7 ngày &nbsp;&nbsp; ✓ Không yêu cầu tài khoản &nbsp;&nbsp; ✓ 100% dữ liệu cục bộ
+          ✓ 7-day free trial &nbsp;&nbsp; ✓ No account required &nbsp;&nbsp; ✓ 100% local data
         </p>
       </div>
       <div class="app-hero-mockup">
         <div class="mockup-phone">
-          <img src="/assets/images/app-mockup-main.png" alt="Ứng dụng iOS SwimAnalytics hiển thị các chỉ số Critical Swim Speed (CSS) và Training Stress Score (TSS) trên iPhone" width="400" height="auto" loading="eager" />
+          <picture>
+                    <source srcset="/assets/images/app-mockup-main.webp" type="image/webp">
+                    <img src="/assets/images/app-mockup-main.png" alt="SwimAnalytics iOS app showing Critical Swim Speed (CSS) and Training Stress Score (TSS) metrics dashboard on iPhone" width="400" height="auto" loading="eager" />
+                </picture>
         </div>
       </div>
     </div>
@@ -695,9 +813,9 @@
 <section id="features" class="app-features">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Tính Năng</div>
-      <h2 class="section-title">Mọi Thứ Bạn Cần Để Cải Thiện</h2>
-      <p class="section-subtitle">Phân tích cấp chuyên nghiệp được thiết kế cho vận động viên bơi lội ở mọi trình độ</p>
+      <div class="section-badge">Features</div>
+      <h2 class="section-title">Everything You Need to Improve</h2>
+      <p class="section-subtitle">Professional-grade analytics designed for swimmers at every level</p>
     </div>
     <div class="app-features-grid">
       <div class="feature-card">
@@ -706,8 +824,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-chart"></use>
           </svg>
         </div>
-        <h3>Các Chỉ Số Khoa Học</h3>
-        <p><a href="/vi/css/">Critical Swim Speed (CSS)</a> xác định ngưỡng hiếu khí của bạn, cho phép tính toán <a href="/vi/training-load/">Training Stress Score (TSS)</a> và <a href="/vi/training-load/#pmc">theo dõi hiệu suất với CTL/ATL/TSB</a> dựa trên nghiên cứu khoa học thể thao đã được chứng minh.</p>
+        <h3>Scientific Metrics</h3>
+        <p><a href="/en/css/">Critical Swim Speed (CSS)</a> determines your aerobic threshold, enabling <a href="/en/training-load/">Training Stress Score (TSS)</a> calculation and <a href="/en/training-load/#pmc">CTL/ATL/TSB performance tracking</a> based on proven sports science research.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -715,8 +833,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-zones"></use>
           </svg>
         </div>
-        <h3>Vùng Huấn Luyện</h3>
-        <p>7 vùng huấn luyện cá nhân hóa được hiệu chuẩn theo CSS của bạn. Tối ưu hóa mỗi buổi tập cho phát triển hồi phục, hiếu khí, ngưỡng hoặc VO₂max.</p>
+        <h3>Training Zones</h3>
+        <p>7 personalized training zones calibrated to your CSS. Optimize every workout for recovery, aerobic, threshold, or VO₂max development.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -724,8 +842,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-calendar"></use>
           </svg>
         </div>
-        <h3>So Sánh Thông Minh</h3>
-        <p>So sánh theo tuần, tháng và năm với phát hiện xu hướng tự động và thay đổi phần trăm cho tất cả các chỉ số.</p>
+        <h3>Smart Comparisons</h3>
+        <p>Weekly, monthly, and yearly period comparisons with automatic trend detection and percentage changes for all metrics.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -733,8 +851,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-shield"></use>
           </svg>
         </div>
-        <h3>Quyền Riêng Tư Tuyệt Đối</h3>
-        <p>Tất cả dữ liệu được xử lý cục bộ trên thiết bị của bạn. Không có máy chủ, không có đám mây, không có theo dõi. Bạn sở hữu và kiểm soát dữ liệu bơi lội của mình.</p>
+        <h3>Complete Privacy</h3>
+        <p>All data processed locally on your device. No servers, no cloud, no tracking. You own and control your swimming data.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -742,8 +860,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-export"></use>
           </svg>
         </div>
-        <h3>Xuất Ra Bất Kỳ Đâu</h3>
-        <p>Xuất các buổi tập và phân tích ở định dạng JSON, CSV, HTML hoặc PDF. Tương thích với huấn luyện viên, bảng tính và nền tảng huấn luyện.</p>
+        <h3>Export Anywhere</h3>
+        <p>Export workouts and analytics in JSON, CSV, HTML, or PDF formats. Compatible with coaches, spreadsheets, and training platforms.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">
@@ -751,8 +869,8 @@
             <use href="/assets/images/icons-sprite.svg#icon-lightning"></use>
           </svg>
         </div>
-        <h3>Hiệu Suất Tức Thì</h3>
-        <p>Khởi động ứng dụng trong dưới 0.35 giây với kiến trúc local-first. Xem các buổi tập của bạn ngay lập tức mà không cần chờ đồng bộ hóa hoặc tải xuống.</p>
+        <h3>Instant Performance</h3>
+        <p>Sub-0.35s app launch with local-first architecture. View your workouts instantly without waiting for syncs or downloads.</p>
       </div>
     </div>
   </div>
@@ -762,48 +880,132 @@
 <section class="app-screenshots">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Ảnh Chụp Màn Hình</div>
-      <h2 class="section-title">Khám Phá SwimAnalytics Hoạt Động</h2>
-      <p class="section-subtitle">Giao diện đẹp và trực quan được thiết kế cho vận động viên bơi lội</p>
+      <div class="section-badge">Screenshots</div>
+      <h2 class="section-title">See SwimAnalytics in Action</h2>
+      <p class="section-subtitle">Beautiful, intuitive interface designed for swimmers</p>
     </div>
     <div class="carousel-wrapper">
-      <button class="carousel-btn carousel-btn-prev" aria-label="Ảnh chụp trước">
+      <button class="carousel-btn carousel-btn-prev" aria-label="Previous screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-left"></use>
         </svg>
       </button>
       <div class="screenshots-carousel" id="screenshotsCarousel">
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workouts-list.png" alt="Danh sách buổi tập SwimAnalytics hiển thị các buổi bơi với điểm TSS và vùng huấn luyện" loading="lazy" />
-          <p class="screenshot-caption">Tổng Quan Buổi Tập</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.webp 400w,
+                                /assets/images/screenshots/workouts-list-800w.webp 800w,
+                                /assets/images/screenshots/workouts-list.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workouts-list-400w.png 400w,
+                                /assets/images/screenshots/workouts-list-800w.png 800w,
+                                /assets/images/screenshots/workouts-list.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workouts-list.png" alt="SwimAnalytics workout list showing swimming sessions with TSS scores and training zones" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Workouts Overview</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/workout-detail.png" alt="Phân tích chi tiết buổi tập bơi với nhịp độ theo từng chiều, hiệu suất SWOLF và dữ liệu nhịp tim" loading="lazy" />
-          <p class="screenshot-caption">Phân Tích Từng Chiều</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.webp 400w,
+                                /assets/images/screenshots/workout-detail-800w.webp 800w,
+                                /assets/images/screenshots/workout-detail.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/workout-detail-400w.png 400w,
+                                /assets/images/screenshots/workout-detail-800w.png 800w,
+                                /assets/images/screenshots/workout-detail.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/workout-detail.png" alt="Detailed swimming workout analysis with lap-by-lap pace, SWOLF efficiency and heart rate data" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Lap-by-Lap Analysis</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/analytics.png" alt="Bảng điều khiển SwimAnalytics hiển thị các chỉ số Performance Management Chart CTL, ATL và TSB" loading="lazy" />
-          <p class="screenshot-caption">Các Chỉ Số Nâng Cao</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.webp 400w,
+                                /assets/images/screenshots/analytics-800w.webp 800w,
+                                /assets/images/screenshots/analytics.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/analytics-400w.png 400w,
+                                /assets/images/screenshots/analytics-800w.png 800w,
+                                /assets/images/screenshots/analytics.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/analytics.png" alt="SwimAnalytics dashboard displaying CTL, ATL, and TSB Performance Management Chart metrics" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Advanced Metrics</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/performance.png" alt="Biểu đồ xu hướng hiệu suất bơi lội hiển thị tiến bộ CSS và tải huấn luyện theo thời gian" loading="lazy" />
-          <p class="screenshot-caption">Xu Hướng Hiệu Suất</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.webp 400w,
+                                /assets/images/screenshots/performance-800w.webp 800w,
+                                /assets/images/screenshots/performance.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/performance-400w.png 400w,
+                                /assets/images/screenshots/performance-800w.png 800w,
+                                /assets/images/screenshots/performance.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/performance.png" alt="Swimming performance trends chart showing CSS progression and training load over time" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Performance Trends</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/training-zones.png" alt="7 vùng huấn luyện bơi lội cá nhân hóa dựa trên ngưỡng Critical Swim Speed" loading="lazy" />
-          <p class="screenshot-caption">Vùng Huấn Luyện</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.webp 400w,
+                                /assets/images/screenshots/training-zones-800w.webp 800w,
+                                /assets/images/screenshots/training-zones.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/training-zones-400w.png 400w,
+                                /assets/images/screenshots/training-zones-800w.png 800w,
+                                /assets/images/screenshots/training-zones.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/training-zones.png" alt="7 personalized swimming training zones based on Critical Swim Speed threshold" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Training Zones</p>
         </div>
         <div class="screenshot-item">
-          <img src="/assets/images/screenshots/export-options.png" alt="Xuất dữ liệu bơi lội ở định dạng JSON, CSV, HTML và PDF cho huấn luyện viên và phân tích" loading="lazy" />
-          <p class="screenshot-caption">Tùy Chọn Xuất</p>
+          <picture>
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.webp 400w,
+                                /assets/images/screenshots/export-options-800w.webp 800w,
+                                /assets/images/screenshots/export-options.webp 1200w"
+                        type="image/webp"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <source
+                        srcset="/assets/images/screenshots/export-options-400w.png 400w,
+                                /assets/images/screenshots/export-options-800w.png 800w,
+                                /assets/images/screenshots/export-options.png 1200w"
+                        type="image/png"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 800px">
+                    <img src="/assets/images/screenshots/export-options.png" alt="Export swimming data in JSON, CSV, HTML and PDF formats for coaches and analysis" loading="lazy" / width="1200" height="800">
+                </picture>
+          <p class="screenshot-caption">Export Options</p>
         </div>
       </div>
-      <button class="carousel-btn carousel-btn-next" aria-label="Ảnh chụp tiếp theo">
+      <button class="carousel-btn carousel-btn-next" aria-label="Next screenshot">
         <svg aria-hidden="true">
           <use href="/assets/images/icons-sprite.svg#icon-arrow-right"></use>
         </svg>
       </button>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Điều hướng ảnh chụp"></div>
+      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Screenshot navigation"></div>
     </div>
   </div>
 </section>
@@ -812,61 +1014,61 @@
 <section class="app-metrics">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Dựa Trên Khoa Học</div>
-      <h2 class="section-title text-white">Các Chỉ Số Chuyên Nghiệp Quan Trọng</h2>
+      <div class="section-badge">Science-Based</div>
+      <h2 class="section-title text-white">Professional Metrics That Matter</h2>
       <p class="section-subtitle text-white-90">
-        SwimAnalytics chuyển đổi dữ liệu bơi lội thô thành thông tin hữu ích có thể hành động
-        sử dụng các chỉ số được xác thực bởi nghiên cứu khoa học thể thao
+        SwimAnalytics transforms raw swimming data into actionable intelligence
+        using metrics validated by sports science research
       </p>
     </div>
     <div class="metrics-grid">
       <div class="metric-card">
         <div class="metric-icon">🎯</div>
-        <div class="metric-label">Nhịp Độ Ngưỡng</div>
+        <div class="metric-label">Threshold Pace</div>
         <h3 class="metric-name">CSS</h3>
-        <p class="metric-description">Critical Swim Speed - nhịp độ ngưỡng hiếu khí của bạn</p>
+        <p class="metric-description">Critical Swim Speed - your aerobic threshold pace</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">📊</div>
-        <div class="metric-label">Tải Huấn Luyện</div>
+        <div class="metric-label">Workout Load</div>
         <h3 class="metric-name">TSS</h3>
-        <p class="metric-description">Training Stress Score định lượng cường độ huấn luyện</p>
+        <p class="metric-description">Training Stress Score quantifies workout intensity</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">💪</div>
-        <div class="metric-label">Thể Lực</div>
+        <div class="metric-label">Fitness</div>
         <h3 class="metric-name">CTL</h3>
-        <p class="metric-description">Chronic Training Load - trung bình động 42 ngày</p>
+        <p class="metric-description">Chronic Training Load - 42-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">😴</div>
-        <div class="metric-label">Mệt Mỏi</div>
+        <div class="metric-label">Fatigue</div>
         <h3 class="metric-name">ATL</h3>
-        <p class="metric-description">Acute Training Load - trung bình động 7 ngày</p>
+        <p class="metric-description">Acute Training Load - 7-day rolling average</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚖️</div>
-        <div class="metric-label">Phong Độ</div>
+        <div class="metric-label">Form</div>
         <h3 class="metric-name">TSB</h3>
-        <p class="metric-description">Training Stress Balance chỉ ra sự sẵn sàng</p>
+        <p class="metric-description">Training Stress Balance indicates readiness</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">⚡</div>
-        <div class="metric-label">Hiệu Suất</div>
+        <div class="metric-label">Efficiency</div>
         <h3 class="metric-name">SWOLF</h3>
-        <p class="metric-description">Điểm hiệu suất động tác - thấp hơn là tốt hơn</p>
+        <p class="metric-description">Stroke efficiency score - lower is better</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏊</div>
-        <div class="metric-label">Vùng</div>
-        <h3 class="metric-name">7 Vùng</h3>
-        <p class="metric-description">Mức cường độ từ Hồi Phục đến Sprint</p>
+        <div class="metric-label">Zones</div>
+        <h3 class="metric-name">7 Zones</h3>
+        <p class="metric-description">Recovery to Sprint intensity levels</p>
       </div>
       <div class="metric-card">
         <div class="metric-icon">🏆</div>
-        <div class="metric-label">Kỷ Lục</div>
+        <div class="metric-label">Records</div>
         <h3 class="metric-name">PRs</h3>
-        <p class="metric-description">Theo dõi tự động kỷ lục cá nhân</p>
+        <p class="metric-description">Automatic personal record tracking</p>
       </div>
     </div>
   </div>
@@ -876,50 +1078,50 @@
 <section class="app-pricing">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Giá Cả</div>
-      <h2 class="section-title">Giá Cả Đơn Giản và Minh Bạch</h2>
-      <p class="section-subtitle">Bắt đầu với bản dùng thử miễn phí 7 ngày. Hủy bất cứ khi nào bạn muốn.</p>
+      <div class="section-badge">Pricing</div>
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <p class="section-subtitle">Start with a 7-day free trial. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-header">
-          <h3 class="pricing-name">Hàng Tháng</h3>
+          <h3 class="pricing-name">Monthly</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">3.99</span>
-            <span class="pricing-period">/tháng</span>
+            <span class="pricing-period">/month</span>
           </div>
-          <p class="pricing-trial">Dùng thử miễn phí 7 ngày</p>
+          <p class="pricing-trial">7-day free trial</p>
         </div>
         <ul class="pricing-features">
-          <li>Đồng bộ hóa buổi tập không giới hạn</li>
-          <li>Tất cả các chỉ số khoa học (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 vùng huấn luyện cá nhân hóa</li>
-          <li>So sánh theo tuần, tháng và năm</li>
-          <li>Xuất ở định dạng JSON, CSV, HTML và PDF</li>
-          <li>100% quyền riêng tư, dữ liệu cục bộ</li>
-          <li>Tất cả các cập nhật trong tương lai</li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
         </ul>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-header">
-          <h3 class="pricing-name">Hàng Năm</h3>
+          <h3 class="pricing-name">Annual</h3>
           <div class="pricing-price">
             <span class="pricing-currency">€</span>
             <span class="pricing-amount">39</span>
-            <span class="pricing-period">/năm</span>
+            <span class="pricing-period">/year</span>
           </div>
-          <p class="pricing-trial">Tiết kiệm €8.88/năm (giảm 18%)</p>
+          <p class="pricing-trial">Save €8.88/year (18% off)</p>
         </div>
         <ul class="pricing-features">
-          <li>Đồng bộ hóa buổi tập không giới hạn</li>
-          <li>Tất cả các chỉ số khoa học (CSS, TSS, CTL/ATL/TSB)</li>
-          <li>7 vùng huấn luyện cá nhân hóa</li>
-          <li>So sánh theo tuần, tháng và năm</li>
-          <li>Xuất ở định dạng JSON, CSV, HTML và PDF</li>
-          <li>100% quyền riêng tư, dữ liệu cục bộ</li>
-          <li>Tất cả các cập nhật trong tương lai</li>
-          <li><strong>Chỉ €3.25/tháng</strong></li>
+          <li>Unlimited workout sync</li>
+          <li>All scientific metrics (CSS, TSS, CTL/ATL/TSB)</li>
+          <li>7 personalized training zones</li>
+          <li>Weekly, monthly & yearly comparisons</li>
+          <li>Export in JSON, CSV, HTML & PDF</li>
+          <li>100% privacy, local data</li>
+          <li>All future updates</li>
+          <li><strong>Only €3.25/month</strong></li>
         </ul>
       </div>
     </div>
@@ -930,51 +1132,51 @@
 <section class="app-benefits">
   <div class="container">
     <div class="section-header">
-      <div class="section-badge">Tại Sao Chọn SwimAnalytics</div>
-      <h2 class="section-title">Được Tạo Ra Cho Vận Động Viên Bơi Lội Nghiêm Túc</h2>
-      <p class="section-subtitle">Tính năng chuyên nghiệp mà không phức tạp</p>
+      <div class="section-badge">Why SwimAnalytics</div>
+      <h2 class="section-title">Built for Serious Swimmers</h2>
+      <p class="section-subtitle">Professional features without the complexity</p>
     </div>
     <div class="benefits-grid">
       <div class="benefit-item">
         <div class="benefit-icon">🏊</div>
         <div class="benefit-content">
-          <h3>Giao Thức Kiểm Tra CSS</h3>
-          <p>Giao thức kiểm tra tích hợp 400m + 200m để xác định Critical Swim Speed của bạn. Lặp lại mỗi 6-8 tuần để theo dõi tiến bộ và tự động điều chỉnh các vùng huấn luyện.</p>
+          <h3>CSS Test Protocol</h3>
+          <p>Built-in 400m + 200m test protocol to determine your Critical Swim Speed. Repeat every 6-8 weeks to track progress and adjust training zones automatically.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">📱</div>
         <div class="benefit-content">
-          <h3>Trải Nghiệm iOS Gốc</h3>
-          <p>Được xây dựng bằng SwiftUI cho hiệu suất mượt mà và tích hợp với iOS. Đồng bộ hóa hoàn hảo với ứng dụng Sức Khỏe, hỗ trợ widget và ngôn ngữ thiết kế quen thuộc của Apple.</p>
+          <h3>Native iOS Experience</h3>
+          <p>Built with SwiftUI for smooth performance and iOS integration. Seamless Health app sync, widgets support, and familiar Apple design language.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🔬</div>
         <div class="benefit-content">
-          <h3>Dựa Trên Nghiên Cứu</h3>
-          <p>Tất cả các chỉ số dựa trên nghiên cứu khoa học thể thao được đánh giá ngang hàng. CSS từ Wakayoshi et al., TSS được điều chỉnh cho bơi lội với công thức IF³, các mô hình CTL/ATL đã được chứng minh.</p>
+          <h3>Research-Based</h3>
+          <p>All metrics based on peer-reviewed sports science research. CSS from Wakayoshi et al., TSS adapted for swimming with IF³ formula, proven CTL/ATL models.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">👥</div>
         <div class="benefit-content">
-          <h3>Thân Thiện Với Huấn Luyện Viên</h3>
-          <p>Xuất báo cáo chi tiết cho huấn luyện viên. Chia sẻ tóm tắt HTML qua email, CSV cho phân tích bảng tính, hoặc PDF cho hồ sơ huấn luyện.</p>
+          <h3>Coach-Friendly</h3>
+          <p>Export detailed reports for coaches. Share HTML summaries via email, CSV for spreadsheet analysis, or PDF for training logs and records.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🌍</div>
         <div class="benefit-content">
-          <h3>Hoạt Động Ở Mọi Nơi</h3>
-          <p>Bể bơi hoặc nước mở, sprint hoặc cách xa. SwimAnalytics thích ứng với tất cả các loại hình bơi lội và tự động phát hiện đặc điểm buổi tập.</p>
+          <h3>Works Everywhere</h3>
+          <p>Pool or open water, sprints or distance. SwimAnalytics adapts to all swimming types and automatically detects workout characteristics.</p>
         </div>
       </div>
       <div class="benefit-item">
         <div class="benefit-icon">🚀</div>
         <div class="benefit-content">
-          <h3>Luôn Được Cải Thiện</h3>
-          <p>Cập nhật thường xuyên với các tính năng mới dựa trên phản hồi người dùng. Các bổ sung gần đây bao gồm so sánh hàng năm, theo dõi kỷ lục cá nhân và tùy chọn xuất được cải thiện.</p>
+          <h3>Always Improving</h3>
+          <p>Regular updates with new features based on user feedback. Recent additions include yearly comparisons, personal records tracking, and enhanced export options.</p>
         </div>
       </div>
     </div>
@@ -986,38 +1188,38 @@
   <div class="container container-narrow">
     <div class="section-header">
       <div class="section-badge">FAQ</div>
-      <h2 class="section-title">Câu Hỏi Thường Gặp</h2>
+      <h2 class="section-title">Frequently Asked Questions</h2>
     </div>
 
     <div class="feature-list">
       <div class="feature-item">
-        <h3>SwimAnalytics lấy dữ liệu bơi lội của tôi như thế nào?</h3>
-        <p>SwimAnalytics đồng bộ hóa với Apple Health để nhập các buổi tập bơi lội được ghi nhận bởi bất kỳ thiết bị hoặc ứng dụng tương thích nào. Điều này bao gồm đồng hồ thông minh, thiết bị theo dõi thể dục và nhập thủ công. Ứng dụng xử lý các dữ liệu này cục bộ để tính toán các chỉ số nâng cao.</p>
+        <h3>How does SwimAnalytics get my swimming data?</h3>
+        <p>SwimAnalytics syncs with Apple Health to import swimming workouts recorded by any compatible device or app. This includes smart watches, fitness trackers, and manual entries. The app processes this data locally to calculate advanced metrics.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Kiểm tra CSS là gì và tôi thực hiện nó như thế nào?</h3>
-        <p>CSS (Critical Swim Speed) là một giao thức khoa học sử dụng 2 lần bơi tối đa: 400m và 200m với 10-20 phút nghỉ giữa chúng. Ứng dụng tính toán ngưỡng hiếu khí của bạn từ những thời gian này và tự động điều chỉnh tất cả các vùng huấn luyện. Lặp lại mỗi 6-8 tuần để theo dõi tiến bộ.</p>
+        <h3>What is the CSS test and how do I perform it?</h3>
+        <p>CSS (Critical Swim Speed) is a scientific protocol using 2 maximum effort swims: 400m and 200m with 10-20 minutes rest between. The app calculates your aerobic threshold from these times and automatically adjusts all training zones. Repeat every 6-8 weeks to track progress.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Dữ liệu của tôi có được tải lên đám mây không?</h3>
-        <p>Không. SwimAnalytics xử lý tất cả dữ liệu cục bộ trên iPhone của bạn. Không có máy chủ bên ngoài, không có tài khoản đám mây, không có chuyển giao dữ liệu. Bạn kiểm soát việc xuất: tạo các tệp JSON, CSV, HTML hoặc PDF và chia sẻ chúng theo ý muốn.</p>
+        <h3>Is my data uploaded to the cloud?</h3>
+        <p>No. SwimAnalytics processes all data locally on your iPhone. There are no external servers, no cloud accounts, no data transfers. You control exports: generate JSON, CSV, HTML, or PDF files and share them however you want.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Tôi có thể sử dụng SwimAnalytics cho bơi nước mở không?</h3>
-        <p>Có. SwimAnalytics hoạt động với bất kỳ buổi tập bơi lội nào trong Apple Health, bao gồm cả nước mở. Ứng dụng thích ứng với các chỉ số có sẵn cho cả bể bơi và nước mở, cung cấp phân tích phù hợp cho từng môi trường.</p>
+        <h3>Can I use SwimAnalytics for open water swimming?</h3>
+        <p>Yes. SwimAnalytics works with any swimming workout in Apple Health, including open water. The app adapts to available metrics whether you're in a pool or open water, providing relevant analysis for each environment.</p>
       </div>
 
       <div class="feature-item">
-        <h3>Sự khác biệt giữa gói hàng tháng và hàng năm là gì?</h3>
-        <p>Cả hai gói đều cung cấp tính năng giống hệt nhau: tất cả các chỉ số, vùng không giới hạn, so sánh thời gian, nhiều lần xuất và cập nhật miễn phí. Sự khác biệt duy nhất là giá: gói hàng năm tiết kiệm 18% (tương đương với €3.25/tháng so với €3.99/tháng).</p>
+        <h3>What's the difference between monthly and annual plans?</h3>
+        <p>Both plans offer identical features: all metrics, unlimited zones, temporal comparisons, multiple exports, and free updates. The only difference is price: annual saves 18% (equivalent to €3.25/month vs €3.99/month).</p>
       </div>
 
       <div class="feature-item">
-        <h3>Tôi có thể hủy gói đăng ký bất cứ lúc nào không?</h3>
-        <p>Có. Các gói đăng ký được quản lý thông qua App Store, vì vậy bạn có thể hủy bất cứ lúc nào từ Cài Đặt → [Tên Của Bạn] → Đăng Ký. Nếu bạn hủy, bạn sẽ giữ quyền truy cập cho đến cuối chu kỳ thanh toán hiện tại.</p>
+        <h3>Can I cancel my subscription anytime?</h3>
+        <p>Yes. Subscriptions are managed through the App Store, so you can cancel anytime from Settings → [Your Name] → Subscriptions. If you cancel, you'll maintain access until the end of your current billing period.</p>
       </div>
     </div>
   </div>
@@ -1026,18 +1228,18 @@
 <!-- Final CTA Section -->
 <section class="app-cta-final">
   <div class="container">
-    <h2>Sẵn Sàng Chuyển Đổi Bơi Lội Của Bạn?</h2>
-    <p>Tham gia cùng hàng ngàn vận động viên bơi lội sử dụng các chỉ số khoa học để cải thiện hiệu suất của họ. Bắt đầu bản dùng thử miễn phí 7 ngày của bạn ngay hôm nay.</p>
+    <h2>Ready to Transform Your Swimming?</h2>
+    <p>Join thousands of swimmers who use scientific metrics to improve performance. Start your 7-day free trial today.</p>
     <div class="app-hero-cta">
       <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-large btn-accent" target="_blank" rel="noopener">
-        Tải SwimAnalytics Miễn Phí
+        Download SwimAnalytics Free
       </a>
       <a href="#features" class="btn btn-large btn-accent-outline">
-        Tìm Hiểu Thêm
+        Learn More
       </a>
     </div>
     <p class="section-footer">
-      Không yêu cầu tài khoản • Hủy bất cứ khi nào bạn muốn • Dữ liệu của bạn ở lại trên thiết bị của bạn
+      No account required • Cancel anytime • Your data stays on your device
     </p>
   </div>
 </section>
@@ -1046,29 +1248,29 @@
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">Tìm Hiểu Thêm Về Phân Tích Bơi Lội</h2>
-      <p class="section-subtitle">Đi sâu vào khoa học đằng sau SwimAnalytics</p>
+      <h2 class="section-title">Learn More About Swimming Analytics</h2>
+      <p class="section-subtitle">Dive deeper into the science behind SwimAnalytics</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
         <h3 class="card-title">Critical Swim Speed</h3>
         <div class="card-content">
-          <p>Hiểu cách CSS xác định ngưỡng hiếu khí của bạn và tại sao nó quan trọng cho huấn luyện có cấu trúc.</p>
-          <a href="/vi/css/" class="btn btn-secondary btn-small mt-md">Tìm Hiểu Về CSS →</a>
+          <p>Understand how CSS determines your aerobic threshold and why it's crucial for structured training.</p>
+          <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn about CSS →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Quản Lý Tải Huấn Luyện</h3>
+        <h3 class="card-title">Training Load Management</h3>
         <div class="card-content">
-          <p>Khám phá cách TSS, CTL, ATL và TSB giúp bạn cân bằng căng thẳng huấn luyện và hồi phục.</p>
-          <a href="/vi/training-load/" class="btn btn-secondary btn-small mt-md">Khám Phá Tải Huấn Luyện →</a>
+          <p>Discover how TSS, CTL, ATL, and TSB help you balance training stress and recovery.</p>
+          <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">Explore Training Load →</a>
         </div>
       </div>
       <div class="card">
-        <h3 class="card-title">Vùng Huấn Luyện</h3>
+        <h3 class="card-title">Training Zones</h3>
         <div class="card-content">
-          <p>Tìm hiểu về 7 vùng huấn luyện và cách sử dụng chúng cho kế hoạch buổi tập cụ thể.</p>
-          <a href="/vi/training-zones/" class="btn btn-secondary btn-small mt-md">Xem Vùng Huấn Luyện →</a>
+          <p>Learn about the 7 training zones and how to use them for targeted workout planning.</p>
+          <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">View Training Zones →</a>
         </div>
       </div>
     </div>
@@ -1512,15 +1714,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

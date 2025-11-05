@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/fr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -732,7 +847,7 @@
         <div class="grid grid-2">
             <div>
                 <h3>Qu'est-ce que la cadence ?</h3>
-                <p>La <strong>cadence (SR)</strong>, aussi appelée <em>fréquence</em> ou <em>tempo</em>, mesure combien de cycles complets de coup de bras vous effectuez par minute, exprimée en <strong>Coups Par Minute (SPM)</strong>.</p>
+                <p>La <strong>cadence (SR)</strong>, aussi appelée <em>fréquence</em> ou <em>tempo</em>, mesure combien de cycles complets de coup de bras vous effectuez par minute, exprimée en <strong>Mouvements Par Minute (MPM)</strong>.</p>
 
                 <div class="formula-box">
                     <h4>Formule</h4>
@@ -748,11 +863,11 @@
                         <h4>Exemple :</h4>
                         <p>Si votre cycle de coup prend 1 seconde :</p>
                         <div class="calculation">
-                            SR = 60 / 1 = <strong>60 SPM</strong>
+                            SR = 60 / 1 = <strong>60 MPM</strong>
                         </div>
                         <p>Si vous complétez 30 coups en 25 secondes :</p>
                         <div class="calculation">
-                            SR = (30 / 25) × 60 = <strong>72 SPM</strong>
+                            SR = (30 / 25) × 60 = <strong>72 MPM</strong>
                         </div>
                     </div>
                 </div>
@@ -771,50 +886,45 @@
                     <h4>Sprint nage libre (50m)</h4>
                     <div class="benchmark-row">
                         <span class="label">Élite :</span>
-                        <span class="value">120-150 SPM</span>
+                        <span class="value">120-150 MPM</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">Âge-groupe :</span>
-                        <span class="value">100-120 SPM</span>
+                        <span class="value">100-120 MPM</span>
                     </div>
 
                     <h4>Nage libre 100m</h4>
                     <div class="benchmark-row">
                         <span class="label">Élite :</span>
-                        <span class="value">95-110 SPM</span>
+                        <span class="value">95-110 MPM</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">Âge-groupe :</span>
-                        <span class="value">85-100 SPM</span>
+                        <span class="value">85-100 MPM</span>
                     </div>
 
                     <h4>Moyenne distance (200-800m)</h4>
                     <div class="benchmark-row">
                         <span class="label">Élite :</span>
-                        <span class="value">70-100 SPM</span>
+                        <span class="value">70-100 MPM</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">Âge-groupe :</span>
-                        <span class="value">60-85 SPM</span>
+                        <span class="value">60-85 MPM</span>
                     </div>
 
-                    <h4>Distance (1500m+ / Eau libre)</h4>
-                    <div class="benchmark-row">
-                        <span class="label">Élite :</span>
-                        <span class="value">60-100 SPM</span>
-                    </div>
                     <div class="benchmark-row">
                         <span class="label">Âge-groupe :</span>
-                        <span class="value">50-75 SPM</span>
+                        <span class="value">50-75 MPM</span>
                     </div>
                 </div>
 
                 <div class="callout callout-tip">
-                    <h4>🎯 Différences de genre</h4>
-                    <p>Élite homme 50m libre : ~65-70 SPM<br>
-                    Élite femme 50m libre : ~60-64 SPM<br>
-                    Élite homme 100m libre : ~50-54 SPM<br>
-                    Élite femme 100m libre : ~53-56 SPM</p>
+                    <h4>🎯 Différences selon le sexe</h4>
+                    <p>Élite masculin 50m libre : ~65-70 MPM<br>
+                    Élite féminin 50m libre : ~60-64 MPM<br>
+                    Élite masculin 100m libre : ~50-54 MPM<br>
+                    Élite féminin 100m libre : ~53-56 MPM</p>
                 </div>
             </div>
         </div>
@@ -860,7 +970,7 @@
                     <li>Soutenable à allure de course</li>
                 </ul>
                 <p><strong>Résultat :</strong> Vitesse maximale avec énergie gaspillée minimale.</p>
-                <p><strong>Comment trouver :</strong> Expérimenter avec ajustements ±5 SPM tout en maintenant allure. RPE le plus bas = SR optimal.</p>
+                <p><strong>Comment trouver :</strong> Expérimenter avec ajustements ±5 MPM tout en maintenant allure. RPE le plus bas = SR optimal.</p>
             </div>
         </div>
     </div>
@@ -1018,19 +1128,19 @@
 
             <div class="scenario">
                 <h4>🔴 DPS élevé + SR faible = « Sur-glisse »</h4>
-                <p><strong>Exemple :</strong> 1,8 m/coup × 50 SPM = 1,5 m/s</p>
+                <p><strong>Exemple :</strong> 1,8 m/coup × 50 MPM = 1,5 m/s</p>
                 <p><strong>Problème :</strong> Trop de glisse crée points morts où vitesse chute. Inefficace malgré bonne longueur de coup.</p>
             </div>
 
             <div class="scenario">
                 <h4>🔴 DPS faible + SR élevé = « Roues qui tournent »</h4>
-                <p><strong>Exemple :</strong> 1,2 m/coup × 90 SPM = 1,8 m/s</p>
+                <p><strong>Exemple :</strong> 1,2 m/coup × 90 MPM = 1,8 m/s</p>
                 <p><strong>Problème :</strong> Coût énergétique élevé. Sensation d'être occupé mais manque de propulsion par coup. Non soutenable.</p>
             </div>
 
             <div class="scenario">
                 <h4>🟢 DPS équilibré + SR = Optimal</h4>
-                <p><strong>Exemple :</strong> 1,6 m/coup × 70 SPM = 1,87 m/s</p>
+                <p><strong>Exemple :</strong> 1,6 m/coup × 70 MPM = 1,87 m/s</p>
                 <p><strong>Résultat :</strong> Propulsion forte par coup avec rotation soutenable. Efficace et rapide.</p>
             </div>
         </div>
@@ -1041,7 +1151,7 @@
             <ul>
                 <li><strong>100 #1-2 :</strong> Nagez naturellement, enregistrez SR et DPS</li>
                 <li><strong>100 #3 :</strong> Réduisez nombre de coups de 2-3 (augmentez DPS), essayez de maintenir allure</li>
-                <li><strong>100 #4 :</strong> Augmentez SR de 5 SPM, essayez de maintenir allure</li>
+                <li><strong>100 #4 :</strong> Augmentez SR de 5 MPM, essayez de maintenir allure</li>
                 <li><strong>100 #5 :</strong> Trouvez juste milieu—équilibrez SR et DPS</li>
                 <li><strong>100 #6 :</strong> Verrouillez ce qui semblait le plus efficace</li>
             </ul>
@@ -1090,8 +1200,8 @@
                 <p><strong>Utilisez un Tempo Trainer ou comptez coups/temps</strong></p>
                 <ol>
                     <li>50 #1-2 : SR de base (nagez naturellement)</li>
-                    <li>50 #3-4 : SR +10 SPM (rotation plus rapide)</li>
-                    <li>50 #5-6 : SR -10 SPM (plus lent, coups plus longs)</li>
+                    <li>50 #3-4 : SR +10 MPM (rotation plus rapide)</li>
+                    <li>50 #5-6 : SR -10 MPM (plus lent, coups plus longs)</li>
                     <li>50 #7-8 : Retour à base, notez ce qui semblait le plus efficace</li>
                 </ol>
                 <p><strong>Objectif :</strong> Développer conscience de comment changements SR affectent allure et effort.</p>
@@ -1576,15 +1686,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

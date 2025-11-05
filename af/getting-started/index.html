@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/af/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,52 +809,52 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Aan de Slag met SwimAnalytics</h1>
-        <p class="lead">Je complete gids voor zwemprestatietracking, CSS-testen en trainingsbelastinganalyse</p>
+        <h1>Begin met SwimAnalytics</h1>
+        <p class="lead">Jou volledige gids vir swem prestasie opsporing, CSS toetse en oefening lading analise</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Welkom bij Data-gedreven Zwemmen</h2>
-            <p>SwimAnalytics transformeert je zwemtrainingen in bruikbare inzichten met behulp van <strong>Critical Swim Speed (CSS)</strong>, <strong>Training Stress Score (sTSS)</strong> en <strong>Performance Management Chart (PMC)</strong> metrics. Deze gids neemt je mee van initiële setup tot geavanceerde trainingsbelastinganalyse in 4 eenvoudige stappen.</p>
+            <h2>Welkom by Data-gedrewe Swem</h2>
+            <p>SwimAnalytics transformeer jou swem oefeninge in bruikbare insigte deur gebruik te maak van <strong>Kritiese Swem Spoed (CSS)</strong>, <strong>Oefening Stres Telling (sTSS)</strong> en <strong>Prestasie Bestuur Grafiek (PMC)</strong> statistieke. Hierdie gids neem jou van aanvanklike opstelling tot gevorderde oefening lading analise in 4 eenvoudige stappe.</p>
         </div>
 
-        <h2>Snelstart (5 Minuten)</h2>
+        <h2>Vinnige Begin (5 Minute)</h2>
 
         <div class="steps-container">
             <div class="step-card">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Download en Installeer</h3>
-                    <p>Download SwimAnalytics van de App Store en geef toestemming voor toegang tot Apple Health. De app synchroniseert zwemtrainingen automatisch—geen handmatige logging vereist.</p>
-                    <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Download App →</a>
+                    <h3>Laai Af en Installeer</h3>
+                    <p>Laai SwimAnalytics af van die App Store en gee toestemming vir toegang tot Apple Health. Die app sinkroniseer swem oefeninge outomaties—geen handmatige aantekening nodig nie.</p>
+                    <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Laai App Af →</a>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Doe CSS Test</h3>
-                    <p>Voltooi een 400m en 200m tijdrit test om je Critical Swim Speed vast te stellen. Dit is de basis voor alle metrics—zonder CSS kunnen sTSS en trainingszones niet worden berekend.</p>
-                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS Test Protocol ↓</a>
+                    <h3>Voer CSS Toets Uit</h3>
+                    <p>Voltooi 'n 400m en 200m tydtoets om jou Kritiese Swem Spoed vas te stel. Dit is die fondament van alle statistieke—sonder CSS kan sTSS en oefening sones nie bereken word nie.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS Toets Protokol ↓</a>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Voer CSS Resultaten In</h3>
-                    <p>Voer je 400m en 200m tijden in de app in. SwimAnalytics berekent CSS, tempoznes en personaliseert alle metrics naar jouw fysiologie. Update elke 6-8 weken naarmate je fitness verbetert.</p>
+                    <h3>Voer CSS Resultate In</h3>
+                    <p>Voer jou 400m en 200m tye in die app in. SwimAnalytics bereken CSS, tempo sones en personaliseer alle statistieke volgens jou fisiologie. Dateer op elke 6-8 weke soos fiksheid verbeter.</p>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h3>Begin met Trainingen Loggen</h3>
-                    <p>Zwem met Apple Watch en de Health app. SwimAnalytics importeert trainingen automatisch, berekent sTSS, werkt CTL/ATL/TSB bij en volgt vooruitgang. Geen handmatige data-invoer nodig.</p>
+                    <h3>Begin Oefeninge Opspoor</h3>
+                    <p>Swem met Apple Watch en die Health app. SwimAnalytics voer oefeninge outomaties in, bereken sTSS, dateer CTL/ATL/TSB op en spoor vordering op. Geen handmatige data invoer nodig nie.</p>
                 </div>
             </div>
         </div>
@@ -748,54 +863,54 @@
 
 <section class="section section-alt" id="css-test-guide">
     <div class="container">
-        <h2 class="mb-xl text-center">Volledig CSS Test Protocol</h2>
+        <h2 class="mb-xl text-center">Volledige CSS Toets Protokol</h2>
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">📋 Wat Je Nodig Hebt</h3>
+                <h3 class="card-title">📋 Wat Jy Nodig Het</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Zwembad toegang:</strong> 25m of 50m zwembad (25yd acceptabel)</li>
-                        <li><strong>Tijdregistratie:</strong> Stopwatch, wandklok of Apple Watch</li>
-                        <li><strong>Warming-up tijd:</strong> 15-20 minuten voor de test</li>
-                        <li><strong>Herstel:</strong> 5-10 minuten tussen tests</li>
-                        <li><strong>Inspanning:</strong> Maximaal vol te houden tempo (geen volledige sprint)</li>
+                        <li><strong>Swembad toegang:</strong> 25m of 50m swembad (25yd aanvaarbaar)</li>
+                        <li><strong>Tyd registrasie:</strong> Stophorlosie, muur klok of Apple Watch</li>
+                        <li><strong>Opwarming tyd:</strong> 15-20 minute voor die toets</li>
+                        <li><strong>Herstel:</strong> 5-10 minute tussen toetse</li>
+                        <li><strong>Inspanning:</strong> Maksimum volhoubare tempo (nie volle spoedjaag nie)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">⏱️ Testdag Voorwaarden</h3>
+                <h3 class="card-title">⏱️ Toets Dag Toestande</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Uitgerust:</strong> Geen zware training 24-48 uur ervoor</li>
-                        <li><strong>Gehydrateerd:</strong> Goed gehydrateerd, normale voeding</li>
-                        <li><strong>Zwembad temp:</strong> 26-28°C ideaal (vermijd heel koud/warm)</li>
-                        <li><strong>Tijd van de dag:</strong> Wanneer je normaal het beste traint</li>
-                        <li><strong>Uitrusting:</strong> Hetzelfde als trainingen (bril, badmuts, zwembroek)</li>
+                        <li><strong>Uitgerus:</strong> Geen swaar oefening 24-48 uur tevore nie</li>
+                        <li><strong>Gehidreer:</strong> Goed gehidreer, normale eet</li>
+                        <li><strong>Swembad temp:</strong> 26-28°C ideaal (vermy baie koud/warm)</li>
+                        <li><strong>Tyd van die dag:</strong> Wanneer jy normaalweg die beste oefen</li>
+                        <li><strong>Toerusting:</strong> Dieselfde as oefeninge (bril, badmuts, swempak)</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <h3 class="mt-3xl">CSS Test Stap voor Stap</h3>
+        <h3 class="mt-3xl">Stap-vir-Stap CSS Toets</h3>
 
         <div class="protocol-timeline">
             <div class="timeline-item">
-                <div class="timeline-marker">Warming-up</div>
+                <div class="timeline-marker">Opwarming</div>
                 <div class="timeline-content">
-                    <h4>15-20 minuten</h4>
-                    <p>400-800m rustig zwemmen, technische oefeningen en opbouw. Doe 2-3×50 met oplopend tempo (60%, 75%, 85% inspanning). Rust 2-3 minuten voor de test.</p>
+                    <h4>15-20 minute</h4>
+                    <p>400-800m gemaklike swem, tegniese oefenings en geleidelike opbou. Sluit in 2-3×50 teen toenemende tempo (60%, 75%, 85% inspanning). Rus 2-3 minute voor die toets.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Test 1</div>
+                <div class="timeline-marker">Toets 1</div>
                 <div class="timeline-content">
-                    <h4>400m Maximale Inspanning</h4>
-                    <p><strong>Start vanaf de muur</strong> (geen duik). Zwem 400m op het snelste tempo dat je de hele afstand kunt volhouden. Dit is GEEN sprint—doseer je inspanning. Noteer tijd in <strong>mm:ss</strong> formaat (bijv. 6:08).</p>
+                    <h4>400m Maksimum Inspanning</h4>
+                    <p><strong>Begin vanaf die muur</strong> (geen duik nie). Swem 400m teen die vinnigste tempo wat jy vir die volle afstand kan volhou. Dit is NIE 'n spoedjaag nie—doseer jou inspanning. Teken tyd op in <strong>mm:ss</strong> formaat (bv. 6:08).</p>
                     <div class="tip-box mt-sm">
-                        <strong>Tempo Tip:</strong> Probeer uniforme 100m tussentijden te zwemmen. Tweede 200m zou ≤ eerste 200m moeten zijn (negatieve splittijd ideaal).
+                        <strong>Tempo Wenk:</strong> Mik vir gelyke 100m splits. Tweede 200m moet ≤ eerste 200m wees (negatiewe split ideaal).
                     </div>
                 </div>
             </div>
@@ -803,39 +918,39 @@
             <div class="timeline-item">
                 <div class="timeline-marker">Herstel</div>
                 <div class="timeline-content">
-                    <h4>5-10 minuten</h4>
-                    <p><strong>KRITIEKE FASE:</strong> Rustig zwemmen of volledige rust. Wacht tot hartslag onder 120 spm is en ademhaling volledig hersteld. Onvoldoende herstel = onnauwkeurige CSS.</p>
+                    <h4>5-10 minute</h4>
+                    <p><strong>KRITIEKE FASE:</strong> Gemaklike swem of volledige rus. Wag totdat hartklop onder 120 bpm is en asemhaling volledig herstel het. Onvoldoende herstel = onakkurate CSS.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Test 2</div>
+                <div class="timeline-marker">Toets 2</div>
                 <div class="timeline-content">
-                    <h4>200m Maximale Inspanning</h4>
-                    <p><strong>Start vanaf de muur</strong> (geen duik). Maximaal vol te houden inspanning voor 200m. Dit zou harder moeten aanvoelen per 100m dan de 400m. Noteer tijd in <strong>mm:ss</strong> formaat (bijv. 2:30).</p>
+                    <h4>200m Maksimum Inspanning</h4>
+                    <p><strong>Begin vanaf die muur</strong> (geen duik nie). Maksimum volhoubare inspanning vir 200m. Dit moet harder voel per 100m as die 400m. Teken tyd op in <strong>mm:ss</strong> formaat (bv. 2:30).</p>
                     <div class="tip-box mt-sm">
-                        <strong>Validatie Check:</strong> 200m/100m tempo zou 3-6 seconden sneller moeten zijn dan 400m/100m tempo. Zo niet, dan was herstel onvoldoende of tempo verkeerd.
+                        <strong>Validasie Kontrole:</strong> 200m/100m tempo moet 3-6 sekondes vinniger wees as 400m/100m tempo. Indien nie, was herstel onvoldoende of tempo verkeerd.
                     </div>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Cooling-down</div>
+                <div class="timeline-marker">Afkoeling</div>
                 <div class="timeline-content">
-                    <h4>10-15 minuten</h4>
-                    <p>300-500m rustig zwemmen, stretchen. Noteer je tijden onmiddellijk—vertrouw niet op geheugen.</p>
+                    <h4>10-15 minute</h4>
+                    <p>300-500m gemaklike swem, rek. Teken jou tye onmiddellik op—vertrou nie op geheue nie.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning mt-xl">
-            <h3>⚠️ Veelvoorkomende CSS Test Fouten</h3>
+            <h3>⚠️ Algemene CSS Toets Foute</h3>
             <ul>
-                <li><strong>Te snel starten bij 400m:</strong> Resulteert in instorting, onnauwkeurige CSS. Gebruik gelijkmatig tempo.</li>
-                <li><strong>Onvoldoende herstel tussen tests:</strong> Vermoeidheid vertraagt 200m, maakt CSS kunstmatig snel → overtraining zones.</li>
-                <li><strong>Duikstart gebruiken:</strong> Voegt 0.5-1.5s voordeel toe, verstoort berekeningen. Start altijd vanaf de muur.</li>
-                <li><strong>Testen wanneer je vermoeid bent:</strong> Zware trainingsbelasting 24-48u ervoor = gedrukte resultaten. Test wanneer je fris bent.</li>
-                <li><strong>Niet onmiddellijk noteren:</strong> Geheugen is onbetrouwbaar. Schrijf tijden op voor cooling-down.</li>
+                <li><strong>Te vinnig begin by 400m:</strong> Veroorsaak ineenstorting, onakkurate CSS. Gebruik gelyke tempo.</li>
+                <li><strong>Onvoldoende herstel tussen toetse:</strong> Moegheid vertraag 200m, maak CSS kunsmatig vinnig → ooroefening sones.</li>
+                <li><strong>Duik begin gebruik:</strong> Voeg 0.5-1.5s voordeel by, versteur berekeninge. Begin altyd vanaf die muur.</li>
+                <li><strong>Toets wanneer jy moeg is:</strong> Swaar oefening lading 24-48u tevore = gedrukte resultate. Toets wanneer jy vars is.</li>
+                <li><strong>Nie onmiddellik aanteken nie:</strong> Geheue is onbetroubaar. Skryf tye neer voor afkoeling.</li>
             </ul>
         </div>
     </div>
@@ -843,80 +958,80 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>CSS Resultaten Invoeren in SwimAnalytics</h2>
+        <h2>CSS Resultate Invoer in SwimAnalytics</h2>
 
         <div class="screenshot-guide">
             <div class="step-item">
-                <h3>Stap 1: Open CSS Instellingen</h3>
-                <p>In de SwimAnalytics app, ga naar <strong>Instellingen → Critical Swim Speed</strong>. Tik op "CSS Test Doen" of "CSS Bijwerken".</p>
+                <h3>Stap 1: Maak CSS Instellings Oop</h3>
+                <p>In die SwimAnalytics app, gaan na <strong>Instellings → Kritiese Swem Spoed</strong>. Tik op "CSS Toets Doen" of "CSS Opdateer".</p>
             </div>
 
             <div class="step-item">
-                <h3>Stap 2: Voer Tijden In</h3>
-                <p>Voer je 400m tijd in (bijv. <code>6:08</code>) en 200m tijd (bijv. <code>2:30</code>). Gebruik het exacte weergegeven formaat. Tik op "Berekenen".</p>
+                <h3>Stap 2: Voer Tye In</h3>
+                <p>Voer jou 400m tyd in (bv. <code>6:08</code>) en 200m tyd (bv. <code>2:30</code>). Gebruik die presiese formaat wat gewys word. Tik op "Bereken".</p>
             </div>
 
             <div class="step-item">
-                <h3>Stap 3: Bekijk Resultaten</h3>
-                <p>De app toont:</p>
+                <h3>Stap 3: Bekyk Resultate</h3>
+                <p>Die app wys:</p>
                 <ul>
-                    <li><strong>CSS Snelheid:</strong> 0.917 m/s</li>
+                    <li><strong>CSS Spoed:</strong> 0.917 m/s</li>
                     <li><strong>CSS Tempo:</strong> 1:49/100m</li>
-                    <li><strong>Trainingszones:</strong> 7 gepersonaliseerde zones (Zone 1-7)</li>
-                    <li><strong>sTSS Baseline:</strong> Nu ingeschakeld voor alle trainingen</li>
+                    <li><strong>Oefening sones:</strong> 7 gepersonaliseerde sones (Sone 1-7)</li>
+                    <li><strong>sTSS Basislyn:</strong> Nou geaktiveer vir alle oefeninge</li>
                 </ul>
             </div>
 
             <div class="step-item">
-                <h3>Stap 4: Opslaan en Synchroniseren</h3>
-                <p>Tik op "CSS Opslaan". De app onmiddellijk:</p>
+                <h3>Stap 4: Stoor en Sinkroniseer</h3>
+                <p>Tik op "CSS Stoor". Die app onmiddellik:</p>
                 <ul>
-                    <li>Herberekent trainingszones</li>
-                    <li>Werkt sTSS van laatste 90 dagen retroactief bij</li>
-                    <li>Past CTL/ATL/TSB berekeningen aan</li>
-                    <li>Schakelt training-per-zone analyse in</li>
+                    <li>Herbereken oefening sones</li>
+                    <li>Werk sTSS van laaste 90 dae retroaktief by</li>
+                    <li>Pas CTL/ATL/TSB berekeninge aan</li>
+                    <li>Skakel oefening-per-sone analise aan</li>
                 </ul>
             </div>
         </div>
 
         <div class="callout callout-tip mt-xl">
-            <h3>💡 Pro Tip: Historische CSS Tests</h3>
-            <p>Als je je CSS al kent van eerdere tests, kun je die tijden direct invoeren. Voor meest nauwkeurige resultaten doe je echter elke 6-8 weken een nieuwe test. Je CSS zou moeten verbeteren (sneller worden) naarmate training vordert.</p>
+            <h3>💡 Pro Wenk: Historiese CSS Toetse</h3>
+            <p>As jy jou CSS reeds ken van vorige toetse, kan jy daardie tye direk invoer. Vir die mees akkurate resultate, doen egter elke 6-8 weke 'n nuwe toets. Jou CSS behoort te verbeter (vinniger word) soos oefening vorder.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl text-center">Je Metrics Begrijpen</h2>
+        <h2 class="mb-xl text-center">Jou Statistieke Verstaan</h2>
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Critical Swim Speed (CSS)</h3>
+                <h3 class="card-title">Kritiese Swem Spoed (CSS)</h3>
                 <div class="card-content">
-                    <p><strong>Wat het is:</strong> Je aërobe drempeltempo—de snelste snelheid die je ~30 minuten kunt volhouden zonder uitputting.</p>
-                    <p><strong>Wat het betekent:</strong> CSS = 1:49/100m betekent dat je 1:49 tempo kunt vasthouden bij aanhoudende drempelinspanningen.</p>
-                    <p><strong>Hoe te gebruiken:</strong> Basis voor alle trainingszones en sTSS berekening. Update elke 6-8 weken.</p>
+                    <p><strong>Wat dit is:</strong> Jou aërobiese drempel tempo—die vinnigste spoed wat jy ~30 minute kan volhou sonder uitputting.</p>
+                    <p><strong>Wat dit beteken:</strong> CSS = 1:49/100m beteken dat jy 1:49 tempo kan handhaaf by volgehoue drempel inspannings.</p>
+                    <p><strong>Hoe om te gebruik:</strong> Basis vir alle oefening sones en sTSS berekening. Dateer op elke 6-8 weke.</p>
                     <a href="/af/css/" class="btn btn-secondary btn-small mt-md">Leer CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Trainingszones</h3>
+                <h3 class="card-title">Oefening Sones</h3>
                 <div class="card-content">
-                    <p><strong>Wat ze zijn:</strong> 7 intensiteitsbereiken gebaseerd op je CSS, van herstel (Zone 1) tot sprint (Zone 7).</p>
-                    <p><strong>Wat ze betekenen:</strong> Elke zone richt zich op specifieke fysiologische aanpassingen (aërobe basis, drempel, VO₂max).</p>
-                    <p><strong>Hoe te gebruiken:</strong> Volg zone voorschriften voor gestructureerde training. App toont tijd-in-zone voor elke training.</p>
-                    <a href="/af/training-zones/" class="btn btn-secondary btn-small mt-md">Trainingszones →</a>
+                    <p><strong>Wat hulle is:</strong> 7 intensiteit reekse gebaseer op jou CSS, van herstel (Sone 1) tot spoedjaag (Sone 7).</p>
+                    <p><strong>Wat hulle beteken:</strong> Elke sone teiken spesifieke fisiologiese aanpassings (aërobiese basis, drempel, VO₂max).</p>
+                    <p><strong>Hoe om te gebruik:</strong> Volg sone voorskrifte vir gestruktureerde oefening. App wys tyd-in-sone vir elke oefening.</p>
+                    <a href="/af/training-zones/" class="btn btn-secondary btn-small mt-md">Oefening Sones →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Swimming Training Stress Score (sTSS)</h3>
+                <h3 class="card-title">Swem Oefening Stres Telling (sTSS)</h3>
                 <div class="card-content">
-                    <p><strong>Wat het is:</strong> Gekwantificeerde trainingsstress die intensiteit en duur combineert. 1 uur op CSS tempo = 100 sTSS.</p>
-                    <p><strong>Wat het betekent:</strong> sTSS 50 = makkelijk herstel, sTSS 100 = gematigd, sTSS 200+ = zeer zware sessie.</p>
-                    <p><strong>Hoe te gebruiken:</strong> Volg dagelijkse/wekelijkse sTSS om trainingsbelasting te beheren. Streef naar max 5-10 sTSS per week stijging.</p>
+                    <p><strong>Wat dit is:</strong> Gekwantifiseerde oefening stres wat intensiteit en duur kombineer. 1 uur teen CSS tempo = 100 sTSS.</p>
+                    <p><strong>Wat dit beteken:</strong> sTSS 50 = maklike herstel, sTSS 100 = matig, sTSS 200+ = baie swaar sessie.</p>
+                    <p><strong>Hoe om te gebruik:</strong> Volg daaglikse/weeklikse sTSS om oefening lading te bestuur. Mik vir maks 5-10 sTSS per week styging.</p>
                     <a href="/af/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Gids →</a>
                 </div>
             </div>
@@ -924,25 +1039,25 @@
             <div class="card">
                 <h3 class="card-title">CTL / ATL / TSB</h3>
                 <div class="card-content">
-                    <p><strong>Wat ze zijn:</strong></p>
+                    <p><strong>Wat hulle is:</strong></p>
                     <ul>
-                        <li><strong>CTL:</strong> Chronic Training Load (fitness) - 42-daags gemiddelde van sTSS</li>
-                        <li><strong>ATL:</strong> Acute Training Load (vermoeidheid) - 7-daags gemiddelde van sTSS</li>
-                        <li><strong>TSB:</strong> Training Stress Balance (vorm) = CTL - ATL</li>
+                        <li><strong>CTL:</strong> Chroniese Oefening Las (fiksheid) - 42-dag gemiddelde van sTSS</li>
+                        <li><strong>ATL:</strong> Akute Oefening Las (moegheid) - 7-dag gemiddelde van sTSS</li>
+                        <li><strong>TSB:</strong> Oefening Stres Balans (vorm) = CTL - ATL</li>
                     </ul>
-                    <p><strong>Hoe te gebruiken:</strong> TSB positief = fris/taper, TSB negatief = vermoeid. Wedstrijd wanneer TSB = +5 tot +25.</p>
+                    <p><strong>Hoe om te gebruik:</strong> TSB positief = vars/afbou, TSB negatief = moeg. Kompeteer wanneer TSB = +5 tot +25.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>📊 Je Eerste Week Doelen</h3>
-            <p>Na CSS invoeren en 3-5 trainingen voltooien:</p>
+            <h3>📊 Jou Eerste Week Doelwitte</h3>
+            <p>Na CSS invoer en 3-5 oefeninge voltooi:</p>
             <ul>
-                <li><strong>Verifieer sTSS waarden:</strong> Bevestig ze komen overeen met inspanningsbeleving (makkelijk ~50, gematigd ~100, zwaar ~150+)</li>
-                <li><strong>Bekijk zone verdeling:</strong> Besteed je 60-70% in Zone 2 (aërobe basis)?</li>
-                <li><strong>Stel CTL baseline in:</strong> Je eerste week gemiddelde sTSS wordt initiële fitness baseline</li>
-                <li><strong>Identificeer patronen:</strong> Welke trainingen genereren meeste sTSS? Herstel je adequaat?</li>
+                <li><strong>Verifieer sTSS waardes:</strong> Bevestig hulle stem ooreen met inspanning persepsie (maklik ~50, matig ~100, swaar ~150+)</li>
+                <li><strong>Bekyk sone verspreiding:</strong> Spandeer jy 60-70% in Sone 2 (aërobiese basis)?</li>
+                <li><strong>Stel CTL basislyn in:</strong> Jou eerste week gemiddelde sTSS word aanvanklike fiksheid basislyn</li>
+                <li><strong>Identifiseer patrone:</strong> Watter oefeninge genereer die meeste sTSS? Herstel jy voldoende?</li>
             </ul>
         </div>
     </div>
@@ -950,63 +1065,63 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Typische Gebruikersreis (Eerste 8 Weken)</h2>
+        <h2>Tipiese Gebruiker Reis (Eerste 8 Weke)</h2>
 
         <div class="journey-timeline">
             <div class="journey-phase">
-                <h3>Week 1-2: Baseline Vaststellen</h3>
+                <h3>Week 1-2: Basislyn Vasstel</h3>
                 <ul>
-                    <li>CSS test doen en resultaten invoeren</li>
-                    <li>3-5 normale trainingen voltooien</li>
-                    <li>sTSS waarden en zone verdeling observeren</li>
-                    <li>Initiële CTL (fitnessniveau) vaststellen</li>
-                    <li><strong>Doel:</strong> Metrics begrijpen, nog geen veranderingen</li>
+                    <li>CSS toets doen en resultate invoer</li>
+                    <li>3-5 normale oefeninge voltooi</li>
+                    <li>sTSS waardes en sone verspreiding waarneem</li>
+                    <li>Aanvanklike CTL (fiksheid vlak) vasstel</li>
+                    <li><strong>Doel:</strong> Statistieke verstaan, nog geen veranderinge</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Week 3-4: Zones Toepassen</h3>
+                <h3>Week 3-4: Sones Toepas</h3>
                 <ul>
-                    <li>CSS zones gebruiken in trainingsplanning</li>
-                    <li>Bewust in Zone 2 zwemmen voor aërobe series</li>
-                    <li>Wekelijkse sTSS totalen volgen (streef naar consistentie)</li>
-                    <li>TSB monitoren (zou licht negatief moeten zijn = trainend)</li>
-                    <li><strong>Doel:</strong> Train op zones, niet op gevoel</li>
+                    <li>CSS sones gebruik in oefening beplanning</li>
+                    <li>Doelbewus in Sone 2 swem vir aërobiese reekse</li>
+                    <li>Weeklikse sTSS totale volg (mik vir konsekwentheid)</li>
+                    <li>TSB monitor (moet effens negatief wees = oefen)</li>
+                    <li><strong>Doel:</strong> Oefen volgens sones, nie gevoel nie</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Week 5-6: Progressieve Overbelasting</h3>
+                <h3>Week 5-6: Progressiewe Oorlading</h3>
                 <ul>
-                    <li>Verhoog wekelijkse sTSS met 5-10% vanaf baseline</li>
-                    <li>Voeg 1 drempel sessie (Zone 4) per week toe</li>
-                    <li>CTL zou geleidelijk moeten stijgen (fitness verbetert)</li>
-                    <li>ATL kan pieken in zware weken (normaal)</li>
-                    <li><strong>Doel:</strong> Gecontroleerde fitness progressie</li>
+                    <li>Verhoog weeklikse sTSS met 5-10% vanaf basislyn</li>
+                    <li>Voeg 1 drempel sessie (Sone 4) per week by</li>
+                    <li>CTL moet geleidelik styg (fiksheid verbeter)</li>
+                    <li>ATL kan piek in swaar weke (normaal)</li>
+                    <li><strong>Doel:</strong> Beheerde fiksheid progressie</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Week 7-8: Her-evalueren en Aanpassen</h3>
+                <h3>Week 7-8: Her-evalueer en Aanpas</h3>
                 <ul>
-                    <li>Tweede CSS test doen (zou sneller moeten zijn)</li>
-                    <li>Zones in app bijwerken (tempo verbetert)</li>
-                    <li>CTL Week 1 vs Week 8 vergelijken (zou +10-20 moeten zijn)</li>
-                    <li>Vooruitgang bekijken: Dalen tijden? Voelt het makkelijker?</li>
-                    <li><strong>Doel:</strong> Trainingseffectiviteit valideren</li>
+                    <li>Tweede CSS toets doen (moet vinniger wees)</li>
+                    <li>Sones in app opdateer (tempo verbeter)</li>
+                    <li>CTL Week 1 vs Week 8 vergelyk (moet +10-20 wees)</li>
+                    <li>Vordering bekyk: Daal tye? Voel dit makliker?</li>
+                    <li><strong>Doel:</strong> Oefening effektiwiteit valideer</li>
                 </ul>
             </div>
         </div>
 
         <div class="callout callout-success mt-xl">
-            <h3>✅ Succes Indicatoren</h3>
-            <p>Na 8 weken gestructureerde training met SwimAnalytics, zou je moeten zien:</p>
+            <h3>✅ Sukses Aanduiders</h3>
+            <p>Na 8 weke gestruktureerde oefening met SwimAnalytics, moet jy sien:</p>
             <ul>
-                <li><strong>CSS Verbetering:</strong> 1-3% sneller CSS tempo (bijv. 1:49 → 1:47)</li>
-                <li><strong>CTL Stijging:</strong> +15-25 punten (bijv. 30 → 50 CTL)</li>
-                <li><strong>Consistente sTSS:</strong> Wekelijkse totalen binnen 10-15% variantie</li>
-                <li><strong>Betere Dosering:</strong> Gelijkmatigere splits, betere inspanningskalibratie</li>
-                <li><strong>Verbeterd Herstel:</strong> TSB cycleert voorspelbaar (-10 tot +5)</li>
+                <li><strong>CSS Verbetering:</strong> 1-3% vinniger CSS tempo (bv. 1:49 → 1:47)</li>
+                <li><strong>CTL Styging:</strong> +15-25 punte (bv. 30 → 50 CTL)</li>
+                <li><strong>Konsekwente sTSS:</strong> Weeklikse totale binne 10-15% variasie</li>
+                <li><strong>Beter Dosering:</strong> Meer gelyke splits, beter inspanning kalibrering</li>
+                <li><strong>Verbeterde Herstel:</strong> TSB siklus voorspelbaar (-10 tot +5)</li>
             </ul>
         </div>
     </div>
@@ -1014,78 +1129,78 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Probleemoplossing en Veelgestelde Vragen</h2>
+        <h2>Probleemoplossing en Gereeld Gevra Vrae</h2>
 
         <div class="faq-item">
-            <h3>Mijn sTSS lijkt te hoog/laag voor de trainingsinspanning</h3>
-            <p><strong>Oorzaak:</strong> CSS is verouderd of onnauwkeurig.</p>
-            <p><strong>Oplossing:</strong> Hertest CSS. Als je testte toen je vermoeid was of verkeerd doseerde, zal CSS incorrect zijn. Een goede CSS test is cruciaal voor alle opvolgende metrics.</p>
+            <h3>My sTSS lyk te hoog/laag vir die oefening inspanning</h3>
+            <p><strong>Oorsaak:</strong> CSS is verouderd of onakkuraat.</p>
+            <p><strong>Oplossing:</strong> Hertoets CSS. As jy getoets het toe jy moeg was of verkeerd gedoseer het, sal CSS verkeerd wees. 'n Goeie CSS toets is kritiek vir alle opvolgende statistieke.</p>
         </div>
 
         <div class="faq-item">
-            <h3>De app toont "Geen CSS ingesteld"</h3>
-            <p><strong>Oorzaak:</strong> CSS test niet voltooid of niet opgeslagen.</p>
-            <p><strong>Oplossing:</strong> Ga naar Instellingen → Critical Swim Speed → Test Doen. Voer beide 400m en 200m tijden in, tik dan op Opslaan.</p>
+            <h3>Die app wys "Geen CSS ingestel"</h3>
+            <p><strong>Oorsaak:</strong> CSS toets nie voltooi of nie gestoor nie.</p>
+            <p><strong>Oplossing:</strong> Gaan na Instellings → Kritiese Swem Spoed → Toets Doen. Voer beide 400m en 200m tye in, tik dan op Stoor.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Trainingen synchroniseren niet vanaf Apple Watch</h3>
-            <p><strong>Oorzaak:</strong> Health app permissies niet verleend of training niet gecategoriseerd als "Zwemmen".</p>
-            <p><strong>Oplossing:</strong> Verifieer Instellingen → Privacy → Gezondheid → SwimAnalytics → Sta Trainingen Lezen toe. Zorg dat trainingstype op Apple Watch "Zwembad Zwemmen" of "Open Water Zwemmen" is.</p>
+            <h3>Oefeninge sinkroniseer nie vanaf Apple Watch nie</h3>
+            <p><strong>Oorsaak:</strong> Health app toestemmings nie verleen of oefening nie gekategoriseer as "Swem" nie.</p>
+            <p><strong>Oplossing:</strong> Verifieer Instellings → Privaatheid → Gesondheid → SwimAnalytics → Laat Oefeninge Lees toe. Maak seker dat oefening tipe op Apple Watch "Swembad Swem" of "Oop Water Swem" is.</p>
         </div>
 
         <div class="faq-item">
-            <h3>CTL stijgt niet ondanks consistente training</h3>
-            <p><strong>Oorzaak:</strong> sTSS totalen te laag of inconsistente frequentie.</p>
-            <p><strong>Oplossing:</strong> CTL is een exponentieel gewogen 42-daags gemiddelde. Stijgt langzaam. Verhoog wekelijkse sTSS met 5-10%, en handhaaf 4+ trainingen/week voor consistente CTL groei.</p>
+            <h3>CTL styg nie ondanks konsekwente oefening nie</h3>
+            <p><strong>Oorsaak:</strong> sTSS totale te laag of inkonsekwente frekwensie.</p>
+            <p><strong>Oplossing:</strong> CTL is 'n eksponensieel geweegde 42-dag gemiddelde. Styg stadig. Verhoog weeklikse sTSS met 5-10%, en handhaaf 4+ oefeninge/week vir konsekwente CTL groei.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Hoe vaak moet ik CSS hertesten?</h3>
-            <p><strong>Aanbeveling:</strong> Elke 6-8 weken tijdens basis/opbouw fasen. Hertest na ziekte, blessure, lange pauze, of wanneer zones consistent te makkelijk/moeilijk aanvoelen.</p>
+            <h3>Hoe gereeld moet ek CSS hertoets?</h3>
+            <p><strong>Aanbeveling:</strong> Elke 6-8 weke gedurende basis/opbou fases. Hertoets na siekte, besering, lang pouse, of wanneer sones konsekwent te maklik/moeilik voel.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Kan ik SwimAnalytics gebruiken voor andere slagen?</h3>
-            <p><strong>Ja, met beperkingen:</strong> CSS wordt typisch getest op vrije slag. Voor wisselslag/rugslag/schoolslag trainingen wordt sTSS berekend op basis van vrije slag CSS. Overweeg slag-specifieke CSS tests voor betere nauwkeurigheid.</p>
+            <h3>Kan ek SwimAnalytics gebruik vir ander slae?</h3>
+            <p><strong>Ja, met beperkings:</strong> CSS word tipies getoets in vryslag. Vir wisselslag/rugslag/borsslag oefeninge word sTSS bereken gebaseer op vryslag CSS. Oorweeg slag-spesifieke CSS toetse vir beter akkuraatheid.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Volgende Stappen</h2>
+        <h2>Volgende Stappe</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Leer Trainingszones</h3>
+                <h3 class="card-title">Leer Oefening Sones</h3>
                 <div class="card-content">
-                    <p>Begrijp hoe te trainen in Zone 2 (aërobe basis), Zone 4 (drempel) en Zone 5 (VO₂max) voor specifieke aanpassingen.</p>
-                    <a href="/af/training-zones/" class="btn btn-secondary btn-small mt-md">Trainingszones →</a>
+                    <p>Verstaan hoe om te oefen in Sone 2 (aërobiese basis), Sone 4 (drempel) en Sone 5 (VO₂max) vir spesifieke aanpassings.</p>
+                    <a href="/af/training-zones/" class="btn btn-secondary btn-small mt-md">Oefening Sones →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Bereken sTSS</h3>
                 <div class="card-content">
-                    <p>Gebruik onze gratis sTSS calculator om trainingsbelasting te begrijpen voordat je je committeert aan trainingen.</p>
-                    <a href="/af/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS Calculator →</a>
+                    <p>Gebruik ons gratis sTSS sakrekenaar om oefening lading te verstaan voordat jy verbind tot oefeninge.</p>
+                    <a href="/af/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS Sakrekenaar →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Verdiep je in Metrics</h3>
+                <h3 class="card-title">Verdiep in Statistieke</h3>
                 <div class="card-content">
-                    <p>Verken de wetenschap achter CSS, sTSS, CTL/ATL/TSB met peer-reviewed onderzoeksreferenties.</p>
-                    <a href="/af/research/" class="btn btn-secondary btn-small mt-md">Onderzoek →</a>
+                    <p>Verken die wetenskap agter CSS, sTSS, CTL/ATL/TSB met eweknie-hersiende navorsing verwysings.</p>
+                    <a href="/af/research/" class="btn btn-secondary btn-small mt-md">Navorsing →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>Klaar om te beginnen met tracken?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Gratis</a>
-            <p class="mt-sm text-secondary">7-dagen gratis proefperiode • Geen creditcard • iOS 16+</p>
+            <p class="mb-md"><strong>Gereed om te begin opspoor?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Laai SwimAnalytics Gratis Af</a>
+            <p class="mt-sm text-secondary">7-dag gratis proef • Geen kredietkaart nodig • iOS 16+</p>
         </div>
     </div>
 </section>
@@ -1527,15 +1642,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

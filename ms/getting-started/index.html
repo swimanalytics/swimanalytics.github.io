@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/ms/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,52 +809,52 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Comenzar dengan SwimAnalytics</h1>
-        <p class="lead">Anda guía completa untuk pelacakan performa di renang, pruebas CSS dan analitik beban latihan</p>
+        <h1>Getting Started with SwimAnalytics</h1>
+        <p class="lead">Your complete guide to tracking swimming performance, CSS testing, and training load analytics</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Bienvenido Natación Basada di Datos</h2>
-            <p>SwimAnalytics transforma Anda latihans renang di informasi práctica utilizando metrik <strong>Critical Swim Speed (CSS)</strong>, <strong>Skor Stres Latihan (sTSS)</strong> dan <strong>Grafik Manajemen Performa (PMC)</strong>. Esta guía te llevará dari configuración inicial hingga analitik avanzado beban latihan di 4 pasos sencillos.</p>
+            <h2>Welcome to Data-Driven Swimming</h2>
+            <p>SwimAnalytics transforms your swimming workouts into actionable insights using <strong>Critical Swim Speed (CSS)</strong>, <strong>Training Stress Score (sTSS)</strong>, and <strong>Performance Management Chart (PMC)</strong> metrics. This guide will take you from first setup to advanced training load analysis in 4 simple steps.</p>
         </div>
 
-        <h2>Inicio Rápido (5 Minutos)</h2>
+        <h2>Quick Start (5 Minutes)</h2>
 
         <div class="steps-container">
             <div class="step-card">
                 <div class="step-number">1</div>
                 <div class="step-content">
-                    <h3>Unduh e Instalar</h3>
-                    <p>Descarga SwimAnalytics dari App Store dan concede permiso untuk acceder Apple Health. La app sincroniza latihans renang automáticamente: tidak se requiere registro manual.</p>
-                    <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Unduh App →</a>
+                    <h3>Download & Install</h3>
+                    <p>Download SwimAnalytics from the App Store and grant permission to access Apple Health. The app syncs swimming workouts automatically—no manual logging required.</p>
+                    <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-secondary btn-small mt-sm" target="_blank" rel="noopener">Download App →</a>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <h3>Realizar Prueba CSS</h3>
-                    <p>Completa prueba contrarreloj 400m dan 200m untuk establecer Anda Critical Swim Speed. Esta es base semua metrik: tanpa CSS, tidak se pueden calcular sTSS ni zona latihan.</p>
-                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">Protocolo Prueba CSS ↓</a>
+                    <h3>Perform CSS Test</h3>
+                    <p>Complete a 400m and 200m time trial to establish your Critical Swim Speed. This is the foundation of all metrics—without CSS, sTSS and training zones cannot be calculated.</p>
+                    <a href="#css-test-guide" class="btn btn-secondary btn-small mt-sm">CSS Test Protocol ↓</a>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">3</div>
                 <div class="step-content">
-                    <h3>Introducir Resultados CSS</h3>
-                    <p>Introduce Anda tiempos 400m dan 200m di app. SwimAnalytics calcula CSS, zona ritmo dan personaliza semua metrik según Anda fisiología. Actualiza setiap 6-8 semanas medida yang mejora Anda estado forma.</p>
+                    <h3>Enter CSS Results</h3>
+                    <p>Input your 400m and 200m times in the app. SwimAnalytics calculates CSS, pace zones, and personalizes all metrics to your physiology. Update every 6-8 weeks as fitness improves.</p>
                 </div>
             </div>
 
             <div class="step-card">
                 <div class="step-number">4</div>
                 <div class="step-content">
-                    <h3>Comenzar Registrar Latihans</h3>
-                    <p>Nada dengan Apple Watch dan app Health. SwimAnalytics importa automáticamente latihans, calcula sTSS, actualiza CTL/ATL/TSB dan realiza pelacakan progreso. No se necesita entrada manual data.</p>
+                    <h3>Start Tracking Workouts</h3>
+                    <p>Swim with Apple Watch and Health app. SwimAnalytics automatically imports workouts, calculates sTSS, updates CTL/ATL/TSB, and tracks progress. No manual data entry needed.</p>
                 </div>
             </div>
         </div>
@@ -748,94 +863,94 @@
 
 <section class="section section-alt" id="css-test-guide">
     <div class="container">
-        <h2 class="mb-xl text-center">Protocolo Completo Prueba CSS</h2>
+        <h2 class="mb-xl text-center">Complete CSS Testing Protocol</h2>
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">📋 Lo Que Necesitas</h3>
+                <h3 class="card-title">📋 What You Need</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Acceso piscina:</strong> Piscina 25m atau 50m (25yd aceptable)</li>
-                        <li><strong>Cronometraje:</strong> Cronómetro, reloj pared atau Apple Watch</li>
-                        <li><strong>Waktu calentamiento:</strong> 15-20 minutos antes prueba</li>
-                        <li><strong>Recuperación:</strong> 5-10 minutos entre pruebas</li>
-                        <li><strong>Esfuerzo:</strong> Ritmo máximo sostenible (no sprint total)</li>
+                        <li><strong>Pool access:</strong> 25m or 50m pool (25yd acceptable)</li>
+                        <li><strong>Timing:</strong> Stopwatch, pace clock, or Apple Watch</li>
+                        <li><strong>Warm-up time:</strong> 15-20 minutes before test</li>
+                        <li><strong>Recovery:</strong> 5-10 minutes between trials</li>
+                        <li><strong>Effort:</strong> Maximum sustainable pace (not all-out sprint)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">⏱️ Condiciones Día Prueba</h3>
+                <h3 class="card-title">⏱️ Test Day Conditions</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Descansado:</strong> Sin latihan duro 24-48 horas antes</li>
-                        <li><strong>Hidratado:</strong> Bien hidratado, alimentación normal</li>
-                        <li><strong>Temperatura piscina:</strong> 26-28°C ideal (evitar muy fría/caliente)</li>
-                        <li><strong>Hora día:</strong> Cuando normalmente entrenas mejor</li>
-                        <li><strong>Equipamiento:</strong> Igual yang di latihans (gafas, gorro, bañador)</li>
+                        <li><strong>Rested:</strong> No hard training 24-48 hours before</li>
+                        <li><strong>Hydrated:</strong> Well-hydrated, normal eating</li>
+                        <li><strong>Pool temp:</strong> 26-28°C (79-82°F) ideal - very cold or warm water can affect performance and skew results</li>
+                        <li><strong>Time of day:</strong> When you normally train best</li>
+                        <li><strong>Equipment:</strong> Same as training (goggles, cap, suit)</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <h3 class="mt-3xl">Prueba CSS Paso Paso</h3>
+        <h3 class="mt-3xl">Step-by-Step CSS Test</h3>
 
         <div class="protocol-timeline">
             <div class="timeline-item">
-                <div class="timeline-marker">Calentamiento</div>
+                <div class="timeline-marker">Warm-up</div>
                 <div class="timeline-content">
-                    <h4>15-20 minutos</h4>
-                    <p>400-800m renang suave, ejercicios técnicos dan progresivos. Incluye 2-3×50 ritmo creciente (60%, 75%, 85% esfuerzo). Descansa 2-3 minutos antes prueba.</p>
+                    <h4>15-20 minutes</h4>
+                    <p>400-800m easy swimming, drills, and progressive build-ups. Include 2-3×50 at increasing pace (60%, 75%, 85% effort). Rest 2-3 minutes before test.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Prueba 1</div>
+                <div class="timeline-marker">Trial 1</div>
                 <div class="timeline-content">
-                    <h4>400m Esfuerzo Máximo</h4>
-                    <p><strong>Salida dari pared</strong> (sin zambullida). Nada 400m al ritmo lebih dari rápido yang puedas sostener durante toda distancia. Esto NO adalah sprint: dosifica Anda esfuerzo. Registra tiempo di formato <strong>mm:ss</strong> (ej.: 6:08).</p>
+                    <h4>400m Maximum Effort</h4>
+                    <p><strong>Push start</strong> (no dive). Swim 400m at the fastest pace you can sustain for the full distance. This is NOT a sprint: pace yourself for the entire distance. Record time in <strong>mm:ss</strong> format (e.g., 6:08).</p>
                     <div class="tip-box mt-sm">
-                        <strong>Consejo ritmo:</strong> Intenta mantener parciales 100m uniforbulan. Los segundos 200m deberían ser ≤ primeros 200m (negativo ideal).
+                        <strong>Pacing tip:</strong> Aim for even 100m splits. Second 200m should be ≤ first 200m (negative split ideal).
                     </div>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Recuperación</div>
+                <div class="timeline-marker">Recovery</div>
                 <div class="timeline-content">
-                    <h4>5-10 minutos</h4>
-                    <p><strong>FASE CRÍTICA:</strong> Renang suave atau descanso completo. Espera hingga yang frecuencia cardíaca baje 120 ppm dan respiración se recupere completamente. Recuperación insuficiente = CSS inexacto.</p>
+                    <h4>5-10 minutes</h4>
+                    <p><strong>CRITICAL PHASE:</strong> Easy swimming or complete rest. Wait until heart rate drops below 120 bpm and breathing fully recovered. Target: conversational breathing and feeling ready for another maximal effort. Insufficient recovery = inaccurate CSS.</p>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Prueba 2</div>
+                <div class="timeline-marker">Trial 2</div>
                 <div class="timeline-content">
-                    <h4>200m Esfuerzo Máximo</h4>
-                    <p><strong>Salida dari pared</strong> (sin zambullida). Esfuerzo sostenible máximo durante 200m. Esto debería sentirse lebih dari duro oleh setiap 100m yang 400m. Registra tiempo di formato <strong>mm:ss</strong> (ej.: 2:30).</p>
+                    <h4>200m Maximum Effort</h4>
+                    <p><strong>Push start</strong> (no dive). Maximum sustainable effort for 200m. This should feel harder per 100m than the 400m. Record time in <strong>mm:ss</strong> format (e.g., 2:30).</p>
                     <div class="tip-box mt-sm">
-                        <strong>Lihatificación validez:</strong> El ritmo 200m/100m debería ser 3-6 segundos lebih dari rápido yang ritmo 400m/100m. Si tidak es así, recuperación fue insuficiente atau ritmo inadecuado.
+                        <strong>Validation check:</strong> 200m pace/100m should be 3-6 seconds faster than 400m pace/100m. If not, recovery was insufficient or pacing was off.
                     </div>
                 </div>
             </div>
 
             <div class="timeline-item">
-                <div class="timeline-marker">Vuelta calma</div>
+                <div class="timeline-marker">Cool-down</div>
                 <div class="timeline-content">
-                    <h4>10-15 minutos</h4>
-                    <p>300-500m renang suave, estiramientos. Registra Anda tiempos inrata-ratatamente: tidak confíes di memoria.</p>
+                    <h4>10-15 minutes</h4>
+                    <p>300-500m easy swimming, stretching. Record your times immediately—don't trust memory.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-warning mt-xl">
-            <h3>⚠️ Errores Comunes di Prueba CSS</h3>
+            <h3>⚠️ Common CSS Test Mistakes</h3>
             <ul>
-                <li><strong>Salir demasiado rápido di 400m:</strong> Resulta di desfondamiento, CSS inexacto. Usa ritmo uniforme.</li>
-                <li><strong>Recuperación insuficiente entre pruebas:</strong> La fatiga ralentiza 200m, haciendo yang CSS sea artificialmente rápido → zona tentanglatihan.</li>
-                <li><strong>Usar salidas dengan zambullida:</strong> Añade ventaja 0.5-1.5s, sesgando cálculos. Siempre sal dari pared.</li>
-                <li><strong>Probar ketika adalahs fatigado:</strong> Carga latihan pesada 24-48h antes = resultados deprimidos. Prueba ketika estés fresco.</li>
-                <li><strong>No registrar inrata-ratatamente:</strong> La memoria tidak es fiable. Anota tiempos antes vuelta calma.</li>
+                <li><strong>Going out too fast on 400m:</strong> Results in blowup, inaccurate CSS. Use even pacing.</li>
+                <li><strong>Insufficient recovery between trials:</strong> Fatigue slows 200m, making CSS artificially fast → overtrained zones.</li>
+                <li><strong>Using dive starts:</strong> Adds 0.5-1.5s advantage, skewing calculations. Always push from wall.</li>
+                <li><strong>Testing when fatigued:</strong> Heavy training load 24-48h before = depressed results. Test when fresh.</li>
+                <li><strong>Not recording immediately:</strong> Memory is unreliable. Write times down before cool-down.</li>
             </ul>
         </div>
     </div>
@@ -843,106 +958,106 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Introducir Resultados CSS di SwimAnalytics</h2>
+        <h2>Entering CSS Results in SwimAnalytics</h2>
 
         <div class="screenshot-guide">
             <div class="step-item">
-                <h3>Paso 1: Abrir Configuración CSS</h3>
-                <p>En app SwimAnalytics, ve <strong>Pengaturan → Critical Swim Speed</strong>. Toca "Realizar Prueba CSS" atau "Actualizar CSS".</p>
+                <h3>Step 1: Open CSS Settings</h3>
+                <p>In SwimAnalytics app, go to <strong>Settings → Critical Swim Speed</strong>. Tap "Perform CSS Test" or "Update CSS".</p>
             </div>
 
             <div class="step-item">
-                <h3>Paso 2: Introducir Waktus</h3>
-                <p>Introduce Anda tiempo 400m (ej.: <code>6:08</code>) dan tiempo 200m (ej.: <code>2:30</code>). Usa formato exacto mostrado. Toca "Calcular".</p>
+                <h3>Step 2: Input Times</h3>
+                <p>Enter your 400m time (e.g., <code>6:08</code>) and 200m time (e.g., <code>2:30</code>). Use the exact format shown. Tap "Calculate".</p>
             </div>
 
             <div class="step-item">
-                <h3>Paso 3: Revisar Resultados</h3>
-                <p>La app muestra:</p>
+                <h3>Step 3: Review Results</h3>
+                <p>App displays:</p>
                 <ul>
-                    <li><strong>Kecepatan CSS:</strong> 0.917 m/s</li>
-                    <li><strong>Ritmo CSS:</strong> 1:49/100m</li>
-                    <li><strong>Zona latihan:</strong> 7 zona personalizadas (Zona 1-7)</li>
-                    <li><strong>Línea base sTSS:</strong> Ahora habilitada untuk semua latihans</li>
+                    <li><strong>CSS speed:</strong> 0.917 m/s</li>
+                    <li><strong>CSS pace:</strong> 1:49/100m</li>
+                    <li><strong>Training zones:</strong> 7 personalized zones (Zone 1-7)</li>
+                    <li><strong>sTSS baseline:</strong> Now enabled for all workouts</li>
                 </ul>
             </div>
 
             <div class="step-item">
-                <h3>Paso 4: Guardar dan Sincronizar</h3>
-                <p>Toca "Guardar CSS". La app inrata-ratatamente:</p>
+                <h3>Step 4: Save & Sync</h3>
+                <p>Tap "Save CSS". The app immediately:</p>
                 <ul>
-                    <li>Recalcula zona latihan</li>
-                    <li>Actualiza retrosecara aktif sTSS últimos 90 días</li>
-                    <li>Ajusta cálculos CTL/ATL/TSB</li>
-                    <li>Habilita analitik latihans oleh zona</li>
+                    <li>Recalculates training zones</li>
+                    <li>Retroactively updates sTSS for past 90 days</li>
+                    <li>Adjusts CTL/ATL/TSB calculations</li>
+                    <li>Enables zone-based workout analysis</li>
                 </ul>
             </div>
         </div>
 
         <div class="callout callout-tip mt-xl">
-            <h3>💡 Consejo Pro: Pruebas Históricas CSS</h3>
-            <p>Si ya conoces Anda CSS pruebas anteriores, puedes introducir esos tiempos directamente. Sin embargo, untuk obtener resultados lebih dari precisos, realiza prueba nueva setiap 6-8 semanas. Anda CSS debería mejorar (volverse lebih dari rápido) medida yang progritu latihan.</p>
+            <h3>💡 Pro Tip: Historical CSS Testing</h3>
+            <p>If you already know your CSS from previous tests, you can input those times directly. However, for most accurate results, perform a fresh test every 6-8 weeks. Your CSS should improve (get faster) as training progresses.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl text-center">Comprender Tus Metrik</h2>
+        <h2 class="mb-xl text-center">Understanding Your Metrics</h2>
 
         <div class="grid grid-2">
             <div class="card">
                 <h3 class="card-title">Critical Swim Speed (CSS)</h3>
                 <div class="card-content">
-                    <p><strong>Qué es:</strong> Anda ritmo umbral aeróbico: kecepatan lebih dari rápida yang puedes sostener durante ~30 minutos tanpa agotamiento.</p>
-                    <p><strong>Qué significa:</strong> CSS = 1:49/100m significa yang puedes mantener ritmo 1:49 di esfuerzos sostenidos umbral.</p>
-                    <p><strong>Cómo usarlo:</strong> Base untuk semua zona latihan dan cálculo sTSS. Actualiza setiap 6-8 semanas.</p>
-                    <a href="/ms/css/" class="btn btn-secondary btn-small mt-md">Aprende CSS →</a>
+                    <p><strong>What it is:</strong> Your aerobic threshold pace—the fastest speed you can sustain for ~30 minutes without exhaustion.</p>
+                    <p><strong>What it means:</strong> CSS = 1:49/100m means you can hold 1:49 pace for sustained threshold efforts.</p>
+                    <p><strong>How to use:</strong> Basis for all training zones and sTSS calculation. Update every 6-8 weeks.</p>
+                    <a href="/en/css/" class="btn btn-secondary btn-small mt-md">Learn CSS →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Zona Latihan</h3>
+                <h3 class="card-title">Training Zones</h3>
                 <div class="card-content">
-                    <p><strong>Qué son:</strong> 7 rangos intensidad berdasarkans di Anda CSS, dari recuperación (Zona 1) hingga sprint (Zona 7).</p>
-                    <p><strong>Qué significan:</strong> Cada zona apunta adaptaciones fisiológicas específicas (base aeróbica, umbral, VO₂máx).</p>
-                    <p><strong>Cómo usarlas:</strong> Sigue prescripciones zona untuk latihan estructurado. La app muestra tiempo di zona untuk setiap latihan.</p>
-                    <a href="/ms/training-zones/" class="btn btn-secondary btn-small mt-md">Zona Latihan →</a>
+                    <p><strong>What they are:</strong> 7 intensity ranges based on your CSS, from recovery (Zone 1) to sprint (Zone 7).</p>
+                    <p><strong>What they mean:</strong> Each zone targets specific physiological adaptations (aerobic base, threshold, VO₂max).</p>
+                    <p><strong>How to use:</strong> Follow zone prescriptions for structured training. App shows time-in-zone for each workout.</p>
+                    <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">Training Zones →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Skor Stres Latihan di Natación (sTSS)</h3>
+                <h3 class="card-title">Swimming Training Stress Score (sTSS)</h3>
                 <div class="card-content">
-                    <p><strong>Qué es:</strong> Stres cuantificado latihan combinando intensidad dan duración. 1 hora ritmo CSS = 100 sTSS.</p>
-                    <p><strong>Qué significa:</strong> sTSS 50 = recuperación fácil, sTSS 100 = moderado, sTSS 200+ = sesión muy dura.</p>
-                    <p><strong>Cómo usarlo:</strong> Rastrea sTSS diario/semanal untuk gestionar beban latihan. Apunta aumento 5-10 sTSS oleh semana sebagai máximo.</p>
-                    <a href="/ms/training-load/" class="btn btn-secondary btn-small mt-md">Guía sTSS →</a>
+                    <p><strong>What it is:</strong> Quantified workout stress combining intensity and duration. 1 hour at CSS pace = 100 sTSS.</p>
+                    <p><strong>What it means:</strong> sTSS 50 = easy recovery, sTSS 100 = moderate, sTSS 200+ = very hard session.</p>
+                    <p><strong>How to use:</strong> Track daily/weekly sTSS to manage training load. Aim for 5-10 sTSS increase per week max.</p>
+                    <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Guide →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">CTL / ATL / TSB</h3>
                 <div class="card-content">
-                    <p><strong>Qué son:</strong></p>
+                    <p><strong>What they are:</strong></p>
                     <ul>
-                        <li><strong>CTL:</strong> Chronic Training Load (fitness) - promedio 42 días sTSS</li>
-                        <li><strong>ATL:</strong> Beban Latihan Aguda (fatiga) - promedio 7 días sTSS</li>
-                        <li><strong>TSB:</strong> Keseimbangan Stres Latihan (forma) = CTL - ATL</li>
+                        <li><strong>CTL:</strong> Chronic Training Load (fitness) - 42-day average sTSS</li>
+                        <li><strong>ATL:</strong> Acute Training Load (fatigue) - 7-day average sTSS</li>
+                        <li><strong>TSB:</strong> Training Stress Balance (form) = CTL - ATL</li>
                     </ul>
-                    <p><strong>Cómo usarlos:</strong> TSB positivo = fresco/en puini punto, TSB negativo = fatigado. Compite ketika TSB = +5 +25.</p>
+                    <p><strong>How to use:</strong> Positive TSB = fresh/tapered, negative TSB = fatigued. Race when TSB = +5 to +25.</p>
                 </div>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>📊 Objetivos Anda Primera Semana</h3>
-            <p>Setelah introducir CSS dan completar 3-5 latihans:</p>
+            <h3>📊 Your First Week Goals</h3>
+            <p>After entering CSS and completing 3-5 workouts:</p>
             <ul>
-                <li><strong>Lihatificar valores sTSS:</strong> Confirma yang coincidan dengan percepción esfuerzo (fácil ~50, moderado ~100, duro ~150+)</li>
-                <li><strong>Revisar distribución oleh zona:</strong> ¿Estás pasando 60-70% di Zona 2 (base aeróbica)?</li>
-                <li><strong>Establecer CTL base:</strong> El promedio sTSS Anda primera semana se convierte di línea base fitness inicial</li>
-                <li><strong>Identificar patrones:</strong> ¿Qué latihans generan mayor sTSS? ¿Te adalahs recuperando adecuadamente?</li>
+                <li><strong>Check sTSS values:</strong> Confirm they match effort perception (easy ~50, moderate ~100, hard ~150+)</li>
+                <li><strong>Review zone distribution:</strong> Are you spending 60-70% in Zone 2 (aerobic base)?</li>
+                <li><strong>Establish baseline CTL:</strong> Your first week's average sTSS becomes initial fitness baseline</li>
+                <li><strong>Identify patterns:</strong> Which workouts generate highest sTSS? Are you recovering adequately?</li>
             </ul>
         </div>
     </div>
@@ -950,63 +1065,63 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Recorrido Típico Usuario (Primeras 8 Semanas)</h2>
+        <h2>Typical User Journey (First 8 Weeks)</h2>
 
         <div class="journey-timeline">
             <div class="journey-phase">
-                <h3>Semana 1-2: Establecer Línea Base</h3>
+                <h3>Week 1-2: Establish Baseline</h3>
                 <ul>
-                    <li>Realizar prueba CSS e introducir resultados</li>
-                    <li>Completar 3-5 latihans normales</li>
-                    <li>Observar valores sTSS dan distribución oleh zona</li>
-                    <li>Establecer CTL inicial (nivel fitness)</li>
-                    <li><strong>Objetivo:</strong> Comprender metrik, tanpa cambios aún</li>
+                    <li>Perform CSS test and enter results</li>
+                    <li>Complete 3-5 normal training workouts</li>
+                    <li>Observe sTSS values and zone distribution</li>
+                    <li>Establish initial CTL (fitness level)</li>
+                    <li><strong>Goal:</strong> Understand metrics, no changes yet</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Semana 3-4: Aplicar Zona</h3>
+                <h3>Week 3-4: Apply Zones</h3>
                 <ul>
-                    <li>Usar zona CSS di planificación latihans</li>
-                    <li>Nadar intencionadamente di Zona 2 untuk series aeróbicas</li>
-                    <li>Rastrear totales sTSS semanales (buscar consistencia)</li>
-                    <li>Monitorear TSB (debería ser ligeramente negativo = entrenando)</li>
-                    <li><strong>Objetivo:</strong> Entrenar oleh zona, tidak oleh sensación</li>
+                    <li>Use CSS zones in workout planning</li>
+                    <li>Intentionally swim Zone 2 for aerobic sets</li>
+                    <li>Track weekly sTSS totals (aim for consistency)</li>
+                    <li>Monitor TSB (should be slightly negative = training)</li>
+                    <li><strong>Goal:</strong> Train by zones, not feel</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Semana 5-6: Sobrecarga Progresiva</h3>
+                <h3>Week 5-6: Progressive Overload</h3>
                 <ul>
-                    <li>Aumentar sTSS semanal 5-10% dari línea base</li>
-                    <li>Añadir 1 sesión umbral (Zona 4) oleh semana</li>
-                    <li>CTL debería subir gradualmente (fitness mejorando)</li>
-                    <li>ATL puede pico di semanas duras (normal)</li>
-                    <li><strong>Objetivo:</strong> Progresión controlada fitness</li>
+                    <li>Increase weekly sTSS by 5-10% from baseline</li>
+                    <li>Add 1 threshold (Zone 4) session per week</li>
+                    <li>CTL should gradually rise (fitness improving)</li>
+                    <li>ATL may spike on hard weeks (normal)</li>
+                    <li><strong>Goal:</strong> Controlled fitness progression</li>
                 </ul>
             </div>
 
             <div class="journey-phase">
-                <h3>Semana 7-8: Re-evaluar dan Ajustar</h3>
+                <h3>Week 7-8: Retest & Adjust</h3>
                 <ul>
-                    <li>Realizar segunda prueba CSS (debería ser lebih dari rápida)</li>
-                    <li>Actualizar zona di app (el ritmo mejora)</li>
-                    <li>Comparar CTL Semana 1 vs Semana 8 (debería ser +10-20)</li>
-                    <li>Revisar progreso: ¿Están bajando tiempos? ¿Se siente lebih dari fácil?</li>
-                    <li><strong>Objetivo:</strong> Validar efectividad latihan</li>
+                    <li>Perform second CSS test (should be faster)</li>
+                    <li>Update zones in app (pace improves)</li>
+                    <li>Compare CTL Week 1 vs Week 8 (should be +10-20)</li>
+                    <li>Review progress: Are times dropping? Feel easier?</li>
+                    <li><strong>Goal:</strong> Validate training effectiveness</li>
                 </ul>
             </div>
         </div>
 
         <div class="callout callout-success mt-xl">
-            <h3>✅ Indicadores Éxito</h3>
-            <p>Setelah 8 semanas latihan estructurado dengan SwimAnalytics, deberías ver:</p>
+            <h3>✅ Success Indicators</h3>
+            <p>After 8 weeks of structured training with SwimAnalytics, you should see:</p>
             <ul>
-                <li><strong>Mejora di CSS:</strong> 1-3% lebih dari rápido di ritmo CSS (ej.: 1:49 → 1:47)</li>
-                <li><strong>Aumento CTL:</strong> +15-25 puntos (ej.: 30 → 50 CTL)</li>
-                <li><strong>sTSS consistente:</strong> Totales semanales dentro 10-15% varianza</li>
-                <li><strong>Mejor dosificación:</strong> Parciales lebih dari uniforbulan, mejor calibración esfuerzo</li>
-                <li><strong>Recuperación mejorada:</strong> TSB cicla predeciblemente (-10 +5)</li>
+                <li><strong>CSS improvement:</strong> 1-3% faster CSS pace (e.g., 1:49 → 1:47)</li>
+                <li><strong>CTL increase:</strong> +15-25 points (e.g., 30 → 50 CTL)</li>
+                <li><strong>Consistent sTSS:</strong> Weekly totals within 10-15% variance</li>
+                <li><strong>Better pacing:</strong> More even splits, better effort calibration</li>
+                <li><strong>Improved recovery:</strong> TSB cycles predictably (-10 to +5)</li>
             </ul>
         </div>
     </div>
@@ -1014,78 +1129,78 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Solución Problemas dan Pertanyaan Umum</h2>
+        <h2>Troubleshooting & FAQs</h2>
 
         <div class="faq-item">
-            <h3>Mi sTSS parece demasiado alto/bajo untuk esfuerzo latihan</h3>
-            <p><strong>Causa:</strong> El CSS adalah desactualizado atau es inexacto.</p>
-            <p><strong>Solución:</strong> Vuelve probar CSS. Si probaste ketika estabas fatigado atau dosificaste mal, CSS será incorrecto. Una prueba CSS adecuada es kritis untuk semua metrik posteriores.</p>
+            <h3>My sTSS seems too high/low for workout effort</h3>
+            <p><strong>Cause:</strong> CSS is outdated or inaccurate.</p>
+            <p><strong>Solution:</strong> Retest CSS. If you tested when fatigued or paced poorly, CSS will be wrong. A proper CSS test is critical for all downstream metrics.</p>
         </div>
 
         <div class="faq-item">
-            <h3>La app muestra "Tidak ada CSS configurado"</h3>
-            <p><strong>Causa:</strong> Prueba CSS tidak completada atau tidak guardada.</p>
-            <p><strong>Solución:</strong> Ve Pengaturan → Critical Swim Speed → Realizar Prueba. Introduce ambos tiempos 400m dan 200m, luego toca Guardar.</p>
+            <h3>App shows "No CSS configured"</h3>
+            <p><strong>Cause:</strong> CSS test not completed or not saved.</p>
+            <p><strong>Solution:</strong> Go to Settings → Critical Swim Speed → Perform Test. Enter both 400m and 200m times, then tap Save.</p>
         </div>
 
         <div class="faq-item">
-            <h3>Los latihans tidak se sincronizan dari Apple Watch</h3>
-            <p><strong>Causa:</strong> Permisos app Health tidak concedidos atau latihan tidak categorizado sebagai "Natación".</p>
-            <p><strong>Solución:</strong> Lihatifica Pengaturan → Privacidad → Salud → SwimAnalytics → Permitir Lectura Latihans. Asegúrate yang tipo latihan di Apple Watch sea "Natación di Piscina" atau "Natación di Aguas Abiertas".</p>
+            <h3>Workouts not syncing from Apple Watch</h3>
+            <p><strong>Cause:</strong> Health app permissions not granted or workout not categorized as "Swimming".</p>
+            <p><strong>Solution:</strong> Check Settings → Privacy → Health → SwimAnalytics → Allow Read for Workouts. Ensure Apple Watch workout type is "Pool Swim" or "Open Water Swim".</p>
         </div>
 
         <div class="faq-item">
-            <h3>El CTL tidak aumenta pesar latihan consistente</h3>
-            <p><strong>Causa:</strong> Totales sTSS demasiado bajos atau frecuencia inconsistente.</p>
-            <p><strong>Solución:</strong> CTL adalah promedio ponderado exponencialmente 42 días. Sube lentamente. Aumenta sTSS semanal 5-10%, dan mantén 4+ latihans/semana untuk crecimiento consistente CTL.</p>
+            <h3>CTL not increasing despite consistent training</h3>
+            <p><strong>Cause:</strong> sTSS totals too low or inconsistent frequency.</p>
+            <p><strong>Solution:</strong> CTL is 42-day exponentially weighted average. It rises slowly. Increase weekly sTSS by 5-10%, and maintain 4+ workouts/week for consistent CTL growth.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Con qué frecuencia debería volver probar CSS?</h3>
-            <p><strong>Recomendación:</strong> Cada 6-8 semanas durante fases base/construcción. Vuelve probar setelah enfermedad, lesión, pausa larga, atau ketika zona se sientan consistentemente demasiado fáciles/difíciles.</p>
+            <h3>How often should I retest CSS?</h3>
+            <p><strong>Recommendation:</strong> Every 6-8 weeks during base/build phases, every 4-6 weeks during peak season. Retest after illness, injury, long break, or when zones feel consistently too easy/hard. Avoid testing during heavy training weeks or within 10 days of competition.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Puedo usar SwimAnalytics untuk otros estilos?</h3>
-            <p><strong>Sí, dengan limitaciones:</strong> El CSS típicamente se prueba di estilo libre. Para latihans IM/espalda/braza, sTSS se calcula basándose di CSS estilo libre. Considera realizar pruebas CSS específicas oleh estilo untuk mayor ketepatan.</p>
+            <h3>Can I use SwimAnalytics for other strokes?</h3>
+            <p><strong>Yes, with limitations:</strong> CSS is typically tested in freestyle. For IM/backstroke/breaststroke workouts, sTSS is calculated based on freestyle CSS. Consider performing stroke-specific CSS tests for more accuracy.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Berikutnyas Pasos</h2>
+        <h2>Next Steps</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Aprenzona Latihan</h3>
+                <h3 class="card-title">Learn Training Zones</h3>
                 <div class="card-content">
-                    <p>Comprende cómo entrenar di Zona 2 (base aeróbica), Zona 4 (umbral) dan Zona 5 (VO₂máx) untuk adaptaciones específicas.</p>
-                    <a href="/ms/training-zones/" class="btn btn-secondary btn-small mt-md">Zona Latihan →</a>
+                    <p>Understand how to train in Zone 2 (aerobic base), Zone 4 (threshold), and Zone 5 (VO₂max) for specific adaptations.</p>
+                    <a href="/en/training-zones/" class="btn btn-secondary btn-small mt-md">Training Zones →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Calcular sTSS</h3>
+                <h3 class="card-title">Calculate sTSS</h3>
                 <div class="card-content">
-                    <p>Usa nuestra calculadora gratuita sTSS untuk entender beban latihan antes comprometerte dengan latihans.</p>
-                    <a href="/ms/stss-calculator/" class="btn btn-secondary btn-small mt-md">Calculadora sTSS →</a>
+                    <p>Use our free sTSS calculator to understand training load before committing to workouts.</p>
+                    <a href="/en/stss-calculator/" class="btn btn-secondary btn-small mt-md">sTSS Calculator →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Profundiza di Metrik</h3>
+                <h3 class="card-title">Dive Deeper into Metrics</h3>
                 <div class="card-content">
-                    <p>Explora ciencia detrás CSS, sTSS, CTL/ATL/TSB dengan referencias penelitian ditinjaus oleh pares.</p>
-                    <a href="/ms/research/" class="btn btn-secondary btn-small mt-md">Penelitian →</a>
+                    <p>Explore the science behind CSS, sTSS, CTL/ATL/TSB with peer-reviewed research references.</p>
+                    <a href="/en/research/" class="btn btn-secondary btn-small mt-md">Research →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Listo untuk comenzar hacer pelacakan?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Descarga SwimAnalytics Gratis</a>
-            <p class="mt-sm text-secondary">Uji coba gratis 7 hari • Sin tarjeta crédito • iOS 16+</p>
+            <p class="mb-md"><strong>Ready to start tracking?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Free</a>
+            <p class="mt-sm text-secondary">7-day free trial • No credit card required • iOS 16+</p>
         </div>
     </div>
 </section>
@@ -1527,15 +1642,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

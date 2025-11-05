@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/cs/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,24 +809,24 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Podstawy Naukowe</h1>
-        <p class="lead">Analityka Pływania Oparta na Dowodach</p>
+        <h1>Vědecké Základy</h1>
+        <p class="lead">Plavecká Analytika Založená na Důkazech</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Podejście Oparte na Dowodach</h2>
-        <p class="lead">Każda metryka, formuła i obliczenie w SwimAnalytics jest oparte na recenzowanych badaniach naukowych. Ta strona dokumentuje kluczowe badania, które walidują nasze ramy analityczne.</p>
+        <h2>Přístup Založený na Důkazech</h2>
+        <p class="lead">Každá metrika, vzorec a výpočet v SwimAnalytics je založen na recenzovaném vědeckém výzkumu. Tato stránka dokumentuje klíčové studie, které validují náš analytický rámec.</p>
 
         <div class="callout callout-info">
-            <h3>🔬 Rygor Naukowy</h3>
-            <p>Analityka pływania ewoluowała od podstawowego liczenia długości basenu do wyrafinowanej oceny wydolności wspieranej przez dekady badań w zakresie:</p>
+            <h3>🔬 Vědecká Přísnost</h3>
+            <p>Plavecká analytika se vyvinula od základního počítání délek k sofistikovanému měření výkonnosti podpořenému desetiletími výzkumu v oblastech:</p>
             <ul>
-                <li><strong>Fizjologii Wysiłku</strong> - Progi tlenowy/beztlenowy, VO₂max, dynamika laktatu</li>
-                <li><strong>Biomechaniki</strong> - Mechanika ruchu, propulsja, hydrodynamika</li>
-                <li><strong>Nauk o Sporcie</strong> - Kwantyfikacja obciążenia treningowego, periodyzacja, modelowanie wydolności</li>
-                <li><strong>Informatyki</strong> - Uczenie maszynowe, fuzja sensorów, technologia ubieralna</li>
+                <li><strong>Fyziologie Cvičení</strong> - Aerobní/anaerobní prahy, VO₂max, dynamika laktátu</li>
+                <li><strong>Biomechanika</strong> - Mechanika tahu, propulze, hydrodynamika</li>
+                <li><strong>Sportovní Vědy</strong> - Kvantifikace tréninkové zátěže, periodizace, modelování výkonnosti</li>
+                <li><strong>Informatika</strong> - Strojové učení, fúze senzorů, nositelná technologie</li>
             </ul>
         </div>
     </div>
@@ -719,72 +834,72 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Badania Fundamentalne</h2>
+        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Základní Výzkum</h2>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1992) - Determining Critical Velocity</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
-                <strong>Badanie:</strong> 9 trenowanych pływaków uniwersyteckich
+                <strong>Časopis:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
+                <strong>Studie:</strong> 9 trénovaných univerzitních plavců
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li><strong>Silna korelacja z VO₂ na progu beztlenowym</strong> (r = 0.818)</li>
-                    <li><strong>Doskonała korelacja z prędkością na OBLA</strong> (r = 0.949)</li>
-                    <li><strong>Przewiduje wydolność na 400m</strong> (r = 0.864)</li>
-                    <li>Prędkość krytyczna (vcrit) reprezentuje teoretyczną prędkość pływania możliwą do utrzymania w nieskończoność bez wyczerpania</li>
+                    <li><strong>Silná korelace s VO₂ na anaerobním prahu</strong> (r = 0.818)</li>
+                    <li><strong>Vynikající korelace s rychlostí na OBLA</strong> (r = 0.949)</li>
+                    <li><strong>Předpovídá výkon na 400m</strong> (r = 0.864)</li>
+                    <li>Kritická rychlost (vcrit) představuje teoretickou rychlost plavání udržitelnou nekonečně dlouho bez vyčerpání</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Znaczenie:</h4>
-                <p>Ustanowiło CSS jako ważne i nieinwazyjne zastępstwo dla laboratoryjnych testów laktatu. Wykazało, że proste testy basenowe mogą dokładnie określić próg tlenowy.</p>
+                <h4>Význam:</h4>
+                <p>Ustanovilo CSS jako platnou a neinvazivní náhradu za laboratorní testování laktátu. Prokázalo, že jednoduché bazénové časovky mohou přesně určit aerobní práh.</p>
             </div>
         </div>
 
         <div class="research-paper">
-            <h3>Wakayoshi et al. (1992) - Practical Pool Testing Method</h3>
+            <h3>Wakayoshi et al. (1992) - Praktická Metoda Bazénového Testování</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> International Journal of Sports Medicine, 13(5), 367-371
+                <strong>Časopis:</strong> International Journal of Sports Medicine, 13(5), 367-371
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li><strong>Liniowa relacja między dystansem a czasem</strong> (r² > 0.998)</li>
-                    <li>Testy basenowe dają wyniki równoważne kosztownym urządzeniom z tunelami przepływowymi</li>
-                    <li>Prosty protokół 200m + 400m zapewnia dokładny pomiar prędkości krytycznej</li>
-                    <li>Dostępna metoda dla trenerów na całym świecie bez obiektów laboratoryjnych</li>
+                    <li><strong>Lineární vztah mezi vzdáleností a časem</strong> (r² > 0.998)</li>
+                    <li>Bazénové testy poskytují výsledky ekvivalentní nákladným zařízením s průtokovými tunely</li>
+                    <li>Jednoduchý protokol 200m + 400m zajišťuje přesné měření kritické rychlosti</li>
+                    <li>Dostupná metoda pro trenéry po celém světě bez laboratorních zařízení</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Znaczenie:</h4>
-                <p>Zdemokratyzowało testowanie CSS. Przekształciło je z wyłącznej procedury laboratoryjnej w praktyczne narzędzie, które każdy trener może wdrożyć posiadając jedynie stoper i basen.</p>
+                <h4>Význam:</h4>
+                <p>Demokratizovalo testování CSS. Transformovalo ho z exkluzivní laboratorní procedury na praktický nástroj, který může implementovat každý trenér s pouhými stopkami a bazénem.</p>
             </div>
         </div>
 
         <div class="research-paper">
-            <h3>Wakayoshi et al. (1993) - Lactate Steady State Validation</h3>
+            <h3>Wakayoshi et al. (1993) - Validace Ustáleného Stavu Laktátu</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> European Journal of Applied Physiology, 66(1), 90-95
+                <strong>Časopis:</strong> European Journal of Applied Physiology, 66(1), 90-95
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li>CSS odpowiada <strong>intensywności maksymalnego stanu ustalonego laktatu</strong></li>
-                    <li>Znacząca korelacja z prędkością przy 4 mmol/L laktatu we krwi</li>
-                    <li>Reprezentuje granicę między domeną wysiłku <em>ciężką</em> a <em>bardzo ciężką</em></li>
-                    <li>Zwalidowało CSS jako znaczący próg fizjologiczny dla przepisywania treningu</li>
+                    <li>CSS odpovídá <strong>intenzitě maximálního ustáleného stavu laktátu</strong></li>
+                    <li>Významná korelace s rychlostí při 4 mmol/L laktátu v krvi</li>
+                    <li>Představuje hranici mezi doménou <em>těžkého</em> a <em>velmi těžkého</em> cvičení</li>
+                    <li>Validovalo CSS jako významný fyziologický práh pro předepisování tréninku</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Znaczenie:</h4>
-                <p>Potwierdziło fizjologiczną podstawę CSS. To nie tylko konstrukcja matematyczna—reprezentuje rzeczywisty próg metaboliczny, gdzie produkcja laktatu równa się jego eliminacji.</p>
+                <h4>Význam:</h4>
+                <p>Potvrdilo fyziologický základ CSS. Není to pouze matematická konstrukce—představuje skutečný metabolický práh, kde se produkce laktátu rovná jeho eliminaci.</p>
             </div>
         </div>
     </div>
@@ -792,23 +907,23 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center mb-xl">Kwantyfikacja Obciążenia Treningowego</h2>
+        <h2 class="text-center mb-xl">Kvantifikace Tréninkové Zátěže</h2>
 
         <div class="grid grid-2">
             <div class="research-paper">
                 <h3>Schuller & Rodríguez (2015)</h3>
                 <div class="paper-meta">
-                    <strong>Czasopismo:</strong> European Journal of Sport Science, 15(4)<br>
-                    <strong>Badanie:</strong> 17 elitarnych pływaków, 328 sesji basenowych przez 4 tygodnie
+                    <strong>Časopis:</strong> European Journal of Sport Science, 15(4)<br>
+                    <strong>Studie:</strong> 17 elitních plavců, 328 bazénových sezení během 4 týdnů
                 </div>
 
                 <div class="findings">
-                    <h4>Kluczowe Wnioski:</h4>
+                    <h4>Klíčové Nálezy:</h4>
                     <ul>
-                        <li>Zmodyfikowane obliczenia TRIMP (TRIMPc) były ~9% wyższe niż tradycyjne TRIMP</li>
-                        <li>Obie metody silnie korelowały z RPE sesji (r=0.724 i 0.702)</li>
-                        <li>Większe różnice między metodami przy wyższych intensywnościach obciążenia</li>
-                        <li>TRIMPc uwzględnia zarówno interwały wysiłkowe, jak i odzyskowe w treningu interwałowym</li>
+                        <li>Modifikované výpočty TRIMP (TRIMPc) byly ~9% vyšší než tradiční TRIMP</li>
+                        <li>Obě metody silně korelovaly s RPE sezení (r=0.724 a 0.702)</li>
+                        <li>Větší rozdíly mezi metodami při vyšších intenzitách zátěže</li>
+                        <li>TRIMPc zohledňuje jak pracovní, tak odpočinkové intervaly v intervalovém tréninku</li>
                     </ul>
                 </div>
             </div>
@@ -816,83 +931,83 @@
             <div class="research-paper">
                 <h3>Wallace et al. (2009)</h3>
                 <div class="paper-meta">
-                    <strong>Czasopismo:</strong> Journal of Strength and Conditioning Research<br>
-                    <strong>Fokus:</strong> Walidacja RPE sesji
+                    <strong>Časopis:</strong> Journal of Strength and Conditioning Research<br>
+                    <strong>Zaměření:</strong> Validace RPE sezení
                 </div>
 
                 <div class="findings">
-                    <h4>Kluczowe Wnioski:</h4>
+                    <h4>Klíčové Nálezy:</h4>
                     <ul>
-                        <li>RPE sesji (skala CR-10 × czas trwania) zwalidowane do kwantyfikacji obciążenia treningowego w pływaniu</li>
-                        <li>Prosta implementacja stosowana jednolicie we wszystkich typach treningu</li>
-                        <li>Skuteczna dla pracy w basenie, treningu lądowego i sesji technicznych</li>
-                        <li>Działa nawet tam, gdzie tętno nie odzwierciedla rzeczywistej intensywności</li>
+                        <li>RPE sezení (škála CR-10 × doba trvání) validováno pro kvantifikaci tréninkové zátěže v plavání</li>
+                        <li>Jednoduchá implementace aplikovaná jednotně napříč všemi typy tréninku</li>
+                        <li>Účinné pro bazénovou práci, suchý trénink a technická sezení</li>
+                        <li>Funguje i tam, kde srdeční frekvence neodráží skutečnou intenzitu</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-science">
-            <h3>Uzasadnienie Training Stress Score (TSS)</h3>
-            <p>Chociaż TSS został opracowany przez Dr. Andrew Coggan dla kolarstwa, jego adaptacja do pływania (sTSS) zawiera sześcienny czynnik intensywności (IF³), aby uwzględnić wykładniczy opór wody. Ta modyfikacja odzwierciedla fundamentalną fizykę: siła oporu w wodzie rośnie z kwadratem prędkości, czyniąc wymagania mocy sześciennymi.</p>
+            <h3>Odůvodnění Training Stress Score (TSS)</h3>
+            <p>Ačkoli TSS byl vyvinut Dr. Andrew Cogganem pro cyklistiku, jeho adaptace pro plavání (sTSS) obsahuje kubický faktor intenzity (IF³) pro zohlednění exponenciálního odporu vody. Tato modifikace odráží základní fyziku: síla odporu ve vodě roste s druhou mocninou rychlosti, což činí požadavky na výkon kubickými.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Biomechanika i Analiza Ruchu</h2>
+        <h2 class="text-center mb-xl">Biomechanika a Analýza Pohybu</h2>
 
         <div class="research-paper">
-            <h3>Tiago M. Barbosa (2010) - Performance Determinants</h3>
+            <h3>Tiago M. Barbosa (2010) - Determinanty Výkonnosti</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> Journal of Sports Science and Medicine, 9(1)<br>
-                <strong>Fokus:</strong> Kompleksowe ramy wydolności w pływaniu
+                <strong>Časopis:</strong> Journal of Sports Science and Medicine, 9(1)<br>
+                <strong>Zaměření:</strong> Komplexní rámec výkonnosti v plavání
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li>Wydolność zależy od <strong>generowania propulsji, minimalizacji oporu i ekonomii pływania</strong></li>
-                    <li><strong>Długość ruchu okazała się ważniejszym predyktorem niż częstotliwość ruchu</strong></li>
-                    <li>Efektywność biomechaniczna jest kluczowa dla rozróżnienia poziomów wydolności</li>
-                    <li>Integracja wielu czynników determinuje sukces zawodniczy</li>
+                    <li>Výkonnost závisí na <strong>generování propulze, minimalizaci odporu a ekonomii plavání</strong></li>
+                    <li><strong>Délka tahu se ukázala jako důležitější prediktor než frekvence tahu</strong></li>
+                    <li>Biomechanická efektivita je klíčová pro rozlišení úrovní výkonnosti</li>
+                    <li>Integrace více faktorů určuje závodní úspěch</li>
                 </ul>
             </div>
         </div>
 
         <div class="research-paper">
-            <h3>Huub M. Toussaint (1992) - Front Crawl Biomechanics</h3>
+            <h3>Huub M. Toussaint (1992) - Biomechanika Kraulu</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> Sports Medicine<br>
-                <strong>Fokus:</strong> Kompleksowy przegląd mechaniki kraula
+                <strong>Časopis:</strong> Sports Medicine<br>
+                <strong>Zaměření:</strong> Komplexní přehled mechaniky kraulu
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li>Przeanalizował mechanizmy propulsji i pomiar aktywnego oporu</li>
-                    <li>Skwantyfikował relację między częstotliwością ruchu a długością ruchu</li>
-                    <li>Ustanowił zasady biomechaniczne efektywnej propulsji</li>
-                    <li>Dostarczył ram do optymalizacji techniki</li>
+                    <li>Analyzoval mechanismy propulze a měření aktivního odporu</li>
+                    <li>Kvantifikoval vztah mezi frekvencí tahu a délkou tahu</li>
+                    <li>Ustanovil biomechanické principy efektivní propulze</li>
+                    <li>Poskytl rámec pro optimalizaci techniky</li>
                 </ul>
             </div>
         </div>
 
         <div class="research-paper">
-            <h3>Ludovic Seifert (2007) - Index of Coordination</h3>
+            <h3>Ludovic Seifert (2007) - Index koordinace</h3>
             <div class="paper-meta">
-                <strong>Czasopismo:</strong> Human Movement Science<br>
-                <strong>Innowacja:</strong> Metryka IdC do synchronizacji ruchu
+                <strong>Časopis:</strong> Human Movement Science<br>
+                <strong>Inovace:</strong> Metrika IdC pro synchronizaci tahu
             </div>
 
             <div class="findings">
-                <h4>Kluczowe Wnioski:</h4>
+                <h4>Klíčové Nálezy:</h4>
                 <ul>
-                    <li>Wprowadził Indeks Koordynacji (IdC) do kwantyfikacji relacji czasowych między ruchami</li>
-                    <li>Elitarni pływacy dostosowują wzorce koordynacji do zmian prędkości zachowując efektywność</li>
-                    <li>Strategia koordynacji wpływa na skuteczność propulsji</li>
-                    <li>Technika musi być oceniana dynamicznie, nie tylko przy jednym tempie</li>
+                    <li>Představil Index koordinace (IdC) pro kvantifikaci časových vztahů mezi tahy</li>
+                    <li>Elitní plavci přizpůsobují vzorce koordinace změnám rychlosti při zachování efektivity</li>
+                    <li>Strategie koordinace ovlivňuje účinnost propulze</li>
+                    <li>Technika musí být hodnocena dynamicky, nejen při jednom tempu</li>
                 </ul>
             </div>
         </div>
@@ -1510,15 +1625,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

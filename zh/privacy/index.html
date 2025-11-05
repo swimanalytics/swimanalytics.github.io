@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/zh/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -664,106 +779,106 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">隐私政策</h1>
+        <h1 class="mb-lg">Privacy Policy</h1>
 
-        <p class="text-secondary mb-xl">最后更新：<strong>2024年1月</strong></p>
+        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
 
         <div class="mb-xl">
-            <h2 class="mb-md">简介</h2>
+            <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                本隐私政策描述了我们在您访问我们的网站时如何收集、使用和保护您的个人信息。
+                This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website.
             </p>
             <p class="mb-md">
-                我们致力于保护您的隐私，并确保您的个人信息得到安全和负责任的处理。
+                We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">我们收集的信息</h2>
-            <h3 class="mb-sm">您直接提供的信息：</h3>
+            <h2 class="mb-md">Information We Collect</h2>
+            <h3 class="mb-sm">Information you provide directly:</h3>
             <ul class="mb-md">
-                <li>当您使用我们的联系表单时的联系信息(姓名、电子邮箱)</li>
-                <li>您选择提供的任何其他信息</li>
+                <li>Contact information (name, email) when you use our contact form</li>
+                <li>Any other information you choose to provide</li>
             </ul>
 
-            <h3 class="mb-sm">自动收集的信息：</h3>
+            <h3 class="mb-sm">Information collected automatically:</h3>
             <ul class="mb-md">
-                <li>浏览器类型和版本</li>
-                <li>操作系统</li>
-                <li>访问的页面和在页面上花费的时间</li>
-                <li>IP地址(匿名化)</li>
-            </ul>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">我们如何使用您的信息</h2>
-            <p class="mb-sm">我们使用收集的信息来：</p>
-            <ul class="mb-md">
-                <li>回复您的询问和请求</li>
-                <li>改进我们的网站和服务</li>
-                <li>分析我们网站的使用情况</li>
-                <li>确保我们网站的安全性和完整性</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on pages</li>
+                <li>IP address (anonymized)</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Cookie</h2>
-            <p class="mb-md">
-                我们使用Cookie来增强您在我们网站上的体验。Cookie是存储在您设备上的小文本文件，帮助我们了解您如何使用我们的网站。
-            </p>
-            <p class="mb-sm">我们使用以下类型的Cookie：</p>
+            <h2 class="mb-md">How We Use Your Information</h2>
+            <p class="mb-sm">We use the information we collect to:</p>
             <ul class="mb-md">
-                <li><strong>必需Cookie：</strong>网站正常运行所必需</li>
-                <li><strong>分析Cookie：</strong>帮助我们了解访问者如何与我们的网站互动(仅在您同意的情况下)</li>
+                <li>Respond to your inquiries and requests</li>
+                <li>Improve our website and services</li>
+                <li>Analyze how our website is used</li>
+                <li>Ensure the security and integrity of our website</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Cookies</h2>
+            <p class="mb-md">
+                We use cookies to improve your experience on our website. Cookies are small text files stored on your device that help us understand how you use our site.
+            </p>
+            <p class="mb-sm">We use the following types of cookies:</p>
+            <ul class="mb-md">
+                <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
+                <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website (only with your consent)</li>
             </ul>
             <p class="mb-md">
-                您可以通过浏览器设置控制Cookie。请注意，禁用Cookie可能会影响我们网站的功能。
+                You can control cookies through your browser settings. Please note that disabling cookies may affect the functionality of our website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">第三方服务</h2>
+            <h2 class="mb-md">Third-Party Services</h2>
             <p class="mb-md">
-                我们可能使用Google Analytics等第三方服务来帮助我们分析网站流量。这些服务可能会收集有关您使用我们网站的信息。
+                We may use third-party services such as Google Analytics to help us analyze website traffic. These services may collect information about your use of our website.
             </p>
             <p class="mb-md">
-                这些第三方有自己的隐私政策，我们建议您查看它们。
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">数据安全</h2>
-            <p class="mb-md">
-                我们实施适当的技术和组织措施来保护您的个人信息免受未经授权的访问、更改、披露或销毁。
+                These third parties have their own privacy policies, and we encourage you to review them.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">您的权利</h2>
-            <p class="mb-sm">您有权：</p>
+            <h2 class="mb-md">Data Security</h2>
+            <p class="mb-md">
+                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Your Rights</h2>
+            <p class="mb-sm">You have the right to:</p>
             <ul class="mb-md">
-                <li>访问您的个人信息</li>
-                <li>更正不准确的信息</li>
-                <li>请求删除您的信息</li>
-                <li>撤回对数据处理的同意</li>
-                <li>反对处理您的信息</li>
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Withdraw consent for data processing</li>
+                <li>Object to processing of your information</li>
             </ul>
             <p class="mb-md">
-                要行使这些权利，请使用我们<a href="/zh/contact/">联系页面</a>上提供的信息与我们联系。
+                To exercise these rights, please contact us using the information provided on our <a href="/en/contact/">contact page</a>.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">本政策的变更</h2>
+            <h2 class="mb-md">Changes to This Policy</h2>
             <p class="mb-md">
-                我们可能会不时更新本隐私政策。我们将通过在本页面上发布新政策并更新"最后更新"日期来通知您任何更改。
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated "Last updated" date.
             </p>
         </div>
 
         <div class="callout callout-info">
-            <h2 class="mb-sm">有疑问？</h2>
+            <h2 class="mb-sm">Questions?</h2>
             <p>
-                如果您对本隐私政策有任何疑问，请<a href="/zh/contact/">联系我们</a>。
+                If you have any questions about this Privacy Policy, please <a href="/en/contact/">contact us</a>.
             </p>
         </div>
     </div>
@@ -1206,15 +1321,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

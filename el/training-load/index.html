@@ -6,26 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-    <title>Calcolatore TSS Nuoto: Carico Allenamento e PMC (CTL/ATL/TSB)</title>
-    <meta name="description" content="Impara il calcolo del Training Stress Score (sTSS) e metriche Performance Management Chart (CTL, ATL, TSB). Monitora fitness e fatica scientificamente. Include esempi pratici, obiettivi TSS settimanali e strategie scarico.">
+    <title>Υπολογιστής TSS Κολύμβησης: Φορτίο Προπόνησης και PMC (CTL/ATL/TSB)</title>
+    <meta name="description" content="Μάθετε τον υπολογισμό του Swimming Training Stress Score (sTSS) και τις μετρικές Performance Management Chart (CTL, ATL, TSB). Παρακολουθήστε φυσική κατάσταση και κόπωση επιστημονικά. Περιλαμβάνει παραδείγματα, εβδομαδιαίους στόχους TSS και στρατηγικές taper.">
     <meta name="author" content="Albert Arno">
     
-    <meta name="keywords" content="TSS nuoto, calcolatore sTSS, training stress score, CTL ATL TSB, PMC nuoto">
+    <meta name="keywords" content="TSS κολύμβησης, υπολογιστής sTSS, training stress score, CTL ATL TSB, PMC κολύμβησης">
     
     <link rel="canonical" href="https://swimanalytics.app/el/training-load/">
 
     
     
-    <meta property="article:published_time" content="2025-10-12T10:00:00Z">
-    <meta property="article:modified_time" content="2025-10-12T14:30:00Z">
+    <meta property="article:published_time" content="2025-01-15T10:00:00Z">
+    <meta property="article:modified_time" content="2025-10-08T14:30:00Z">
     <meta property="article:author" content="Albert Arno">
     
 
     
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://swimanalytics.app/el/training-load/">
-    <meta property="og:title" content="Calcolatore TSS Nuoto: Carico Allenamento e PMC (CTL/ATL/TSB)">
-    <meta property="og:description" content="Impara il calcolo del Training Stress Score (sTSS) e metriche Performance Management Chart (CTL, ATL, TSB). Monitora fitness e fatica scientificamente. Include esempi pratici, obiettivi TSS settimanali e strategie scarico.">
+    <meta property="og:title" content="Υπολογιστής TSS Κολύμβησης: Φορτίο Προπόνησης και PMC (CTL/ATL/TSB)">
+    <meta property="og:description" content="Μάθετε τον υπολογισμό του Swimming Training Stress Score (sTSS) και τις μετρικές Performance Management Chart (CTL, ATL, TSB). Παρακολουθήστε φυσική κατάσταση και κόπωση επιστημονικά. Περιλαμβάνει παραδείγματα, εβδομαδιαίους στόχους TSS και στρατηγικές taper.">
     <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="SwimAnalytics">
@@ -33,8 +33,8 @@
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://swimanalytics.app/el/training-load/">
-    <meta name="twitter:title" content="Calcolatore TSS Nuoto: Carico Allenamento e PMC (CTL/ATL/TSB)">
-    <meta name="twitter:description" content="Impara il calcolo del Training Stress Score (sTSS) e metriche Performance Management Chart (CTL, ATL, TSB). Monitora fitness e fatica scientificamente. Include esempi pratici, obiettivi TSS settimanali e strategie scarico.">
+    <meta name="twitter:title" content="Υπολογιστής TSS Κολύμβησης: Φορτίο Προπόνησης και PMC (CTL/ATL/TSB)">
+    <meta name="twitter:description" content="Μάθετε τον υπολογισμό του Swimming Training Stress Score (sTSS) και τις μετρικές Performance Management Chart (CTL, ATL, TSB). Παρακολουθήστε φυσική κατάσταση και κόπωση επιστημονικά. Περιλαμβάνει παραδείγματα, εβδομαδιαίους στόχους TSS και στρατηγικές taper.">
     <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
     
     <meta name="twitter:site" content="@swimanalytics">
@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -212,8 +321,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "headline": "Calcolatore TSS Nuoto: Carico Allenamento e PMC (CTL/ATL/TSB)",
-      "description": "Impara il calcolo del Training Stress Score (sTSS) e metriche Performance Management Chart (CTL, ATL, TSB). Monitora fitness e fatica scientificamente. Include esempi pratici, obiettivi TSS settimanali e strategie scarico.",
+      "headline": "Υπολογιστής TSS Κολύμβησης: Φορτίο Προπόνησης και PMC (CTL/ATL/TSB)",
+      "description": "Μάθετε τον υπολογισμό του Swimming Training Stress Score (sTSS) και τις μετρικές Performance Management Chart (CTL, ATL, TSB). Παρακολουθήστε φυσική κατάσταση και κόπωση επιστημονικά. Περιλαμβάνει παραδείγματα, εβδομαδιαίους στόχους TSS και στρατηγικές taper.",
       "author": {
         "@type": "Person",
         "name": "Albert Arno"
@@ -226,8 +335,8 @@
           "url": "https://swimanalytics.app/assets/images/logo.png"
         }
       },
-      "datePublished": "2025-10-12T10:00:00Z",
-      "dateModified": "2025-10-12T14:30:00Z",
+      "datePublished": "2025-01-15T10:00:00Z",
+      "dateModified": "2025-10-08T14:30:00Z",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://swimanalytics.app/el/training-load/"
@@ -297,7 +406,13 @@
             
             <a href="/el/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,17 +809,17 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Carico de Allenamento y Gestión del Prestazione</h1>
-        <p class="lead">Cuantificando el Estrés, Monitorizando la Forma Física, Optimizando el Prestazione</p>
+        <h1>Φορτίο Προπόνησης και Διαχείριση Απόδοσης</h1>
+        <p class="lead">Ποσοτικοποιώντας το Στρες, Παρακολουθώντας τη Φυσική Κατάσταση, Βελτιστοποιώντας την Απόδοση</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Comprendiendo la Carico de Allenamento</h2>
-        <p class="lead">La cuantificación de la carico de allenamento responde a la pregunta crítica: <strong>¿Cuán duro fue ese allenamento?</strong> No solo distancia o tiempo, sino el verdadero estrés fisiológico impuesto en tu cuerpo.</p>
+        <h2>Κατανοώντας το Φορτίο Προπόνησης</h2>
+        <p class="lead">Η ποσοτικοποίηση του φορτίου προπόνησης απαντά στην κρίσιμη ερώτηση: <strong>Πόσο σκληρή ήταν αυτή η προπόνηση;</strong> Όχι μόνο απόσταση ή χρόνος, αλλά το πραγματικό φυσιολογικό στρες που επιβλήθηκε στο σώμα σας.</p>
 
-        <p>El sistema de Training Stress Score (TSS), desarrollado por el Dr. Andrew Coggan, proporciona un método estandarizado para cuantificar la intensidad y duración del allenamento en un único número. Para nuoto, usamos <strong>Swim Training Stress Score (sTSS)</strong> con una modificación crucial que tiene en cuenta las propiedades únicas de resistencia del agua.</p>
+        <p>Το σύστημα Training Stress Score (TSS), που αναπτύχθηκε από τον Dr. Andrew Coggan, παρέχει μια τυποποιημένη μέθοδο για την ποσοτικοποίηση της έντασης και διάρκειας της προπόνησης σε έναν μόνο αριθμό. Για την κολύμβηση, χρησιμοποιούμε το <strong>Swim Training Stress Score (sTSS)</strong> με μια κρίσιμη τροποποίηση που λαμβάνει υπόψη τις μοναδικές ιδιότητες αντίστασης του νερού.</p>
 
         <div class="callout callout-info">
             <h3>El Estándar TSS</h3>
@@ -1618,15 +1733,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

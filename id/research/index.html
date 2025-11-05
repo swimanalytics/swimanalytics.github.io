@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/id/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,24 +809,24 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Dasar Penelitian Científica</h1>
-        <p class="lead">Analitik Renang Basada di Evidencia</p>
+        <h1>Scientific Research Foundation</h1>
+        <p class="lead">Evidence-Based Swimming Analytics</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Enfoyang berdasarkan Evidencia</h2>
-        <p class="lead">Cada métrica, fórmula dan cálculo di SwimAnalytics adalah fundamentado di penelitian científica ditinjau oleh pares. Esta página documenta estudios fundamentales yang validan nuestro marco analítico.</p>
+        <h2>Evidence-Based Approach</h2>
+        <p class="lead">Every metric, formula, and calculation in SwimAnalytics is grounded in peer-reviewed scientific research. This page documents the foundational studies that validate our analytical framework.</p>
 
         <div class="callout callout-info">
-            <h3>🔬 Rigor Ilmiah</h3>
-            <p>La analítica renang ha evoluciorenang dari conteo básico largos hingga medición sofisticada performa respaldada oleh décadas penelitian en:</p>
+            <h3>🔬 Scientific Rigor</h3>
+            <p>Swimming analytics has evolved from basic lap counting to sophisticated performance measurement backed by decades of research in:</p>
             <ul>
-                <li><strong>Fisiología Ejercicio</strong> - Umbrales aeróbico/anaeróbico, VO₂max, dinámica lactato</li>
-                <li><strong>Biomecánica</strong> - Mecánica kayuhan, propulsión, hidrodinámica</li>
-                <li><strong>Ciencias Deporte</strong> - Cuantificación beban latihan, periodización, modelado performa</li>
-                <li><strong>Informática</strong> - Aprendizaje automático, fusión sensores, tecnología wearable</li>
+                <li><strong>Exercise Physiology</strong> - Aerobic/anaerobic thresholds, VO₂max, lactate dynamics</li>
+                <li><strong>Biomechanics</strong> - Stroke mechanics, propulsion, hydrodynamics</li>
+                <li><strong>Sports Science</strong> - Training load quantification, periodization, performance modeling</li>
+                <li><strong>Computer Science</strong> - Machine learning, sensor fusion, wearable technology</li>
             </ul>
         </div>
     </div>
@@ -719,72 +834,72 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Penelitian Fundamental</h2>
+        <h2 class="text-center mb-xl">Critical Swim Speed (CSS) - Foundational Research</h2>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1992) - Determining Critical Velocity</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
-                <strong>Estudio:</strong> 9 nadadoradalahiversitarios entrerenangs
+                <strong>Journal:</strong> European Journal of Applied Physiology, 64(2), 153-157<br>
+                <strong>Study:</strong> 9 trained college swimmers
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>Fuerte correlación dengan VO₂ di umbral anaeróbico</strong> (r = 0.818)</li>
-                    <li><strong>Excelente correlación dengan kecepatan di OBLA</strong> (r = 0.949)</li>
-                    <li><strong>Predice performa di 400m</strong> (r = 0.864)</li>
-                    <li>La kecepatan kritis (vcrit) representa kecepatan renang teórica mantenible indefinidamente tanpa agotamiento</li>
+                    <li><strong>Strong correlation with VO₂ at anaerobic threshold</strong> (r = 0.818)</li>
+                    <li><strong>Excellent correlation with velocity at OBLA</strong> (r = 0.949)</li>
+                    <li><strong>Predicts 400m performance</strong> (r = 0.864)</li>
+                    <li>Critical velocity (vcrit) represents theoretical swimming velocity maintainable indefinitely without exhaustion</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Significado:</h4>
-                <p>Estableció CSS sebagai proxy válido dan tidak invasivo untuk pruebas lactato di laboratorio. Demostró yang pruebas simples berdasarkan piscina pueden determinar dengan ketepatan umbral aeróbico.</p>
+                <h4>Significance:</h4>
+                <p>Established CSS as a valid, non-invasive proxy for laboratory lactate testing. Proved that simple pool-based time trials can accurately determine aerobic threshold.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1992) - Practical Pool Testing Method</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> International Journal of Sports Medicine, 13(5), 367-371
+                <strong>Journal:</strong> International Journal of Sports Medicine, 13(5), 367-371
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>Relación lineal entre distancia dan tiempo</strong> (r² > 0.998)</li>
-                    <li>Las pruebas di piscina producen resultados equivalentes equipos canal flujo costosos</li>
-                    <li>El protocolo simple 200m + 400m proporciona medición precisa kecepatan kritis</li>
-                    <li>Método accesible untuk pelatih di semua dunia tanpa instalaciones laboratorio</li>
+                    <li><strong>Linear relationship between distance and time</strong> (r² > 0.998)</li>
+                    <li>Pool-based testing yields equivalent results to expensive flume equipment</li>
+                    <li>Simple 200m + 400m protocol provides accurate critical velocity measurement</li>
+                    <li>Method accessible to coaches worldwide without laboratory facilities</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Significado:</h4>
-                <p>Democratizó pruebas CSS. Lo transformó procedimiento exclusivo laboratorio herramienta práctica yang apa pun entrerenangr puede implementar dengan solo cronómetro dan piscina.</p>
+                <h4>Significance:</h4>
+                <p>Democratized CSS testing. Transformed it from a lab-only procedure to a practical tool any coach can implement with just a stopwatch and pool.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Wakayoshi et al. (1993) - Lactate Steady State Validation</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> European Journal of Applied Physiology, 66(1), 90-95
+                <strong>Journal:</strong> European Journal of Applied Physiology, 66(1), 90-95
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>El CSS corresponde <strong>intensidad estado estable lactato máximo</strong></li>
-                    <li>Correlación significativa dengan kecepatan 4 mmol/L lactato di sangre</li>
-                    <li>Representa límite entre dominios ejercicio <em>pesado</em> dan <em>severo</em></li>
-                    <li>Validó CSS sebagai umbral fisiológico significativo untuk prescripción latihan</li>
+                    <li>CSS corresponds to <strong>maximal lactate steady state intensity</strong></li>
+                    <li>Significant correlation with velocity at 4 mmol/L blood lactate</li>
+                    <li>Represents boundary between <em>heavy</em> and <em>severe</em> exercise domains</li>
+                    <li>Validated CSS as meaningful physiological threshold for training prescription</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Significado:</h4>
-                <p>Confirmó base fisiológica CSS. No es solo construcción matemática—representa umbral metabólico real donde producción lactato iguala eliminación.</p>
+                <h4>Significance:</h4>
+                <p>Confirmed the physiological basis of CSS. It's not just a mathematical construct—it represents real metabolic threshold where lactate production equals clearance.</p>
             </div>
         </div>
     </div>
@@ -792,23 +907,23 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center mb-xl">Cuantificación Beban Latihan</h2>
+        <h2 class="text-center mb-xl">Training Load Quantification</h2>
 
         <div class="grid grid-2">
             <div class="research-paper">
                 <h3>Schuller & Rodríguez (2015)</h3>
                 <div class="paper-meta">
-                    <strong>Revista:</strong> European Journal of Sport Science, 15(4)<br>
-                    <strong>Estudio:</strong> 17 nadadores élite, 328 sesi di piscina durante 4 semanas
+                    <strong>Journal:</strong> European Journal of Sport Science, 15(4)<br>
+                    <strong>Study:</strong> 17 elite swimmers, 328 pool sessions over 4 weeks
                 </div>
 
                 <div class="findings">
-                    <h4>Hallazgos Clave:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>El cálculo modificado TRIMP (TRIMPc) fue ~9% lebih dari alto yang TRIMP tradicional</li>
-                        <li>Ambos mésemua correlacionaron fuertemente dengan RPE sesión (r=0.724 dan 0.702)</li>
-                        <li>Mayores diferencias entre mésemua di intensidades carga trabajo lebih dari altas</li>
-                        <li>TRIMPc tiene di cuenta tanto intervalos ejercicio sebagai recuperación di latihan oleh intervalos</li>
+                        <li>Modified TRIMP calculation (TRIMPc) ran ~9% higher than traditional TRIMP</li>
+                        <li>Both methods strongly correlated with session-RPE (r=0.724 and 0.702)</li>
+                        <li>Greater inter-method differences at higher workload intensities</li>
+                        <li>TRIMPc accounts for both exercise and recovery intervals in interval training</li>
                     </ul>
                 </div>
             </div>
@@ -816,47 +931,47 @@
             <div class="research-paper">
                 <h3>Wallace et al. (2009)</h3>
                 <div class="paper-meta">
-                    <strong>Revista:</strong> Journal of Strength and Conditioning Research<br>
-                    <strong>Enfoque:</strong> Validación RPE sesión
+                    <strong>Journal:</strong> Journal of Strength and Conditioning Research<br>
+                    <strong>Focus:</strong> Session-RPE validation
                 </div>
 
                 <div class="findings">
-                    <h4>Hallazgos Clave:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>RPE sesión (escala CR-10 × duración) validado untuk cuantificar beban latihan renang</li>
-                        <li>Implementasi simple aplicable uniformemente di semua tipos latihan</li>
-                        <li>Efectivo untuk trabajo di piscina, latihan di seco dan sesi técnicas</li>
-                        <li>Funciona incluso donde frecuencia cardíaca tidak representa intensidad real</li>
+                        <li>Session-RPE (CR-10 scale × duration) validated for quantifying swimming training load</li>
+                        <li>Simple implementation applicable uniformly across all training types</li>
+                        <li>Effective for pool work, dryland training, and technique sessions</li>
+                        <li>Works even where heart rate doesn't represent true intensity</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-science">
-            <h3>Dasar Training Stress Score (TSS)</h3>
-            <p>Aunyang TSS fue dikembangkando oleh Dr. Andrew Coggan untuk ciclismo, su adaptación renang (sTSS) incorpora factor intensidad cúbico (IF³) untuk tener di cuenta resistencia exponencial agua. Esta modificación refleja física fundamental: fuerza arrastre di agua aumenta dengan cuadrado kecepatan, haciendo yang requisitos potencia sean cúbicos.</p>
+            <h3>Training Stress Score (TSS) Foundation</h3>
+            <p>While TSS was developed by Dr. Andrew Coggan for cycling, its adaptation to swimming (sTSS) incorporates the cubic intensity factor (IF³) to account for water's exponential resistance. This modification reflects fundamental physics: drag force in water increases with the square of velocity, making power requirements cubic.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Biomecánica dan Análisis Kayuhan</h2>
+        <h2 class="text-center mb-xl">Biomechanics & Stroke Analysis</h2>
 
         <div class="research-paper">
             <h3>Tiago M. Barbosa (2010) - Performance Determinants</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> Journal of Sports Science and Medicine, 9(1)<br>
-                <strong>Enfoque:</strong> Marco integral untuk performa di renang
+                <strong>Journal:</strong> Journal of Sports Science and Medicine, 9(1)<br>
+                <strong>Focus:</strong> Comprehensive framework for swimming performance
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>El performa depende <strong>generación propulsión, minimización arrastre dan economía renang</strong></li>
-                    <li><strong>La longitud kayuhan surgió sebagai predictor lebih dari importante yang frecuencia kayuhan</strong></li>
-                    <li>La efisiensi biomecánica es kritis untuk distinguir niveles performa</li>
-                    <li>La integración múltiples factores determina éxito competitivo</li>
+                    <li>Performance depends on <strong>propulsion generation, drag minimization, and swimming economy</strong></li>
+                    <li><strong>Stroke length emerged as more important predictor than stroke rate</strong></li>
+                    <li>Biomechanical efficiency critical for distinguishing performance levels</li>
+                    <li>Integration of multiple factors determines competitive success</li>
                 </ul>
             </div>
         </div>
@@ -864,17 +979,17 @@
         <div class="research-paper">
             <h3>Huub M. Toussaint (1992) - Front Crawl Biomechanics</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> Sports Medicine<br>
-                <strong>Enfoque:</strong> Revisión integral mecánica crol
+                <strong>Journal:</strong> Sports Medicine<br>
+                <strong>Focus:</strong> Comprehensive review of freestyle mechanics
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Analizó mecanismos propulsión dan medición arrastre activo</li>
-                    <li>Cuantificó relación entre frecuencia kayuhan dan longitud kayuhan</li>
-                    <li>Estableció principios biomecánicos propulsión eficiente</li>
-                    <li>Proporcionó marco untuk optimización técnica</li>
+                    <li>Analyzed propulsion mechanisms and active drag measurement</li>
+                    <li>Quantified relationship between stroke rate and stroke length</li>
+                    <li>Established biomechanical principles of efficient propulsion</li>
+                    <li>Provided framework for technique optimization</li>
                 </ul>
             </div>
         </div>
@@ -882,17 +997,17 @@
         <div class="research-paper">
             <h3>Ludovic Seifert (2007) - Index of Coordination</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> Human Movement Science<br>
-                <strong>Innovación:</strong> Métrica IdC untuk sincronización kayuhan
+                <strong>Journal:</strong> Human Movement Science<br>
+                <strong>Innovation:</strong> IdC metric for arm stroke timing
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Introdujo Índice Coordinación (IdC) untuk cuantificar relaciones temporales entre kayuhans</li>
-                    <li>Los nadadores élite adaptan patrones coordinación dengan cambios kecepatan mientras mantienen efisiensi</li>
-                    <li>La estrategia coordinación impacta efectividad propulsión</li>
-                    <li>La técnica debe evaluarse dinámicamente, tidak solo solo ritmo</li>
+                    <li>Introduced Index of Coordination (IdC) for quantifying temporal relationships between arm strokes</li>
+                    <li>Elite swimmers adapt coordination patterns with speed changes while maintaining efficiency</li>
+                    <li>Coordination strategy impacts propulsion effectiveness</li>
+                    <li>Technique must be assessed dynamically, not just at single pace</li>
                 </ul>
             </div>
         </div>
@@ -901,45 +1016,45 @@
 
 <section class="section">
     <div class="container">
-        <h2 class="text-center mb-xl">Economía Natación dan Coste Energético</h2>
+        <h2 class="text-center mb-xl">Swimming Economy & Energy Cost</h2>
 
         <div class="grid grid-2">
             <div class="research-paper">
                 <h3>Costill et al. (1985)</h3>
                 <div class="paper-meta">
-                    <strong>Revista:</strong> International Journal of Sports Medicine<br>
-                    <strong>Hallazgo Histórico:</strong> Economía > VO₂max
+                    <strong>Journal:</strong> International Journal of Sports Medicine<br>
+                    <strong>Landmark Finding:</strong> Economy > VO₂max
                 </div>
 
                 <div class="findings">
-                    <h4>Hallazgos Clave:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li><strong>La economía renang es lebih dari importante yang VO₂max untuk performa distancias rata-ratas</strong></li>
-                        <li>Los terbaik nadadores demostraron costes energéticos lebih dari bajos kecepatanes dadas</li>
-                        <li>La efisiensi mecánica kayuhan es kritis untuk predicción performa</li>
-                        <li>La competencia técnica separa nadadores élite buenos nadadores</li>
+                        <li><strong>Swimming economy more important than VO₂max for middle-distance performance</strong></li>
+                        <li>Better swimmers demonstrated lower energy costs at given velocities</li>
+                        <li>Stroke mechanics efficiency critical for performance prediction</li>
+                        <li>Technical proficiency separates elite from good swimmers</li>
                     </ul>
                 </div>
 
                 <div class="significance">
-                    <h4>Significado:</h4>
-                    <p>Cambió enfoyang capacidad aeróbica pura efisiensi. Destacó importancia trabajo técnico dan economía kayuhan untuk ganancias performa.</p>
+                    <h4>Significance:</h4>
+                    <p>Shifted focus from pure aerobic capacity to efficiency. Highlighted importance of technique work and stroke economy for performance gains.</p>
                 </div>
             </div>
 
             <div class="research-paper">
                 <h3>Fernandes et al. (2003)</h3>
                 <div class="paper-meta">
-                    <strong>Revista:</strong> Journal of Human Kinetics<br>
-                    <strong>Enfoque:</strong> Límite tiempo kecepatan VO₂max
+                    <strong>Journal:</strong> Journal of Human Kinetics<br>
+                    <strong>Focus:</strong> Time limit at VO₂max velocity
                 </div>
 
                 <div class="findings">
-                    <h4>Hallazgos Clave:</h4>
+                    <h4>Key Findings:</h4>
                     <ul>
-                        <li>Rangos TLim-vVO₂max: 215-260s (élite), 230-260s (alto nivel), 310-325s (bajo nivel)</li>
-                        <li>La economía renang adalah directamente relacionada dengan TLim-vVO₂max</li>
-                        <li>Mejor economía = tiempo sostenible lebih dari largo al ritmo aeróbico máximo</li>
+                        <li>TLim-vVO₂max ranges: 215-260s (elite), 230-260s (high-level), 310-325s (low-level)</li>
+                        <li>Swimming economy directly related to TLim-vVO₂max</li>
+                        <li>Better economy = longer sustainable time at maximum aerobic pace</li>
                     </ul>
                 </div>
             </div>
@@ -949,51 +1064,51 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Sensores Wearable dan Tecnología</h2>
+        <h2 class="text-center mb-xl">Wearable Sensors & Technology</h2>
 
         <div class="research-paper">
             <h3>Mooney et al. (2016) - IMU Technology Review</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> Sensors (Revisión Sistemática)<br>
-                <strong>Enfoque:</strong> Unidades Medición Inercial di renang élite
+                <strong>Journal:</strong> Sensors (Systematic Review)<br>
+                <strong>Focus:</strong> Inertial Measurement Units in elite swimming
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li>Los IMU miden efectivamente frecuencia kayuhan, conteo kayuhans, kecepatan renang, rotación corporal, patrones respiración</li>
-                    <li>Buena concordancia dengan analitik video (adalahndar oro)</li>
-                    <li>Representa tecnología emergente untuk retroalimentación di tiempo real</li>
-                    <li>Potencial untuk democratizar analitik biomecánico yang anteriormente requería equipos laboratorio costosos</li>
+                    <li>IMUs effectively measure stroke rate, stroke count, swim speed, body rotation, breathing patterns</li>
+                    <li>Good agreement against video analysis (gold standard)</li>
+                    <li>Represents emerging technology for real-time feedback</li>
+                    <li>Potential for democratizing biomechanical analysis previously requiring expensive lab equipment</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Significado:</h4>
-                <p>Validó tecnología wearable sebagai científicamente rigurosa. Abrió camino untuk yang dispositivos consumo (Garmin, Apple Watch, FORM) proporcionen metrik calidad laboratorio.</p>
+                <h4>Significance:</h4>
+                <p>Validated wearable technology as scientifically rigorous. Opened path for consumer devices (Garmin, Apple Watch, FORM) to provide lab-quality metrics.</p>
             </div>
         </div>
 
         <div class="research-paper">
             <h3>Silva et al. (2021) - Machine Learning for Stroke Detection</h3>
             <div class="paper-meta">
-                <strong>Revista:</strong> Sensors<br>
-                <strong>Innovación:</strong> Clasificación Random Forest dengan 95.02% ketepatan
+                <strong>Journal:</strong> Sensors<br>
+                <strong>Innovation:</strong> Random Forest classification achieving 95.02% accuracy
             </div>
 
             <div class="findings">
-                <h4>Hallazgos Clave:</h4>
+                <h4>Key Findings:</h4>
                 <ul>
-                    <li><strong>95.02% ketepatan di clasificación kayuhan</strong> dari sensores wearables</li>
-                    <li>Pengakuan di línea estilo renang dan giros dengan retroalimentación di tiempo real</li>
-                    <li>Entrerenang dengan ~8,000 muestras 10 atlet durante latihan real</li>
-                    <li>Proporciona conteo kayuhans dan cálculos kecepatan promedio automáticamente</li>
+                    <li><strong>95.02% accuracy in stroke classification</strong> from wearable sensors</li>
+                    <li>Online recognition of swimming style and turns with real-time feedback</li>
+                    <li>Trained on ~8,000 samples from 10 athletes during actual training</li>
+                    <li>Provides stroke counting and average speed calculations automatically</li>
                 </ul>
             </div>
 
             <div class="significance">
-                <h4>Significado:</h4>
-                <p>Demostró yang aprendizaje automático puede lograr ketepatan casi perfecta di detección kayuhans, permitiendo analítica renang automatizada e inteligente dispositivos consumo.</p>
+                <h4>Significance:</h4>
+                <p>Demonstrated that machine learning can achieve near-perfect stroke detection accuracy, enabling automated, intelligent swimming analytics in consumer devices.</p>
             </div>
         </div>
     </div>
@@ -1001,43 +1116,43 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Investigadores Destacados</h2>
+        <h2>Leading Researchers</h2>
 
         <div class="researchers-grid">
             <div class="researcher-card">
                 <h3>Tiago M. Barbosa</h3>
-                <p class="institution">Instituto Politécnico Braganza, Portugal</p>
-                <p><strong>Lebih dari 100 publicaciones</strong> tentang biomecánica dan modelado performa. Estableció marcos integraladalahtuk comprender determinantes performa di renang.</p>
+                <p class="institution">Polytechnic Institute of Bragança, Portugal</p>
+                <p><strong>100+ publications</strong> on biomechanics and performance modeling. Established comprehensive frameworks for understanding swimming performance determinants.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ernest W. Maglischo</h3>
                 <p class="institution">Arizona State University</p>
-                <p>Autor <em>"Swimming Fastest"</em>, texto definitivo tentang ciencia renang. Ganó 13 campeonatos NCAA sebagai entrerenangr.</p>
+                <p>Author of <em>"Swimming Fastest"</em>, the definitive text on swimming science. Won 13 NCAA championships as coach.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Kohji Wakayoshi</h3>
                 <p class="institution">Osaka University</p>
-                <p>Desarrolló concepto kecepatan kritis renang. Tres artículos históricos (1992-1993) establecieron CSS sebagai adalahndar oro untuk pruebas umbral.</p>
+                <p>Developed critical swimming velocity concept. Three landmark papers (1992-1993) established CSS as gold standard for threshold testing.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Huub M. Toussaint</h3>
                 <p class="institution">Vrije Universiteit Amsterdam</p>
-                <p>Experto di medición propulsión dan arrastre. Pionero mésemua untuk cuantificar arrastre activo dan efisiensi kayuhan.</p>
+                <p>Expert on propulsion and drag measurement. Pioneered methods for quantifying active drag and stroke efficiency.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ricardo J. Fernandes</h3>
-                <p class="institution">Universidad Porto</p>
-                <p>Especialista di cinética VO₂ dan energética renang. Avanzó comprensión respuestas metabólicas al latihan renang.</p>
+                <p class="institution">University of Porto</p>
+                <p>VO₂ kinetics and swimming energetics specialist. Advanced understanding of metabolic responses to swimming training.</p>
             </div>
 
             <div class="researcher-card">
                 <h3>Ludovic Seifert</h3>
-                <p class="institution">Universidad Rouen</p>
-                <p>Experto di control motor dan coordinación. Desarrolló Índice Coordinación (IdC) dan mésemua avanzados analitik kayuhan.</p>
+                <p class="institution">University of Rouen</p>
+                <p>Motor control and coordination expert. Developed Index of Coordination (IdC) and advanced stroke analysis methods.</p>
             </div>
         </div>
     </div>
@@ -1045,30 +1160,30 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Implementaciones Plataformas Modernas</h2>
+        <h2>Modern Platform Implementations</h2>
 
         <div class="platform-research">
             <h3>Apple Watch Swimming Analytics</h3>
-            <p>Los ingenieros Apple grabaron <strong>lebih dari 700 nadadores di lebih dari 1,500 sesi</strong> incluyendo al campeón olímpico Michael Phelps hingga principiantes. Este conjunto data latihan diverso permite yang algoritmos analicen trayectoria muñeca usando giroscopio dan acelerómetro trabajando di conjunto, logrando alta ketepatan di semua niveles habilidad.</p>
+            <p>Apple engineers recorded <strong>700+ swimmers across 1,500+ sessions</strong> including Olympic champion Michael Phelps to beginners. This diverse training dataset enables algorithms to analyze wrist trajectory using gyroscope and accelerometer working in tandem, achieving high accuracy across all skill levels.</p>
 
             <h3>FORM Smart Goggles Machine Learning</h3>
-            <p>El IMU montado di cabeza FORM proporciona detección giro superior al capturar rotación cabeza dengan mayor ketepatan yang dispositivos montados di muñeca. Sus modelos ML entrerenangs personalizados procesan cientos horas video renang etiquetado alineado dengan data sensores, permitiendo <strong>predicciones di tiempo real di menos 1 segundo</strong> dengan ketepatan ±2 segundos.</p>
+            <p>FORM's head-mounted IMU provides superior turn detection by capturing head rotation more accurately than wrist-mounted devices. Their custom-trained ML models process hundreds of hours of labeled swimming video aligned with sensor data, enabling <strong>real-time predictions in under 1 second</strong> with ±2 second accuracy.</p>
 
             <h3>Garmin Multi-Band GPS Innovation</h3>
-            <p>La recepción satelital doble frecuencia (bandas L1 + L5) proporciona <strong>10X mayor potencia señal</strong>, mejorando dramáticamente ketepatan di aguas abiertas. Las reseñas elogian modelos Garmin multibanda oleh producir pelacakan "aterradoramente preciso" alrededor boyas, abordando desafío histórico ketepatan GPS untuk renang.</p>
+            <p>Dual-frequency satellite reception (L1 + L5 bands) provides <strong>10X greater signal strength</strong>, dramatically improving open water accuracy. Reviews praise multi-band Garmin models as producing "scary-accurate" tracking around buoys, addressing the historical challenge of GPS accuracy for swimming.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow text-center">
-        <h2>La Ciencia Impulsa Performa</h2>
-        <p class="lead">SwimAnalytics se apoya di hombros décadas penelitian científica rigurosa. Cada fórmula, métrica dan cálculo ha sido validado través estudios revisados oleh pares publicados di revistas líderes ilmu olahraga.</p>
+        <h2>Science Drives Performance</h2>
+        <p class="lead">SwimAnalytics stands on the shoulders of decades of rigorous scientific research. Every formula, metric, and calculation has been validated through peer-reviewed studies published in leading sports science journals.</p>
 
-        <p>Este fundamento berdasarkan evidencia asegura yang conocimientos yang obtienes tidak son solo números—son indicadores científicamente significativos adaptación fisiológica, efisiensi biomecánica dan perkembanganl performa.</p>
+        <p>This evidence-based foundation ensures that the insights you gain are not just numbers—they're scientifically meaningful indicators of physiological adaptation, biomechanical efficiency, and performance progression.</p>
 
         <div class="mt-xl">
-            <a href="/id/bibliography/" class="btn btn-primary btn-large">Lihat Bibliografía Completa →</a>
+            <a href="/en/bibliography/" class="btn btn-primary btn-large">View Complete Bibliography →</a>
         </div>
     </div>
 </section>
@@ -1510,15 +1625,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

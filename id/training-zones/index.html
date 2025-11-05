@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/id/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,99 +809,99 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Zona Latihan Natación - Guía Intensidad Basada di CSS</h1>
-        <p class="lead">Domina 5 zona latihan untuk renang - Personalizadas Anda Kecepatan Kritis Natación</p>
+        <h1>Swimming Training Zones - CSS-Based Intensity Guide</h1>
+        <p class="lead">Master the 5 training zones for swimming - Personalized to your Critical Swim Speed</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué Son Zona Latihan Natación?</h2>
-            <p><strong>Las zona latihan</strong> son rangos intensidad científicamente definidos berdasarkans di Anda <strong>Kecepatan Kritis Natación (CSS)</strong>—kecepatan ambang aerobik Anda. Cada zona desencadena adaptaciones fisiológicas específicas, dari construcción base aeróbica (Zona 2) hingga pengembangan VO₂max (Zona 5). Las zona latihan eliminan conjeturas dan aseguran yang setiap latihan tenga propósito claro.</p>
+            <h2>What Are Swimming Training Zones?</h2>
+            <p><strong>Training zones</strong> are scientifically defined intensity ranges based on your <strong>Critical Swim Speed (CSS)</strong>—your aerobic threshold pace. Each zone triggers specific physiological adaptations, from aerobic base building (Zone 2) to VO₂max development (Zone 5). Training zones eliminate guesswork and ensure every workout has a clear purpose.</p>
         </div>
 
-        <h2 class="mt-2xl">Por Qué Funciona Latihan oleh Zona</h2>
+        <h2 class="mt-2xl">Why Zone-Based Training Works</h2>
 
-        <p class="mb-md">Entrenar oleh "sensación" atau tablas ritmo genéricas falla porque:</p>
+        <p class="mb-md">Training by "feel" or generic pace charts fails because:</p>
 
         <ul class="mb-xl">
-            <li><strong>La fisiología individual varía:</strong> Un ritmo 1:40/100m es fácil untuk nadadores élite pero máximo untuk principiantes</li>
-            <li><strong>El RPE tidak es fiable:</strong> El esfuerzo percibido cambia dengan fatiga, hidratación dan condiciones</li>
-            <li><strong>Los ritmos genéricos fallan Anda umbral:</strong> Los latihans adalahndar ignoran Anda umbral lactato único</li>
-            <li><strong>Sin especificidad adaptación:</strong> Ritmos aleatorios producen resultados aleatorios</li>
+            <li><strong>Individual physiology varies:</strong> A 1:40/100m pace is easy for elite swimmers but maximal for beginners</li>
+            <li><strong>RPE is unreliable:</strong> Perceived effort changes with fatigue, hydration, and conditions</li>
+            <li><strong>Generic paces miss your threshold:</strong> Cookie-cutter workouts ignore your unique lactate threshold</li>
+            <li><strong>No adaptation specificity:</strong> Random paces produce random results</li>
         </ul>
 
-        <p class="mb-xl"><strong>Las zona berdasarkan CSS resuelven esto</strong> personalizando setiap intensidad TU fisiología. Un latihan Zona 2 desencadena adaptaciones aeróbicas tanto jika Anda CSS es 1:20/100m sebagai 2:00/100m.</p>
+        <p class="mb-xl"><strong>CSS-based zones solve this</strong> by personalizing every intensity to YOUR physiology. A Zone 2 workout triggers aerobic adaptations whether your CSS is 1:20/100m or 2:00/100m.</p>
 
         <div class="callout callout-tip">
-            <h3>🎯 Principio Clave: Relación Inversa</h3>
-            <p>En renang, ritmo se mide sebagai <strong>tiempo oleh distancia</strong>. Por tanto:</p>
+            <h3>🎯 Key Principle: Inverse Relationship</h3>
+            <p>In swimming, pace is measured as <strong>time per distance</strong>. Therefore:</p>
             <ul>
-                <li><strong>Mayor % CSS = ritmo MÁS LENTO</strong> (lebih dari fácil, Zona 1-2)</li>
-                <li><strong>Menor % CSS = ritmo MÁS RÁPIDO</strong> (lebih dari difícil, Zona 4-5)</li>
+                <li><strong>Higher % of CSS = SLOWER pace</strong> (easier, Zone 1-2)</li>
+                <li><strong>Lower % of CSS = FASTER pace</strong> (harder, Zone 4-5)</li>
             </ul>
-            <p class="mb-0">Esto es <em>inverso al ciclismo/carrera</em> donde mayor % = lebih dari difícil. Piensa: "ritmo 108% CSS" = 8% lebih dari lento yang umbral.</p>
+            <p class="mb-0">This is <em>inverse to cycling/running</em> where higher % = harder. Think: "108% CSS pace" = 8% slower than threshold.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl text-center">Las 5 Zona Latihan Natación</h2>
+        <h2 class="mb-xl text-center">The 5 Swimming Training Zones</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Zona</th>
-                        <th>Nama</th>
-                        <th>% Ritmo CSS</th>
-                        <th>Ejemplo untuk CSS 1:40/100m</th>
+                        <th>Zone</th>
+                        <th>Name</th>
+                        <th>% of CSS Pace</th>
+                        <th>Example for CSS 1:40/100m</th>
                         <th>RPE</th>
-                        <th>Propósito Fisiológico</th>
+                        <th>Physiological Purpose</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="zone-1">
                         <td><strong>1</strong></td>
-                        <td>Recuperación</td>
+                        <td>Recovery</td>
                         <td>&gt;108%</td>
                         <td>&gt;1:48/100m</td>
                         <td>2-3/10</td>
-                        <td>Recuperación activa, refinamiento técnico, calentamiento/enfriamiento</td>
+                        <td>Active recovery, technique refinement, warm-up/cool-down</td>
                     </tr>
                     <tr class="zone-2">
                         <td><strong>2</strong></td>
-                        <td>Base Aeróbica</td>
+                        <td>Aerobic Base</td>
                         <td>104-108%</td>
                         <td>1:44-1:48/100m</td>
                         <td>4-5/10</td>
-                        <td>Construir capacidad aeróbica, densidad mitocondrial, oxidación grasas</td>
+                        <td>Build aerobic capacity, mitochondrial density, fat oxidation</td>
                     </tr>
                     <tr class="zone-3">
                         <td><strong>3</strong></td>
-                        <td>Tempo/Punto Óptimo</td>
+                        <td>Tempo/Sweet Spot</td>
                         <td>99-103%</td>
                         <td>1:39-1:43/100m</td>
                         <td>6-7/10</td>
-                        <td>Adaptación al ritmo carrera, efisiensi neuromuscular</td>
+                        <td>Race pace adaptation, neuromuscular efficiency</td>
                     </tr>
                     <tr class="zone-4">
                         <td><strong>4</strong></td>
-                        <td>Umbral (CSS)</td>
+                        <td>Threshold (CSS)</td>
                         <td>96-100%</td>
                         <td>1:36-1:40/100m</td>
                         <td>7-8/10</td>
-                        <td>Mejora umbral lactato, intensidad alta sostenida</td>
+                        <td>Lactate threshold improvement, sustained high intensity</td>
                     </tr>
                     <tr class="zone-5">
                         <td><strong>5</strong></td>
-                        <td>VO₂max/Anaeróbico</td>
+                        <td>VO₂max/Anaerobic</td>
                         <td>&lt;96%</td>
                         <td>&lt;1:36/100m</td>
                         <td>9-10/10</td>
-                        <td>Pengembangan VO₂max, potencia, tolerancia al lactato</td>
+                        <td>VO₂max development, power, lactate tolerance</td>
                     </tr>
                 </tbody>
             </table>
@@ -796,185 +911,185 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Zona 1: Recuperación</h2>
+        <h2>Zone 1: Recovery</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-1-badge">Zona 1</span>
-                <span class="zone-pace">&gt;108% ritmo CSS</span>
+                <span class="zone-badge zone-1-badge">Zone 1</span>
+                <span class="zone-pace">&gt;108% of CSS pace</span>
                 <span class="zone-rpe">RPE 2-3/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p>Recuperación activa, trabajo técnico, calentamiento, enfriamiento. La Zona 1 promueve flujo sanguíneo untuk reparación muscular tanpa crear stres latihan adicional. No se usa untuk ganancias condición física—puramente regenerativa.</p>
+            <h3>Purpose</h3>
+            <p>Active recovery, technique work, warm-up, cool-down. Zone 1 promotes blood flow for muscle repair without creating additional training stress. Not used for fitness gains—purely regenerative.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Physiological Markers</h3>
             <ul>
-                <li>Frecuencia cardíaca: 50-60% máximo</li>
-                <li>Lactato: &lt;1.5 mmol/L (muy oleh debajo umbral)</li>
-                <li>Respiración: Respiración nasal posible, ritmo conversacional</li>
-                <li>Sensación: Sin esfuerzo, podrías mantenerlo indefinidamente</li>
+                <li>Heart rate: 50-60% of maximum</li>
+                <li>Lactate: &lt;1.5 mmol/L (well below threshold)</li>
+                <li>Breathing: Nasal breathing possible, conversational pace</li>
+                <li>Feel: Effortless, could maintain indefinitely</li>
             </ul>
 
-            <h3>Latihans Ejemplo</h3>
+            <h3>Example Workouts</h3>
             <div class="workout-example">
-                <h4>Sesión Recuperación</h4>
+                <h4>Recovery Session</h4>
                 <ul>
-                    <li>500m renang continuo @ Zona 1 (enfoque: kayuhan suave)</li>
-                    <li>10×25 ejercicios técnicos (alcance, remo, solo brazo) @ esfuerzo Zona 1</li>
-                    <li>300m pull dengan pull buoy @ Zona 1</li>
+                    <li>500m continuous swim @ Zone 1 (focus: smooth stroke)</li>
+                    <li>10×25 drills (catch-up, sculling, single-arm) @ Zone 1 effort</li>
+                    <li>300m pull with buoy @ Zone 1</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>10-20% volumen total</strong> (calentamientos, enfriamientos, renangs recuperación di días libres)</p>
+            <h3>Weekly Volume</h3>
+            <p><strong>10-20% of total volume</strong> (warm-ups, cool-downs, off-day recovery swims)</p>
         </div>
 
-        <h2 class="mt-3xl">Zona 2: Base Aeróbica</h2>
+        <h2 class="mt-3xl">Zone 2: Aerobic Base</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-2-badge">Zona 2</span>
-                <span class="zone-pace">104-108% ritmo CSS</span>
+                <span class="zone-badge zone-2-badge">Zone 2</span>
+                <span class="zone-pace">104-108% of CSS pace</span>
                 <span class="zone-rpe">RPE 4-5/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p><strong>Dasar semua latihan resistencia.</strong> La Zona 2 construye densidad mitocondrial, redes capilares, capacidad oxidación grasas dan enzimas aeróbicas. Aquí es donde se construye condición aeróbica—la zona "aburrida" yang produce campeones.</p>
+            <h3>Purpose</h3>
+            <p><strong>Foundation of all endurance training.</strong> Zone 2 builds mitochondrial density, capillary networks, fat oxidation capacity, and aerobic enzymes. This is where aerobic fitness is constructed—the "boring" zone that produces champions.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Physiological Markers</h3>
             <ul>
-                <li>Frecuencia cardíaca: 60-75% máximo</li>
-                <li>Lactato: 1.5-2.5 mmol/L (por debajo primer umbral lactato)</li>
-                <li>Respiración: Rítmica, cómoda, puedes hablar di frases</li>
-                <li>Sensación: Cómodo, sostenible durante 60+ minutos</li>
+                <li>Heart rate: 60-75% of maximum</li>
+                <li>Lactate: 1.5-2.5 mmol/L (below first lactate threshold)</li>
+                <li>Breathing: Rhythmic, comfortable, can speak in sentences</li>
+                <li>Feel: Comfortable, sustainable for 60+ minutes</li>
             </ul>
 
-            <h3>Latihans Ejemplo</h3>
+            <h3>Example Workouts</h3>
             <div class="workout-example">
-                <h4>Sesión Resistencia Aeróbica</h4>
+                <h4>Aerobic Endurance Session</h4>
                 <ul>
-                    <li>3000m continuo @ ritmo Zona 2</li>
-                    <li>20×100 @ ritmo Zona 2 (10s descanso)</li>
-                    <li>5×400 @ ritmo Zona 2 (20s descanso)</li>
+                    <li>3000m continuous @ Zone 2 pace</li>
+                    <li>20×100 @ Zone 2 pace (10s rest)</li>
+                    <li>5×400 @ Zone 2 pace (20s rest)</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>60-70% volumen total</strong> (zona lebih dari kritis untuk pengembangan condición física)</p>
+            <h3>Weekly Volume</h3>
+            <p><strong>60-70% of total volume</strong> (most critical zone for fitness development)</p>
 
             <div class="callout callout-warning mt-md">
-                <h4>⚠️ Error Común: Entrenar Demasiado Fuerte</h4>
-                <p>La mayoría nadadores entrenan Zona 2 demasiado rápido, empujando hacia Zona 3-4. Esto crea fatiga kronis tanpa construir base aeróbica. La Zona 2 debe sentirse <em>fácil</em>—deberías terminar sintiendo yang podrías hacer más.</p>
+                <h4>⚠️ Common Mistake: Training Too Hard</h4>
+                <p>Most swimmers train Zone 2 too fast, pushing into Zone 3-4. This creates chronic fatigue without building aerobic base. Zone 2 should feel <em>easy</em>—you should finish feeling like you could do more.</p>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Zona 3: Tempo / Punto Óptimo</h2>
+        <h2 class="mt-3xl">Zone 3: Tempo / Sweet Spot</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-3-badge">Zona 3</span>
-                <span class="zone-pace">99-103% ritmo CSS</span>
+                <span class="zone-badge zone-3-badge">Zone 3</span>
+                <span class="zone-pace">99-103% of CSS pace</span>
                 <span class="zone-rpe">RPE 6-7/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p>Adaptación al ritmo carrera untuk pruebas rata-rata distancia (400m-1500m). La Zona 3 entrena efisiensi neuromuscular kecepatanes carrera sostenibles. También conocida sebagai latihan "Punto Óptimo"—lebih dari difícil yang base, lebih dari fácil yang umbral, dengan buenas adaptaciones aeróbicas oleh unidad fatiga.</p>
+            <h3>Purpose</h3>
+            <p>Race pace adaptation for middle-distance events (400m-1500m). Zone 3 trains neuromuscular efficiency at sustainable race speeds. Also known as "Sweet Spot" training—harder than base, easier than threshold, with good aerobic adaptations per unit of fatigue.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Physiological Markers</h3>
             <ul>
-                <li>Frecuencia cardíaca: 75-85% máximo</li>
-                <li>Lactato: 2.5-4.0 mmol/L (acercándose al umbral)</li>
-                <li>Respiración: Controlada pero elevada, solo frases cortas</li>
-                <li>Sensación: Cómodamente difícil, sostenible durante 20-40 minutos</li>
+                <li>Heart rate: 75-85% of maximum</li>
+                <li>Lactate: 2.5-4.0 mmol/L (approaching threshold)</li>
+                <li>Breathing: Controlled but elevated, short phrases only</li>
+                <li>Feel: Comfortably hard, sustainable for 20-40 minutes</li>
             </ul>
 
-            <h3>Latihans Ejemplo</h3>
+            <h3>Example Workouts</h3>
             <div class="workout-example">
-                <h4>Sesión Tempo</h4>
+                <h4>Tempo Session</h4>
                 <ul>
-                    <li>10×200 @ ritmo Zona 3 (15s descanso)</li>
-                    <li>3×800 @ ritmo Zona 3 (30s descanso)</li>
-                    <li>2000m fracciorenang (500-400-300-400-500) @ ritmo Zona 3 (20s descanso entre series)</li>
+                    <li>10×200 @ Zone 3 pace (15s rest)</li>
+                    <li>3×800 @ Zone 3 pace (30s rest)</li>
+                    <li>2000m broken (500-400-300-400-500) @ Zone 3 pace (20s rest between sets)</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>15-20% volumen total</strong> (clave untuk preparación específica carrera)</p>
+            <h3>Weekly Volume</h3>
+            <p><strong>15-20% of total volume</strong> (key for race-specific preparation)</p>
         </div>
 
-        <h2 class="mt-3xl">Zona 4: Umbral (Ritmo CSS)</h2>
+        <h2 class="mt-3xl">Zone 4: Threshold (CSS Pace)</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-4-badge">Zona 4</span>
-                <span class="zone-pace">96-100% ritmo CSS</span>
+                <span class="zone-badge zone-4-badge">Zone 4</span>
+                <span class="zone-pace">96-100% of CSS pace</span>
                 <span class="zone-rpe">RPE 7-8/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p><strong>Latihan umbral lactato—la "zona valiosa".</strong> La Zona 4 eleva Anda umbral anaeróbico, mejorando Anda capacidad untuk eliminar lactato dan sostener esfuerzos alta intensidad. Este es Anda ritmo CSS—la kecepatan lebih dari rápida yang puedes mantener durante ~30 minutos tanpa agotamiento.</p>
+            <h3>Purpose</h3>
+            <p><strong>Lactate threshold training—the "money zone."</strong> Zone 4 pushes your anaerobic threshold higher, improving your ability to clear lactate and sustain high-intensity efforts. This is your CSS pace—the fastest speed you can maintain for ~30 minutes without exhaustion.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Physiological Markers</h3>
             <ul>
-                <li>Frecuencia cardíaca: 85-92% máximo</li>
-                <li>Lactato: 4.0-6.0 mmol/L (estado estable máximo lactato)</li>
-                <li>Respiración: Dura, laboriosa, solo palabras sueltas</li>
-                <li>Sensación: Muy duro, sostenible durante 20-30 minutos máximo</li>
+                <li>Heart rate: 85-92% of maximum</li>
+                <li>Lactate: 4.0-6.0 mmol/L (maximal lactate steady state)</li>
+                <li>Breathing: Hard, labored, single words only</li>
+                <li>Feel: Very hard, sustainable for 20-30 minutes maximum</li>
             </ul>
 
-            <h3>Latihans Ejemplo</h3>
+            <h3>Example Workouts</h3>
             <div class="workout-example">
-                <h4>Sesión Umbral</h4>
+                <h4>Threshold Session</h4>
                 <ul>
-                    <li>8×100 @ ritmo CSS (15s descanso) — serie clásica CSS</li>
-                    <li>5×200 @ 101% CSS (20s descanso)</li>
-                    <li>3×400 @ 103% CSS (30s descanso)</li>
-                    <li>1500m contrarreloj continuo @ ritmo CSS</li>
+                    <li>8×100 @ CSS pace (15s rest) — classic CSS set</li>
+                    <li>5×200 @ 101% CSS (20s rest)</li>
+                    <li>3×400 @ 103% CSS (30s rest)</li>
+                    <li>1500m continuous time trial @ CSS pace</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>10-15% volumen total</strong> (alto stres latihan, requiere recuperación adecuada)</p>
+            <h3>Weekly Volume</h3>
+            <p><strong>10-15% of total volume</strong> (high training stress, requires adequate recovery)</p>
 
             <div class="callout callout-tip mt-md">
-                <h4>💡 Consejo Pro: Usa sTSS untuk Gestionar Carga Zona 4</h4>
-                <p>Los latihans Zona 4 generan 150-250 sTSS oleh sesión. Rastrea totales semanaladalahtuk evitar tentanglatihan. Limita trabajo Zona 4 2-3 sesi oleh semana máximo durante fases construcción.</p>
+                <h4>💡 Pro Tip: Use sTSS to Manage Zone 4 Load</h4>
+                <p>Zone 4 workouts generate 150-250 sTSS per session. Track weekly totals to avoid overtraining. Limit Zone 4 work to 2-3 sessions per week maximum during build phases.</p>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Zona 5: VO₂max / Anaeróbico</h2>
+        <h2 class="mt-3xl">Zone 5: VO₂max / Anaerobic</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-5-badge">Zona 5</span>
-                <span class="zone-pace">&lt;96% ritmo CSS (lebih dari rápido yang CSS)</span>
+                <span class="zone-badge zone-5-badge">Zone 5</span>
+                <span class="zone-pace">&lt;96% of CSS pace (faster than CSS)</span>
                 <span class="zone-rpe">RPE 9-10/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p>Pengembangan VO₂max, capacidad anaeróbica, tolerancia al lactato dan potencia neuromuscular. La Zona 5 entrena Anda cuerpo untuk producir dan tolerar altos niveles lactato. Se usa untuk pruebas sprint (50m-200m) dan pengembangan kecepatan máxima.</p>
+            <h3>Purpose</h3>
+            <p>VO₂max development, anaerobic capacity, lactate tolerance, and neuromuscular power. Zone 5 trains your body to produce and tolerate high lactate levels. Used for sprint events (50m-200m) and developing top-end speed.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Physiological Markers</h3>
             <ul>
-                <li>Frecuencia cardíaca: 92-100% máximo</li>
-                <li>Lactato: 6.0-15+ mmol/L (acumulación severa)</li>
-                <li>Respiración: Máxima, jadeante, tanpa conversación posible</li>
-                <li>Sensación: Esfuerzo total, sostenible solo durante 2-8 minutos</li>
+                <li>Heart rate: 92-100% of maximum</li>
+                <li>Lactate: 6.0-15+ mmol/L (severe accumulation)</li>
+                <li>Breathing: Maximal, gasping, no conversation possible</li>
+                <li>Feel: All-out effort, sustainable for 2-8 minutes only</li>
             </ul>
 
-            <h3>Latihans Ejemplo</h3>
+            <h3>Example Workouts</h3>
             <div class="workout-example">
-                <h4>Sesión VO₂max</h4>
+                <h4>VO₂max Session</h4>
                 <ul>
-                    <li>12×50 @ esfuerzo máximo (30s descanso)</li>
-                    <li>6×100 @ ritmo carrera 200m (60s descanso)</li>
-                    <li>4×200 @ ritmo 94% CSS (90s descanso)</li>
-                    <li>20×25 sprint total (15s descanso)</li>
+                    <li>12×50 @ max effort (30s rest)</li>
+                    <li>6×100 @ 200m race pace (60s rest)</li>
+                    <li>4×200 @ 94% CSS pace (90s rest)</li>
+                    <li>20×25 all-out sprint (15s rest)</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>5-10% volumen total</strong> (coste fatiga lebih dari alto, usar dengan moderación)</p>
+            <h3>Weekly Volume</h3>
+            <p><strong>5-10% of total volume</strong> (highest fatigue cost, use sparingly)</p>
 
             <div class="callout callout-warning mt-md">
-                <h4>⚠️ Recuperación Kritis</h4>
-                <p>El trabajo Zona 5 es extremadamente exigente. Requiere 48-72 horas recuperación entre sesi. NO acumules latihans Zona 5 di días consecutivos. Rastrea CTL/ATL/TSB untuk asegurar recuperación adecuada.</p>
+                <h4>⚠️ Recovery Critical</h4>
+                <p>Zone 5 work is extremely taxing. Requires 48-72 hours recovery between sessions. Do NOT stack Zone 5 workouts on consecutive days. Track CTL/ATL/TSB to ensure adequate recovery.</p>
             </div>
         </div>
     </div>
@@ -982,61 +1097,61 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl">Distribución Semanal Latihan oleh Nivel Atleta</h2>
+        <h2 class="mb-xl">Weekly Training Distribution by Athlete Level</h2>
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Nadadores Recreativos / Fitness</h3>
+                <h3 class="card-title">Recreational / Fitness Swimmers</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Volumen Total:</strong> 6,000-12,000m/semana (2-3 sesi)</p>
+                    <p class="mb-md"><strong>Total Volume:</strong> 6,000-12,000m/week (2-3 sessions)</p>
                     <ul>
-                        <li><strong>Zona 1:</strong> 15% (calentamiento/enfriamiento)</li>
-                        <li><strong>Zona 2:</strong> 70% (construir base aeróbica)</li>
-                        <li><strong>Zona 3:</strong> 10% (tempo ocasional)</li>
-                        <li><strong>Zona 4:</strong> 5% (trabajo umbral limitado)</li>
-                        <li><strong>Zona 5:</strong> 0% (no necesario todavía)</li>
+                        <li><strong>Zone 1:</strong> 15% (warm-up/cool-down)</li>
+                        <li><strong>Zone 2:</strong> 70% (build aerobic base)</li>
+                        <li><strong>Zone 3:</strong> 10% (occasional tempo)</li>
+                        <li><strong>Zone 4:</strong> 5% (limited threshold work)</li>
+                        <li><strong>Zone 5:</strong> 0% (not needed yet)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Masters Competitivos</h3>
+                <h3 class="card-title">Competitive Masters Swimmers</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Volumen Total:</strong> 15,000-25,000m/semana (4-6 sesi)</p>
+                    <p class="mb-md"><strong>Total Volume:</strong> 15,000-25,000m/week (4-6 sessions)</p>
                     <ul>
-                        <li><strong>Zona 1:</strong> 15% (renangs recuperación)</li>
-                        <li><strong>Zona 2:</strong> 60% (fundamento aeróbico)</li>
-                        <li><strong>Zona 3:</strong> 15% (trabajo ritmo carrera)</li>
-                        <li><strong>Zona 4:</strong> 8% (sesi umbral)</li>
-                        <li><strong>Zona 5:</strong> 2% (pengembangan kecepatan)</li>
+                        <li><strong>Zone 1:</strong> 15% (recovery swims)</li>
+                        <li><strong>Zone 2:</strong> 60% (aerobic foundation)</li>
+                        <li><strong>Zone 3:</strong> 15% (race pace work)</li>
+                        <li><strong>Zone 4:</strong> 8% (threshold sessions)</li>
+                        <li><strong>Zone 5:</strong> 2% (speed development)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Triatlet (Enfoyang Natación)</h3>
+                <h3 class="card-title">Triathletes (Swim Focus)</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Volumen Total:</strong> 10,000-18,000m/semana (3-4 sesi)</p>
+                    <p class="mb-md"><strong>Total Volume:</strong> 10,000-18,000m/week (3-4 sessions)</p>
                     <ul>
-                        <li><strong>Zona 1:</strong> 10% (calentamiento/técnica)</li>
-                        <li><strong>Zona 2:</strong> 75% (maximizar efisiensi aeróbica)</li>
-                        <li><strong>Zona 3:</strong> 10% (simulación carrera)</li>
-                        <li><strong>Zona 4:</strong> 5% (limitado—preservar energía untuk ciclismo/carrera)</li>
-                        <li><strong>Zona 5:</strong> 0% (no relevante untuk carreras resistencia)</li>
+                        <li><strong>Zone 1:</strong> 10% (warm-up/technique)</li>
+                        <li><strong>Zone 2:</strong> 75% (maximize aerobic efficiency)</li>
+                        <li><strong>Zone 3:</strong> 10% (race simulation)</li>
+                        <li><strong>Zone 4:</strong> 5% (limited—preserve energy for bike/run)</li>
+                        <li><strong>Zone 5:</strong> 0% (not relevant for endurance racing)</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Nadadores Élite / Universitarios</h3>
+                <h3 class="card-title">Elite / Collegiate Swimmers</h3>
                 <div class="card-content">
-                    <p class="mb-md"><strong>Volumen Total:</strong> 40,000-70,000m/semana (10-12 sesi)</p>
+                    <p class="mb-md"><strong>Total Volume:</strong> 40,000-70,000m/week (10-12 sessions)</p>
                     <ul>
-                        <li><strong>Zona 1:</strong> 20% (recuperación esencial dengan alto volumen)</li>
-                        <li><strong>Zona 2:</strong> 50% (mantenimiento base aeróbica)</li>
-                        <li><strong>Zona 3:</strong> 15% (especificidad ritmo carrera)</li>
-                        <li><strong>Zona 4:</strong> 10% (pengembangan umbral)</li>
-                        <li><strong>Zona 5:</strong> 5% (potencia dan kecepatan)</li>
+                        <li><strong>Zone 1:</strong> 20% (recovery essential at high volume)</li>
+                        <li><strong>Zone 2:</strong> 50% (aerobic base maintenance)</li>
+                        <li><strong>Zone 3:</strong> 15% (race pace specificity)</li>
+                        <li><strong>Zone 4:</strong> 10% (threshold development)</li>
+                        <li><strong>Zone 5:</strong> 5% (power and speed)</li>
                     </ul>
                 </div>
             </div>
@@ -1046,64 +1161,64 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Cómo Calcular Tus Zona Latihan Personales</h2>
+        <h2>How to Calculate Your Personal Training Zones</h2>
 
-        <p class="mb-md">Tus zona latihan adalahn personalizadas TU Kecepatan Kritis Natación. Aquí adalah cómo calcularlas:</p>
+        <p class="mb-md">Your training zones are personalized to YOUR Critical Swim Speed. Here's how to calculate them:</p>
 
-        <h3>Paso 1: Realizar Test CSS</h3>
-        <p class="mb-md">Completa contrarreloj 400m dan 200m dengan 5-10 minutos recuperación entre esfuerzos. <a href="/id/css/">Aprende protocolo completo test CSS →</a></p>
+        <h3>Step 1: Perform CSS Test</h3>
+        <p class="mb-md">Complete a 400m and 200m time trial with 5-10 minutes recovery between efforts. <a href="/en/css/">Learn the full CSS testing protocol →</a></p>
 
-        <h3>Paso 2: Calcular Ritmo CSS</h3>
+        <h3>Step 2: Calculate CSS Pace</h3>
         <div class="example-box">
-            <p><strong>Ejemplo:</strong></p>
+            <p><strong>Example:</strong></p>
             <ul>
-                <li>Waktu 400m: 6:08 (368 segundos)</li>
-                <li>Waktu 200m: 2:30 (150 segundos)</li>
+                <li>400m time: 6:08 (368 seconds)</li>
+                <li>200m time: 2:30 (150 seconds)</li>
             </ul>
-            <p class="mt-md">Ritmo CSS = (T₄₀₀ - T₂₀₀) / 2<br>
-            Ritmo CSS = (368 - 150) / 2 = 109 segundos = <strong>1:49/100m</strong></p>
+            <p class="mt-md">CSS Pace = (T₄₀₀ - T₂₀₀) / 2<br>
+            CSS Pace = (368 - 150) / 2 = 109 seconds = <strong>1:49/100m</strong></p>
         </div>
 
-        <h3 class="mt-lg">Paso 3: Calcular Ritmos Zona</h3>
-        <p class="mb-md">Multiplica ritmo CSS oleh porcentajes zona:</p>
+        <h3 class="mt-lg">Step 3: Calculate Zone Paces</h3>
+        <p class="mb-md">Multiply CSS pace by zone percentages:</p>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Zona</th>
-                        <th>Rango %</th>
-                        <th>Cálculo (CSS = 1:49/100m)</th>
-                        <th>Rango Ritmo Zona</th>
+                        <th>Zone</th>
+                        <th>% Range</th>
+                        <th>Calculation (CSS = 1:49/100m)</th>
+                        <th>Zone Pace Range</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="zone-1">
-                        <td><strong>Zona 1</strong></td>
+                        <td><strong>Zone 1</strong></td>
                         <td>&gt;108%</td>
                         <td>109 × 1.08 = 118s</td>
                         <td>&gt;1:58/100m</td>
                     </tr>
                     <tr class="zone-2">
-                        <td><strong>Zona 2</strong></td>
+                        <td><strong>Zone 2</strong></td>
                         <td>104-108%</td>
                         <td>109 × 1.04-1.08 = 113-118s</td>
                         <td>1:53-1:58/100m</td>
                     </tr>
                     <tr class="zone-3">
-                        <td><strong>Zona 3</strong></td>
+                        <td><strong>Zone 3</strong></td>
                         <td>99-103%</td>
                         <td>109 × 0.99-1.03 = 108-112s</td>
                         <td>1:48-1:52/100m</td>
                     </tr>
                     <tr class="zone-4">
-                        <td><strong>Zona 4</strong></td>
+                        <td><strong>Zone 4</strong></td>
                         <td>96-100%</td>
                         <td>109 × 0.96-1.00 = 105-109s</td>
                         <td>1:45-1:49/100m</td>
                     </tr>
                     <tr class="zone-5">
-                        <td><strong>Zona 5</strong></td>
+                        <td><strong>Zone 5</strong></td>
                         <td>&lt;96%</td>
                         <td>109 × 0.96 = 105s</td>
                         <td>&lt;1:45/100m</td>
@@ -1113,81 +1228,81 @@
         </div>
 
         <div class="callout callout-tip mt-lg">
-            <h3>⚡ Obtén Cálculo Automático Zona</h3>
-            <p>Usa nuestra <a href="/id/css/">calculadora CSS gratuita</a> untuk obtener instantáneamente Anda zona latihan yang dipersonalisasi. Introduce Anda tiempos 400m dan 200m, dan calcularemos CSS + semua 5 rangos zona automáticamente.</p>
+            <h3>⚡ Get Automatic Zone Calculation</h3>
+            <p>Use our <a href="/en/css/">free CSS calculator</a> to instantly get your personalized training zones. Enter your 400m and 200m times, and we'll calculate CSS + all 5 zone ranges automatically.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Pertanyaan Umum tentang Zona Latihan</h2>
+        <h2>Training Zone FAQs</h2>
 
         <div class="faq-item">
-            <h3>¿Con qué frecuencia debo volver testar mi CSS untuk actualizar zona?</h3>
-            <p>Cada <strong>6-8 semanas</strong> durante fases base dan construcción. Anda CSS debería mejorar (hacerse lebih dari rápido) medida yang aumenta condición física, requiriendo ajustes zona. Vuelve testar setelah enfermedad, lesión atau descansos largos.</p>
+            <h3>How often should I retest my CSS to update zones?</h3>
+            <p>Every <strong>6-8 weeks</strong> during base and build phases. Your CSS should improve (get faster) as fitness increases, requiring zone adjustments. Retest after illness, injury, or long breaks.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Puedo mezclar zona di solo latihan?</h3>
-            <p><strong>Sí—la mayoría latihans son multizona.</strong> Ejemplo: 400m calentamiento Zona 1 + 8×100 umbral Zona 4 + 300m enfriamiento Zona 1. La clave es selección intencional zona, tidak nadar accidentalmente di "zona rata-rata".</p>
+            <h3>Can I mix zones in a single workout?</h3>
+            <p><strong>Yes—most workouts are multi-zone.</strong> Example: 400m Zone 1 warm-up + 8×100 Zone 4 threshold + 300m Zone 1 cool-down. The key is intentional zone selection, not accidental "middle zone" swimming.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Qué pasa jika tidak puedo mantener ritmo zona?</h3>
-            <p>Si tidak puedes mantener ritmo zona prescrito, entonces: (1) Anda CSS adalah desactualizado (demasiado rápido), (2) adalahs fatigado (revisa TSB), atau (3) recuperación insuficiente entre intervalos. Vuelve testar CSS jika ini ocurre consistentemente.</p>
+            <h3>What if I can't maintain zone pace?</h3>
+            <p>If you can't hold prescribed zone pace, either: (1) your CSS is outdated (too fast), (2) you're fatigued (check TSB), or (3) insufficient recovery between intervals. Re-test CSS if this happens consistently.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Las zona se aplican semua estilos?</h3>
-            <p>El CSS se testea típicamente di <strong>estilo libre</strong>. Para otros estilos, puedes realizar tests CSS específicos estilo, pero mayoría nadadores usan zona CSS estilo libre dan ajustan según sensación untuk estilos/espalda/braza.</p>
+            <h3>Do zones apply to all strokes?</h3>
+            <p>CSS is typically tested in <strong>freestyle</strong>. For swimmers who primarily train strokes other than freestyle, consider performing stroke-specific CSS tests for more accurate zone prescription. Most swimmers use freestyle CSS zones and adjust by feel for IM/backstroke/breaststroke.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Cómo se relacionan zona dengan Training Stress Score (sTSS)?</h3>
-            <p>La zona determina <strong>Factor Intensidad (IF)</strong>, yang se eleva al cuadrado di fórmula sTSS. Zona 4 (IF ~0.95-1.0) genera 90-100 sTSS oleh hora. Zona 2 (IF ~0.80) genera solo 64 sTSS oleh hora. Zona lebih dari altas = stres latihan exponencialmente mayor.</p>
+            <h3>How do zones relate to Training Stress Score (sTSS)?</h3>
+            <p>Zone determines <strong>Intensity Factor (IF)</strong>, which is squared in the sTSS formula. Zone 4 (IF ~0.95-1.0) generates 90-100 sTSS per hour. Zone 2 (IF ~0.80) generates only 64 sTSS per hour. Higher zones = exponentially higher training stress.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Puedo entrenar solo di Zona 2?</h3>
-            <p>El latihan solo di Zona 2 funciona untuk <strong>principiantes</strong> construyendo condición física base. Sin embargo, nadadores avanzados necesitan trabajo Zona 3-5 untuk dikembangkanr adaptaciones específicas carrera. Sigue regla 80/20: 80% fácil (Zona 1-2), 20% difícil (Zona 3-5).</p>
+            <h3>Can I train only in Zone 2?</h3>
+            <p>Zone 2-only training works for <strong>beginners</strong> building base fitness. However, advanced swimmers need Zone 3-5 work to develop race-specific adaptations. Follow the 80/20 rule: 80% easy (Zone 1-2), 20% hard (Zone 3-5).</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Recursos Relaciorenangs</h2>
+        <h2>Related Resources</h2>
 
         <div class="grid grid-3">
             <div class="card">
-                <h3 class="card-title">Test CSS</h3>
+                <h3 class="card-title">CSS Test</h3>
                 <div class="card-content">
-                    <p>Realiza test CSS dan obtén Anda zona latihan yang dipersonalisasi instantáneamente dengan nuestra calculadora gratuita.</p>
-                    <a href="/id/css/" class="btn btn-secondary btn-small mt-md">Calculadora CSS →</a>
+                    <p>Perform the CSS test and get your personalized training zones instantly with our free calculator.</p>
+                    <a href="/en/css/" class="btn btn-secondary btn-small mt-md">CSS Calculator →</a>
                 </div>
             </div>
 
             <div class="card">
                 <h3 class="card-title">Training Stress Score</h3>
                 <div class="card-content">
-                    <p>Aprende cómo intensidad zona afecta cálculo sTSS dan beban latihan general.</p>
-                    <a href="/id/training-load/" class="btn btn-secondary btn-small mt-md">Guía sTSS →</a>
+                    <p>Learn how zone intensity affects sTSS calculation and overall training load.</p>
+                    <a href="/en/training-load/" class="btn btn-secondary btn-small mt-md">sTSS Guide →</a>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">App SwimAnalytics</h3>
+                <h3 class="card-title">SwimAnalytics App</h3>
                 <div class="card-content">
-                    <p>Detección automática zona untuk setiap latihan. Rastrea tiempo di zona dan beban latihan específica zona.</p>
-                    <a href="/id/" class="btn btn-secondary btn-small mt-md">Pelajari Lebih Lanjut →</a>
+                    <p>Automatic zone detection for every workout. Track time-in-zone and zone-specific training load.</p>
+                    <a href="/en/" class="btn btn-secondary btn-small mt-md">Learn More →</a>
                 </div>
             </div>
         </div>
 
         <div class="mt-xl text-center">
-            <p class="mb-md"><strong>¿Listo untuk entrenar manera lebih dari inteligente?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Unduh SwimAnalytics Gratis</a>
+            <p class="mb-md"><strong>Ready to train smarter?</strong></p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Download SwimAnalytics Free</a>
         </div>
     </div>
 </section>
@@ -1629,15 +1744,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/tr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,19 +809,19 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Bibliografía Completa</h1>
-        <p class="lead">55+ Referencias Científicas que Respaldan SwimAnalytics</p>
+        <h1>Complete Bibliography</h1>
+        <p class="lead">55+ Scientific References Supporting SwimAnalytics</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Literatura Científica Referenciada</h2>
-        <p class="lead">Todas las métricas y fórmulas en SwimAnalytics están respaldadas por investigación revisada por pares publicada en revistas líderes de ciencias del deporte, fisiología y biomecánica.</p>
+        <h2>Referenced Scientific Literature</h2>
+        <p class="lead">All metrics and formulas in SwimAnalytics are backed by peer-reviewed research published in leading sports science, physiology, and biomechanics journals.</p>
 
         <div class="callout callout-info">
-            <h3>📚 Cobertura de Revistas</h3>
-            <p>Las referencias abarcan publicaciones que incluyen:</p>
+            <h3>📚 Journal Coverage</h3>
+            <p>References span publications including:</p>
             <ul>
                 <li>European Journal of Applied Physiology</li>
                 <li>International Journal of Sports Medicine</li>
@@ -732,7 +847,7 @@
                 <div class="bib-year">(1992)</div>
                 <div class="bib-title">A simple method for determining critical speed as swimming fatigue threshold in competitive swimming.</div>
                 <div class="bib-journal">International Journal of Sports Medicine, 13(5), 367-371.</div>
-                <a href="https://tritrainingharder.com/blog/2013/10/swim-testing-critical-swim-speed.html" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://tritrainingharder.com/blog/2013/10/swim-testing-critical-swim-speed.html" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -740,7 +855,7 @@
                 <div class="bib-year">(1992)</div>
                 <div class="bib-title">Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer.</div>
                 <div class="bib-journal">European Journal of Applied Physiology and Occupational Physiology, 64(2), 153-157.</div>
-                <a href="https://ultraswim333.com/blog-1-1/critical-swim-speed-what-is-it-and-why-should-you-care" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://ultraswim333.com/blog-1-1/critical-swim-speed-what-is-it-and-why-should-you-care" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -748,7 +863,7 @@
                 <div class="bib-year">(1993)</div>
                 <div class="bib-title">Does critical swimming velocity represent exercise intensity at maximal lactate steady state?</div>
                 <div class="bib-journal">European Journal of Applied Physiology and Occupational Physiology, 66(1), 90-95.</div>
-                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -756,7 +871,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How to Train With Critical Swim Speed Intervals.</div>
                 <div class="bib-journal">USMS Fitness and Training Articles.</div>
-                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -764,7 +879,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What is Critical Swim Speed?</div>
                 <div class="bib-journal">Garmin Customer Support Documentation.</div>
-                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -772,7 +887,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Recording a Critical Swim Speed Test - Forerunner 265 Series.</div>
                 <div class="bib-journal">Garmin Owner's Manual.</div>
-                <a href="https://www8.garmin.com/manuals/webhelp/GUID-F41EAFB3-6CC9-42DE-9C6C-9E358DBB0671/EN-US/GUID-F9FFE0BF-ED46-40D4-A562-92F1CB4C3650.html" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www8.garmin.com/manuals/webhelp/GUID-F41EAFB3-6CC9-42DE-9C6C-9E358DBB0671/EN-US/GUID-F9FFE0BF-ED46-40D4-A562-92F1CB4C3650.html" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -780,7 +895,7 @@
 
 <section class="section">
     <div class="container">
-        <h2>Training Stress Score (TSS) y Carga de Entrenamiento</h2>
+        <h2>Training Stress Score (TSS) & Training Load</h2>
 
         <ol class="bibliography-list" start="7">
             <li class="bib-item">
@@ -788,7 +903,7 @@
                 <div class="bib-year">(2009)</div>
                 <div class="bib-title">Estimating TSS.</div>
                 <div class="bib-journal">TrainingBible.com Blog.</div>
-                <a href="http://www.trainingbible.com/joesblog/2009/09/estimating-tss.html" target="_blank" class="bib-link">Referencia →</a>
+                <a href="http://www.trainingbible.com/joesblog/2009/09/estimating-tss.html" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -796,7 +911,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Training Stress Scores (TSS) Explained.</div>
                 <div class="bib-journal">TrainingPeaks Help Center.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -804,7 +919,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What You Need to Know About Swim TSS.</div>
                 <div class="bib-journal">TrainingPeaks Blog.</div>
-                <a href="https://www.trainingpeaks.com/blog/what-you-need-to-know-about-swim-tss/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainingpeaks.com/blog/what-you-need-to-know-about-swim-tss/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -812,7 +927,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Calculating Swimming TSS Score.</div>
                 <div class="bib-journal">TrainingPeaks Learn Articles.</div>
-                <a href="https://www.trainingpeaks.com/learn/articles/calculating-swimming-tss-score/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainingpeaks.com/learn/articles/calculating-swimming-tss-score/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -820,7 +935,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What is Training Stress Score?</div>
                 <div class="bib-journal">Garmin Customer Support.</div>
-                <a href="https://support.garmin.com/en-US/?faq=9EOIDzMcjx7kFqTJUGqHj5" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.garmin.com/en-US/?faq=9EOIDzMcjx7kFqTJUGqHj5" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -828,7 +943,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Training Stress Score (TSS) - Enduropedia.</div>
                 <div class="bib-journal">Ho'Omau Endurance Learning Resources.</div>
-                <a href="https://hoomauendurance.com/learn/enduropedia/trainingstressscore/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://hoomauendurance.com/learn/enduropedia/trainingstressscore/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -850,7 +965,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Gestión del Rendimiento (CTL, ATL, TSB)</h2>
+        <h2>Performance Management (CTL, ATL, TSB)</h2>
 
         <ol class="bibliography-list" start="15">
             <li class="bib-item">
@@ -858,7 +973,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">The Science of the TrainingPeaks Performance Manager.</div>
                 <div class="bib-journal">TrainingPeaks Learn Articles.</div>
-                <a href="https://www.trainingpeaks.com/learn/articles/the-science-of-the-performance-manager/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainingpeaks.com/learn/articles/the-science-of-the-performance-manager/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -866,7 +981,7 @@
                 <div class="bib-year">(2010)</div>
                 <div class="bib-title">Analytical Triathlon Training Part 4: The Performance Management Chart.</div>
                 <div class="bib-journal">Coach Cox Blog.</div>
-                <a href="https://www.coachcox.co.uk/2010/09/17/analytical-triathlon-training-part-4-the-performance-management-chart/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.coachcox.co.uk/2010/09/17/analytical-triathlon-training-part-4-the-performance-management-chart/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -874,7 +989,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">A Coach's Guide to ATL, CTL & TSB.</div>
                 <div class="bib-journal">TrainingPeaks Coach Blog.</div>
-                <a href="https://www.trainingpeaks.com/coach-blog/a-coachs-guide-to-atl-ctl-tsb/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainingpeaks.com/coach-blog/a-coachs-guide-to-atl-ctl-tsb/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -882,7 +997,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What are CTL, ATL, TSB & TSS? Why Do They Matter?</div>
                 <div class="bib-journal">TrainerRoad Blog.</div>
-                <a href="https://www.trainerroad.com/blog/why-tss-atl-ctl-and-tsb-matter/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainerroad.com/blog/why-tss-atl-ctl-and-tsb-matter/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -890,7 +1005,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Training Load Calculator: ATL, CTL & Cardio Status Guide.</div>
                 <div class="bib-journal">Livity App Resources.</div>
-                <a href="https://livity-app.com/understanding-your-training-load/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://livity-app.com/understanding-your-training-load/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -898,7 +1013,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Understanding Training Load.</div>
                 <div class="bib-journal">Lumin Sports Help Center.</div>
-                <a href="https://support.luminsports.com/en/articles/6972017-understanding-training-load" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.luminsports.com/en/articles/6972017-understanding-training-load" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -906,7 +1021,7 @@
 
 <section class="section">
     <div class="container">
-        <h2>SWOLF y Eficiencia de Natación</h2>
+        <h2>SWOLF & Swimming Efficiency</h2>
 
         <ol class="bibliography-list" start="21">
             <li class="bib-item">
@@ -914,7 +1029,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Swolf.</div>
                 <div class="bib-journal">Wikipedia, The Free Encyclopedia.</div>
-                <a href="https://en.wikipedia.org/wiki/Swolf" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://en.wikipedia.org/wiki/Swolf" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -922,7 +1037,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How To Improve Your SWOLF Score.</div>
                 <div class="bib-journal">Speedo Blog - Advice.</div>
-                <a href="https://www.speedo.com/blog/advice/how-to-improve-your-swolf-score/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.speedo.com/blog/advice/how-to-improve-your-swolf-score/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -930,7 +1045,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">SWOLF Swimming Efficiency Test.</div>
                 <div class="bib-journal">Topend Sports - Testing.</div>
-                <a href="https://www.topendsports.com/testing/tests/swolf.htm" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.topendsports.com/testing/tests/swolf.htm" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -938,7 +1053,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Swolf Score - Garmin Swim 2 Manual.</div>
                 <div class="bib-journal">Garmin Product Documentation.</div>
-                <a href="https://www8.garmin.com/manuals/webhelp/garminswim2/EN-US/GUID-9481691E-B9E0-4793-BDF7-4F78D8703E2B.html" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www8.garmin.com/manuals/webhelp/garminswim2/EN-US/GUID-9481691E-B9E0-4793-BDF7-4F78D8703E2B.html" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -946,7 +1061,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Why Training to Improve Your SWOLF Score is Worthwhile.</div>
                 <div class="bib-journal">SportTracks Blog.</div>
-                <a href="https://sporttracks.mobi/blog/why-training-improve-your-swolf-score-worthwhile" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://sporttracks.mobi/blog/why-training-improve-your-swolf-score-worthwhile" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -954,7 +1069,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What is SWOLF and How Can it Make Me a Better Swimmer?</div>
                 <div class="bib-journal">ChiliTri Blog.</div>
-                <a href="https://chilitri.com/blog/karenparnell01@hotmail.com/what-is-swolf-and-how-can-it-make-me-a-better-swimmer" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://chilitri.com/blog/karenparnell01@hotmail.com/what-is-swolf-and-how-can-it-make-me-a-better-swimmer" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -962,7 +1077,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Frecuencia de Brazada y Distancia por Brazada</h2>
+        <h2>Stroke Rate & Distance Per Stroke</h2>
 
         <ol class="bibliography-list" start="27">
             <li class="bib-item">
@@ -970,7 +1085,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What is a Good Swim Cadence and How Can I Increase Mine?</div>
                 <div class="bib-journal">220 Triathlon - Training.</div>
-                <a href="https://www.220triathlon.com/training/swim-training/what-is-a-good-swim-cadence-and-how-can-i-increase-mine" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.220triathlon.com/training/swim-training/what-is-a-good-swim-cadence-and-how-can-i-increase-mine" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -978,7 +1093,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">The Fine Line Between Distance Per Stroke & Stroke Rate.</div>
                 <div class="bib-journal">FloSwimming Articles.</div>
-                <a href="https://www.floswimming.com/articles/5063584-the-fine-line-between-distance-per-stroke-stroke-rate" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.floswimming.com/articles/5063584-the-fine-line-between-distance-per-stroke-stroke-rate" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -986,7 +1101,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Stroke Rate vs. Distance per Stroke in Swimming.</div>
                 <div class="bib-journal">Analysis Swim News.</div>
-                <a href="https://analysisswim.com/swim/news/stroke-rate-vs-distance-per-stroke-in-swimming" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://analysisswim.com/swim/news/stroke-rate-vs-distance-per-stroke-in-swimming" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -994,7 +1109,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Open Water Training Using Stroke Rate.</div>
                 <div class="bib-journal">USA Triathlon Articles.</div>
-                <a href="https://www.usatriathlon.org/articles/training-tips/open-water-training-using-stroke-rate-form" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.usatriathlon.org/articles/training-tips/open-water-training-using-stroke-rate-form" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1002,7 +1117,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How To Use Stroke Rate To Improve Your Open-Water Swimming.</div>
                 <div class="bib-journal">TrainingPeaks Blog.</div>
-                <a href="https://www.trainingpeaks.com/blog/how-to-use-stroke-rate-to-improve-your-open-water-swimming/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.trainingpeaks.com/blog/how-to-use-stroke-rate-to-improve-your-open-water-swimming/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1010,7 +1125,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How Can I Improve My Stroke Rate?</div>
                 <div class="bib-journal">MyProCoach Support.</div>
-                <a href="https://support.myprocoach.net/hc/en-us/articles/360036189452-How-Can-I-Improve-My-Stroke-Rate" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.myprocoach.net/hc/en-us/articles/360036189452-How-Can-I-Improve-My-Stroke-Rate" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1018,7 +1133,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Distance Per Stroke.</div>
                 <div class="bib-journal">Tritonwear Success Centre.</div>
-                <a href="https://support.tritonwear.com/distance-per-stroke" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://support.tritonwear.com/distance-per-stroke" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1026,7 +1141,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">6 Tips to Improve Your Distance Per Stroke.</div>
                 <div class="bib-journal">YourSwimLog.com.</div>
-                <a href="https://www.yourswimlog.com/tips-improve-distance-per-stroke/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.yourswimlog.com/tips-improve-distance-per-stroke/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1034,7 +1149,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Do This to Reduce Your Stroke Count and Get Faster at Swimming.</div>
                 <div class="bib-journal">Steel City Endurance - Triathlon.</div>
-                <a href="https://steelcityendurance.com/triathlon/do-this-to-reduce-your-stroke-count-and-get-faster-at-swimming/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://steelcityendurance.com/triathlon/do-this-to-reduce-your-stroke-count-and-get-faster-at-swimming/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1042,7 +1157,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Stroke Rate vs. Stroke Length: Unlocking the Secret to Faster Swimming.</div>
                 <div class="bib-journal">Confluence Running Blog.</div>
-                <a href="https://confluencerunning.com/blogs/boost-stamina-and-strength-with-these-performance-and-endurance-training-methods/stroke-rate-vs-stroke-length-unlocking-the-secret-to-faster-swimming" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://confluencerunning.com/blogs/boost-stamina-and-strength-with-these-performance-and-endurance-training-methods/stroke-rate-vs-stroke-length-unlocking-the-secret-to-faster-swimming" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1050,7 +1165,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Stroke Rate V Stroke Count, and Why it's Critical for Swim Performance.</div>
                 <div class="bib-journal">The Endurance Store Blog.</div>
-                <a href="https://www.theendurancestore.com/blogs/the-endurance-store/stroke-rate-v-stroke-count-and-why-its-critical-for-swim-performance" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.theendurancestore.com/blogs/the-endurance-store/stroke-rate-v-stroke-count-and-why-its-critical-for-swim-performance" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1058,7 +1173,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What Is The Ideal Stroke Rate?</div>
                 <div class="bib-journal">Triathlete - Training.</div>
-                <a href="https://www.triathlete.com/training/what-is-the-ideal-stroke-rate/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.triathlete.com/training/what-is-the-ideal-stroke-rate/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1066,7 +1181,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What's the Right Stroke Count?</div>
                 <div class="bib-journal">Total Immersion Blog.</div>
-                <a href="https://www.totalimmersion.net/blog/whats-the-right-stroke-count/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.totalimmersion.net/blog/whats-the-right-stroke-count/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1074,7 +1189,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How Many Strokes Should I Be Taking Per Length?</div>
                 <div class="bib-journal">USMS Fitness and Training.</div>
-                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-many-strokes-should-i-be-taking-per-length" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-many-strokes-should-i-be-taking-per-length" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -1082,7 +1197,7 @@
 
 <section class="section">
     <div class="container">
-        <h2>Consistencia de Ritmo y Táctica</h2>
+        <h2>Pace Consistency & Tactics</h2>
 
         <ol class="bibliography-list" start="41">
             <li class="bib-item">
@@ -1090,7 +1205,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Understanding and Improving Your Swim Pace.</div>
                 <div class="bib-journal">FORM Swim Blog.</div>
-                <a href="https://www.formswim.com/blogs/all/understanding-and-improving-your-swim-pace" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.formswim.com/blogs/all/understanding-and-improving-your-swim-pace" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1098,7 +1213,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Teach Your Swimmers to Perceive Their Pace.</div>
                 <div class="bib-journal">USMS Fitness and Training Articles.</div>
-                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/teach-your-swimmers-to-perceive-their-pace" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/teach-your-swimmers-to-perceive-their-pace" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -1106,7 +1221,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Análisis de Virajes y Técnica</h2>
+        <h2>Turn Analysis & Technique</h2>
 
         <ol class="bibliography-list" start="43">
             <li class="bib-item">
@@ -1114,7 +1229,7 @@
                 <div class="bib-year">(2022)</div>
                 <div class="bib-title">Improving Tumble Turn Performance in Swimming—The Impact of Wall Contact Time.</div>
                 <div class="bib-journal">Frontiers in Sports and Active Living, 4, 936695.</div>
-                <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.936695/full" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.936695/full" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1122,7 +1237,7 @@
                 <div class="bib-year">(2003)</div>
                 <div class="bib-title">Force and Time Analysis of Backstroke to Breaststroke Turns.</div>
                 <div class="bib-journal">NMU Commons - Conference Papers.</div>
-                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1047&context=facwork_conferencepapers" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1047&context=facwork_conferencepapers" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1130,7 +1245,7 @@
                 <div class="bib-year">(2014)</div>
                 <div class="bib-title">Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley.</div>
                 <div class="bib-journal">Journal of Sports Science & Medicine, 13(2), 233-242.</div>
-                <a href="https://www.jssm.org/researchjssm-21-233.xml.xml" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.jssm.org/researchjssm-21-233.xml.xml" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1138,7 +1253,7 @@
                 <div class="bib-year">(2019)</div>
                 <div class="bib-title">The Characteristics of an Elite Swimming Turn.</div>
                 <div class="bib-journal">ISBS Conference Proceedings, NMU Commons.</div>
-                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1376&context=isbs" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1376&context=isbs" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -1146,7 +1261,7 @@
                 <div class="bib-year">(2020)</div>
                 <div class="bib-title">Attack the Walls: The Importance of Turns in Swimming.</div>
                 <div class="bib-journal">VS. Sports Blog.</div>
-                <a href="https://www.vssports.us/2020/07/14/attack-the-walls-the-importance-of-turns-in-swimming/" target="_blank" class="bib-link">Referencia →</a>
+                <a href="https://www.vssports.us/2020/07/14/attack-the-walls-the-importance-of-turns-in-swimming/" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -1154,7 +1269,7 @@
 
 <section class="section">
     <div class="container">
-        <h2>Biomecánica y Ciencia de la Natación</h2>
+        <h2>Biomechanics & Swimming Science</h2>
 
         <ol class="bibliography-list" start="48">
             <li class="bib-item">
@@ -1204,7 +1319,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Tecnología Portátil y Aprendizaje Automático</h2>
+        <h2>Wearable Technology & Machine Learning</h2>
 
         <ol class="bibliography-list" start="54">
             <li class="bib-item">
@@ -1226,11 +1341,11 @@
 
 <section class="section">
     <div class="container container-narrow text-center">
-        <h2>Analítica de Natación Basada en Ciencia</h2>
-        <p class="lead">Estas 55+ referencias científicas forman la base de evidencia para SwimAnalytics. Cada fórmula, métrica y recomendación está fundamentada en investigación revisada por pares, no en especulación o anécdotas.</p>
+        <h2>Science-Based Swimming Analytics</h2>
+        <p class="lead">These 55+ scientific references form the evidence base for SwimAnalytics. Every formula, metric, and recommendation is grounded in peer-reviewed research, not speculation or anecdote.</p>
 
         <div class="mt-xl">
-            <a href="/tr/formulas/" class="btn btn-primary btn-large">Ver Fórmulas Técnicas →</a>
+            <a href="/en/formulas/" class="btn btn-primary btn-large">View Technical Formulas →</a>
         </div>
     </div>
 </section>
@@ -1672,15 +1787,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

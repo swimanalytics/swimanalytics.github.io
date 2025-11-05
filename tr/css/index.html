@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/tr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,161 +809,161 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Velocidad Crítica de Nado (CSS)</h1>
-        <p class="lead">La Base del Entrenamiento de Natación Basado en Datos</p>
+        <h1>Critical Swim Speed (CSS)</h1>
+        <p class="lead">The Foundation of Data-Driven Swimming Training</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué es la Velocidad Crítica de Nado (CSS)?</h2>
-            <p><strong>La Velocidad Crítica de Nado (CSS)</strong> es la velocidad máxima teórica de natación que puedes mantener sin agotarte. Representa tu ritmo de umbral aeróbico, típicamente correspondiente a 4 mmol/L de lactato en sangre y sostenible durante aproximadamente 30 minutos. El CSS se calcula utilizando una prueba contrarreloj de 400m y 200m para determinar zonas de entrenamiento personalizadas.</p>
+            <h2>What is Critical Swim Speed (CSS)?</h2>
+            <p><strong>Critical Swim Speed (CSS)</strong> is the theoretical maximum swimming velocity you can maintain without exhaustion. It represents your aerobic threshold pace, typically corresponding to 4 mmol/L blood lactate and sustainable for approximately 30 minutes. CSS is calculated using a 400m and 200m time trial to determine personalized training zones.</p>
         </div>
 
-        <p class="lead">La Velocidad Crítica de Nado (CSS) representa la velocidad máxima teórica de natación que puedes mantener continuamente sin agotarte. Es tu umbral aeróbico en el agua—la intensidad donde la producción de lactato iguala la eliminación de lactato.</p>
+        <p class="lead">Critical Swim Speed (CSS) represents the theoretical maximum swimming velocity you can maintain continuously without exhaustion. It's your aerobic threshold in water—the intensity where lactate production equals lactate clearance.</p>
 
         <div class="callout callout-info">
-            <h3>🎯 Significado Fisiológico</h3>
-            <p>El CSS se corresponde estrechamente con:</p>
+            <h3>🎯 Physiological Significance</h3>
+            <p>CSS closely corresponds to:</p>
             <ul>
-                <li><strong>Umbral de Lactato 2 (LT2)</strong> - Segundo umbral ventilatorio</li>
-                <li><strong>Estado Máximo Estable de Lactato (MLSS)</strong> - Nivel más alto de lactato sostenible</li>
-                <li><strong>Ritmo de Umbral Funcional (FTP)</strong> - Equivalente en natación al FTP de ciclismo</li>
-                <li><strong>~4 mmol/L de lactato en sangre</strong> - Marcador tradicional de OBLA</li>
+                <li><strong>Lactate Threshold 2 (LT2)</strong> - Second ventilatory threshold</li>
+                <li><strong>Maximal Lactate Steady State (MLSS)</strong> - Highest sustainable lactate level</li>
+                <li><strong>Functional Threshold Pace (FTP)</strong> - Swimming equivalent to cycling FTP</li>
+                <li><strong>~4 mmol/L blood lactate</strong> - Traditional OBLA marker</li>
             </ul>
         </div>
 
-        <h3>Por Qué Importa el CSS</h3>
-        <p>El CSS es la <strong>métrica fundamental</strong> que desbloquea todo el análisis avanzado de carga de entrenamiento:</p>
+        <h3>Why CSS Matters</h3>
+        <p>CSS is the <strong>foundational metric</strong> that unlocks all advanced training load analysis:</p>
         <ul>
-            <li><strong>Zonas de Entrenamiento:</strong> Personaliza las zonas de intensidad según tu fisiología</li>
-            <li><strong>Cálculo de sTSS:</strong> Permite la cuantificación precisa del Índice de Estrés de Entrenamiento</li>
-            <li><strong>CTL/ATL/TSB:</strong> Requerido para las métricas del Gráfico de Gestión del Rendimiento</li>
-            <li><strong>Seguimiento del Progreso:</strong> Medida objetiva de la mejora de la condición aeróbica</li>
+            <li><strong>Training Zones:</strong> Personalizes intensity zones based on your physiology</li>
+            <li><strong>sTSS Calculation:</strong> Enables accurate Training Stress Score quantification</li>
+            <li><strong>CTL/ATL/TSB:</strong> Required for Performance Management Chart metrics</li>
+            <li><strong>Progress Tracking:</strong> Objective measure of aerobic fitness improvement</li>
         </ul>
 
         <div class="warning-box">
-            <strong>⚠️ Dependencia Crítica:</strong> Sin una prueba de CSS válida, las métricas avanzadas de carga de entrenamiento (sTSS, CTL, ATL, TSB) no se pueden calcular. Un CSS inexacto corromperá todo el análisis de entrenamiento posterior.
+            <strong>⚠️ Critical Dependency:</strong> Without a valid CSS test, advanced training load metrics (sTSS, CTL, ATL, TSB) cannot be calculated. An inaccurate CSS will corrupt all subsequent training analysis.
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Protocolo de Prueba CSS</h2>
+        <h2 class="text-center mb-xl">CSS Testing Protocol</h2>
         <div class="grid grid-2">
             <div class="protocol-card">
-                <h3>📋 Protocolo Estándar</h3>
+                <h3>📋 Standard Protocol</h3>
                 <ol class="protocol-steps">
                     <li>
-                        <strong>Calentamiento</strong>
-                        <p>300-800m de natación suave, ejercicios técnicos y aceleraciones progresivas para prepararse para el esfuerzo máximo.</p>
+                        <strong>Warm-up</strong>
+                        <p>300-800m easy swimming, drills, and progressive build-ups to prepare for maximal effort.</p>
                     </li>
                     <li>
-                        <strong>Prueba Contrarreloj de 400m</strong>
-                        <p>Esfuerzo máximo sostenido desde salida de pared (sin clavado). Registra el tiempo al segundo. Objetivo: 400m sostenibles más rápidos.</p>
+                        <strong>400m Time Trial</strong>
+                        <p>Maximum sustained effort from push start (no dive). Record time to the second. Goal: fastest sustainable 400m.</p>
                     </li>
                     <li>
-                        <strong>Recuperación Completa</strong>
-                        <p><span class="highlight-text">5-10 minutos</span> de natación suave o descanso completo. Esto es CRÍTICO para resultados precisos.</p>
+                        <strong>Complete Recovery</strong>
+                        <p><span class="highlight-text">5-10 minutes</span> of easy swimming or complete rest. This is CRITICAL for accurate results.</p>
                     </li>
                     <li>
-                        <strong>Prueba Contrarreloj de 200m</strong>
-                        <p>Esfuerzo máximo desde salida de pared. Registra el tiempo con precisión. Esto debería ser más rápido por 100m que los 400m.</p>
+                        <strong>200m Time Trial</strong>
+                        <p>Maximum effort from push start. Record time precisely. This should be faster per 100m than the 400m.</p>
                     </li>
                 </ol>
             </div>
 
             <div class="protocol-card">
-                <h3>⚠️ Errores Comunes</h3>
+                <h3>⚠️ Common Mistakes</h3>
                 <div class="mistake-list">
                     <div class="mistake-item">
-                        <h4>Recuperación Insuficiente</h4>
-                        <p><strong>Problema:</strong> La fatiga ralentiza artificialmente el tiempo de 200m</p>
-                        <p><strong>Resultado:</strong> El CSS calculado se vuelve <em>más rápido que la realidad</em>, llevando a zonas sobreentrenadas</p>
-                        <p><strong>Solución:</strong> Descansa hasta que la FC baje de 120 ppm o hasta que la respiración se haya recuperado completamente</p>
+                        <h4>Insufficient Recovery</h4>
+                        <p><strong>Problem:</strong> Fatigue artificially slows 200m time</p>
+                        <p><strong>Result:</strong> Calculated CSS becomes <em>faster than reality</em>, leading to overtrained zones</p>
+                        <p><strong>Solution:</strong> Rest until HR drops below 120 bpm or until breathing is fully recovered</p>
                     </div>
 
                     <div class="mistake-item">
-                        <h4>Mal Ritmo en los 400m</h4>
-                        <p><strong>Problema:</strong> Empezar demasiado rápido causa una desaceleración dramática</p>
-                        <p><strong>Resultado:</strong> El tiempo de 400m no refleja el verdadero ritmo sostenible</p>
-                        <p><strong>Solución:</strong> Apunta a splits parejos o split negativo (segundos 200m ≤ primeros 200m)</p>
+                        <h4>Poor Pacing on 400m</h4>
+                        <p><strong>Problem:</strong> Starting too fast causes dramatic slowdown</p>
+                        <p><strong>Result:</strong> 400m time doesn't reflect true sustainable pace</p>
+                        <p><strong>Solution:</strong> Aim for even splits or negative split (second 200m ≤ first 200m)</p>
                     </div>
 
                     <div class="mistake-item">
-                        <h4>Usar Salidas de Clavado</h4>
-                        <p><strong>Problema:</strong> Añade una ventaja de ~0.5-1.5 segundos, sesgando los cálculos</p>
-                        <p><strong>Solución:</strong> Siempre usa salida de pared</p>
+                        <h4>Using Dive Starts</h4>
+                        <p><strong>Problem:</strong> Adds ~0.5-1.5 seconds advantage, skewing calculations</p>
+                        <p><strong>Solution:</strong> Always use push start from the wall</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="callout callout-tip mt-xl">
-            <h3>🔄 Frecuencia de Re-evaluación</h3>
-            <p>Vuelve a evaluar el CSS cada <strong>6-8 semanas</strong> para actualizar las zonas de entrenamiento a medida que mejora la condición física. Tus zonas deberían volverse progresivamente más rápidas a medida que te adaptas al entrenamiento.</p>
+            <h3>🔄 Retesting Frequency</h3>
+            <p>Retest CSS every <strong>6-8 weeks</strong> to update training zones as fitness improves. Your zones should progressively become faster as you adapt to training.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Fórmula de Cálculo del CSS</h2>
+        <h2>CSS Calculation Formula</h2>
 
         <div class="formula-box">
-            <h3>Fórmula</h3>
+            <h3>Formula</h3>
             <div class="formula">
                 CSS (m/s) = (D₂ - D₁) / (T₂ - T₁)
             </div>
             <div class="formula-explanation">
-                <p>Donde:</p>
+                <p>Where:</p>
                 <ul>
-                    <li>D₁ = 200 metros</li>
-                    <li>D₂ = 400 metros</li>
-                    <li>T₁ = Tiempo para 200m (en segundos)</li>
-                    <li>T₂ = Tiempo para 400m (en segundos)</li>
+                    <li>D₁ = 200 meters</li>
+                    <li>D₂ = 400 meters</li>
+                    <li>T₁ = Time for 200m (in seconds)</li>
+                    <li>T₂ = Time for 400m (in seconds)</li>
                 </ul>
             </div>
 
-            <h3 class="mt-lg">Simplificado para Ritmo por 100m</h3>
+            <h3 class="mt-lg">Simplified for Pace per 100m</h3>
             <div class="formula">
-                Ritmo CSS/100m (segundos) = (T₄₀₀ - T₂₀₀) / 2
+                CSS Pace/100m (seconds) = (T₄₀₀ - T₂₀₀) / 2
             </div>
         </div>
 
-        <h3>Ejemplo Trabajado</h3>
+        <h3>Worked Example</h3>
         <div class="example-box">
-            <h4>Resultados de la Prueba:</h4>
+            <h4>Test Results:</h4>
             <ul>
-                <li>Tiempo 400m: <strong>6:08</strong> (368 segundos)</li>
-                <li>Tiempo 200m: <strong>2:30</strong> (150 segundos)</li>
+                <li>400m time: <strong>6:08</strong> (368 seconds)</li>
+                <li>200m time: <strong>2:30</strong> (150 seconds)</li>
             </ul>
 
-            <h4>Paso 1: Calcular CSS en m/s</h4>
+            <h4>Step 1: Calculate CSS in m/s</h4>
             <div class="calculation">
                 CSS = (400 - 200) / (368 - 150)<br>
                 CSS = 200 / 218<br>
                 CSS = <strong>0.917 m/s</strong>
             </div>
 
-            <h4>Paso 2: Convertir a ritmo por 100m</h4>
+            <h4>Step 2: Convert to pace per 100m</h4>
             <div class="calculation">
-                Ritmo = 100 / 0.917<br>
-                Ritmo = 109 segundos<br>
-                Ritmo = <strong>1:49 por 100m</strong>
+                Pace = 100 / 0.917<br>
+                Pace = 109 seconds<br>
+                Pace = <strong>1:49 per 100m</strong>
             </div>
         </div>
 
-        <h2 class="mt-3xl">Calculadora de CSS Gratuita</h2>
-        <p class="lead">Calcula tu Velocidad Crítica de Nado y zonas de entrenamiento personalizadas al instante</p>
+        <h2 class="mt-3xl">Free CSS Calculator</h2>
+        <p class="lead">Calculate your Critical Swim Speed and personalized training zones instantly</p>
 
         <div class="css-calculator">
             <form id="cssCalculatorForm">
                 <div class="calculator-inputs">
                     <div class="form-group">
-                        <label for="time400" class="form-label">Tiempo 400m (mm:ss)</label>
+                        <label for="time400" class="form-label">400m Time (mm:ss)</label>
                         <input
                             type="text"
                             id="time400"
@@ -858,11 +973,11 @@
                             aria-required="true"
                             aria-describedby="time400-help"
                         />
-                        <small id="time400-help" class="form-help">Formato: minutos:segundos (ej., 6:08)</small>
+                        <small id="time400-help" class="form-help">Format: minutes:seconds (e.g., 6:08)</small>
                         <div class="form-error" id="time400-error"></div>
                     </div>
                     <div class="form-group">
-                        <label for="time200" class="form-label">Tiempo 200m (mm:ss)</label>
+                        <label for="time200" class="form-label">200m Time (mm:ss)</label>
                         <input
                             type="text"
                             id="time200"
@@ -872,45 +987,45 @@
                             aria-required="true"
                             aria-describedby="time200-help"
                         />
-                        <small id="time200-help" class="form-help">Formato: minutos:segundos (ej., 2:30)</small>
+                        <small id="time200-help" class="form-help">Format: minutes:seconds (e.g., 2:30)</small>
                         <div class="form-error" id="time200-error"></div>
                     </div>
                     <div class="calculator-buttons">
-                        <button type="submit" class="btn btn-primary" id="calculateBtn">Calcular CSS</button>
-                        <button type="reset" class="btn btn-ghost" id="resetBtn">Limpiar</button>
+                        <button type="submit" class="btn btn-primary" id="calculateBtn">Calculate CSS</button>
+                        <button type="reset" class="btn btn-ghost" id="resetBtn">Clear</button>
                     </div>
                 </div>
             </form>
 
             <div class="calculator-results hidden" id="cssResults" aria-live="polite">
-                <h3>Tus Resultados</h3>
+                <h3>Your Results</h3>
                 <div class="results-summary">
                     <div class="result-item">
-                        <div class="result-label">Velocidad Crítica de Nado</div>
+                        <div class="result-label">Critical Swim Speed</div>
                         <div class="css-result-value" id="cssValue">--</div>
                     </div>
                     <div class="result-item">
-                        <div class="result-label">Ritmo CSS por 100m</div>
+                        <div class="result-label">CSS Pace per 100m</div>
                         <div class="css-result-value" id="cssPace">--</div>
                     </div>
                 </div>
 
                 <div class="zones-result">
-                    <h4>Tus Zonas de Entrenamiento Personalizadas</h4>
+                    <h4>Your Personalized Training Zones</h4>
                     <p class="mb-md text-secondary">
-                        Basándote en tu CSS, aquí están tus zonas de entrenamiento en ritmo por 100m:
+                        Based on your CSS, here are your training zones in pace per 100m:
                     </p>
                     <div id="zonesTable"></div>
                 </div>
             </div>
         </div>
 
-        <h3 class="mt-xl">Método Alternativo (Simplificado):</h3>
+        <h3 class="mt-xl">Alternative (Simplified Method):</h3>
         <div class="example-box">
             <div class="calculation">
-                Ritmo = (368 - 150) / 2<br>
-                Ritmo = 218 / 2<br>
-                Ritmo = 109 segundos = <strong>1:49 por 100m</strong>
+                Pace = (368 - 150) / 2<br>
+                Pace = 218 / 2<br>
+                Pace = 109 seconds = <strong>1:49 per 100m</strong>
             </div>
         </div>
     </div>
@@ -918,77 +1033,77 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl">Zonas de Entrenamiento Basadas en CSS</h2>
+        <h2 class="mb-xl">Training Zones Based on CSS</h2>
 
         <div class="callout callout-info">
-            <p><strong>Nota:</strong> En natación, el ritmo se mide como <em>tiempo por distancia</em>. Por lo tanto, un <strong>porcentaje más alto = ritmo más lento</strong>, y un <strong>porcentaje más bajo = ritmo más rápido</strong>. Esto es inverso al ciclismo/carrera donde mayor % = esfuerzo más duro.</p>
+            <p><strong>Note:</strong> In swimming, pace is measured as <em>time per distance</em>. Therefore, a <strong>higher percentage = slower pace</strong>, and a <strong>lower percentage = faster pace</strong>. This is inverse to cycling/running where higher % = harder effort.</p>
         </div>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Zona</th>
-                        <th>Nombre</th>
-                        <th>% del Ritmo CSS</th>
-                        <th>Ejemplo para CSS 1:40/100m</th>
+                        <th>Zone</th>
+                        <th>Name</th>
+                        <th>% of CSS Pace</th>
+                        <th>Example for CSS 1:40/100m</th>
                         <th>RPE</th>
-                        <th>Propósito Fisiológico</th>
+                        <th>Physiological Purpose</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="zone-1">
                         <td><strong>1</strong></td>
-                        <td>Recuperación</td>
+                        <td>Recovery</td>
                         <td>&gt;108%</td>
                         <td>&gt;1:48/100m</td>
                         <td>2-3/10</td>
-                        <td>Recuperación activa, refinamiento técnico, calentamiento/enfriamiento</td>
+                        <td>Active recovery, technique refinement, warm-up/cool-down</td>
                     </tr>
                     <tr class="zone-2">
                         <td><strong>2</strong></td>
-                        <td>Base Aeróbica</td>
+                        <td>Aerobic Base</td>
                         <td>104-108%</td>
                         <td>1:44-1:48/100m</td>
                         <td>4-5/10</td>
-                        <td>Construir capacidad aeróbica, densidad mitocondrial, oxidación de grasas</td>
+                        <td>Build aerobic capacity, mitochondrial density, fat oxidation</td>
                     </tr>
                     <tr class="zone-3">
                         <td><strong>3</strong></td>
-                        <td>Tempo/Punto Óptimo</td>
+                        <td>Tempo/Sweet Spot</td>
                         <td>99-103%</td>
                         <td>1:39-1:43/100m</td>
                         <td>6-7/10</td>
-                        <td>Adaptación al ritmo de carrera, eficiencia neuromuscular</td>
+                        <td>Race pace adaptation, neuromuscular efficiency</td>
                     </tr>
                     <tr class="zone-4">
                         <td><strong>4</strong></td>
-                        <td>Umbral (CSS)</td>
+                        <td>Threshold (CSS)</td>
                         <td>96-100%</td>
                         <td>1:36-1:40/100m</td>
                         <td>7-8/10</td>
-                        <td>Mejora del umbral de lactato, alta intensidad sostenida</td>
+                        <td>Lactate threshold improvement, sustained high intensity</td>
                     </tr>
                     <tr class="zone-5">
                         <td><strong>5</strong></td>
-                        <td>VO₂max/Anaeróbico</td>
+                        <td>VO₂max/Anaerobic</td>
                         <td>&lt;96%</td>
                         <td>&lt;1:36/100m</td>
                         <td>9-10/10</td>
-                        <td>Desarrollo de VO₂max, potencia, tolerancia al lactato</td>
+                        <td>VO₂max development, power, lactate tolerance</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="callout callout-tip mt-lg">
-            <h3>🎯 Beneficios del Entrenamiento por Zonas</h3>
-            <p>Usar zonas basadas en CSS transforma el entrenamiento subjetivo de "sensación" en entrenamientos objetivos y repetibles. Cada zona se dirige a adaptaciones fisiológicas específicas:</p>
+            <h3>🎯 Zone-Based Training Benefits</h3>
+            <p>Using CSS-based zones transforms subjective "feel" training into objective, repeatable workouts. Each zone targets specific physiological adaptations:</p>
             <ul>
-                <li><strong>Zona 2:</strong> Construir motor aeróbico (60-70% del volumen semanal)</li>
-                <li><strong>Zona 3:</strong> Mejorar la eficiencia al ritmo de carrera (15-20% del volumen)</li>
-                <li><strong>Zona 4:</strong> Elevar el umbral de lactato (10-15% del volumen)</li>
-                <li><strong>Zona 5:</strong> Desarrollar velocidad máxima y potencia (5-10% del volumen)</li>
+                <li><strong>Zone 2:</strong> Build aerobic engine (60-70% of weekly volume)</li>
+                <li><strong>Zone 3:</strong> Enhance race-pace efficiency (15-20% of volume)</li>
+                <li><strong>Zone 4:</strong> Push lactate threshold higher (10-15% of volume)</li>
+                <li><strong>Zone 5:</strong> Develop top-end speed and power (5-10% of volume)</li>
             </ul>
         </div>
     </div>
@@ -996,35 +1111,35 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Valores Típicos de CSS por Nivel</h2>
+        <h2>Typical CSS Values by Level</h2>
 
         <div class="levels-comparison">
             <div class="level-card">
-                <h3>🥇 Nadadores de Distancia Elite</h3>
+                <h3>🥇 Elite Distance Swimmers</h3>
                 <div class="pace-value">1.5-1.8 m/s</div>
-                <div class="pace-equivalent">0:56-1:07 por 100m</div>
-                <p>Representa el 80-85% de la velocidad máxima en 100m. Atletas de nivel nacional/internacional con años de entrenamiento estructurado.</p>
+                <div class="pace-equivalent">0:56-1:07 per 100m</div>
+                <p>Represents 80-85% of maximum 100m speed. National/international level athletes with years of structured training.</p>
             </div>
 
             <div class="level-card">
-                <h3>🏊 Grupos de Edad Competitivos</h3>
+                <h3>🏊 Competitive Age-Group</h3>
                 <div class="pace-value">1.2-1.5 m/s</div>
-                <div class="pace-equivalent">1:07-1:23 por 100m</div>
-                <p>Preparatoria varsity, nadadores universitarios, másters competitivos. Entrenamiento estructurado regular 5-6 días/semana.</p>
+                <div class="pace-equivalent">1:07-1:23 per 100m</div>
+                <p>High school varsity, college swimmers, competitive masters. Regular structured training 5-6 days/week.</p>
             </div>
 
             <div class="level-card">
-                <h3>🏃 Triatletas y Nadadores de Fitness</h3>
+                <h3>🏃 Triathletes & Fitness Swimmers</h3>
                 <div class="pace-value">0.9-1.2 m/s</div>
-                <div class="pace-equivalent">1:23-1:51 por 100m</div>
-                <p>Entrenamiento regular 3-4 días/semana. Técnica sólida. Completando 2000-4000m por sesión.</p>
+                <div class="pace-equivalent">1:23-1:51 per 100m</div>
+                <p>Regular training 3-4 days/week. Solid technique. Completing 2000-4000m per session.</p>
             </div>
 
             <div class="level-card">
-                <h3>🌊 Nadadores en Desarrollo</h3>
+                <h3>🌊 Developing Swimmers</h3>
                 <div class="pace-value">&lt;0.9 m/s</div>
-                <div class="pace-equivalent">&gt;1:51 por 100m</div>
-                <p>Construyendo base aeróbica y técnica. Menos de 1-2 años de entrenamiento consistente.</p>
+                <div class="pace-equivalent">&gt;1:51 per 100m</div>
+                <p>Building aerobic base and technique. Less than 1-2 years of consistent training.</p>
             </div>
         </div>
     </div>
@@ -1032,22 +1147,22 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Validación Científica</h2>
+        <h2>Scientific Validation</h2>
 
         <div class="research-highlight">
-            <h3>Wakayoshi et al. (1992-1993) - Investigación Fundacional</h3>
-            <p>Los estudios seminales de Kohji Wakayoshi en la Universidad de Osaka establecieron el CSS como una alternativa válida y práctica a las pruebas de lactato en laboratorio:</p>
+            <h3>Wakayoshi et al. (1992-1993) - Foundational Research</h3>
+            <p>Kohji Wakayoshi's seminal studies at Osaka University established CSS as a valid, practical alternative to laboratory lactate testing:</p>
 
             <ul class="research-findings">
-                <li><strong>Fuerte correlación con VO₂ en el umbral anaeróbico</strong> (r = 0.818)</li>
-                <li><strong>Excelente correlación con velocidad en OBLA</strong> (r = 0.949)</li>
-                <li><strong>Predice el rendimiento en 400m</strong> (r = 0.864)</li>
-                <li><strong>Corresponde a 4 mmol/L de lactato en sangre</strong> - estado máximo estable de lactato</li>
-                <li><strong>Relación lineal entre distancia y tiempo</strong> (r² &gt; 0.998)</li>
+                <li><strong>Strong correlation with VO₂ at anaerobic threshold</strong> (r = 0.818)</li>
+                <li><strong>Excellent correlation with velocity at OBLA</strong> (r = 0.949)</li>
+                <li><strong>Predicts 400m performance</strong> (r = 0.864)</li>
+                <li><strong>Corresponds to 4 mmol/L blood lactate</strong> - maximal lactate steady state</li>
+                <li><strong>Linear relationship between distance and time</strong> (r² &gt; 0.998)</li>
             </ul>
 
             <div class="citation">
-                <p><strong>Artículos Clave:</strong></p>
+                <p><strong>Key Papers:</strong></p>
                 <ol>
                     <li>Wakayoshi K, et al. (1992). "Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer." <em>European Journal of Applied Physiology</em>, 64(2), 153-157.</li>
                     <li>Wakayoshi K, et al. (1992). "A simple method for determining critical speed as swimming fatigue threshold in competitive swimming." <em>International Journal of Sports Medicine</em>, 13(5), 367-371.</li>
@@ -1057,14 +1172,14 @@
         </div>
 
         <div class="callout callout-science">
-            <h3>🔬 Por Qué Funciona el CSS</h3>
-            <p>El CSS representa el límite entre los <strong>dominios de ejercicio intenso y severo</strong>. Por debajo del CSS, la producción y eliminación de lactato permanecen equilibradas—puedes nadar durante períodos prolongados. Por encima del CSS, el lactato se acumula progresivamente hasta el agotamiento en 20-40 minutos.</p>
-            <p>Esto hace que el CSS sea la intensidad perfecta para:</p>
+            <h3>🔬 Why CSS Works</h3>
+            <p>CSS represents the boundary between the <strong>heavy and severe exercise domains</strong>. Below CSS, lactate production and clearance remain balanced—you can swim for extended periods. Above CSS, lactate accumulates progressively until exhaustion within 20-40 minutes.</p>
+            <p>This makes CSS the perfect intensity for:</p>
             <ul>
-                <li>Establecer ritmos de carrera sostenibles para eventos de 800m-1500m</li>
-                <li>Prescribir entrenamiento de intervalos de umbral</li>
-                <li>Monitorear mejoras en la condición aeróbica</li>
-                <li>Calcular la carga de entrenamiento y las necesidades de recuperación</li>
+                <li>Setting sustainable race paces for 800m-1500m events</li>
+                <li>Prescribing threshold interval training</li>
+                <li>Monitoring aerobic fitness improvements</li>
+                <li>Calculating training load and recovery needs</li>
             </ul>
         </div>
     </div>
@@ -1129,54 +1244,54 @@
         </div>
 
 
-        <h2>Aplicaciones Prácticas</h2>
+        <h2>Practical Applications</h2>
 
         <div class="application-grid">
             <div class="application-item">
-                <h3>1️⃣ Desbloquear Métricas de Carga de Entrenamiento</h3>
-                <p>El CSS es el denominador en el cálculo del Factor de Intensidad para sTSS. Sin él, no puedes cuantificar el estrés del entrenamiento ni seguir las tendencias de condición física/fatiga.</p>
+                <h3>1️⃣ Unlock Training Load Metrics</h3>
+                <p>CSS is the denominator in the Intensity Factor calculation for sTSS. Without it, you cannot quantify workout stress or track fitness/fatigue trends.</p>
             </div>
 
             <div class="application-item">
-                <h3>2️⃣ Personalizar Zonas de Entrenamiento</h3>
-                <p>Las tablas de ritmo genéricas no tienen en cuenta la fisiología individual. Las zonas basadas en CSS aseguran que cada nadador entrene a su intensidad óptima.</p>
+                <h3>2️⃣ Personalize Training Zones</h3>
+                <p>Generic pace charts don't account for individual physiology. CSS-based zones ensure every swimmer trains at their optimal intensity.</p>
             </div>
 
             <div class="application-item">
-                <h3>3️⃣ Monitorear la Progresión de la Condición Física</h3>
-                <p>Vuelve a evaluar cada 6-8 semanas. Mejorar el CSS (ritmo más rápido) indica una adaptación aeróbica exitosa. Un CSS estancado sugiere que el entrenamiento necesita ajustes.</p>
+                <h3>3️⃣ Monitor Fitness Progression</h3>
+                <p>Retest every 6-8 weeks. Improving CSS (faster pace) indicates successful aerobic adaptation. Stagnant CSS suggests training needs adjustment.</p>
             </div>
 
             <div class="application-item">
-                <h3>4️⃣ Predecir el Rendimiento en Carrera</h3>
-                <p>El ritmo CSS aproxima tu ritmo de carrera sostenible de 30 minutos. Úsalo para establecer objetivos realistas para eventos de 800m, 1500m y aguas abiertas.</p>
+                <h3>4️⃣ Predict Race Performance</h3>
+                <p>CSS pace approximates your sustainable 30-minute race pace. Use it to set realistic goals for 800m, 1500m, and open water events.</p>
             </div>
 
             <div class="application-item">
-                <h3>5️⃣ Diseñar Entrenamientos de Umbral</h3>
-                <p>Series clásicas de CSS: 8×100 @ ritmo CSS (15s descanso), 5×200 @ 101% CSS (20s descanso), 3×400 @ 103% CSS (30s descanso). Construir capacidad de eliminación de lactato.</p>
+                <h3>5️⃣ Design Threshold Workouts</h3>
+                <p>Classic CSS sets: 8×100 @ CSS pace (15s rest), 5×200 @ 101% CSS (20s rest), 3×400 @ 103% CSS (30s rest). Build lactate clearance capacity.</p>
             </div>
 
             <div class="application-item">
-                <h3>6️⃣ Optimizar la Estrategia de Descarga</h3>
-                <p>Sigue el CSS antes y después de la descarga. Una descarga exitosa mantiene o mejora ligeramente el CSS mientras reduce la fatiga (TSB aumentado).</p>
+                <h3>6️⃣ Optimize Taper Strategy</h3>
+                <p>Track CSS before and after taper. A successful taper maintains or slightly improves CSS while reducing fatigue (increased TSB).</p>
             </div>
         </div>
 
         <div class="callout mt-2xl">
-            <h3>Aplica tu Conocimiento del CSS</h3>
-            <p>Ahora que entiendes la Velocidad Crítica de Nado, da los siguientes pasos para optimizar tu entrenamiento:</p>
+            <h3>Apply Your CSS Knowledge</h3>
+            <p>Now that you understand Critical Swim Speed, take the next steps to optimize your training:</p>
             <ul>
-                <li><a href="/tr/training-load/">Calcula el Índice de Estrés de Entrenamiento (TSS)</a> basado en tu CSS para cuantificar la intensidad del entrenamiento</li>
-                <li><a href="/tr/training-zones/">Explora las 7 zonas de entrenamiento</a> y aprende cómo estructurar entrenamientos para adaptaciones específicas</li>
-                <li><a href="/tr/formulas/">Ver todas las fórmulas</a> usadas en SwimAnalytics para total transparencia</li>
-                <li><a href="/tr/">Descarga SwimAnalytics</a> para rastrear automáticamente CSS, TSS y tendencias de rendimiento</li>
+                <li><a href="/en/training-load/">Calculate Training Stress Score (TSS)</a> based on your CSS to quantify workout intensity</li>
+                <li><a href="/en/training-zones/">Explore the 7 training zones</a> and learn how to structure workouts for specific adaptations</li>
+                <li><a href="/en/formulas/">View all formulas</a> used in SwimAnalytics for complete transparency</li>
+                <li><a href="/en/">Download SwimAnalytics</a> to automatically track CSS, TSS, and performance trends</li>
             </ul>
         </div>
 
         <div class="mt-xl text-center">
-            <a href="/tr/training-load/" class="btn btn-primary">Aprende Sobre el Cálculo de sTSS →</a>
-            <a href="/tr/formulas/" class="btn btn-secondary">Ver Todas las Fórmulas →</a>
+            <a href="/en/training-load/" class="btn btn-primary">Learn About sTSS Calculation →</a>
+            <a href="/en/formulas/" class="btn btn-secondary">View All Formulas →</a>
         </div>
     </div>
 </section>
@@ -1618,15 +1733,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

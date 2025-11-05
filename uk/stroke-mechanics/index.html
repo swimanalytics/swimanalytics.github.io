@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/uk/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,63 +809,63 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Механика Гребка</h1>
-        <p class="lead">Биомеханика Скорости в Плавании</p>
+        <h1>Stroke Mechanics</h1>
+        <p class="lead">The Biomechanics of Swimming Speed</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Фундаментальное Уравнение Скорости в Плавании</h2>
+        <h2>The Fundamental Equation of Swimming Speed</h2>
 
         <div class="formula-box formula-highlight">
-            <h3>Уравнение Скорости</h3>
+            <h3>The Velocity Equation</h3>
             <div class="formula formula-large">
-                Скорость = Частота Гребков (SR) × Расстояние на Гребок (DPS)
+                Velocity = Stroke Rate (SR) × Distance Per Stroke (DPS)
             </div>
-            <p class="formula-explanation"><strong>Перевод:</strong> Ваша скорость в плавании зависит от <em>частоты</em>, с которой вы гребёте (SR), умноженной на <em>расстояние</em>, которое вы проходите за гребок (DPS).</p>
+            <p class="formula-explanation"><strong>Translation:</strong> How fast you swim depends on how <em>often</em> you stroke (SR) multiplied by how <em>far</em> you travel per stroke (DPS).</p>
         </div>
 
-        <p class="lead">Это обманчиво простое уравнение управляет всей производительностью в плавании. Чтобы плыть быстрее, вы должны:</p>
+        <p class="lead">This deceptively simple equation governs all swimming performance. To get faster, you must either:</p>
         <ul class="lead-list">
-            <li><strong>Увеличить Частоту Гребков</strong> (более быстрый темп), сохраняя DPS</li>
-            <li><strong>Увеличить Расстояние на Гребок</strong> (проходить больше расстояния за гребок), сохраняя SR</li>
-            <li><strong>Оптимизировать оба параметра</strong> (идеальный подход)</li>
+            <li><strong>Increase Stroke Rate</strong> (turnover faster) while maintaining DPS</li>
+            <li><strong>Increase Distance Per Stroke</strong> (travel farther per stroke) while maintaining SR</li>
+            <li><strong>Optimize both</strong> (the ideal approach)</li>
         </ul>
 
         <div class="callout callout-warning">
-            <h3>⚖️ Баланс</h3>
-            <p>SR и DPS обычно <strong>находятся в обратной зависимости</strong>. Когда один увеличивается, другой, как правило, уменьшается. Искусство плавания заключается в поиске оптимального баланса для вашей дистанции, типа тела и текущего уровня физической подготовки.</p>
+            <h3>⚖️ The Trade-off</h3>
+            <p>SR and DPS are generally <strong>inversely related</strong>. As one increases, the other tends to decrease. The art of swimming is finding the optimal balance for your event, body type, and current fitness level.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Частота Гребков (SR)</h2>
+        <h2 class="text-center mb-xl">Stroke Rate (SR)</h2>
 
         <div class="grid grid-2">
             <div>
-                <h3>Что такое Частота Гребков?</h3>
-                <p><strong>Частота Гребков (SR)</strong>, также называемая <em>каденсом</em> или <em>темпом</em>, измеряет, сколько полных циклов гребков вы совершаете в минуту, выражается в <strong>Гребках в Минуту (SPM)</strong>.</p>
+                <h3>What is Stroke Rate?</h3>
+                <p><strong>Stroke Rate (SR)</strong>, also called <em>cadence</em> or <em>tempo</em>, measures how many complete stroke cycles you perform per minute, expressed in <strong>Strokes Per Minute (SPM)</strong>.</p>
 
                 <div class="formula-box">
-                    <h4>Формула</h4>
+                    <h4>Formula</h4>
                     <div class="formula">
-                        SR = 60 / Время Цикла
+                        SR = 60 / Cycle Time
                     </div>
-                    <p>Или:</p>
+                    <p>Or:</p>
                     <div class="formula">
-                        SR = (Количество Гребков / Время в секундах) × 60
+                        SR = (Number of Strokes / Time in seconds) × 60
                     </div>
 
                     <div class="example-box mt-md">
-                        <h4>Пример:</h4>
-                        <p>Если ваш цикл гребка занимает 1 секунду:</p>
+                        <h4>Example:</h4>
+                        <p>If your stroke cycle takes 1 second:</p>
                         <div class="calculation">
                             SR = 60 / 1 = <strong>60 SPM</strong>
                         </div>
-                        <p>Если вы совершаете 30 гребков за 25 секунд:</p>
+                        <p>If you complete 30 strokes in 25 seconds:</p>
                         <div class="calculation">
                             SR = (30 / 25) × 60 = <strong>72 SPM</strong>
                         </div>
@@ -758,63 +873,63 @@
                 </div>
 
                 <div class="callout callout-info">
-                    <h4>📝 Примечание о Подсчёте Гребков</h4>
-                    <p>Для <strong>кроля/спины:</strong> Считайте отдельные входы каждой руки (левая + правая = 2 гребка)</p>
-                    <p>Для <strong>брасса/баттерфляя:</strong> Руки движутся одновременно (одно движение = 1 гребок)</p>
+                    <h4>📝 Stroke Counting Note</h4>
+                    <p>For <strong>freestyle/backstroke:</strong> Count individual arm entries (left + right = 2 strokes)</p>
+                    <p>For <strong>breaststroke/butterfly:</strong> Arms move simultaneously (one pull = 1 stroke)</p>
                 </div>
             </div>
 
             <div>
-                <h3>Типичные Частоты Гребков по Дистанциям</h3>
+                <h3>Typical Stroke Rates by Event</h3>
 
                 <div class="sr-benchmarks">
-                    <h4>Спринт Кроль (50м)</h4>
+                    <h4>Freestyle Sprint (50m)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Элита:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">120-150 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Возрастные Категории:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">100-120 SPM</span>
                     </div>
 
-                    <h4>Кроль 100м</h4>
+                    <h4>Freestyle 100m</h4>
                     <div class="benchmark-row">
-                        <span class="label">Элита:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">95-110 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Возрастные Категории:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">85-100 SPM</span>
                     </div>
 
-                    <h4>Средняя Дистанция (200-800м)</h4>
+                    <h4>Middle Distance (200-800m)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Элита:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">70-100 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Возрастные Категории:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">60-85 SPM</span>
                     </div>
 
-                    <h4>Дистанция (1500м+ / Открытая Вода)</h4>
+                    <h4>Distance (1500m+ / Open Water)</h4>
                     <div class="benchmark-row">
-                        <span class="label">Элита:</span>
+                        <span class="label">Elite:</span>
                         <span class="value">60-100 SPM</span>
                     </div>
                     <div class="benchmark-row">
-                        <span class="label">Возрастные Категории:</span>
+                        <span class="label">Age-Group:</span>
                         <span class="value">50-75 SPM</span>
                     </div>
                 </div>
 
                 <div class="callout callout-tip">
-                    <h4>🎯 Гендерные Различия</h4>
-                    <p>Мужчины элита 50м кроль: ~65-70 SPM<br>
-                    Женщины элита 50м кроль: ~60-64 SPM<br>
-                    Мужчины элита 100м кроль: ~50-54 SPM<br>
-                    Женщины элита 100м кроль: ~53-56 SPM</p>
+                    <h4>🎯 Gender Differences</h4>
+                    <p>Elite male 50m free: ~65-70 SPM<br>
+                    Elite female 50m free: ~60-64 SPM<br>
+                    Elite male 100m free: ~50-54 SPM<br>
+                    Elite female 100m free: ~53-56 SPM</p>
                 </div>
             </div>
         </div>
@@ -823,44 +938,44 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Интерпретация Частоты Гребков</h2>
+        <h2>Interpreting Stroke Rate</h2>
 
         <div class="interpretation-grid">
             <div class="interpretation-item interpretation-low">
-                <h3>🐢 SR Слишком Низкий</h3>
-                <p><strong>Характеристики:</strong></p>
+                <h3>🐢 SR Too Low</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Длительные фазы скольжения между гребками</li>
-                    <li>Замедление и потеря импульса</li>
-                    <li>"Мёртвые точки", где скорость значительно падает</li>
+                    <li>Long glide phases between strokes</li>
+                    <li>Deceleration and momentum loss</li>
+                    <li>"Dead spots" where velocity drops significantly</li>
                 </ul>
-                <p><strong>Результат:</strong> Неэффективное использование энергии — вы постоянно ускоряетесь с пониженной скорости.</p>
-                <p><strong>Решение:</strong> Уменьшите время скольжения, начинайте захват раньше, поддерживайте постоянное движение.</p>
+                <p><strong>Result:</strong> Inefficient energy use—you're constantly re-accelerating from reduced speed.</p>
+                <p><strong>Fix:</strong> Reduce glide time, initiate catch earlier, maintain continuous propulsion.</p>
             </div>
 
             <div class="interpretation-item interpretation-high">
-                <h3>🏃 SR Слишком Высокий</h3>
-                <p><strong>Характеристики:</strong></p>
+                <h3>🏃 SR Too High</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Короткие, рубленые гребки ("молотьба без продвижения")</li>
-                    <li>Плохая механика захвата — рука проскальзывает в воде</li>
-                    <li>Чрезмерный расход энергии с минимальным движением</li>
+                    <li>Short, choppy strokes ("spinning wheels")</li>
+                    <li>Poor catch mechanics—hand slipping past water</li>
+                    <li>Excessive energy expenditure for minimal propulsion</li>
                 </ul>
-                <p><strong>Результат:</strong> Высокие усилия, низкая эффективность. Ощущается занятым, но не быстрым.</p>
-                <p><strong>Решение:</strong> Удлините гребок, улучшите захват, обеспечьте полное растяжение и завершающее движение.</p>
+                <p><strong>Result:</strong> High effort, low efficiency. Feels busy but not fast.</p>
+                <p><strong>Fix:</strong> Lengthen stroke, improve catch, ensure full extension and push-through.</p>
             </div>
 
             <div class="interpretation-item interpretation-optimal">
-                <h3>⚡ SR Оптимальный</h3>
-                <p><strong>Характеристики:</strong></p>
+                <h3>⚡ Optimal SR</h3>
+                <p><strong>Characteristics:</strong></p>
                 <ul>
-                    <li>Сбалансированный ритм — непрерывный, но не лихорадочный</li>
-                    <li>Минимальное замедление между гребками</li>
-                    <li>Сильный захват и полное растяжение</li>
-                    <li>Поддерживаемый на темпе гонки</li>
+                    <li>Balanced rhythm—continuous but not frantic</li>
+                    <li>Minimal deceleration between strokes</li>
+                    <li>Strong catch and full extension</li>
+                    <li>Sustainable at race pace</li>
                 </ul>
-                <p><strong>Результат:</strong> Максимальная скорость при минимальной трате энергии.</p>
-                <p><strong>Как Найти:</strong> Экспериментируйте с изменениями ±5 SPM, сохраняя темп. Самый низкий RPE = оптимальный SR.</p>
+                <p><strong>Result:</strong> Maximum velocity with minimum wasted energy.</p>
+                <p><strong>How to Find:</strong> Experiment with ±5 SPM adjustments while maintaining pace. Lowest RPE = optimal SR.</p>
             </div>
         </div>
     </div>
@@ -868,90 +983,90 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Расстояние на Гребок (DPS)</h2>
+        <h2 class="text-center mb-xl">Distance Per Stroke (DPS)</h2>
 
         <div class="grid grid-2">
             <div>
-                <h3>Что такое Расстояние на Гребок?</h3>
-                <p><strong>Расстояние на Гребок (DPS)</strong>, также называемое <em>Длиной Гребка</em>, измеряет, как далеко вы продвигаетесь с каждым полным циклом гребка. Это первичный показатель эффективности гребка и "чувства воды".</p>
+                <h3>What is Distance Per Stroke?</h3>
+                <p><strong>Distance Per Stroke (DPS)</strong>, also called <em>Stroke Length</em>, measures how far you travel with each complete stroke cycle. It's a primary indicator of stroke efficiency and "feel for the water."</p>
 
                 <div class="formula-box">
-                    <h4>Формула</h4>
+                    <h4>Formula</h4>
                     <div class="formula">
-                        DPS (м/гребок) = Расстояние / Количество Гребков
+                        DPS (m/stroke) = Distance / Number of Strokes
                     </div>
-                    <p>Или:</p>
+                    <p>Or:</p>
                     <div class="formula">
-                        DPS = Скорость / (SR / 60)
+                        DPS = Velocity / (SR / 60)
                     </div>
 
                     <div class="example-box mt-md">
-                        <h4>Пример (бассейн 25м, 5м толчок):</h4>
-                        <p>Проплываете 20м за 12 гребков:</p>
+                        <h4>Example (25m pool, 5m push-off):</h4>
+                        <p>Swim 20m in 12 strokes:</p>
                         <div class="calculation">
-                            DPS = 20 / 12 = <strong>1.67 м/гребок</strong>
+                            DPS = 20 / 12 = <strong>1.67 m/stroke</strong>
                         </div>
 
-                        <h4 class="mt-sm">Для 100м с 48 гребками (4 × 5м толчков):</h4>
+                        <h4 class="mt-sm">For 100m with 48 strokes (4 × 5m push-offs):</h4>
                         <div class="calculation">
-                            Эффективное расстояние = 100 - (4 × 5) = 80м<br>
-                            DPS = 80 / 48 = <strong>1.67 м/гребок</strong>
+                            Effective distance = 100 - (4 × 5) = 80m<br>
+                            DPS = 80 / 48 = <strong>1.67 m/stroke</strong>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div>
-                <h3>Типичные Значения DPS (Бассейн 25м Кроль)</h3>
+                <h3>Typical DPS Values (25m Pool Freestyle)</h3>
 
                 <div class="dps-benchmarks">
-                    <h4>Элитные Пловцы</h4>
+                    <h4>Elite Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.8-2.2 м/гребок</span>
+                        <span class="value">1.8-2.2 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">11-14 гребков/длина</span>
+                        <span class="value">11-14 strokes/length</span>
                     </div>
 
-                    <h4>Соревновательные Пловцы</h4>
+                    <h4>Competitive Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.5-1.8 м/гребок</span>
+                        <span class="value">1.5-1.8 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">14-17 гребков/длина</span>
+                        <span class="value">14-17 strokes/length</span>
                     </div>
 
-                    <h4>Фитнес Пловцы</h4>
+                    <h4>Fitness Swimmers</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">1.2-1.5 м/гребок</span>
+                        <span class="value">1.2-1.5 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">17-21 гребков/длина</span>
+                        <span class="value">17-21 strokes/length</span>
                     </div>
 
-                    <h4>Начинающие</h4>
+                    <h4>Beginners</h4>
                     <div class="benchmark-row">
                         <span class="label">DPS:</span>
-                        <span class="value">&lt;1.2 м/гребок</span>
+                        <span class="value">&lt;1.2 m/stroke</span>
                     </div>
                     <div class="benchmark-row">
                         <span class="label">SPL:</span>
-                        <span class="value">21+ гребков/длина</span>
+                        <span class="value">21+ strokes/length</span>
                     </div>
                 </div>
 
                 <div class="callout callout-info">
-                    <h4>📏 Корректировка по Росту</h4>
-                    <p><strong>1.83м (6'0"):</strong> Цель ~12 гребков/25м<br>
-                    <strong>1.68м (5'6"):</strong> Цель ~13 гребков/25м<br>
-                    <strong>1.52м (5'0"):</strong> Цель ~14 гребков/25м</p>
-                    <p>Более высокие пловцы естественно имеют больший DPS благодаря длине рук и размеру тела.</p>
+                    <h4>📏 Height Adjustments</h4>
+                    <p><strong>6'0" (183cm):</strong> Target ~12 strokes/25m<br>
+                    <strong>5'6" (168cm):</strong> Target ~13 strokes/25m<br>
+                    <strong>5'0" (152cm):</strong> Target ~14 strokes/25m</p>
+                    <p>Taller swimmers naturally have longer DPS due to arm length and body size.</p>
                 </div>
             </div>
         </div>
@@ -960,37 +1075,37 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Факторы, Влияющие на DPS</h2>
+        <h2>Factors Affecting DPS</h2>
 
         <div class="factors-list">
             <div class="factor-item">
-                <h3>1️⃣ Качество Захвата</h3>
-                <p>Способность "держать" воду рукой и предплечьем во время фазы тяги. Сильный захват = больше движения за гребок.</p>
-                <p><strong>Упражнение:</strong> Упражнение на вытягивание, плавание на кулаках, упражнения скаллинг.</p>
+                <h3>1️⃣ Catch Quality</h3>
+                <p>The ability to "hold" water with your hand and forearm during the pull phase. A strong catch = more propulsion per stroke.</p>
+                <p><strong>Drill:</strong> Catch-up drill, fist swimming, sculling exercises.</p>
             </div>
 
             <div class="factor-item">
-                <h3>2️⃣ Завершение Гребка</h3>
-                <p>Полный толчок до полного растяжения у бедра. Многие пловцы отпускают рано, теряя последние 20% движения.</p>
-                <p><strong>Упражнение:</strong> Упражнение с касанием пальцами, серии с фокусом на растяжении.</p>
+                <h3>2️⃣ Stroke Completion</h3>
+                <p>Pushing all the way through to full extension at the hip. Many swimmers release early, losing the final 20% of propulsion.</p>
+                <p><strong>Drill:</strong> Fingertip drag drill, extension focus sets.</p>
             </div>
 
             <div class="factor-item">
-                <h3>3️⃣ Положение Тела и Обтекаемость</h3>
-                <p>Меньшее сопротивление = большее расстояние за гребок. Высокие бёдра, горизонтальное тело, жёсткий корпус минимизируют сопротивление.</p>
-                <p><strong>Упражнение:</strong> Удары на боку, толчки в обтекаемости, работа на стабильность корпуса.</p>
+                <h3>3️⃣ Body Position & Streamline</h3>
+                <p>Reduced drag = farther travel per stroke. High hips, horizontal body, tight core all minimize resistance.</p>
+                <p><strong>Drill:</strong> Kick on side, streamline push-offs, core stability work.</p>
             </div>
 
             <div class="factor-item">
-                <h3>4️⃣ Эффективность Ударов Ногами</h3>
-                <p>Удары ногами поддерживают скорость между гребками. Слабые удары = замедление = более короткий DPS.</p>
-                <p><strong>Упражнение:</strong> Вертикальные удары, удары с доской, удары на боку.</p>
+                <h3>4️⃣ Kick Effectiveness</h3>
+                <p>The kick maintains velocity between arm strokes. Weak kick = deceleration = shorter DPS.</p>
+                <p><strong>Drill:</strong> Vertical kicking, kick with board, kick on side.</p>
             </div>
 
             <div class="factor-item">
-                <h3>5️⃣ Техника Дыхания</h3>
-                <p>Плохое дыхание нарушает положение тела и создаёт сопротивление. Минимизируйте движение головы и вращение.</p>
-                <p><strong>Упражнение:</strong> Упражнение с боковым дыханием, двустороннее дыхание, дыхание каждые 3/5 гребков.</p>
+                <h3>5️⃣ Breathing Technique</h3>
+                <p>Poor breathing disrupts body position and creates drag. Minimize head movement and rotation.</p>
+                <p><strong>Drill:</strong> Side breathing drill, bilateral breathing, breathing every 3/5 strokes.</p>
             </div>
         </div>
     </div>
@@ -998,128 +1113,128 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Баланс SR × DPS</h2>
+        <h2>The SR × DPS Balance</h2>
 
-        <p class="lead">Элитные пловцы не просто имеют высокий SR или высокий DPS — у них есть <em>оптимальная комбинация</em> для своей дистанции.</p>
+        <p class="lead">Elite swimmers don't just have high SR or high DPS—they have the optimal <em>combination</em> for their event.</p>
 
         <div class="example-box">
-            <h3>Реальный Пример: 50м Кроль Калеба Дрессела</h3>
-            <p><strong>Метрики Мирового Рекорда:</strong></p>
+            <h3>Real-World Example: Caeleb Dressel's 50m Freestyle</h3>
+            <p><strong>World Record Metrics:</strong></p>
             <ul>
-                <li>Частота Гребков: ~130 гребков/мин</li>
-                <li>Расстояние на Гребок: ~0.92 ярда/гребок (~0.84 м/гребок)</li>
-                <li>Скорость: ~2.3 м/с (темп мирового рекорда)</li>
+                <li>Stroke Rate: ~130 strokes/min</li>
+                <li>Distance Per Stroke: ~0.92 yards/stroke (~0.84 m/stroke)</li>
+                <li>Velocity: ~2.3 m/s (world record pace)</li>
             </ul>
-            <p><strong>Анализ:</strong> Дрессел сочетает исключительно высокий SR с хорошим DPS. Его мощность позволяет ему поддерживать разумную длину гребка, несмотря на экстремальный темп.</p>
+            <p><strong>Analysis:</strong> Dressel combines exceptionally high SR with good DPS. His power allows him to maintain reasonable stroke length despite extreme turnover.</p>
         </div>
 
         <div class="sr-dps-scenarios">
-            <h3>Анализ Сценариев</h3>
+            <h3>Scenario Analysis</h3>
 
             <div class="scenario">
-                <h4>🔴 Высокий DPS + Низкий SR = "Чрезмерное Скольжение"</h4>
-                <p><strong>Пример:</strong> 1.8 м/гребок × 50 SPM = 1.5 м/с</p>
-                <p><strong>Проблема:</strong> Слишком много скольжения создаёт мёртвые точки, где скорость падает. Неэффективно, несмотря на хорошую длину гребка.</p>
+                <h4>🔴 High DPS + Low SR = "Overgliding"</h4>
+                <p><strong>Example:</strong> 1.8 m/stroke × 50 SPM = 1.5 m/s</p>
+                <p><strong>Problem:</strong> Too much glide creates dead spots where velocity drops. Inefficient despite good stroke length.</p>
             </div>
 
             <div class="scenario">
-                <h4>🔴 Низкий DPS + Высокий SR = "Молотьба без Продвижения"</h4>
-                <p><strong>Пример:</strong> 1.2 м/гребок × 90 SPM = 1.8 м/с</p>
-                <p><strong>Проблема:</strong> Высокая энергетическая стоимость. Ощущается занятым, но не хватает движения за гребок. Неустойчиво.</p>
+                <h4>🔴 Low DPS + High SR = "Spinning Wheels"</h4>
+                <p><strong>Example:</strong> 1.2 m/stroke × 90 SPM = 1.8 m/s</p>
+                <p><strong>Problem:</strong> High energy cost. Feels busy but lacks propulsion per stroke. Unsustainable.</p>
             </div>
 
             <div class="scenario">
-                <h4>🟢 Сбалансированный DPS + SR = Оптимально</h4>
-                <p><strong>Пример:</strong> 1.6 м/гребок × 70 SPM = 1.87 м/с</p>
-                <p><strong>Результат:</strong> Сильное движение за гребок с устойчивым темпом. Эффективно и быстро.</p>
+                <h4>🟢 Balanced DPS + SR = Optimal</h4>
+                <p><strong>Example:</strong> 1.6 m/stroke × 70 SPM = 1.87 m/s</p>
+                <p><strong>Result:</strong> Strong propulsion per stroke with sustainable turnover. Efficient and fast.</p>
             </div>
         </div>
 
         <div class="callout callout-success">
-            <h3>✅ Поиск Вашего Оптимального Баланса</h3>
-            <p><strong>Серия:</strong> 6 × 100м @ темп CSS</p>
+            <h3>✅ Finding Your Optimal Balance</h3>
+            <p><strong>Set:</strong> 6 × 100m @ CSS pace</p>
             <ul>
-                <li><strong>100 #1-2:</strong> Плывите естественно, записывайте SR и DPS</li>
-                <li><strong>100 #3:</strong> Уменьшите количество гребков на 2-3 (увеличьте DPS), попытайтесь сохранить темп</li>
-                <li><strong>100 #4:</strong> Увеличьте SR на 5 SPM, попытайтесь сохранить темп</li>
-                <li><strong>100 #5:</strong> Найдите золотую середину — сбалансируйте SR и DPS</li>
-                <li><strong>100 #6:</strong> Обратите внимание, что ощущалось наиболее эффективным</li>
+                <li><strong>100 #1-2:</strong> Swim naturally, record SR and DPS</li>
+                <li><strong>100 #3:</strong> Reduce stroke count by 2-3 (increase DPS), try to maintain pace</li>
+                <li><strong>100 #4:</strong> Increase SR by 5 SPM, try to maintain pace</li>
+                <li><strong>100 #5:</strong> Find middle ground—balance SR and DPS</li>
+                <li><strong>100 #6:</strong> Lock in on what felt most efficient</li>
             </ul>
-            <p>Повторение, которое ощущалось легче всего при темпе = ваша оптимальная комбинация SR/DPS.</p>
+            <p>The rep that felt easiest at pace = your optimal SR/DPS combination. Each swimmer has a "critical stroke rate"—the turnover frequency where stroke length begins to collapse. Finding this threshold helps optimize the SR/DPS balance.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Индекс Гребка: Метрика Мощности-Эффективности</h2>
+        <h2>Stroke Index: The Power-Efficiency Metric</h2>
 
         <div class="formula-box">
-            <h3>Формула</h3>
+            <h3>Formula</h3>
             <div class="formula">
-                Индекс Гребка (SI) = Скорость (м/с) × DPS (м/гребок)
+                Stroke Index (SI) = Velocity (m/s) × DPS (m/stroke)
             </div>
             <div class="formula-explanation">
-                <p>Индекс Гребка объединяет скорость и эффективность в одну метрику. Выше SI = лучшая производительность.</p>
+                <p>Stroke Index combines speed and efficiency into one metric. Higher SI = better performance.</p>
             </div>
         </div>
 
         <div class="example-box">
-            <h4>Пример:</h4>
-            <p>Пловец A: 1.5 м/с скорость × 1.7 м/гребок DPS = <strong>SI 2.55</strong><br>
-            Пловец B: 1.4 м/с скорость × 1.9 м/гребок DPS = <strong>SI 2.66</strong></p>
-            <p><strong>Анализ:</strong> Пловец B немного медленнее, но более эффективен. С большей мощностью у него больший потенциал производительности.</p>
+            <h4>Example:</h4>
+            <p>Swimmer A: 1.5 m/s velocity × 1.7 m/stroke DPS = <strong>SI of 2.55</strong><br>
+            Swimmer B: 1.4 m/s velocity × 1.9 m/stroke DPS = <strong>SI of 2.66</strong></p>
+            <p><strong>Analysis:</strong> Swimmer B is slightly slower but more efficient. With improved power, they have higher performance potential.</p>
         </div>
 
         <div class="callout callout-science">
-            <h3>🔬 Научное Обоснование</h3>
-            <p>Barbosa и др. (2010) обнаружили, что <strong>длина гребка является более важным предиктором производительности, чем частота гребков</strong> в соревновательном плавании. Однако связь нелинейна — есть оптимальная точка, за которой увеличение DPS (уменьшение SR) становится контрпродуктивным из-за потери импульса.</p>
-            <p>Ключ в <strong>биомеханической эффективности</strong>: максимизация движения за гребок при поддержании темпа, который предотвращает замедление.</p>
+            <h3>🔬 Research Foundation</h3>
+            <p>Barbosa et al. (2010) found that <strong>stroke length is a more important predictor of performance than stroke rate</strong> in competitive swimming. However, the relationship isn't linear—there's an optimal point beyond which increasing DPS (by decreasing SR) becomes counterproductive due to lost momentum.</p>
+            <p>The key is <strong>biomechanical efficiency</strong>: maximizing propulsion per stroke while maintaining rhythm that prevents deceleration.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Практические Тренировочные Применения</h2>
+        <h2>Practical Training Applications</h2>
 
         <div class="application-workout">
-            <h3>🎯 Серия Контроля SR</h3>
+            <h3>🎯 SR Control Set</h3>
             <div class="workout-box">
-                <h4>8 × 50м (20с отдых)</h4>
-                <p><strong>Используйте Tempo Trainer или считайте гребки/время</strong></p>
+                <h4>8 × 50m (20s rest)</h4>
+                <p><strong>Use a Tempo Trainer or count strokes/time</strong></p>
                 <ol>
-                    <li>50 #1-2: Базовый SR (плывите естественно)</li>
-                    <li>50 #3-4: SR +10 SPM (более быстрый темп)</li>
-                    <li>50 #5-6: SR -10 SPM (медленнее, более длинные гребки)</li>
-                    <li>50 #7-8: Вернитесь к базовому, отметьте, что ощущалось наиболее эффективным</li>
+                    <li>50 #1-2: Baseline SR (swim naturally)</li>
+                    <li>50 #3-4: SR +10 SPM (faster turnover)</li>
+                    <li>50 #5-6: SR -10 SPM (slower, longer strokes)</li>
+                    <li>50 #7-8: Return to baseline, note which felt most efficient</li>
                 </ol>
-                <p><strong>Цель:</strong> Развить осознание того, как изменения SR влияют на темп и усилия.</p>
+                <p><strong>Goal:</strong> Develop awareness of how SR changes affect pace and effort.</p>
             </div>
         </div>
 
         <div class="application-workout">
-            <h3>🎯 Серия Максимизации DPS</h3>
+            <h3>🎯 DPS Maximization Set</h3>
             <div class="workout-box">
-                <h4>8 × 25м (15с отдых)</h4>
-                <p><strong>Считайте гребки за длину</strong></p>
+                <h4>8 × 25m (15s rest)</h4>
+                <p><strong>Count strokes per length</strong></p>
                 <ol>
-                    <li>25 #1: Установите базовое количество гребков</li>
-                    <li>25 #2-4: Уменьшите на 1 гребок за длину (максимум DPS)</li>
-                    <li>25 #5: Поддерживайте минимальное количество гребков, немного увеличьте темп</li>
-                    <li>25 #6-8: Найдите устойчивое уменьшенное количество гребков при целевом темпе</li>
+                    <li>25 #1: Establish baseline stroke count</li>
+                    <li>25 #2-4: Reduce by 1 stroke per lap (max DPS)</li>
+                    <li>25 #5: Hold minimum stroke count, increase pace slightly</li>
+                    <li>25 #6-8: Find sustainable reduced stroke count at target pace</li>
                 </ol>
-                <p><strong>Цель:</strong> Улучшить эффективность гребка — проходить больше расстояния за гребок без снижения скорости.</p>
+                <p><strong>Goal:</strong> Improve stroke efficiency—travel farther per stroke without slowing down.</p>
             </div>
         </div>
 
         <div class="application-workout">
-            <h3>🎯 Серия Гольф (Минимизация SWOLF)</h3>
+            <h3>🎯 Golf Set (Minimize SWOLF)</h3>
             <div class="workout-box">
-                <h4>4 × 100м (30с отдых)</h4>
-                <p><strong>Цель: Самый низкий балл SWOLF (время + гребки) при темпе CSS</strong></p>
-                <p>Экспериментируйте с различными комбинациями SR/DPS. Повторение с наименьшим SWOLF = наиболее эффективное.</p>
-                <p>Отслеживайте, как SWOLF меняется в повторениях — растущий SWOLF указывает на усталость, ухудшающую технику.</p>
+                <h4>4 × 100m (30s rest)</h4>
+                <p><strong>Goal: Lowest SWOLF score (time + strokes) at CSS pace</strong></p>
+                <p>Experiment with different SR/DPS combinations. The rep with lowest SWOLF = most efficient.</p>
+                <p>Track how SWOLF changes across reps—rising SWOLF indicates fatigue breaking down technique.</p>
             </div>
         </div>
     </div>
@@ -1127,14 +1242,14 @@
 
 <section class="section">
     <div class="container container-narrow text-center">
-        <h2>Овладейте Механикой, Овладейте Скоростью</h2>
-        <p class="lead">Скорость = SR × DPS — это не просто формула — это система для понимания и улучшения каждого аспекта вашей техники плавания.</p>
+        <h2>Master the Mechanics, Master the Speed</h2>
+        <p class="lead">Velocity = SR × DPS isn't just a formula—it's a framework for understanding and improving every aspect of your swimming technique.</p>
 
-        <p>Отслеживайте обе переменные. Экспериментируйте с балансом. Найдите свою оптимальную комбинацию. Скорость последует.</p>
+        <p>Track both variables. Experiment with the balance. Find your optimal combination. Speed will follow.</p>
 
         <div class="mt-xl">
-            <a href="/uk/efficiency/" class="btn btn-secondary">← Эффективность SWOLF</a>
-            <a href="/uk/research/" class="btn btn-primary">Научные Исследования →</a>
+            <a href="/en/efficiency/" class="btn btn-secondary">← SWOLF Efficiency</a>
+            <a href="/en/research/" class="btn btn-primary">Scientific Research →</a>
         </div>
     </div>
 </section>
@@ -1576,15 +1691,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

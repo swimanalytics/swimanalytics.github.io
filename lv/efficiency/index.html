@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/lv/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,23 +809,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Efektywność Pływania: SWOLF</h1>
-        <p class="lead">Twój Wskaźnik Ekonomii Ruchu - Im Niższy, Tym Lepiej</p>
+        <h1>Swimming Efficiency: SWOLF</h1>
+        <p class="lead">Your Stroke Economy Score - Lower is Better</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Czym jest SWOLF?</h2>
-        <p class="lead">SWOLF (Swim + Golf) to złożony wskaźnik efektywności, który łączy liczbę ruchów i czas w jedną wartość. Podobnie jak w golfie, celem jest minimalizacja wyniku.</p>
+        <h2>What is SWOLF?</h2>
+        <p class="lead">SWOLF (Swim + Golf) is a composite efficiency metric that combines stroke count and time into a single number. Like golf, the goal is to minimize your score.</p>
 
         <div class="formula-box">
-            <h3>Formuła</h3>
+            <h3>Formula</h3>
             <div class="formula">
-                SWOLF = Czas Długości (sekundy) + Liczba Ruchów
+                SWOLF = Lap Time (seconds) + Stroke Count
             </div>
             <div class="formula-explanation">
-                <p><strong>Przykład:</strong> Jeśli płyniesz 25m w 20 sekund wykonując 15 ruchów:</p>
+                <p><strong>Example:</strong> If you swim 25m in 20 seconds with 15 strokes:</p>
                 <div class="calculation">
                     SWOLF = 20 + 15 = <strong>35</strong>
                 </div>
@@ -718,10 +833,10 @@
         </div>
 
         <div class="callout callout-info">
-            <h3>SWOLF Znormalizowany do Porównań Między Basenami</h3>
-            <p>Aby porównać wyniki między różnymi długościami basenu:</p>
+            <h3>Normalized SWOLF for Pool Comparison</h3>
+            <p>To compare scores across different pool lengths:</p>
             <div class="formula">
-                SWOLF₂₅ = (Czas × 25/Długość Basenu) + (Ruchy × 25/Długość Basenu)
+                SWOLF₂₅ = (Time × 25/Pool Length) + (Strokes × 25/Pool Length)
             </div>
         </div>
     </div>
@@ -729,60 +844,60 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="text-center mb-xl">Wartości Referencyjne SWOLF</h2>
+        <h2 class="text-center mb-xl">SWOLF Benchmarks</h2>
 
         <div class="grid grid-2">
             <div>
-                <h3>Styl Dowolny - Basen 25m</h3>
+                <h3>Freestyle - 25m Pool</h3>
                 <div class="levels-comparison">
                     <div class="level-card-compact">
-                        <strong>Pływacy Elitarni</strong>
+                        <strong>Elite Swimmers</strong>
                         <div class="value">30-35</div>
-                        <p>Poziom krajowy/międzynarodowy, wyjątkowa efektywność</p>
+                        <p>National/international level, exceptional efficiency</p>
                     </div>
                     <div class="level-card-compact">
-                        <strong>Zawodnicy Wyczynowi</strong>
+                        <strong>Competitive</strong>
                         <div class="value">35-45</div>
-                        <p>Poziom szkolny varsity, uniwersytecki, masters wyczynowi</p>
+                        <p>High school varsity, college, masters competitive</p>
                     </div>
                     <div class="level-card-compact">
-                        <strong>Pływacy Rekreacyjni</strong>
+                        <strong>Fitness Swimmers</strong>
                         <div class="value">45-60</div>
-                        <p>Regularny trening, solidna technika</p>
+                        <p>Regular training, solid technique</p>
                     </div>
                     <div class="level-card-compact">
-                        <strong>Początkujący</strong>
+                        <strong>Beginners</strong>
                         <div class="value">60+</div>
-                        <p>Rozwijanie techniki i kondycji</p>
+                        <p>Developing technique and conditioning</p>
                     </div>
                 </div>
             </div>
 
             <div>
-                <h3>Inne Style - Basen 25m</h3>
+                <h3>Other Strokes - 25m Pool</h3>
                 <div class="stroke-benchmarks">
                     <div class="benchmark-item">
-                        <h4>Grzbiet</h4>
-                        <p>Zazwyczaj <strong>5-10 punktów wyżej</strong> niż styl dowolny</p>
-                        <div class="value-small">Dobry: 40-50</div>
+                        <h4>Backstroke</h4>
+                        <p>Typically <strong>5-10 points higher</strong> than freestyle</p>
+                        <div class="value-small">Good: 40-50</div>
                     </div>
 
                     <div class="benchmark-item">
-                        <h4>Żabka</h4>
-                        <p>Duża wariacja ze względu na technikę ślizgu</p>
-                        <div class="value-small">Zakres: 40-60</div>
+                        <h4>Breaststroke</h4>
+                        <p>Wide variation due to glide technique</p>
+                        <div class="value-small">Range: 40-60</div>
                     </div>
 
                     <div class="benchmark-item">
-                        <h4>Motyl</h4>
-                        <p>Podobny do stylu dowolnego dla wprawnych pływaków</p>
-                        <div class="value-small">Dobry: 38-55</div>
+                        <h4>Butterfly</h4>
+                        <p>Similar to freestyle for skilled swimmers</p>
+                        <div class="value-small">Good: 38-55</div>
                     </div>
                 </div>
 
                 <div class="callout callout-warning">
-                    <h4>⚠️ Zróżnicowanie Indywidualne</h4>
-                    <p>SWOLF jest zależny od wzrostu i rozpiętości ramion. Wyżsi pływacy naturalnie wykonują mniej ruchów. Używaj SWOLF do śledzenia <em>własnego postępu</em>, zamiast porównywać się z innymi.</p>
+                    <h4>⚠️ Individual Variation</h4>
+                    <p>SWOLF is influenced by height and arm span. Taller swimmers naturally take fewer strokes. Use SWOLF to track <em>your own progress</em> rather than comparing to others.</p>
                 </div>
             </div>
         </div>
@@ -791,43 +906,43 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Interpretacja Wzorców SWOLF</h2>
+        <h2>Interpreting SWOLF Patterns</h2>
 
         <div class="pattern-analysis">
             <div class="pattern-item">
-                <h3>📉 Spadający SWOLF = Poprawa Efektywności</h3>
-                <p>Twoja technika się poprawia lub stajesz się bardziej ekonomiczny przy danym tempie. To jest cel podczas tygodni i miesięcy treningu.</p>
+                <h3>📉 Decreasing SWOLF = Improving Efficiency</h3>
+                <p>Your technique is getting better, or you're becoming more economical at a given pace. This is the goal over weeks and months of training.</p>
                 <div class="example-box">
-                    <strong>Przykład:</strong> SWOLF spada z 48 → 45 → 42 podczas 8 tygodni pracy nad techniką.
+                    <strong>Example:</strong> SWOLF drops from 48 → 45 → 42 over 8 weeks of focused technique work.
                 </div>
             </div>
 
             <div class="pattern-item">
-                <h3>📈 Rosnący SWOLF = Spadek Efektywności</h3>
-                <p>Zmęczenie się nawarstwia, technika się pogarsza lub płyniesz szybciej niż pozwala na to Twoja efektywność.</p>
+                <h3>📈 Increasing SWOLF = Declining Efficiency</h3>
+                <p>Fatigue is setting in, technique is breaking down, or you're swimming faster than your efficiency allows.</p>
                 <div class="example-box">
-                    <strong>Przykład:</strong> SWOLF rośnie z 42 → 48 podczas ostatnich 200m serii 1000m, wskazując na zmęczenie.
+                    <strong>Example:</strong> SWOLF rises from 42 → 48 during final 200m of a 1000m set, indicating fatigue.
                 </div>
             </div>
 
             <div class="pattern-item">
-                <h3>📊 Różne Kombinacje przy Tym Samym SWOLF</h3>
-                <p>SWOLF 45 może wynikać z wielu kombinacji ruch/czas:</p>
+                <h3>📊 Different Combinations at Same SWOLF</h3>
+                <p>A SWOLF of 45 could result from multiple stroke/time combinations:</p>
                 <ul>
-                    <li><strong>20 sekund + 25 ruchów</strong> = Wysoka częstotliwość, krótsze ruchy</li>
-                    <li><strong>25 sekund + 20 ruchów</strong> = Niższa częstotliwość, dłuższe ruchy</li>
+                    <li><strong>20 seconds + 25 strokes</strong> = High frequency, shorter strokes</li>
+                    <li><strong>25 seconds + 20 strokes</strong> = Lower frequency, longer strokes</li>
                 </ul>
-                <p><strong>Zawsze analizuj komponenty</strong> (liczbę ruchów I czas), aby zrozumieć swoją strategię pływania.</p>
+                <p><strong>Always analyze the components</strong> (stroke count AND time) to understand your swimming strategy.</p>
             </div>
         </div>
 
         <div class="callout callout-tip">
-            <h3>🎯 Zastosowania Treningowe SWOLF</h3>
+            <h3>🎯 SWOLF Training Applications</h3>
             <ul>
-                <li><strong>Sesje Techniczne:</strong> Próbuj zmniejszyć SWOLF poprzez lepszy chwyt, opływowość i pozycję ciała</li>
-                <li><strong>Monitoring Zmęczenia:</strong> Rosnący SWOLF wskazuje na pogorszenie techniki—czas na przerwę</li>
-                <li><strong>Równowaga Tempo-Efektywność:</strong> Znajdź najszybsze tempo, które możesz utrzymać bez gwałtownego wzrostu SWOLF</li>
-                <li><strong>Skuteczność Ćwiczeń:</strong> Zapisuj SWOLF przed/po seriach ćwiczeń, aby zmierzyć transfer techniczny</li>
+                <li><strong>Technique Sessions:</strong> Aim to reduce SWOLF through better catch, streamline, and body position</li>
+                <li><strong>Fatigue Monitoring:</strong> Rising SWOLF indicates technique breakdown—time for a break</li>
+                <li><strong>Pace-Efficiency Balance:</strong> Find the fastest pace you can hold without SWOLF spiking</li>
+                <li><strong>Drill Effectiveness:</strong> Track SWOLF before/after drill sets to measure technique transfer</li>
             </ul>
         </div>
     </div>
@@ -835,36 +950,36 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Najlepsze Praktyki Pomiaru</h2>
+        <h2>Measurement Best Practices</h2>
 
         <div class="measurement-guidelines">
             <div class="guideline-box">
-                <h3>📏 Liczenie Ruchów</h3>
+                <h3>📏 Stroke Counting</h3>
                 <ul>
-                    <li>Licz każde wejście ręki (obie ręce łącznie)</li>
-                    <li>Zacznij liczyć od pierwszego ruchu po odbiciu</li>
-                    <li>Licz do dotknięcia ściany</li>
-                    <li>Utrzymuj stałą odległość odbicia (~5m od flag)</li>
+                    <li>Count each hand entry (both arms combined)</li>
+                    <li>Start counting from first stroke after push-off</li>
+                    <li>Count up to wall touch</li>
+                    <li>Maintain consistent push-off distance (~5m from flags)</li>
                 </ul>
             </div>
 
             <div class="guideline-box">
-                <h3>⏱️ Pomiar Czasu</h3>
+                <h3>⏱️ Timing</h3>
                 <ul>
-                    <li>Mierz od pierwszego ruchu do dotknięcia ściany</li>
-                    <li>Używaj stałej intensywności odbicia między długościami</li>
-                    <li>Technologia (Garmin, Apple Watch, FORM) oblicza automatycznie</li>
-                    <li>Pomiar ręczny: Użyj zegara basenowego lub stopera</li>
+                    <li>Measure from first stroke to wall touch</li>
+                    <li>Use consistent push-off intensity across laps</li>
+                    <li>Technology (Garmin, Apple Watch, FORM) auto-calculates</li>
+                    <li>Manual timing: Use pace clock or stopwatch</li>
                 </ul>
             </div>
 
             <div class="guideline-box">
-                <h3>🔄 Spójność</h3>
+                <h3>🔄 Consistency</h3>
                 <ul>
-                    <li>Mierz SWOLF przy podobnych tempach do porównania</li>
-                    <li>Zapisuj podczas głównych serii, nie podczas rozgrzewki/wyciszenia</li>
-                    <li>Notuj jaki styl (dowolny, grzbiet, itp.)</li>
-                    <li>Porównuj tę samą długość basenu (25m vs 25m, nie 25m vs 50m)</li>
+                    <li>Measure SWOLF at similar paces for comparison</li>
+                    <li>Track during main sets, not warm-up/cool-down</li>
+                    <li>Note which stroke type (freestyle, back, etc.)</li>
+                    <li>Compare same pool length (25m vs 25m, not 25m vs 50m)</li>
                 </ul>
             </div>
         </div>
@@ -873,65 +988,65 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Ograniczenia SWOLF</h2>
+        <h2>SWOLF Limitations</h2>
 
         <div class="limitations-list">
             <div class="limitation-item">
-                <h3>🚫 Nie Można Porównywać Między Sportowcami</h3>
-                <p>Wzrost, długość ramion i elastyczność tworzą naturalne różnice w liczbie ruchów. Pływak o wzroście 188cm będzie miał niższy SWOLF niż osoba o wzroście 168cm przy tym samym poziomie kondycji.</p>
-                <p><strong>Rozwiązanie:</strong> Używaj SWOLF tylko do śledzenia własnego postępu.</p>
+                <h3>🚫 Cannot Compare Between Athletes</h3>
+                <p>Height, arm length, and flexibility create natural stroke count differences. A 6'2" swimmer will have a lower SWOLF than a 5'6" swimmer at the same fitness level.</p>
+                <p><strong>Solution:</strong> Use SWOLF for personal progress tracking only.</p>
             </div>
 
             <div class="limitation-item">
-                <h3>🚫 Wynik Złożony Ukrywa Szczegóły</h3>
-                <p>SWOLF łączy dwie zmienne. Możesz poprawić jedną, pogorszyć drugą i nadal mieć ten sam wynik.</p>
-                <p><strong>Rozwiązanie:</strong> Zawsze badaj liczbę ruchów I czas oddzielnie.</p>
+                <h3>🚫 Composite Score Hides Details</h3>
+                <p>SWOLF combines two variables. You can improve one while worsening the other and still have the same score.</p>
+                <p><strong>Solution:</strong> Always examine stroke count AND time separately.</p>
             </div>
 
             <div class="limitation-item">
-                <h3>🚫 Nie Jest Znormalizowany Względem Tempa</h3>
-                <p>SWOLF naturalnie wzrasta, gdy płyniesz szybciej (więcej ruchów, mniej czasu, ale wyższa suma). To nie jest nieefektywność—to fizyka.</p>
-                <p><strong>Rozwiązanie:</strong> Zapisuj SWOLF przy określonych tempach docelowych (np. "SWOLF przy tempie CSS" vs "SWOLF przy tempie łatwym").</p>
+                <h3>🚫 Not Pace-Normalized</h3>
+                <p>SWOLF naturally increases as you swim faster (more strokes, less time, but higher total). This isn't inefficiency—it's physics.</p>
+                <p><strong>Solution:</strong> Track SWOLF at specific target paces (e.g., "SWOLF at CSS pace" vs "SWOLF at easy pace").</p>
             </div>
         </div>
 
         <div class="callout callout-science">
-            <h3>🔬 Nauka Stojąca Za Ekonomią Pływania</h3>
-            <p>Badania Costilla i współpracowników (1985) wykazały, że <strong>ekonomia pływania</strong> (koszt energetyczny na jednostkę dystansu) jest ważniejsza niż VO₂max dla wydolności na średnim dystansie.</p>
-            <p>SWOLF służy jako przybliżony wskaźnik ekonomii—niższy SWOLF zazwyczaj koreluje z niższym wydatkiem energetycznym przy danym tempie, pozwalając Ci pływać szybciej lub dłużej przy tym samym wysiłku.</p>
+            <h3>🔬 The Science Behind Swimming Economy</h3>
+            <p>Research by Costill et al. (1985) established that <strong>swimming economy</strong> (energy cost per unit distance) is more important than VO₂max for middle-distance performance.</p>
+            <p>SWOLF serves as a proxy for economy—lower SWOLF typically correlates with lower energy expenditure at a given pace, allowing you to swim faster or longer with the same effort.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Ćwiczenia Treningowe SWOLF</h2>
+        <h2>SWOLF Training Drills</h2>
 
         <div class="drill-set">
-            <h3>🎯 Seria Redukcji SWOLF</h3>
+            <h3>🎯 SWOLF Reduction Set</h3>
             <div class="workout-box">
-                <h4>8 × 50m (30 sekund odpoczynku)</h4>
+                <h4>8 × 50m (30 seconds rest)</h4>
                 <ol>
-                    <li><strong>50 #1-2:</strong> Płyń w wygodnym tempie, zapisz bazowy SWOLF</li>
-                    <li><strong>50 #3-4:</strong> Zmniejsz liczbę ruchów o 2, utrzymaj ten sam czas → Skup się na dystansie na ruch</li>
-                    <li><strong>50 #5-6:</strong> Nieznacznie zwiększ częstotliwość ruchów, utrzymaj liczbę → Skup się na rotacji</li>
-                    <li><strong>50 #7-8:</strong> Znajdź optymalną równowagę—szukaj najniższego SWOLF</li>
+                    <li><strong>50 #1-2:</strong> Swim at comfortable pace, record baseline SWOLF</li>
+                    <li><strong>50 #3-4:</strong> Reduce stroke count by 2, maintain same time → Focus on length per stroke</li>
+                    <li><strong>50 #5-6:</strong> Increase stroke rate slightly, keep stroke count same → Focus on turnover</li>
+                    <li><strong>50 #7-8:</strong> Find optimal balance—aim for lowest SWOLF</li>
                 </ol>
-                <p><strong>Cel:</strong> Odkryj swoją najbardziej efektywną kombinację liczby/częstotliwości ruchów.</p>
+                <p><strong>Goal:</strong> Discover your most efficient stroke count/rate combination.</p>
             </div>
         </div>
 
         <div class="drill-set">
-            <h3>⚡ Test Stabilności SWOLF</h3>
+            <h3>⚡ SWOLF Stability Test</h3>
             <div class="workout-box">
-                <h4>10 × 100m @ Tempo CSS (20 sekund odpoczynku)</h4>
-                <p>Zapisuj SWOLF dla każdych 100m. Analizuj:</p>
+                <h4>10 × 100m @ CSS Pace (20 seconds rest)</h4>
+                <p>Record SWOLF for each 100m. Analyze:</p>
                 <ul>
-                    <li>Które 100m miało najniższy SWOLF? (Byłeś najbardziej efektywny)</li>
-                    <li>Gdzie SWOLF wzrósł? (Pogorszenie techniki lub zmęczenie)</li>
-                    <li>Jak bardzo zmienił się SWOLF od pierwszych do ostatnich 100m?</li>
+                    <li>Which 100m had lowest SWOLF? (You were most efficient)</li>
+                    <li>Where did SWOLF spike? (Technique breakdown or fatigue)</li>
+                    <li>How much did SWOLF drift from first to last 100m?</li>
                 </ul>
-                <p><strong>Cel:</strong> Utrzymać SWOLF ±2 punkty we wszystkich powtórzeniach. Spójność wskazuje na solidną technikę pod zmęczeniem.</p>
+                <p><strong>Goal:</strong> Maintain SWOLF ±2 points across all reps. Consistency indicates strong technique under fatigue.</p>
             </div>
         </div>
     </div>
@@ -1009,48 +1124,48 @@
                 <h3 itemprop="name">How can I improve my SWOLF?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Focus on technique: longer strokes (better catch and pull-through), improved streamline (off walls and during stroke), better body position (reduce drag), and consistent rotation. Drills and video analysis help identify specific areas for improvement. Learn more in our <a href="/lv/stroke-mechanics/">Stroke Mechanics guide</a>.</p>
+                        <p>Focus on technique: longer strokes (better catch and pull-through), improved streamline (off walls and during stroke), better body position (reduce drag), and consistent rotation. Drills and video analysis help identify specific areas for improvement. Learn more in our <a href="/en/stroke-mechanics/">Stroke Mechanics guide</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>        <h2 class="mt-3xl">Related Resources</h2>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container-narrow text-center">        <h2 class="mt-3xl">Related Resources</h2>
 
         <div class="related-articles">
-            <a href="/lv/css/" class="related-card">
+            <a href="/en/css/" class="related-card">
                 <h3>Critical Swim Speed (CSS) Test</h3>
                 <p>Learn how to measure your swimming threshold pace with the CSS protocol</p>
             </a>
 
-            <a href="/lv/training-zones/" class="related-card">
+            <a href="/en/training-zones/" class="related-card">
                 <h3>Training Zones Guide</h3>
                 <p>Understand the 5 training zones and how to structure workouts for specific adaptations</p>
             </a>
 
-            <a href="/lv/stss-calculator/" class="related-card">
+            <a href="/en/stss-calculator/" class="related-card">
                 <h3>Swimming TSS Calculator</h3>
                 <p>Quantify your training load and track fitness with sTSS calculations</p>
             </a>
 
-            <a href="/lv/getting-started/" class="related-card">
+            <a href="/en/getting-started/" class="related-card">
                 <h3>Getting Started Guide</h3>
                 <p>Complete onboarding resource for new SwimAnalytics users</p>
             </a>
         </div>
 
 
-</section>
+        <h2>Efficiency is Earned Through Repetition</h2>
+        <p class="lead">SWOLF doesn't improve overnight. It's the cumulative result of thousands of technically sound strokes, deliberate practice, and mindful attention to efficiency over speed.</p>
 
-<section class="section">
-    <div class="container container-narrow text-center">
-        <h2>Efektywność Zdobywa Się Przez Powtarzanie</h2>
-        <p class="lead">SWOLF nie poprawia się z dnia na dzień. To skumulowany wynik tysięcy technicznie poprawnych ruchów, celowej praktyki i świadomej uwagi na efektywność nad prędkością.</p>
-
-        <p>Zapisuj go konsekwentnie. Poprawiaj stopniowo. Obserwuj, jak przekształca się Twoje pływanie.</p>
+        <p>Track it consistently. Improve it gradually. Watch your swimming transform.</p>
 
         <div class="mt-xl">
-            <a href="/lv/stroke-mechanics/" class="btn btn-primary">Mechanika Ruchu →</a>
-            <a href="/lv/formulas/" class="btn btn-secondary">Wszystkie Formuły</a>
+            <a href="/en/stroke-mechanics/" class="btn btn-primary">Stroke Mechanics →</a>
+            <a href="/en/formulas/" class="btn btn-secondary">All Formulas</a>
         </div>
     </div>
 </section>
@@ -1492,15 +1607,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

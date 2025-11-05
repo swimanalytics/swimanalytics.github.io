@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/fr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -940,77 +1055,77 @@
         <div class="callout callout-tip">
             <h3>Conseil Pro : Suivez Votre CTL</h3>
             <p>Enregistrez le sTSS quotidien dans un tableur ou journal d'entraînement. Calculez votre moyenne sur 42 jours (CTL) chaque semaine. Visez une augmentation de 5-10 points CTL par semaine durant la construction de base. Maintenez ou réduisez légèrement le CTL durant l'affûtage (1-2 semaines avant la course).</p>
-        </div>        <h2 class="mt-3xl">Frequently Asked Questions</h2>
+        </div>        <h2 class="mt-3xl">Questions Fréquemment Posées</h2>
 
         <div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is Swimming TSS (sTSS)?</h3>
+                <h3 itemprop="name">Qu'est-ce que le TSS de Natation (sTSS) ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Swimming Training Stress Score (sTSS) is a metric that quantifies the training load of a swimming workout by combining both intensity and duration. It's adapted from cycling's TSS methodology, using your Critical Swim Speed (CSS) as the threshold pace. A workout of 1 hour at CSS pace equals 100 sTSS.</p>
+                        <p>Le Score de Stress d'Entraînement de Natation (sTSS) est une métrique qui quantifie la charge d'entraînement d'une séance de natation en combinant intensité et durée. Il est adapté de la méthodologie TSS du cyclisme, utilisant votre Vitesse Critique de Nage (VCN) comme allure de seuil. Une séance d'1 heure à l'allure VCN équivaut à 100 sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I calculate my sTSS?</h3>
+                <h3 itemprop="name">Comment calculer mon sTSS ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Use the calculator above by entering your CSS pace (from a CSS test), total workout duration, and average pace during the workout. The formula is: sTSS = Duration (hours) × Intensity Factor² × 100, where Intensity Factor = CSS Pace / Average Workout Pace.</p>
+                        <p>Utilisez le calculateur ci-dessus en saisissant votre allure VCN (issue d'un test VCN), la durée totale de la séance et l'allure moyenne durant la séance. La formule est : sTSS = Durée (heures) × Facteur d'Intensité² × 100, où Facteur d'Intensité = Allure VCN / Allure Moyenne de la Séance.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need CSS to calculate sTSS?</h3>
+                <h3 itemprop="name">Ai-je besoin de la VCN pour calculer le sTSS ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, your Critical Swim Speed (CSS) is required to calculate the Intensity Factor, which is essential for sTSS calculation. CSS represents your threshold pace and should be tested every 6-8 weeks. You can find your CSS using our <a href="/fr/css/">CSS calculator</a>.</p>
+                        <p>Oui, votre Vitesse Critique de Nage (VCN) est nécessaire pour calculer le Facteur d'Intensité, essentiel au calcul du sTSS. La VCN représente votre allure de seuil et doit être testée toutes les 6-8 semaines. Vous pouvez déterminer votre VCN avec notre <a href="/fr/css/">calculateur VCN</a>.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good sTSS score for one workout?</h3>
+                <h3 itemprop="name">Quel est un bon score sTSS pour une séance ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>It depends on workout intensity: Easy workouts typically score below 50 sTSS, moderate workouts 50-100 sTSS, hard workouts 100-200 sTSS, and very hard workouts above 200 sTSS. The appropriate score depends on your training goals and current fitness level.</p>
+                        <p>Cela dépend de l'intensité de la séance : les séances faciles génèrent généralement moins de 50 sTSS, les séances modérées 50-100 sTSS, les séances difficiles 100-200 sTSS, et les séances très difficiles plus de 200 sTSS. Le score approprié dépend de vos objectifs d'entraînement et de votre niveau de forme actuel.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How much sTSS should I do per week?</h3>
+                <h3 itemprop="name">Combien de sTSS devrais-je faire par semaine ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Weekly sTSS targets vary by level: Recreational swimmers: 150-300, Fitness swimmers/Triathletes: 300-500, Competitive Masters: 500-800, Elite/Collegiate: 800-1200+. Start conservatively and increase gradually to avoid overtraining.</p>
+                        <p>Les objectifs sTSS hebdomadaires varient selon le niveau : Nageurs récréatifs : 150-300, Nageurs fitness/Triathlètes : 300-500, Masters compétitifs : 500-800, Élite/Universitaires : 800-1200+. Commencez prudemment et augmentez progressivement pour éviter le surentraînement.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Is swimming TSS the same as cycling TSS?</h3>
+                <h3 itemprop="name">Le TSS natation est-il identique au TSS cyclisme ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>The concept and formula are the same, but sTSS is adapted for swimming. Instead of using power (FTP) like cycling TSS, sTSS uses pace with CSS as the threshold. Both measure training load using Duration × Intensity Factor² × 100.</p>
+                        <p>Le concept et la formule sont identiques, mais le sTSS est adapté à la natation. Au lieu d'utiliser la puissance (FTP) comme le TSS cyclisme, le sTSS utilise l'allure avec la VCN comme seuil. Les deux mesurent la charge d'entraînement avec Durée × Facteur d'Intensité² × 100.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use sTSS for all swim strokes?</h3>
+                <h3 itemprop="name">Puis-je utiliser le sTSS pour toutes les nages ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>Yes, but your CSS should be stroke-specific. Most swimmers use freestyle CSS since it's the most commonly trained stroke. If you train primarily in another stroke, perform a CSS test in that stroke and use that pace for sTSS calculation.</p>
+                        <p>Oui, mais votre VCN devrait être spécifique à la nage. La plupart des nageurs utilisent la VCN crawl car c'est la nage la plus entraînée. Si vous vous entraînez principalement dans une autre nage, effectuez un test VCN dans cette nage et utilisez cette allure pour le calcul du sTSS.</p>
                     </div>
                 </div>
             </div>
 
             <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's the difference between sTSS and CTL/ATL/TSB?</h3>
+                <h3 itemprop="name">Quelle est la différence entre sTSS et CTL/ATL/TSB ?</h3>
                 <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                     <div itemprop="text">
-                        <p>sTSS measures a single workout's training load. CTL (Chronic Training Load) is your long-term fitness, ATL (Acute Training Load) is your recent fatigue, and TSB (Training Stress Balance) is your freshness. These metrics use sTSS values over time to track your training state. Learn more in our <a href="/fr/training-load/">Training Load guide</a>.</p>
+                        <p>Le sTSS mesure la charge d'entraînement d'une seule séance. Le CTL (Charge d'Entraînement Chronique) représente votre forme à long terme, l'ATL (Charge d'Entraînement Aiguë) votre fatigue récente, et le TSB (Balance de Stress d'Entraînement) votre fraîcheur. Ces métriques utilisent les valeurs sTSS dans le temps pour suivre votre état d'entraînement. En savoir plus dans notre <a href="/fr/training-load/">guide de Charge d'Entraînement</a>.</p>
                     </div>
                 </div>
             </div>
@@ -1490,15 +1605,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

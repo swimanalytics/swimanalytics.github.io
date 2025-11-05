@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/my/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,25 +809,25 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>SwimAnalytics vs Otras Apps de Natación - Comparativa de Funcionalidades</h1>
-        <p class="lead">Cómo se compara SwimAnalytics con Strava, TrainingPeaks, Final Surge y otras plataformas de seguimiento de natación</p>
+        <h1>SwimAnalytics vs Other Swimming Apps - Feature Comparison</h1>
+        <p class="lead">How SwimAnalytics compares to Strava, TrainingPeaks, Final Surge, and other swim tracking platforms</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>Por Qué la Natación Necesita Analíticas Especializadas</h2>
-            <p>Las aplicaciones de fitness generales como Strava y TrainingPeaks destacan en ciclismo y running, pero <strong>la natación requiere métricas diferentes</strong>. La Critical Swim Speed (CSS), las zonas de entrenamiento basadas en ritmo y la mecánica de brazada no están correctamente soportadas en plataformas multideporte. SwimAnalytics está construido específicamente para natación, con métricas diseñadas para atletas de piscina y aguas abiertas.</p>
+            <h2>Why Swimming Needs Specialized Analytics</h2>
+            <p>General fitness apps like Strava and TrainingPeaks excel at cycling and running, but <strong>swimming requires different metrics</strong>. Critical Swim Speed (CSS), pace-based training zones, and stroke mechanics aren't properly supported in multi-sport platforms. SwimAnalytics is built specifically for swimming, with metrics designed for pool and open water athletes.</p>
         </div>
 
-        <h2>Resumen Comparativo Rápido</h2>
+        <h2>Quick Comparison Overview</h2>
 
         <div class="comparison-table-container">
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>Funcionalidad</th>
+                        <th>Feature</th>
                         <th>SwimAnalytics</th>
                         <th>Strava</th>
                         <th>TrainingPeaks</th>
@@ -721,67 +836,67 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Test CSS y Zonas</strong></td>
-                        <td class="highlight">✅ Soporte nativo</td>
+                        <td><strong>CSS Testing & Zones</strong></td>
+                        <td class="highlight">✅ Native support</td>
                         <td>❌ No</td>
-                        <td>⚠️ Solo manual</td>
-                        <td>⚠️ Solo manual</td>
+                        <td>⚠️ Manual only</td>
+                        <td>⚠️ Manual only</td>
                     </tr>
                     <tr>
-                        <td><strong>Cálculo sTSS Natación</strong></td>
-                        <td class="highlight">✅ Automático</td>
-                        <td>❌ No hay TSS natación</td>
-                        <td>✅ Sí (requiere premium)</td>
-                        <td>✅ Sí</td>
+                        <td><strong>Swimming sTSS Calculation</strong></td>
+                        <td class="highlight">✅ Automatic</td>
+                        <td>❌ No swimming TSS</td>
+                        <td>✅ Yes (requires premium)</td>
+                        <td>✅ Yes</td>
                     </tr>
                     <tr>
                         <td><strong>PMC (CTL/ATL/TSB)</strong></td>
-                        <td class="highlight">✅ Incluido gratis</td>
+                        <td class="highlight">✅ Included free</td>
                         <td>❌ No</td>
-                        <td>✅ Solo premium ($20/mes)</td>
-                        <td>✅ Premium ($10/mes)</td>
+                        <td>✅ Premium only ($20/mo)</td>
+                        <td>✅ Premium ($10/mo)</td>
                     </tr>
                     <tr>
-                        <td><strong>Zonas Entrenamiento por Ritmo</strong></td>
-                        <td class="highlight">✅ 7 zonas, basadas en CSS</td>
-                        <td>❌ Zonas genéricas</td>
-                        <td>⚠️ Configuración manual</td>
-                        <td>⚠️ Configuración manual</td>
+                        <td><strong>Pace-Based Training Zones</strong></td>
+                        <td class="highlight">✅ 7 zones, CSS-based</td>
+                        <td>❌ Generic zones</td>
+                        <td>⚠️ Manual setup</td>
+                        <td>⚠️ Manual setup</td>
                     </tr>
                     <tr>
-                        <td><strong>Integración Apple Watch</strong></td>
-                        <td class="highlight">✅ vía Apple Health</td>
-                        <td>✅ Nativa</td>
-                        <td>✅ vía Garmin/Wahoo</td>
-                        <td>✅ vía importaciones</td>
+                        <td><strong>Apple Watch Integration</strong></td>
+                        <td class="highlight">✅ via Apple Health</td>
+                        <td>✅ Native</td>
+                        <td>✅ via Garmin/Wahoo</td>
+                        <td>✅ via imports</td>
                     </tr>
                     <tr>
-                        <td><strong>Análisis Mecánica Brazada</strong></td>
+                        <td><strong>Stroke Mechanics Analysis</strong></td>
                         <td class="highlight">✅ DPS, SR, SI</td>
-                        <td>⚠️ Básico</td>
-                        <td>⚠️ Básico</td>
-                        <td>⚠️ Básico</td>
+                        <td>⚠️ Basic</td>
+                        <td>⚠️ Basic</td>
+                        <td>⚠️ Basic</td>
                     </tr>
                     <tr>
-                        <td><strong>Funcionalidades Nivel Gratuito</strong></td>
-                        <td class="highlight">Prueba 7 días, luego $3.99/mes</td>
-                        <td>✅ Gratis (analíticas limitadas)</td>
-                        <td>⚠️ Muy limitado</td>
-                        <td>⚠️ Prueba 14 días</td>
+                        <td><strong>Free Tier Features</strong></td>
+                        <td class="highlight">7-day trial, then $3.99/mo</td>
+                        <td>✅ Free (limited analytics)</td>
+                        <td>⚠️ Very limited</td>
+                        <td>⚠️ 14-day trial</td>
                     </tr>
                     <tr>
-                        <td><strong>Soporte Multideporte</strong></td>
-                        <td>❌ Solo natación</td>
-                        <td class="highlight">✅ Todos los deportes</td>
-                        <td class="highlight">✅ Todos los deportes</td>
-                        <td class="highlight">✅ Todos los deportes</td>
+                        <td><strong>Multi-Sport Support</strong></td>
+                        <td>❌ Swimming-only</td>
+                        <td class="highlight">✅ All sports</td>
+                        <td class="highlight">✅ All sports</td>
+                        <td class="highlight">✅ All sports</td>
                     </tr>
                     <tr>
-                        <td><strong>Funcionalidades Sociales</strong></td>
+                        <td><strong>Social Features</strong></td>
                         <td>❌ No</td>
-                        <td class="highlight">✅ Extensas</td>
-                        <td>⚠️ Solo entrenador-atleta</td>
-                        <td>⚠️ Limitadas</td>
+                        <td class="highlight">✅ Extensive</td>
+                        <td>⚠️ Coach-athlete only</td>
+                        <td>⚠️ Limited</td>
                     </tr>
                 </tbody>
             </table>
@@ -795,37 +910,37 @@
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Lo Que Strava Hace Bien</h3>
+                <h3 class="card-title">What Strava Does Well</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Funcionalidades sociales:</strong> Clubes, segmentos, kudos, feed de actividades</li>
-                        <li><strong>Seguimiento multideporte:</strong> Running, ciclismo, natación, senderismo, etc.</li>
-                        <li><strong>Nivel gratuito:</strong> Funcionalidades gratuitas generosas para atletas ocasionales</li>
-                        <li><strong>Base de usuarios masiva:</strong> Conecta con millones de atletas en todo el mundo</li>
-                        <li><strong>Integración Apple Watch:</strong> Sincronización directa desde entrenamientos</li>
+                        <li><strong>Social features:</strong> Clubs, segments, kudos, activity feed</li>
+                        <li><strong>Multi-sport tracking:</strong> Running, cycling, swimming, hiking, etc.</li>
+                        <li><strong>Free tier:</strong> Generous free features for casual athletes</li>
+                        <li><strong>Massive user base:</strong> Connect with millions of athletes worldwide</li>
+                        <li><strong>Apple Watch integration:</strong> Direct sync from workouts</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <h3 class="card-title">What SwimAnalytics Does Better</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Métricas específicas de natación:</strong> CSS, sTSS, zonas de ritmo diseñadas para piscinas</li>
-                        <li><strong>Análisis de carga de entrenamiento:</strong> CTL/ATL/TSB incluido (Strava no tiene esto)</li>
-                        <li><strong>sTSS automático:</strong> Sin entrada manual de datos, calculado desde CSS + ritmo</li>
-                        <li><strong>Mecánica de brazada:</strong> Seguimiento de DPS, frecuencia de brazada, índice de brazada</li>
-                        <li><strong>Zonas de entrenamiento:</strong> 7 zonas de ritmo personalizadas basadas en tu fisiología</li>
+                        <li><strong>Swimming-specific metrics:</strong> CSS, sTSS, pace zones designed for pools</li>
+                        <li><strong>Training load analysis:</strong> CTL/ATL/TSB included (Strava doesn't have this)</li>
+                        <li><strong>Automatic sTSS:</strong> No manual data entry, calculated from CSS + pace</li>
+                        <li><strong>Stroke mechanics:</strong> DPS, stroke rate, stroke index tracking</li>
+                        <li><strong>Training zones:</strong> 7 personalized pace zones based on your physiology</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>Veredicto: SwimAnalytics vs Strava</h3>
-            <p><strong>Usa Strava si:</strong> Quieres funcionalidades sociales, seguimiento multideporte o seguimiento casual gratuito. Strava es excelente para registrar entrenamientos y conectar con amigos.</p>
-            <p><strong>Usa SwimAnalytics si:</strong> Te tomas en serio el rendimiento en natación y quieres zonas basadas en CSS, sTSS automático y gestión de carga de entrenamiento (CTL/ATL/TSB). Strava no calcula TSS de natación ni proporciona métricas PMC.</p>
-            <p class="mb-0"><strong>Usa ambos:</strong> Muchos nadadores usan Strava para compartir socialmente y SwimAnalytics para seguimiento de rendimiento. Se complementan bien entre sí.</p>
+            <h3>Verdict: SwimAnalytics vs Strava</h3>
+            <p><strong>Use Strava if:</strong> You want social features, multi-sport tracking, or free casual tracking. Strava is excellent for logging workouts and connecting with friends.</p>
+            <p><strong>Use SwimAnalytics if:</strong> You're serious about swimming performance and want CSS-based zones, automatic sTSS, and training load management (CTL/ATL/TSB). Strava doesn't calculate swimming TSS or provide PMC metrics.</p>
+            <p class="mb-0"><strong>Use both:</strong> Many swimmers use Strava for social sharing and SwimAnalytics for performance tracking. They complement each other well.</p>
         </div>
     </div>
 </section>
@@ -836,37 +951,37 @@
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Lo Que TrainingPeaks Hace Bien</h3>
+                <h3 class="card-title">What TrainingPeaks Does Well</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>PMC completo:</strong> Gráficos CTL/ATL/TSB estándar de la industria</li>
-                        <li><strong>Biblioteca de entrenamientos:</strong> Miles de entrenamientos estructurados</li>
-                        <li><strong>Integración con entrenadores:</strong> Plataforma profesional entrenador-atleta</li>
-                        <li><strong>Entrenamiento multideporte:</strong> Enfocado en triatlón con los tres deportes</li>
-                        <li><strong>Analíticas avanzadas:</strong> Zonas de potencia y frecuencia cardíaca para bici/running</li>
+                        <li><strong>Comprehensive PMC:</strong> Industry-standard CTL/ATL/TSB charting</li>
+                        <li><strong>Workout library:</strong> Thousands of structured workouts</li>
+                        <li><strong>Coach integration:</strong> Professional coach-athlete platform</li>
+                        <li><strong>Multi-sport training:</strong> Triathlon-focused with all three sports</li>
+                        <li><strong>Advanced analytics:</strong> Power, heart rate zones for bike/run</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <h3 class="card-title">What SwimAnalytics Does Better</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Test CSS automático:</strong> Calculadora CSS integrada con generación de zonas</li>
-                        <li><strong>PMC incluido para natación:</strong> TrainingPeaks requiere Premium $20/mes para PMC</li>
-                        <li><strong>Interfaz simplificada:</strong> SwimAnalytics está enfocado en natación, no es abrumador</li>
-                        <li><strong>Apple Watch nativo:</strong> Sincronización directa vía Apple Health (sin Garmin necesario)</li>
-                        <li><strong>Menor coste:</strong> $3.99/mes vs $20/mes por TrainingPeaks Premium</li>
+                        <li><strong>Automatic CSS testing:</strong> Built-in CSS calculator with zone generation</li>
+                        <li><strong>Included PMC for swimming:</strong> TrainingPeaks requires $20/mo Premium for PMC</li>
+                        <li><strong>Simplified interface:</strong> SwimAnalytics is swimming-focused, not overwhelming</li>
+                        <li><strong>Apple Watch native:</strong> Direct sync via Apple Health (no Garmin required)</li>
+                        <li><strong>Lower cost:</strong> $3.99/mo vs $20/mo for TrainingPeaks Premium</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>Veredicto: SwimAnalytics vs TrainingPeaks</h3>
-            <p><strong>Usa TrainingPeaks si:</strong> Eres triatleta entrenando para eventos multideporte, tienes un entrenador usando TrainingPeaks o necesitas entrenamientos estructurados de bici/running. TrainingPeaks destaca para entrenamiento integral de triatlón.</p>
-            <p><strong>Usa SwimAnalytics si:</strong> Eres nadador (no triatleta) o quieres métricas específicas de natación sin pagar $20/mes. SwimAnalytics proporciona CTL/ATL/TSB y cálculo sTSS por un 80% menos de coste que TrainingPeaks Premium.</p>
-            <p class="mb-0"><strong>Diferencia clave:</strong> TrainingPeaks es multideporte con funcionalidades de coaching; SwimAnalytics es solo natación con soporte CSS nativo y acceso PMC asequible.</p>
+            <h3>Verdict: SwimAnalytics vs TrainingPeaks</h3>
+            <p><strong>Use TrainingPeaks if:</strong> You're a triathlete training for multi-sport events, have a coach using TrainingPeaks, or need structured bike/run workouts. TrainingPeaks excels for comprehensive triathlon training.</p>
+            <p><strong>Use SwimAnalytics if:</strong> You're a swimmer (not triathlete) or want swimming-specific metrics without paying $20/mo. SwimAnalytics provides CTL/ATL/TSB and sTSS calculation for 80% less cost than TrainingPeaks Premium.</p>
+            <p class="mb-0"><strong>Key difference:</strong> TrainingPeaks is multi-sport with coaching features; SwimAnalytics is swim-only with native CSS support and affordable PMC access.</p>
         </div>
     </div>
 </section>
@@ -877,101 +992,101 @@
 
         <div class="grid grid-2">
             <div class="card">
-                <h3 class="card-title">Lo Que Final Surge Hace Bien</h3>
+                <h3 class="card-title">What Final Surge Does Well</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Plataforma para entrenadores:</strong> Diseñada para relaciones entrenador-atleta</li>
-                        <li><strong>Soporte TSS:</strong> Cálculo TSS de natación disponible</li>
-                        <li><strong>Multideporte:</strong> Natación, running, ciclismo, fuerza</li>
-                        <li><strong>Planificación de entrenamientos:</strong> Planes de entrenamiento basados en calendario</li>
-                        <li><strong>Herramientas de comunicación:</strong> Mensajería entrenador integrada en la app</li>
+                        <li><strong>Coach platform:</strong> Designed for coach-athlete relationships</li>
+                        <li><strong>TSS support:</strong> Swimming TSS calculation available</li>
+                        <li><strong>Multi-sport:</strong> Swimming, running, cycling, strength</li>
+                        <li><strong>Workout planning:</strong> Calendar-based training plans</li>
+                        <li><strong>Communication tools:</strong> In-app coach messaging</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <h3 class="card-title">Lo Que SwimAnalytics Hace Mejor</h3>
+                <h3 class="card-title">What SwimAnalytics Does Better</h3>
                 <div class="card-content">
                     <ul>
-                        <li><strong>Test CSS nativo:</strong> Calculadora integrada, no entrada manual</li>
-                        <li><strong>sTSS automático:</strong> Calculado desde datos de Apple Watch, sin registro</li>
-                        <li><strong>Enfoque en atleta individual:</strong> Diseñado para nadadores autoentrenados</li>
-                        <li><strong>Integración Apple Watch:</strong> Sincronización perfecta con app Salud</li>
-                        <li><strong>Natación especializada:</strong> No diluido por funcionalidades multideporte</li>
+                        <li><strong>Native CSS testing:</strong> Built-in calculator, not manual entry</li>
+                        <li><strong>Automatic sTSS:</strong> Calculated from Apple Watch data, no logging</li>
+                        <li><strong>Individual athlete focus:</strong> Designed for self-coached swimmers</li>
+                        <li><strong>Apple Watch integration:</strong> Seamless Health app sync</li>
+                        <li><strong>Specialized swimming:</strong> Not diluted by multi-sport features</li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>Veredicto: SwimAnalytics vs Final Surge</h3>
-            <p><strong>Usa Final Surge si:</strong> Tienes un entrenador que usa Final Surge, o estás entrenando atletas. Final Surge es una plataforma de coaching primero, app de atleta segundo.</p>
-            <p><strong>Usa SwimAnalytics si:</strong> Eres autoentrenado y quieres analíticas automatizadas. SwimAnalytics requiere cero registro manual—todo se sincroniza desde Apple Watch automáticamente.</p>
-            <p class="mb-0"><strong>Diferencia clave:</strong> Final Surge está centrado en entrenadores; SwimAnalytics está centrado en atletas con enfoque en automatización.</p>
+            <h3>Verdict: SwimAnalytics vs Final Surge</h3>
+            <p><strong>Use Final Surge if:</strong> You have a coach who uses Final Surge, or you're coaching athletes. Final Surge is a coaching platform first, athlete app second.</p>
+            <p><strong>Use SwimAnalytics if:</strong> You're self-coached and want automated analytics. SwimAnalytics requires zero manual logging—everything syncs from Apple Watch automatically.</p>
+            <p class="mb-0"><strong>Key difference:</strong> Final Surge is coach-centric; SwimAnalytics is athlete-centric with automation focus.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Lo Que Hace Único a SwimAnalytics</h2>
+        <h2>What Makes SwimAnalytics Unique</h2>
 
         <div class="unique-features">
             <div class="feature-item">
-                <h3>1. Soporte CSS de Primera Clase</h3>
-                <p>SwimAnalytics es la <strong>única app</strong> con calculadora de test CSS nativa. Introduce tus tiempos de 400m y 200m, obtén instantáneamente:</p>
+                <h3>1. First-Class CSS Support</h3>
+                <p>SwimAnalytics is the <strong>only app</strong> with native CSS testing calculator. Enter your 400m and 200m times, instantly get:</p>
                 <ul>
-                    <li>Ritmo CSS (ej., 1:49/100m)</li>
-                    <li>7 zonas de entrenamiento personalizadas</li>
-                    <li>Cálculo sTSS automático para todos los entrenamientos</li>
-                    <li>Análisis de entrenamiento basado en zonas</li>
+                    <li>CSS pace (e.g., 1:49/100m)</li>
+                    <li>7 personalized training zones</li>
+                    <li>Automatic sTSS calculation for all workouts</li>
+                    <li>Zone-based workout analysis</li>
                 </ul>
-                <p class="mt-sm"><strong>Competidores:</strong> Requieren configuración manual de zonas o no soportan zonas de natación en absoluto.</p>
+                <p class="mt-sm"><strong>Competitors:</strong> Require manual zone setup or don't support swimming zones at all.</p>
             </div>
 
             <div class="feature-item">
-                <h3>2. sTSS Automático para Natación</h3>
-                <p>La mayoría de apps requieren entrada manual de TSS o no calculan TSS de natación en absoluto. SwimAnalytics:</p>
+                <h3>2. Automatic sTSS for Swimming</h3>
+                <p>Most apps require manual TSS entry or don't calculate swimming TSS at all. SwimAnalytics:</p>
                 <ul>
-                    <li>Calcula automáticamente sTSS de cada entrenamiento de Apple Watch</li>
-                    <li>Usa CSS + ritmo de entrenamiento para determinar el Factor de Intensidad</li>
-                    <li>No requiere registro manual—configura CSS una vez, olvídate de ello</li>
+                    <li>Automatically calculates sTSS from every Apple Watch workout</li>
+                    <li>Uses CSS + workout pace to determine Intensity Factor</li>
+                    <li>No manual logging required—set CSS once, forget about it</li>
                 </ul>
-                <p class="mt-sm"><strong>Strava:</strong> No calcula TSS de natación. <strong>TrainingPeaks:</strong> Requiere Premium $20/mes. <strong>Final Surge:</strong> Requiere entrada manual.</p>
+                <p class="mt-sm"><strong>Strava:</strong> Doesn't calculate swimming TSS. <strong>TrainingPeaks:</strong> Requires $20/mo Premium. <strong>Final Surge:</strong> Requires manual entry.</p>
             </div>
 
             <div class="feature-item">
-                <h3>3. Acceso PMC Asequible</h3>
-                <p>El Performance Management Chart (CTL/ATL/TSB) es <strong>esencial para gestión de carga de entrenamiento</strong>, pero caro en otras plataformas:</p>
+                <h3>3. Affordable PMC Access</h3>
+                <p>Performance Management Chart (CTL/ATL/TSB) is <strong>essential for training load management</strong>, but expensive in other platforms:</p>
                 <ul>
-                    <li><strong>SwimAnalytics:</strong> Incluido por $3.99/mes</li>
-                    <li><strong>TrainingPeaks:</strong> Requiere Premium $20/mes ($240/año)</li>
-                    <li><strong>Strava:</strong> No disponible a ningún precio</li>
-                    <li><strong>Final Surge:</strong> Premium $10/mes ($120/año)</li>
+                    <li><strong>SwimAnalytics:</strong> Included for $3.99/mo</li>
+                    <li><strong>TrainingPeaks:</strong> Requires $20/mo Premium ($240/year)</li>
+                    <li><strong>Strava:</strong> Not available at any price</li>
+                    <li><strong>Final Surge:</strong> $10/mo premium ($120/year)</li>
                 </ul>
-                <p class="mt-sm">SwimAnalytics proporciona CTL/ATL/TSB a un <strong>80% menos de coste</strong> que TrainingPeaks.</p>
+                <p class="mt-sm">SwimAnalytics provides CTL/ATL/TSB at <strong>80% lower cost</strong> than TrainingPeaks.</p>
             </div>
 
             <div class="feature-item">
-                <h3>4. Apple Watch Nativo</h3>
-                <p>SwimAnalytics se sincroniza directamente con Apple Health—no se requiere reloj Garmin:</p>
+                <h3>4. Apple Watch Native</h3>
+                <p>SwimAnalytics syncs directly with Apple Health—no Garmin watch required:</p>
                 <ul>
-                    <li>Funciona con cualquier Apple Watch (Series 2+)</li>
-                    <li>Importación automática de entrenamientos desde app Salud</li>
-                    <li>Ritmo largo a largo, número de brazadas, SWOLF</li>
-                    <li>No necesita hardware adicional</li>
+                    <li>Works with any Apple Watch (Series 2+)</li>
+                    <li>Automatic workout import from Health app</li>
+                    <li>Lap-by-lap pace, stroke count, SWOLF</li>
+                    <li>No additional hardware needed</li>
                 </ul>
-                <p class="mt-sm"><strong>TrainingPeaks:</strong> Requiere dispositivo Garmin/Wahoo ($200-800). <strong>Strava:</strong> Funciona con Apple Watch pero carece de analíticas de natación.</p>
+                <p class="mt-sm"><strong>TrainingPeaks:</strong> Requires Garmin/Wahoo device ($200-800). <strong>Strava:</strong> Works with Apple Watch but lacks swimming analytics.</p>
             </div>
 
             <div class="feature-item">
-                <h3>5. Enfoque Solo en Natación</h3>
-                <p>Las apps multideporte intentan hacer todo, a menudo haciendo la natación pobremente. SwimAnalytics está <strong>construido exclusivamente para natación</strong>:</p>
+                <h3>5. Swimming-Only Focus</h3>
+                <p>Multi-sport apps try to do everything, often doing swimming poorly. SwimAnalytics is <strong>built exclusively for swimming</strong>:</p>
                 <ul>
-                    <li>Interfaz diseñada alrededor del flujo de trabajo de entrenamiento en piscina</li>
-                    <li>Métricas relevantes para nadadores (CSS, sTSS, mecánica de brazada)</li>
-                    <li>Sin sobrecarga de funcionalidades de seguimiento bici/running/senderismo</li>
-                    <li>Actualizaciones enfocadas en mejoras de natación</li>
+                    <li>Interface designed around pool training workflow</li>
+                    <li>Metrics relevant to swimmers (CSS, sTSS, stroke mechanics)</li>
+                    <li>No feature bloat from bike/run/hike tracking</li>
+                    <li>Updates focused on swimming improvements</li>
                 </ul>
             </div>
         </div>
@@ -980,101 +1095,101 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Comparación de Precios (Coste Anual)</h2>
+        <h2>Pricing Comparison (Annual Cost)</h2>
 
         <div class="pricing-grid">
             <div class="pricing-card">
                 <h3>SwimAnalytics</h3>
-                <div class="price">$47.88/año</div>
-                <div class="price-note">($3.99/mes tras prueba 7 días)</div>
+                <div class="price">$47.88/year</div>
+                <div class="price-note">($3.99/mo after 7-day trial)</div>
                 <ul class="features-included">
-                    <li>✅ Test CSS y zonas</li>
-                    <li>✅ Cálculo sTSS automático</li>
+                    <li>✅ CSS testing & zones</li>
+                    <li>✅ Automatic sTSS calculation</li>
                     <li>✅ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ Mecánica brazada (DPS, SR, SI)</li>
-                    <li>✅ Sincronización Apple Watch</li>
-                    <li>❌ Multideporte</li>
-                    <li>❌ Funcionalidades sociales</li>
+                    <li>✅ Stroke mechanics (DPS, SR, SI)</li>
+                    <li>✅ Apple Watch sync</li>
+                    <li>❌ Multi-sport</li>
+                    <li>❌ Social features</li>
                 </ul>
             </div>
 
             <div class="pricing-card">
                 <h3>Strava</h3>
-                <div class="price">$0 - $80/año</div>
-                <div class="price-note">(Gratis o $8/mes Summit)</div>
+                <div class="price">$0 - $80/year</div>
+                <div class="price-note">(Free or $8/mo Summit)</div>
                 <ul class="features-included">
-                    <li>✅ Seguimiento entrenamientos básico</li>
-                    <li>✅ Funcionalidades sociales (clubes, kudos)</li>
-                    <li>✅ Soporte multideporte</li>
-                    <li>❌ Sin soporte CSS</li>
-                    <li>❌ Sin TSS natación</li>
-                    <li>❌ Sin PMC</li>
-                    <li>❌ Sin analíticas natación</li>
+                    <li>✅ Basic workout tracking</li>
+                    <li>✅ Social features (clubs, kudos)</li>
+                    <li>✅ Multi-sport support</li>
+                    <li>❌ No CSS support</li>
+                    <li>❌ No swimming TSS</li>
+                    <li>❌ No PMC</li>
+                    <li>❌ No swimming analytics</li>
                 </ul>
             </div>
 
             <div class="pricing-card">
                 <h3>TrainingPeaks</h3>
-                <div class="price">$240/año</div>
-                <div class="price-note">($20/mes Premium)</div>
+                <div class="price">$240/year</div>
+                <div class="price-note">($20/mo Premium)</div>
                 <ul class="features-included">
                     <li>✅ PMC (CTL/ATL/TSB)</li>
-                    <li>✅ Cálculo TSS</li>
-                    <li>✅ Analíticas multideporte</li>
-                    <li>✅ Plataforma entrenadores</li>
-                    <li>⚠️ Sin test CSS nativo</li>
-                    <li>⚠️ Configuración zonas manual</li>
-                    <li>💰 5x coste de SwimAnalytics</li>
+                    <li>✅ TSS calculation</li>
+                    <li>✅ Multi-sport analytics</li>
+                    <li>✅ Coach platform</li>
+                    <li>⚠️ No native CSS testing</li>
+                    <li>⚠️ Manual zone setup</li>
+                    <li>💰 5x cost of SwimAnalytics</li>
                 </ul>
             </div>
 
             <div class="pricing-card">
                 <h3>Final Surge</h3>
-                <div class="price">$120/año</div>
-                <div class="price-note">($10/mes Premium)</div>
+                <div class="price">$120/year</div>
+                <div class="price-note">($10/mo Premium)</div>
                 <ul class="features-included">
-                    <li>✅ Seguimiento TSS</li>
-                    <li>✅ Herramientas entrenador-atleta</li>
-                    <li>✅ Multideporte</li>
-                    <li>⚠️ Entrada sTSS manual</li>
-                    <li>⚠️ Sin test CSS nativo</li>
-                    <li>💰 2.5x coste de SwimAnalytics</li>
+                    <li>✅ TSS tracking</li>
+                    <li>✅ Coach-athlete tools</li>
+                    <li>✅ Multi-sport</li>
+                    <li>⚠️ Manual sTSS entry</li>
+                    <li>⚠️ No native CSS testing</li>
+                    <li>💰 2.5x cost of SwimAnalytics</li>
                 </ul>
             </div>
         </div>
 
         <div class="callout mt-xl">
-            <h3>💡 Análisis Coste-Beneficio</h3>
-            <p><strong>Si eres atleta solo de natación:</strong> SwimAnalytics proporciona PMC + sTSS + zonas CSS por $48/año. TrainingPeaks cobra $240/año por funcionalidades similares (5x más caro).</p>
-            <p class="mb-0"><strong>Si eres triatleta:</strong> Considera TrainingPeaks o Final Surge para soporte multideporte. SwimAnalytics es solo natación y no seguirá entrenamiento de bici/running.</p>
+            <h3>💡 Cost-Benefit Analysis</h3>
+            <p><strong>If you're a swimmer-only athlete:</strong> SwimAnalytics provides PMC + sTSS + CSS zones for $48/year. TrainingPeaks charges $240/year for similar features (5x more expensive).</p>
+            <p class="mb-0"><strong>If you're a triathlete:</strong> Consider TrainingPeaks or Final Surge for multi-sport support. SwimAnalytics is swimming-only and won't track bike/run training.</p>
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>¿Quién Debería Usar SwimAnalytics?</h2>
+        <h2>Who Should Use SwimAnalytics?</h2>
 
         <div class="use-cases">
             <div class="use-case">
-                <h3>✅ Perfecto Para:</h3>
+                <h3>✅ Perfect For:</h3>
                 <ul>
-                    <li><strong>Nadadores competitivos:</strong> Atletas masters, grupos de edad, colegiales enfocados en rendimiento de natación</li>
-                    <li><strong>Atletas autoentrenados:</strong> Nadadores gestionando su propio entrenamiento sin entrenador</li>
-                    <li><strong>Entrenadores orientados a datos:</strong> Atletas que quieren zonas CSS, sTSS y métricas PMC</li>
-                    <li><strong>Usuarios de Apple Watch:</strong> Nadadores que ya usan Apple Watch para seguimiento en piscina</li>
-                    <li><strong>Atletas con presupuesto ajustado:</strong> Quieren funcionalidades PMC sin tarifas premium de $20/mes</li>
+                    <li><strong>Competitive swimmers:</strong> Masters, age-group, collegiate athletes focused on swimming performance</li>
+                    <li><strong>Self-coached athletes:</strong> Swimmers managing their own training without a coach</li>
+                    <li><strong>Data-driven trainers:</strong> Athletes who want CSS zones, sTSS, and PMC metrics</li>
+                    <li><strong>Apple Watch users:</strong> Swimmers who already use Apple Watch for pool tracking</li>
+                    <li><strong>Budget-conscious athletes:</strong> Want PMC features without $20/mo premium fees</li>
                 </ul>
             </div>
 
             <div class="use-case">
-                <h3>⚠️ No Ideal Para:</h3>
+                <h3>⚠️ Not Ideal For:</h3>
                 <ul>
-                    <li><strong>Triatletas:</strong> Necesitan seguimiento multideporte (usa TrainingPeaks o Final Surge)</li>
-                    <li><strong>Atletas sociales:</strong> Quieren clubes, kudos, feed de actividades (usa Strava)</li>
-                    <li><strong>Atletas con entrenador:</strong> El entrenador ya usa plataforma TrainingPeaks o Final Surge</li>
-                    <li><strong>Nadadores ocasionales:</strong> No interesados en CSS, sTSS o analíticas de carga de entrenamiento</li>
-                    <li><strong>Usuarios solo Garmin:</strong> No tienen Apple Watch (SwimAnalytics requiere iOS)</li>
+                    <li><strong>Triathletes:</strong> Need multi-sport tracking (use TrainingPeaks or Final Surge)</li>
+                    <li><strong>Social athletes:</strong> Want clubs, kudos, activity feed (use Strava)</li>
+                    <li><strong>Coached athletes:</strong> Coach already uses TrainingPeaks or Final Surge platform</li>
+                    <li><strong>Casual swimmers:</strong> Not interested in CSS, sTSS, or training load analytics</li>
+                    <li><strong>Garmin-only users:</strong> Don't have Apple Watch (SwimAnalytics requires iOS)</li>
                 </ul>
             </div>
         </div>
@@ -1083,31 +1198,31 @@
 
 <section class="section section-alt">
     <div class="container container-narrow">
-        <h2>Preguntas Frecuentes</h2>
+        <h2>Frequently Asked Questions</h2>
 
         <div class="faq-item">
-            <h3>¿Puedo usar SwimAnalytics Y Strava/TrainingPeaks?</h3>
-            <p><strong>Sí—muchos nadadores usan ambos.</strong> Usa SwimAnalytics para analíticas de rendimiento (CSS, sTSS, PMC) y Strava para compartir socialmente y registro multideporte. Se complementan bien entre sí.</p>
+            <h3>Can I use SwimAnalytics AND Strava/TrainingPeaks?</h3>
+            <p><strong>Yes—many swimmers use both.</strong> Use SwimAnalytics for performance analytics (CSS, sTSS, PMC) and Strava for social sharing and multi-sport logging. They complement each other well.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Funciona SwimAnalytics con relojes Garmin?</h3>
-            <p><strong>No.</strong> SwimAnalytics se sincroniza vía Apple Health, que requiere Apple Watch. Si usas Garmin, considera TrainingPeaks o Final Surge en su lugar.</p>
+            <h3>Does SwimAnalytics work with Garmin watches?</h3>
+            <p><strong>No.</strong> SwimAnalytics syncs via Apple Health, which requires Apple Watch. If you use Garmin, consider TrainingPeaks or Final Surge instead.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Por qué es SwimAnalytics mucho más barato que TrainingPeaks?</h3>
-            <p>SwimAnalytics es <strong>solo natación</strong>, no multideporte. Al enfocarnos exclusivamente en natación, evitamos la complejidad y costes de infraestructura de soportar medidores de potencia de bici, dinámicas de running, plataformas de entrenadores, etc. Esto nos permite ofrecer PMC + sTSS a un 80% menos de coste.</p>
+            <h3>Why is SwimAnalytics so much cheaper than TrainingPeaks?</h3>
+            <p>SwimAnalytics is <strong>swimming-only</strong>, not multi-sport. By focusing exclusively on swimming, we avoid the complexity and infrastructure costs of supporting bike power meters, running dynamics, coach platforms, etc. This allows us to offer PMC + sTSS at 80% lower cost.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Qué pasa si soy triatleta—debería usar SwimAnalytics?</h3>
-            <p><strong>Probablemente no como tu app principal.</strong> Los triatletas se benefician de plataformas multideporte como TrainingPeaks que siguen bici, running y natación juntos. Sin embargo, algunos triatletas usan SwimAnalytics para analíticas específicas de natación (zonas CSS) y TrainingPeaks para carga de entrenamiento general.</p>
+            <h3>What if I'm a triathlete—should I use SwimAnalytics?</h3>
+            <p><strong>Probably not as your primary app.</strong> Triathletes benefit from multi-sport platforms like TrainingPeaks that track bike, run, and swim together. However, some triathletes use SwimAnalytics for swimming-specific analytics (CSS zones) and TrainingPeaks for overall training load.</p>
         </div>
 
         <div class="faq-item">
-            <h3>¿Tiene SwimAnalytics un nivel gratuito?</h3>
-            <p>SwimAnalytics ofrece una <strong>prueba gratuita de 7 días</strong> con todas las funcionalidades (test CSS, sTSS, PMC). Después de la prueba, cuesta $3.99/mes sin compromiso a largo plazo. Sin nivel gratuito—creemos que los atletas merecen analíticas completas sin bloqueos arbitrarios de funcionalidades.</p>
+            <h3>Does SwimAnalytics have a free tier?</h3>
+            <p>SwimAnalytics offers a <strong>7-day free trial</strong> with full features (CSS testing, sTSS, PMC). After trial, it's $3.99/mo with no long-term commitment. No free tier—we believe athletes deserve full analytics without arbitrary feature locks.</p>
         </div>
     </div>
 </section>
@@ -1115,16 +1230,16 @@
 <section class="section">
     <div class="container container-narrow">
         <div class="mt-xl text-center">
-            <h2>¿Listo Para Probar SwimAnalytics?</h2>
-            <p class="lead mb-lg">Experimenta zonas de entrenamiento basadas en CSS, sTSS automático y métricas PMC asequibles diseñadas específicamente para nadadores.</p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Iniciar Prueba Gratuita 7 Días</a>
-            <p class="mt-md text-secondary">Sin tarjeta de crédito requerida • Cancela en cualquier momento • iOS 16+</p>
+            <h2>Ready to Try SwimAnalytics?</h2>
+            <p class="lead mb-lg">Experience CSS-based training zones, automatic sTSS, and affordable PMC metrics designed specifically for swimmers.</p>
+            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">Start 7-Day Free Trial</a>
+            <p class="mt-md text-secondary">No credit card required • Cancel anytime • iOS 16+</p>
 
             <div class="comparison-links mt-xl">
-                <p class="mb-sm"><strong>Más información:</strong></p>
-                <a href="/my/css/" class="btn btn-secondary btn-small mr-sm">Calculadora CSS →</a>
-                <a href="/my/training-zones/" class="btn btn-secondary btn-small mr-sm">Zonas Entrenamiento →</a>
-                <a href="/my/getting-started/" class="btn btn-secondary btn-small">Empezar →</a>
+                <p class="mb-sm"><strong>Learn more:</strong></p>
+                <a href="/en/css/" class="btn btn-secondary btn-small mr-sm">CSS Calculator →</a>
+                <a href="/en/training-zones/" class="btn btn-secondary btn-small mr-sm">Training Zones →</a>
+                <a href="/en/getting-started/" class="btn btn-secondary btn-small">Getting Started →</a>
             </div>
         </div>
     </div>
@@ -1567,15 +1682,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

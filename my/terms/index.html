@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/my/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -664,90 +779,90 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">ข้อกำหนดและเงื่อนไข</h1>
+        <h1 class="mb-lg">Terms and Conditions</h1>
 
-        <p class="text-secondary mb-xl">อัปเดตล่าสุด: <strong>มกราคม 2024</strong></p>
+        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
 
         <div class="mb-xl">
-            <h2 class="mb-md">บทนำ</h2>
+            <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                ข้อกำหนดและเงื่อนไขเหล่านี้ควบคุมการใช้งานเว็บไซต์ของเรา โดยการเข้าถึงหรือใช้งานเว็บไซต์ของเรา คุณยอมรับที่จะอยู่ภายใต้ข้อกำหนดเหล่านี้
+                These Terms and Conditions govern your use of our website. By accessing or using our website, you agree to be bound by these terms.
             </p>
             <p class="mb-md">
-                หากคุณไม่เห็นด้วยกับส่วนใดๆ ของข้อกำหนดเหล่านี้ คุณไม่ควรใช้งานเว็บไซต์ของเรา
+                If you do not agree with any part of these terms, you should not use our website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">การใช้งานเว็บไซต์</h2>
-            <h3 class="mb-sm">คุณยอมรับที่จะ:</h3>
+            <h2 class="mb-md">Use of Website</h2>
+            <h3 class="mb-sm">You agree to:</h3>
             <ul class="mb-md">
-                <li>ใช้เว็บไซต์เพื่อวัตถุประสงค์ที่ถูกกฎหมายเท่านั้น</li>
-                <li>ไม่พยายามเข้าถึงส่วนใดๆ ของเว็บไซต์โดยไม่ได้รับอนุญาต</li>
-                <li>ไม่รบกวนการทำงานที่ถูกต้องของเว็บไซต์</li>
-                <li>ไม่ส่งโค้ดที่เป็นอันตรายหรือมัลแวร์</li>
-                <li>เคารพสิทธิ์ทรัพย์สินทางปัญญาของผู้อื่น</li>
+                <li>Use the website for lawful purposes only</li>
+                <li>Not attempt to gain unauthorized access to any part of the website</li>
+                <li>Not interfere with the proper functioning of the website</li>
+                <li>Not transmit any harmful or malicious code</li>
+                <li>Respect the intellectual property rights of others</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">ทรัพย์สินทางปัญญา</h2>
+            <h2 class="mb-md">Intellectual Property</h2>
             <p class="mb-md">
-                เนื้อหาทั้งหมดบนเว็บไซต์นี้ รวมถึงข้อความ กราฟิก โลโก้ ภาพ และซอฟต์แวร์ เป็นทรัพย์สินของเจ้าของเว็บไซต์หรือผู้ให้สิทธิ์การใช้งาน และได้รับการคุ้มครองโดยกฎหมายลิขสิทธิ์และกฎหมายทรัพย์สินทางปัญญาอื่นๆ
+                All content on this website, including text, graphics, logos, images, and software, is the property of the website owner or its licensors and is protected by copyright and other intellectual property laws.
             </p>
             <p class="mb-md">
-                คุณไม่สามารถทำซ้ำ เผยแพร่ แก้ไข หรือสร้างงานดัดแปลงจากเนื้อหาใดๆ บนเว็บไซต์นี้โดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษรล่วงหน้า
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">การสละสิทธิ์การรับประกัน</h2>
-            <p class="mb-md">
-                เว็บไซต์นี้ให้บริการ "ตามสภาพที่เป็น" โดยไม่มีการรับประกันใดๆ ไม่ว่าโดยชัดแจ้งหรือโดยนัย เราไม่รับประกันว่าเว็บไซต์จะพร้อมใช้งานตลอดเวลาหรือปลอดจากข้อผิดพลาดหรือไวรัส
-            </p>
-            <p class="mb-md">
-                เราไม่ให้การรับประกันเกี่ยวกับความถูกต้อง ความสมบูรณ์ หรือความน่าเชื่อถือของข้อมูลใดๆ บนเว็บไซต์นี้
+                You may not reproduce, distribute, modify, or create derivative works from any content on this website without prior written permission.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">ข้อจำกัดความรับผิด</h2>
+            <h2 class="mb-md">Disclaimer of Warranties</h2>
             <p class="mb-md">
-                ในขอบเขตสูงสุดที่กฎหมายอนุญาต เราจะไม่รับผิดต่อความเสียหายทางอ้อม โดยบังเอิญ พิเศษ ที่เป็นผลสืบเนื่อง หรือเป็นการลงโทษใดๆ ที่เกิดจากหรือเกี่ยวข้องกับการใช้งานเว็บไซต์นี้ของคุณ
+                This website is provided "as is" without any warranties, express or implied. We do not guarantee that the website will be available at all times or that it will be free from errors or viruses.
             </p>
             <p class="mb-md">
-                ซึ่งรวมถึง แต่ไม่จำกัดเพียง ความเสียหายจากการสูญเสียผลกำไร ข้อมูล หรือการสูญเสียที่จับต้องไม่ได้อื่นๆ
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">ลิงก์ภายนอก</h2>
-            <p class="mb-md">
-                เว็บไซต์ของเราอาจมีลิงก์ไปยังเว็บไซต์ภายนอกที่ไม่ได้ดำเนินการโดยเรา เราไม่มีการควบคุมเนื้อหาและแนวปฏิบัติของเว็บไซต์เหล่านี้ และไม่สามารถรับผิดชอบต่อนโยบายความเป็นส่วนตัวหรือเนื้อหาของพวกเขา
+                We make no warranties about the accuracy, completeness, or reliability of any information on this website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">การเปลี่ยนแปลงข้อกำหนด</h2>
+            <h2 class="mb-md">Limitation of Liability</h2>
             <p class="mb-md">
-                เราขอสงวนสิทธิ์ในการแก้ไขข้อกำหนดและเงื่อนไขเหล่านี้ได้ตลอดเวลา การเปลี่ยนแปลงจะมีผลทันทีหลังจากเผยแพร่บนหน้านี้
+                To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of this website.
             </p>
             <p class="mb-md">
-                การใช้งานเว็บไซต์ต่อไปของคุณหลังจากการเปลี่ยนแปลงใดๆ ถือเป็นการยอมรับข้อกำหนดใหม่
+                This includes, but is not limited to, damages for loss of profits, data, or other intangible losses.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">กฎหมายที่ใช้บังคับ</h2>
+            <h2 class="mb-md">External Links</h2>
             <p class="mb-md">
-                ข้อกำหนดและเงื่อนไขเหล่านี้อยู่ภายใต้และตีความตามกฎหมายของสเปน และคุณยอมรับอำนาจศาลพิเศษเฉพาะของศาลในสถานที่นั้นอย่างไม่สามารถเพิกถอนได้
+                Our website may contain links to external websites that are not operated by us. We have no control over the content and practices of these sites and cannot accept responsibility for their privacy policies or content.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Changes to Terms</h2>
+            <p class="mb-md">
+                We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to this page.
+            </p>
+            <p class="mb-md">
+                Your continued use of the website after any changes constitutes your acceptance of the new terms.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Governing Law</h2>
+            <p class="mb-md">
+                These Terms and Conditions are governed by and construed in accordance with the laws of Spain, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
             </p>
         </div>
 
         <div class="callout callout-info">
-            <h2 class="mb-sm">มีคำถามใดไหม?</h2>
+            <h2 class="mb-sm">Questions?</h2>
             <p>
-                หากคุณมีคำถามใดๆ เกี่ยวกับข้อกำหนดและเงื่อนไขเหล่านี้ โปรด<a href="/my/contact/">ติดต่อเรา</a>
+                If you have any questions about these Terms and Conditions, please <a href="/en/contact/">contact us</a>.
             </p>
         </div>
     </div>
@@ -1190,15 +1305,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

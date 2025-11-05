@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/sr/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -664,90 +779,90 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Условия использования</h1>
+        <h1 class="mb-lg">Terms and Conditions</h1>
 
-        <p class="text-secondary mb-xl">Последнее обновление: <strong>январь 2024</strong></p>
+        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Введение</h2>
+            <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                Эти Условия использования регулируют ваше использование нашего веб-сайта. Получая доступ или используя наш веб-сайт, вы соглашаетесь соблюдать эти условия.
+                These Terms and Conditions govern your use of our website. By accessing or using our website, you agree to be bound by these terms.
             </p>
             <p class="mb-md">
-                Если вы не согласны с какой-либо частью этих условий, вам не следует использовать наш веб-сайт.
+                If you do not agree with any part of these terms, you should not use our website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Использование веб-сайта</h2>
-            <h3 class="mb-sm">Вы соглашаетесь:</h3>
+            <h2 class="mb-md">Use of Website</h2>
+            <h3 class="mb-sm">You agree to:</h3>
             <ul class="mb-md">
-                <li>Использовать веб-сайт только в законных целях</li>
-                <li>Не пытаться получить несанкционированный доступ к какой-либо части веб-сайта</li>
-                <li>Не вмешиваться в надлежащую работу веб-сайта</li>
-                <li>Не передавать какой-либо вредоносный или злонамеренный код</li>
-                <li>Уважать права интеллектуальной собственности других лиц</li>
+                <li>Use the website for lawful purposes only</li>
+                <li>Not attempt to gain unauthorized access to any part of the website</li>
+                <li>Not interfere with the proper functioning of the website</li>
+                <li>Not transmit any harmful or malicious code</li>
+                <li>Respect the intellectual property rights of others</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Интеллектуальная собственность</h2>
+            <h2 class="mb-md">Intellectual Property</h2>
             <p class="mb-md">
-                Весь контент на этом веб-сайте, включая текст, графику, логотипы, изображения и программное обеспечение, принадлежит владельцу веб-сайта или его лицензиарам и защищён законами об авторском праве и другими законами об интеллектуальной собственности.
+                All content on this website, including text, graphics, logos, images, and software, is the property of the website owner or its licensors and is protected by copyright and other intellectual property laws.
             </p>
             <p class="mb-md">
-                Вы не можете воспроизводить, распространять, изменять или создавать производные работы из какого-либо контента на этом веб-сайте без предварительного письменного разрешения.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Отказ от гарантий</h2>
-            <p class="mb-md">
-                Этот веб-сайт предоставляется "как есть" без каких-либо гарантий, явных или подразумеваемых. Мы не гарантируем, что веб-сайт будет доступен в любое время или что он будет свободен от ошибок или вирусов.
-            </p>
-            <p class="mb-md">
-                Мы не предоставляем гарантий относительно точности, полноты или надёжности любой информации на этом веб-сайте.
+                You may not reproduce, distribute, modify, or create derivative works from any content on this website without prior written permission.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Ограничение ответственности</h2>
+            <h2 class="mb-md">Disclaimer of Warranties</h2>
             <p class="mb-md">
-                В максимальной степени, разрешённой законом, мы не несём ответственности за любой косвенный, случайный, особый, косвенный или штрафной ущерб, возникающий в результате или связанный с использованием вами этого веб-сайта.
+                This website is provided "as is" without any warranties, express or implied. We do not guarantee that the website will be available at all times or that it will be free from errors or viruses.
             </p>
             <p class="mb-md">
-                Это включает, но не ограничивается, ущерб от потери прибыли, данных или других нематериальных потерь.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Внешние ссылки</h2>
-            <p class="mb-md">
-                Наш веб-сайт может содержать ссылки на внешние веб-сайты, которыми мы не управляем. Мы не контролируем содержание и практику этих сайтов и не можем принять ответственность за их политику конфиденциальности или содержание.
+                We make no warranties about the accuracy, completeness, or reliability of any information on this website.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Изменения в условиях</h2>
+            <h2 class="mb-md">Limitation of Liability</h2>
             <p class="mb-md">
-                Мы оставляем за собой право изменять эти Условия использования в любое время. Изменения вступают в силу немедленно после их публикации на этой странице.
+                To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of this website.
             </p>
             <p class="mb-md">
-                Ваше дальнейшее использование веб-сайта после любых изменений означает ваше принятие новых условий.
+                This includes, but is not limited to, damages for loss of profits, data, or other intangible losses.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Применимое право</h2>
+            <h2 class="mb-md">External Links</h2>
             <p class="mb-md">
-                Эти Условия использования регулируются и толкуются в соответствии с законами Испании, и вы безоговорочно подчиняетесь исключительной юрисдикции судов в этом месте.
+                Our website may contain links to external websites that are not operated by us. We have no control over the content and practices of these sites and cannot accept responsibility for their privacy policies or content.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Changes to Terms</h2>
+            <p class="mb-md">
+                We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting to this page.
+            </p>
+            <p class="mb-md">
+                Your continued use of the website after any changes constitutes your acceptance of the new terms.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">Governing Law</h2>
+            <p class="mb-md">
+                These Terms and Conditions are governed by and construed in accordance with the laws of Spain, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
             </p>
         </div>
 
         <div class="callout callout-info">
-            <h2 class="mb-sm">Вопросы?</h2>
+            <h2 class="mb-sm">Questions?</h2>
             <p>
-                Если у вас есть какие-либо вопросы об этих Условиях использования, пожалуйста, <a href="/sr/contact/">свяжитесь с нами</a>.
+                If you have any questions about these Terms and Conditions, please <a href="/en/contact/">contact us</a>.
             </p>
         </div>
     </div>
@@ -1190,15 +1305,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

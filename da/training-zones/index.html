@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/da/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,99 +809,99 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Zonas de Entrenamiento de Natación - Guía de Intensidad Basada en CSS</h1>
-        <p class="lead">Domina las 5 zonas de entrenamiento para natación - Personalizadas a tu Velocidad Crítica de Natación</p>
+        <h1>Svømmetræningszoner - CSS-Baseret Intensitetsguide</h1>
+        <p class="lead">Mestre de 5 træningszoner for svømning - Personaliseret til din Kritiske Svømmehastighed</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
         <div class="callout callout-info mb-xl">
-            <h2>¿Qué Son las Zonas de Entrenamiento de Natación?</h2>
-            <p><strong>Las zonas de entrenamiento</strong> son rangos de intensidad científicamente definidos basados en tu <strong>Velocidad Crítica de Natación (CSS)</strong>—tu ritmo de umbral aeróbico. Cada zona desencadena adaptaciones fisiológicas específicas, desde la construcción de base aeróbica (Zona 2) hasta el desarrollo del VO₂max (Zona 5). Las zonas de entrenamiento eliminan las conjeturas y aseguran que cada entrenamiento tenga un propósito claro.</p>
+            <h2>Hvad er Svømmetræningszoner?</h2>
+            <p><strong>Træningszoner</strong> er videnskabeligt definerede intensitetsområder baseret på din <strong>Kritiske Svømmehastighed (CSS)</strong>—dit aerobe tærskel-tempo. Hver zone udløser specifikke fysiologiske tilpasninger, fra aerob base-opbygning (Zone 2) til VO₂max udvikling (Zone 5). Træningszoner eliminerer gætværk og sikrer, at hver træning har et klart formål.</p>
         </div>
 
-        <h2 class="mt-2xl">Por Qué Funciona el Entrenamiento por Zonas</h2>
+        <h2 class="mt-2xl">Hvorfor Zone-Baseret Træning Virker</h2>
 
-        <p class="mb-md">Entrenar por "sensación" o tablas de ritmo genéricas falla porque:</p>
+        <p class="mb-md">Træning efter "fornemmelse" eller generiske tempo-tabeller fejler fordi:</p>
 
         <ul class="mb-xl">
-            <li><strong>La fisiología individual varía:</strong> Un ritmo de 1:40/100m es fácil para nadadores de élite pero máximo para principiantes</li>
-            <li><strong>El RPE no es fiable:</strong> El esfuerzo percibido cambia con la fatiga, hidratación y condiciones</li>
-            <li><strong>Los ritmos genéricos fallan tu umbral:</strong> Los entrenamientos estándar ignoran tu umbral de lactato único</li>
-            <li><strong>Sin especificidad de adaptación:</strong> Ritmos aleatorios producen resultados aleatorios</li>
+            <li><strong>Individuel fysiologi varierer:</strong> Et 1:40/100m tempo er let for elite svømmere men maksimalt for begyndere</li>
+            <li><strong>RPE er upålidelig:</strong> Opfattet anstrengelse ændrer sig med træthed, hydrering og forhold</li>
+            <li><strong>Generiske tempi misser din tærskel:</strong> Standard træninger ignorerer din unikke laktattærskel</li>
+            <li><strong>Ingen tilpasningsspecificitet:</strong> Tilfældige tempi producerer tilfældige resultater</li>
         </ul>
 
-        <p class="mb-xl"><strong>Las zonas basadas en CSS resuelven esto</strong> personalizando cada intensidad a TU fisiología. Un entrenamiento de Zona 2 desencadena adaptaciones aeróbicas tanto si tu CSS es 1:20/100m como 2:00/100m.</p>
+        <p class="mb-xl"><strong>CSS-baserede zoner løser dette</strong> ved at personalisere hver intensitet til DIN fysiologi. En Zone 2 træning udløser aerobe tilpasninger uanset om din CSS er 1:20/100m eller 2:00/100m.</p>
 
         <div class="callout callout-tip">
-            <h3>🎯 Principio Clave: Relación Inversa</h3>
-            <p>En natación, el ritmo se mide como <strong>tiempo por distancia</strong>. Por lo tanto:</p>
+            <h3>🎯 Nøgleprincip: Omvendt Forhold</h3>
+            <p>I svømning måles tempo som <strong>tid per distance</strong>. Derfor:</p>
             <ul>
-                <li><strong>Mayor % de CSS = ritmo MÁS LENTO</strong> (más fácil, Zona 1-2)</li>
-                <li><strong>Menor % de CSS = ritmo MÁS RÁPIDO</strong> (más difícil, Zona 4-5)</li>
+                <li><strong>Højere % af CSS = LANGSOMMERE tempo</strong> (lettere, Zone 1-2)</li>
+                <li><strong>Lavere % af CSS = HURTIGERE tempo</strong> (sværere, Zone 4-5)</li>
             </ul>
-            <p class="mb-0">Esto es <em>inverso al ciclismo/carrera</em> donde mayor % = más difícil. Piensa: "ritmo 108% CSS" = 8% más lento que el umbral.</p>
+            <p class="mb-0">Dette er <em>omvendt i forhold til cykling/løb</em> hvor højere % = sværere. Tænk: "108% CSS tempo" = 8% langsommere end tærskel.</p>
         </div>
     </div>
 </section>
 
 <section class="section section-alt">
     <div class="container">
-        <h2 class="mb-xl text-center">Las 5 Zonas de Entrenamiento de Natación</h2>
+        <h2 class="mb-xl text-center">De 5 Svømmetræningszoner</h2>
 
         <div class="zones-table-container">
             <table class="zones-table">
                 <thead>
                     <tr>
-                        <th>Zona</th>
-                        <th>Nombre</th>
-                        <th>% de Ritmo CSS</th>
-                        <th>Ejemplo para CSS 1:40/100m</th>
+                        <th>Zone</th>
+                        <th>Navn</th>
+                        <th>% af CSS Tempo</th>
+                        <th>Eksempel for CSS 1:40/100m</th>
                         <th>RPE</th>
-                        <th>Propósito Fisiológico</th>
+                        <th>Fysiologisk Formål</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="zone-1">
                         <td><strong>1</strong></td>
-                        <td>Recuperación</td>
+                        <td>Restitution</td>
                         <td>&gt;108%</td>
                         <td>&gt;1:48/100m</td>
                         <td>2-3/10</td>
-                        <td>Recuperación activa, refinamiento técnico, calentamiento/enfriamiento</td>
+                        <td>Aktiv restitution, teknikforbedring, opvarmning/nedkøling</td>
                     </tr>
                     <tr class="zone-2">
                         <td><strong>2</strong></td>
-                        <td>Base Aeróbica</td>
+                        <td>Aerob Base</td>
                         <td>104-108%</td>
                         <td>1:44-1:48/100m</td>
                         <td>4-5/10</td>
-                        <td>Construir capacidad aeróbica, densidad mitocondrial, oxidación de grasas</td>
+                        <td>Opbygge aerob kapacitet, mitokondrie-tæthed, fedtforbrænding</td>
                     </tr>
                     <tr class="zone-3">
                         <td><strong>3</strong></td>
-                        <td>Tempo/Punto Óptimo</td>
+                        <td>Tempo/Sweet Spot</td>
                         <td>99-103%</td>
                         <td>1:39-1:43/100m</td>
                         <td>6-7/10</td>
-                        <td>Adaptación al ritmo de carrera, eficiencia neuromuscular</td>
+                        <td>Løbstempo-tilpasning, neuromuskulær effektivitet</td>
                     </tr>
                     <tr class="zone-4">
                         <td><strong>4</strong></td>
-                        <td>Umbral (CSS)</td>
+                        <td>Tærskel (CSS)</td>
                         <td>96-100%</td>
                         <td>1:36-1:40/100m</td>
                         <td>7-8/10</td>
-                        <td>Mejora del umbral de lactato, intensidad alta sostenida</td>
+                        <td>Laktattærskel forbedring, vedvarende høj intensitet</td>
                     </tr>
                     <tr class="zone-5">
                         <td><strong>5</strong></td>
-                        <td>VO₂max/Anaeróbico</td>
+                        <td>VO₂max/Anaerob</td>
                         <td>&lt;96%</td>
                         <td>&lt;1:36/100m</td>
                         <td>9-10/10</td>
-                        <td>Desarrollo de VO₂max, potencia, tolerancia al lactato</td>
+                        <td>VO₂max udvikling, kraft, laktattolerance</td>
                     </tr>
                 </tbody>
             </table>
@@ -796,49 +911,49 @@
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Zona 1: Recuperación</h2>
+        <h2>Zone 1: Restitution</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-1-badge">Zona 1</span>
-                <span class="zone-pace">&gt;108% de ritmo CSS</span>
+                <span class="zone-badge zone-1-badge">Zone 1</span>
+                <span class="zone-pace">&gt;108% af CSS tempo</span>
                 <span class="zone-rpe">RPE 2-3/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p>Recuperación activa, trabajo técnico, calentamiento, enfriamiento. La Zona 1 promueve el flujo sanguíneo para la reparación muscular sin crear estrés de entrenamiento adicional. No se usa para ganancias de condición física—puramente regenerativa.</p>
+            <h3>Formål</h3>
+            <p>Aktiv restitution, teknikarbejde, opvarmning, nedkøling. Zone 1 fremmer blodgennemstrømning til muskelreparation uden at skabe yderligere træningsstress. Bruges ikke til konditionsforbedringer—rent regenerativ.</p>
 
-            <h3>Marcadores Fisiológicos</h3>
+            <h3>Fysiologiske Markører</h3>
             <ul>
-                <li>Frecuencia cardíaca: 50-60% del máximo</li>
-                <li>Lactato: &lt;1.5 mmol/L (muy por debajo del umbral)</li>
-                <li>Respiración: Respiración nasal posible, ritmo conversacional</li>
-                <li>Sensación: Sin esfuerzo, podrías mantenerlo indefinidamente</li>
+                <li>Puls: 50-60% af maksimum</li>
+                <li>Laktat: &lt;1.5 mmol/L (langt under tærskel)</li>
+                <li>Vejrtrækning: Næseånding mulig, samtale-tempo</li>
+                <li>Fornemmelse: Ubesværet, kunne opretholdes på ubestemt tid</li>
             </ul>
 
-            <h3>Entrenamientos de Ejemplo</h3>
+            <h3>Eksempel Træninger</h3>
             <div class="workout-example">
-                <h4>Sesión de Recuperación</h4>
+                <h4>Restitutions Session</h4>
                 <ul>
-                    <li>500m nado continuo @ Zona 1 (enfoque: brazada suave)</li>
-                    <li>10×25 ejercicios técnicos (alcance, remo, un solo brazo) @ esfuerzo Zona 1</li>
-                    <li>300m pull con pull buoy @ Zona 1</li>
+                    <li>500m kontinuerlig svømning @ Zone 1 (fokus: blød slagteknik)</li>
+                    <li>10×25 teknikøvelser (catch-up, sculling, enkelt arm) @ Zone 1 indsats</li>
+                    <li>300m pull med pullbuoy @ Zone 1</li>
                 </ul>
             </div>
 
-            <h3>Volumen Semanal</h3>
-            <p><strong>10-20% del volumen total</strong> (calentamientos, enfriamientos, nados de recuperación en días libres)</p>
+            <h3>Ugentligt Volumen</h3>
+            <p><strong>10-20% af total volumen</strong> (opvarmninger, nedkølinger, restitutions svømning på fridage)</p>
         </div>
 
-        <h2 class="mt-3xl">Zona 2: Base Aeróbica</h2>
+        <h2 class="mt-3xl">Zone 2: Aerob Base</h2>
         <div class="zone-detail">
             <div class="zone-header">
-                <span class="zone-badge zone-2-badge">Zona 2</span>
-                <span class="zone-pace">104-108% de ritmo CSS</span>
+                <span class="zone-badge zone-2-badge">Zone 2</span>
+                <span class="zone-pace">104-108% af CSS tempo</span>
                 <span class="zone-rpe">RPE 4-5/10</span>
             </div>
 
-            <h3>Propósito</h3>
-            <p><strong>Fundamento de todo entrenamiento de resistencia.</strong> La Zona 2 construye densidad mitocondrial, redes capilares, capacidad de oxidación de grasas y enzimas aeróbicas. Aquí es donde se construye la condición aeróbica—la zona "aburrida" que produce campeones.</p>
+            <h3>Formål</h3>
+            <p><strong>Grundlaget for al udholdenhedstræning.</strong> Zone 2 opbygger mitokondrie-tæthed, kapillærnetværk, fedtforbrændingskapacitet og aerobe enzymer. Her opbygges aerob kondition—den "kedelige" zone der producerer mestre.</p>
 
             <h3>Marcadores Fisiológicos</h3>
             <ul>
@@ -1629,15 +1744,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

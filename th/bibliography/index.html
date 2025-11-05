@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/th/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,19 +809,19 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>บรรณานุกรมฉบับสมบูรณ์</h1>
-        <p class="lead">เอกสารอ้างอิงทางวิทยาศาสตร์มากกว่า 55 รายการที่สนับสนุน SwimAnalytics</p>
+        <h1>Complete Bibliography</h1>
+        <p class="lead">55+ Scientific References Supporting SwimAnalytics</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>วรรณกรรมวิทยาศาสตร์ที่อ้างอิง</h2>
-        <p class="lead">ตัววัดและสูตรคำนวณทั้งหมดใน SwimAnalytics ได้รับการสนับสนุนโดยงานวิจัยที่ผ่านการตรวจสอบโดยผู้เชี่ยวชาญซึ่งตีพิมพ์ในวารสารชั้นนำด้านวิทยาศาสตร์การกีฬา สรีรวิทยา และชีวกลศาสตร์</p>
+        <h2>Referenced Scientific Literature</h2>
+        <p class="lead">All metrics and formulas in SwimAnalytics are backed by peer-reviewed research published in leading sports science, physiology, and biomechanics journals.</p>
 
         <div class="callout callout-info">
-            <h3>📚 ครอบคลุมวารสาร</h3>
-            <p>เอกสารอ้างอิงครอบคลุมสิ่งพิมพ์ดังต่อไปนี้:</p>
+            <h3>📚 Journal Coverage</h3>
+            <p>References span publications including:</p>
             <ul>
                 <li>European Journal of Applied Physiology</li>
                 <li>International Journal of Sports Medicine</li>
@@ -732,7 +847,7 @@
                 <div class="bib-year">(1992)</div>
                 <div class="bib-title">A simple method for determining critical speed as swimming fatigue threshold in competitive swimming.</div>
                 <div class="bib-journal">International Journal of Sports Medicine, 13(5), 367-371.</div>
-                <a href="https://tritrainingharder.com/blog/2013/10/swim-testing-critical-swim-speed.html" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://tritrainingharder.com/blog/2013/10/swim-testing-critical-swim-speed.html" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -740,7 +855,7 @@
                 <div class="bib-year">(1992)</div>
                 <div class="bib-title">Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer.</div>
                 <div class="bib-journal">European Journal of Applied Physiology and Occupational Physiology, 64(2), 153-157.</div>
-                <a href="https://ultraswim333.com/blog-1-1/critical-swim-speed-what-is-it-and-why-should-you-care" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://ultraswim333.com/blog-1-1/critical-swim-speed-what-is-it-and-why-should-you-care" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -748,7 +863,7 @@
                 <div class="bib-year">(1993)</div>
                 <div class="bib-title">Does critical swimming velocity represent exercise intensity at maximal lactate steady state?</div>
                 <div class="bib-journal">European Journal of Applied Physiology and Occupational Physiology, 66(1), 90-95.</div>
-                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -756,7 +871,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">How to Train With Critical Swim Speed Intervals.</div>
                 <div class="bib-journal">USMS Fitness and Training Articles.</div>
-                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-train-with-critical-swim-speed-intervals" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -764,7 +879,7 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">What is Critical Swim Speed?</div>
                 <div class="bib-journal">Garmin Customer Support Documentation.</div>
-                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://support.garmin.com/en-US/?faq=h56ydwZxU8A7oi2OSh0y66" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
@@ -772,191 +887,309 @@
                 <div class="bib-year">(n.d.)</div>
                 <div class="bib-title">Recording a Critical Swim Speed Test - Forerunner 265 Series.</div>
                 <div class="bib-journal">Garmin Owner's Manual.</div>
-                <a href="https://www8.garmin.com/manuals/webhelp/GUID-F41EAFB3-6CC9-42DE-9C6C-9E358DBB0671/EN-US/GUID-F9FFE0BF-ED46-40D4-A562-92F1CB4C3650.html" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>TSS และ Training Load</h2>
-
-        <ol class="bibliography-list" start="7">
-            <li class="bib-item">
-                <div class="bib-authors">Coggan, A. R., & Allen, H.</div>
-                <div class="bib-year">(2009)</div>
-                <div class="bib-title">Training and Racing with a Power Meter.</div>
-                <div class="bib-journal">VeloPress.</div>
-                <a href="https://www.velopress.com/training-and-racing-with-a-power-meter-second-edition/" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Friel, J.</div>
-                <div class="bib-year">(2009)</div>
-                <div class="bib-title">The Triathlete's Training Bible.</div>
-                <div class="bib-journal">VeloPress.</div>
-                <a href="https://www.velopress.com/the-triathletes-training-bible/" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">TrainingPeaks</div>
-                <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">Training Stress Score (TSS) Explained.</div>
-                <div class="bib-journal">TrainingPeaks Knowledge Base.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Score-TSS-Explained" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">TrainingPeaks</div>
-                <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">How to Use Training Stress Score (TSS) to Train Smarter.</div>
-                <div class="bib-journal">TrainingPeaks Blog.</div>
-                <a href="https://www.trainingpeaks.com/blog/how-to-use-training-stress-score-tss-to-train-smarter/" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Buchheit, M.</div>
-                <div class="bib-year">(2014)</div>
-                <div class="bib-title">Monitoring training status with HR measures: Do all roads lead to Rome?</div>
-                <div class="bib-journal">Frontiers in Physiology, 5, 73.</div>
-                <a href="https://www.frontiersin.org/articles/10.3389/fphys.2014.00073/full" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Sanders, D., & Heijboer, M.</div>
-                <div class="bib-year">(2019)</div>
-                <div class="bib-title">The anaerobic power reserve and its applicability in professional road cycling.</div>
-                <div class="bib-journal">Journal of Sports Sciences, 37(6), 621-629.</div>
-                <a href="https://www.tandfonline.com/doi/full/10.1080/02640414.2018.1522684" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">TrainingPeaks</div>
-                <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">Calculating Normalized Graded Pace (NGP).</div>
-                <div class="bib-journal">TrainingPeaks Documentation.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071974-Normalized-Graded-Pace-NGP-" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Wallace, L. K., Slattery, K. M., & Coutts, A. J.</div>
-                <div class="bib-year">(2014)</div>
-                <div class="bib-title">A comparison of methods for quantifying training load: relationships between modelled and actual training responses.</div>
-                <div class="bib-journal">European Journal of Applied Physiology, 114(1), 11-20.</div>
-                <a href="https://link.springer.com/article/10.1007/s00421-013-2745-1" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <a href="https://www8.garmin.com/manuals/webhelp/GUID-F41EAFB3-6CC9-42DE-9C6C-9E358DBB0671/EN-US/GUID-F9FFE0BF-ED46-40D4-A562-92F1CB4C3650.html" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
 </section>
 
 <section class="section">
+    <div class="container">
+        <h2>Training Stress Score (TSS) & Training Load</h2>
+
+        <ol class="bibliography-list" start="7">
+            <li class="bib-item">
+                <div class="bib-authors">Coggan, A., & Allen, H.</div>
+                <div class="bib-year">(2009)</div>
+                <div class="bib-title">Estimating TSS.</div>
+                <div class="bib-journal">TrainingBible.com Blog.</div>
+                <a href="http://www.trainingbible.com/joesblog/2009/09/estimating-tss.html" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Training Stress Scores (TSS) Explained.</div>
+                <div class="bib-journal">TrainingPeaks Help Center.</div>
+                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Scores-TSS-Explained" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What You Need to Know About Swim TSS.</div>
+                <div class="bib-journal">TrainingPeaks Blog.</div>
+                <a href="https://www.trainingpeaks.com/blog/what-you-need-to-know-about-swim-tss/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Calculating Swimming TSS Score.</div>
+                <div class="bib-journal">TrainingPeaks Learn Articles.</div>
+                <a href="https://www.trainingpeaks.com/learn/articles/calculating-swimming-tss-score/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Garmin Support</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What is Training Stress Score?</div>
+                <div class="bib-journal">Garmin Customer Support.</div>
+                <a href="https://support.garmin.com/en-US/?faq=9EOIDzMcjx7kFqTJUGqHj5" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Ho'Omau Endurance</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Training Stress Score (TSS) - Enduropedia.</div>
+                <div class="bib-journal">Ho'Omau Endurance Learning Resources.</div>
+                <a href="https://hoomauendurance.com/learn/enduropedia/trainingstressscore/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Schuller, T., & Rodríguez, F. A.</div>
+                <div class="bib-year">(2015)</div>
+                <div class="bib-title">Heart Rate-Based Indices to Quantify Swimming Training Load.</div>
+                <div class="bib-journal">European Journal of Sport Science, 15(4), 273-280.</div>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Wallace, L. K., Slattery, K. M., & Coutts, A. J.</div>
+                <div class="bib-year">(2009)</div>
+                <div class="bib-title">The Ecological Validity and Application of the Session-RPE Method for Quantifying Training Loads in Swimming.</div>
+                <div class="bib-journal">Journal of Strength and Conditioning Research, 23(1), 33-38.</div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section section-alt">
     <div class="container">
         <h2>Performance Management (CTL, ATL, TSB)</h2>
 
         <ol class="bibliography-list" start="15">
             <li class="bib-item">
-                <div class="bib-authors">Coggan, A. R.</div>
+                <div class="bib-authors">TrainingPeaks</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">The Performance Management Chart.</div>
-                <div class="bib-journal">TrainingPeaks Knowledge Base.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071804-The-Performance-Manager" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">The Science of the TrainingPeaks Performance Manager.</div>
+                <div class="bib-journal">TrainingPeaks Learn Articles.</div>
+                <a href="https://www.trainingpeaks.com/learn/articles/the-science-of-the-performance-manager/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Cox, C.</div>
+                <div class="bib-year">(2010)</div>
+                <div class="bib-title">Analytical Triathlon Training Part 4: The Performance Management Chart.</div>
+                <div class="bib-journal">Coach Cox Blog.</div>
+                <a href="https://www.coachcox.co.uk/2010/09/17/analytical-triathlon-training-part-4-the-performance-management-chart/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
                 <div class="bib-authors">TrainingPeaks</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">Chronic Training Load (CTL) Explained.</div>
-                <div class="bib-journal">TrainingPeaks Knowledge Base.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Chronic-Training-Load-CTL-" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">A Coach's Guide to ATL, CTL & TSB.</div>
+                <div class="bib-journal">TrainingPeaks Coach Blog.</div>
+                <a href="https://www.trainingpeaks.com/coach-blog/a-coachs-guide-to-atl-ctl-tsb/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-authors">TrainerRoad</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">Acute Training Load (ATL) Explained.</div>
-                <div class="bib-journal">TrainingPeaks Knowledge Base.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Acute-Training-Load-ATL-" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">What are CTL, ATL, TSB & TSS? Why Do They Matter?</div>
+                <div class="bib-journal">TrainerRoad Blog.</div>
+                <a href="https://www.trainerroad.com/blog/why-tss-atl-ctl-and-tsb-matter/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-authors">Livity</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">Training Stress Balance (TSB) Explained.</div>
-                <div class="bib-journal">TrainingPeaks Knowledge Base.</div>
-                <a href="https://help.trainingpeaks.com/hc/en-us/articles/204071944-Training-Stress-Balance-TSB-" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">Training Load Calculator: ATL, CTL & Cardio Status Guide.</div>
+                <div class="bib-journal">Livity App Resources.</div>
+                <a href="https://livity-app.com/understanding-your-training-load/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Banister, E. W., Calvert, T. W., Savage, M. V., & Bach, T.</div>
-                <div class="bib-year">(1975)</div>
-                <div class="bib-title">A systems model of training for athletic performance.</div>
-                <div class="bib-journal">Australian Journal of Sports Medicine, 7(3), 57-61.</div>
-                <a href="https://europepmc.org/article/med/1233447" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Busso, T.</div>
-                <div class="bib-year">(2003)</div>
-                <div class="bib-title">Variable dose-response relationship between exercise training and performance.</div>
-                <div class="bib-journal">Medicine & Science in Sports & Exercise, 35(7), 1188-1195.</div>
-                <a href="https://journals.lww.com/acsm-msse/Fulltext/2003/07000/Variable_Dose_Response_Relationship_between.14.aspx" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Lumin Sports</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Understanding Training Load.</div>
+                <div class="bib-journal">Lumin Sports Help Center.</div>
+                <a href="https://support.luminsports.com/en/articles/6972017-understanding-training-load" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
 </section>
 
-<section class="section section-alt">
+<section class="section">
     <div class="container">
-        <h2>SWOLF</h2>
+        <h2>SWOLF & Swimming Efficiency</h2>
 
         <ol class="bibliography-list" start="21">
             <li class="bib-item">
-                <div class="bib-authors">Barbosa, T. M., Keskinen, K. L., Fernandes, R., Colaço, P., Lima, A. B., & Vilas-Boas, J. P.</div>
-                <div class="bib-year">(2005)</div>
-                <div class="bib-title">Energy cost and intracyclic variation of the velocity of the centre of mass in butterfly stroke.</div>
-                <div class="bib-journal">European Journal of Applied Physiology, 93(5-6), 519-523.</div>
-                <a href="https://link.springer.com/article/10.1007/s00421-004-1251-x" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Wikipedia Contributors</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Swolf.</div>
+                <div class="bib-journal">Wikipedia, The Free Encyclopedia.</div>
+                <a href="https://en.wikipedia.org/wiki/Swolf" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Seifert, L., Chollet, D., & Bardy, B. G.</div>
-                <div class="bib-year">(2004)</div>
-                <div class="bib-title">Effect of swimming velocity on arm coordination in the front crawl: a dynamic analysis.</div>
-                <div class="bib-journal">Journal of Sports Sciences, 22(7), 651-660.</div>
-                <a href="https://www.tandfonline.com/doi/abs/10.1080/02640410310001655787" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Speedo</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">How To Improve Your SWOLF Score.</div>
+                <div class="bib-journal">Speedo Blog - Advice.</div>
+                <a href="https://www.speedo.com/blog/advice/how-to-improve-your-swolf-score/" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Toussaint, H. M., & Beek, P. J.</div>
-                <div class="bib-year">(1992)</div>
-                <div class="bib-title">Biomechanics of competitive front crawl swimming.</div>
-                <div class="bib-journal">Sports Medicine, 13(1), 8-24.</div>
-                <a href="https://link.springer.com/article/10.2165/00007256-199213010-00002" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Topend Sports</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">SWOLF Swimming Efficiency Test.</div>
+                <div class="bib-journal">Topend Sports - Testing.</div>
+                <a href="https://www.topendsports.com/testing/tests/swolf.htm" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
                 <div class="bib-authors">Garmin</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">What is SWOLF?</div>
-                <div class="bib-journal">Garmin Support Documentation.</div>
-                <a href="https://support.garmin.com/en-US/?faq=FiJJguOFx59nHqxXDWnLu9" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">Swolf Score - Garmin Swim 2 Manual.</div>
+                <div class="bib-journal">Garmin Product Documentation.</div>
+                <a href="https://www8.garmin.com/manuals/webhelp/garminswim2/EN-US/GUID-9481691E-B9E0-4793-BDF7-4F78D8703E2B.html" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Swim Smooth</div>
+                <div class="bib-authors">SportTracks</div>
                 <div class="bib-year">(n.d.)</div>
-                <div class="bib-title">SWOLF: What Is It and How Can You Use It?</div>
-                <div class="bib-journal">Swim Smooth Blog.</div>
-                <a href="https://www.swimsmooth.com/swolf.html" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">Why Training to Improve Your SWOLF Score is Worthwhile.</div>
+                <div class="bib-journal">SportTracks Blog.</div>
+                <a href="https://sporttracks.mobi/blog/why-training-improve-your-swolf-score-worthwhile" target="_blank" class="bib-link">Reference →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Craig, A. B., & Pendergast, D. R.</div>
-                <div class="bib-year">(1979)</div>
-                <div class="bib-title">Relationships of stroke rate, distance per stroke, and velocity in competitive swimming.</div>
-                <div class="bib-journal">Medicine and Science in Sports, 11(3), 278-283.</div>
-                <a href="https://europepmc.org/article/med/522279" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Parnell, K.</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What is SWOLF and How Can it Make Me a Better Swimmer?</div>
+                <div class="bib-journal">ChiliTri Blog.</div>
+                <a href="https://chilitri.com/blog/karenparnell01@hotmail.com/what-is-swolf-and-how-can-it-make-me-a-better-swimmer" target="_blank" class="bib-link">Reference →</a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Stroke Rate & Distance Per Stroke</h2>
+
+        <ol class="bibliography-list" start="27">
+            <li class="bib-item">
+                <div class="bib-authors">220 Triathlon</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What is a Good Swim Cadence and How Can I Increase Mine?</div>
+                <div class="bib-journal">220 Triathlon - Training.</div>
+                <a href="https://www.220triathlon.com/training/swim-training/what-is-a-good-swim-cadence-and-how-can-i-increase-mine" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">FloSwimming</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">The Fine Line Between Distance Per Stroke & Stroke Rate.</div>
+                <div class="bib-journal">FloSwimming Articles.</div>
+                <a href="https://www.floswimming.com/articles/5063584-the-fine-line-between-distance-per-stroke-stroke-rate" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Analysis Swim</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Stroke Rate vs. Distance per Stroke in Swimming.</div>
+                <div class="bib-journal">Analysis Swim News.</div>
+                <a href="https://analysisswim.com/swim/news/stroke-rate-vs-distance-per-stroke-in-swimming" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">USA Triathlon</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Open Water Training Using Stroke Rate.</div>
+                <div class="bib-journal">USA Triathlon Articles.</div>
+                <a href="https://www.usatriathlon.org/articles/training-tips/open-water-training-using-stroke-rate-form" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">TrainingPeaks</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">How To Use Stroke Rate To Improve Your Open-Water Swimming.</div>
+                <div class="bib-journal">TrainingPeaks Blog.</div>
+                <a href="https://www.trainingpeaks.com/blog/how-to-use-stroke-rate-to-improve-your-open-water-swimming/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">MyProCoach</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">How Can I Improve My Stroke Rate?</div>
+                <div class="bib-journal">MyProCoach Support.</div>
+                <a href="https://support.myprocoach.net/hc/en-us/articles/360036189452-How-Can-I-Improve-My-Stroke-Rate" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Tritonwear</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Distance Per Stroke.</div>
+                <div class="bib-journal">Tritonwear Success Centre.</div>
+                <a href="https://support.tritonwear.com/distance-per-stroke" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">YourSwimLog</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">6 Tips to Improve Your Distance Per Stroke.</div>
+                <div class="bib-journal">YourSwimLog.com.</div>
+                <a href="https://www.yourswimlog.com/tips-improve-distance-per-stroke/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Steel City Endurance</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Do This to Reduce Your Stroke Count and Get Faster at Swimming.</div>
+                <div class="bib-journal">Steel City Endurance - Triathlon.</div>
+                <a href="https://steelcityendurance.com/triathlon/do-this-to-reduce-your-stroke-count-and-get-faster-at-swimming/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Confluence Running</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Stroke Rate vs. Stroke Length: Unlocking the Secret to Faster Swimming.</div>
+                <div class="bib-journal">Confluence Running Blog.</div>
+                <a href="https://confluencerunning.com/blogs/boost-stamina-and-strength-with-these-performance-and-endurance-training-methods/stroke-rate-vs-stroke-length-unlocking-the-secret-to-faster-swimming" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">The Endurance Store</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Stroke Rate V Stroke Count, and Why it's Critical for Swim Performance.</div>
+                <div class="bib-journal">The Endurance Store Blog.</div>
+                <a href="https://www.theendurancestore.com/blogs/the-endurance-store/stroke-rate-v-stroke-count-and-why-its-critical-for-swim-performance" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Triathlete</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What Is The Ideal Stroke Rate?</div>
+                <div class="bib-journal">Triathlete - Training.</div>
+                <a href="https://www.triathlete.com/training/what-is-the-ideal-stroke-rate/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Total Immersion</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">What's the Right Stroke Count?</div>
+                <div class="bib-journal">Total Immersion Blog.</div>
+                <a href="https://www.totalimmersion.net/blog/whats-the-right-stroke-count/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">U.S. Masters Swimming</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">How Many Strokes Should I Be Taking Per Length?</div>
+                <div class="bib-journal">USMS Fitness and Training.</div>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-many-strokes-should-i-be-taking-per-length" target="_blank" class="bib-link">Reference →</a>
             </li>
         </ol>
     </div>
@@ -964,119 +1197,121 @@
 
 <section class="section">
     <div class="container">
-        <h2>Stroke Rate และ Distance Per Stroke (DPS)</h2>
+        <h2>Pace Consistency & Tactics</h2>
 
-        <ol class="bibliography-list" start="27">
+        <ol class="bibliography-list" start="41">
             <li class="bib-item">
-                <div class="bib-authors">Craig, A. B., Skehan, P. L., Pawelczyk, J. A., & Boomer, W. L.</div>
-                <div class="bib-year">(1985)</div>
-                <div class="bib-title">Velocity, stroke rate, and distance per stroke during elite swimming competition.</div>
-                <div class="bib-journal">Medicine and Science in Sports and Exercise, 17(6), 625-634.</div>
-                <a href="https://journals.lww.com/acsm-msse/Abstract/1985/12000/Velocity,_stroke_rate,_and_distance_per_stroke.1.aspx" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">FORM Swim</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Understanding and Improving Your Swim Pace.</div>
+                <div class="bib-journal">FORM Swim Blog.</div>
+                <a href="https://www.formswim.com/blogs/all/understanding-and-improving-your-swim-pace" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">U.S. Masters Swimming</div>
+                <div class="bib-year">(n.d.)</div>
+                <div class="bib-title">Teach Your Swimmers to Perceive Their Pace.</div>
+                <div class="bib-journal">USMS Fitness and Training Articles.</div>
+                <a href="https://www.usms.org/fitness-and-training/articles-and-videos/articles/teach-your-swimmers-to-perceive-their-pace" target="_blank" class="bib-link">Reference →</a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        <h2>Turn Analysis & Technique</h2>
+
+        <ol class="bibliography-list" start="43">
+            <li class="bib-item">
+                <div class="bib-authors">Nicol, E., Tor, E., & Ball, K.</div>
+                <div class="bib-year">(2022)</div>
+                <div class="bib-title">Improving Tumble Turn Performance in Swimming—The Impact of Wall Contact Time.</div>
+                <div class="bib-journal">Frontiers in Sports and Active Living, 4, 936695.</div>
+                <a href="https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2022.936695/full" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Lyttle, A., & Blanksby, B.</div>
+                <div class="bib-year">(2003)</div>
+                <div class="bib-title">Force and Time Analysis of Backstroke to Breaststroke Turns.</div>
+                <div class="bib-journal">NMU Commons - Conference Papers.</div>
+                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1047&context=facwork_conferencepapers" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Veiga, S., Cala, A., Frutos, P. G., & Navarro, E.</div>
+                <div class="bib-year">(2014)</div>
+                <div class="bib-title">Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley.</div>
+                <div class="bib-journal">Journal of Sports Science & Medicine, 13(2), 233-242.</div>
+                <a href="https://www.jssm.org/researchjssm-21-233.xml.xml" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Nicol, E., Tor, E., & Ball, K.</div>
+                <div class="bib-year">(2019)</div>
+                <div class="bib-title">The Characteristics of an Elite Swimming Turn.</div>
+                <div class="bib-journal">ISBS Conference Proceedings, NMU Commons.</div>
+                <a href="https://commons.nmu.edu/cgi/viewcontent.cgi?article=1376&context=isbs" target="_blank" class="bib-link">Reference →</a>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">VS. Sports</div>
+                <div class="bib-year">(2020)</div>
+                <div class="bib-title">Attack the Walls: The Importance of Turns in Swimming.</div>
+                <div class="bib-journal">VS. Sports Blog.</div>
+                <a href="https://www.vssports.us/2020/07/14/attack-the-walls-the-importance-of-turns-in-swimming/" target="_blank" class="bib-link">Reference →</a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Biomechanics & Swimming Science</h2>
+
+        <ol class="bibliography-list" start="48">
+            <li class="bib-item">
+                <div class="bib-authors">Barbosa, T. M., Bragada, J. A., Reis, V. M., Marinho, D. A., Carvalho, C., & Silva, A. J.</div>
+                <div class="bib-year">(2010)</div>
+                <div class="bib-title">Energetics and Biomechanics as Determining Factors of Swimming Performance: Updating the State of the Art.</div>
+                <div class="bib-journal">Journal of Science and Medicine in Sport, 13(2), 262-269.</div>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Toussaint, H. M., & Beek, P. J.</div>
+                <div class="bib-year">(1992)</div>
+                <div class="bib-title">Biomechanics of Competitive Front Crawl Swimming.</div>
+                <div class="bib-journal">Sports Medicine, 13(1), 8-24.</div>
+            </li>
+
+            <li class="bib-item">
+                <div class="bib-authors">Seifert, L., Chollet, D., & Bardy, B. G.</div>
+                <div class="bib-year">(2007)</div>
+                <div class="bib-title">Effect of Swimming Velocity on Arm Coordination in the Front Crawl: A Dynamic Analysis.</div>
+                <div class="bib-journal">Journal of Sports Sciences, 22(7), 651-660.</div>
             </li>
 
             <li class="bib-item">
                 <div class="bib-authors">Costill, D. L., Kovaleski, J., Porter, D., Kirwan, J., Fielding, R., & King, D.</div>
                 <div class="bib-year">(1985)</div>
-                <div class="bib-title">Energy expenditure during front crawl swimming: predicting success in middle-distance events.</div>
+                <div class="bib-title">Energy Expenditure During Front Crawl Swimming: Predicting Success in Middle-Distance Events.</div>
                 <div class="bib-journal">International Journal of Sports Medicine, 6(5), 266-270.</div>
-                <a href="https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-2008-1025849" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Seifert, L., Toussaint, H. M., Alberty, M., Schnitzler, C., & Chollet, D.</div>
-                <div class="bib-year">(2010)</div>
-                <div class="bib-title">Arm coordination, power, and swim efficiency in national and regional front crawl swimmers.</div>
-                <div class="bib-journal">Human Movement Science, 29(3), 426-439.</div>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167945709001183" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Chollet, D., Pelayo, P., Delaplace, C., Tourny, C., & Sidney, M.</div>
-                <div class="bib-year">(1997)</div>
-                <div class="bib-title">Stroking characteristic variations in the 100-m freestyle for male swimmers of differing skill.</div>
-                <div class="bib-journal">Perceptual and Motor Skills, 85(1), 167-177.</div>
-                <a href="https://journals.sagepub.com/doi/10.2466/pms.1997.85.1.167" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Barbosa, T. M., Fernandes, R. J., Keskinen, K. L., & Vilas-Boas, J. P.</div>
+                <div class="bib-authors">Fernandes, R. J., Keskinen, K. L., Colaço, P., Querido, A. J., Machado, L. J., Morais, P. A., ... & Vilas-Boas, J. P.</div>
                 <div class="bib-year">(2008)</div>
-                <div class="bib-title">The influence of stroke mechanics into energy cost of elite swimmers.</div>
-                <div class="bib-journal">European Journal of Applied Physiology, 103(2), 139-149.</div>
-                <a href="https://link.springer.com/article/10.1007/s00421-008-0676-z" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-title">Time Limit at VO2max Velocity in Elite Crawl Swimmers.</div>
+                <div class="bib-journal">International Journal of Sports Medicine, 29(2), 145-150.</div>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Hay, J. G., & Guimarães, A. C.</div>
-                <div class="bib-year">(1983)</div>
-                <div class="bib-title">A quantitative look at swimming biomechanics.</div>
-                <div class="bib-journal">Swimming Technique, 20(2), 11-17.</div>
-                <a href="https://coachsci.sdsu.edu/swim/bullets/swolf.htm" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Seifert, L., & Chollet, D.</div>
-                <div class="bib-year">(2008)</div>
-                <div class="bib-title">Inter-limb coordination and constraints in swimming: a review.</div>
-                <div class="bib-journal">Journal of Sports Science & Medicine, 7(1), 1-9.</div>
-                <a href="https://www.jssm.org/vol7/n1/1/v7n1-1text.php" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Keskinen, K. L., Tilli, L. J., & Komi, P. V.</div>
-                <div class="bib-year">(1989)</div>
-                <div class="bib-title">Maximum velocity swimming: interrelationships of stroking characteristics, force production and anthropometric measures.</div>
-                <div class="bib-journal">Scandinavian Journal of Sports Sciences, 11(2), 87-92.</div>
-                <a href="https://pubmed.ncbi.nlm.nih.gov/2606874/" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Psycharakis, S. G., & Sanders, R. H.</div>
-                <div class="bib-year">(2010)</div>
-                <div class="bib-title">Body roll in swimming: a review.</div>
-                <div class="bib-journal">Journal of Sports Sciences, 28(3), 229-236.</div>
-                <a href="https://www.tandfonline.com/doi/abs/10.1080/02640410903508847" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Schnitzler, C., Seifert, L., Ernwein, V., & Chollet, D.</div>
-                <div class="bib-year">(2008)</div>
-                <div class="bib-title">Arm coordination adaptations assessment in swimming.</div>
-                <div class="bib-journal">International Journal of Sports Medicine, 29(6), 480-486.</div>
-                <a href="https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-2007-989235" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Deschodt, V. J., Arsac, L. M., & Rouard, A. H.</div>
-                <div class="bib-year">(1999)</div>
-                <div class="bib-title">Relative contribution of arms and legs in humans to propulsion in 25-m sprint front-crawl swimming.</div>
-                <div class="bib-journal">European Journal of Applied Physiology and Occupational Physiology, 80(3), 192-199.</div>
-                <a href="https://link.springer.com/article/10.1007/s004210050581" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Alberty, M., Sidney, M., Huot-Marchand, F., Hespel, J. M., & Pelayo, P.</div>
-                <div class="bib-year">(2005)</div>
-                <div class="bib-title">Intracyclic velocity variations and arm coordination during exhaustive exercise in front crawl stroke.</div>
-                <div class="bib-journal">International Journal of Sports Medicine, 26(6), 471-475.</div>
-                <a href="https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-2004-821110" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Lerda, R., & Cardelli, C.</div>
-                <div class="bib-year">(2003)</div>
-                <div class="bib-title">Analysis of stroke organisation in the backstroke as a function of skill.</div>
-                <div class="bib-journal">Research Quarterly for Exercise and Sport, 74(2), 215-219.</div>
-                <a href="https://www.tandfonline.com/doi/abs/10.1080/02701367.2003.10609084" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Barbosa, T. M., Morais, J. E., Marques, M. C., Silva, A. J., Marinho, D. A., & Costa, M. J.</div>
-                <div class="bib-year">(2015)</div>
-                <div class="bib-title">The power output and sprinting performance of young swimmers.</div>
-                <div class="bib-journal">Journal of Strength and Conditioning Research, 29(2), 440-450.</div>
-                <a href="https://journals.lww.com/nsca-jscr/Fulltext/2015/02000/The_Power_Output_and_Sprinting_Performance_of.20.aspx" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Sousa, A., Figueiredo, P., Zamparo, P., Pyne, D. B., Vilas-Boas, J. P., & Fernandes, R. J.</div>
+                <div class="bib-year">(2014)</div>
+                <div class="bib-title">Exercise Modality Effect on Oxygen Uptake Off-Transient Kinetics at Maximal Oxygen Uptake Intensity.</div>
+                <div class="bib-journal">Experimental Physiology, 99(8), 1157-1167.</div>
             </li>
         </ol>
     </div>
@@ -1084,172 +1319,33 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Pace Consistency</h2>
-
-        <ol class="bibliography-list" start="41">
-            <li class="bib-item">
-                <div class="bib-authors">Pyne, D. B., Trewin, C. B., & Hopkins, W. G.</div>
-                <div class="bib-year">(2004)</div>
-                <div class="bib-title">Progression and variability of competitive performance of Olympic swimmers.</div>
-                <div class="bib-journal">Journal of Sports Sciences, 22(7), 613-620.</div>
-                <a href="https://www.tandfonline.com/doi/abs/10.1080/02640410310001655822" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Maulder, P. S., Bradshaw, E. J., & Keogh, J.</div>
-                <div class="bib-year">(2006)</div>
-                <div class="bib-title">Jump kinetic determinants of sprint acceleration performance from starting blocks in male sprinters.</div>
-                <div class="bib-journal">Journal of Sports Science & Medicine, 5(2), 359-366.</div>
-                <a href="https://www.jssm.org/vol5/n2/24/v5n2-24text.php" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Turn Analysis</h2>
-
-        <ol class="bibliography-list" start="43">
-            <li class="bib-item">
-                <div class="bib-authors">Blanksby, B., Gathercole, D., & Marshall, R.</div>
-                <div class="bib-year">(1996)</div>
-                <div class="bib-title">Force plate and video analysis of the tumble turn by age-group swimmers.</div>
-                <div class="bib-journal">Journal of Swimming Research, 11, 40-45.</div>
-                <a href="https://www.researchgate.net/publication/285753693" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Lyttle, A. D., Blanksby, B. A., Elliott, B. C., & Lloyd, D. G.</div>
-                <div class="bib-year">(1998)</div>
-                <div class="bib-title">The effect of depth and velocity on drag during the streamlined glide.</div>
-                <div class="bib-journal">Journal of Swimming Research, 13, 15-22.</div>
-                <a href="https://coachsci.sdsu.edu/swim/bullets/turn.htm" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Cossor, J., & Mason, B.</div>
-                <div class="bib-year">(2001)</div>
-                <div class="bib-title">Swim start performances at the Sydney 2000 Olympic Games.</div>
-                <div class="bib-journal">ISBS - Conference Proceedings Archive, 1(1).</div>
-                <a href="https://ojs.ub.uni-konstanz.de/cpa/article/view/938" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Puel, F., Morlier, J., Avalos, M., Mesnard, M., Cid, M., & Hellard, P.</div>
-                <div class="bib-year">(2012)</div>
-                <div class="bib-title">3D kinematic and dynamic analysis of the front crawl tumble turn in elite male swimmers.</div>
-                <div class="bib-journal">Journal of Biomechanics, 45(3), 510-515.</div>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021929011006907" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Veiga, S., Cala, A., Mallo, J., & Navarro, E.</div>
-                <div class="bib-year">(2013)</div>
-                <div class="bib-title">A new procedure for race analysis in swimming based on individual distance measurements.</div>
-                <div class="bib-journal">Journal of Sports Sciences, 31(2), 159-165.</div>
-                <a href="https://www.tandfonline.com/doi/abs/10.1080/02640414.2012.723130" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2>Biomechanics</h2>
-
-        <ol class="bibliography-list" start="48">
-            <li class="bib-item">
-                <div class="bib-authors">Maglischo, E. W.</div>
-                <div class="bib-year">(2003)</div>
-                <div class="bib-title">Swimming Fastest.</div>
-                <div class="bib-journal">Human Kinetics.</div>
-                <a href="https://www.humankinetics.com/products/swimming-fastest" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Toussaint, H. M., van den Berg, C., & Beek, W. J.</div>
-                <div class="bib-year">(2002)</div>
-                <div class="bib-title">Pumped-up propulsion during front crawl swimming.</div>
-                <div class="bib-journal">Medicine & Science in Sports & Exercise, 34(2), 314-319.</div>
-                <a href="https://journals.lww.com/acsm-msse/Fulltext/2002/02000/Pumped_up_propulsion_during_front_crawl_swimming.18.aspx" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Schleihauf, R. E.</div>
-                <div class="bib-year">(1979)</div>
-                <div class="bib-title">A hydrodynamic analysis of swimming propulsion.</div>
-                <div class="bib-journal">Swimming III, 70-109.</div>
-                <a href="https://coachsci.sdsu.edu/swim/bullets/hydro.htm" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Pendergast, D. R., Zamparo, P., Di Prampero, P. E., Capelli, C., Cerretelli, P., Termin, A., Craig, A. B., Bushnell, D., Paschke, D., & Mellish, J.</div>
-                <div class="bib-year">(2005)</div>
-                <div class="bib-title">Energy balance of human locomotion in water.</div>
-                <div class="bib-journal">European Journal of Applied Physiology, 94(5-6), 555-563.</div>
-                <a href="https://link.springer.com/article/10.1007/s00421-004-1286-z" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Yanai, T.</div>
-                <div class="bib-year">(2003)</div>
-                <div class="bib-title">Stroke frequency in front crawl: its mechanical link to the fluid forces required in non-propulsive directions.</div>
-                <div class="bib-journal">Journal of Biomechanics, 36(1), 53-62.</div>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021929002003994" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-
-            <li class="bib-item">
-                <div class="bib-authors">Rouboa, A., Silva, A., Leal, L., Rocha, J., & Alves, F.</div>
-                <div class="bib-year">(2006)</div>
-                <div class="bib-title">The effect of swimmer's hand/forearm acceleration on propulsive forces generation using computational fluid dynamics.</div>
-                <div class="bib-journal">Journal of Biomechanics, 39(7), 1239-1248.</div>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0021929005001399" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
-            </li>
-        </ol>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container">
-        <h2>Wearable Technology</h2>
+        <h2>Wearable Technology & Machine Learning</h2>
 
         <ol class="bibliography-list" start="54">
             <li class="bib-item">
-                <div class="bib-authors">Napoli, A., Glass, S., Ward, C., Tucker, C., & Obeid, I.</div>
-                <div class="bib-year">(2021)</div>
-                <div class="bib-title">Performance analysis using inertial and physiological wearables for swimming: A systematic review.</div>
-                <div class="bib-journal">Sensors, 21(3), 1096.</div>
-                <a href="https://www.mdpi.com/1424-8220/21/3/1096" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Mooney, R., Corley, G., Godfrey, A., Quinlan, L. R., & ÓLaighin, G.</div>
+                <div class="bib-year">(2016)</div>
+                <div class="bib-title">Inertial Sensor Technology for Elite Swimming Performance Analysis: A Systematic Review.</div>
+                <div class="bib-journal">Sensors, 16(1), 18.</div>
             </li>
 
             <li class="bib-item">
-                <div class="bib-authors">Stamm, A., Thiel, D. V., Burkett, B., & James, D. A.</div>
-                <div class="bib-year">(2011)</div>
-                <div class="bib-title">Towards determining absolute velocity of freestyle swimming using 3-axis accelerometers.</div>
-                <div class="bib-journal">Procedia Engineering, 13, 120-125.</div>
-                <a href="https://www.sciencedirect.com/science/article/pii/S1877705811014430" target="_blank" class="bib-link">เอกสารอ้างอิง →</a>
+                <div class="bib-authors">Silva, A. F., Carvalho, D. D., Sá, J., Santos, R., Moreira, E., Clemente, F. M., ... & Clemente, S.</div>
+                <div class="bib-year">(2021)</div>
+                <div class="bib-title">Online Recognition of Swimming Stroke and Style Using an Automatic Learning Framework.</div>
+                <div class="bib-journal">Sensors, 21(14), 4646.</div>
             </li>
         </ol>
     </div>
 </section>
 
-<section class="section section-alt">
-    <div class="container">
-        <div class="callout callout-tip">
-            <h3>💡 การใช้เอกสารอ้างอิงนี้</h3>
-            <p>บรรณานุกรมนี้ได้รับการจัดกลุ่มตามหัวข้อเพื่อให้ค้นหาเอกสารที่เกี่ยวข้องกับตัววัดหรือแนวคิดเฉพาะได้ง่าย หากคุณกำลังวิจัย:</p>
-            <ul>
-                <li><strong>CSS:</strong> เริ่มต้นด้วยบทความของ Wakayoshi และคำแนะนำของ USMS</li>
-                <li><strong>Training Load:</strong> อ่านเกี่ยวกับพื้นฐานทฤษฎีของ Coggan & Allen และ Banister</li>
-                <li><strong>Stroke Mechanics:</strong> อ่านการทบทวนของ Maglischo และงานวิจัยเกี่ยวกับประสิทธิภาพของ Toussaint</li>
-                <li><strong>Wearable Tech:</strong> ดูการทบทวนของ Napoli เพื่อดูภาพรวมที่ครอบคลุม</li>
-            </ul>
-        </div>
+<section class="section">
+    <div class="container container-narrow text-center">
+        <h2>Science-Based Swimming Analytics</h2>
+        <p class="lead">These 55+ scientific references form the evidence base for SwimAnalytics. Every formula, metric, and recommendation is grounded in peer-reviewed research, not speculation or anecdote.</p>
 
-        <div class="mt-xl text-center">
-            <p class="mb-md"><strong>พร้อมที่จะนำเอาวิทยาศาสตร์มาใช้กับการว่ายน้ำของคุณแล้วหรือยัง?</strong></p>
-            <a href="https://apps.apple.com/es/app/swimanalytics/id6753306284" class="btn btn-primary btn-large" target="_blank" rel="noopener">ดาวน์โหลด SwimAnalytics ฟรี</a>
+        <div class="mt-xl">
+            <a href="/en/formulas/" class="btn btn-primary btn-large">View Technical Formulas →</a>
         </div>
     </div>
 </section>
@@ -1691,15 +1787,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

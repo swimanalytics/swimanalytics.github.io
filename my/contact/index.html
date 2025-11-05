@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -265,7 +374,13 @@
             
             <a href="/my/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -662,61 +777,63 @@
     <main id="main-content" class="main-content">
         <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-md">ติดต่อเรา</h1>
-        <p class="mb-3xl">เรายินดีรับฟังความคิดเห็นจากคุณ กรุณากรอกแบบฟอร์มและเราจะติดต่อกลับโดยเร็วที่สุด</p>
+        <h1 class="mb-md">Contact</h1>
+        <p class="mb-3xl">We'd love to hear from you. Fill out the form and we'll get back to you as soon as possible.</p>
 
-        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="post">
-            <!-- Web3Forms Access Key (from config.json) -->
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms Access Key -->
             <input type="hidden" name="access_key" value="d7b6922a-f426-43d3-8bad-d97da69801e2">
 
             <!-- Language identifier -->
-            <input type="hidden" name="language" value="th">
+            <input type="hidden" name="language" value="en">
 
             <!-- Email destination -->
             <input type="hidden" name="from_name" value="SwimAnalytics Contact Form">
-            <input type="hidden" name="subject" value="New Contact Form Submission (TH)">
+            <input type="hidden" name="subject" value="New Contact Form Submission (EN)">
 
             <!-- Honeypot Spam Protection -->
             <input type="checkbox" name="botcheck" class="hidden">
 
             <div class="form-group">
-                <label for="name" class="form-label required">ชื่อ</label>
+                <label for="name" class="form-label required">Name</label>
                 <input type="text" id="name" name="name" class="form-input" required>
                 <span class="form-error" id="name-error"></span>
             </div>
 
             <div class="form-group">
-                <label for="email" class="form-label required">อีเมล</label>
+                <label for="email" class="form-label required">Email</label>
                 <input type="email" id="email" name="email" class="form-input" required>
                 <span class="form-error" id="email-error"></span>
             </div>
 
             <div class="form-group">
-                <label for="subject" class="form-label">หัวเรื่อง</label>
-                <input type="text" id="subject" name="subject" class="form-input">
+                <label for="user-subject" class="form-label">Subject</label>
+                <input type="text" id="user-subject" name="user_subject" class="form-input">
             </div>
 
             <div class="form-group">
-                <label for="message" class="form-label required">ข้อความ</label>
-                <textarea id="message" name="message" class="form-textarea" required></textarea>
+                <label for="message" class="form-label required">Message</label>
+                <textarea id="message" name="message" class="form-textarea" rows="6" required></textarea>
                 <span class="form-error" id="message-error"></span>
             </div>
 
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-large">ส่งข้อความ</button>
+                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
             </div>
+
+            <div id="form-status" class="form-status hidden"></div>
         </form>
 
         <div class="divider-top-xl">
-            <h2 class="mb-md">ช่องทางการติดต่ออื่น</h2>
+            <h2 class="mb-md">Other Ways to Contact</h2>
             <div class="grid grid-2">
                 <div>
-                    <h3 class="text-lg-tight mb-sm">อีเมล</h3>
+                    <h3 class="text-lg-tight mb-sm">Email</h3>
                     <p><a href="mailto:swimanalytics@onmedic.org">swimanalytics@onmedic.org</a></p>
                 </div>
                 <div>
-                    <h3 class="text-lg-tight mb-sm">โทรศัพท์</h3>
-                    <p><a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <h3 class="text-lg-tight mb-sm">Social Media</h3>
+                    <p><a href="https://twitter.com/swimanalytics" target="_blank" rel="noopener">@swimanalytics</a></p>
                 </div>
             </div>
         </div>
@@ -1160,15 +1277,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

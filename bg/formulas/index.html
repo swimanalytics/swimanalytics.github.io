@@ -152,7 +152,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -297,7 +406,13 @@
             
             <a href="/bg/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -694,23 +809,23 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>Referencia Técnica y Fórmulas</h1>
-        <p class="lead">Implementación Matemática Completa</p>
+        <h1>Техническа Справка и Формули</h1>
+        <p class="lead">Пълна Математическа Имплементация</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Guía de Implementación</h2>
-        <p class="lead">Esta página proporciona fórmulas listas para copiar y pegar, así como métodos de cálculo paso a paso para todas las métricas de SwimAnalytics. Úsalas para implementaciones personalizadas, verificación o comprensión más profunda.</p>
+        <h2>Ръководство за Имплементация</h2>
+        <p class="lead">Тази страница предоставя готови за копиране формули и стъпка по стъпка методи за изчисление на всички метрики на SwimAnalytics. Използвайте ги за персонализирани имплементации, верификация или по-задълбочено разбиране.</p>
 
         <div class="callout callout-warning">
-            <h3>⚠️ Notas de Implementación</h3>
+            <h3>⚠️ Бележки за Имплементация</h3>
             <ul>
-                <li>Todos los tiempos deben convertirse a segundos para los cálculos</li>
-                <li>El ritmo de natación es inverso (mayor % = ritmo más lento)</li>
-                <li>Valida siempre las entradas para rangos razonables</li>
-                <li>Maneja casos límite (división por cero, valores negativos)</li>
+                <li>Всички времена трябва да се конвертират в секунди за изчисленията</li>
+                <li>Темпът при плуване е обратен (по-висок % = по-бавен темп)</li>
+                <li>Винаги валидирайте входните данни за разумни диапазони</li>
+                <li>Обработвайте гранични случаи (деление на нула, отрицателни стойности)</li>
             </ul>
         </div>
     </div>
@@ -718,7 +833,7 @@
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Métricas de Rendimiento Principales</h2>
+        <h2>Основни Метрики за Представяне</h2>
 
         <div class="formula-card">
             <h3>Critical Swim Speed (CSS)</h3>
@@ -734,35 +849,35 @@
                 </div>
 
                 <div class="callout callout-info mt-lg">
-                    <h4>🧪 Calculadora Interactiva - Prueba la Fórmula</h4>
+                    <h4>🧪 Интерактивен Калкулатор - Тествайте Формулата</h4>
                     <div class="calculator-grid">
                         <div class="input-group">
-                            <label for="css-d1">Distancia 1 (metros):</label>
+                            <label for="css-d1">Дистанция 1 (метри):</label>
                             <input type="number" id="css-d1" value="200" min="50" max="1000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t1">Tiempo 1 (mm:ss):</label>
+                            <label for="css-t1">Време 1 (мм:сс):</label>
                             <input type="text" id="css-t1" value="2:30" placeholder="2:30" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                         <div class="input-group">
-                            <label for="css-d2">Distancia 2 (metros):</label>
+                            <label for="css-d2">Дистанция 2 (метри):</label>
                             <input type="number" id="css-d2" value="400" min="100" max="2000" step="50">
                         </div>
                         <div class="input-group">
-                            <label for="css-t2">Tiempo 2 (mm:ss):</label>
+                            <label for="css-t2">Време 2 (мм:сс):</label>
                             <input type="text" id="css-t2" value="6:08" placeholder="6:08" pattern="[0-9]{1,2}:[0-9]{2}">
                         </div>
                     </div>
                     <div class="calculator-result mt-md">
-                        <div class="result-label">Ritmo CSS por 100m:</div>
+                        <div class="result-label">CSS Темп на 100м:</div>
                         <div class="result-value" id="css-result">1:49</div>
                     </div>
                     <div class="calculation-breakdown mt-md">
                         <small>
-                            <strong>Pasos del cálculo:</strong><br>
+                            <strong>Стъпки на изчислението:</strong><br>
                             <span id="css-steps">
-                                CSS (m/s) = (400 - 200) / (368 - 150) = 0.917 m/s<br>
-                                Ritmo/100m = 100 / 0.917 = 109 segundos = 1:49
+                                CSS (м/с) = (400 - 200) / (368 - 150) = 0.917 м/с<br>
+                                Темп/100м = 100 / 0.917 = 109 секунди = 1:49
                             </span>
                         </small>
                     </div>
@@ -844,18 +959,18 @@ const result = calculateCSS(200, 150, 400, 368);
         </div>
 
         <div class="formula-card">
-            <h3>Swim Training Stress Score (sTSS)</h3>
+            <h3>Оценка на Тренировъчния Стрес при Плуване (sTSS)</h3>
             <div class="formula-content">
-                <h4>Fórmula Completa:</h4>
+                <h4>Пълна Формула:</h4>
                 <div class="formula-box-large">
                     <div class="formula">
-                        sTSS = (IF³) × Duración (horas) × 100
+                        sTSS = (IF³) × Продължителност (часове) × 100
                     </div>
                     <div class="formula">
                         IF = NSS / FTP
                     </div>
                     <div class="formula">
-                        NSS = Distancia Total / Tiempo Total (m/min)
+                        NSS = Обща Дистанция / Общо Време (м/мин)
                     </div>
                 </div>
 
@@ -1108,7 +1223,7 @@ const swolf50m = calculateNormalizedSWOLF(40, 30, 50);
 
 <section class="section">
     <div class="container">
-        <h2>Mecánica de Brazada</h2>
+        <h2>Механика на Гребането</h2>
 
         <div class="formula-card">
             <h3>Stroke Rate (SR)</h3>
@@ -1260,7 +1375,7 @@ const si = calculateStrokeIndex(1.5, 1.7);
 
 <section class="section section-alt">
     <div class="container">
-        <h2>Gráfico de Gestión del Rendimiento (PMC)</h2>
+        <h2>Графика за Управление на Представянето (PMC)</h2>
 
         <div class="formula-card">
             <h3>Cálculos de CTL, ATL, TSB</h3>
@@ -2009,15 +2124,15 @@ secondsToTimeDetailed(3665); // Returns: "1:01:05"</code></pre>
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     

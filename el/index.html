@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     
-    <title>SwimAnalytics: App di Analisi e Monitoraggio Prestazioni Nuoto per iOS</title>
-    <meta name="description" content="Monitora metriche di nuoto, calcola CSS e sTSS, analizza carico di allenamento con analisi professionale. Calcolatori gratuiti per nuotatori competitivi e triatleti. Prova gratuita di 7 giorni.">
+    <title>SwimAnalytics: Εφαρμογή Παρακολούθησης και Ανάλυσης Απόδοσης Κολύμβησης για iOS</title>
+    <meta name="description" content="Παρακολουθήστε μετρικές κολύμβησης, υπολογίστε CSS και sTSS, αναλύστε φορτίο προπόνησης με επαγγελματικά analytics. Δωρεάν υπολογιστές για ανταγωνιστικούς κολυμβητές και τριαθλητές. Δωρεάν δοκιμή 7 ημερών.">
     <meta name="author" content="Albert Arno">
     
-    <meta name="keywords" content="app nuoto, analisi nuoto, calcolatore CSS, prestazioni nuoto, sTSS">
+    <meta name="keywords" content="εφαρμογή κολύμβησης, analytics κολύμβησης, υπολογιστής CSS, απόδοση κολύμβησης, sTSS">
     
     <link rel="canonical" href="https://swimanalytics.app/el/">
 
@@ -20,8 +20,8 @@
     
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://swimanalytics.app/el/">
-    <meta property="og:title" content="SwimAnalytics: App di Analisi e Monitoraggio Prestazioni Nuoto per iOS">
-    <meta property="og:description" content="Monitora metriche di nuoto, calcola CSS e sTSS, analizza carico di allenamento con analisi professionale. Calcolatori gratuiti per nuotatori competitivi e triatleti. Prova gratuita di 7 giorni.">
+    <meta property="og:title" content="SwimAnalytics: Εφαρμογή Παρακολούθησης και Ανάλυσης Απόδοσης Κολύμβησης για iOS">
+    <meta property="og:description" content="Παρακολουθήστε μετρικές κολύμβησης, υπολογίστε CSS και sTSS, αναλύστε φορτίο προπόνησης με επαγγελματικά analytics. Δωρεάν υπολογιστές για ανταγωνιστικούς κολυμβητές και τριαθλητές. Δωρεάν δοκιμή 7 ημερών.">
     <meta property="og:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
     <meta property="og:locale" content="el_GR">
     <meta property="og:site_name" content="SwimAnalytics">
@@ -29,8 +29,8 @@
     
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://swimanalytics.app/el/">
-    <meta name="twitter:title" content="SwimAnalytics: App di Analisi e Monitoraggio Prestazioni Nuoto per iOS">
-    <meta name="twitter:description" content="Monitora metriche di nuoto, calcola CSS e sTSS, analizza carico di allenamento con analisi professionale. Calcolatori gratuiti per nuotatori competitivi e triatleti. Prova gratuita di 7 giorni.">
+    <meta name="twitter:title" content="SwimAnalytics: Εφαρμογή Παρακολούθησης και Ανάλυσης Απόδοσης Κολύμβησης για iOS">
+    <meta name="twitter:description" content="Παρακολουθήστε μετρικές κολύμβησης, υπολογίστε CSS και sTSS, αναλύστε φορτίο προπόνησης με επαγγελματικά analytics. Δωρεάν υπολογιστές για ανταγωνιστικούς κολυμβητές και τριαθλητές. Δωρεάν δοκιμή 7 ημερών.">
     <meta name="twitter:image" content="https://swimanalytics.app/assets/images/swim-analytics-og.jpg">
     
     <meta name="twitter:site" content="@swimanalytics">
@@ -148,7 +148,116 @@
     <meta name="theme-color" content="#0066CC">
 
     
-    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <style>
+/* Critical CSS - Above the fold */
+:root {
+  --color-primary: #0066CC;
+  --color-text: #1a1a1a;
+  --color-bg: #ffffff;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.site-header {
+  background: var(--color-bg);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: #0066CC;
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+
+    
+    <link rel="preload" href="/assets/css/main.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/main.min.css"></noscript>
+
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 
     
     <script type="application/ld+json">
@@ -259,7 +368,13 @@
             
             <a href="/el/" class="site-logo">
                 <picture>
-                    <source srcset="/assets/images/logo-dark.png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.webp" type="image/webp" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+                    
+                    <source srcset="/assets/images/logo.webp" type="image/webp">
+                    
                     <img src="/assets/images/logo.png" alt="SwimAnalytics" width="40" height="40">
                 </picture>
                 <span class="logo-text">SwimAnalytics</span>
@@ -656,15 +771,15 @@
     <main id="main-content" class="main-content">
         <section class="hero hero-small">
     <div class="container">
-        <h1>SwimAnalytics - Analisi Scientifica del Nuoto</h1>
-        <p class="lead">Metriche basate su CSS, sTSS e Performance Management Chart per nuotatori seri</p>
+        <h1>SwimAnalytics - Επιστημονική Ανάλυση Κολύμβησης</h1>
+        <p class="lead">Μετρικές βασισμένες σε CSS, sTSS και Διάγραμμα Διαχείρισης Απόδοσης για σοβαρούς κολυμβητές</p>
     </div>
 </section>
 
 <section class="section">
     <div class="container container-narrow">
-        <h2>Nuoto Basato sui Dati per Prestazioni Serie</h2>
-        <p class="lead">SwimAnalytics porta l'analisi di allenamento di livello professionale al nuoto, utilizzando <strong>Critical Swim Speed (CSS)</strong>, <strong>swimming Training Stress Score (sTSS)</strong> e <strong>Performance Management Chart (PMC)</strong> per trasformare i tuoi allenamenti in progressi misurabili.</p>
+        <h2>Κολύμβηση Βασισμένη σε Δεδομένα για Σοβαρές Επιδόσεις</h2>
+        <p class="lead">Το SwimAnalytics φέρνει την ανάλυση προπόνησης επαγγελματικού επιπέδου στην κολύμβηση, χρησιμοποιώντας την <strong>Κρίσιμη Ταχύτητα Κολύμβησης (CSS)</strong>, το <strong>Σκορ Στρες Προπόνησης Κολύμβησης (sTSS)</strong> και το <strong>Διάγραμμα Διαχείρισης Απόδοσης (PMC)</strong> για να μετατρέψει τις προπονήσεις σας σε μετρήσιμη πρόοδο.</p>
 
         <div class="grid grid-2">
             <div class="card">
@@ -1340,15 +1455,15 @@
 </div>
 
     
-    <script src="/assets/js/main.min.js"></script>
-    <script src="/assets/js/cookie-consent.min.js"></script>
-    <script src="/assets/js/lazy-load.min.js"></script>
-    <script src="/assets/js/carousel.min.js"></script>
-    <script src="/assets/js/css-calculator.min.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="/assets/js/cookie-consent.min.js" defer></script>
+    <script src="/assets/js/lazy-load.min.js" defer></script>
+    <script src="/assets/js/carousel.min.js" defer></script>
+    <script src="/assets/js/css-calculator.min.js" defer></script>
 
     
-    <script src="/assets/js/fuse.min.js"></script>
-    <script src="/assets/js/search.min.js"></script>
+    <script src="/assets/js/fuse.min.js" defer></script>
+    <script src="/assets/js/search.min.js" defer></script>
 
     
     
