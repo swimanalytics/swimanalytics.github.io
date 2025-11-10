@@ -1092,345 +1092,249 @@ body {
             
             <div class="footer-section">
                 <h3>Seleziona lingua</h3>
-                <ul>
+                <select class="language-selector footer-language-select" aria-label="Seleziona lingua" onchange="if(this.value) window.location.href=this.value;">
                     
-                    <li>
-                        <a href="/ca/"
-                           >
-                            Català
-                        </a>
-                    </li>
+                    <option value="/af/"
+                            >
+                        Afrikaans
+                    </option>
                     
-                    <li>
-                        <a href="/en/"
-                           >
-                            English
-                        </a>
-                    </li>
+                    <option value="/ar/"
+                            >
+                        العربية
+                    </option>
                     
-                    <li>
-                        <a href="/es/"
-                           >
-                            Español
-                        </a>
-                    </li>
+                    <option value="/bg/"
+                            >
+                        Български
+                    </option>
                     
-                    <li>
-                        <a href="/fr/"
-                           >
-                            Français
-                        </a>
-                    </li>
+                    <option value="/bn/"
+                            >
+                        বাংলা
+                    </option>
                     
-                    <li>
-                        <a href="/de/"
-                           >
-                            Deutsch
-                        </a>
-                    </li>
+                    <option value="/ca/"
+                            >
+                        Català
+                    </option>
                     
-                    <li>
-                        <a href="/it/"
-                           aria-current="page">
-                            Italiano
-                        </a>
-                    </li>
+                    <option value="/cs/"
+                            >
+                        Čeština
+                    </option>
                     
-                    <li>
-                        <a href="/nl/"
-                           >
-                            Nederlands
-                        </a>
-                    </li>
+                    <option value="/da/"
+                            >
+                        Dansk
+                    </option>
                     
-                    <li>
-                        <a href="/ja/"
-                           >
-                            日本語
-                        </a>
-                    </li>
+                    <option value="/de/"
+                            >
+                        Deutsch
+                    </option>
                     
-                    <li>
-                        <a href="/pl/"
-                           >
-                            Polski
-                        </a>
-                    </li>
+                    <option value="/el/"
+                            >
+                        Ελληνικά
+                    </option>
                     
-                    <li>
-                        <a href="/sv/"
-                           >
-                            Svenska
-                        </a>
-                    </li>
+                    <option value="/en/"
+                            >
+                        English
+                    </option>
                     
-                    <li>
-                        <a href="/pt/"
-                           >
-                            Português
-                        </a>
-                    </li>
+                    <option value="/es/"
+                            >
+                        Español
+                    </option>
                     
-                    <li>
-                        <a href="/ru/"
-                           >
-                            Русский
-                        </a>
-                    </li>
+                    <option value="/et/"
+                            >
+                        Eesti
+                    </option>
                     
-                    <li>
-                        <a href="/zh/"
-                           >
-                            中文
-                        </a>
-                    </li>
+                    <option value="/fa/"
+                            >
+                        فارسی
+                    </option>
                     
-                    <li>
-                        <a href="/ko/"
-                           >
-                            한국어
-                        </a>
-                    </li>
+                    <option value="/fi/"
+                            >
+                        Suomi
+                    </option>
                     
-                    <li>
-                        <a href="/no/"
-                           >
-                            Norsk
-                        </a>
-                    </li>
+                    <option value="/fr/"
+                            >
+                        Français
+                    </option>
                     
-                    <li>
-                        <a href="/da/"
-                           >
-                            Dansk
-                        </a>
-                    </li>
+                    <option value="/ha/"
+                            >
+                        Hausa
+                    </option>
                     
-                    <li>
-                        <a href="/fi/"
-                           >
-                            Suomi
-                        </a>
-                    </li>
+                    <option value="/he/"
+                            >
+                        עברית
+                    </option>
                     
-                    <li>
-                        <a href="/tr/"
-                           >
-                            Türkçe
-                        </a>
-                    </li>
+                    <option value="/hi/"
+                            >
+                        हिन्दी
+                    </option>
                     
-                    <li>
-                        <a href="/ar/"
-                           >
-                            العربية
-                        </a>
-                    </li>
+                    <option value="/hr/"
+                            >
+                        Hrvatski
+                    </option>
                     
-                    <li>
-                        <a href="/he/"
-                           >
-                            עברית
-                        </a>
-                    </li>
+                    <option value="/hu/"
+                            >
+                        Magyar
+                    </option>
                     
-                    <li>
-                        <a href="/hi/"
-                           >
-                            हिन्दी
-                        </a>
-                    </li>
+                    <option value="/id/"
+                            >
+                        Bahasa Indonesia
+                    </option>
                     
-                    <li>
-                        <a href="/id/"
-                           >
-                            Bahasa Indonesia
-                        </a>
-                    </li>
+                    <option value="/is/"
+                            >
+                        Íslenska
+                    </option>
                     
-                    <li>
-                        <a href="/th/"
-                           >
-                            ไทย
-                        </a>
-                    </li>
+                    <option value="/it/"
+                            selected>
+                        Italiano
+                    </option>
                     
-                    <li>
-                        <a href="/vi/"
-                           >
-                            Tiếng Việt
-                        </a>
-                    </li>
+                    <option value="/ja/"
+                            >
+                        日本語
+                    </option>
                     
-                    <li>
-                        <a href="/el/"
-                           >
-                            Ελληνικά
-                        </a>
-                    </li>
+                    <option value="/ko/"
+                            >
+                        한국어
+                    </option>
                     
-                    <li>
-                        <a href="/uk/"
-                           >
-                            Українська
-                        </a>
-                    </li>
+                    <option value="/lt/"
+                            >
+                        Lietuvių
+                    </option>
                     
-                    <li>
-                        <a href="/ms/"
-                           >
-                            Bahasa Melayu
-                        </a>
-                    </li>
+                    <option value="/lv/"
+                            >
+                        Latviešu
+                    </option>
                     
-                    <li>
-                        <a href="/tl/"
-                           >
-                            Tagalog
-                        </a>
-                    </li>
+                    <option value="/ms/"
+                            >
+                        Bahasa Melayu
+                    </option>
                     
-                    <li>
-                        <a href="/hu/"
-                           >
-                            Magyar
-                        </a>
-                    </li>
+                    <option value="/my/"
+                            >
+                        မြန်မာ
+                    </option>
                     
-                    <li>
-                        <a href="/ro/"
-                           >
-                            Română
-                        </a>
-                    </li>
+                    <option value="/nl/"
+                            >
+                        Nederlands
+                    </option>
                     
-                    <li>
-                        <a href="/cs/"
-                           >
-                            Čeština
-                        </a>
-                    </li>
+                    <option value="/no/"
+                            >
+                        Norsk
+                    </option>
                     
-                    <li>
-                        <a href="/bg/"
-                           >
-                            Български
-                        </a>
-                    </li>
+                    <option value="/pl/"
+                            >
+                        Polski
+                    </option>
                     
-                    <li>
-                        <a href="/sk/"
-                           >
-                            Slovenčina
-                        </a>
-                    </li>
+                    <option value="/pt/"
+                            >
+                        Português
+                    </option>
                     
-                    <li>
-                        <a href="/hr/"
-                           >
-                            Hrvatski
-                        </a>
-                    </li>
+                    <option value="/ro/"
+                            >
+                        Română
+                    </option>
                     
-                    <li>
-                        <a href="/sl/"
-                           >
-                            Slovenščina
-                        </a>
-                    </li>
+                    <option value="/ru/"
+                            >
+                        Русский
+                    </option>
                     
-                    <li>
-                        <a href="/sr/"
-                           >
-                            Српски
-                        </a>
-                    </li>
+                    <option value="/sk/"
+                            >
+                        Slovenčina
+                    </option>
                     
-                    <li>
-                        <a href="/af/"
-                           >
-                            Afrikaans
-                        </a>
-                    </li>
+                    <option value="/sl/"
+                            >
+                        Slovenščina
+                    </option>
                     
-                    <li>
-                        <a href="/is/"
-                           >
-                            Íslenska
-                        </a>
-                    </li>
+                    <option value="/sr/"
+                            >
+                        Српски
+                    </option>
                     
-                    <li>
-                        <a href="/bn/"
-                           >
-                            বাংলা
-                        </a>
-                    </li>
+                    <option value="/sv/"
+                            >
+                        Svenska
+                    </option>
                     
-                    <li>
-                        <a href="/sw/"
-                           >
-                            Kiswahili
-                        </a>
-                    </li>
+                    <option value="/sw/"
+                            >
+                        Kiswahili
+                    </option>
                     
-                    <li>
-                        <a href="/fa/"
-                           >
-                            فارسی
-                        </a>
-                    </li>
+                    <option value="/th/"
+                            >
+                        ไทย
+                    </option>
                     
-                    <li>
-                        <a href="/et/"
-                           >
-                            Eesti
-                        </a>
-                    </li>
+                    <option value="/tl/"
+                            >
+                        Tagalog
+                    </option>
                     
-                    <li>
-                        <a href="/lt/"
-                           >
-                            Lietuvių
-                        </a>
-                    </li>
+                    <option value="/tr/"
+                            >
+                        Türkçe
+                    </option>
                     
-                    <li>
-                        <a href="/lv/"
-                           >
-                            Latviešu
-                        </a>
-                    </li>
+                    <option value="/uk/"
+                            >
+                        Українська
+                    </option>
                     
-                    <li>
-                        <a href="/ur/"
-                           >
-                            اردو
-                        </a>
-                    </li>
+                    <option value="/ur/"
+                            >
+                        اردو
+                    </option>
                     
-                    <li>
-                        <a href="/ha/"
-                           >
-                            Hausa
-                        </a>
-                    </li>
+                    <option value="/vi/"
+                            >
+                        Tiếng Việt
+                    </option>
                     
-                    <li>
-                        <a href="/yo/"
-                           >
-                            Yorùbá
-                        </a>
-                    </li>
+                    <option value="/yo/"
+                            >
+                        Yorùbá
+                    </option>
                     
-                    <li>
-                        <a href="/my/"
-                           >
-                            မြန်မာ
-                        </a>
-                    </li>
+                    <option value="/zh/"
+                            >
+                        中文
+                    </option>
                     
-                </ul>
+                </select>
             </div>
         </div>
 
