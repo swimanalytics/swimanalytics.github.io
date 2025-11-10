@@ -779,106 +779,329 @@ body {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Privacy Policy</h1>
+        <h1 class="mb-lg">Privacy Policy for SwimAnalytics (Android)</h1>
 
-        <p class="text-secondary mb-xl">Last updated: <strong>January 2024</strong></p>
+        <p class="text-secondary mb-xl"><strong>Last Updated:</strong> January 10, 2025 | <strong>Effective Date:</strong> January 10, 2025</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                This Privacy Policy describes how we collect, use, and protect your personal information when you visit our website.
+                SwimAnalytics ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how our Android application accesses, uses, and protects health data from your device.
             </p>
-            <p class="mb-md">
-                We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.
-            </p>
+            <div class="callout callout-info mb-md">
+                <p><strong>Key Privacy Principle:</strong> SwimAnalytics operates on a <strong>zero-server, local-only architecture</strong>. All health data accessed from Health Connect remains exclusively on your physical Android device and is never transmitted to external servers, cloud services, or third parties.</p>
+            </div>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Information We Collect</h2>
-            <h3 class="mb-sm">Information you provide directly:</h3>
+            <h2 class="mb-md">1. Health Connect Data Access (Android)</h2>
+            <p class="mb-md">
+                SwimAnalytics integrates with <strong>Android Health Connect</strong> to provide swimming workout analysis. We request access to the following health data types:
+            </p>
+
+            <h3 class="mb-sm">1.1 Data Types Accessed</h3>
+            <div class="table-responsive mb-md">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Health Data Type</th>
+                            <th>Permission</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Exercise Sessions</strong></td>
+                            <td><code>READ_EXERCISE</code></td>
+                            <td>To identify and import swimming workout sessions from Health Connect</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distance Records</strong></td>
+                            <td><code>READ_DISTANCE</code></td>
+                            <td>To display key metrics such as total distance per swim, lap distances, and calculate pace</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Heart Rate Records</strong></td>
+                            <td><code>READ_HEART_RATE</code></td>
+                            <td>To display heart rate charts, calculate average and maximum heart rate during workouts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Speed Records</strong></td>
+                            <td><code>READ_SPEED</code></td>
+                            <td>To calculate and display your swimming pace, pace zones, and stroke rate analysis</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Calories Burned</strong></td>
+                            <td><code>READ_TOTAL_CALORIES_BURNED</code></td>
+                            <td>To provide comprehensive overview of energy expenditure during swimming sessions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="mb-sm">1.2 How We Use Health Data</h3>
+            <p class="mb-sm">All health data is used <strong>exclusively for the following purposes</strong>:</p>
             <ul class="mb-md">
-                <li>Contact information (name, email) when you use our contact form</li>
-                <li>Any other information you choose to provide</li>
+                <li><strong>Workout Display:</strong> Show your swimming sessions with detailed metrics (distance, time, pace, heart rate)</li>
+                <li><strong>Performance Analytics:</strong> Calculate pace zones, stroke analysis, CSS (Critical Swim Speed), and sTSS (swim Training Stress Score)</li>
+                <li><strong>Progress Tracking:</strong> Display performance trends, personal bests, and workout summaries</li>
+                <li><strong>Data Export:</strong> Allow you to export your workout data to CSV format for personal use</li>
             </ul>
 
-            <h3 class="mb-sm">Information collected automatically:</h3>
+            <h3 class="mb-sm">1.3 Data Storage</h3>
+            <div class="callout callout-success mb-md">
+                <h4 class="mb-sm">🔒 CRITICAL PRIVACY GUARANTEE:</h4>
+                <p class="mb-sm"><strong>All health data remains exclusively on your physical Android device.</strong></p>
+                <ul class="mb-0">
+                    <li>Health data is stored locally using Android Room Database (on-device SQLite)</li>
+                    <li><strong>NO data is uploaded to external servers</strong></li>
+                    <li><strong>NO data is transmitted over the internet</strong></li>
+                    <li><strong>NO cloud synchronization or backup</strong></li>
+                    <li><strong>NO third-party access to your health data</strong></li>
+                </ul>
+            </div>
+            <p class="mb-md">
+                The only time data leaves your device is when <strong>YOU explicitly choose</strong> to export your workouts to CSV format and share the file yourself.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">2. Permissions Required</h2>
+
+            <h3 class="mb-sm">2.1 Health Connect Permissions</h3>
             <ul class="mb-md">
-                <li>Browser type and version</li>
-                <li>Operating system</li>
-                <li>Pages visited and time spent on pages</li>
-                <li>IP address (anonymized)</li>
+                <li><code>android.permission.health.READ_EXERCISE</code></li>
+                <li><code>android.permission.health.READ_DISTANCE</code></li>
+                <li><code>android.permission.health.READ_HEART_RATE</code></li>
+                <li><code>android.permission.health.READ_SPEED</code></li>
+                <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
+            </ul>
+            <p class="mb-md">
+                These permissions are requested during the app's first launch. You can revoke these permissions at any time through Android Settings → Apps → Health Connect → SwimAnalytics.
+            </p>
+
+            <h3 class="mb-sm">2.2 Other Permissions</h3>
+            <ul class="mb-md">
+                <li><strong>Internet Access</strong> (<code>INTERNET</code>): Used only for displaying static in-app content and accessing subscription management (Google Play Billing). No health data is transmitted.</li>
+                <li><strong>Foreground Service</strong> (<code>FOREGROUND_SERVICE</code>): For potential future background sync features (not currently implemented).</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">How We Use Your Information</h2>
-            <p class="mb-sm">We use the information we collect to:</p>
+            <h2 class="mb-md">3. Data We Do NOT Collect</h2>
+            <p class="mb-sm">SwimAnalytics does <strong>NOT</strong> collect, store, or transmit:</p>
             <ul class="mb-md">
-                <li>Respond to your inquiries and requests</li>
-                <li>Improve our website and services</li>
-                <li>Analyze how our website is used</li>
-                <li>Ensure the security and integrity of our website</li>
+                <li>❌ Personal identification information (name, email, phone number)</li>
+                <li>❌ Device identifiers (IMEI, advertising ID)</li>
+                <li>❌ Location data or GPS coordinates</li>
+                <li>❌ Usage analytics or app behavior tracking</li>
+                <li>❌ Crash reports or diagnostic data to external servers</li>
+                <li>❌ Any data through third-party SDKs or analytics services</li>
+            </ul>
+            <p class="mb-sm">We use <strong>zero third-party tracking libraries</strong> including:</p>
+            <ul class="mb-md">
+                <li>No Google Analytics</li>
+                <li>No Firebase Analytics</li>
+                <li>No Facebook SDK</li>
+                <li>No advertising SDKs</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Cookies</h2>
+            <h2 class="mb-md">4. Google Play Billing</h2>
             <p class="mb-md">
-                We use cookies to improve your experience on our website. Cookies are small text files stored on your device that help us understand how you use our site.
+                SwimAnalytics offers optional in-app subscriptions managed through <strong>Google Play Billing</strong>.
             </p>
-            <p class="mb-sm">We use the following types of cookies:</p>
+
+            <h3 class="mb-sm">4.1 Subscription Data</h3>
+            <p class="mb-sm">When you purchase a subscription:</p>
             <ul class="mb-md">
-                <li><strong>Essential cookies:</strong> Required for the website to function properly</li>
-                <li><strong>Analytics cookies:</strong> Help us understand how visitors interact with our website (only with your consent)</li>
+                <li>Google Play handles all payment processing</li>
+                <li>We receive only the subscription status (active/inactive) through Google Play Billing API</li>
+                <li>We do NOT have access to your payment information (credit card, billing address)</li>
+                <li>Subscription data is stored locally on your device</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Subscription Management</h3>
+            <p class="mb-sm">You can manage or cancel your subscription at any time through:</p>
+            <ul class="mb-md">
+                <li>Google Play Store → Account → Subscriptions</li>
+                <li>Or within the app: Settings → Manage Subscription</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">5. Data Retention and Deletion</h2>
+
+            <h3 class="mb-sm">5.1 Data Retention</h3>
+            <ul class="mb-md">
+                <li>Health data is stored on your device <strong>indefinitely</strong> until you manually delete it</li>
+                <li>Workout data is retained to provide historical performance tracking and analytics</li>
+            </ul>
+
+            <h3 class="mb-sm">5.2 Data Deletion</h3>
+            <p class="mb-sm">You can delete your data at any time:</p>
+
+            <p class="mb-sm"><strong>Method 1: Delete Individual Workouts</strong></p>
+            <ul class="mb-md">
+                <li>Open the workout detail screen</li>
+                <li>Tap the delete button</li>
+                <li>Confirm deletion</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 2: Clear All App Data</strong></p>
+            <ul class="mb-md">
+                <li>Go to Android Settings → Apps → SwimAnalytics → Storage</li>
+                <li>Tap "Clear data" to remove all locally stored workouts</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 3: Uninstall the App</strong></p>
+            <ul class="mb-md">
+                <li>Uninstalling SwimAnalytics automatically deletes all local data</li>
+            </ul>
+
+            <p class="mb-sm"><strong>Method 4: Revoke Health Connect Permissions</strong></p>
+            <ul class="mb-md">
+                <li>Android Settings → Apps → Health Connect → SwimAnalytics</li>
+                <li>Revoke all permissions (app will no longer access new workout data)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">6. Data Security</h2>
+            <p class="mb-md">
+                We take data security seriously, even though all data remains on your device:
+            </p>
+
+            <h3 class="mb-sm">6.1 Security Measures</h3>
+            <ul class="mb-md">
+                <li><strong>Local Encryption:</strong> All data stored in Room Database is protected by Android's built-in security</li>
+                <li><strong>No Network Transmission:</strong> Health data never leaves your device, eliminating transmission security risks</li>
+                <li><strong>App Sandboxing:</strong> Android's app sandbox prevents other apps from accessing SwimAnalytics data</li>
+                <li><strong>Secure Storage:</strong> Health data cannot be accessed without device authentication (PIN, fingerprint, face unlock)</li>
+            </ul>
+
+            <h3 class="mb-sm">6.2 Your Responsibility</h3>
+            <p class="mb-sm">To protect your data:</p>
+            <ul class="mb-md">
+                <li>Keep your Android device locked with a strong PIN/password/biometric</li>
+                <li>Keep your Android OS updated with the latest security patches</li>
+                <li>Do not root your device (which may bypass Android security)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">7. Data Sharing and Third Parties</h2>
+            <p class="mb-md">
+                <strong>SwimAnalytics does NOT share your health data with any third parties.</strong>
+            </p>
+
+            <h3 class="mb-sm">7.1 No Data Sharing</h3>
+            <ul class="mb-md">
+                <li>We do not sell your data</li>
+                <li>We do not share your data with advertisers</li>
+                <li>We do not provide your data to analytics companies</li>
+                <li>We do not integrate with social media platforms</li>
+            </ul>
+
+            <h3 class="mb-sm">7.2 CSV Export (User-Initiated Only)</h3>
+            <p class="mb-sm">The only way data leaves your device is when <strong>YOU</strong> explicitly:</p>
+            <ol class="mb-md">
+                <li>Navigate to Settings → Raw Data Export</li>
+                <li>Generate a CSV file</li>
+                <li>Choose to share the CSV file through Android's share menu (email, cloud storage, messaging apps)</li>
+            </ol>
+            <p class="mb-md"><strong>This is entirely under your control.</strong></p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">8. Children's Privacy</h2>
+            <p class="mb-md">
+                SwimAnalytics does not knowingly collect data from children under 13 years of age. The app does not request age information, but parents should supervise their children's use of health tracking applications.
+            </p>
+            <p class="mb-md">
+                If you believe a child under 13 has used SwimAnalytics, please contact us, and we will assist in ensuring all local data is deleted from the device.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">9. International Data Transfers</h2>
+            <p class="mb-md">
+                <strong>Not Applicable.</strong> Since all health data remains exclusively on your Android device and is never transmitted to servers, there are no international data transfers.
+            </p>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">10. Your Rights (GDPR, CCPA Compliance)</h2>
+            <p class="mb-md">
+                Although SwimAnalytics does not collect personal data on servers, we respect your data privacy rights:
+            </p>
+
+            <h3 class="mb-sm">10.1 GDPR Rights (European Users)</h3>
+            <ul class="mb-md">
+                <li><strong>Right to Access:</strong> All your data is accessible within the app at any time</li>
+                <li><strong>Right to Deletion:</strong> Delete data using the methods described in Section 5.2</li>
+                <li><strong>Right to Portability:</strong> Export your data to CSV format (Settings → Raw Data Export)</li>
+                <li><strong>Right to Restrict Processing:</strong> Revoke Health Connect permissions to stop new data access</li>
+            </ul>
+
+            <h3 class="mb-sm">10.2 CCPA Rights (California Users)</h3>
+            <ul class="mb-md">
+                <li><strong>Right to Know:</strong> This policy discloses all data accessed and how it's used</li>
+                <li><strong>Right to Delete:</strong> Delete data using the methods described in Section 5.2</li>
+                <li><strong>Right to Opt-Out of Sale:</strong> Not applicable (we never sell data)</li>
+            </ul>
+        </div>
+
+        <div class="mb-xl">
+            <h2 class="mb-md">11. Changes to This Privacy Policy</h2>
+            <p class="mb-sm">We may update this Privacy Policy from time to time. When we make changes:</p>
+            <ul class="mb-md">
+                <li>The "Last Updated" date at the top of this policy will be revised</li>
+                <li>Significant changes will be announced within the app</li>
+                <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
             </ul>
             <p class="mb-md">
-                You can control cookies through your browser settings. Please note that disabling cookies may affect the functionality of our website.
+                We recommend reviewing this policy periodically to stay informed about how we protect your privacy.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Third-Party Services</h2>
-            <p class="mb-md">
-                We may use third-party services such as Google Analytics to help us analyze website traffic. These services may collect information about your use of our website.
-            </p>
-            <p class="mb-md">
-                These third parties have their own privacy policies, and we encourage you to review them.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Data Security</h2>
-            <p class="mb-md">
-                We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-            </p>
-        </div>
-
-        <div class="mb-xl">
-            <h2 class="mb-md">Your Rights</h2>
-            <p class="mb-sm">You have the right to:</p>
+            <h2 class="mb-md">12. Contact Us</h2>
+            <p class="mb-sm">If you have questions, concerns, or requests regarding this Privacy Policy or your data privacy:</p>
             <ul class="mb-md">
-                <li>Access your personal information</li>
-                <li>Correct inaccurate information</li>
-                <li>Request deletion of your information</li>
-                <li>Withdraw consent for data processing</li>
-                <li>Object to processing of your information</li>
+                <li><strong>Email:</strong> support@swimanalytics.app</li>
+                <li><strong>Website:</strong> <a href="https://swimanalytics.app">https://swimanalytics.app</a></li>
             </ul>
             <p class="mb-md">
-                To exercise these rights, please contact us using the information provided on our <a href="/en/contact/">contact page</a>.
+                <strong>Response Time:</strong> We aim to respond to all privacy inquiries within 7 business days.
             </p>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">Changes to This Policy</h2>
-            <p class="mb-md">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page with an updated "Last updated" date.
-            </p>
+            <h2 class="mb-md">13. Legal Compliance</h2>
+            <p class="mb-sm">SwimAnalytics complies with:</p>
+            <ul class="mb-md">
+                <li>Google Play Developer Program Policies</li>
+                <li>Android Health Connect Guidelines</li>
+                <li>General Data Protection Regulation (GDPR)</li>
+                <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Children's Online Privacy Protection Act (COPPA)</li>
+            </ul>
         </div>
 
-        <div class="callout callout-info">
-            <h2 class="mb-sm">Questions?</h2>
-            <p>
-                If you have any questions about this Privacy Policy, please <a href="/en/contact/">contact us</a>.
+        <div class="callout callout-success">
+            <h2 class="mb-md">Summary</h2>
+            <p class="mb-sm"><strong>In Simple Terms:</strong></p>
+            <ul class="mb-sm">
+                <li>✅ <strong>What we access:</strong> Swimming workout data from Health Connect (exercise, distance, heart rate, speed, calories)</li>
+                <li>✅ <strong>Where it's stored:</strong> Only on YOUR Android device (Room Database)</li>
+                <li>✅ <strong>Where it goes:</strong> Nowhere. It never leaves your device.</li>
+                <li>✅ <strong>Who sees it:</strong> Only you.</li>
+                <li>✅ <strong>How to delete it:</strong> Clear app data or uninstall the app anytime.</li>
+            </ul>
+            <p class="mb-0">
+                <strong>SwimAnalytics is built privacy-first. Your swimming data is yours, and it stays on your device.</strong>
             </p>
         </div>
     </div>
