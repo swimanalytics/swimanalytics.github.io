@@ -779,27 +779,42 @@ body {
 
 <section class="section">
     <div class="container container-narrow">
-        <h1 class="mb-lg">Privacy Policy for SwimAnalytics (Android)</h1>
+        <h1 class="mb-lg">Privacy Policy for SwimAnalytics</h1>
 
         <p class="text-secondary mb-xl"><strong>Last Updated:</strong> January 10, 2025 | <strong>Effective Date:</strong> January 10, 2025</p>
 
         <div class="mb-xl">
             <h2 class="mb-md">Introduction</h2>
             <p class="mb-md">
-                SwimAnalytics ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how our Android application accesses, uses, and protects health data from your device.
+                SwimAnalytics ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how our mobile applications (iOS and Android) access, use, and protect health data from your device.
             </p>
             <div class="callout callout-info mb-md">
-                <p><strong>Key Privacy Principle:</strong> SwimAnalytics operates on a <strong>zero-server, local-only architecture</strong>. All health data accessed from Health Connect remains exclusively on your physical Android device and is never transmitted to external servers, cloud services, or third parties.</p>
+                <p><strong>Key Privacy Principle:</strong> SwimAnalytics operates on a <strong>zero-server, local-only architecture</strong>. All health data accessed from Apple HealthKit (iOS) or Health Connect (Android) remains exclusively on your physical device and is never transmitted to external servers, cloud services, or third parties.</p>
             </div>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">1. Health Connect Data Access (Android)</h2>
+            <h2 class="mb-md">1. Health Data Access</h2>
             <p class="mb-md">
-                SwimAnalytics integrates with <strong>Android Health Connect</strong> to provide swimming workout analysis. We request access to the following health data types:
+                SwimAnalytics integrates with your device's native health platform to provide swimming workout analysis:
             </p>
 
-            <h3 class="mb-sm">1.1 Data Types Accessed</h3>
+            <h3 class="mb-sm">1.1 iOS - Apple HealthKit Integration</h3>
+            <p class="mb-md">
+                On iOS devices, SwimAnalytics integrates with <strong>Apple HealthKit</strong> to access swimming workout data. We request read-only access to:
+            </p>
+            <ul class="mb-md">
+                <li><strong>Workout Sessions:</strong> Swimming exercise sessions with time and duration</li>
+                <li><strong>Distance:</strong> Total and lap-by-lap swimming distances</li>
+                <li><strong>Heart Rate:</strong> Heart rate data during workouts</li>
+                <li><strong>Active Energy:</strong> Calories burned during swimming sessions</li>
+                <li><strong>Swimming Stroke Count:</strong> Stroke data for analysis</li>
+            </ul>
+            <p class="mb-md">
+                <strong>Apple HealthKit Compliance:</strong> SwimAnalytics adheres to all Apple HealthKit guidelines. Your health data is processed entirely on your iOS device and never leaves it. We never share HealthKit data with third parties, advertising platforms, or data brokers.
+            </p>
+
+            <h3 class="mb-sm">1.2 Android - Health Connect Integration</h3>
             <div class="table-responsive mb-md">
                 <table class="table">
                     <thead>
@@ -838,8 +853,11 @@ body {
                     </tbody>
                 </table>
             </div>
+            <p class="mb-md">
+                <strong>Android Permissions:</strong> These permissions are requested during the app's first launch. You can revoke these permissions at any time through Android Settings → Apps → Health Connect → SwimAnalytics.
+            </p>
 
-            <h3 class="mb-sm">1.2 How We Use Health Data</h3>
+            <h3 class="mb-sm">1.3 How We Use Health Data</h3>
             <p class="mb-sm">All health data is used <strong>exclusively for the following purposes</strong>:</p>
             <ul class="mb-md">
                 <li><strong>Workout Display:</strong> Show your swimming sessions with detailed metrics (distance, time, pace, heart rate)</li>
@@ -848,15 +866,16 @@ body {
                 <li><strong>Data Export:</strong> Allow you to export your workout data to CSV format for personal use</li>
             </ul>
 
-            <h3 class="mb-sm">1.3 Data Storage</h3>
+            <h3 class="mb-sm">1.4 Data Storage</h3>
             <div class="callout callout-success mb-md">
                 <h4 class="mb-sm">🔒 CRITICAL PRIVACY GUARANTEE:</h4>
-                <p class="mb-sm"><strong>All health data remains exclusively on your physical Android device.</strong></p>
+                <p class="mb-sm"><strong>All health data remains exclusively on your physical device.</strong></p>
                 <ul class="mb-0">
-                    <li>Health data is stored locally using Android Room Database (on-device SQLite)</li>
+                    <li><strong>iOS:</strong> Data is stored using iOS Core Data and UserDefaults (on-device only)</li>
+                    <li><strong>Android:</strong> Data is stored using Android Room Database (on-device SQLite)</li>
                     <li><strong>NO data is uploaded to external servers</strong></li>
                     <li><strong>NO data is transmitted over the internet</strong></li>
-                    <li><strong>NO cloud synchronization or backup</strong></li>
+                    <li><strong>NO cloud synchronization or backup of health data</strong></li>
                     <li><strong>NO third-party access to your health data</strong></li>
                 </ul>
             </div>
@@ -868,20 +887,22 @@ body {
         <div class="mb-xl">
             <h2 class="mb-md">2. Permissions Required</h2>
 
-            <h3 class="mb-sm">2.1 Health Connect Permissions</h3>
+            <h3 class="mb-sm">2.1 iOS Permissions</h3>
+            <ul class="mb-md">
+                <li><strong>HealthKit Access:</strong> Read access to Workouts, Distance, Heart Rate, Active Energy, and Swimming Stroke Count</li>
+                <li><strong>Photo Library (Optional):</strong> Only if you choose to save workout summaries as images</li>
+            </ul>
+            <p class="mb-md">
+                You can manage HealthKit permissions at any time in iOS Settings → Privacy & Security → Health → SwimAnalytics.
+            </p>
+
+            <h3 class="mb-sm">2.2 Android Permissions</h3>
             <ul class="mb-md">
                 <li><code>android.permission.health.READ_EXERCISE</code></li>
                 <li><code>android.permission.health.READ_DISTANCE</code></li>
                 <li><code>android.permission.health.READ_HEART_RATE</code></li>
                 <li><code>android.permission.health.READ_SPEED</code></li>
                 <li><code>android.permission.health.READ_TOTAL_CALORIES_BURNED</code></li>
-            </ul>
-            <p class="mb-md">
-                These permissions are requested during the app's first launch. You can revoke these permissions at any time through Android Settings → Apps → Health Connect → SwimAnalytics.
-            </p>
-
-            <h3 class="mb-sm">2.2 Other Permissions</h3>
-            <ul class="mb-md">
                 <li><strong>Internet Access</strong> (<code>INTERNET</code>): Used only for displaying static in-app content and accessing subscription management (Google Play Billing). No health data is transmitted.</li>
                 <li><strong>Foreground Service</strong> (<code>FOREGROUND_SERVICE</code>): For potential future background sync features (not currently implemented).</li>
             </ul>
@@ -892,7 +913,7 @@ body {
             <p class="mb-sm">SwimAnalytics does <strong>NOT</strong> collect, store, or transmit:</p>
             <ul class="mb-md">
                 <li>❌ Personal identification information (name, email, phone number)</li>
-                <li>❌ Device identifiers (IMEI, advertising ID)</li>
+                <li>❌ Device identifiers (IDFA on iOS, advertising ID on Android)</li>
                 <li>❌ Location data or GPS coordinates</li>
                 <li>❌ Usage analytics or app behavior tracking</li>
                 <li>❌ Crash reports or diagnostic data to external servers</li>
@@ -900,32 +921,44 @@ body {
             </ul>
             <p class="mb-sm">We use <strong>zero third-party tracking libraries</strong> including:</p>
             <ul class="mb-md">
-                <li>No Google Analytics</li>
-                <li>No Firebase Analytics</li>
+                <li>No Google Analytics / Firebase Analytics</li>
                 <li>No Facebook SDK</li>
                 <li>No advertising SDKs</li>
+                <li>No crash reporting services (Crashlytics, Sentry, etc.)</li>
             </ul>
         </div>
 
         <div class="mb-xl">
-            <h2 class="mb-md">4. Google Play Billing</h2>
+            <h2 class="mb-md">4. In-App Purchases and Subscriptions</h2>
             <p class="mb-md">
-                SwimAnalytics offers optional in-app subscriptions managed through <strong>Google Play Billing</strong>.
+                SwimAnalytics offers optional in-app subscriptions managed through your device's native payment system:
             </p>
 
-            <h3 class="mb-sm">4.1 Subscription Data</h3>
-            <p class="mb-sm">When you purchase a subscription:</p>
+            <h3 class="mb-sm">4.1 iOS - App Store Subscriptions</h3>
+            <p class="mb-sm">When you purchase a subscription on iOS:</p>
+            <ul class="mb-md">
+                <li>Apple handles all payment processing through the App Store</li>
+                <li>We receive only the subscription status (active/inactive) through StoreKit</li>
+                <li>We do NOT have access to your payment information (credit card, billing address)</li>
+                <li>Subscription data is stored locally on your device</li>
+            </ul>
+            <p class="mb-sm">Manage subscriptions:</p>
+            <ul class="mb-md">
+                <li>iOS Settings → Your Name → Subscriptions → SwimAnalytics</li>
+                <li>Or within the app: Settings → Manage Subscription</li>
+            </ul>
+
+            <h3 class="mb-sm">4.2 Android - Google Play Billing</h3>
+            <p class="mb-sm">When you purchase a subscription on Android:</p>
             <ul class="mb-md">
                 <li>Google Play handles all payment processing</li>
                 <li>We receive only the subscription status (active/inactive) through Google Play Billing API</li>
                 <li>We do NOT have access to your payment information (credit card, billing address)</li>
                 <li>Subscription data is stored locally on your device</li>
             </ul>
-
-            <h3 class="mb-sm">4.2 Subscription Management</h3>
-            <p class="mb-sm">You can manage or cancel your subscription at any time through:</p>
+            <p class="mb-sm">Manage subscriptions:</p>
             <ul class="mb-md">
-                <li>Google Play Store → Account → Subscriptions</li>
+                <li>Google Play Store → Account → Subscriptions → SwimAnalytics</li>
                 <li>Or within the app: Settings → Manage Subscription</li>
             </ul>
         </div>
@@ -945,14 +978,14 @@ body {
             <p class="mb-sm"><strong>Method 1: Delete Individual Workouts</strong></p>
             <ul class="mb-md">
                 <li>Open the workout detail screen</li>
-                <li>Tap the delete button</li>
+                <li>Tap the delete button (trash icon)</li>
                 <li>Confirm deletion</li>
             </ul>
 
             <p class="mb-sm"><strong>Method 2: Clear All App Data</strong></p>
             <ul class="mb-md">
-                <li>Go to Android Settings → Apps → SwimAnalytics → Storage</li>
-                <li>Tap "Clear data" to remove all locally stored workouts</li>
+                <li><strong>iOS:</strong> Delete and reinstall the app (all local data is removed)</li>
+                <li><strong>Android:</strong> Settings → Apps → SwimAnalytics → Storage → Clear data</li>
             </ul>
 
             <p class="mb-sm"><strong>Method 3: Uninstall the App</strong></p>
@@ -960,10 +993,10 @@ body {
                 <li>Uninstalling SwimAnalytics automatically deletes all local data</li>
             </ul>
 
-            <p class="mb-sm"><strong>Method 4: Revoke Health Connect Permissions</strong></p>
+            <p class="mb-sm"><strong>Method 4: Revoke Health Permissions</strong></p>
             <ul class="mb-md">
-                <li>Android Settings → Apps → Health Connect → SwimAnalytics</li>
-                <li>Revoke all permissions (app will no longer access new workout data)</li>
+                <li><strong>iOS:</strong> Settings → Privacy & Security → Health → SwimAnalytics → Turn Off All Categories</li>
+                <li><strong>Android:</strong> Settings → Apps → Health Connect → SwimAnalytics → Revoke all permissions</li>
             </ul>
         </div>
 
@@ -975,18 +1008,20 @@ body {
 
             <h3 class="mb-sm">6.1 Security Measures</h3>
             <ul class="mb-md">
-                <li><strong>Local Encryption:</strong> All data stored in Room Database is protected by Android's built-in security</li>
+                <li><strong>iOS Security:</strong> All data stored using iOS Core Data is protected by iOS Keychain and device encryption. Data is protected when device is locked.</li>
+                <li><strong>Android Security:</strong> All data stored in Room Database is protected by Android's built-in security and app sandbox.</li>
                 <li><strong>No Network Transmission:</strong> Health data never leaves your device, eliminating transmission security risks</li>
-                <li><strong>App Sandboxing:</strong> Android's app sandbox prevents other apps from accessing SwimAnalytics data</li>
-                <li><strong>Secure Storage:</strong> Health data cannot be accessed without device authentication (PIN, fingerprint, face unlock)</li>
+                <li><strong>App Sandboxing:</strong> iOS and Android app sandboxes prevent other apps from accessing SwimAnalytics data</li>
+                <li><strong>Secure Storage:</strong> Health data cannot be accessed without device authentication (passcode, Face ID, Touch ID, fingerprint, face unlock)</li>
             </ul>
 
             <h3 class="mb-sm">6.2 Your Responsibility</h3>
             <p class="mb-sm">To protect your data:</p>
             <ul class="mb-md">
-                <li>Keep your Android device locked with a strong PIN/password/biometric</li>
-                <li>Keep your Android OS updated with the latest security patches</li>
-                <li>Do not root your device (which may bypass Android security)</li>
+                <li>Keep your device locked with a strong passcode/biometric</li>
+                <li>Keep your OS updated with the latest security patches</li>
+                <li><strong>iOS:</strong> Do not jailbreak your device</li>
+                <li><strong>Android:</strong> Do not root your device</li>
             </ul>
         </div>
 
@@ -1009,7 +1044,7 @@ body {
             <ol class="mb-md">
                 <li>Navigate to Settings → Raw Data Export</li>
                 <li>Generate a CSV file</li>
-                <li>Choose to share the CSV file through Android's share menu (email, cloud storage, messaging apps)</li>
+                <li>Choose to share the CSV file through your device's share menu (email, cloud storage, messaging apps)</li>
             </ol>
             <p class="mb-md"><strong>This is entirely under your control.</strong></p>
         </div>
@@ -1027,7 +1062,7 @@ body {
         <div class="mb-xl">
             <h2 class="mb-md">9. International Data Transfers</h2>
             <p class="mb-md">
-                <strong>Not Applicable.</strong> Since all health data remains exclusively on your Android device and is never transmitted to servers, there are no international data transfers.
+                <strong>Not Applicable.</strong> Since all health data remains exclusively on your device (iOS or Android) and is never transmitted to servers, there are no international data transfers.
             </p>
         </div>
 
@@ -1042,7 +1077,7 @@ body {
                 <li><strong>Right to Access:</strong> All your data is accessible within the app at any time</li>
                 <li><strong>Right to Deletion:</strong> Delete data using the methods described in Section 5.2</li>
                 <li><strong>Right to Portability:</strong> Export your data to CSV format (Settings → Raw Data Export)</li>
-                <li><strong>Right to Restrict Processing:</strong> Revoke Health Connect permissions to stop new data access</li>
+                <li><strong>Right to Restrict Processing:</strong> Revoke health permissions to stop new data access</li>
             </ul>
 
             <h3 class="mb-sm">10.2 CCPA Rights (California Users)</h3>
@@ -1082,8 +1117,8 @@ body {
             <h2 class="mb-md">13. Legal Compliance</h2>
             <p class="mb-sm">SwimAnalytics complies with:</p>
             <ul class="mb-md">
-                <li>Google Play Developer Program Policies</li>
-                <li>Android Health Connect Guidelines</li>
+                <li><strong>iOS:</strong> Apple App Store Review Guidelines, Apple HealthKit Guidelines</li>
+                <li><strong>Android:</strong> Google Play Developer Program Policies, Android Health Connect Guidelines</li>
                 <li>General Data Protection Regulation (GDPR)</li>
                 <li>California Consumer Privacy Act (CCPA)</li>
                 <li>Children's Online Privacy Protection Act (COPPA)</li>
@@ -1094,8 +1129,8 @@ body {
             <h2 class="mb-md">Summary</h2>
             <p class="mb-sm"><strong>In Simple Terms:</strong></p>
             <ul class="mb-sm">
-                <li>✅ <strong>What we access:</strong> Swimming workout data from Health Connect (exercise, distance, heart rate, speed, calories)</li>
-                <li>✅ <strong>Where it's stored:</strong> Only on YOUR Android device (Room Database)</li>
+                <li>✅ <strong>What we access:</strong> Swimming workout data from Apple HealthKit (iOS) or Health Connect (Android)</li>
+                <li>✅ <strong>Where it's stored:</strong> Only on YOUR device (iOS Core Data or Android Room Database)</li>
                 <li>✅ <strong>Where it goes:</strong> Nowhere. It never leaves your device.</li>
                 <li>✅ <strong>Who sees it:</strong> Only you.</li>
                 <li>✅ <strong>How to delete it:</strong> Clear app data or uninstall the app anytime.</li>
